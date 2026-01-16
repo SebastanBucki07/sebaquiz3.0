@@ -1,0 +1,36 @@
+/* cała strona zajmuje pełną wysokość */
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* 100% wysokości viewportu */
+}
+
+/* Header i footer mają stałą wysokość */
+app-header {
+  height: 60px;
+  flex-shrink: 0;
+  background-color: #1976d2; /* przykładowy kolor */
+  color: white;
+}
+
+app-footer {
+  height: 40px;
+  flex-shrink: 0;
+  background-color: #333;
+  color: white;
+}
+
+/* główny obszar między header i footer */
+.main-container {
+  display: flex;
+  flex: 1; /* zajmuje resztę miejsca */
+  overflow: hidden;
+}
+
+/* główna zawartość */
+.content {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background-color: #fff;
+}
