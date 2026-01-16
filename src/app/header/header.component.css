@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centrum logo */
+  position: sticky;
+  top: 0;
+  height: 70px;
+  background: linear-gradient(90deg, #4a90e2, #50e3c2);
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  padding: 0 20px;
+}
+
+/* przycisk Nowa Gra po prawej */
+.new-game {
+  position: absolute;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.new-game:hover {
+  background: white;
+  color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+/* logo w centrum */
+.logo {
+  text-align: center;
+  flex: 1;
+}
