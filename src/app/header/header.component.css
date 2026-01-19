@@ -1,32 +1,51 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center; /* centrum logo */
+  justify-content: center;
   position: sticky;
   top: 0;
-  height: 70px;
+  height: 100px;
   background: linear-gradient(90deg, #4a90e2, #50e3c2);
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2rem;
-  font-weight: bold;
-  letter-spacing: 2px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   padding: 0 20px;
 }
 
-/* przycisk Nowa Gra po prawej */
+/* Logo container - centered */
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+
+/* Logo image - larger size */
+.logo-image {
+  width: auto;
+  max-height: 150px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+/* New Game button on the right */
 .new-game {
-  position: absolute;
-  right: 20px;
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: 1px solid white;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 6px;
   cursor: pointer;
   font-weight: bold;
   transition: all 0.3s;
+  white-space: nowrap;
+  position: absolute;
+  right: 20px;
+}
+
+.new-game:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
 }
 
 .new-game:hover {

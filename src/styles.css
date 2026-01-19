@@ -6,5 +6,5 @@ html, body {
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* WAŻNE, pełna wysokość widoku */
+  min-height: 100vh; /* IMPORTANT - full viewport height */
 }

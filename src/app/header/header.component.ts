@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { GameService } from '../shared/game.service';
 
 @Component({
   selector: 'app-header',
@@ -9,9 +10,10 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private gameService: GameService) {}
 
   newGame() {
+    this.gameService.resetGame();
     this.router.navigate(['/pregame']);
   }
 }
