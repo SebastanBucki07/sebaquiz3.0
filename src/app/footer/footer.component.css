@@ -3,8 +3,6 @@
   background-color: #333;
   color: white;
   padding: 16px 0;
-  position: sticky; /* można też fixed jeśli chcesz na dole zawsze */
-  bottom: 0;
   display: flex;
   justify-content: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -15,15 +13,4 @@
   display: flex;
   gap: 12px;
   align-items: center;
-}
-
-.footer a {
-  color: #4a90e2;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.footer a:hover {
-  color: #50e3c2;
 }

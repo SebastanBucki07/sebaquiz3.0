@@ -1,0 +1,11 @@
+.main-container {
+  flex: 1;               /* zajmuje całą przestrzeń między header a footer */
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;               /* content rośnie */
+  overflow-y: auto;      /* scrolluje przy dużej zawartości */
+  padding: 16px;
+}

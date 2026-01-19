@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {GameHeaderComponent} from '../game-header/game-header.component';
-import {GameContentComponent} from '../game-content/game-content.component';
+import {GameHeaderComponent} from './game-header/game-header.component';
+import {GameContentComponent} from './game-content/game-content.component';
 
 @Component({
   selector: 'app-game',
