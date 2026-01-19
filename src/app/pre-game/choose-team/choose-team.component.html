@@ -1,0 +1,70 @@
+<div class="team-container">
+
+  <div class="header">
+    <h2>Lista drużyn</h2>
+  </div>
+
+  <!-- Form to add team -->
+  <mat-card class="add-team-card">
+    <mat-card-content class="add-team-content">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nazwa drużyny</mat-label>
+        <input matInput [(ngModel)]="newTeamName" (keyup.enter)="addTeam()" placeholder="Wpisz nazwę drużyny">
+      </mat-form-field>
+      <button mat-flat-button color="primary" (click)="addTeam()">
+        <mat-icon>add</mat-icon>
+        Dodaj drużynę
+      </button>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Message when list is empty -->
+  <mat-card *ngIf="teams.length === 0" class="empty-card">
+    <mat-card-content class="empty-content">
+      Brak dodanych drużyn
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Team table -->
+  <mat-card *ngIf="teams.length > 0" class="table-card">
+    <mat-card-header class="table-header">
+      <mat-card-title>Tabela wyników</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="teams" class="teams-table">
+
+        <!-- ID Column -->
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef>#</th>
+          <td mat-cell *matCellDef="let team">{{team.id}}</td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Drużyna</th>
+          <td mat-cell *matCellDef="let team">{{team.name}}</td>
+        </ng-container>
+
+        <!-- Points Column -->
+        <ng-container matColumnDef="points">
+          <th mat-header-cell *matHeaderCellDef>Punkty</th>
+          <td mat-cell *matCellDef="let team">{{team.points}}</td>
+        </ng-container>
+
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef>Akcje</th>
+          <td mat-cell *matCellDef="let team">
+            <button mat-icon-button color="warn" (click)="removeTeam(team.id)" matTooltip="Remove team">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        <!-- Header and Row Definitions -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns; let i = index" [ngClass]="{ 'striped-row-odd': i % 2 === 0, 'striped-row-even': i % 2 === 1 }"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

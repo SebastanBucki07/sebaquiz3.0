@@ -1,18 +1,12 @@
 import { Component } from '@angular/core';
-import {FooterComponent} from "../footer/footer.component";
-import {HeaderComponent} from "../header/header.component";
-import {GameComponent} from '../game/game.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-main',
+  standalone: true,
   imports: [
-    FooterComponent,
-    HeaderComponent,
-    GameComponent
+    RouterOutlet,
   ],
-  templateUrl: './main.component.html',
-  styleUrl: './main.component.css'
+  templateUrl: './main.component.html'
 })
-export class MainComponent {
-
-}
+export class MainComponent {}

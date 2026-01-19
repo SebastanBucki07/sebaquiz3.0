@@ -1,15 +1,15 @@
-/* cała strona zajmuje pełną wysokość */
+/* Entire page takes full height */
 :host {
   display: flex;
   flex-direction: column;
-  height: 100vh; /* 100% wysokości viewportu */
+  height: 100vh; /* 100% of viewport height */
 }
 
-/* Header i footer mają stałą wysokość */
+/* Header and footer have fixed height */
 app-header {
   height: 60px;
   flex-shrink: 0;
-  background-color: #1976d2; /* przykładowy kolor */
+  background-color: #1976d2; /* example color */
   color: white;
 }
 
@@ -20,14 +20,14 @@ app-footer {
   color: white;
 }
 
-/* główny obszar między header i footer */
+/* Main area between header and footer */
 .main-container {
   display: flex;
-  flex: 1; /* zajmuje resztę miejsca */
+  flex: 1; /* takes remaining space */
   overflow: hidden;
 }
 
-/* główna zawartość */
+/* Main content */
 .content {
   flex: 1;
   padding: 16px;

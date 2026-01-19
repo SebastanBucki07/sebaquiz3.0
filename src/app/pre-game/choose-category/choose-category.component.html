@@ -1,0 +1,45 @@
+<div class="category-container">
+  <h2>Lista kategorii</h2>
+
+  <div class="lists-wrapper">
+    <!-- List of available categories -->
+    <mat-card class="category-card">
+      <mat-card-header>
+        <mat-card-title>Dostępne kategorie</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list *ngIf="availableCategories.length > 0">
+          <mat-list-item *ngFor="let category of availableCategories" [ngClass]="'category-item-' + category.id">
+            <span matListItemTitle>{{ category.name }}</span>
+            <button mat-icon-button (click)="addCategory(category)" matListItemMeta matTooltip="Dodaj kategorię">
+              <mat-icon>add</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+        <div *ngIf="availableCategories.length === 0" class="empty-list">
+          Brak dostępnych kategorii
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <!-- List of selected categories -->
+    <mat-card class="category-card">
+      <mat-card-header>
+        <mat-card-title>Wybrane kategorie</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <mat-list *ngIf="selectedCategories.length > 0">
+          <mat-list-item *ngFor="let category of selectedCategories" [ngClass]="'category-item-' + category.id">
+            <span matListItemTitle>{{ category.name }}</span>
+            <button mat-icon-button (click)="removeCategory(category)" matListItemMeta matTooltip="Usuń kategorię" color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+        <div *ngIf="selectedCategories.length === 0" class="empty-list">
+          Brak wybranych kategorii
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

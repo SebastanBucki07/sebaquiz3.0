@@ -1,0 +1,94 @@
+.category-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 16px auto;
+  padding: 16px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.lists-wrapper {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-card:first-child {
+  background-color: #f0f8ff;
+}
+
+.category-card:last-child {
+  background-color: #f0fff0;
+}
+
+.category-card mat-card-header {
+  padding-bottom: 16px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.empty-list {
+  text-align: center;
+  color: #999;
+  padding: 24px 16px;
+  font-style: italic;
+}
+
+mat-list-item {
+  height: auto;
+  padding: 8px 0;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+/* Kolory dla kategorii */
+.category-item-1 {
+  background-color: #FFE5E5 !important;
+  border-left: 4px solid #FF6B6B;
+}
+
+.category-item-2 {
+  background-color: #E5F5FF !important;
+  border-left: 4px solid #4ECDC4;
+}
+
+.category-item-3 {
+  background-color: #E8F5E9 !important;
+  border-left: 4px solid #45B649;
+}
+
+.category-item-4 {
+  background-color: #FFF3E0 !important;
+  border-left: 4px solid #FFA500;
+}
+
+.category-item-5 {
+  background-color: #F3E5F5 !important;
+  border-left: 4px solid #9C27B0;
+}
+
+.category-item-6 {
+  background-color: #FCE4EC !important;
+  border-left: 4px solid #E91E63;
+}
+
+.category-item-7 {
+  background-color: #F1F8E9 !important;
+  border-left: 4px solid #8BC34A;
+}
+
+.category-item-8 {
+  background-color: #E0F2F1 !important;
+  border-left: 4px solid #009688;
+}
