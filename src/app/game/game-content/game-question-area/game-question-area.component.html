@@ -1,8 +1,9 @@
-<app-question-area-header></app-question-area-header>
-<h2>Kategoria: {{ categoryName }}</h2>
+<div class="parent-container">
+  <app-question-area-header></app-question-area-header>
+</div>
 
 <app-question></app-question>
 
-<button mat-stroked-button (click)="back()">
+<button mat-flat-button color="warn" (click)="back()">
   Powrót do wyboru kategorii
 </button>

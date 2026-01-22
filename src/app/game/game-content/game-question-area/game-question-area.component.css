@@ -1,0 +1,14 @@
+:host {
+  display: block;
+  width: 100%;    /* full host width */
+}
+
+.category-header {
+  width: 100%;     /* full host width */
+  display: flex;
+  justify-content: center;  /* center h2 */
+  box-sizing: border-box;
+  margin: 24px 0;
+  padding: 0 16px;    /* optional to provide internal spacing */
+}
+
