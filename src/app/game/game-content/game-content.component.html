@@ -1,2 +1,19 @@
-<p>game-content works!</p>
-<app-game-question-area></app-game-question-area>
+
+
+<router-outlet></router-outlet>
+
+<h3>Wybierz kategorię</h3>
+
+<div class="category-grid">
+  <button
+    mat-raised-button
+    *ngFor="let category of selectedCategories; let i = index"
+    class="category-button"
+    [style.backgroundColor]="getCategoryColor(i)"
+    (click)="goToCategory(category)"
+  >
+    {{ category.name }}
+  </button>
+
+
+</div>

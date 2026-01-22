@@ -1,1 +1,8 @@
-<p>game-question-area works!</p>
+<app-question-area-header></app-question-area-header>
+<h2>Kategoria: {{ categoryName }}</h2>
+
+<app-question></app-question>
+
+<button mat-stroked-button (click)="back()">
+  Powrót do wyboru kategorii
+</button>

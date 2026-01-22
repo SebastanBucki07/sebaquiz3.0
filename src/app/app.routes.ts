@@ -4,6 +4,8 @@ import { GameComponent } from './game/game.component';
 import {ChooseTeamComponent} from "./pre-game/choose-team/choose-team.component";
 import {ChooseCategoryComponent} from "./pre-game/choose-category/choose-category.component";
 import {PreGameComponent} from "./pre-game/pre-game.component";
+import {GameContentComponent} from './game/game-content/game-content.component';
+import {GameQuestionAreaComponent} from './game/game-content/game-question-area/game-question-area.component';
 
 
 export const routes: Routes = [
@@ -12,7 +14,11 @@ export const routes: Routes = [
         component: MainComponent,
         children: [
             { path: '', redirectTo: 'game', pathMatch: 'full' },
-            { path: 'game', component: GameComponent },
+            { path: 'game', component: GameComponent,
+            children:[
+              { path: '', component: GameContentComponent },
+              { path: 'category/:name', component: GameQuestionAreaComponent }
+            ]},
             {
                 path: 'pregame',
                 component: PreGameComponent,
