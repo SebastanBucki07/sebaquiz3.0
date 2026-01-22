@@ -1,0 +1,24 @@
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;      /* zawijanie do kolejnego wiersza */
+  gap: 16px;            /* odstęp między kategoriami */
+}
+
+.category-button {
+  padding: 16px 20px;
+  min-height: 56px;
+  border-radius: 12px;
+
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
+}
+
+.category-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}

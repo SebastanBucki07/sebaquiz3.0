@@ -1,0 +1,17 @@
+/* full-width mat-card */
+.category-header {
+  width: 100%;              /* ⬅️ FULLWIDTH */
+  display: flex;
+  justify-content: center;   /* center h2 */
+  box-sizing: border-box;    /* includes padding */
+  margin: 24px 0;
+}
+
+/* h2 inside */
+.category-title {
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 600;
+}
+
