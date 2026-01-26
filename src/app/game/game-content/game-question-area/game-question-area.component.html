@@ -4,6 +4,15 @@
 
 <app-question></app-question>
 
-<button mat-flat-button color="warn" (click)="back()">
-  Powrót do wyboru kategorii
+<!--<button mat-flat-button color="warn" (click)="back()">-->
+<!--  Powrót do wyboru kategorii-->
+<!--</button>-->
+
+
+<button mat-raised-button color="warn" (click)="wrong()">
+  ❌ Źle
+</button>
+
+<button mat-raised-button color="primary" (click)="correct()">
+  ✅ Dobrze
 </button>

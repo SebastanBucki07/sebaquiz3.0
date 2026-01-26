@@ -14,6 +14,12 @@ export class HeaderComponent {
 
   newGame() {
     this.gameService.resetGame();
+    const teams = JSON.parse(localStorage.getItem('teams') || '[]');
+
+
+    if (teams.length > 0) {
+      this.gameService.setCurrentTeam(teams[0].name);
+    }
     this.router.navigate(['/pregame']);
   }
 }
