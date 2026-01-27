@@ -1,50 +1,98 @@
+/* Host element full width */
 :host {
   display: block;
-  width: 100%;    /* full host width */
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
+/* Category header centered */
 .category-header {
-  width: 100%;     /* full host width */
+  width: 100%;
   display: flex;
-  justify-content: center;  /* center h2 */
+  justify-content: center;
   box-sizing: border-box;
   margin: 24px 0;
-  padding: 0 16px;    /* optional to provide internal spacing */
+  padding: 0 16px;
 }
 
-question-card {
-  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+/* Question card styling */
+.question-card {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2); /* nice gradient */
   border-radius: 16px;
-  padding: 20px;
-  width: 100%; /* takes up the entire width of the column */
-  max-width: 80%; /* maximum width of the card */
-  margin: 0 auto; /* centers the card in the column */
+  padding: 24px;
+  width: clamp(300px, 90%, 700px); /* responsive width: min 300px, preferred 90%, max 700px */
+  margin: 0 auto; /* center horizontally */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.answer-buttons {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   display: flex;
-  justify-content: flex-end; /* or space-between if you want to spread the buttons */
-  gap: 10px; /* space between buttons */
-  margin-top:20px;
+  flex-direction: column;
+  gap: 16px; /* spacing between child elements */
 }
 
+/* Hover effect for card */
 .question-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Question title styling */
 .question-title {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem); /* responsive font size */
   color: #006064;
   margin-bottom: 12px;
+  text-align: center;
 }
 
+/* Question text styling */
 .question-text {
-  font-family: 'Roboto', sans-serif;
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: clamp(1rem, 2vw, 1.2rem); /* responsive font size */
   color: #004d40;
   line-height: 1.6;
+}
+
+/* Answer buttons container */
+.answer-buttons {
+  display: flex;
+  justify-content: flex-end; /* buttons aligned to the right */
+  gap: 12px; /* spacing between buttons */
+  margin-top: 20px;
+}
+
+/* Individual answer button */
+.answer-buttons button {
+  min-width: 100px;
+  font-weight: 500;
+}
+
+/* No hints text */
+.no-hints {
+  font-style: italic;
+  color: gray;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 600px) {
+  .question-card {
+    padding: 16px; /* reduce padding on small screens */
+  }
+
+  .answer-buttons {
+    flex-direction: column; /* stack buttons vertically */
+    align-items: stretch; /* make buttons full width */
+  }
+
+  .answer-buttons button {
+    width: 100%;
+  }
+}
+
+/* Optional: larger screens, allow wider card */
+@media (min-width: 1200px) {
+  .question-card {
+    width: 90%; /* fill 90% of screen width on large screens */
+  }
 }
