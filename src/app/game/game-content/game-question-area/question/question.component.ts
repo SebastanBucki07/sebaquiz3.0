@@ -1,6 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
 import {Hint} from '../../../../shared/category/category.interface';
-import {MATERIAL_IMPORTS} from '../../../../shared/material';
 import {CommonModule} from '@angular/common';
 import {TipsComponent} from './tips/tips.component';
 
@@ -8,7 +7,6 @@ import {TipsComponent} from './tips/tips.component';
   selector: 'app-question',
   imports: [
     CommonModule,
-    MATERIAL_IMPORTS,
     TipsComponent
   ],
   templateUrl: './question.component.html',
@@ -24,7 +22,7 @@ export class QuestionComponent {
   }
 
   onHintUsedFromTips(hint: Hint) {
-    this.hintUsed.emit(hint); // przekazujemy event dalej do GameQuestionArea
+    this.hintUsed.emit(hint); // we forward the event to GameQuestionArea
   }
 
   ngOnInit() {
