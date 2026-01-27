@@ -30,7 +30,7 @@ export class GameContentComponent implements OnInit{
     if (!category) return;
 
 
-// routing do GameQuestionAreaComponent + pod-route for type
+// routing for GameQuestionAreaComponent + pod-route for type
     this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
 

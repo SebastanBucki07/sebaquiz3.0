@@ -27,8 +27,13 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   ngOnInit() {
-    const categoryName = this.route.snapshot.paramMap.get('name')!;
-    this.currentCategory = CATEGORY_LIST.find(c => c.name === categoryName)!;
+    const categoryName = this.route.snapshot.paramMap.get('name');
+    const type = this.route.snapshot.paramMap.get('type');
+
+
+    this.currentCategory = CATEGORY_LIST.find(
+      c => c.name === categoryName && c.type === type
+    )!;
   }
 
   wrong() {
