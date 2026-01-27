@@ -1,13 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MATERIAL_IMPORTS } from '../../shared/material';
-import { GameService } from '../../shared/game.service';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
-
-export interface Category {
-  id: number;
-  name: string;
-}
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {MATERIAL_IMPORTS} from '../../shared/material';
+import {GameService} from '../../shared/game.service';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
+import {CATEGORY_LIST} from '../../shared/category/categoryList';
+import {Category} from '../../shared/category/category.interface';
 
 @Component({
   selector: 'app-choose-category',
@@ -21,11 +18,12 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   selectedCategories: Category[] = [];
   private destroy$ = new Subject<void>();
 
-  constructor(private gameService: GameService) {}
+  constructor(private gameService: GameService) {
+  }
 
   ngOnInit() {
     this.loadCategories();
-    
+
     // Listen for game reset
     this.gameService.reset$
       .pipe(takeUntil(this.destroy$))
@@ -41,23 +39,14 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   }
 
   loadCategories() {
-    // Default available categories
-    this.availableCategories = [
-      { id: 1, name: 'Geografia' },
-      { id: 2, name: 'Historia' },
-      { id: 3, name: 'Biologia' },
-      { id: 4, name: 'Matematyka' },
-      { id: 5, name: 'Fizyka' },
-      { id: 6, name: 'Literatura' },
-      { id: 7, name: 'Chemia' },
-      { id: 8, name: 'Sztuka' }
-    ];
+    this.availableCategories = [...CATEGORY_LIST];
 
-    // Load selected from localStorage
+
+// Load selected from localStorage
     const saved = localStorage.getItem('selectedCategories');
     if (saved) {
       this.selectedCategories = JSON.parse(saved);
-      // Remove selected from available
+// Remove selected from available
       this.availableCategories = this.availableCategories.filter(
         cat => !this.selectedCategories.some(sel => sel.id === cat.id)
       );

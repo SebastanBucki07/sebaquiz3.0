@@ -8,3 +8,19 @@ app-root {
   flex-direction: column;
   min-height: 100vh; /* IMPORTANT - full viewport height */
 }
+
+
+.mat-raised-button.mat-primary {
+  background-color: #1976d2 !important; /* mocny niebieski */
+  color: white !important;
+}
+
+.mat-raised-button.mat-warn {
+  background-color: #d32f2f !important; /* mocny czerwony */
+  color: white !important;
+}
+
+.mat-raised-button.mat-accent {
+  background-color: #e91e63 !important; /* mocny różowy */
+  color: white !important;
+}

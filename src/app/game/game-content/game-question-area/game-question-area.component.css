@@ -12,3 +12,39 @@
   padding: 0 16px;    /* optional to provide internal spacing */
 }
 
+.question-card {
+  background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+  border-radius: 16px;
+  padding: 20px;
+  width: 100%;          /* zajmuje całą szerokość kolumny */
+  max-width: 80%;    /* maksymalna szerokość karty */
+  margin: 0 auto;       /* centruje kartę w kolumnie */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.answer-buttons {
+  display: flex;
+  justify-content: flex-end; /* lub space-between, jeśli chcesz rozłożyć przyciski */
+  gap: 10px; /* odstęp między przyciskami */
+  margin-top:20px;
+}
+
+.question-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+.question-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: #006064;
+  margin-bottom: 12px;
+}
+
+.question-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #004d40;
+  line-height: 1.6;
+}

@@ -1,17 +1,23 @@
-/* full-width mat-card */
-.category-header {
-  width: 100%;              /* ⬅️ FULLWIDTH */
-  display: flex;
-  justify-content: center;   /* center h2 */
-  box-sizing: border-box;    /* includes padding */
-  margin: 24px 0;
+/* Styl dla nagłówka kategorii */
+h2 {
+  font-family: 'Montserrat', sans-serif; /* elegancki, wyraźny nagłówek */
+  font-size: clamp(1.8rem, 3vw, 2.5rem); /* responsywny rozmiar */
+  color: #006064; /* głęboki turkus */
+  margin-bottom: 6px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* delikatny cień dla czytelności */
 }
 
-/* h2 inside */
-.category-title {
+/* Styl dla punktów */
+p {
+  font-family: 'Roboto', sans-serif; /* przyjazna do czytania czcionka */
+  font-size: clamp(1rem, 2vw, 1.3rem); /* responsywny rozmiar */
+  color: #00796b; /* ciemniejszy turkus */
   margin: 0;
-  text-align: center;
-  font-size: 26px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
+/* Dodatkowe wyróżnienie dla wartości punktów */
+p span {
+  font-weight: 700;
+  color: #ff6f00; /* pomarańczowy akcent */
+}

@@ -5,6 +5,8 @@ import {QuestionComponent} from './question/question.component';
 import {QuestionAreaHeaderComponent} from './question-area-header/question-area-header.component';
 import {MATERIAL_IMPORTS} from '../../../shared/material';
 import {GameService} from '../../../shared/game.service';
+import {CATEGORY_LIST} from '../../../shared/category/categoryList';
+import {Category, Hint} from '../../../shared/category/category.interface';
 
 @Component({
   selector: 'app-game-question-area',
@@ -14,7 +16,9 @@ import {GameService} from '../../../shared/game.service';
   styleUrl: './game-question-area.component.css'
 })
 export class GameQuestionAreaComponent implements OnInit {
-  categoryName!: string;
+  currentCategory!: Category;
+  usedHints: Hint[] = [];
+
 
   constructor(
     private route: ActivatedRoute,
@@ -24,7 +28,8 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.categoryName = this.route.snapshot.paramMap.get('name')!;
+    const categoryName = this.route.snapshot.paramMap.get('name')!;
+    this.currentCategory = CATEGORY_LIST.find(c => c.name === categoryName)!;
   }
 
   wrong() {
@@ -32,9 +37,33 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
+  calculatePoints(): number {
+    if (!this.currentCategory) return 0;
+    const base = this.currentCategory.basePoints;
+    const totalPenalty = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
+    const multiplier = Math.max(0, 1 - totalPenalty / 100);
+    return Math.round(base * multiplier);
+  }
+
   correct() {
-    this.gameService.addPointsToCurrentTeam(1);
+    const points = this.calculatePoints();
+    this.gameService.addPointsToCurrentTeam(points);
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
   }
+
+  useHint(hint: Hint) {
+    if (!this.usedHints.includes(hint)) {
+      this.usedHints.push(hint);
+    }
+  }
+
+  onHintUsed(hint: Hint) {
+    if (!this.usedHints.includes(hint)) {
+      this.usedHints.push(hint);
+      // dodatkowa logika np. obniżenie punktów
+    }
+  }
+
+
 }

@@ -31,7 +31,7 @@ import {
   MatHeaderRow
 } from '@angular/material/table';
 import {
-  MatButton,
+  MatButton, MatButtonModule,
   MatIconButton
 } from '@angular/material/button';
 import {
@@ -61,6 +61,7 @@ export const MATERIAL_IMPORTS = [
   MatCardHeader,
   MatCardTitle,
   MatTable,
+  MatButtonModule,
   MatButton,
   MatIconButton,
   MatFormField,
