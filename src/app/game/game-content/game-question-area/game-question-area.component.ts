@@ -52,16 +52,9 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
-  useHint(hint: Hint) {
-    if (!this.usedHints.includes(hint)) {
-      this.usedHints.push(hint);
-    }
-  }
-
   onHintUsed(hint: Hint) {
     if (!this.usedHints.includes(hint)) {
       this.usedHints.push(hint);
-      // dodatkowa logika np. obniżenie punktów
     }
   }
 

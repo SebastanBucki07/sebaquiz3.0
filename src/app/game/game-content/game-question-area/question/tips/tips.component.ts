@@ -17,10 +17,11 @@ export class TipsComponent {
   @Input() hints: Hint[] = [];
   @Output() hintUsed = new EventEmitter<Hint>();
 
-  // tablica odkrytych podpowiedzi
+  // array of discovered hints
+
   revealedHints: Hint[] = [];
 
-  // metoda wywoływana przy kliknięciu panelu
+  // method called when clicking the panel
   showHint(hint: Hint) {
     if (!this.isRevealed(hint)) {
       this.revealedHints.push(hint);

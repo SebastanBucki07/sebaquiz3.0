@@ -9,18 +9,17 @@ app-root {
   min-height: 100vh; /* IMPORTANT - full viewport height */
 }
 
-
 .mat-raised-button.mat-primary {
-  background-color: #1976d2 !important; /* mocny niebieski */
+  background-color: #1976d2 !important; /* strong blue */
   color: white !important;
 }
 
 .mat-raised-button.mat-warn {
-  background-color: #d32f2f !important; /* mocny czerwony */
+  background-color: #d32f2f !important; /* strong red */
   color: white !important;
 }
 
 .mat-raised-button.mat-accent {
-  background-color: #e91e63 !important; /* mocny różowy */
+  background-color: #e91e63 !important; /* strong pink */
   color: white !important;
 }

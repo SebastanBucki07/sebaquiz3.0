@@ -27,7 +27,7 @@ export class GameService {
   resetGame() {
     localStorage.removeItem('teams');
     localStorage.removeItem('selectedCategories');
-    this.currentTeamSubject.next(null); // reset drużyny
+    this.currentTeamSubject.next(null); // reset team
     this.resetSubject.next();
   }
 
