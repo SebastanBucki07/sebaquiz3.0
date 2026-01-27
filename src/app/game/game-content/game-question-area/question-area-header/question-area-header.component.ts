@@ -5,13 +5,14 @@ import {Category, Hint} from '../../../../shared/category/category.interface';
 @Component({
   selector: 'app-question-area-header',
   templateUrl: './question-area-header.component.html',
+  imports: [
+  ],
   styleUrl: './question-area-header.component.css'
 })
 export class QuestionAreaHeaderComponent {
-  points!: number;
-
   @Input() category!: Category;
   @Input() usedHints: Hint[] = [];
+  @Input() points!: number;
 
 
   ngOnInit() {
