@@ -4,10 +4,14 @@
     [usedHints]="usedHints">
   </app-question-area-header>
 
-  <app-question
-    [hints]="currentCategory.hints || []"
-    (hintUsed)="onHintUsed($event)">
-  </app-question>
+  <!-- router-outlet dla pod-komponentu pytania -->
+  <router-outlet></router-outlet>
+
+
+<!--  <app-question-->
+<!--    [hints]="currentCategory.hints || []"-->
+<!--    (hintUsed)="onHintUsed($event)">-->
+<!--  </app-question>-->
 
   <div class="answer-buttons">
     <button mat-raised-button color="warn" (click)="wrong()">

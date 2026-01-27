@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
+import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {QuestionComponent} from './question/question.component';
 import {QuestionAreaHeaderComponent} from './question-area-header/question-area-header.component';
@@ -12,7 +12,7 @@ import {Category, Hint} from '../../../shared/category/category.interface';
   selector: 'app-game-question-area',
   templateUrl: './game-question-area.component.html',
   standalone: true,
-  imports: [MATERIAL_IMPORTS, CommonModule, QuestionComponent, QuestionAreaHeaderComponent],
+  imports: [MATERIAL_IMPORTS, CommonModule, QuestionAreaHeaderComponent, RouterOutlet],
   styleUrl: './game-question-area.component.css'
 })
 export class GameQuestionAreaComponent implements OnInit {

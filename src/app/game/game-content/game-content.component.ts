@@ -3,6 +3,7 @@ import {Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {Category} from '../../shared/category/category.interface';
+import {CATEGORY_LIST} from '../../shared/category/categoryList';
 
 @Component({
   selector: 'app-game-content',
@@ -25,11 +26,13 @@ export class GameContentComponent implements OnInit{
     this.selectedCategories = saved ? JSON.parse(saved) : [];
   }
 
-  goToCategory(category: Category) {
-    this.router.navigate([
-      '/game/category',
-      category.name
-    ]);
+  goToCategory(categoryName: string) {
+    const category = this.selectedCategories.find(cat => cat.name === categoryName);
+    if (!category) return;
+
+
+// routing do GameQuestionAreaComponent + pod-route dla typu
+    this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
 
   colors = [
