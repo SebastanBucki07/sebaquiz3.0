@@ -1,9 +1,21 @@
-<div class="parent-container">
-  <app-question-area-header></app-question-area-header>
+<div class="question-card">
+  <app-question-area-header
+    [category]="currentCategory"
+    [usedHints]="usedHints">
+  </app-question-area-header>
+
+  <app-question
+    [hints]="currentCategory.hints || []"
+    (hintUsed)="onHintUsed($event)">
+  </app-question>
+
+  <div class="answer-buttons">
+    <button mat-raised-button color="warn" (click)="wrong()">
+      ❌ Źle
+    </button>
+
+    <button mat-raised-button color="primary" (click)="correct()">
+      ✅ Dobrze
+    </button>
+  </div>
 </div>
-
-<app-question></app-question>
-
-<button mat-flat-button color="warn" (click)="back()">
-  Powrót do wyboru kategorii
-</button>

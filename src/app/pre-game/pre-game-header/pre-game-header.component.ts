@@ -25,7 +25,7 @@ export class PreGameHeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.checkGameReady();
-    
+
     // Listen for data changes
     this.gameService.dataChanged$
       .pipe(takeUntil(this.destroy$))
@@ -40,10 +40,10 @@ export class PreGameHeaderComponent implements OnInit, OnDestroy {
   checkGameReady() {
     const teams = localStorage.getItem('teams');
     const categories = localStorage.getItem('selectedCategories');
-    
+
     this.teamsCount = teams ? JSON.parse(teams).length : 0;
     this.categoriesCount = categories ? JSON.parse(categories).length : 0;
-    
+
     this.canStartGame = this.teamsCount >= 2 && this.categoriesCount >= 1;
   }
 
@@ -57,6 +57,12 @@ export class PreGameHeaderComponent implements OnInit, OnDestroy {
 
   startGame() {
     if (this.canStartGame) {
+      const teams = JSON.parse(localStorage.getItem('teams') || '[]');
+
+
+      if (teams.length > 0) {
+        this.gameService.setCurrentTeam(teams[0].name);
+      }
       this.router.navigate(['/game']);
     }
   }

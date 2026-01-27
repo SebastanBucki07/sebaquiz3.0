@@ -1,0 +1,17 @@
+<div *ngIf="hints.length > 0; else noHints">
+  <mat-accordion multi>
+    <mat-expansion-panel *ngFor="let hint of hints" [expanded]="isRevealed(hint)" (opened)="showHint(hint)">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{ hint.label }} (-{{ hint.penaltyPercent }}%)
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+
+      <p>{{ hint.content }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<ng-template #noHints>
+  <p class="no-hints">Brak podpowiedzi dla tej kategorii</p>
+</ng-template>

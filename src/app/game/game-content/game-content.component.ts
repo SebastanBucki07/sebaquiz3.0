@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {Category} from '../../pre-game/choose-category/choose-category.component';
 import {Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
+import {Category} from '../../shared/category/category.interface';
 
 @Component({
   selector: 'app-game-content',

@@ -1,0 +1,13 @@
+.question-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+  color: #006064;
+  margin-bottom: 12px;
+}
+
+.question-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: #004d40;
+  line-height: 1.6;
+}
