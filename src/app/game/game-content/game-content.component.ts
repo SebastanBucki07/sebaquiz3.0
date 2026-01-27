@@ -3,7 +3,6 @@ import {Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {Category} from '../../shared/category/category.interface';
-import {CATEGORY_LIST} from '../../shared/category/categoryList';
 
 @Component({
   selector: 'app-game-content',
@@ -31,7 +30,7 @@ export class GameContentComponent implements OnInit{
     if (!category) return;
 
 
-// routing do GameQuestionAreaComponent + pod-route dla typu
+// routing do GameQuestionAreaComponent + pod-route for type
     this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
 
