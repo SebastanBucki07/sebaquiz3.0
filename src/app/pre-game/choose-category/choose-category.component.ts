@@ -69,4 +69,16 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     localStorage.setItem('selectedCategories', JSON.stringify(this.selectedCategories));
     this.gameService.notifyDataChanged();
   }
+
+  addAllCategories(): void {
+    this.availableCategories.forEach((category) => {
+      this.addCategory(category)
+    })
+  }
+
+  removeAllCategories(): void {
+    this.selectedCategories.forEach((category) => {
+      this.removeCategory(category)
+    })
+  }
 }

@@ -5,7 +5,16 @@
     <!-- List of available categories -->
     <mat-card class="category-card">
       <mat-card-header>
-        <mat-card-title>Dostępne kategorie</mat-card-title>
+        <mat-card-title>Dostępne kategorie </mat-card-title>
+        <div class="bulk-actions">
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="addAllCategories()"
+            [disabled]="availableCategories.length === 0">
+            ➡️ Dodaj wszystkie
+          </button>
+        </div>
       </mat-card-header>
       <mat-card-content>
         <mat-list *ngIf="availableCategories.length > 0">
@@ -25,7 +34,16 @@
     <!-- List of selected categories -->
     <mat-card class="category-card">
       <mat-card-header>
-        <mat-card-title>Wybrane kategorie</mat-card-title>
+        <mat-card-title>Wybrane kategorie </mat-card-title>
+        <div class="bulk-actions">
+          <button
+            mat-raised-button
+            color="warn"
+            (click)="removeAllCategories()"
+            [disabled]="selectedCategories.length === 0">
+            ⬅️ Usuń wszystkie
+          </button>
+        </div>
       </mat-card-header>
       <mat-card-content>
         <mat-list *ngIf="selectedCategories.length > 0">
