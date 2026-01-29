@@ -20,6 +20,19 @@ import {
 import {
   PhotosCategoryComponent
 } from './game/game-content/game-question-area/photos-category/photos-category.component';
+import {
+  PhotoFragmentsCategoryComponent
+} from './game/game-content/game-question-area/photo-fragments-category/photo-fragments-category.component';
+import {
+  PhotoHintsCategoryComponent
+} from './game/game-content/game-question-area/photo-hints-category/photo-hints-category.component';
+import {FamiliadaComponent} from './game/game-content/game-question-area/familiada/familiada.component';
+import {
+  FootballGameCategoryComponent
+} from './game/game-content/game-question-area/football-game-category/football-game-category.component';
+import {
+  TicTacToeCategoryComponent
+} from './game/game-content/game-question-area/tic-tac-toe-category/tic-tac-toe-category.component';
 
 
 export const routes: Routes = [
@@ -44,8 +57,13 @@ export const routes: Routes = [
               { path: 'music', component: MusicCategoryComponent },
               { path: 'one-answer', component: OneAnswerCategoryComponent },
               { path: 'abcd', component: MultipleChoiceCategoryComponent },
-              { path: 'wpisywanie', component: WritingCategoryComponent },
-              { path: 'photos', component: PhotosCategoryComponent }
+              { path: 'writting-category', component: WritingCategoryComponent },
+              { path: 'photos', component: PhotosCategoryComponent },
+              { path: 'photo-fragments', component: PhotoFragmentsCategoryComponent },
+              { path: 'photo-hints', component: PhotoHintsCategoryComponent },
+              { path: 'familiada', component: FamiliadaComponent },
+              { path: 'footballGame', component: FootballGameCategoryComponent },
+              { path: 'ticTacToe', component: TicTacToeCategoryComponent }
             ]
           }
         ]
