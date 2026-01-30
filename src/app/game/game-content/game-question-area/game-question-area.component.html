@@ -1,13 +1,12 @@
 <div class="question-card">
   <app-question-area-header
     [category]="currentCategory"
+    [points]="currentPoints"
     [usedHints]="usedHints">
   </app-question-area-header>
 
-  <app-question
-    [hints]="currentCategory.hints || []"
-    (hintUsed)="onHintUsed($event)">
-  </app-question>
+  <!-- tu child route z pod-komponentem kategorii -->
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
 
   <div class="answer-buttons">
     <button mat-raised-button color="warn" (click)="wrong()">

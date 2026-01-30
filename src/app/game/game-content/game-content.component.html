@@ -10,7 +10,7 @@
     *ngFor="let category of selectedCategories; let i = index"
     class="category-button"
     [style.backgroundColor]="getCategoryColor(i)"
-    (click)="goToCategory(category)"
+    (click)="goToCategory(category.name)"
   >
     {{ category.name }}
   </button>
