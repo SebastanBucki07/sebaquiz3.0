@@ -1,1 +1,6 @@
 <p>one-answer-category works!</p>
+<h2>{{ question?.question }}</h2>
+
+<div *ngFor="let hint of question?.hints">
+  {{ hint }}
+</div>

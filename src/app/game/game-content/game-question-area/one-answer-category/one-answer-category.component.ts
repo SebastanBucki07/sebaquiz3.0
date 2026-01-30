@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {QuestionService} from '../../../../shared/question-service.service';
 
 @Component({
   selector: 'app-one-answer-category',
@@ -6,6 +7,13 @@ import { Component } from '@angular/core';
   templateUrl: './one-answer-category.component.html',
   styleUrl: './one-answer-category.component.css'
 })
-export class OneAnswerCategoryComponent {
+export class OneAnswerCategoryComponent implements OnInit{
+  question!: any;
 
+  constructor(private questionService: QuestionService) {}
+
+  ngOnInit() {
+    this.questionService.question$
+      .subscribe(q => this.question = q);
+  }
 }

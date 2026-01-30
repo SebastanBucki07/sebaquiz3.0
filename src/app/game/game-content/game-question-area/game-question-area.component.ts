@@ -6,6 +6,7 @@ import {MATERIAL_IMPORTS} from '../../../shared/material';
 import {GameService} from '../../../shared/game.service';
 import {CATEGORY_LIST} from '../../../shared/category/categoryList';
 import {Category, Hint} from '../../../shared/category/category.interface';
+import {QuestionService} from '../../../shared/question-service.service';
 
 @Component({
   selector: 'app-game-question-area',
@@ -24,27 +25,35 @@ export class GameQuestionAreaComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private gameService: GameService
+    private gameService: GameService,
+    private questionService: QuestionService
   ) {
   }
 
   ngOnInit(): void {
-    const type = this.route.snapshot.paramMap.get('type');
-    const name = this.route.snapshot.paramMap.get('name');
 
+    this.route.paramMap.subscribe(params => {
+      const type = params.get('type');
+      const name = params.get('name');
 
-    const category = CATEGORY_LIST.find(
-      c => c.type === type && c.name === name
-    );
+      if (!type || !name) {
+        throw new Error('Brak parametrów kategorii w URL');
+      }
 
+      const category = CATEGORY_LIST.find(
+        c => c.type === type && c.name === name
+      );
 
-    if (!category) {
-      throw new Error('Nie znaleziono kategorii');
-    }
+      if (!category) {
+        throw new Error('Nie znaleziono kategorii');
+      }
 
+      this.currentCategory = category;
+      //this.currentPoints = category.basePoints;
 
-    this.currentCategory = category;
-    //this.currentPoints = category.basePoints;
+      // 🔥 TU LOSUJEMY PYTANIE
+      this.questionService.loadRandomQuestion(type, name);
+    });
   }
 
   wrong() {
