@@ -4,6 +4,7 @@ import {CommonModule} from '@angular/common';
 import {MatButtonModule} from '@angular/material/button';
 import {Category} from '../../shared/category/category.interface';
 import {QuestionService} from '../../shared/question-service.service';
+import {MATERIAL_IMPORTS} from '../../shared/material';
 
 @Component({
   selector: 'app-game-content',
@@ -12,7 +13,8 @@ import {QuestionService} from '../../shared/question-service.service';
   imports: [
     CommonModule,
     MatButtonModule,
-    RouterOutlet
+    RouterOutlet,
+    MATERIAL_IMPORTS
   ],
   styleUrl: './game-content.component.css'
 })
@@ -30,11 +32,17 @@ export class GameContentComponent implements OnInit{
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
     if (remaining === 0) {
-      return '#9e9e9e'; // szary kolor dla wyczerpanej kategorii
+      return '#9e9e9e'; // szary dla wyczerpanej kategorii
     }
+
+    // Gradient dynamiczny w zależności od indeksu
     const hue = (index * 360) / this.selectedCategories.length;
-    return `hsl(${hue}, 70%, 50%)`;
+    const colorStart = `hsl(${hue}, 70%, 50%)`;
+    const colorEnd = `hsl(${(hue + 30) % 360}, 70%, 60%)`;
+
+    return `linear-gradient(45deg, ${colorStart}, ${colorEnd})`;
   }
+
 
 // Liczba dostępnych pytań w danej kategorii
   getRemainingQuestions(category: Category): number {
@@ -58,9 +66,13 @@ export class GameContentComponent implements OnInit{
 
 
 
-  colors = [
-    '#3f51b5', '#e91e63', '#009688',
-    '#ff9800', '#673ab7', '#4caf50'
+  colors: string[][] = [
+    ['#3f51b5', '#2196f3'],
+    ['#e91e63', '#f06292'],
+    ['#009688', '#26a69a'],
+    ['#ff9800', '#ffc107'],
+    ['#673ab7', '#9575cd'],
+    ['#4caf50', '#81c784']
   ];
 
   // getCategoryColor(index: number): string {

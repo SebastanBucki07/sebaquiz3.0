@@ -1,11 +1,17 @@
-<p>answer works!</p>
-<div *ngIf="(question$ | async)?.showAnswer">
-  <h3>Poprawna odpowiedź:</h3>
+<div *ngIf="question$ | async as currentQuestion">
 
-  <ul>
-    <li *ngFor="let ans of (question$ | async)?.answers">
-      {{ ans.value }}
-    </li>
-  </ul>
+  <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
+
+    <button mat-raised-button
+            color="primary"
+            (click)="revealAnswer(i)"
+            [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)">
+      Pokaż {{ answer.label || ('odpowiedź ' + (i + 1)) }}
+    </button>
+
+    <p *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)">
+      {{ answer.value }}
+    </p>
+
+  </div>
 </div>
-

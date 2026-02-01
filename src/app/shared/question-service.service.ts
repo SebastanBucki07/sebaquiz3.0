@@ -11,6 +11,7 @@ export class QuestionService {
 
   private usedQuestions: Question[] = [];
 
+
   loadRandomQuestion(type: string, name: string) {
     const questions = this.getQuestions(type, name);
 
@@ -25,25 +26,28 @@ export class QuestionService {
 
     const random = {
       ...availableQuestions[Math.floor(Math.random() * availableQuestions.length)],
-      showAnswer: false
+      showAnswer: false,
+      revealedAnswers: [] // ✅ resetujemy odkryte odpowiedzi
     };
 
     this.usedQuestions.push(random);
     this.currentQuestion$.next(random);
   }
 
-  revealAnswer() {
+
+  revealAnswer(index: number) {
     const q = this.currentQuestion$.value;
     if (!q) return;
 
-    this.currentQuestion$.next({ ...q, showAnswer: true });
-  }
+    if (!q.revealedAnswers) q.revealedAnswers = [];
 
-  hideAnswer() {
-    const q = this.currentQuestion$.value;
-    if (!q) return;
+    // dodajemy tylko wybraną odpowiedź
+    if (!q.revealedAnswers.includes(index)) {
+      q.revealedAnswers.push(index);
+    }
 
-    this.currentQuestion$.next({ ...q, showAnswer: false });
+    // nie ustawiamy showAnswer
+    this.currentQuestion$.next({ ...q });
   }
 
   getCurrentQuestion() {
@@ -52,6 +56,12 @@ export class QuestionService {
 
   resetQuestions() {
     this.usedQuestions = [];
+    const q = this.currentQuestion$.value;
+    if (!q) return;
+
+    // resetujemy odkryte odpowiedzi
+    q.revealedAnswers = [];
+    this.currentQuestion$.next({ ...q, showAnswer: false });
   }
 
   /** ✅ PUBLIC: checks if there are any more questions in a given category */

@@ -19,8 +19,8 @@ import {AnswerComponent} from './answer/answer.component';
 export class GameQuestionAreaComponent implements OnInit {
   currentCategory!: Category;
   basePoints = 0;
-  //currentPoints = 0;
   usedHints: Hint[] = [];
+
 
 
   constructor(
@@ -116,9 +116,13 @@ export class GameQuestionAreaComponent implements OnInit {
     return Math.round(this.currentCategory.basePoints * multiplier);
   }
 
-  checkAnswer() {
-    console.log('CLICK');
-    this.questionService.revealAnswer();
+  // checkAnswer() {
+  //   console.log('CLICK');
+  //   this.questionService.revealAnswer();
+  // }
+
+  revealAnswer(index: number) {
+    this.questionService.revealAnswer(index);
   }
 
 }

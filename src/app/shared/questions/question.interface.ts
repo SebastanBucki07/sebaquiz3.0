@@ -6,4 +6,5 @@ export interface Question {
   answers: AnswerItem[];
   hints?: string[];
   showAnswer?: boolean;
+  revealedAnswers?: number[]
 }
