@@ -87,6 +87,8 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
+
+
   onHintUsed(hint: Hint): void {
 // dodaj hint jeśli nie był wcześniej użyty
     if (!this.usedHints.some(h => h.id === hint.id)) {
@@ -116,10 +118,13 @@ export class GameQuestionAreaComponent implements OnInit {
     return Math.round(this.currentCategory.basePoints * multiplier);
   }
 
-  // checkAnswer() {
-  //   console.log('CLICK');
-  //   this.questionService.revealAnswer();
-  // }
+  half() {
+    const points = Math.ceil(this.currentPoints / 2);
+    this.gameService.addPointsToCurrentTeam(points);
+    this.usedHints = [];
+    this.gameService.nextTeam();
+    this.router.navigate(['/game']);
+  }
 
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);

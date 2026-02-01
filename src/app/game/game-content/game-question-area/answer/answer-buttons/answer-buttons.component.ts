@@ -15,4 +15,5 @@ export class AnswerButtonsComponent {
   @Input() disabled = false;
   @Output() correct = new EventEmitter<void>();
   @Output() wrong = new EventEmitter<void>();
+  @Output() half = new EventEmitter<void>();
 }

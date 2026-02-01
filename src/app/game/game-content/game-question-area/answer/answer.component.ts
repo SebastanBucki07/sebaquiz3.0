@@ -20,6 +20,7 @@ export class AnswerComponent implements OnInit {
 
   @Output() correct = new EventEmitter<void>();
   @Output() wrong = new EventEmitter<void>();
+  @Output() half = new EventEmitter<void>();
 
   question$!: Observable<Question | null>;
 
@@ -32,4 +33,9 @@ export class AnswerComponent implements OnInit {
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
   }
+
+  onHalf() {
+    this.half.emit();
+  }
+
 }
