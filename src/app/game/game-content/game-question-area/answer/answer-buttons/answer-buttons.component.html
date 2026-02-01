@@ -1,7 +1,9 @@
-<div class="answer-buttons">
+<div class="answer-buttons-container">
+
   <button
     mat-raised-button
     color="warn"
+    class="answer-btn wrong"
     [disabled]="disabled"
     (click)="wrong.emit()">
     ❌ Źle
@@ -10,8 +12,10 @@
   <button
     mat-raised-button
     color="primary"
+    class="answer-btn correct"
     [disabled]="disabled"
     (click)="correct.emit()">
     ✅ Dobrze
   </button>
+
 </div>
