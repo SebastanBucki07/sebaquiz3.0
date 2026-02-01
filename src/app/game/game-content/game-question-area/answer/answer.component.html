@@ -24,9 +24,11 @@
 
   <!-- 🔥 TU JEST AnswerButtonComponent -->
   <app-answer-buttons
+    *ngIf="showAnswerButtons"
     (correct)="correct.emit()"
     (wrong)="wrong.emit()"
     (half)="half.emit()">
   </app-answer-buttons>
+
 
 </div>

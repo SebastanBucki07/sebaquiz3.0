@@ -22,6 +22,8 @@ export class AnswerComponent implements OnInit {
   @Output() wrong = new EventEmitter<void>();
   @Output() half = new EventEmitter<void>();
 
+  showAnswerButtons = false;
+
   question$!: Observable<Question | null>;
 
   constructor(private questionService: QuestionService) {}
@@ -32,7 +34,21 @@ export class AnswerComponent implements OnInit {
 
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
+
+    // pobieramy aktualne pytanie
+    this.question$.subscribe(currentQuestion => {
+      if (!currentQuestion) return;
+
+      const revealed = currentQuestion.revealedAnswers ?? [];
+      const total = currentQuestion.answers.length;
+
+      // pokaż przyciski dopiero gdy wszystkie odpowiedzi są odsłonięte
+      if (revealed.length === total) {
+        this.showAnswerButtons = true;
+      }
+    }).unsubscribe(); // od razu odsubskrybowanie, bo chcemy tylko jednorazowo sprawdzić
   }
+
 
   onHalf() {
     this.half.emit();
