@@ -16,7 +16,7 @@ export class HeaderComponent {
 
   newGame() {
     // Reset gry w GameService
-    this.gameService.resetGame();
+    //this.gameService.resetGame();
 
     // Reset pytań w QuestionService
     this.questionService.resetQuestions();

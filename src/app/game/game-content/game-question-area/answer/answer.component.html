@@ -1,21 +1,31 @@
 <div *ngIf="question$ | async as currentQuestion">
 
+  <!-- PRZYCISKI ODKRYWAJĄCE ODPOWIEDZI -->
   <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
 
-    <!-- Przycisk odkrywający tylko tę odpowiedź -->
-    <button mat-raised-button
-            class="answer-button"
-            (click)="revealAnswer(i)"
-            [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)">
+    <button
+      mat-raised-button
+      class="answer-button"
+      (click)="revealAnswer(i)"
+      [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)">
       Pokaż {{ answer.label || ('odpowiedź ' + (i + 1)) }}
     </button>
 
-    <!-- Wyświetlenie odpowiedzi jeśli została odkryta -->
-    <div *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)"
-         class="answer-text revealed">
-      <div class="answer-label">{{ answer.label || ('Odpowiedź ' + (i + 1)) }}</div>
+    <div
+      *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)"
+      class="answer-text revealed">
+      <div class="answer-label">
+        {{ answer.label || ('Odpowiedź ' + (i + 1)) }}
+      </div>
       {{ answer.value }}
     </div>
 
   </div>
+
+  <!-- 🔥 TU JEST AnswerButtonComponent -->
+  <app-answer-buttons
+    (correct)="correct.emit()"
+    (wrong)="wrong.emit()">
+  </app-answer-buttons>
+
 </div>
