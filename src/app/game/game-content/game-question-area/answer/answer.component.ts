@@ -1,11 +1,26 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {AsyncPipe, CommonModule} from '@angular/common';
+import {QuestionService} from '../../../../shared/question-service.service';
+import {Observable} from 'rxjs';
+import {Question} from '../../../../shared/questions/question.interface';
 
 @Component({
   selector: 'app-answer',
-  imports: [],
+  standalone: true,
+  imports: [
+    AsyncPipe, CommonModule
+  ],
   templateUrl: './answer.component.html',
   styleUrl: './answer.component.css'
 })
-export class AnswerComponent {
+export class AnswerComponent implements OnInit {
 
+  question$!: Observable<Question | null>;
+
+  constructor(private questionService: QuestionService) {
+  }
+
+  ngOnInit() {
+    this.question$ = this.questionService.question$;
+  }
 }

@@ -7,12 +7,13 @@ import {GameService} from '../../../shared/game.service';
 import {CATEGORY_LIST} from '../../../shared/category/categoryList';
 import {Category, Hint} from '../../../shared/category/category.interface';
 import {QuestionService} from '../../../shared/question-service.service';
+import {AnswerComponent} from './answer/answer.component';
 
 @Component({
   selector: 'app-game-question-area',
   templateUrl: './game-question-area.component.html',
   standalone: true,
-  imports: [MATERIAL_IMPORTS, CommonModule, QuestionAreaHeaderComponent, RouterOutlet],
+  imports: [MATERIAL_IMPORTS, CommonModule, QuestionAreaHeaderComponent, RouterOutlet, AnswerComponent],
   styleUrl: './game-question-area.component.css'
 })
 export class GameQuestionAreaComponent implements OnInit {
@@ -115,5 +116,9 @@ export class GameQuestionAreaComponent implements OnInit {
     return Math.round(this.currentCategory.basePoints * multiplier);
   }
 
+  checkAnswer() {
+    console.log('CLICK');
+    this.questionService.revealAnswer();
+  }
 
 }

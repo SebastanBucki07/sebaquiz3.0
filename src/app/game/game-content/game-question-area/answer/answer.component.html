@@ -1,1 +1,11 @@
 <p>answer works!</p>
+<div *ngIf="(question$ | async)?.showAnswer">
+  <h3>Poprawna odpowiedź:</h3>
+
+  <ul>
+    <li *ngFor="let ans of (question$ | async)?.answers">
+      {{ ans.value }}
+    </li>
+  </ul>
+</div>
+
