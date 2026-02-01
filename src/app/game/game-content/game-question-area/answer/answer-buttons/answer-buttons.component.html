@@ -1,0 +1,17 @@
+<div class="answer-buttons">
+  <button
+    mat-raised-button
+    color="warn"
+    [disabled]="disabled"
+    (click)="wrong.emit()">
+    ❌ Źle
+  </button>
+
+  <button
+    mat-raised-button
+    color="primary"
+    [disabled]="disabled"
+    (click)="correct.emit()">
+    ✅ Dobrze
+  </button>
+</div>
