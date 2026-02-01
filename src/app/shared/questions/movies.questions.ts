@@ -19,7 +19,7 @@ export const FILMY = [
   },
   {
     id: 4,
-    answers: [{value: "OJCIEC CHRZESTNY"}],
+    answers: [{value2: "OJCIEC CHRZESTNY",value: "OJCIEC CHRZESTNY"}],
     question: "Opowieść o nowojorskiej rodzinie mafijnej. Starzejący się Don Corleone pragnie przekazać władzę swojemu synowi.",
     hints: []
   }

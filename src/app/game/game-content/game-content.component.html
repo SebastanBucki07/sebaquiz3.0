@@ -9,11 +9,17 @@
     mat-raised-button
     *ngFor="let category of selectedCategories; let i = index"
     class="category-button"
-    [style.backgroundColor]="getCategoryColor(i)"
-    (click)="goToCategory(category.name)"
+    [style.backgroundColor]="getCategoryColor(category, i)"
+    (click)="goToCategory(category)"
   >
     {{ category.name }}
+    <span *ngIf="getRemainingQuestions(category) > 0">
+    ({{ getRemainingQuestions(category) }})
+  </span>
   </button>
+
+
+
 
 
 </div>
