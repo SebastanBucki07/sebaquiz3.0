@@ -20,14 +20,14 @@ export class QuestionService {
     );
 
     if (availableQuestions.length === 0) {
-      alert('Wszystkie pytania zostały wyświetlone!');
+      alert('Wszystkie pytania zostały wyświetlone!'); // 🔥 alert
       return;
     }
 
     const random = {
       ...availableQuestions[Math.floor(Math.random() * availableQuestions.length)],
       showAnswer: false,
-      revealedAnswers: [] // ✅ resetujemy odkryte odpowiedzi
+      revealedAnswers: [] // reset odpowiedzi
     };
 
     this.usedQuestions.push(random);

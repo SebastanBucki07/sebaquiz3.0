@@ -2,16 +2,20 @@
 
   <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
 
+    <!-- Przycisk odkrywający tylko tę odpowiedź -->
     <button mat-raised-button
-            color="primary"
+            class="answer-button"
             (click)="revealAnswer(i)"
             [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)">
       Pokaż {{ answer.label || ('odpowiedź ' + (i + 1)) }}
     </button>
 
-    <p *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)">
+    <!-- Wyświetlenie odpowiedzi jeśli została odkryta -->
+    <div *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)"
+         class="answer-text revealed">
+      <div class="answer-label">{{ answer.label || ('Odpowiedź ' + (i + 1)) }}</div>
       {{ answer.value }}
-    </p>
+    </div>
 
   </div>
 </div>

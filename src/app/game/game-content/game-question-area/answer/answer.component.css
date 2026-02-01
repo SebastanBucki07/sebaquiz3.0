@@ -1,0 +1,81 @@
+.answer-block {
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* wyśrodkowanie przycisków i odpowiedzi */
+}
+
+/* Przyciski pokaz odpowiedź */
+.answer-button {
+  width: 100%;
+  max-width: 300px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff !important;
+  text-transform: capitalize;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+  margin-bottom: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.3s ease;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* gradient bardziej widoczny */
+  background: linear-gradient(45deg, #42a5f5, #1e88e5);
+}
+
+/* Alternatywne kolory dla kolejnych przycisków */
+.answer-button:nth-child(2) { background: linear-gradient(45deg, #f06292, #e91e63); }
+.answer-button:nth-child(3) { background: linear-gradient(45deg, #66bb6a, #43a047); }
+.answer-button:nth-child(4) { background: linear-gradient(45deg, #ffa726, #fb8c00); }
+
+/* Hover efekt */
+.answer-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Wyłączony przycisk */
+.answer-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #b0bec5 !important;
+}
+
+/* Tekst odpowiedzi */
+.answer-text {
+  margin: 8px 0 16px 0;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  word-wrap: break-word;
+  text-align: center;
+  max-width: 300px;
+
+  /* Animacja fade-in + slide */
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.answer-text.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Labelka nad odpowiedzią */
+.answer-label {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #555;
+  text-align: center;
+}

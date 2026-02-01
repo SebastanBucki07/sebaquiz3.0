@@ -12,7 +12,7 @@
     *ngFor="let category of selectedCategories; let i = index"
     class="category-button"
     [style.background]="getCategoryColor(category, i)"
-    [disabled]="getRemainingQuestions(category) === 0"
+    [class.disabled-category]="getRemainingQuestions(category) === 0"
     (click)="goToCategory(category)"
   >
     {{ category.name | titlecase }}
@@ -20,5 +20,4 @@
     ({{ getRemainingQuestions(category) }})
   </span>
   </button>
-
 </div>

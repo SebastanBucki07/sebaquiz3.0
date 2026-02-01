@@ -56,15 +56,15 @@ export class GameContentComponent implements OnInit{
 // Obsługa kliknięcia
   goToCategory(category: Category) {
     const remaining = this.getRemainingQuestions(category);
+
     if (remaining === 0) {
-      alert(`Brak pytań dla kategorii "${category.name}"`);
-      return;
+      alert('Wszystkie pytania w tej kategorii zostały wyświetlone!');
+      return; // blokuje przejście
     }
 
+    // routing do komponentu pytań
     this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
-
-
 
   colors: string[][] = [
     ['#3f51b5', '#2196f3'],
