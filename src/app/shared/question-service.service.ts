@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { FILMY } from './questions/movies.questions';
 import { Question } from './questions/question.interface';
+import {BOOKS} from './questions/books.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -74,6 +75,9 @@ export class QuestionService {
   private getQuestions(type: string, name: string): Question[] {
     if (type === 'one-answer' && name === 'Film') {
       return FILMY;
+    }
+    if (type === 'hints' && name === 'Lektury') {
+      return BOOKS;
     }
     return [];
   }
