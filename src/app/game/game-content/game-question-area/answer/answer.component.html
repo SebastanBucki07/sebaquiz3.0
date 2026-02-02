@@ -1,6 +1,6 @@
 <div *ngIf="question$ | async as currentQuestion">
 
-  <!-- PRZYCISKI ODKRYWAJĄCE ODPOWIEDZI -->
+  <!-- REVEAL BUTTONS -->
   <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
 
     <button
@@ -22,7 +22,7 @@
 
   </div>
 
-  <!-- 🔥 TU JEST AnswerButtonComponent -->
+  <!-- 🔥 HERE IS AnswerButtonComponent -->
   <app-answer-buttons
     *ngIf="showAnswerButtons"
     (correct)="correct.emit()"

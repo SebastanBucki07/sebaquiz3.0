@@ -35,20 +35,19 @@ export class AnswerComponent implements OnInit {
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
 
-    // pobieramy aktualne pytanie
+    // we get the current question
     this.question$.subscribe(currentQuestion => {
       if (!currentQuestion) return;
 
       const revealed = currentQuestion.revealedAnswers ?? [];
       const total = currentQuestion.answers.length;
 
-      // pokaż przyciski dopiero gdy wszystkie odpowiedzi są odsłonięte
+      // show buttons only when all responses are revealed
       if (revealed.length === total) {
         this.showAnswerButtons = true;
       }
-    }).unsubscribe(); // od razu odsubskrybowanie, bo chcemy tylko jednorazowo sprawdzić
+    }).unsubscribe(); // unsubscribe immediately, because we only want to check once
   }
-
 
   onHalf() {
     this.half.emit();

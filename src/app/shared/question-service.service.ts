@@ -28,7 +28,7 @@ export class QuestionService {
     const random = {
       ...availableQuestions[Math.floor(Math.random() * availableQuestions.length)],
       showAnswer: false,
-      revealedAnswers: [] // reset odpowiedzi
+      revealedAnswers: []
     };
 
     this.usedQuestions.push(random);
@@ -42,12 +42,10 @@ export class QuestionService {
 
     if (!q.revealedAnswers) q.revealedAnswers = [];
 
-    // dodajemy tylko wybraną odpowiedź
     if (!q.revealedAnswers.includes(index)) {
       q.revealedAnswers.push(index);
     }
 
-    // nie ustawiamy showAnswer
     this.currentQuestion$.next({ ...q });
   }
 
@@ -60,7 +58,6 @@ export class QuestionService {
     const q = this.currentQuestion$.value;
     if (!q) return;
 
-    // resetujemy odkryte odpowiedzi
     q.revealedAnswers = [];
     this.currentQuestion$.next({ ...q, showAnswer: false });
   }

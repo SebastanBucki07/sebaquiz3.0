@@ -2,10 +2,10 @@
   margin-bottom: 16px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* wyśrodkowanie przycisków i odpowiedzi */
+  align-items: center; /* center buttons and responses */
 }
 
-/* Przyciski pokaz odpowiedź */
+/* Show response buttons */
 .answer-button {
   width: 100%;
   max-width: 300px;
@@ -23,29 +23,28 @@
   justify-content: center;
   align-items: center;
 
-  /* gradient bardziej widoczny */
+  /* gradient more visible */
   background: linear-gradient(45deg, #42a5f5, #1e88e5);
 }
 
-/* Alternatywne kolory dla kolejnych przycisków */
+
+/* Alternate colors for subsequent buttons */
 .answer-button:nth-child(2) { background: linear-gradient(45deg, #f06292, #e91e63); }
 .answer-button:nth-child(3) { background: linear-gradient(45deg, #66bb6a, #43a047); }
 .answer-button:nth-child(4) { background: linear-gradient(45deg, #ffa726, #fb8c00); }
 
-/* Hover efekt */
+/* Hover effect */
 .answer-button:hover:not(:disabled) {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
 }
 
-/* Wyłączony przycisk */
 .answer-button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
   background: #b0bec5 !important;
 }
 
-/* Tekst odpowiedzi */
 .answer-text {
   margin: 8px 0 16px 0;
   padding: 12px 16px;
@@ -59,7 +58,7 @@
   text-align: center;
   max-width: 300px;
 
-  /* Animacja fade-in + slide */
+  /* Fade-in + slide animation */
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.4s ease, transform 0.4s ease;
@@ -70,7 +69,7 @@
   transform: translateY(0);
 }
 
-/* Labelka nad odpowiedzią */
+/* Label above the answer */
 .answer-label {
   font-weight: 600;
   margin-bottom: 4px;

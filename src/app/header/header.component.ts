@@ -15,10 +15,8 @@ export class HeaderComponent {
   }
 
   newGame() {
-    // Reset gry w GameService
     this.gameService.resetGame();
 
-    // Reset pytań w QuestionService
     this.questionService.resetQuestions();
 
     const teams = JSON.parse(localStorage.getItem('teams') || '[]');
@@ -26,7 +24,6 @@ export class HeaderComponent {
       this.gameService.setCurrentTeam(teams[0].name);
     }
 
-    // Wracamy do ekranu wyboru gry/pregame
     this.router.navigate(['/pregame']);
   }
 }

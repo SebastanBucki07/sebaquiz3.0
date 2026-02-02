@@ -28,14 +28,13 @@ export class GameContentComponent implements OnInit{
     this.selectedCategories = saved ? JSON.parse(saved) : [];
   }
 
-// Zmieniamy getCategoryColor, żeby szare dla wyczerpanych kategorii
+// Change getCategoryColor to gray for exhausted categories
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
     if (remaining === 0) {
-      return '#9e9e9e'; // szary dla wyczerpanej kategorii
+      return '#9e9e9e';
     }
 
-    // Gradient dynamiczny w zależności od indeksu
     const hue = (index * 360) / this.selectedCategories.length;
     const colorStart = `hsl(${hue}, 70%, 50%)`;
     const colorEnd = `hsl(${(hue + 30) % 360}, 70%, 60%)`;
@@ -44,7 +43,7 @@ export class GameContentComponent implements OnInit{
   }
 
 
-// Liczba dostępnych pytań w danej kategorii
+// Number of available questions in a given category
   getRemainingQuestions(category: Category): number {
     const allQuestions = this.questionService['getQuestions'](category.type, category.name);
     const used = this.questionService['usedQuestions'].filter(q =>
@@ -53,16 +52,14 @@ export class GameContentComponent implements OnInit{
     return allQuestions.length - used.length;
   }
 
-// Obsługa kliknięcia
   goToCategory(category: Category) {
     const remaining = this.getRemainingQuestions(category);
 
     if (remaining === 0) {
       alert('Wszystkie pytania w tej kategorii zostały wyświetlone!');
-      return; // blokuje przejście
+      return;
     }
 
-    // routing do komponentu pytań
     this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
 
@@ -74,11 +71,6 @@ export class GameContentComponent implements OnInit{
     ['#673ab7', '#9575cd'],
     ['#4caf50', '#81c784']
   ];
-
-  // getCategoryColor(index: number): string {
-  //   const hue = (index * 360) / this.selectedCategories.length;
-  //   return `hsl(${hue}, 70%, 50%)`;
-  // }
 
   isCategoryExhausted(categoryName: string, categoryType: string): boolean {
     return !this.questionService.hasMoreQuestions(categoryType, categoryName);

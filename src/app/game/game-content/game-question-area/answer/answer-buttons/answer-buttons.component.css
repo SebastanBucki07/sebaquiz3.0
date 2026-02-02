@@ -8,7 +8,7 @@
   padding: 16px 0;
 }
 
-/* wspólne cechy */
+/* some features */
 .answer-btn {
   min-width: 160px;
   height: 48px;
@@ -21,13 +21,13 @@
   transition: transform 120ms ease, box-shadow 120ms ease;
 }
 
-/* hover (tylko gdy aktywny) */
+/* hover (when active) */
 .answer-btn:not(:disabled):hover {
   transform: translateY(-1px);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
 }
 
-/* klik */
+/* click */
 .answer-btn:not(:disabled):active {
   transform: translateY(0);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);

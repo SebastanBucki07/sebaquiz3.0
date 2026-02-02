@@ -2,7 +2,6 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {QuestionAreaHeaderComponent} from './question-area-header/question-area-header.component';
-import {MATERIAL_IMPORTS} from '../../../shared/material';
 import {GameService} from '../../../shared/game.service';
 import {CATEGORY_LIST} from '../../../shared/category/categoryList';
 import {Category, Hint} from '../../../shared/category/category.interface';
@@ -13,7 +12,7 @@ import {AnswerComponent} from './answer/answer.component';
   selector: 'app-game-question-area',
   templateUrl: './game-question-area.component.html',
   standalone: true,
-  imports: [MATERIAL_IMPORTS, CommonModule, QuestionAreaHeaderComponent, RouterOutlet, AnswerComponent],
+  imports: [CommonModule, QuestionAreaHeaderComponent, RouterOutlet, AnswerComponent],
   styleUrl: './game-question-area.component.css'
 })
 export class GameQuestionAreaComponent implements OnInit {
@@ -52,13 +51,13 @@ export class GameQuestionAreaComponent implements OnInit {
       this.currentCategory = category;
       //this.currentPoints = category.basePoints;
 
-      // 🔥 TU LOSUJEMY PYTANIE
+      // 🔥 HERE WE DRAW A QUESTION
       this.questionService.loadRandomQuestion(type, name);
     });
   }
 
   wrong() {
-// reset hintów również, jeśli chcesz, żeby kolejne pytanie było "czyste"
+// also reset hints if you want the next question to be "clean"
     this.usedHints = [];
 
 
@@ -90,7 +89,7 @@ export class GameQuestionAreaComponent implements OnInit {
 
 
   onHintUsed(hint: Hint): void {
-// dodaj hint jeśli nie był wcześniej użyty
+// add hint if not used before
     if (!this.usedHints.some(h => h.id === hint.id)) {
       this.usedHints.push(hint);
     }
