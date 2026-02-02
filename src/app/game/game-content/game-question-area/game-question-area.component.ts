@@ -2,53 +2,62 @@ import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
 import {CommonModule} from '@angular/common';
 import {QuestionAreaHeaderComponent} from './question-area-header/question-area-header.component';
-import {MATERIAL_IMPORTS} from '../../../shared/material';
 import {GameService} from '../../../shared/game.service';
 import {CATEGORY_LIST} from '../../../shared/category/categoryList';
 import {Category, Hint} from '../../../shared/category/category.interface';
+import {QuestionService} from '../../../shared/question-service.service';
+import {AnswerComponent} from './answer/answer.component';
 
 @Component({
   selector: 'app-game-question-area',
   templateUrl: './game-question-area.component.html',
   standalone: true,
-  imports: [MATERIAL_IMPORTS, CommonModule, QuestionAreaHeaderComponent, RouterOutlet],
+  imports: [CommonModule, QuestionAreaHeaderComponent, RouterOutlet, AnswerComponent],
   styleUrl: './game-question-area.component.css'
 })
 export class GameQuestionAreaComponent implements OnInit {
   currentCategory!: Category;
   basePoints = 0;
-  //currentPoints = 0;
   usedHints: Hint[] = [];
+
 
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private gameService: GameService
+    private gameService: GameService,
+    private questionService: QuestionService
   ) {
   }
 
   ngOnInit(): void {
-    const type = this.route.snapshot.paramMap.get('type');
-    const name = this.route.snapshot.paramMap.get('name');
 
+    this.route.paramMap.subscribe(params => {
+      const type = params.get('type');
+      const name = params.get('name');
 
-    const category = CATEGORY_LIST.find(
-      c => c.type === type && c.name === name
-    );
+      if (!type || !name) {
+        throw new Error('Brak parametrów kategorii w URL');
+      }
 
+      const category = CATEGORY_LIST.find(
+        c => c.type === type && c.name === name
+      );
 
-    if (!category) {
-      throw new Error('Nie znaleziono kategorii');
-    }
+      if (!category) {
+        throw new Error('Nie znaleziono kategorii');
+      }
 
+      this.currentCategory = category;
+      //this.currentPoints = category.basePoints;
 
-    this.currentCategory = category;
-    //this.currentPoints = category.basePoints;
+      // 🔥 HERE WE DRAW A QUESTION
+      this.questionService.loadRandomQuestion(type, name);
+    });
   }
 
   wrong() {
-// reset hintów również, jeśli chcesz, żeby kolejne pytanie było "czyste"
+// also reset hints if you want the next question to be "clean"
     this.usedHints = [];
 
 
@@ -77,8 +86,10 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
+
+
   onHintUsed(hint: Hint): void {
-// dodaj hint jeśli nie był wcześniej użyty
+// add hint if not used before
     if (!this.usedHints.some(h => h.id === hint.id)) {
       this.usedHints.push(hint);
     }
@@ -106,5 +117,16 @@ export class GameQuestionAreaComponent implements OnInit {
     return Math.round(this.currentCategory.basePoints * multiplier);
   }
 
+  half() {
+    const points = Math.ceil(this.currentPoints / 2);
+    this.gameService.addPointsToCurrentTeam(points);
+    this.usedHints = [];
+    this.gameService.nextTeam();
+    this.router.navigate(['/game']);
+  }
+
+  revealAnswer(index: number) {
+    this.questionService.revealAnswer(index);
+  }
 
 }

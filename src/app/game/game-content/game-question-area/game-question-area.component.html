@@ -8,13 +8,11 @@
   <!-- tu child route z pod-komponentem kategorii -->
   <router-outlet (activate)="onActivate($event)"></router-outlet>
 
-  <div class="answer-buttons">
-    <button mat-raised-button color="warn" (click)="wrong()">
-      ❌ Źle
-    </button>
+  <app-answer
+    (correct)="correct()"
+    (wrong)="wrong()"
+    (half)="half()">
+  </app-answer>
 
-    <button mat-raised-button color="primary" (click)="correct()">
-      ✅ Dobrze
-    </button>
-  </div>
+
 </div>

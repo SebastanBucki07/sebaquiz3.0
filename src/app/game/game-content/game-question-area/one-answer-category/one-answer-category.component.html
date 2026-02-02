@@ -1,1 +1,9 @@
-<p>one-answer-category works!</p>
+<div *ngIf="question$ | async as question">
+
+  <p>{{ question.question }}</p>
+
+  <div *ngFor="let hint of question.hints">
+    {{ hint }}
+  </div>
+
+</div>

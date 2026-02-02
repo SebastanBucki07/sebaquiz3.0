@@ -1,1 +1,34 @@
-<p>answer works!</p>
+<div *ngIf="question$ | async as currentQuestion">
+
+  <!-- REVEAL BUTTONS -->
+  <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
+
+    <button
+      mat-raised-button
+      class="answer-button"
+      (click)="revealAnswer(i)"
+      [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)">
+      Pokaż {{ answer.label || ('odpowiedź ' + (i + 1)) }}
+    </button>
+
+    <div
+      *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)"
+      class="answer-text revealed">
+      <div class="answer-label">
+        {{ answer.label || ('Odpowiedź ' + (i + 1)) }}
+      </div>
+      {{ answer.value }}
+    </div>
+
+  </div>
+
+  <!-- 🔥 HERE IS AnswerButtonComponent -->
+  <app-answer-buttons
+    *ngIf="showAnswerButtons"
+    (correct)="correct.emit()"
+    (wrong)="wrong.emit()"
+    (half)="half.emit()">
+  </app-answer-buttons>
+
+
+</div>

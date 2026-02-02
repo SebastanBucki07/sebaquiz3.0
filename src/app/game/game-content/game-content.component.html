@@ -1,19 +1,23 @@
-
-
 <router-outlet></router-outlet>
 
-<h3>Wybierz kategorię</h3>
+<mat-card class="category-header-card">
+  <mat-card-title class="category-title">
+    Wybierz kategorię
+  </mat-card-title>
+</mat-card>
 
 <div class="category-grid">
   <button
     mat-raised-button
     *ngFor="let category of selectedCategories; let i = index"
     class="category-button"
-    [style.backgroundColor]="getCategoryColor(i)"
-    (click)="goToCategory(category.name)"
+    [style.background]="getCategoryColor(category, i)"
+    [class.disabled-category]="getRemainingQuestions(category) === 0"
+    (click)="goToCategory(category)"
   >
-    {{ category.name }}
+    {{ category.name | titlecase }}
+    <span *ngIf="getRemainingQuestions(category) > 0">
+    ({{ getRemainingQuestions(category) }})
+  </span>
   </button>
-
-
 </div>
