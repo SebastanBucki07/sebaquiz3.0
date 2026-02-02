@@ -53,7 +53,13 @@ export const routes: Routes = [
             component: GameQuestionAreaComponent,
             children: [
               { path: '', redirectTo: 'default', pathMatch: 'full' }, // opcjonalnie
-              { path: 'hints', component: HintsCategoryComponent },
+              { path: 'hints', component: HintsCategoryComponent,data: {
+                  hints: [
+                    { id: 'first', label: 'Pierwszy fragment', penaltyPercent: 0, content: 'Śród takich pól przed laty...' },
+                    { id: 'second', label: 'Drugi fragment', penaltyPercent: 30, content: 'Film został wydany w 1999 roku.' },
+                    { id: 'third', label: 'Trzeci fragment', penaltyPercent: 30, content: 'Główną rolę grał Brad Pitt.' }
+                  ]
+                } },
               { path: 'music', component: MusicCategoryComponent },
               { path: 'one-answer', component: OneAnswerCategoryComponent },
               { path: 'abcd', component: MultipleChoiceCategoryComponent },

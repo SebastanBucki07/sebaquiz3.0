@@ -1,6 +1,9 @@
 <div *ngIf="hints.length > 0; else noHints">
   <mat-accordion multi>
-    <mat-expansion-panel *ngFor="let hint of hints" [expanded]="isRevealed(hint)" (opened)="showHint(hint)">
+    <mat-expansion-panel
+      *ngFor="let hint of hints; let i = index"
+      [expanded]="i === 0 || isRevealed(hint)"
+      (opened)="showHint(hint)">
       <mat-expansion-panel-header>
         <mat-panel-title>
           {{ hint.label }} (-{{ hint.penaltyPercent }}%)

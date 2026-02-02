@@ -165,8 +165,8 @@ export const CATEGORY_LIST: Category[] = [
         penaltyPercent: 0,
         content: 'Kraków'
       },
-      {id: 'second', label: 'Drugie miasto', penaltyPercent: 30, content: 'Katowice'},
-      {id: 'third', label: 'Trzecie miasto', penaltyPercent: 30, content: 'Gdańsk'}
+      {id: 'second', label: 'Drugie miasto', penaltyPercent: 20, content: 'Katowice'},
+      {id: 'third', label: 'Trzecie miasto', penaltyPercent: 20, content: 'Gdańsk'}
     ]
   },
   {
@@ -181,8 +181,8 @@ export const CATEGORY_LIST: Category[] = [
         penaltyPercent: 0,
         content: 'Papa Don\'t Preach'
       },
-      {id: 'second', label: 'Drugi tytuł', penaltyPercent: 30, content: 'Frozen'},
-      {id: 'third', label: 'Trzeci tytuł', penaltyPercent: 30, content: 'Hung Up'}
+      {id: 'second', label: 'Drugi tytuł', penaltyPercent: 20, content: 'Frozen'},
+      {id: 'third', label: 'Trzeci tytuł', penaltyPercent: 20, content: 'Hung Up'}
     ]
   },
   {
