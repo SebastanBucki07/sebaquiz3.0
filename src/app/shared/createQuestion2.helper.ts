@@ -78,323 +78,1419 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
 const inputData: InputItem[] = [
   {
     "id": 1,
-    "title": "Pan Tadeusz",
-    "author": "Adam Mickiewicz",
-    "fragment1": "Śród takich pól przed laty, nad brzegiem ruczaju6,  \nNa pagórku niewielkim, we brzozowym gaju,  \nStał dwór szlachecki, z drzewa, lecz podmurowany;  \nŚwieciły się z daleka pobielane ściany,",
-    "fragment2": "Właśnie dwukonną bryką wjechał młody panek  \nI obiegłszy dziedziniec zawrócił przed ganek. Wysiadł z powozu; konie porzucone same, Szczypiąc trawę ciągnęły powoli pod bramę.",
-    "fragment3": "Tymczasem  \nPodkomorzy i Sędzia między dwiema strony  \nPlac zajęli. Pan Wojski, jakby przebudzony  \nZ głębokiego dumania, w środku się postawił,  \nWąsy siwe pokręcił, kapoty poprawił"
+    "author": "sarius",
+    "title": "wiking",
+    "fragment1": "Słyszę falę braw\nA w głowie ciszę mam",
+    "fragment2": "Jak mnie zapamiętasz Czy zostanie po mnie ślad?",
+    "fragment3": "Może znałeś człowieka\nMoże słyszałeś jak gra"
   },
   {
     "id": 2,
-    "title": "Świtezianka",
-    "author": "Adam Mickiewicz",
-    "fragment1": "Jakiż to chłopiec piękny i młody?  \nJaka to obok dziewica?  \nBrzegami sinej Świtezi3 wody  \nIdą przy świetle księżyca.",
-    "fragment2": "Chateczka moja stąd niedaleka  \nPośrodku gęstej leszczyny;  \nJest tam dostatkiem owoców, mleka,  \nJest tam dostatkiem źwierzyny”.",
-    "fragment3": "I tak go łechce i tak go znęca,  \nTak się w nim serce rozpływa,  \nJak gdy tajemnie rękę młodzieńca  \nŚciśnie kochanka wstydliwa."
+    "author": "Gruby Mielzky",
+    "title": "Jak Wyśnię",
+    "fragment1": "Na chuj te wszystkie jordy jak cały świat mój to tapczane",
+    "fragment2": "Od lat sam pcham ten głaz na grania, twarz mi smaga wiatr",
+    "fragment3": "Będzie jak wyśnię Niebo w końcu dla nas będziе błękitne"
   },
   {
     "id": 3,
-    "title": "Pani Twardowska",
-    "author": "Adam Mickiewicz",
-    "fragment1": "Wtem, gdy wódkę pił z kielicha,  \nKielich zaświstał, zazgrzytał;  \nPatrzy na dno: — „Co u licha?  \nPo coś tu, kumie, zawitał?”",
-    "fragment2": "Diablik to był w wódce na dnie:  \nIstny Niemiec, sztuczka kusa;  \nSkłonił się gościom układnie,  \nZdjął kapelusz i dał susa.",
-    "fragment3": "Z kielicha aż na podłogę  \nPada, rośnie na dwa łokcie,  \nNos jak haczyk, kurzą nogę,  \nI krogulcze ma paznokcie."
+    "author": "Sarius",
+    "title": "Jutrzenka",
+    "fragment1": "Siema ludzie dzięki za kolejny koncert\nDla każdego który został było dobrze Antihype",
+    "fragment2": "Dzień dobry jestem Sarius\nPo pierwsze to historia nie o słońcu i o tańcu",
+    "fragment3": "Nigdy nikt mnie nie przypominał tak jak ty\nI jutro zginę by Cię dotknąć dziś"
   },
   {
     "id": 4,
-    "title": "Stara Baśń",
-    "author": "Józef Ignacy Kraszewski",
-    "fragment1": "I milczenie było, tylko z dala ozwała się poranna muzyka lasów... Trąciło o nie skrzydło wiosennego powiewu i gałęzie grać zaczęły... Każde drzewo grało inaczej, a ucho mieszkańca puszcz rozeznać mogło",
-    "fragment2": "Poranek wiosenny świtał nad czarną lasów ławą otaczającą widnokrąg dokoła. W powietrzu czuć było woń liści i traw młodych, zlanych rosą świeżo w ciągu kilku takich poranków z nabrzmiałych pączków rozwitych.",
-    "fragment3": "Gdy stary na kamieniu siedząc rozmawiał z przybylcem z tej ziemi, którą krajem „niemych”, języka narodu nieznających zwano — zza tynu41 i zagród głów ciekawych zaczęło się ukazywać mnóstwo."
+    "author": "Wilhelm",
+    "title": "Zachód",
+    "fragment1": "Żadnych problemów za sobą\nŻadnych bloków przed sobą",
+    "fragment2": "Zawsze lubiłem lato ale nie w tej furze\nŚmierdzi tapicerką i z foteli welurem\nMiliony bzdur mam w swojej głowie",
+    "fragment3": "Nigdy nie czekałem na zachód słońca\nNie jestem romantykiem zaraz umrę z gorąca"
   },
   {
     "id": 5,
-    "title": "Zemsta",
-    "author": "Aleksander Fredro",
-    "fragment1": "Ona czegoś... więcej... czeka...  \nA bodajże cię, Dyndalu,  \nZ tym konceptem! — Czegoś czeka!",
-    "fragment2": "Bawi z nami — w domu Klary,  \nBo krewniaczka jej daleka,  \nAle mnie się wszystko zdaje...",
-    "fragment3": "Wszak mówiłam — albo koty,\nAlbo Papkin nam się zjawił."
+    "author": "Guzior",
+    "title": "trapstar",
+    "fragment1": "Mam różdżkę z włóknem ze smoczego serca\nNie martw się niczym jak trzeba to Sectumsempra",
+    "fragment2": "Złe przedmioty mnie nachodzą\nW moim domu chcą mnie zastać",
+    "fragment3": "Protego Protego Protego\nSuko żyję lavish żyję trapstar"
   },
   {
     "id": 6,
-    "title": "Potop",
-    "author": "Henryk Sienkiewicz",
-    "fragment1": "Był na Żmudzi ród możny Billewiczów, od Mendoga się wywodzący, wielce skoligacony i w całym Rosieńskiem nad wszystkie inne szanowany.",
-    "fragment2": "Panna Aleksandra podnosiła głowę jakby rozbudzona ciszą, która następowała po okrzykach Żmudzina; wówczas płomień oświecał jej białą twarz i poważne, błękitne oczy patrzące spod brwi czarnych.",
-    "fragment3": "Inni powtórzyli chórem, po czym pan Kokosiński wręczył Kmicicowi uszniak, a jemu samemu podał zaraz inny pucharek pan Zend.\n\nKmicic podniósł w górę roztruchan i zakrzyknął:\n\n— Zdrowie mojej dziewczyny!"
+    "author": "Prometh",
+    "title": "ta piosenka nie jest smutna",
+    "fragment1": "Przez to spalam mosty\nPotem spalam jointy",
+    "fragment2": "Milczenie jest złotem\nAle co jest mową",
+    "fragment3": "Ta piosenka nie jest smutna tylko wściekła"
   },
   {
     "id": 7,
-    "title": "Dziady",
-    "author": "Adam Mickiewicz",
-    "fragment1": "Daj mnie stułę i gromnicę,  \nZapalę, jeszcze poświęcę...  \nPróżno palę, próżno święcę,  \nNie znika przeklęta dusza.",
-    "fragment2": "Nic — oprócz niekształtnego i marnego dźwięku.  \nŁotry, tej jednej broni z rąk mi nie wydarły,  \nAle mi ją zepsuto, przełamano w ręku;  \nŻywy, zostanę dla mej ojczyzny umarły,  \nI myśl legnie zamknięta w duszy mojej cieniu,  \nJako dyjament w brudnym zawarty kamieniu.",
-    "fragment3": "Uamrł Gustaw, Neich żyje Konrad I sam nie wiesz, gdzie lecisz, sam nie wiesz, co zdziałasz.  \nLudzie! każdy z was mógłby, samotny, więziony,  \nMyślą i wiarą zwalać i podźwigać trony."
+    "author": "bedoes",
+    "title": "Chłopaki nie płaczą",
+    "fragment1": "Też kiedyś dostałem w mordę i miałem złamaną rękę\nTeż kiedyś dostałem kosza i miałem złamane serce",
+    "fragment2": "Piłem browar na ławce\nPowiedziałaś mi, że mnie kochasz na zawsze",
+    "fragment3": "Chłopaki niech płaczą, chłopaki niech płaczą\nChłopaki niech wiedzą, że wolno im czuć"
   },
   {
     "id": 8,
-    "title": "Kordian",
-    "author": "Juliusz Słowacki",
-    "fragment1": "Oj nie żyje! Gdy nas Rosyjanie  \nWzięli w dwunastym roku, spędzili jak trzodę  \nI na Sybir zawiedli... Dwóchset naszych było.",
-    "fragment2": "Ciemny się błękit nieba wyświeca za mgłami,  \nAch księżyc! patrz tam, pani! księżyc srebrny, pełny  \nStanął i patrzy na nas, chmur srebrzyste wełny  \nSpadły nań — leci, jakby wyrywał się z chmury;",
-    "fragment3": "Duszo! niechaj ci włosy na czole rozgarnę!  \nWeź mię w twoje ramiona, rozkoszą odkwitnę.  \nPatrz na mnie! Twoje oczy jasne, skrzące, czarne,  \nBiałka oczu jak perły śnieżystobłękitne.  \nGdy rzucasz wzrok omdlony, padam, słabnę, mdleję;  \nTak na przesłodkiej róży mrą złote motyle;  \nA gdy spojrzysz iskrami twych oczu — szaleję!"
+    "author": "tymek",
+    "title": "Język ciała",
+    "fragment1": "Modne, modne, mamy własny język, mamy własną pościel",
+    "fragment2": "Krążę na okrągło, jestem jak worek z forsą",
+    "fragment3": "Ona by chciała wiedzieć, jakie mam plany\nCo o niej wiem,"
   },
   {
     "id": 9,
-    "title": "Lalka",
-    "author": "Bolesław Prus",
-    "fragment1": "W początkach roku 1878, kiedy świat polityczny zajmował się pokojem san-stefańskim1, wyborem nowego papieża2 albo szansami europejskiej wojny3, warszawscy kupcy tudzież inteligencja pewnej okolicy Krakowskiego Przedmieścia4 niemniej gorąco interesowała się przyszłością galanteryjnego sklepu pod firmą J. Mincel i S. Wokulski.",
-    "fragment2": "Jest niedziela, szkaradny dzień marcowy; zbliża się południe, lecz ulice Warszawy są prawie puste. Ludzie nie wychodzą z domów albo kryją się w bramach, albo skuleni uciekają przed siekącym ich deszczem i śniegiem.",
-    "fragment3": "W tej samej porze, kiedy Wokulski z panią Wąsowską kłócił się albo galopował po łące, z majątku hrabiny do Zasławka dojeżdżała panna Izabela."
+    "author": "tymek",
+    "title": "poza kontrolą",
+    "fragment1": "Minęła kolejna godzina, choć dzisiaj już czasu nie trzymam.",
+    "fragment2": "Wiesz, w życiu tak bywa, że wszystko się zmienia i bywa przewrotnie",
+    "fragment3": "Jestem poza kontrolą, zabrać nic już mi nie mogą\nBo nic nie mam, moje logo, mówi Ci, że jestem sobą"
   },
   {
     "id": 10,
-    "title": "Wesele",
-    "author": "Stanisław Wyspiański",
-    "fragment1": "No daleko, kajsi gdzieś daleko;\na panowie to nijak nie wiedzą,\nże chłop chłopskim rozumem trafi,\nchoćby było i daleko.\nA i my tu cytomy gazety\ni syćko wiemy.",
-    "fragment2": "Wcale insze miałem plany,\njeźlim plany miał w ogóle -\nchciałem coś powiedzieć czule,\nchciałem zapukać w serduszko,\ncoś usłyszeć, coś podsłuchać:\njak się to tam musi ruchać,\njak się to tam musi palić - ?!",
-    "fragment3": "Na skrzydłach myśl moja zwisła;\nszłam, przez błoto po kolana,\nod karczmy aż tu do dworu ; -\nach, ta chata rozśpiewana,\nta roztańczona gromada,\nzobaczy pan, proszę pana,\nże się do poezji nada,\njak pan trochę zmieni, doda."
+    "author": "Mietha",
+    "title": "przepraszam",
+    "fragment1": "Jestem dumny że nie dałem sobie nigdy wejść na łeb",
+    "fragment2": "Zwiedziłem parę fajnych miejsc tego troku autem\nZagrałem parę fajnych gigów przeliczyłbym kaskę",
+    "fragment3": "Jeśli mi życzyłeś gorzej kiedykolwiek to przepraszam"
   },
   {
     "id": 11,
-    "title": "Iliada",
-    "author": "Homer",
-    "fragment1": "Gniew Achilla, bogini, głoś, obfity w szkody,\n Który ściągnął klęsk tyle na greckie narody,\n Mnóstwo dusz mężnych wcześnie wtrącił do Erebu\n A na pastwę dał sępom i psom bez pogrzebu",
-    "fragment2": "Pallada nowym ogniem Tydejdę zagrzewa,\n Swoje mu w piersi męstwo i swój zapał wlewa,\n By wszystkich bohaterów przeszedł rycerz śmiały,\n A przez to nieśmiertelnej zyskał wieniec chwały.",
-    "fragment3": "Zakończone igrzyska, rozchodzą się ludy,\n Po wieczerzy w spoczynku dzienne topiąc trudy.\n Sam Pelid w łzach ustawnych swe bole natęża,\n I sen, co wszystkie rzeczy żyjące zwycięża,"
+    "author": "modern talking",
+    "title": "you are my heart",
+    "fragment1": "Let s close the door and believe my burnin  heart",
+    "fragment2": "Deep in my heart, there s a fire, a burnin  heart\nDeep in my heart, there s desire for a start",
+    "fragment3": "You re my heart, you re my soul"
   },
   {
     "id": 12,
-    "title": "Romantyczność",
-    "author": "Adam Mickiewicz",
-    "fragment1": "Słuchaj dzieweczko!  \n— Ona nie słucha. —  \nTo dzień biały! to miasteczko!  \nPrzy tobie nie ma żywego ducha,  \nCo tam wkoło siebie chwytasz?  \nKogo wołasz, z kim się witasz?  \n— Ona nie słucha. —",
-    "fragment2": "„Mówcie pacierze! — krzyczy prostota —  \nTu jego dusza być musi.  \nJasio być musi przy swej Karusi,  \nOn ją kochał za żywota!”",
-    "fragment3": "Martwe znasz prawdy, nieznane dla ludu,  \nWidzisz świat w proszku, w każdej gwiazd iskierce;  \nNie znasz prawd żywych, nie obaczysz cudu!  \nMiej serce i patrzaj w serce!”"
+    "author": "modern talking",
+    "title": "Cherry Cherry lady",
+    "fragment1": "I ve been lonely too long\nOh, I can t be so strong",
+    "fragment2": "Oh, I cannot explain\nEvery time it s the same",
+    "fragment3": "Cheri Cheri Lady\nGoin  through emotion"
   },
   {
     "id": 13,
-    "title": "Boska Komedia",
-    "author": "Dante Aligieri",
-    "fragment1": "Z prostego toru w naszych dni połowie12  \nWszedłem w las ciemny13; jaka gęstwa dzika,  \nJakie w tym lesie okropne pustkowie,  \nŻyjący język tego nie wypowie;",
-    "fragment2": "Wódz mój, gdy wracał od bramy piekielnej,  \nSpostrzegłszy twarz mą bladości śmiertelnej,  \nSkrył własną bladość w głębi swego ducha  \nI stanął w kroku, jak człowiek, gdy słucha,",
-    "fragment3": "Stąd w domniemanej przez myśl odległości  \nNa sześć tysięcy mil szósta godzina  \nPłonęła w ogniu1703, a cień padał prościej  \nNa tamtej sferze, prawie prostopadły:"
+    "author": "Berlin",
+    "title": "Take My Breath Away",
+    "fragment1": "Through the hourglass I saw you, in time you slipped away",
+    "fragment2": "Watchin  every motion in my foolish lover s game",
+    "fragment3": "Take my breath away\nMy love, take my breath away"
   },
   {
     "id": 14,
-    "title": "Chłopi",
-    "author": "Władysław Reymont",
-    "fragment1": "Niech będzie pochwalony Jezus Chrystus!\n— Na wieki wieków, moja Agato, a dokąd to wędrujecie, co?\n— We świat, do ludzi, dobrodzieju kochany — w tyli świat!... — zakreśliła kijaszkiem łuk od wschodu do zachodu.",
-    "fragment2": "Nazajutrz gruchnęła po Lipcach wieść o Borynowych z Jagną zmówinach.\n\nWójt był dziewosłębem — więc wójtowa, że mąż srogo przykazywał pary z gęby nie puszczać przódzi, nim powróci, dopiero na odwieczerzu pobiegła do sąsiadki, rzekomo soli pożyczyć, i już na odchodnym nie wytrzymała, ino wzięła kumę na bok",
-    "fragment3": "Wiecie to, Boryna posłał z wódką do Jagny! Ino nie mówcie, bo mój tak przykazywał.\n— Nie może być! Gdziebym ta z ozorem po wsi latała! Pleciuch to jestem czy co?... Taki dziad i za trzecią kobietę się bierze! Co to dzieci na to powiedzą! O świecie, świecie! — jęknęła ze zgrozą"
+    "author": "Wham",
+    "title": "Wake Me Up Before You Go-Go",
+    "fragment1": "Cause I m not planning on going solo",
+    "fragment2": "You put the boom-boom into my heart\nYou send my soul sky-high",
+    "fragment3": "Wake me up before you go-go\nDon t leave me hanging on like a yo-yo"
   },
   {
     "id": 15,
-    "title": "Cierpienia młodego Wertera",
-    "author": "Johann Wolfgang von Goethe",
-    "fragment1": "Przedziwna pogoda ogarnęła moją duszę, niby owo zaranie wiosny, którym poję ciągle serce moje. Jestem sam i używam życia w całej pełni, bo zaprawdę, okolica ta stworzoną jest wprost dla dusz takich, jak moja.",
-    "fragment2": "O, jakimże dzieckiem jest człowiek? Jakże łaknie jednego bodaj spojrzenia! Jakież z nas dzieci! Udaliśmy się do Wahlheimu. Panie pojechały powozem, a podczas przechadzki wydało mi się, że czytam w ciemnych oczach Loty...",
-    "fragment3": "Wilhelmie! Człowiek, o którym ci pisałem, ów szczęśliwy biedak, był pisarzem u ojca Loty, zapałał ku niej namiętnością, ukrywał to, potem wyznał, został wydalony ze służby i oszalał."
+    "author": "Wham",
+    "title": "Last Christmas",
+    "fragment1": "Once bitten and twice shy\nI keep my distance, but you still catch my eye",
+    "fragment2": "Merry Christmas,   I wrapped it up and sent it",
+    "fragment3": "I gave you my heart\nBut the very next day, you gave it away"
   },
   {
     "id": 16,
-    "title": "Don Kichot",
-    "author": "Miguel de Cervantes",
-    "fragment1": "mieścinie pewnej, prowincji Manchy, której nazwiska nie powiem, żył niedawnymi czasy hidalgo12 pewien, z liczby tych, co to prócz spisy13 u siodła, szabliska starego, szkapy chudziny i paru gończych, niewiele co więcej mają.",
-    "fragment2": "Tak więc: Kareola, Lew w Hiszpanii, Wielkie czyny cesarza, dzieło Ludwika d’Avila, które znajdować się tam musiały, poniosły karę stosu, której może by uniknęły, gdyby proboszcz sprawy ich był rozpoznawał",
-    "fragment3": "i jak je tylko spostrzegł, zawołał: „Fortuna sprzyja nam bardziej, niżbyśmy sami pragnęli. Przyjacielu Sancho, czy widzisz tę gromadę niezmiernych olbrzymów? Ja na nich uderzę i wszystkich zgładzę z tego świata — taki mój zamiar."
+    "author": "Lipa",
+    "title": "głuptas",
+    "fragment1": "Wciąż ujebany stół\nPrzeżyliśmy już niejedneo",
+    "fragment2": "Ej głupia, nie martw się o jutro\nBez kitu",
+    "fragment3": "Ej Głuptas, nie smutaj\ntrochę daj mi koki"
   },
   {
     "id": 17,
-    "title": "Gloria Victis",
-    "author": "Eliza Orzeszkowa",
-    "fragment1": "Leciał wiatr światem ciekawy, niespokojny, słuchał gwarzeń, opowiadań wód, zbóż, kwiatów polnych, drzew przydrożnych i — szumiał.",
-    "fragment2": "Ale dla wiatru las tajemnic nie ma. Są to dwaj przyjaciele. Przenika wiatr leśne gęstwiny od skraju do skraju i one mu wszystko, co widziały, słyszały, opowiadają.",
-    "fragment3": "I zerwał się z mogiły, wzleciał nad las, szlakiem powietrznym dotarł ciemnego nieba i do gwiazd mrugających, do srebrzystych dróg mlecznych zawołał:\n\n— Gloria victis!"
+    "author": "Lipa",
+    "title": "bezprawie",
+    "fragment1": "Jak ty non stop legale, ale najwięcej ciągle wiesz",
+    "fragment2": "Bo poza mym kurwa światem, nigdy nie uronię nagich łez",
+    "fragment3": "Kurwy jebać, policji nigdy nie bać się"
   },
   {
     "id": 18,
-    "title": "Śluby Panieńskie",
-    "author": "Aleksander Fredro",
-    "fragment1": "Czekaj mnie, nie śpij, powrócę o trzeciej.  \nPiękna mi trzecia: słońce jak w dzień świeci,  \nA mój pan drogi gnie sobie parole,  \nAlbo z butelką... albo... No! już milczeć wolę.",
-    "fragment2": "Obym ja się mógł dziwić choć na pół godziny!  \nCóż więc znaczą te wszystkich powarzone miny,  \nZacząwszy od Dobrójskiej? — na ciebie ladaco,  \nŻe się krzywi, to dobrze; ale na mnie za co?  \nSiedzieliśmy u stołu jakby w trzynaścioro,  \nI wszystkim czas dość krótki szedł diable40 niesporo.",
-    "fragment3": "Niech was ten złączy, komu za to chwała.  \nłącząc ich, poważnie  \nBądźcie szczęśliwi tak, jak się kochacie!  \ndo Klary, ciszej:  \nCóż śluby? poszły!  \npodobnie do Albina, na stronie:  \nKaż się podkuć, bracie.  \ngłośno/ Wszystko więc dobrze."
+    "author": "Lipa",
+    "title": "samotnia",
+    "fragment1": "Właśnie maluje oddaje siebie w garstce\nCo weźmiesz z tego to już twoja sprawa",
+    "fragment2": "Mam paranoje ciężkie nastroje",
+    "fragment3": "O ja pierdole\nNie chce budzić się w tym samym dole jebać budzik"
   },
   {
     "id": 19,
-    "title": "Odyseja",
-    "author": "Homer",
-    "fragment1": "Muzo! Męża wyśpiewaj, co święty gród Troi  \nZburzywszy, długo błądził i w tułaczce swojej  \nSiła1 różnych miast widział, poznał tylu ludów",
-    "fragment2": "Tam leżał i Odysów łuk pomiędzy nimi,  \nI kołczan, nabit strzałmi jęk roznoszącymi.  \nZa bytności swej w Sparcie darem on go dostał  \nOd Ifita, jen bogom nieśmiertelnym sprostał,  \nA był Euryta synem. Oba bohatery  \nZawarli między sobą sojusz drużby szczerej  \nW Messenie, gdzie Orsiloch podejmował gości.",
-    "fragment3": "Na to Agamemnona dusza mu odrzekła:  \n„Szczęsny synu Peleja, o boski Achillu!  \nChoć ległeś pod Ilionem, a z tobą aż tylu  \nCnych Achajów i Trojan głowy swoje dało,  \nWalcząc przy twoim ciele, które tam leżało"
+    "author": "Dżem",
+    "title": "Whisky",
+    "fragment1": "Wszystkie śmiały się wołając, wołając za mną wciąż:",
+    "fragment2": "Mówią o mnie w mieście:  Co z niego za typ?",
+    "fragment3": "Już mnie nie opuścisz, nie, nie będę sam"
   },
   {
     "id": 20,
-    "title": "Król Edyp",
-    "author": "Sofokles",
-    "fragment1": "O dzieci, Kadma7 starego potomstwo,  \nCzegoście na tych rozsiedli się progach,  \nTrzymając w ręku te wiązki błagalne?  \nCzemuż nad miastem dym wonnych kadzideł",
-    "fragment2": "Prosisz, a prosząc mógłbyś znaleźć ulgę,  \nSiłę i z kaźni srogich wyzwolenie,  \nJeśli słów moich posłuchasz powolnie,  \nKtóre ja, obcy zupełnie tej wieści",
-    "fragment3": "Wiedz więc stanowczo, że tak brzmiały słowa,  \nA niepodobnym, by wraz je odwołał.  \nGdyż wszyscy, nie ja słyszałam to sama.  \nA gdyby nawet od słów swych odstąpił,  \nTo i tak przecie zgon ten Lajosa  \nWróżby nie spełni; bo temu Apollo  \nGroził, że zginie od syna prawicy,"
+    "author": "Dzem",
+    "title": "Wehikuł czasu",
+    "fragment1": "To już minęło, ten klimat, ten luz",
+    "fragment2": "Pamiętam dobrze ideał swój",
+    "fragment3": "Tylko nocą do klubu Puls"
   },
   {
     "id": 21,
-    "title": "Katarynka",
-    "author": "Bolesław Prus",
-    "fragment1": "Na ulicy Miodowej co dzień około południa można było spotkać jegomościa1 w pewnym wieku, który chodził z placu Krasińskich ku ulicy Senatorskiej.",
-    "fragment2": "Zdarzyło się w tych czasach, że jeden z przyjaciół mecenasa miał proces i jak zwykle oddał mu do przejrzenia papiery z prośbą o radę. Wprawdzie pan Tomasz nie stawał już w sądach23,",
-    "fragment3": "Następnie wziął kalendarz, wyszukał w nim listę lekarzy i zapisał na kartce adresy kilku okulistów. A że kataryniarz odwrócił się teraz do jego okna i za jego dziesiątkę począł przytupywać i wygwizdywać jeszcze głośniej, co już okrutnie drażniło mecenasa, więc zabrawszy kartkę z adresami doktorów wyszedł mrucząc:\n\n— Biedne dziecko!... Powinienem był zająć się nim od dawna..."
+    "author": "Dzem",
+    "title": "sen o wiktori",
+    "fragment1": "Wziąłem z Tobą ślub\nSłońce nas błogosławiło",
+    "fragment2": "Dzisiaj miałem piękny sen",
+    "fragment3": "O Victorio moja Victorio"
   },
   {
     "id": 22,
-    "title": "Król Maciuś Pierwszy",
-    "author": "Janusz Korczak",
-    "fragment1": "Więc kiedy byłem taki, jak na tej fotografii1, sam chciałem zrobić to wszystko, co tu napisane. A potem zapomniałem, i teraz jestem stary.",
-    "fragment2": "Dorośli wcale nie powinni czytać mojej powieści, bo są w niej rozdziały niestosowne, więc nie zrozumieją i będą się wyśmiewali. Ale jak chcą koniecznie, niech spróbują. Przecież dorosłym nie można zabronić, bo nie posłuchają — i co im kto zrobi?",
-    "fragment3": "Tak później mówiono, ale oddział Maciusia nie wiedział nic, bo na wojnie wszystko trzyma się w tajemnicy.\n\nPrzyszedł rozkaz, żeby iść tu i tu, przyszedł rozkaz, żeby robić to i to. Idź i rób, o nic się nie pytaj i nic nie gadaj."
+    "author": "krzysztof kawczyk",
+    "title": "parostatek",
+    "fragment1": "Tłum marynarzy pokład mu zdobi\nSłońce na górze pięknie lśni",
+    "fragment2": "W starym albumie u mego dziadka\nJest takie zdjecie, istny cud",
+    "fragment3": "Parostatkiem piękny rejs"
   },
   {
     "id": 23,
-    "title": "Krzyżacy",
-    "author": "Henryk Sienkiewicz",
-    "fragment1": "W Tyńcu, w gospodzie „Pod Lutym2 Turem3”, należącej do opactwa, siedziało kilku ludzi, słuchając opowiadania wojaka bywalca, który z dalekich stron przybywszy, prawił im o przygodach, jakich na wojnie i w czasie podróży doznał.",
-    "fragment2": "Stary Maćko nie mylił się mówiąc, że Zbyszko i Jagienka radzi980 z sobą przestają981, a nawet że tęsknią do siebie. Jagienka pod pozorem odwiedzin chorego Maćka przyjeżdżała częstokroć do Bogdańca, z ojcem lub sama, Zbyszko przez samą wdzięczność wpadał co czas jakiś do Zgorzelic, więc wraz z upływem dni wyrodziła się między nimi bliska zażyłość i przyjaźń.",
-    "fragment3": "Nazajutrz o południu wysłańcy widzieli się z Jurandem, a w jakiś czas później wyjechali, zabrawszy z sobą de Bergowa, dwóch giermków i kilkunastu innych jeńców."
+    "author": "krzysztof kawczyk",
+    "title": "Chciałem być",
+    "fragment1": "Przemierzyłem cały świat od Las Vegas po Krym",
+    "fragment2": "Podróżować zwiedzać świat",
+    "fragment3": "Chciałem być marynarzem"
   },
   {
     "id": 24,
-    "title": "Latarnik",
-    "author": "Henryk Sienkiewicz",
-    "fragment1": "Stary człowiek wyciągnął z zanadrza spłowiały jedwabny szmat, podobny do strzępu starej chorągwi. Rozwinął go i rzekł:\n\n— Oto są świadectwa. Ten krzyż dostałem w roku trzydziestym. Ten drugi jest hiszpański z wojny karlistowskiej; trzeci to legia francuska; czwarty otrzymałem na Węgrzech. Potem biłem się w Stanach przeciw południowcom, ale tam nie dają krzyżów — więc oto papier.",
-    "fragment2": "Zaczęły płynąć godziny, dnie i tygodnie... Majtkowie twierdzą, że czasem, gdy morze bardzo jest rozhukane, woła coś na nich wśród nocy i ciemności po nazwisku.",
-    "fragment3": "Pewnego razu zdarzyło się, że latarnik w Aspinwall, niedaleko Panamy, przepadł bez wieści. Ponieważ stało się to wśród burzy, przypuszczano, że nieszczęśliwy musiał podejść nad sam brzeg skalistej wysepki, na której stoi latarnia, i został spłukany przez bałwan."
+    "author": "krzysztof kawczyk",
+    "title": "mój przyajcielu",
+    "fragment1": "Chciałbyś się rozpłynąć, uciec, gdzie się da.",
+    "fragment2": "Dałem ci wiarę, dałem ci spokój,",
+    "fragment3": "Dam gitarę, dam samochód"
   },
   {
     "id": 25,
-    "title": "Makbet",
-    "author": "William Shakespeare (Szekspir)",
-    "fragment1": "Przebaczcie, proszę, ale mózg mój ciężki  \nDręczyły sprawy dawno zapomniane.  \nWasze usługi wciągnąłem do księgi,  \nW której codziennie jedną czytam kartę.  \nIdźmy do króla. — Myśl o tym, co zaszło,  \nPrzy wolnej chwili, po dobrej rozwadze,  \nOtworzym sobie naszych serc tajniki.",
-    "fragment2": "Jeszcze nie, królu, lecz miałem sposobność  \nRozmawiać chwilę z świadkiem jego śmierci.  \nNa rusztowaniu zdradę swoją wyznał,  \nO twe królewskie błagał przebaczenie,  \nSwój żal serdeczny za zbrodnię objawił.  \nNic piękniejszego nie miał w swoim życiu,",
-    "fragment3": "Z tej strony wrzawa. Pokaż się, tyranie!  \nBo jeśli zginiesz, a nie z mojej ręki,  \nDzieci i żony duch skarżyć się będzie.  \nNajemnych kernów37 nie mam serca rąbać,  \nZ tobą chcę walczyć, Makbecie, lub szablę  \nNiewyszczerbioną włożę znów do pochwy."
+    "author": "krzysztof kawczyk",
+    "title": "ostatn iraz zatańczysz ze mna",
+    "fragment1": "Iskra błyśnie w nas i zgaśnie w nas\nJak niepotrzebna łza",
+    "fragment2": "Kto zapomni? Ty czy ja?",
+    "fragment3": "Zatańczysz ze mną jeszcze raz, ostatni raz"
   },
   {
     "id": 26,
-    "title": "Mazurek Dąbrowskiego",
-    "author": "Józef Wybicki",
-    "fragment1": "Już tam ojciec do swej Basi\nMówi zapłakany:",
-    "fragment2": "Dał nam przykład Bonaparte,  \nJak zwyciężać mamy.",
-    "fragment3": "Marsz, marsz Dąbrowski,  \nZ ziemi włoskiej do Polski.  \nZa twoim przewodem  \nZłączym się z narodem."
+    "author": "krzysztof kawczyk",
+    "title": "Byle było tak",
+    "fragment1": "Dziewczyny, kto je zna?\nPisuję do nich za listem list,",
+    "fragment2": "A bywa tak i tak,\nNie zawsze szczęście się w życiu ma.",
+    "fragment3": "Byle było tak, że człowiek bardzo chce,\nByle było tak, że się nie powie  nie ,"
   },
   {
     "id": 27,
-    "title": "Nad Niemnem",
-    "author": "Eliza Orzeszkowa",
-    "fragment1": "Dzień był letni i świąteczny. Wszystko na świecie jaśniało, kwitło, pachniało, śpiewało. Ciepło i radość lały się z błękitnego nieba i złotego słońca; radość i upojenie tryskały znad pól porosłych zielonym zbożem; radość i złota swoboda śpiewały chórem ptaków i owadów nad równiną w gorącym powietrzu, nad niewielkimi wzgórzami, w okrywających je bukietach iglastych i liściastych drzew.",
-    "fragment2": "Justyna patrzała na żywe jego ruchy, którym kształtność ciała nadawała szczególną zręczność i giętkość; nie mogła też nie spostrzec, że z błękitnych, roziskrzonych oczu, zza zmieszania i zawstydzenia, wybuchała mu tajemna, lecz nie dająca utaić się radość.\n\n— Pan Jan Bohatyrowicz? — trochę nieśmiało zapytała.",
-    "fragment3": "— Kto to? — zapytała Justyna.\n\n— To jest panna Domuntówna, najbogatsza w okolicy aktor...\n\nJustyna szeroko oczy ze zdumienia otworzyła. Jan uśmiechnął się.\n\n— Państwo nie rozumieją naszych nazwań — objaśnił. — aktor, czyli sukcesorka... to jest... dziedziczka... Dziadunio panny Domuntówny, Jakub Bohatyrowicz, miał tylko jedną córkę, którą wydał za Domunta"
+    "author": "Kayah",
+    "title": "Prawy do lewego",
+    "fragment1": "Ktoś smaruje se Plecy Mlekiem\nA ktoś Smaruje se Plecy Oliwą",
+    "fragment2": "Wielka Plaża w sercu miasta\nPokaż mi gdzie masz tak",
+    "fragment3": "War-sza-wiaku wypijmy za to,\nKto z nami nie wypije tego smog zabije"
   },
   {
     "id": 28,
-    "title": "Romeo i Julia",
-    "author": "William Shakespeare (Szekspir)",
-    "fragment1": "Dwa rody, zacne jednako i sławne —\nTam, gdzie się rzecz ta rozgrywa, w Weronie,\nDo nowej zbrodni pchają złości dawne,\nPlamiąc szlachetną krwią szlachetne dłonie",
-    "fragment2": "Wieści z Werony! - Cóż tam, Baltazarze?\nCzy mi przynosisz list od Laurentego?\nCo robi Julia? Czy zdrów jest mój ojciec?\nJak się ma Julia? Po raz drugi pytam.\nBo nie ma złego, jeśli jej jest dobrze.",
-    "fragment3": "Dawna namiętność już w całunach leży,\nW jej miejscu władnie[57] siła żądzy nowej;\nPiękną przestała być przy Julii świeżej\nPiękność, dla której umrzeć był gotowy."
+    "author": "Maryla rodowicz",
+    "title": "Małgoska",
+    "fragment1": "Widziałam biały ślub, idą święta,\nNie słyszałam z daleka słów.",
+    "fragment2": "To był maj, pachniała Saska Kępa Szalonym, zielonym bzem.",
+    "fragment3": "On niewart jednej łzy,"
   },
   {
     "id": 29,
-    "title": "Skąpiec",
-    "author": "Moiler",
-    "fragment1": "Cóż to, nadobna Elizo zapadłaś, widzę, w smutek po chwili serdecznego zapału, który sprawił, iż tak wspaniałomyślnie oddałaś mi wiarę i słowo? Wzdychasz, gdy ja jestem tak pełen radości!",
-    "fragment2": "Nie, Dokładnych wiadomości nie mógłbym udzielić; wszedłem z nim w styczność jedynie przypadkiem; ale on sam dostarczy panu wyjaśnień. Służący upewniał mnie, że pan będzie zupełnie zadowolony. Wszystko, co mógłbym powiedzieć, to, iż pochodzi z rodziny bardzo bogatej, matka już nie żyje, gotów zaś jest zobowiązać się, jeżeli pan zechce, iż ojciec umrze przed upływem ośmiu miesięcy.",
-    "fragment3": "Dalej, chodźcie tu wszyscy; dam wam rozkazy na dzisiaj i wyznaczę każdemu jego zajęcie. Chodź no tu, pani Claude, zacznijmy od pani.\n \n\nPani Claude zbliża się z miotłą"
+    "author": "Maryla rodowicz",
+    "title": "Niech żyje bal",
+    "fragment1": "Szalejcie aorty, ja idę na korty\nRoboto ty w rękach się pal",
+    "fragment2": "Życie kochanie trwa tyle co taniec\nfandango, bolero, be-bop",
+    "fragment3": "Bo to życie to bal jest nad bale!"
   },
   {
     "id": 30,
-    "title": "Przedwiośnie",
-    "author": "Stefan Żeromski",
-    "fragment1": "Gdy z portu wracał do domu z matką, zaiste, jak grób milczącą, był już wesoły. Pocieszyło go to i owo, a nade wszystko perspektywa swobody. Ojciec, który go nigdy a nigdy nie karał, nigdy nawet nie łajał, a strofował półżartem, z lekką drwinką, dowcipkując, posiadał nad synem władzę żelazną, niezłomną.",
-    "fragment2": "Czaruś dostał był właśnie promocję z klasy czwartej do piątej i skończył czternasty rok życia, gdy Seweryna Barykę jako oficera zapasowego powołano do wojska.",
-    "fragment3": "Seweryn Baryka nie pokonał Niemców nad Mazurskimi Jeziorami. Przeciwnie — wiał na wschód z resztą armii. Długo nie było od niego wieści, a gdy wreszcie nadeszła, to już zupełnie skądinąd. Był w Karpatach"
+    "author": "Kult",
+    "title": "dzieci",
+    "fragment1": "Wracamy chwiejnym krokiem po okrążeniu nad ranem",
+    "fragment2": "Jedna flaszka, druga flaszka i też trzecia, kurde bele, leci",
+    "fragment3": "Wyjechali na wakacje wszyscy nasi podopieczni"
   },
   {
     "id": 31,
-    "title": "Przygody Tomka Sawyera",
-    "author": "MArk Twain",
-    "fragment1": "Nadszedł sobotni ranek. Słońce świeciło promiennie, cały świat dyszał radością lata i kipiał życiem. W każdym sercu dźwięczała muzyka, a jeśli serce było młode, pieśń sama cisnęła się na usta.",
-    "fragment2": "Starsza pani zsunęła okulary na nos i rozejrzała się po pokoju ponad szkłami; potem podniosła je na czoło i rozejrzała się ponownie. Dla takiego drobiazgu jak Tomek, patrzyła przez okulary rzadko — prawie nigdy.",
-    "fragment3": "Tomek stanął przed ciotką Polly. Siedziała przy otwartym oknie przytulnego, zacisznego pokoju, który był jednocześnie sypialnią, jadalnią, bawialnią i czytelnią."
+    "author": "Kult",
+    "title": "baranek",
+    "fragment1": "Krzywde robie mojej panience,\nOpluc chca ja, podli zboczency.",
+    "fragment2": "Ach ci ludzie, to brudne swinie,\nCo napletli o mojej dziewczynie,",
+    "fragment3": "Na glowie kwietny ma wianek,\nW reku zielony badylek,"
   },
   {
     "id": 32,
-    "title": "Quo vadis",
-    "author": "Henryk Sienkiewicz",
-    "fragment1": "Petroniusz1 obudził się zaledwie koło południa i jak zwykle, zmęczony bardzo. Poprzedniego dnia był na uczcie u Nerona2, która przeciągnęła się do późna w noc.",
-    "fragment2": "Tej nocy Winicjusz nie kładł się wcale. W czas jakiś po odejściu Petroniusza, gdy jęki smaganych niewolników nie mogły ukoić ani jego bólu, ani wściekłości, zebrał gromadę innych sług i na ich czele późną już nocą wypadł na poszukiwanie Ligii.",
-    "fragment3": "Wiadomo było w Rzymie, że cezar chce odwiedzić po drodze Ostię, a raczej największy statek na świecie, który świeżo przywiózł był zboże z Aleksandrii, stamtąd zaś drogą Pobrzeżną369 uda się do Ancjum."
+    "author": "Elektryczne gitary",
+    "title": "dzieci wybiegły",
+    "fragment1": "Godziny modlitw lata nauki",
+    "fragment2": "Wszyscy mamy źle w głowach że żyjemy",
+    "fragment3": "Zapaliły papierosy wyciągnęły flaszki"
   },
   {
     "id": 33,
-    "title": "Reduta Ordona",
-    "author": "Adam Mickiewicz",
-    "fragment1": "I spojrzałem na pole; dwieście armat grzmiało.  \nArtyleryji ruskiéj ciągną się szeregi,  \nProsto, długo, daleko, jako morza brzegi;  \nI widziałem ich wodza; — przybiegł, mieczem skinął,",
-    "fragment2": "Ura! ura! Patrz, blisko reduty, już w rowy  \nWalą się, na faszynę7 kładąc swe tułowy;  \nJuż czernią się na białych palisadach wałów.  \nJeszcze reduta w środku, jasna od wystrzałów,  \nCzerwieni się nad czernią: jak w środek mrowiska  \nWrzucony motyl błyska, — mrowie go naciska, —  \nZgasł;",
-    "fragment3": "Kiedy od ludzi wiara i wolność uciecze,  \nKiedy ziemię despotyzm i duma szalona  \nObleją, jak Moskale redutę Ordona:  \nKarząc plemie zwycięzców zbrodniami zatrute,  \nBóg wysadzi tę ziemię, jak on swą redutę13."
+    "author": "Elektryczne gitary",
+    "title": "kiler",
+    "fragment1": "Nie kiwnalem nawet palcem, by sie znalezc w takiej walce",
+    "fragment2": "To, co sie dzieje naprawde nie istnieje",
+    "fragment3": "podnioslem bile, wracam za chwile, nie dbam o bagaz"
   },
   {
     "id": 34,
-    "title": "W pustyni i w puszczy",
-    "author": "Henryk Sienkiewicz",
-    "fragment1": "Obaj inżynierowie wyjechali nazajutrz na noc do Kairu, gdzie mieli odwiedzić rezydenta angielskiego i być na posłuchaniu u wicekróla. Staś obliczał, że może im to zająć dwa dni, i pokazało się, że obliczenia jego były trafne, gdyż trzeciego dnia wieczorem otrzymał od ojca, już z Medinet, następującą depeszę14:",
-    "fragment2": "Wiesz, Nel — mówił Staś Tarkowski do swojej przyjaciółki, małej Angielki — wczoraj przyszli zabtie (policjanci) i aresztowali żonę dozorcy Smaina i jej troje dzieci — tę Fatmę, która już kilka razy przychodziła do biura do twojego ojca i do mego.",
-    "fragment3": "Staś, który kończył rok czternasty i który swą ośmioletnią towarzyszkę kochał bardzo, ale uważał za zupełne dziecko, rzekł z miną wielce zarozumiałą:"
+    "author": "Kombi",
+    "title": "pokolenie",
+    "fragment1": "W bramie łyk jak skok\nKumple są jest noc",
+    "fragment2": "Rodzisz się - to znak\nKocha cię ten świat",
+    "fragment3": "Każde pokolenie odejdzie w cień"
   },
   {
     "id": 35,
-    "title": "Nie-Boska komedia",
-    "author": "Zygmunt Krasiński",
-    "fragment1": "Gwiazdy wokoło twojej głowy — pod twoimi nogi fale morza — na falach morza tęcza przed tobą pędzi i rozdziela mgły — co ujrzysz, jest twoim — brzegi, miasta i ludzie tobie się przynależą — niebo jest twoim — chwale twojej niby nic nie zrówna. —",
-    "fragment2": "Pokój ludziom dobrej woli — błogosławiony pośród stworzeń, kto ma serce11 — on jeszcze zbawion być może. — Żono dobra i skromna, zjaw się dla niego — i dziecię niechaj się urodzi w domu waszym. —",
-    "fragment3": "Od baszt Świętej Trójcy209 do wszystkich szczytów skał, po prawej, po lewej, z tyłu i na przodzie leży mgła śnieżysta, blada, niewzruszona, milcząca, mara oceanu, który niegdyś miał brzegi swoje, gdzie te wierzchołki czarne, ostre, szarpane, i głębokości swoje, gdzie dolina, której nie widać, i słońce, które jeszcze się nie wydobyło."
+    "author": "Kombi",
+    "title": "Słodkiego miłego zycia",
+    "fragment1": "Czy to już znasz kochanie\nCzy nie wiesz jak to jest",
+    "fragment2": "Dobre stopnie za chamstwo masz to jest to",
+    "fragment3": "Bez chłodu głodu i bicia"
   },
   {
     "id": 36,
-    "title": "Moralność pani Dulskiej",
-    "author": "Gabriela Zapolska",
-    "fragment1": "cena przedstawia salon w burżuazyjnym domu. — Dywany — meble solidne — na ścianach w złoconych ramach premia i Bóg wie jakie obrazy. — Rogi obfitości — sztuczne palmy — landszaft haftowany za szkłem. — Pomiędzy tym stara, piękna serwantka mahoniowa i empirowy ekranik. — Lampa z abażurem z bibuły — stoliki, a na nich fotografie.",
-    "fragment2": "Scena przedstawia ten sam pokój. — Ranek — story podniesione — szare światło dnia zimowego — pod nierozpalonym piecem drzemie na stołeczku niskim Hanka, owinięta w chustkę czarną. Za podniesieniem zasłony słychać wicher, łopoczący o szyby. — Chwila milczenia. Słychać tylko jak Hanka oddycha ciężko i od czasu do czasu jęczy: „Jezus!”",
-    "fragment3": "Chwilę scena pozostaje pusta. Słychać za kulisami szłapanie pantofli. Z lewej (sypialnia małżeńska) wchodzi Dulska w stroju niedbałym. Papiloty — z tyłu cienki kosmyk — kaftanik biały wątpliwej czystości — halka włóczkowa krótka, poddarta na brzuchu. Idzie, mrucząc — świeca w ręku. Stawia świecę na stole — idzie do kuchni."
+    "author": "Wilki",
+    "title": "Baska",
+    "fragment1": "Wiec na noc umwilem sie z ala",
+    "fragment2": "Piekne jak okret\nPod pelnymi zaglami",
+    "fragment3": "Ania styl, a zoska cos, co lubie, ech"
   },
   {
     "id": 37,
-    "title": "Ferdydurke",
-    "author": "Witold Gombrowicz",
-    "fragment1": "W klasie panował ogromny hałas, uczniowie siadali w swoich ławkach, krzycząc przeraźliwie. Nie zamilkli również wtedy, gdy za katedrą stanął nauczyciel. Wykonał on kilka gestów, strzepnął pył z kamizelki, obrócił zarękawki (wykonane z materiału osłony na rękawy koszuli lub marynarki, ściągnięte nad dłonią i za łokciem gumkami), zacisnął usta, ale klasa nie zareagowała.",
-    "fragment2": "Lecz on siedział, a siedząc siedział i siedział jakoś tak siedząc, tak się zasiedział w siedzeniu swoim, tak był absolutny w tym siedzeniu, że siedzenie, będąc skończenie głupim, było jednak zarazem przemożne. I zdjąwszy z nosa binokle przetarł je chusteczką, po czym nałożył na nos, a nos był czymś nie do zwalczenia. Był to nos nosowy, zdawkowy i banalny, belfrowaty, długi dosyć, złożony z dwu rurek równoległych, ostatecznych. I rzekł:\n― Jaki duch znowu?",
-    "fragment3": "nie ma ucieczki przed gębą, jak tylko w inną gębę, a przed człowiekiem schronić się można jedynie w objęcia innego człowieka. Przed pupą zaś w ogóle nie ma ucieczki”."
+    "author": "wilki",
+    "title": "bohema",
+    "fragment1": "Płyną noce przemijają dnie\nNiewiele pamiętam",
+    "fragment2": "Od tego trzeba zacząć rzecz\nLecę bo zgubiłem się",
+    "fragment3": "Lecę, bo chcę\nLecę, bo życie jest złe"
   },
   {
     "id": 38,
-    "title": "tango",
-    "author": "Sławomir Mrożek",
-    "fragment1": "STOMIL: Milcz, kanalio, i opuść ten dom. Ciesz się, że nie żądamy od ciebie rachunku.\nEDEK: A dlaczego miałbym teraz sobie pójść? (...) Ja tu zostanę.\nSTOMIL: Po co?\nEDEK: Teraz moja kolej. Wy będziecie mnie słuchać.\nSTOMIL: My? Ciebie?",
-    "fragment2": "EDEK: A dlaczegóż by nie? Widzieliście, jaki mam cios. Ale nie bójcie się, byle cicho siedzieć, nie \npodskakiwać, uważać, co mówię, a będzie wam ze mną dobrze, zobaczycie. Ja jestem swój chłop.           \nI pożartować mogę, i zabawić się lubię. Tylko posłuch musi być.\nEUGENIUSZ: Ładnieśmy wpadli. (...)\nEUGENIUSZ: Zdaje mi się, Arturku, że już nikomu nie jesteś potrzebny.",
-    "fragment3": "„Edek nie jest taki zły. Ma dobre serce, choć nie wygląda bardzo inteligentnie. (ciszej) Między nami mówiąc, to debil... (głośniej) No cóż, mój drogi, trzeba życie brać, jakie ono jest... (ciszej) Albo i nie. (głośniej) No, Arturku, głowa do góry. Edek ma swoje zalety (…)”"
+    "author": "Perfect",
+    "title": "autobiografia",
+    "fragment1": "Za jej Poli Raksy twarz\nKażdy by się zabić dał",
+    "fragment2": "Miałem dzięsieć lat\nGdy usłyszał o nim świat",
+    "fragment3": "Było nas trzech\nW każdym z nas inna krew"
   },
   {
     "id": 39,
-    "title": "biblia - fragmenty",
-    "author": "",
-    "fragment1": "Nie posłał mnie Chrystus, abym chrzci, lecz abym głosił Ewangelię, i to nie w mądrości słowa, by nie zniweczyć Chrystusowego krzyża.",
-    "fragment2": "a początku Bóg stworzył niebo i ziemię. 2 Ziemia zaś była bezładem i pustkowiem: ciemność była nad powierzchnią bezmiaru wód, a Duch2 Boży unosił się nad wodami.",
-    "fragment3": "Kiedym Go ujrzał, \ndo stóp Jego upadłem jak martwy, \na On położył na mnie prawą rękę, mówiąc: \n«Przestań się lękać! \nJam jest Pierwszy i Ostatni"
+    "author": "Perfect",
+    "title": "Chcmey być soba",
+    "fragment1": "Jak co dzień rano, bułkę maślaną\nPopijam kawą, nad gazety plamą",
+    "fragment2": "Chciałbym być sobą",
+    "fragment3": "Chciałbym być sobą wreszcie"
   },
   {
     "id": 40,
-    "title": "Mitlogia",
-    "author": "Jan Parandowski",
-    "fragment1": "Rozpalenie nowego ognia było aktem bardzo uroczystym. Dokonywano tego przez pocieranie dwóch kawałków drzewa, czyli sposobem najbardziej pierwotnym, sięgającym epoki kamiennej, a spotykanym dziś u ludów zaszytych w ustronia ziemi, dokąd jeszcze nie dotarła cywilizacja.",
-    "fragment2": "Najszerzej rozwinął się irański kult Mitry. Legiony rzymskie, gdzie miał najwięcej wyznawców, zaniosły go nad Dunaj i do lasów Germanii, na piaskach Afryki i wśród mgieł Brytanii stanęły ołtarze tego boga światłości. Zwał się Sol Invictus — Słońce Niezwyciężone.",
-    "fragment3": "Na początku był Chaos. Któż zdoła powiedzieć dokładnie, co to był Chaos? Niejedni widzieli w nim jakąś istotę boską, ale bez określonego kształtu. Inni — a takich było więcej — mówili, że to wielka otchłań, pełna siły twórczej i boskich nasieni, jakby jedna masa nie uporządkowana, ciężka i ciemna, mieszanina ziemi, wody, ognia i powietrza. Z tej napełnionej otchłani, kryjącej w sobie wszystkie zarodki przyszłego świata, wyłoniły się dwa potężne bóstwa, pierwsza królewska para bogów."
+    "author": "Perfect",
+    "title": "Nie płacz Ewka",
+    "fragment1": "Po ulicy miłość hula wiatr wśród rozbitych szyb",
+    "fragment2": "Żegnam was, już wiem\nNie załatwię wszystkich pilnych spraw",
+    "fragment3": "Nie płacz Ewka, bo tu miejsca brak, na twe babskie łzy"
+  },
+  {
+    "id": 41,
+    "author": "Lady Pank",
+    "title": "zawsze tam gdzie ty",
+    "fragment1": "Nie znam słów, co mają jakiś większy sens",
+    "fragment2": "Zamienię każdy oddech w niespokojny wiatr",
+    "fragment3": "By do Ciebie wracać każdą nocą złotą"
+  },
+  {
+    "id": 42,
+    "author": "Lady Pank",
+    "title": "Tańcz głupia tańcz",
+    "fragment1": "Sama tego chciałaś\nPewnie coś był wart",
+    "fragment2": "U  Maxima  w Gdyni\nZnów Cię widział ktoś",
+    "fragment3": "Tańcz głupia, tańcz, swoim życiem się baw!"
+  },
+  {
+    "id": 43,
+    "author": "Lady Pank",
+    "title": "marchewkowe pole",
+    "fragment1": "Głową na dół zakopany niczym struś",
+    "fragment2": "Wszystko się może zdarzyć",
+    "fragment3": "pole rośnie wokół mnie"
+  },
+  {
+    "id": 44,
+    "author": "Lady Pank",
+    "title": "Kryzysowa narzeczona",
+    "fragment1": "Nigdy nie dowiesz się\nCo straciłaś",
+    "fragment2": "Mogłaś moją być",
+    "fragment3": "Mogłaś być już na dnie\nA nie byłaś"
+  },
+  {
+    "id": 45,
+    "author": "Lady Pank",
+    "title": "mniej niz zero",
+    "fragment1": "Zawodowi macherzy od losu\nSpecjaliści od śpiewu i mas",
+    "fragment2": "Myślisz może, że więcej coś znaczysz",
+    "fragment3": "Mniej niż zero\nOh oh oh oh"
+  },
+  {
+    "id": 46,
+    "author": "Lady Pank",
+    "title": "Stacja warszawa",
+    "fragment1": "Kiedyś też to zobaczysz, powiesz mi tak",
+    "fragment2": "W moich snach wciąż Warszawa",
+    "fragment3": "Wszystko byłoby inne\nGdybyś tu była, ja wiem"
+  },
+  {
+    "id": 47,
+    "author": "Lady Pank",
+    "title": "Zamki na piasku",
+    "fragment1": "Skonstruowałeś bombę\nSkondensowaną śmierć",
+    "fragment2": "Jesteś idolem\nWielbi cię tłum",
+    "fragment3": "Zamki na piasku\nGdy pełno w szkle"
+  },
+  {
+    "id": 48,
+    "author": "Myslovitz",
+    "title": "Długośc dzwieku samotności",
+    "fragment1": "Gdzie Ty i ja, i jeszcze ktoś, nie wiem kto",
+    "fragment2": "Chciałby tak przez kilka lat zbyt zachłannie i trochę przesadnie",
+    "fragment3": "I nawet kiedy będę sam\nNie zmienię się, to nie mój świat"
+  },
+  {
+    "id": 49,
+    "author": "Myslovitz",
+    "title": "dla Ciebie",
+    "fragment1": "Zrywam polne kwiaty\nSzukam tych najrzadszych",
+    "fragment2": "Dla Ciebie\nMógłbym zrobić wszystko",
+    "fragment3": "To wszystko, czego chcę\nTo wszystko, czego mi brak"
+  },
+  {
+    "id": 50,
+    "author": "Myslovitz",
+    "title": "Marilyn Monroe",
+    "fragment1": "Dotykam oczu, wlosów, ust",
+    "fragment2": "Hej dziewczyno, nie mów nic, czas na miłość\nStań przede mną, pozwól dotknąć się",
+    "fragment3": "Aaa, z twarzą Marylin Monroe"
+  },
+  {
+    "id": 51,
+    "author": "Myslovitz",
+    "title": "scenariusz dla moich sasiadów",
+    "fragment1": "Wystawię ekran i wyświetlę film\nCoś o mnie i o tobie",
+    "fragment2": "Kiedy powrócisz już ja będę czekał\nUlicą pójdę wzdłuż kupię gazetę",
+    "fragment3": "Wieczorem wieczorem przed mym domem\nWystawię ekran i wyświetlę film"
+  },
+  {
+    "id": 52,
+    "author": "Ich Troje",
+    "title": "Powiedz",
+    "fragment1": "Sen rozpłynął się w świtu płomieniach",
+    "fragment2": "Powiedz, powiedz czemu\nŚwiat twój milczy cały blady od wzruszeń",
+    "fragment3": "Ja jestem panią mych snów\nMoich marzeń i lęków"
+  },
+  {
+    "id": 53,
+    "author": "Ich Troje",
+    "title": "Wypijmy za to",
+    "fragment1": "dla ciebie warto jest\nposwiecic noc i dzien",
+    "fragment2": "ubierasz sie, odwracasz twarz\nbez zbednych slow, to wszystko juz",
+    "fragment3": "za ten papieros tuz po\ni ten szampan tuz przed"
+  },
+  {
+    "id": 54,
+    "author": "Ich Troje",
+    "title": "zawsze z toba chciałbmy być",
+    "fragment1": "wychodzisz juz, szepczesz: papa\nzadzwonic chcesz za dzien lub dwa",
+    "fragment2": "Zadzwoniłem w środku lata\nChodź minęły już 2 lata",
+    "fragment3": "Kochaj mnie za to\nZawsze z Tobą chciałbym być"
+  },
+  {
+    "id": 55,
+    "author": "Ryszard Rynkowski",
+    "title": "Wypijmy za błędy",
+    "fragment1": "Kupić chcesz, gotówka jest, nie masz czasu stać",
+    "fragment2": "Czego może chcieć od życia taki gość jak ja",
+    "fragment3": "Za błędy na górze\nNiech wyjdą na dobre"
+  },
+  {
+    "id": 56,
+    "author": "Budka Suflera",
+    "title": "Jolka Jolka",
+    "fragment1": "Czarodziejka gorzałka tańczyła w nas\nMeta była o dwa kroki stąd",
+    "fragment2": "Gdy pisałaś:  Tak mi źle\nUrwij się choćby zaraz",
+    "fragment3": "Emigrowałem z ramion Twych nad ranem"
+  },
+  {
+    "id": 57,
+    "author": "Budka Suflera",
+    "title": "bal wszystkich świetych",
+    "fragment1": "Skasowałaś mnie w swej pamięci\nAż mi siebie jest żal",
+    "fragment2": "Ta niedziela jest jak film tani klasy  B \nFacet się pałęta w nim w nieciekawym tle",
+    "fragment3": "Wszyscy święci balują w niebie\nZłoty sypie się kurz"
+  },
+  {
+    "id": 58,
+    "author": "Budka Suflera",
+    "title": "Takie tango",
+    "fragment1": "Co było w naszych sercach kiedyś\nKiedyś jak świecący diament",
+    "fragment2": "Na sali wielkiej i błyszczącej\nTak jak nocne Buenos Aires",
+    "fragment3": "Zgodnych ciał i chętnych serc\nBo do tanga trzeba dwojga"
+  },
+  {
+    "id": 59,
+    "author": "Varius Manx",
+    "title": "Piosenka Księżycowa",
+    "fragment1": "Nie wiem co robić, gdy płaczesz\nJuż nie śmiejesz się jak kiedyś",
+    "fragment2": "Śpisz pięknie tak\nPo kątach cisza gra",
+    "fragment3": "Kiedyś znajdę dla nas dom\nZ wielkim oknem na świat"
+  },
+  {
+    "id": 60,
+    "author": "Bajm",
+    "title": "Co mi Panie dasz",
+    "fragment1": "Bym na tyłku siadł\nI czy warto, czy nie warto",
+    "fragment2": "Asfalt ulic jest dziś śliski jak brzuch ryby\nMokre niebo się opuszcza coraz niżej",
+    "fragment3": "Co mi, Panie, dasz\nW ten niepewny czas?"
+  },
+  {
+    "id": 61,
+    "author": "Zbigniew Wodecki",
+    "title": "Zacznij od Bacha",
+    "fragment1": "Poranny swój szal i rusza, cień w długi marsz",
+    "fragment2": "Gdy musisz wstać\nChoć tulisz tak pod głową obłoczek snu",
+    "fragment3": "Zacznij od Bacha, nim słońce po dachach\nZeskoczy, jak kot po nocy ćmej"
+  },
+  {
+    "id": 62,
+    "author": "Tadeusz Woźniak",
+    "title": "Zegarmistrz światła",
+    "fragment1": "By mi zabełtać błękit w głowie",
+    "fragment2": "Spłyną przeze mnie dni na przestrzał\nZgasną podłogi i powietrza",
+    "fragment3": "A kiedy przyjdzie także po mnie\nZegarmistrz światła purpurowy"
+  },
+  {
+    "id": 63,
+    "author": "Izabela Trojanowska",
+    "title": "Wszystko czego dziś chcę",
+    "fragment1": "Adres w bloku i mały Fiat\nNie łam głowy, jak Ty to uzbierasz",
+    "fragment2": "Ledwo mnie znasz, tyle już masz\nPlanów, jakbyś wieki mnie znał",
+    "fragment3": "Pamiętaj o tym\nPolecieć chcę\nTam i z powrotem"
+  },
+  {
+    "id": 64,
+    "author": "T-Love",
+    "title": "Chłopaki nie płaczą",
+    "fragment1": "Jutro przecież też jest dzień",
+    "fragment2": "Mówisz życie jak cukierek\nGorzkie jest czasami",
+    "fragment3": "U uh chłopaki\nU uh nie płaczą"
+  },
+  {
+    "id": 65,
+    "author": "Edyta Górniak, Mietek Szcześniak",
+    "title": "Dumka na Dwa serca",
+    "fragment1": "Pytaj tych burzanów wonnych\nI uwolnij mnie",
+    "fragment2": "Mój sokole chmurnooki\nPytaj o mnie",
+    "fragment3": "Jak mam pytać innych kobiet?\nSerce me odkryją w Tobie,"
+  },
+  {
+    "id": 66,
+    "author": "2 plus 1",
+    "title": "Windą do nieba",
+    "fragment1": "Wiec nie mogl mi sie pan przysnic dzis\nI tak odchodze bez pozegnania jakby znienacka",
+    "fragment2": "Pisze do pana ostatni list\nJuz mi lusterko z tym pana zdjecie tez nie pomoze",
+    "fragment3": "Juz mi niosa suknie z welonem\nJuz Cyganie czekaja z muzyka"
+  },
+  {
+    "id": 67,
+    "author": "Kancelarya",
+    "title": "Zabiorę Cię",
+    "fragment1": "Dość mam już pustych dni\nI świąt których nie było",
+    "fragment2": "Nie zaprzeczaj mi\nTyle mogę Ci dać",
+    "fragment3": "Zabiorę Cię właśnie tam\nGdzie jutra słodki smak"
+  },
+  {
+    "id": 68,
+    "author": "Andrzej Rybiński",
+    "title": "Nie liczę godzin i lat",
+    "fragment1": "Bez godzin i bez kalendarzy\nDługością dni i zmiennością zdarzeń",
+    "fragment2": "Wschodami gwiazd i zachodami\nOdmierzam czas liści kolorami",
+    "fragment3": "Nie liczę godzin i lat,\nTo życie mija, nie ja."
+  },
+  {
+    "id": 69,
+    "author": "Mr Zoob",
+    "title": "Mój jest ten kawałek podłogi",
+    "fragment1": "Meble już połamałem\nNowy ład zrobić chcę",
+    "fragment2": "Znowu ktoś mnie podgląda\nLekko skrobie do drzwi",
+    "fragment3": "Nie mówcie mi więc, co mam robić!"
+  },
+  {
+    "id": 70,
+    "author": "Halina Frąckowiak",
+    "title": "Papierowy księżyc",
+    "fragment1": "Życie co byle jak trwa\nSchną na szybie ślady łez",
+    "fragment2": "Nie nie będę w San Francisco\nTo nie to miejsce i czas",
+    "fragment3": "Papierowy księżyc z nieba spadł\nSkończył się video film"
+  },
+  {
+    "id": 71,
+    "author": "Marilyn Manson",
+    "title": "The Beautiful People",
+    "fragment1": "You can t see the forest for the trees And can t smell",
+    "fragment2": "I don t want you and I don t need your",
+    "fragment3": "The beautiful people, The beautiful people"
+  },
+  {
+    "id": 72,
+    "author": "nazareth",
+    "title": "love hurts",
+    "fragment1": "I m young, I know, but even so\nI know a thing or two",
+    "fragment2": "I know it isn t true\nI know it isn t true",
+    "fragment3": "Love hurts, love scars"
+  },
+  {
+    "id": 73,
+    "author": "Carlos Santana",
+    "title": "Africa Bamba",
+    "fragment1": "Oye eso te va sentir feliz",
+    "fragment2": "Ella baila la portuguesa",
+    "fragment3": "África bamba hace a un lado a la tristeza"
+  },
+  {
+    "id": 74,
+    "author": "Metalica",
+    "title": "Enter Sandman",
+    "fragment1": "Exit light\nEnter night",
+    "fragment2": "Say your prayers, little one\nDon t forget, my son",
+    "fragment3": "Now I lay me down to sleep\nNow I lay me down to sleep"
+  },
+  {
+    "id": 75,
+    "author": "Linkin Park",
+    "title": "In The End",
+    "fragment1": "It doesn t even matter how hard you try",
+    "fragment2": "It starts with one thing, I don t know why",
+    "fragment3": "I tried so hard and got so far"
+  },
+  {
+    "id": 76,
+    "author": "Metalica",
+    "title": "Nothing Else Matters",
+    "fragment1": "Never opened myself this way\nLife is ours, we live it our way",
+    "fragment2": "So close, no matter how far\nCouldn t be much more from the heart",
+    "fragment3": "Never cared for what they say\nNever cared for games they play"
+  },
+  {
+    "id": 77,
+    "author": "Marilyn Manson",
+    "title": "Sweet Dreams",
+    "fragment1": "Some of them want to use you",
+    "fragment2": "Travel the world and the seven seas\nEverybody s looking for something",
+    "fragment3": "Sweet dreams are made of this\nWho am I to disagree"
+  },
+  {
+    "id": 78,
+    "author": "Queen",
+    "title": "Another one bites the dust",
+    "fragment1": "And kicked me out on my own\nAre you happy are you satisfied?",
+    "fragment2": "Steve walks warily down the street\nWith his brim pulled way down low",
+    "fragment3": "Another one bites the dust"
+  },
+  {
+    "id": 79,
+    "author": "Gerry",
+    "title": "You Will Never Know",
+    "fragment1": "Walk on through the wind\nWalk on through the rain",
+    "fragment2": "When you walk through a storm\nHold your head up high",
+    "fragment3": "With hope in your heart\nAnd you ll never walk alone\nWhat I feel, what I need from you, no"
+  },
+  {
+    "id": 80,
+    "author": "Beretta Lake",
+    "title": "Teflon Sega",
+    "fragment1": "Is it you or I, who the fucks giving up\nYou tell me why the fuck are you giving up",
+    "fragment2": "Drinking tonight but I swear I been sober",
+    "fragment3": "I m hopeless but I m yours\nStaring at Beretta Lake"
+  },
+  {
+    "id": 81,
+    "author": "STING",
+    "title": "Fields of Gold",
+    "fragment1": "So she took her love\nFor to gaze a while",
+    "fragment2": "You ll remember me when the west wind moves",
+    "fragment3": "When we walked in fields of gold"
+  },
+  {
+    "id": 82,
+    "author": "Phil Collins",
+    "title": "Another Day in Paradise",
+    "fragment1": "You can tell from the lines on her face\nYou can see that she s been there",
+    "fragment2": "She calls out to the man on the street",
+    "fragment3": "Paradise\nJust think about it (para-paradise)"
+  },
+  {
+    "id": 83,
+    "author": "Starship",
+    "title": "We Built This City",
+    "fragment1": "Marconi plays the mamba, listen to the radio, don t you remember?",
+    "fragment2": "It s just another Sunday in a tired old street",
+    "fragment3": "we built this city on rock and roll"
+  },
+  {
+    "id": 84,
+    "author": "Pink Floyd",
+    "title": "Wish You Were Here",
+    "fragment1": "Hot air for a cool breeze?\nCold comfort for change?",
+    "fragment2": "And disciplinary remains mercifully\nYes and um, I m with you Derek, this star nonsense",
+    "fragment3": "How I wish, how I wish you were here\nWe re just two lost souls"
+  },
+  {
+    "id": 85,
+    "author": "Simon & Garfunkel",
+    "title": "The Sound of Silence",
+    "fragment1": "Ten thousand people, maybe more\nPeople talking without speaking",
+    "fragment2": "Hello darkness, my old friend\nI ve come to talk with you again",
+    "fragment3": "Fools  said I,  You do not know\nSilence like a cancer grows"
+  },
+  {
+    "id": 86,
+    "author": "Queen",
+    "title": "Bohemian Rhapsody",
+    "fragment1": "Is this the real life?\nIs this just fantasy?",
+    "fragment2": "I m just a poor boy nobody loves me\nHe s just a poor boy from a poor family,",
+    "fragment3": "(Let him go!) Bismillah! We will not let you go"
+  },
+  {
+    "id": 87,
+    "author": "Sinéad O’Connor",
+    "title": "Nothing Compares 2 U",
+    "fragment1": "Nothing can stop these lonely tears from falling\nTell me baby, where did I go wrong?",
+    "fragment2": "It s been seven hours and 15 days\nSince you took your love away",
+    "fragment3": "But I m willing to give it another try\nNothing compares"
+  },
+  {
+    "id": 88,
+    "author": "Stevie Wonder",
+    "title": "I Just Called to Say I Love You",
+    "fragment1": "No autumn breeze, no falling leaves",
+    "fragment2": "No New Year s Day to celebrate\nNo chocolate covered candy hearts to give away",
+    "fragment3": "I just called to say how much I care"
+  },
+  {
+    "id": 89,
+    "author": "Frank Sinatra",
+    "title": "New York, New York",
+    "fragment1": "These vagabond shoes, are are longing to stray\nRight through the very heart of it",
+    "fragment2": "Start spreading the news, I m leaving today",
+    "fragment3": "And I m gonna make a brand new start of it in old New York"
+  },
+  {
+    "id": 90,
+    "author": "Sting",
+    "title": "Englishman In New York",
+    "fragment1": "You could end up as the only one\nGentleness, sobriety are rare in this society",
+    "fragment2": "I don t drink coffee, I take tea, my dear",
+    "fragment3": "Oh, I m an alien, I m a legal alien"
+  },
+  {
+    "id": 91,
+    "author": "Daft Punk",
+    "title": "One More Time",
+    "fragment1": "You know I m just feelin \nCelebration",
+    "fragment2": "Tonight, hey, just feeling\nMusic s got me feeling the need",
+    "fragment3": "One more time, a celebration\nYou know we re gonna do it right"
+  },
+  {
+    "id": 92,
+    "author": "Linkin Park",
+    "title": "Numb",
+    "fragment1": "Holding too tightly, afraid to lose control?\n Cause everything that you thought I would be",
+    "fragment2": "I m tired of being what you want me to be\nFeeling so faithless, lost under the surface",
+    "fragment3": "I can t feel you there\nBecome so tired\nSo much more aware"
+  },
+  {
+    "id": 93,
+    "author": "Czesław Niemen",
+    "title": "Dziwny jest ten świat",
+    "fragment1": "Że od tylu lat\nCzłowiekiem gardzi człowiek",
+    "fragment2": "Lecz ludzi dobrej woli jest więcej\nI mocno wierzę w to",
+    "fragment3": "Gdzie jeszcze wciąż\nMieści się wiele zła\nI dziwne jest to"
+  },
+  {
+    "id": 94,
+    "author": "Depeche Mode",
+    "title": "Enjoy the Silence",
+    "fragment1": "Painful to me\nPierce right through me",
+    "fragment2": "Words like violence\nBreak the silence",
+    "fragment3": "All I ever wanted\nAll I ever needed"
+  },
+  {
+    "id": 95,
+    "author": "Sting",
+    "title": "Shape Of My Heart",
+    "fragment1": "But those who speak know nothing\nAnd find out to their cost",
+    "fragment2": "He deals the cards as a meditation\nAnd those he plays never suspect",
+    "fragment3": "I know that the spades are the swords of a soldier\nI know that the clubs are weapons of war"
+  },
+  {
+    "id": 96,
+    "author": "Slums Attack",
+    "title": "Mój rap, moja rzeczywistość",
+    "fragment1": "Życia spieprzonego nikt z młodych nie chce naprawić\nTa, jeszcze nie dzisiaj, może jutro się rozejrzę",
+    "fragment2": "Częsty brak reakcji doprowadza do frustracji\nPiętno biurokracji doprowadza do wariacji",
+    "fragment3": "Jakie życie taki rap, w nim zawarte jest wszystko\nJestem z tych MC co pieprzą jak człowiekowi ciężko"
+  },
+  {
+    "id": 97,
+    "author": "jeden Osiem L",
+    "title": "jak zpaomniec",
+    "fragment1": "Snute kiedyś opowiastki, ja, Ty i srebrna taca\nKiedyś to nie przerażało, już do tego nie chcę wracać",
+    "fragment2": "Znowu widzę Ciebie przed swoimi oczami\nZnowu zasnąć nie mogę, owładnięty marzeniami",
+    "fragment3": "Nie myśleć o tym już\nZdmuchnąć wszystkie wspomnienia niczym zaległy kurz"
+  },
+  {
+    "id": 98,
+    "author": "Pięc dwa dębiec",
+    "title": "To my!",
+    "fragment1": "Co mu przyjdzie z żalu, nie ma tu konfesjonału\nNastępstwa Twoich czynów chwycą Cię za łeb synu",
+    "fragment2": "Polak Cię okradnie, Polak Cię dopadnie\nPolak nie popuści, gorsi to są tylko Ruscy",
+    "fragment3": "Głos kraju mataczy - to my Polacy\nGłos kraju bez pracy - to my Polacy"
+  },
+  {
+    "id": 99,
+    "author": "Kaliber 44",
+    "title": "Plus i minus",
+    "fragment1": "Idę tam, idę sam w tą czarną chwilę,\nTyle myśli w sekund tyle.",
+    "fragment2": "Może będzie mym najgorszym dniem, a może nie\nMój mózg płata mi figle gdy ja myślę, że plus",
+    "fragment3": "Plus i minus to jedyne co słyszę\nPlus i minus to jedyne czym żyje"
+  },
+  {
+    "id": 100,
+    "author": "Akon",
+    "title": "Lonely",
+    "fragment1": "Tryna figure out what I do to make it go bad\nCause ever since my girl left me",
+    "fragment2": "Yo! This one here\nGoes out to all my players out there man, ya know",
+    "fragment3": "I m Mr. Lonely\nI have nobody\nFor my own"
+  },
+  {
+    "id": 101,
+    "author": "Ronnie Ferrari",
+    "title": "Ona By Tak Chciała",
+    "fragment1": "Widzi tam coś we mnie, może ten napis z boku\nŻe napierdalamy we dnie, choć wolimy po zmroku",
+    "fragment2": "Jestem na dworze sam, deszcz pada mi na głowę",
+    "fragment3": "Kręcić blanty, po czym liczyć bankroll"
+  },
+  {
+    "id": 102,
+    "author": "Modjo",
+    "title": "Lady",
+    "fragment1": "I feel loved for the first time",
+    "fragment2": "Can t you see you re my delight?",
+    "fragment3": "Cause my feeling is just so right"
+  },
+  {
+    "id": 103,
+    "author": "Modjo",
+    "title": "Chillin",
+    "fragment1": "Spinning all around\nShe got me in a trance",
+    "fragment2": "One night in a disco",
+    "fragment3": "I feel so high\nDancing all night"
+  },
+  {
+    "id": 104,
+    "author": "Dawid Podsiadło",
+    "title": "Małomiasteczkowy",
+    "fragment1": "Wyśniłem sobie ciebie, gdy\nŚpiewałem głośno pod prysznicem",
+    "fragment2": "Znowu jadę do ciebie sam\nZnowu jadę do ciebie",
+    "fragment3": "Małomiasteczkowa głowa\nMałomiasteczkowy styl"
+  },
+  {
+    "id": 105,
+    "author": "Dawid Podsiadło",
+    "title": "Trójkąty i kwadraty",
+    "fragment1": "Unoszę się do chmur\nSpadam kulami gradu",
+    "fragment2": "Stoję na drodze\nNie widzi mnie tu nikt",
+    "fragment3": "Gwiazdy formują\nTrójkąty i kwadraty\nDziś je w kieszeniach\nBędę do ciebie niósł"
+  },
+  {
+    "id": 106,
+    "author": "Taco Hemingway",
+    "title": "Fiji",
+    "fragment1": "Tak mnie irytuje, gdy nie odpisujesz\nSobie wymyśliłaś chyba, że tu melanż",
+    "fragment2": "Gdy typy śpiewają o Legii pod oknem",
+    "fragment3": "Nawet nie wiesz jak mnie wkurwiasz, kiedy nie odbierasz\nTak mnie irytuje, gdy nie odpisujesz"
+  },
+  {
+    "id": 107,
+    "author": "Mietha",
+    "title": "Stars",
+    "fragment1": "Masz to w sobie\nI ja to widzę\nZobacz na te inne suki grasz w zupełnie innej lidze",
+    "fragment2": "Powinienem mniej pić\nI mieć wiele więcej czasu",
+    "fragment3": "Chciałbym cię zabrać\nEj tam i tam i tam i tam i tam"
+  },
+  {
+    "id": 108,
+    "author": "Mietha",
+    "title": "Szum",
+    "fragment1": "Poza tym bólem i blizn, nie dotyka mnie ten syf\nSzum fal, dźwięk silnika, nikt nie pachnie jak ty",
+    "fragment2": "Na zegarku zero, zero, jadę miastem",
+    "fragment3": "Szum fal, dźwięk silnika, niknie, niknie, niknie"
+  },
+  {
+    "id": 109,
+    "author": "Mietha",
+    "title": "Tak jak kiedyś",
+    "fragment1": "Ściany są cienkie na ośce, damy są piękne na ośce",
+    "fragment2": "Zdejmuję buty przed wejściem, rękę podaję za progiem",
+    "fragment3": "Nigdy nie było tak dobrze, jak kiedyś\nZnów zakładam starą czapkę"
+  },
+  {
+    "id": 110,
+    "author": "Sarius",
+    "title": "dziecko wojny",
+    "fragment1": "Ukryte w Twoich emocjach do dna\nSię nie przebije nikt",
+    "fragment2": "Czasem jest bliżej do słońca, to fakt\nSzczęśliwe dni",
+    "fragment3": "Lecz nie masz już strachu przed losem z gwiazd\nJesteś dzieckiem wojny"
+  },
+  {
+    "id": 111,
+    "author": "Guzior",
+    "title": "blueberry",
+    "fragment1": "Bujam głowę znam tę nutę gapię się trochę jak muppet\nHipnotyzują jej ruchy nie jaram się dzisiaj rapem oh",
+    "fragment2": "Wow wow ale bubel\nJak Pezet wyszedłem po chleb no a skończyłem w klubie",
+    "fragment3": "Olewam party i palę blueberry\nOna mi robi numery a ja wtedy robię numery"
+  },
+  {
+    "id": 112,
+    "author": "Gibbs Kacper HTA",
+    "title": "Zbrodnia i kara",
+    "fragment1": "Czekam aż moje serce coś ruszy\nZraniony jak Squishy nic nie warty sekret\nWszystko dookoła Yin Yang",
+    "fragment2": "Nie wszystko jest czarno białe\nGdzie pogrzebałem i straciłem wiarę",
+    "fragment3": "Za mną już zło i wina\nSumienie krzyczy wybacz\nIntencje złe na finał"
+  },
+  {
+    "id": 113,
+    "author": "Kacper HTA",
+    "title": "Mantra",
+    "fragment1": "Żeby nigdy nam ten zapał nie wystygł jeszcze\nNie opadł piasek klepsydry",
+    "fragment2": "Miałem już wybrany do Ciebie numer\nChoć pomieszałem wszystkie cyfry",
+    "fragment3": "Znowu nie zasnę\nW głowie mam tylko mantrę"
+  },
+  {
+    "id": 114,
+    "author": "Carlos Santana",
+    "title": "Maria Maria",
+    "fragment1": "Pick-pockin  on the corner\nSee as the rich is getting richer",
+    "fragment2": "Ladies and gents\nTurn up your sound systems",
+    "fragment3": "Oh, Maria, Maria\nShe fell in love in East L.A."
+  },
+  {
+    "id": 115,
+    "author": "Sobel",
+    "title": "Bandyta",
+    "fragment1": "Ale kocham małe kundle\nCzasami mogą mylić pozory",
+    "fragment2": "Panie myślą że zabijam\nA ja na chacie chodzę w klapkach różowych",
+    "fragment3": "Bandyta dziary na pół ryja bo kurwa je lubię a co\nŻaden ze mnie bandyta pierwsze słyszę"
+  },
+  {
+    "id": 116,
+    "author": "Sobel",
+    "title": "Testarossa",
+    "fragment1": "Muszę wrzucać szósty bieg, ciągle gonią mnie pragnienia\nWorek, a w nim cash, schowam na tylnich siedzeniach",
+    "fragment2": "Jak w Tokyo Drift, tak tu lubią latać\nA ona tańczy tam po linii jak Jurek Dudek",
+    "fragment3": "Mamy pełen bak, rozpędzimy fure\nRozbijemy bank, powiedz mi co czujesz"
+  },
+  {
+    "id": 117,
+    "author": "Sobel",
+    "title": "Wygladasz Tak Pięknie",
+    "fragment1": "Tak życia bez Ciebie\nUśmiechaj się więcej",
+    "fragment2": "Skarbie jak patrze na Ciebie\nSkarbie ja nadal nie wierze, że Bóg dał mi taką kobietę",
+    "fragment3": "Wyglądasz tak pięknie\nPozwól mi zabrać Cię stąd"
+  },
+  {
+    "id": 118,
+    "author": "Skorup",
+    "title": "Kurde nic",
+    "fragment1": "Życie to jest pastisz wszystkich górnolotnych zwrotów\nJeśli tylko długo się napatrzysz",
+    "fragment2": "Poradził mi laska z chłopaki nie płaczą\nRób to co lubisz to robić żem zaczął",
+    "fragment3": "Kurde balans jak szybko zleciało\nPiękna dziewczyna powiedziała ciao"
+  },
+  {
+    "id": 119,
+    "author": "Kekę",
+    "title": "Moja gwardia",
+    "fragment1": "Mnie akurat nikt nie woła no bo non stop robota",
+    "fragment2": "Maciek dawaj wziąłem piłkę i nóż\nGramy w grzyba potem w pola bez odbitek na dwóch",
+    "fragment3": "Trampki trzepak piłka pola do wieczora walka\nUlęgałki drzewa jabłka ja i moja gwardia"
+  },
+  {
+    "id": 120,
+    "author": "Kwiat jabłoni",
+    "title": "Dziś pójde późno spać",
+    "fragment1": "Lecz im bardziej spadam, tym bardziej widzę, że\nTo wszystko chyba nie jest sen",
+    "fragment2": "I nie wiem o czym myśleć mam\nŻeby mi się przyśnił taki świat",
+    "fragment3": "Dziś późno pójdę spać\nGdy wszyscy będą w łóżkach"
+  },
+  {
+    "id": 121,
+    "author": "Kwiat jabłoni",
+    "title": "Mogło być nic",
+    "fragment1": "Gdy budzisz się\nTo nadal jesteś ty",
+    "fragment2": "Estem tu zupełnie sam\nChoć przed chwilą stałem w tłumie",
+    "fragment3": "I to zabiera wdech\nŻe jest coś a nie nic"
+  },
+  {
+    "id": 122,
+    "author": "Quebonafide",
+    "title": "Bubbletea",
+    "fragment1": "Tęsknie za Tokio świecącym jak neon\nZa Tel a vivem białym jak welon",
+    "fragment2": "Tęsknie też za Ligą Plus bo bez Smoka\nTen program już nie wygląda tak samo",
+    "fragment3": "Tęskniłem za Tobą, nie kłamię jak zły"
+  },
+  {
+    "id": 123,
+    "author": "Łobuzy",
+    "title": "urok",
+    "fragment1": "Myślę co się stanie gdy w tym stanie nas nakryją\nWięc do dechy daję gaz nie dogonią nas ijo ijo",
+    "fragment2": "Mała działa na mnie działa na mnie jak bacardi\nPatrzy ciągle na mnie nieustannie gryzie wargi",
+    "fragment3": "Może to jej urok a może to make up\nJedziemy tą furą słuchamy se Zenka"
+  },
+  {
+    "id": 124,
+    "author": "Miły pan",
+    "title": "Małolatki",
+    "fragment1": "Jeszcze jedna, maleńka chwila\nA będę na kolanach błagał cię o syna",
+    "fragment2": "Każda chce mnie jak cysia matki\nNie, nie maleńka, plis, bez żartów",
+    "fragment3": "Małolatki auu, małolatki są tu\nMałolatki auu, jedna już wchodzi na stół"
+  },
+  {
+    "id": 125,
+    "author": "Hall & Oates",
+    "title": "Out of Touch",
+    "fragment1": "Or living in the middle between the two extremes\nSmoking guns hot to the touch",
+    "fragment2": "Shake it up is all that we know\nUsing the bodies up as we go",
+    "fragment3": "You Are out of touch\nI m out of time"
+  },
+  {
+    "id": 126,
+    "author": "Białas",
+    "title": "PDW",
+    "fragment1": "Rodzice przy narodzinach z dumą planowali kim będą ich dzieci",
+    "fragment2": "Małolatki z dobrych domów jarają chłopaki z bogatą przeszłością\nDlatego banany tak często próbują udawać że są patologią",
+    "fragment3": "PDW, PDW, Nie uwierzysz lecz zwątpienie też jest tu"
+  },
+  {
+    "id": 127,
+    "author": "Avil",
+    "title": "Jak mam żyć?",
+    "fragment1": "Prędzej się skaleczysz niż ze mną wygrasz\nPsycholog mi mówił,  Nie jesteś sam na świecie",
+    "fragment2": "Gaśnie światło, wszyscy wyszli, zostaję ja i natłok myśli",
+    "fragment3": "Nie mów mi jak mam żyć\nBo ja dobrze wiem jak i co"
+  },
+  {
+    "id": 128,
+    "author": "Earth, Wind & Fire",
+    "title": "September",
+    "fragment1": "How we knew love was here to stay\nNow December",
+    "fragment2": "Love was changing the mind of pretenders\nWhile chasing the clouds away",
+    "fragment3": "Hey, hey, hey\nBa-dee-ya, say, do you remember?"
+  },
+  {
+    "id": 129,
+    "author": "Maroon 5",
+    "title": "this love",
+    "fragment1": "My pressure on your hips, I m sinking my fingertips into\nEvery inch of you",
+    "fragment2": "I was so high I did not recognize\nThe fire burning in her eyes",
+    "fragment3": "This love has taken its toll on me\nShe said goodbye too many times before"
+  },
+  {
+    "id": 130,
+    "author": "Justin timberlake",
+    "title": "Cry me a river",
+    "fragment1": "All of these things people told me\nKeep messing with my head",
+    "fragment2": "You were my sun, you were my earth\nBut you didn t know all the ways I loved you, no",
+    "fragment3": "Now it s your turn, to cry\nCry me a river"
+  },
+  {
+    "id": 131,
+    "author": "Snoop dogg",
+    "title": "Still D R E",
+    "fragment1": "They want to know if he still got it\nThey say rap s changed",
+    "fragment2": "Yeah, nigga\nI m still fucking with you",
+    "fragment3": "I m representing for them gangstas all across the world"
+  },
+  {
+    "id": 132,
+    "author": "Estelle ft Kayne West",
+    "title": "west american boy",
+    "fragment1": "I never been to Brooklyn and I d like to see what s good\nDressed in all your fancy clothes",
+    "fragment2": "This a number one champion sound\nYeah, Estelle, we about to get down",
+    "fragment3": "Take me on a trip I d like to go some day\nTake me to New York, I d love to see LA"
+  },
+  {
+    "id": 133,
+    "author": "Sade",
+    "title": "The Sweetest Taboo",
+    "fragment1": "That s why I m in love with you (with you)",
+    "fragment2": "If I tell you\nIf I tell you now",
+    "fragment3": "You give me the sweetest taboo"
+  },
+  {
+    "id": 134,
+    "author": "bonson",
+    "title": "Głupie rzeczy",
+    "fragment1": "Osiedle masa wrogów prosiłem mamę o hajs na rozruch",
+    "fragment2": "Piętnaście lat mam nie istnieje fejs czy Glamrap\nSeks w gimnazjach na głośnikach był Eis i Skandal",
+    "fragment3": "Głupie głupie rzeczy ah\nGłupie głupie rzeczy w głowach"
+  },
+  {
+    "id": 135,
+    "author": "Stevie Wonder",
+    "title": "Superstition",
+    "fragment1": "The devil s on his way,",
+    "fragment2": "When you believe in things\nThat you don t understand,",
+    "fragment3": "Very superstitious,\nWriting s on the wall,"
+  },
+  {
+    "id": 136,
+    "author": "Gibbs",
+    "title": "Piękny świat",
+    "fragment1": "Naiwne spojrzenie na wszechświat\nTeraz się zawsze potwierdza",
+    "fragment2": "Łatwo się mówi, że przejdzie\nGorzej się znosi potknięcie",
+    "fragment3": "Lubię zapomnieć, że zło nas dosięga\nWystarczy łza"
+  },
+  {
+    "id": 137,
+    "author": "Gibbs & Szymi Szyms",
+    "title": "Oda do butli",
+    "fragment1": "Nim zostanie po nas wrak i będzie nam siebie brak\nBez oklasków i braw jestem dla ciebie sam",
+    "fragment2": "Gdyby miał już za coś pić, to za to żeby żyć",
+    "fragment3": "Zdobyłbym ten świat i jeszcze więcej"
+  },
+  {
+    "id": 138,
+    "author": "Gibbs",
+    "title": "ZTB",
+    "fragment1": "Na wyjazd ważne byś była obok mnie jak duch\nTam gdzie kończy się sen, a życie zaczyna",
+    "fragment2": "Piękny widok z osiemnastego piętra\nI tak przy twoim wymięka",
+    "fragment3": "Zatracić się, z tobą daleko gdzieś, z tobą"
+  },
+  {
+    "id": 139,
+    "author": "Gibbs i DOPEhouse",
+    "title": "Zodiak",
+    "fragment1": "Jej Chanel miesza się z mokrym asfaltem i Amnezją Haze",
+    "fragment2": "Zapętlony w słowach nie mam już ochoty zaczynać od nowa",
+    "fragment3": "Nad głową świeci mi neon dwa cztery jak aureola"
+  },
+  {
+    "id": 140,
+    "author": "Gibbs i DOPEhouse",
+    "title": "Pogoda, drinki, plaża",
+    "fragment1": "Lubię siedzieć w domu sam a jednak w ciągłych rozjazdach",
+    "fragment2": "Hej odkąd prędkość życia wzrasta",
+    "fragment3": "Nie marnuję już chwil chodzi tylko o vibe nam\nPoczułem życia smak kiedy przestałem zwalniać"
+  },
+  {
+    "id": 141,
+    "author": "Kacper HTA",
+    "title": "Puta madre",
+    "fragment1": "Zwykły Janusz sterczy w oknie niespełniony Bonaparte",
+    "fragment2": "Siekiera w klatce, siekiera w domu\nKiedyś tu więcej dymu a nie mefedronu",
+    "fragment3": "Nie zaprzątaj sobie nigdy nimi głowy\nKażdy z nich to tylko"
+  },
+  {
+    "id": 142,
+    "author": "Kacper HTA",
+    "title": "Nie zmieniam wizji",
+    "fragment1": "Demony w lustrze i demony w głowie, bo życie jest chore, nie mogę go znieść",
+    "fragment2": "Prawda, której nie chcesz znać o swoich bliskich, o sobie\nCzemu jestem własnym wrogiem?",
+    "fragment3": "Ja dalej nienawidzę hipokryzji\nA jako ludzie nosimy ją wszyscy"
+  },
+  {
+    "id": 143,
+    "author": "Kacper HTA & Gibbs",
+    "title": "Nirwana",
+    "fragment1": "Chciałem tylko pewność mieć wielką\nCzy serio już siebie znam",
+    "fragment2": "Wszystko co mogłem zostawiłem w rapie",
+    "fragment3": "Zrobię to sam\nTyle razy wróg już u bram"
+  },
+  {
+    "id": 144,
+    "author": "Janek",
+    "title": "Czarno na białym",
+    "fragment1": "Ludzie, pieniądze i fakty\nkażda chwila jak puste kartki",
+    "fragment2": "Powinienem skupić się na tym\nże w sumie tylko ja, nikt poza tym",
+    "fragment3": "skasowałem wszystkie kontakty"
+  },
+  {
+    "id": 145,
+    "author": "Tymek ft. Julia Wieniawa",
+    "title": "",
+    "fragment1": "Nieskazitelna łza\nTuż spod moich powiek",
+    "fragment2": "Co to jest za gość, tak dziwnie ubrany\nNie lubimy ram, przebijamy ściany",
+    "fragment3": "Każdy look i każdy krok, wymyśliłem słowa\nCo to znaczy \"być jak ktoś\", nie jako ikona"
+  },
+  {
+    "id": 146,
+    "author": "Guzior, Vito Bambino i Favst",
+    "title": "Chabo",
+    "fragment1": "Czy twój czek działa, żeby pani w banku mnie nie wyzywała",
+    "fragment2": "Rozmowy do późna, balaś z colą w kubkach\nNa dole taksówka, a",
+    "fragment3": "Bandyta czy hultaj, ryju z podwórka\nDawaj, bo zbiórka jest"
+  },
+  {
+    "id": 147,
+    "author": "Tymek & Ofelia",
+    "title": "Chcesz to ze mną bądź",
+    "fragment1": "Gadają za dużo, twoje koleżanki duszą mnie już tą rozmową\nO niczym i niczym",
+    "fragment2": "Czy to wszystko mi się śni?\nJacyś ludzie, brudny film",
+    "fragment3": "Odlatuję stąd, nie odstępują mnie nawet o krok"
+  },
+  {
+    "id": 148,
+    "author": "Gibbs & Przyłu",
+    "title": "Duchy",
+    "fragment1": "Nie mam już siły na bezdech\nZabrakło tlenu mi przez was już dawno",
+    "fragment2": "Moja wina\nPokazałem gdzie mnie ukłuć",
+    "fragment3": "Odkąd zapomniałem co to strach\nW moim domu nie ma żadnych duchów"
+  },
+  {
+    "id": 149,
+    "author": "Smolasty",
+    "title": "Sezon",
+    "fragment1": "I choć nie lubimy życia na pokaz masz na sobie bieliznę prosto z Milanu",
+    "fragment2": "Pijemy Bacardi za lepszy czas nie jesteś jak inne dziewczyny",
+    "fragment3": "W ten letni czas gdy smutku brak\nChcę przeżyć z tobą chwili szczęścia smak"
+  },
+  {
+    "id": 150,
+    "author": "Kartky",
+    "title": "Chmury",
+    "fragment1": "Kiedyś chciałem porozmawiać, znałem numer, teraz\nPołowy nie chcę pamiętać, ale taka cena",
+    "fragment2": "Ostatni raz dzisiaj piję Twoje zdrowie\nBo przez te lata byłeś dla mnie jak brat",
+    "fragment3": "Chciałaś mnie, jak byłem nikim, jestem taki sam\nPowiedz, ile lat mi zabierzesz więce"
+  },
+  {
+    "id": 151,
+    "author": "PlanBe",
+    "title": "Flash FM",
+    "fragment1": "Patrzymy kiedy całe miasto moknie w dzień\nTylko w telewizji",
+    "fragment2": "Potem skoczę sam do Santa Fe\nSamolotem, prawie private jet",
+    "fragment3": "Letni vibe 90 210\nDuży jacht, dużo miejsca w Mercedesie"
+  },
+  {
+    "id": 152,
+    "author": "Vito Bambino",
+    "title": "Poszło",
+    "fragment1": "Gdybym cię zobaczył to bym podszedł czy schował za czymś\nNiezakochani czekają na wiosnę",
+    "fragment2": "Jak wrócisz z nim na chawir\nTo nie zmieni się nic",
+    "fragment3": "Młoda jest jak u-u-uuu!\nBo ona lubi tańczyć\nOna lubi dogadywać się bez słów!"
+  },
+  {
+    "id": 153,
+    "author": "Vito Bambino",
+    "title": "Nudy",
+    "fragment1": "Tak sobie myślę, że Ty przecież też\nMiewasz gorszy dzień",
+    "fragment2": "Twoje serce ma długi też",
+    "fragment3": "Ale raczej tu nudy\nAle raczej to nie oczekuj nic"
+  },
+  {
+    "id": 154,
+    "author": "Kiwi",
+    "title": "Co chowasz",
+    "fragment1": "Zabierz mnie w głąb Twych lęków teraz\nChcę poznać najciemniejsze miejsce",
+    "fragment2": "Pokaż mi jak wołasz do diabła",
+    "fragment3": "Opowiedz mi swój marny dzień\nOpowiedz mi co chowasz w sercu"
+  },
+  {
+    "id": 155,
+    "author": "Kiwi",
+    "title": "Tańcz",
+    "fragment1": "Skieruj wzrok w drugą stronę\nNieważne to jest",
+    "fragment2": "Nie mów że to niemądre\nNiech się pali ten ogień\nOtwórz usta czerwone",
+    "fragment3": "I powiedz sobie głośno tańcz"
+  },
+  {
+    "id": 156,
+    "author": "Przyłu",
+    "title": "Usta",
+    "fragment1": "Gdzie zaczekasz na na tego typa gdy powróci tu\nMusisz bać, bać się, że nie ogarnę w bani syfu",
+    "fragment2": "Chodź zwiedzimy Meksyk, mam parę perspektyw\nŻadna z uczelni nie wchodzi w grę",
+    "fragment3": "Jestem gołosłowny, bo nie wiem w co je ubrać\nGęsia skóra, zimno, dzielę ogień na pół"
+  },
+  {
+    "id": 157,
+    "author": "Miętha",
+    "title": "Pewna",
+    "fragment1": "Nie dzwoń do mnie, jeśli się\nBoisz moich uczuć",
+    "fragment2": "Uwielbiam noc, latem jest piękna\nWodzę za nos siebie od dziecka",
+    "fragment3": "Pokaż mi to, oh, jak się tu mieszka\nKocham Twój gło-os, nie lubię mię-sa"
+  },
+  {
+    "id": 158,
+    "author": "Bajm",
+    "title": "Biała armia",
+    "fragment1": "Możesz wreszcie zabłądzić w wielkim mieście\nUrodziłeś się, by służyć nam",
+    "fragment2": "Właśnie nadszedł ten czas\nWoh, to jest właśnie ten czas",
+    "fragment3": "Jesteś żaglem, szalonym wiatrem\nTwoja siła to skarb"
+  },
+  {
+    "id": 159,
+    "author": "Bajm",
+    "title": "Ta sama chwila",
+    "fragment1": "Niech każdy dzień dodaje nam sił\nMoże znajdziemy siebie znów",
+    "fragment2": "Mów niech Twoje słowa zbudzą krew\nNiech wszystko będzie już okej",
+    "fragment3": "Nie odnajdzie więcej nas, ta sama chwila"
+  },
+  {
+    "id": 160,
+    "author": "Andrzej Dąbrowski",
+    "title": "Do zakochania jeden krok",
+    "fragment1": "Coś się gromadzi, coś dojrzewa w nas\nCo było ledwie nutką rzewną",
+    "fragment2": "Mijają dni, miesiące, mija rok\nPrawdziwe życie mija nas o krok",
+    "fragment3": "Dopóki się zapala wzrok, dopóki się splatają ręce"
+  },
+  {
+    "id": 161,
+    "author": "Feel",
+    "title": "A gdy jest już ciemno",
+    "fragment1": "Pod spojrzała, a Ty jesteś słaby, to patrz",
+    "fragment2": "Wiesz, zaufaj mi, jak chcesz\nZaczaruj mnie, jak chcesz",
+    "fragment3": "Chodź tu do mnie, poczuj się swobodnie, przy mnie bądź"
+  },
+  {
+    "id": 162,
+    "author": "Sanah & Daria Zawiałow",
+    "title": "Eldorado",
+    "fragment1": "Gdzieś za siódmą rzeką\nWe łzach znajdziesz mnie",
+    "fragment2": "Oczy były różowe\nDrogi blask świecił im",
+    "fragment3": "A w tobie ma Warszawo mój dom"
+  },
+  {
+    "id": 163,
+    "author": "Sanah & Daria Zawiałow",
+    "title": "Melodia",
+    "fragment1": "Nie uprzedził nikt, że wyleję łzy, czy za dużo ich\nTrochę to żałosne",
+    "fragment2": "Dla ciebie byłam jedną z wielu pań\nA ja już ślub planowałam",
+    "fragment3": "Mówię sobie tańcz, tańcz, tańcz\nAle nie wiem jak"
+  },
+  {
+    "id": 164,
+    "author": "Adele",
+    "title": "Someone like you",
+    "fragment1": "You know how the time flies\nOnly yesterday was the time of our lives",
+    "fragment2": "Sometimes it lasts in love, but sometimes it hurts instead",
+    "fragment3": "I wish nothing but the best for you\n\"Don't forget me, \" I beg"
+  },
+  {
+    "id": 165,
+    "author": "Sanah & Dawid Podsiadło",
+    "title": "Ostatnia nadzieja",
+    "fragment1": "Drżał jej we włosach piękny kwiat\nZe strachu, że go zmieni",
+    "fragment2": "Moja mama, mówiła\nOstatnia umiera nadzieja",
+    "fragment3": "Dziś odchodzę sam\nJuż nie zawrócę\nTo wszystko dziś porzucę"
+  },
+  {
+    "id": 166,
+    "author": "Boney M",
+    "title": "Rasputin",
+    "fragment1": "He was big and strong, in his eyes a flaming glow\nMost people looked at him with terror and with fear",
+    "fragment2": "Russia's greatest love machine\nIt was a shame how he carried on",
+    "fragment3": "Ra ra Rasputin\nLover of the Russian queen"
+  },
+  {
+    "id": 167,
+    "author": "Iris",
+    "title": "Goo Goo Dolls",
+    "fragment1": "And sooner or later, it's over\nI just don't wanna miss you tonight",
+    "fragment2": "I just want you to know who I am",
+    "fragment3": "And you can't fight the tears that ain't coming\nOr the moment of truth in your lies"
+  },
+  {
+    "id": 168,
+    "author": "Nickelback",
+    "title": "Trying not to love you",
+    "fragment1": "Now I see the silver lining, of what we're fighting for\nAnd if we just keep on trying, we could be much more",
+    "fragment2": "God knows I haven't found it yet\nBut I'm dying to, God I'm trying to",
+    "fragment3": "Cause trying not to love you\nOnly makes me love you more"
+  },
+  {
+    "id": 169,
+    "author": "Nickelback",
+    "title": "How you remind me",
+    "fragment1": "Yeah, yeah, are we having fun yet?",
+    "fragment2": "It's not like you to say \"Sorry\"\nI was waiting on a different story",
+    "fragment3": "This is how you remind me\nOf what I really am"
+  },
+  {
+    "id": 170,
+    "author": "Britney Spears",
+    "title": "Toxic",
+    "fragment1": "Intoxicate me now, with your lovin' now\nI think I'm ready now",
+    "fragment2": "Baby, can't you see I'm calling?\nA guy like you should wear a warning",
+    "fragment3": "With a taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under"
+  },
+  {
+    "id": 171,
+    "author": "Britney Spears",
+    "title": "Baby one more time",
+    "fragment1": "How was I supposed to know\nOh pretty baby",
+    "fragment2": "I must confess, that my loneliness\nIs killing me now",
+    "fragment3": "My loneliness is killing me\nI must confess, I still believe"
+  },
+  {
+    "id": 172,
+    "author": "Grzegorz Hyży",
+    "title": "Wstaję",
+    "fragment1": "Może gdzieś na końcu, na krzyk mój czeka ktoś",
+    "fragment2": "Już mi siły brak i słyszę swój głos\nMusi być tak, nie szkodzi, czasem idzie źle",
+    "fragment3": "Wstaje, mimo tylu ran i znów do góry głowę\nIdę dalej"
+  },
+  {
+    "id": 173,
+    "author": "Natalia Kukulska",
+    "title": "Im więcej Ciebie tym mniej",
+    "fragment1": "Im więcej słów dałeś mi już\nTym później mniej zostanie",
+    "fragment2": "Czy nie wiesz że\nJa nawet kiedy jesteś tak blisko mnie\nTęsknie już za tobą",
+    "fragment3": "Im więcej ciebie tym mniej\nBardziej to czuję niż wiem"
+  },
+  {
+    "id": 174,
+    "author": "Kasia Cerekwicka",
+    "title": "Na kolana",
+    "fragment1": "Zapomnij, zapomnij\nO wszystkim tym co było między nami",
+    "fragment2": "Od dziś jestem Twoim wrogiem, Ty moim wrogiem",
+    "fragment3": "To już nie działa na mnie żegnaj\nTwoja strata"
+  },
+  {
+    "id": 175,
+    "author": "Katy Perry",
+    "title": "I kissed a girl",
+    "fragment1": "I got so brave, drink in hand\nLost my discretion",
+    "fragment2": "Us girls, we are so magical\nSoft skin, red lips, so kissable",
+    "fragment3": "It felt so wrong, it felt so right\nDon't mean I'm in love tonight"
+  },
+  {
+    "id": 176,
+    "author": "Justin Timberlake",
+    "title": "Say something",
+    "fragment1": "Everyone knows all about my transgressions\nStill in my heart somewhere",
+    "fragment2": "Maybe I'm looking for something I can't have",
+    "fragment3": "Everybody says, say something"
+  },
+  {
+    "id": 177,
+    "author": "Twenty One Pilots",
+    "title": "Stressed out",
+    "fragment1": "It'd be to my brother, 'cause we have the same nose\nSame clothes, homegrown, a stone's throw from a creek we used to roam",
+    "fragment2": "Wish we could turn back time\nTo the good old days",
+    "fragment3": "When our mama sang us to sleep\nBut now we're stressed out"
   }
 ]
 

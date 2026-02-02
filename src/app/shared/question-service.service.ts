@@ -13,6 +13,7 @@ import {MIASTO_WOJEWODZTWO} from "./questions/polishDistricts.questions";
 import {STADIONY} from "./questions/stadiums.questions";
 import {PILKA_NOZNA} from "./questions/football.questions";
 import {PRZYSLOWIA} from "./questions/proverbs.questions";
+import {FRAGMENTY_PIOSENEK} from "./questions/songs.questions";
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -115,6 +116,9 @@ export class QuestionService {
     }
     if (type === 'hints' && name === 'Lektury') {
       return BOOKS;
+    }
+    if (type === 'hints' && name === 'Fragmenty piosenek') {
+      return FRAGMENTY_PIOSENEK;
     }
     return [];
   }

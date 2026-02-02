@@ -1,7 +1,5 @@
 import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
 import {Hint} from '../../../../shared/category/category.interface';
-import {ActivatedRoute} from '@angular/router';
-import {CATEGORY_LIST} from '../../../../shared/category/categoryList';
 import {TipsComponent} from '../question/tips/tips.component';
 import {QuestionService} from '../../../../shared/question-service.service';
 import {Subscription} from 'rxjs';
