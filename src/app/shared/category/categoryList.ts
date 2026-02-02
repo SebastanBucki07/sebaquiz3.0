@@ -157,7 +157,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 20,
     type: 'hints',
     name: 'Miasta świata',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {
         id: 'first',
@@ -268,7 +268,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 30,
     type: 'hints',
     name: 'Film po bohaterach',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {id: 'first', label: 'Pierwszy film', penaltyPercent: 0, content: 'Rezyser 1'},
       {id: 'second', label: 'Drugi film', penaltyPercent: 0, content: 'Film został wydany w 1999 roku.'},
@@ -279,7 +279,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 31,
     type: 'hints',
     name: 'Serial po bohaterach',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {id: 'first', label: 'Pierwszy film', penaltyPercent: 0, content: 'Rezyser 1'},
       {id: 'second', label: 'Drugi film', penaltyPercent: 0, content: 'Film został wydany w 1999 roku.'},

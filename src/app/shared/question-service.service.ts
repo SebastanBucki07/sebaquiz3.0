@@ -14,6 +14,11 @@ import {STADIONY} from "./questions/stadiums.questions";
 import {PILKA_NOZNA} from "./questions/football.questions";
 import {PRZYSLOWIA} from "./questions/proverbs.questions";
 import {FRAGMENTY_PIOSENEK} from "./questions/songs.questions";
+import {ARTYSTA_PO_UTWORACH} from "./questions/musicArtists.questions";
+import {BOHATEROWIE_FILMOWI} from "./questions/movieHeroes.questions";
+import {BOHATEROWIE_SERIALOWI} from "./questions/tvSeriesHeroes.question";
+import {MIASTA_SWIATA} from "./questions/worldCities.questions";
+import {REZYSEROWIE} from "./questions/directors.questions";
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -120,6 +125,22 @@ export class QuestionService {
     if (type === 'hints' && name === 'Fragmenty piosenek') {
       return FRAGMENTY_PIOSENEK;
     }
+    if (type === 'hints' && name === 'Artysta po tytułach piosenek') {
+      return ARTYSTA_PO_UTWORACH;
+    }
+    if (type === 'hints' && name === 'Film po bohaterach') {
+      return BOHATEROWIE_FILMOWI;
+    }
+    if (type === 'hints' && name === 'Serial po bohaterach') {
+      return BOHATEROWIE_SERIALOWI;
+    }
+    if (type === 'hints' && name === 'Miasta świata') {
+      return MIASTA_SWIATA;
+    }
+    if (type === 'hints' && name === 'Reżyser po filmach') {
+      return REZYSEROWIE;
+    }
+
     return [];
   }
 }

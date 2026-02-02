@@ -49,17 +49,20 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
     // Hints: zamiana fragmentów i tipów w Hint[]
     const hintKeys = ["fragment1", "fragment2", "fragment3", "Tip1", "Tip2", "Tip3"];
     const hints: Hint[] = [];
-    hintKeys.forEach((key, index) => {
+
+    hintKeys.forEach(key => {
       const value = (item as any)[key];
       if (value) {
+        const hintIndex = hints.length; // 👈 tylko realne hinty
         hints.push({
-          id: `${id}-${key}`,
-          label: `Wskazówka ${index + 1}`,
+          id: `${hintIndex}`,
+          label: `Postać ${hintIndex + 1}`,
           content: value,
-          penaltyPercent: index * 20 // przykładowo 0%, 20%, 40%, ...
+          penaltyPercent: hintIndex * 20
         });
       }
     });
+
 
     return {
       id,
@@ -77,1420 +80,424 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
 
 const inputData: InputItem[] = [
   {
-    "id": 1,
-    "author": "sarius",
-    "title": "wiking",
-    "fragment1": "Słyszę falę braw\nA w głowie ciszę mam",
-    "fragment2": "Jak mnie zapamiętasz Czy zostanie po mnie ślad?",
-    "fragment3": "Może znałeś człowieka\nMoże słyszałeś jak gra"
-  },
-  {
-    "id": 2,
-    "author": "Gruby Mielzky",
-    "title": "Jak Wyśnię",
-    "fragment1": "Na chuj te wszystkie jordy jak cały świat mój to tapczane",
-    "fragment2": "Od lat sam pcham ten głaz na grania, twarz mi smaga wiatr",
-    "fragment3": "Będzie jak wyśnię Niebo w końcu dla nas będziе błękitne"
-  },
-  {
-    "id": 3,
-    "author": "Sarius",
-    "title": "Jutrzenka",
-    "fragment1": "Siema ludzie dzięki za kolejny koncert\nDla każdego który został było dobrze Antihype",
-    "fragment2": "Dzień dobry jestem Sarius\nPo pierwsze to historia nie o słońcu i o tańcu",
-    "fragment3": "Nigdy nikt mnie nie przypominał tak jak ty\nI jutro zginę by Cię dotknąć dziś"
-  },
-  {
-    "id": 4,
-    "author": "Wilhelm",
-    "title": "Zachód",
-    "fragment1": "Żadnych problemów za sobą\nŻadnych bloków przed sobą",
-    "fragment2": "Zawsze lubiłem lato ale nie w tej furze\nŚmierdzi tapicerką i z foteli welurem\nMiliony bzdur mam w swojej głowie",
-    "fragment3": "Nigdy nie czekałem na zachód słońca\nNie jestem romantykiem zaraz umrę z gorąca"
-  },
-  {
-    "id": 5,
-    "author": "Guzior",
-    "title": "trapstar",
-    "fragment1": "Mam różdżkę z włóknem ze smoczego serca\nNie martw się niczym jak trzeba to Sectumsempra",
-    "fragment2": "Złe przedmioty mnie nachodzą\nW moim domu chcą mnie zastać",
-    "fragment3": "Protego Protego Protego\nSuko żyję lavish żyję trapstar"
-  },
-  {
-    "id": 6,
-    "author": "Prometh",
-    "title": "ta piosenka nie jest smutna",
-    "fragment1": "Przez to spalam mosty\nPotem spalam jointy",
-    "fragment2": "Milczenie jest złotem\nAle co jest mową",
-    "fragment3": "Ta piosenka nie jest smutna tylko wściekła"
-  },
-  {
-    "id": 7,
-    "author": "bedoes",
-    "title": "Chłopaki nie płaczą",
-    "fragment1": "Też kiedyś dostałem w mordę i miałem złamaną rękę\nTeż kiedyś dostałem kosza i miałem złamane serce",
-    "fragment2": "Piłem browar na ławce\nPowiedziałaś mi, że mnie kochasz na zawsze",
-    "fragment3": "Chłopaki niech płaczą, chłopaki niech płaczą\nChłopaki niech wiedzą, że wolno im czuć"
-  },
-  {
-    "id": 8,
-    "author": "tymek",
-    "title": "Język ciała",
-    "fragment1": "Modne, modne, mamy własny język, mamy własną pościel",
-    "fragment2": "Krążę na okrągło, jestem jak worek z forsą",
-    "fragment3": "Ona by chciała wiedzieć, jakie mam plany\nCo o niej wiem,"
-  },
-  {
-    "id": 9,
-    "author": "tymek",
-    "title": "poza kontrolą",
-    "fragment1": "Minęła kolejna godzina, choć dzisiaj już czasu nie trzymam.",
-    "fragment2": "Wiesz, w życiu tak bywa, że wszystko się zmienia i bywa przewrotnie",
-    "fragment3": "Jestem poza kontrolą, zabrać nic już mi nie mogą\nBo nic nie mam, moje logo, mówi Ci, że jestem sobą"
-  },
-  {
-    "id": 10,
-    "author": "Mietha",
-    "title": "przepraszam",
-    "fragment1": "Jestem dumny że nie dałem sobie nigdy wejść na łeb",
-    "fragment2": "Zwiedziłem parę fajnych miejsc tego troku autem\nZagrałem parę fajnych gigów przeliczyłbym kaskę",
-    "fragment3": "Jeśli mi życzyłeś gorzej kiedykolwiek to przepraszam"
-  },
-  {
-    "id": 11,
-    "author": "modern talking",
-    "title": "you are my heart",
-    "fragment1": "Let s close the door and believe my burnin  heart",
-    "fragment2": "Deep in my heart, there s a fire, a burnin  heart\nDeep in my heart, there s desire for a start",
-    "fragment3": "You re my heart, you re my soul"
-  },
-  {
-    "id": 12,
-    "author": "modern talking",
-    "title": "Cherry Cherry lady",
-    "fragment1": "I ve been lonely too long\nOh, I can t be so strong",
-    "fragment2": "Oh, I cannot explain\nEvery time it s the same",
-    "fragment3": "Cheri Cheri Lady\nGoin  through emotion"
-  },
-  {
-    "id": 13,
-    "author": "Berlin",
-    "title": "Take My Breath Away",
-    "fragment1": "Through the hourglass I saw you, in time you slipped away",
-    "fragment2": "Watchin  every motion in my foolish lover s game",
-    "fragment3": "Take my breath away\nMy love, take my breath away"
+    "Id": 1,
+    "Answer": "Christopher Nolan",
+    "Tip1": "PRESTIŻ",
+    "Tip2": "MROCZNY RYCERZ",
+    "Tip3": "-"
   },
   {
-    "id": 14,
-    "author": "Wham",
-    "title": "Wake Me Up Before You Go-Go",
-    "fragment1": "Cause I m not planning on going solo",
-    "fragment2": "You put the boom-boom into my heart\nYou send my soul sky-high",
-    "fragment3": "Wake me up before you go-go\nDon t leave me hanging on like a yo-yo"
+    "Id": 2,
+    "Answer": "Justin Lin",
+    "Tip1": "SZYBCY I WŚCIEKLI 5",
+    "Tip2": "SZYBCY I WŚCIEKLI 6",
+    "Tip3": "SZYBCY I WŚCIEKLI 9"
   },
   {
-    "id": 15,
-    "author": "Wham",
-    "title": "Last Christmas",
-    "fragment1": "Once bitten and twice shy\nI keep my distance, but you still catch my eye",
-    "fragment2": "Merry Christmas,   I wrapped it up and sent it",
-    "fragment3": "I gave you my heart\nBut the very next day, you gave it away"
+    "Id": 3,
+    "Answer": "Andrew Adamson",
+    "Tip1": "Shrek",
+    "Tip2": "Shrek 2",
+    "Tip3": "-"
   },
   {
-    "id": 16,
-    "author": "Lipa",
-    "title": "głuptas",
-    "fragment1": "Wciąż ujebany stół\nPrzeżyliśmy już niejedneo",
-    "fragment2": "Ej głupia, nie martw się o jutro\nBez kitu",
-    "fragment3": "Ej Głuptas, nie smutaj\ntrochę daj mi koki"
+    "Id": 4,
+    "Answer": "Anthony Russo / Joe Russo",
+    "Tip1": "AVENGERS: WOJNA BEZ GRANIC",
+    "Tip2": "AVENGERS: KONIEC GRY",
+    "Tip3": "KAPITAN AMERYKA: WOJNA BOHATERÓW"
   },
   {
-    "id": 17,
-    "author": "Lipa",
-    "title": "bezprawie",
-    "fragment1": "Jak ty non stop legale, ale najwięcej ciągle wiesz",
-    "fragment2": "Bo poza mym kurwa światem, nigdy nie uronię nagich łez",
-    "fragment3": "Kurwy jebać, policji nigdy nie bać się"
+    "Id": 5,
+    "Answer": "Bryan Singer",
+    "Tip1": "X-MEN 2",
+    "Tip2": "BOHEMIAN RHAPSODY",
+    "Tip3": "X-MEN: PRZESZŁOŚĆ, KTÓRA NADEJDZIE"
   },
   {
-    "id": 18,
-    "author": "Lipa",
-    "title": "samotnia",
-    "fragment1": "Właśnie maluje oddaje siebie w garstce\nCo weźmiesz z tego to już twoja sprawa",
-    "fragment2": "Mam paranoje ciężkie nastroje",
-    "fragment3": "O ja pierdole\nNie chce budzić się w tym samym dole jebać budzik"
+    "Id": 6,
+    "Answer": "Chris Columbus",
+    "Tip1": "HARRY POTTER I KAMIEŃ FILOZOFICZNY",
+    "Tip2": "HARRY POTTER I KOMNATA TAJEMNIC",
+    "Tip3": "-"
   },
   {
-    "id": 19,
-    "author": "Dżem",
-    "title": "Whisky",
-    "fragment1": "Wszystkie śmiały się wołając, wołając za mną wciąż:",
-    "fragment2": "Mówią o mnie w mieście:  Co z niego za typ?",
-    "fragment3": "Już mnie nie opuścisz, nie, nie będę sam"
+    "Id": 7,
+    "Answer": "Christopher Nolan",
+    "Tip1": "PRESTIŻ",
+    "Tip2": "INCEPCJA",
+    "Tip3": "INTERSTELLAR"
   },
   {
-    "id": 20,
-    "author": "Dzem",
-    "title": "Wehikuł czasu",
-    "fragment1": "To już minęło, ten klimat, ten luz",
-    "fragment2": "Pamiętam dobrze ideał swój",
-    "fragment3": "Tylko nocą do klubu Puls"
+    "Id": 8,
+    "Answer": "Darren Lynn Bousman",
+    "Tip1": "PIŁA II",
+    "Tip2": "PIŁA III",
+    "Tip3": "PIŁA IV"
   },
   {
-    "id": 21,
-    "author": "Dzem",
-    "title": "sen o wiktori",
-    "fragment1": "Wziąłem z Tobą ślub\nSłońce nas błogosławiło",
-    "fragment2": "Dzisiaj miałem piękny sen",
-    "fragment3": "O Victorio moja Victorio"
+    "Id": 9,
+    "Answer": "David Fincher",
+    "Tip1": "Siedem",
+    "Tip2": "Podziemny Krąg",
+    "Tip3": "-"
   },
   {
-    "id": 22,
-    "author": "krzysztof kawczyk",
-    "title": "parostatek",
-    "fragment1": "Tłum marynarzy pokład mu zdobi\nSłońce na górze pięknie lśni",
-    "fragment2": "W starym albumie u mego dziadka\nJest takie zdjecie, istny cud",
-    "fragment3": "Parostatkiem piękny rejs"
+    "Id": 10,
+    "Answer": "David Leitch",
+    "Tip1": "DEADPOOL 2",
+    "Tip2": "Tip2",
+    "Tip3": "-"
   },
   {
-    "id": 23,
-    "author": "krzysztof kawczyk",
-    "title": "Chciałem być",
-    "fragment1": "Przemierzyłem cały świat od Las Vegas po Krym",
-    "fragment2": "Podróżować zwiedzać świat",
-    "fragment3": "Chciałem być marynarzem"
+    "Id": 11,
+    "Answer": "David R. Ellis",
+    "Tip1": "OSZUKAĆ PRZEZNACZENIE 2",
+    "Tip2": "OSZUKAĆ PRZEZNACZENIE 4",
+    "Tip3": "-"
   },
   {
-    "id": 24,
-    "author": "krzysztof kawczyk",
-    "title": "mój przyajcielu",
-    "fragment1": "Chciałbyś się rozpłynąć, uciec, gdzie się da.",
-    "fragment2": "Dałem ci wiarę, dałem ci spokój,",
-    "fragment3": "Dam gitarę, dam samochód"
+    "Id": 12,
+    "Answer": "David Shore",
+    "Tip1": "DR HOUSE",
+    "Tip2": "THE GOOD DOCTOR",
+    "Tip3": "-"
   },
   {
-    "id": 25,
-    "author": "krzysztof kawczyk",
-    "title": "ostatn iraz zatańczysz ze mna",
-    "fragment1": "Iskra błyśnie w nas i zgaśnie w nas\nJak niepotrzebna łza",
-    "fragment2": "Kto zapomni? Ty czy ja?",
-    "fragment3": "Zatańczysz ze mną jeszcze raz, ostatni raz"
+    "Id": 13,
+    "Answer": "David Yates",
+    "Tip1": "HARRY POTTER I KSIĄŻĘ PÓŁKRWI",
+    "Tip2": "FANTASTYCZNE ZWIERZĘTA: ZBRODNIE GRINDELWALDA",
+    "Tip3": "HARRY POTTER I INSYGNIA ŚMIERCI: CZĘŚĆ I"
   },
   {
-    "id": 26,
-    "author": "krzysztof kawczyk",
-    "title": "Byle było tak",
-    "fragment1": "Dziewczyny, kto je zna?\nPisuję do nich za listem list,",
-    "fragment2": "A bywa tak i tak,\nNie zawsze szczęście się w życiu ma.",
-    "fragment3": "Byle było tak, że człowiek bardzo chce,\nByle było tak, że się nie powie  nie ,"
+    "Id": 14,
+    "Answer": "Filip Zylber",
+    "Tip1": "SERCE NIE SŁUGA",
+    "Tip2": "SERCE NIE SŁUGA",
+    "Tip3": "-"
   },
   {
-    "id": 27,
-    "author": "Kayah",
-    "title": "Prawy do lewego",
-    "fragment1": "Ktoś smaruje se Plecy Mlekiem\nA ktoś Smaruje se Plecy Oliwą",
-    "fragment2": "Wielka Plaża w sercu miasta\nPokaż mi gdzie masz tak",
-    "fragment3": "War-sza-wiaku wypijmy za to,\nKto z nami nie wypije tego smog zabije"
+    "Id": 15,
+    "Answer": "Francis Ford Coppola",
+    "Tip1": "OJCIEC CHRZESTNY",
+    "Tip2": "OJCIEC CHRZESTNY II",
+    "Tip3": "CZAS APOKALIPSY"
   },
   {
-    "id": 28,
-    "author": "Maryla rodowicz",
-    "title": "Małgoska",
-    "fragment1": "Widziałam biały ślub, idą święta,\nNie słyszałam z daleka słów.",
-    "fragment2": "To był maj, pachniała Saska Kępa Szalonym, zielonym bzem.",
-    "fragment3": "On niewart jednej łzy,"
+    "Id": 16,
+    "Answer": "Frank Darabont",
+    "Tip1": "SKAZANI NA SHAWSHANK",
+    "Tip2": "ZIELONA MILA",
+    "Tip3": "THE WALKING DEAD"
   },
   {
-    "id": 29,
-    "author": "Maryla rodowicz",
-    "title": "Niech żyje bal",
-    "fragment1": "Szalejcie aorty, ja idę na korty\nRoboto ty w rękach się pal",
-    "fragment2": "Życie kochanie trwa tyle co taniec\nfandango, bolero, be-bop",
-    "fragment3": "Bo to życie to bal jest nad bale!"
+    "Id": 17,
+    "Answer": "Gabriele Muccino",
+    "Tip1": "W POGONI ZA SZCZĘŚCIEM",
+    "Tip2": "SIEDEM DUSZ",
+    "Tip3": "-"
   },
   {
-    "id": 30,
-    "author": "Kult",
-    "title": "dzieci",
-    "fragment1": "Wracamy chwiejnym krokiem po okrążeniu nad ranem",
-    "fragment2": "Jedna flaszka, druga flaszka i też trzecia, kurde bele, leci",
-    "fragment3": "Wyjechali na wakacje wszyscy nasi podopieczni"
+    "Id": 18,
+    "Answer": "George Lucas",
+    "Tip1": "GWIEZDNE WOJNY: CZĘŚĆ I - MROCZNE WIDM",
+    "Tip2": "GWIEZDNE WOJNY: CZĘŚĆ II - ATAK KLONÓW",
+    "Tip3": "GWIEZDNE WOJNY: CZĘŚĆ III - ZEMSTA SITHÓW"
   },
   {
-    "id": 31,
-    "author": "Kult",
-    "title": "baranek",
-    "fragment1": "Krzywde robie mojej panience,\nOpluc chca ja, podli zboczency.",
-    "fragment2": "Ach ci ludzie, to brudne swinie,\nCo napletli o mojej dziewczynie,",
-    "fragment3": "Na glowie kwietny ma wianek,\nW reku zielony badylek,"
+    "Id": 19,
+    "Answer": "Giuseppe Tornatore",
+    "Tip1": "CINEMA PARADISO",
+    "Tip2": "KONESER",
+    "Tip3": "-"
   },
   {
-    "id": 32,
-    "author": "Elektryczne gitary",
-    "title": "dzieci wybiegły",
-    "fragment1": "Godziny modlitw lata nauki",
-    "fragment2": "Wszyscy mamy źle w głowach że żyjemy",
-    "fragment3": "Zapaliły papierosy wyciągnęły flaszki"
+    "Id": 20,
+    "Answer": "Gore Verbinski",
+    "Tip1": "PIRACI Z KARAIBÓW: KLĄTWA CZARNEJ PERŁY",
+    "Tip2": "PIRACI Z KARAIBÓW: NA KRAŃCU ŚWIATA",
+    "Tip3": "PIRACI Z KARAIBÓW: SKRZYNIA UMARLAKA"
   },
   {
-    "id": 33,
-    "author": "Elektryczne gitary",
-    "title": "kiler",
-    "fragment1": "Nie kiwnalem nawet palcem, by sie znalezc w takiej walce",
-    "fragment2": "To, co sie dzieje naprawde nie istnieje",
-    "fragment3": "podnioslem bile, wracam za chwile, nie dbam o bagaz"
+    "Id": 21,
+    "Answer": "Guy Hamilton",
+    "Tip1": "CZŁOWIEK ZE ZŁOTYM PISTOLETEM",
+    "Tip2": "GOLDFINGER",
+    "Tip3": "ŻYJ I POZWÓL UMRZEĆ"
   },
   {
-    "id": 34,
-    "author": "Kombi",
-    "title": "pokolenie",
-    "fragment1": "W bramie łyk jak skok\nKumple są jest noc",
-    "fragment2": "Rodzisz się - to znak\nKocha cię ten świat",
-    "fragment3": "Każde pokolenie odejdzie w cień"
+    "Id": 22,
+    "Answer": "Guy Ritchie",
+    "Tip1": "PRZEKRĘT",
+    "Tip2": "SHERLOCK HOLMES",
+    "Tip3": "-"
   },
   {
-    "id": 35,
-    "author": "Kombi",
-    "title": "Słodkiego miłego zycia",
-    "fragment1": "Czy to już znasz kochanie\nCzy nie wiesz jak to jest",
-    "fragment2": "Dobre stopnie za chamstwo masz to jest to",
-    "fragment3": "Bez chłodu głodu i bicia"
+    "Id": 23,
+    "Answer": "J.J. Abrams",
+    "Tip1": "GWIEZDNE WOJNY: PRZEBUDZENIE MOCY",
+    "Tip2": "GWIEZDNE WOJNY: SKYWALKER. ODRODZENIE",
+    "Tip3": "-"
   },
   {
-    "id": 36,
-    "author": "Wilki",
-    "title": "Baska",
-    "fragment1": "Wiec na noc umwilem sie z ala",
-    "fragment2": "Piekne jak okret\nPod pelnymi zaglami",
-    "fragment3": "Ania styl, a zoska cos, co lubie, ech"
+    "Id": 24,
+    "Answer": "James Gunn",
+    "Tip1": "STRAŻNICY GALAKTYKI VOL. 2",
+    "Tip2": "STRAŻNICY GALAKTYKI",
+    "Tip3": "-"
   },
   {
-    "id": 37,
-    "author": "wilki",
-    "title": "bohema",
-    "fragment1": "Płyną noce przemijają dnie\nNiewiele pamiętam",
-    "fragment2": "Od tego trzeba zacząć rzecz\nLecę bo zgubiłem się",
-    "fragment3": "Lecę, bo chcę\nLecę, bo życie jest złe"
+    "Id": 25,
+    "Answer": "James Mangold",
+    "Tip1": "LOGAN: WOLVERINE",
+    "Tip2": "WOLVERINE",
+    "Tip3": "PRZERWANA LEKCJA MUZYKI"
   },
   {
-    "id": 38,
-    "author": "Perfect",
-    "title": "autobiografia",
-    "fragment1": "Za jej Poli Raksy twarz\nKażdy by się zabić dał",
-    "fragment2": "Miałem dzięsieć lat\nGdy usłyszał o nim świat",
-    "fragment3": "Było nas trzech\nW każdym z nas inna krew"
+    "Id": 26,
+    "Answer": "James Wan",
+    "Tip1": "PIŁA",
+    "Tip2": "SZYBCY I WŚCIEKLI 7",
+    "Tip3": "-"
   },
   {
-    "id": 39,
-    "author": "Perfect",
-    "title": "Chcmey być soba",
-    "fragment1": "Jak co dzień rano, bułkę maślaną\nPopijam kawą, nad gazety plamą",
-    "fragment2": "Chciałbym być sobą",
-    "fragment3": "Chciałbym być sobą wreszcie"
+    "Id": 27,
+    "Answer": "James Wong",
+    "Tip1": "OSZUKAĆ PRZEZNACZENIE",
+    "Tip2": "OSZUKAĆ PRZEZNACZENIE 3",
+    "Tip3": "-"
   },
   {
-    "id": 40,
-    "author": "Perfect",
-    "title": "Nie płacz Ewka",
-    "fragment1": "Po ulicy miłość hula wiatr wśród rozbitych szyb",
-    "fragment2": "Żegnam was, już wiem\nNie załatwię wszystkich pilnych spraw",
-    "fragment3": "Nie płacz Ewka, bo tu miejsca brak, na twe babskie łzy"
+    "Id": 28,
+    "Answer": "John Glen",
+    "Tip1": "LICENCJA NA ZABIJANIE",
+    "Tip2": "W OBLICZU ŚMIERCI",
+    "Tip3": "-"
   },
   {
-    "id": 41,
-    "author": "Lady Pank",
-    "title": "zawsze tam gdzie ty",
-    "fragment1": "Nie znam słów, co mają jakiś większy sens",
-    "fragment2": "Zamienię każdy oddech w niespokojny wiatr",
-    "fragment3": "By do Ciebie wracać każdą nocą złotą"
+    "Id": 29,
+    "Answer": "Jon Favreau",
+    "Tip1": "IRON MAN 2",
+    "Tip2": "IRON MAN",
+    "Tip3": "-"
   },
   {
-    "id": 42,
-    "author": "Lady Pank",
-    "title": "Tańcz głupia tańcz",
-    "fragment1": "Sama tego chciałaś\nPewnie coś był wart",
-    "fragment2": "U  Maxima  w Gdyni\nZnów Cię widział ktoś",
-    "fragment3": "Tańcz głupia, tańcz, swoim życiem się baw!"
+    "Id": 30,
+    "Answer": "Jon Watts",
+    "Tip1": "SPIDER-MAN: DALEKO OD DOMU",
+    "Tip2": "SPIDER-MAN: BEZ DROGI DO DOMU",
+    "Tip3": "-"
   },
   {
-    "id": 43,
-    "author": "Lady Pank",
-    "title": "marchewkowe pole",
-    "fragment1": "Głową na dół zakopany niczym struś",
-    "fragment2": "Wszystko się może zdarzyć",
-    "fragment3": "pole rośnie wokół mnie"
+    "Id": 31,
+    "Answer": "Jonathan Demme",
+    "Tip1": "FILADELFIA",
+    "Tip2": "MILCZENIE OWIEC",
+    "Tip3": "-"
   },
   {
-    "id": 44,
-    "author": "Lady Pank",
-    "title": "Kryzysowa narzeczona",
-    "fragment1": "Nigdy nie dowiesz się\nCo straciłaś",
-    "fragment2": "Mogłaś moją być",
-    "fragment3": "Mogłaś być już na dnie\nA nie byłaś"
+    "Id": 32,
+    "Answer": "Joss Whedon",
+    "Tip1": "AVENGERS",
+    "Tip2": "AVENGERS: CZAS ULTRONA",
+    "Tip3": "-"
   },
   {
-    "id": 45,
-    "author": "Lady Pank",
-    "title": "mniej niz zero",
-    "fragment1": "Zawodowi macherzy od losu\nSpecjaliści od śpiewu i mas",
-    "fragment2": "Myślisz może, że więcej coś znaczysz",
-    "fragment3": "Mniej niż zero\nOh oh oh oh"
+    "Id": 33,
+    "Answer": "Julie Plec",
+    "Tip1": "WAMPIRY: DZIEDZICTWO",
+    "Tip2": "THE ORIGINALS",
+    "Tip3": "-"
   },
   {
-    "id": 46,
-    "author": "Lady Pank",
-    "title": "Stacja warszawa",
-    "fragment1": "Kiedyś też to zobaczysz, powiesz mi tak",
-    "fragment2": "W moich snach wciąż Warszawa",
-    "fragment3": "Wszystko byłoby inne\nGdybyś tu była, ja wiem"
+    "Id": 34,
+    "Answer": "Juliusz Machulski",
+    "Tip1": "SEKSMISJA",
+    "Tip2": "KILER",
+    "Tip3": "KILER-ÓW 2-ÓCH"
   },
   {
-    "id": 47,
-    "author": "Lady Pank",
-    "title": "Zamki na piasku",
-    "fragment1": "Skonstruowałeś bombę\nSkondensowaną śmierć",
-    "fragment2": "Jesteś idolem\nWielbi cię tłum",
-    "fragment3": "Zamki na piasku\nGdy pełno w szkle"
+    "Id": 35,
+    "Answer": "Kevin Greutert",
+    "Tip1": "PIŁA VI",
+    "Tip2": "PIŁA 3D",
+    "Tip3": "-"
   },
   {
-    "id": 48,
-    "author": "Myslovitz",
-    "title": "Długośc dzwieku samotności",
-    "fragment1": "Gdzie Ty i ja, i jeszcze ktoś, nie wiem kto",
-    "fragment2": "Chciałby tak przez kilka lat zbyt zachłannie i trochę przesadnie",
-    "fragment3": "I nawet kiedy będę sam\nNie zmienię się, to nie mój świat"
+    "Id": 36,
+    "Answer": "Lexi Alexander",
+    "Tip1": "PUNISHER: STREFA WOJNY",
+    "Tip2": "HOOLIGANS",
+    "Tip3": "-"
   },
   {
-    "id": 49,
-    "author": "Myslovitz",
-    "title": "dla Ciebie",
-    "fragment1": "Zrywam polne kwiaty\nSzukam tych najrzadszych",
-    "fragment2": "Dla Ciebie\nMógłbym zrobić wszystko",
-    "fragment3": "To wszystko, czego chcę\nTo wszystko, czego mi brak"
+    "Id": 37,
+    "Answer": "Lilly Wachowski / Lana Wachowski",
+    "Tip1": "Matrix",
+    "Tip2": "Matrik Rekatywacja",
+    "Tip3": "Matrix rewolucje"
   },
   {
-    "id": 50,
-    "author": "Myslovitz",
-    "title": "Marilyn Monroe",
-    "fragment1": "Dotykam oczu, wlosów, ust",
-    "fragment2": "Hej dziewczyno, nie mów nic, czas na miłość\nStań przede mną, pozwól dotknąć się",
-    "fragment3": "Aaa, z twarzą Marylin Monroe"
+    "Id": 38,
+    "Answer": "Łukasz Jaworski",
+    "Tip1": "PAJĘCZYNA",
+    "Tip2": "BOGOWIE",
+    "Tip3": "NAJLEPSZY"
   },
   {
-    "id": 51,
-    "author": "Myslovitz",
-    "title": "scenariusz dla moich sasiadów",
-    "fragment1": "Wystawię ekran i wyświetlę film\nCoś o mnie i o tobie",
-    "fragment2": "Kiedy powrócisz już ja będę czekał\nUlicą pójdę wzdłuż kupię gazetę",
-    "fragment3": "Wieczorem wieczorem przed mym domem\nWystawię ekran i wyświetlę film"
+    "Id": 39,
+    "Answer": "M. Night Shyamalan",
+    "Tip1": "SZÓSTY ZMYSŁ",
+    "Tip2": "ZNAKI",
+    "Tip3": "-"
   },
   {
-    "id": 52,
-    "author": "Ich Troje",
-    "title": "Powiedz",
-    "fragment1": "Sen rozpłynął się w świtu płomieniach",
-    "fragment2": "Powiedz, powiedz czemu\nŚwiat twój milczy cały blady od wzruszeń",
-    "fragment3": "Ja jestem panią mych snów\nMoich marzeń i lęków"
+    "Id": 40,
+    "Answer": "Maciej Migas",
+    "Tip1": "SINGIELKA",
+    "Tip2": "PRAWO AGATY",
+    "Tip3": "-"
   },
   {
-    "id": 53,
-    "author": "Ich Troje",
-    "title": "Wypijmy za to",
-    "fragment1": "dla ciebie warto jest\nposwiecic noc i dzien",
-    "fragment2": "ubierasz sie, odwracasz twarz\nbez zbednych slow, to wszystko juz",
-    "fragment3": "za ten papieros tuz po\ni ten szampan tuz przed"
+    "Id": 41,
+    "Answer": "Marc Webb",
+    "Tip1": "NIESAMOWITY SPIDER-MAN 2",
+    "Tip2": "NIESAMOWITY SPIDER-MAN",
+    "Tip3": "-"
   },
   {
-    "id": 54,
-    "author": "Ich Troje",
-    "title": "zawsze z toba chciałbmy być",
-    "fragment1": "wychodzisz juz, szepczesz: papa\nzadzwonic chcesz za dzien lub dwa",
-    "fragment2": "Zadzwoniłem w środku lata\nChodź minęły już 2 lata",
-    "fragment3": "Kochaj mnie za to\nZawsze z Tobą chciałbym być"
+    "Id": 42,
+    "Answer": "Marek Koterski",
+    "Tip1": "DZIEŃ ŚWIRA",
+    "Tip2": "7 UCZUĆ",
+    "Tip3": "-"
   },
   {
-    "id": 55,
-    "author": "Ryszard Rynkowski",
-    "title": "Wypijmy za błędy",
-    "fragment1": "Kupić chcesz, gotówka jest, nie masz czasu stać",
-    "fragment2": "Czego może chcieć od życia taki gość jak ja",
-    "fragment3": "Za błędy na górze\nNiech wyjdą na dobre"
+    "Id": 43,
+    "Answer": "Martin Campbell",
+    "Tip1": "GOLDENEYE",
+    "Tip2": "CASINO ROYALE",
+    "Tip3": "-"
   },
   {
-    "id": 56,
-    "author": "Budka Suflera",
-    "title": "Jolka Jolka",
-    "fragment1": "Czarodziejka gorzałka tańczyła w nas\nMeta była o dwa kroki stąd",
-    "fragment2": "Gdy pisałaś:  Tak mi źle\nUrwij się choćby zaraz",
-    "fragment3": "Emigrowałem z ramion Twych nad ranem"
+    "Id": 44,
+    "Answer": "Martin Scorsese",
+    "Tip1": "WYSPA TAJEMNIC",
+    "Tip2": "CHŁOPCY Z FERAJNY",
+    "Tip3": "WILK Z WALL STREET"
   },
   {
-    "id": 57,
-    "author": "Budka Suflera",
-    "title": "bal wszystkich świetych",
-    "fragment1": "Skasowałaś mnie w swej pamięci\nAż mi siebie jest żal",
-    "fragment2": "Ta niedziela jest jak film tani klasy  B \nFacet się pałęta w nim w nieciekawym tle",
-    "fragment3": "Wszyscy święci balują w niebie\nZłoty sypie się kurz"
+    "Id": 45,
+    "Answer": "Mel Gibson",
+    "Tip1": "BRAVEHEART - WALECZNE SERCE",
+    "Tip2": "PRZEŁĘCZ OCALONYCH",
+    "Tip3": "-"
   },
   {
-    "id": 58,
-    "author": "Budka Suflera",
-    "title": "Takie tango",
-    "fragment1": "Co było w naszych sercach kiedyś\nKiedyś jak świecący diament",
-    "fragment2": "Na sali wielkiej i błyszczącej\nTak jak nocne Buenos Aires",
-    "fragment3": "Zgodnych ciał i chętnych serc\nBo do tanga trzeba dwojga"
+    "Id": 46,
+    "Answer": "Michał Kwieciński",
+    "Tip1": "MIŁOŚĆ JEST WSZYSTKIM",
+    "Tip2": "JUTRO IDZIEMY DO KINA",
+    "Tip3": "-"
   },
   {
-    "id": 59,
-    "author": "Varius Manx",
-    "title": "Piosenka Księżycowa",
-    "fragment1": "Nie wiem co robić, gdy płaczesz\nJuż nie śmiejesz się jak kiedyś",
-    "fragment2": "Śpisz pięknie tak\nPo kątach cisza gra",
-    "fragment3": "Kiedyś znajdę dla nas dom\nZ wielkim oknem na świat"
+    "Id": 47,
+    "Answer": "Miloš Forman",
+    "Tip1": "LOT NAD KUKUŁCZYM GNIAZDEM",
+    "Tip2": "AMADEUSZ",
+    "Tip3": "-"
   },
   {
-    "id": 60,
-    "author": "Bajm",
-    "title": "Co mi Panie dasz",
-    "fragment1": "Bym na tyłku siadł\nI czy warto, czy nie warto",
-    "fragment2": "Asfalt ulic jest dziś śliski jak brzuch ryby\nMokre niebo się opuszcza coraz niżej",
-    "fragment3": "Co mi, Panie, dasz\nW ten niepewny czas?"
+    "Id": 48,
+    "Answer": "Patryk Vega",
+    "Tip1": "KOBIETY MAFII 2",
+    "Tip2": "PITBULL",
+    "Tip3": "SMALL WORLD"
   },
   {
-    "id": 61,
-    "author": "Zbigniew Wodecki",
-    "title": "Zacznij od Bacha",
-    "fragment1": "Poranny swój szal i rusza, cień w długi marsz",
-    "fragment2": "Gdy musisz wstać\nChoć tulisz tak pod głową obłoczek snu",
-    "fragment3": "Zacznij od Bacha, nim słońce po dachach\nZeskoczy, jak kot po nocy ćmej"
+    "Id": 49,
+    "Answer": "Paul W.S. Anderson",
+    "Tip1": "MORTAL KOMBAT",
+    "Tip2": "RESIDENT EVIL",
+    "Tip3": "RESIDENT EVIL: AFTERLIFE"
   },
   {
-    "id": 62,
-    "author": "Tadeusz Woźniak",
-    "title": "Zegarmistrz światła",
-    "fragment1": "By mi zabełtać błękit w głowie",
-    "fragment2": "Spłyną przeze mnie dni na przestrzał\nZgasną podłogi i powietrza",
-    "fragment3": "A kiedy przyjdzie także po mnie\nZegarmistrz światła purpurowy"
+    "Id": 50,
+    "Answer": "Peter Jackson",
+    "Tip1": "WŁADCA PIERŚCIENI: POWRÓT KRÓLA",
+    "Tip2": "WŁADCA PIERŚCIENI: DWIE WIEŻE",
+    "Tip3": "WŁADCA PIERŚCIENI: DRUŻYNA PIERŚCIENIA"
   },
   {
-    "id": 63,
-    "author": "Izabela Trojanowska",
-    "title": "Wszystko czego dziś chcę",
-    "fragment1": "Adres w bloku i mały Fiat\nNie łam głowy, jak Ty to uzbierasz",
-    "fragment2": "Ledwo mnie znasz, tyle już masz\nPlanów, jakbyś wieki mnie znał",
-    "fragment3": "Pamiętaj o tym\nPolecieć chcę\nTam i z powrotem"
+    "Id": 51,
+    "Answer": "Piotr Wereśniak",
+    "Tip1": "WKRĘCENI",
+    "Tip2": "WKRĘCENI 2",
+    "Tip3": "NIE KŁAM, KOCHANIE"
   },
   {
-    "id": 64,
-    "author": "T-Love",
-    "title": "Chłopaki nie płaczą",
-    "fragment1": "Jutro przecież też jest dzień",
-    "fragment2": "Mówisz życie jak cukierek\nGorzkie jest czasami",
-    "fragment3": "U uh chłopaki\nU uh nie płaczą"
+    "Id": 52,
+    "Answer": "Quentin Tarantino",
+    "Tip1": "PULP FICTION",
+    "Tip2": "DJANGO",
+    "Tip3": "BĘKARTY WOJNY"
   },
   {
-    "id": 65,
-    "author": "Edyta Górniak, Mietek Szcześniak",
-    "title": "Dumka na Dwa serca",
-    "fragment1": "Pytaj tych burzanów wonnych\nI uwolnij mnie",
-    "fragment2": "Mój sokole chmurnooki\nPytaj o mnie",
-    "fragment3": "Jak mam pytać innych kobiet?\nSerce me odkryją w Tobie,"
+    "Id": 53,
+    "Answer": "Richard Donner",
+    "Tip1": "ZABÓJCZA BROŃ",
+    "Tip2": "ZABÓJCZA BROŃ 2",
+    "Tip3": "ZABÓJCZA BROŃ 3"
   },
   {
-    "id": 66,
-    "author": "2 plus 1",
-    "title": "Windą do nieba",
-    "fragment1": "Wiec nie mogl mi sie pan przysnic dzis\nI tak odchodze bez pozegnania jakby znienacka",
-    "fragment2": "Pisze do pana ostatni list\nJuz mi lusterko z tym pana zdjecie tez nie pomoze",
-    "fragment3": "Juz mi niosa suknie z welonem\nJuz Cyganie czekaja z muzyka"
+    "Id": 54,
+    "Answer": "Ridley Scott",
+    "Tip1": "OBCY - 8. PASAŻER NOSTROMO",
+    "Tip2": "GLADIATOR",
+    "Tip3": "HELIKOPTER W OGNIU"
   },
   {
-    "id": 67,
-    "author": "Kancelarya",
-    "title": "Zabiorę Cię",
-    "fragment1": "Dość mam już pustych dni\nI świąt których nie było",
-    "fragment2": "Nie zaprzeczaj mi\nTyle mogę Ci dać",
-    "fragment3": "Zabiorę Cię właśnie tam\nGdzie jutra słodki smak"
+    "Id": 55,
+    "Answer": "Rob Cohen",
+    "Tip1": "SZYBCY I WŚCIEKLI",
+    "Tip2": "MUMIA: GROBOWIEC CESARZA SMOKA",
+    "Tip3": "-"
   },
   {
-    "id": 68,
-    "author": "Andrzej Rybiński",
-    "title": "Nie liczę godzin i lat",
-    "fragment1": "Bez godzin i bez kalendarzy\nDługością dni i zmiennością zdarzeń",
-    "fragment2": "Wschodami gwiazd i zachodami\nOdmierzam czas liści kolorami",
-    "fragment3": "Nie liczę godzin i lat,\nTo życie mija, nie ja."
+    "Id": 56,
+    "Answer": "Sam Akina",
+    "Tip1": "MAYDAY",
+    "Tip2": "PLANETA SINGLI 2",
+    "Tip3": "-"
   },
   {
-    "id": 69,
-    "author": "Mr Zoob",
-    "title": "Mój jest ten kawałek podłogi",
-    "fragment1": "Meble już połamałem\nNowy ład zrobić chcę",
-    "fragment2": "Znowu ktoś mnie podgląda\nLekko skrobie do drzwi",
-    "fragment3": "Nie mówcie mi więc, co mam robić!"
+    "Id": 57,
+    "Answer": "Sam Mendes",
+    "Tip1": "SPECTRE",
+    "Tip2": "SKYFALL",
+    "Tip3": "-"
   },
   {
-    "id": 70,
-    "author": "Halina Frąckowiak",
-    "title": "Papierowy księżyc",
-    "fragment1": "Życie co byle jak trwa\nSchną na szybie ślady łez",
-    "fragment2": "Nie nie będę w San Francisco\nTo nie to miejsce i czas",
-    "fragment3": "Papierowy księżyc z nieba spadł\nSkończył się video film"
+    "Id": 58,
+    "Answer": "Sam Raimi",
+    "Tip1": "SPIDER-MAN 3",
+    "Tip2": "SPIDER-MAN 2",
+    "Tip3": "DOKTOR STRANGE W MULTIWERSUM OBŁĘDU"
   },
   {
-    "id": 71,
-    "author": "Marilyn Manson",
-    "title": "The Beautiful People",
-    "fragment1": "You can t see the forest for the trees And can t smell",
-    "fragment2": "I don t want you and I don t need your",
-    "fragment3": "The beautiful people, The beautiful people"
+    "Id": 59,
+    "Answer": "Steven Spielberg",
+    "Tip1": "LISTA SCHINDLERA",
+    "Tip2": "SZEREGOWIEC RYAN",
+    "Tip3": "ZŁAP MNIE, JEŚLI POTRAFISZ"
   },
   {
-    "id": 72,
-    "author": "nazareth",
-    "title": "love hurts",
-    "fragment1": "I m young, I know, but even so\nI know a thing or two",
-    "fragment2": "I know it isn t true\nI know it isn t true",
-    "fragment3": "Love hurts, love scars"
-  },
-  {
-    "id": 73,
-    "author": "Carlos Santana",
-    "title": "Africa Bamba",
-    "fragment1": "Oye eso te va sentir feliz",
-    "fragment2": "Ella baila la portuguesa",
-    "fragment3": "África bamba hace a un lado a la tristeza"
-  },
-  {
-    "id": 74,
-    "author": "Metalica",
-    "title": "Enter Sandman",
-    "fragment1": "Exit light\nEnter night",
-    "fragment2": "Say your prayers, little one\nDon t forget, my son",
-    "fragment3": "Now I lay me down to sleep\nNow I lay me down to sleep"
-  },
-  {
-    "id": 75,
-    "author": "Linkin Park",
-    "title": "In The End",
-    "fragment1": "It doesn t even matter how hard you try",
-    "fragment2": "It starts with one thing, I don t know why",
-    "fragment3": "I tried so hard and got so far"
-  },
-  {
-    "id": 76,
-    "author": "Metalica",
-    "title": "Nothing Else Matters",
-    "fragment1": "Never opened myself this way\nLife is ours, we live it our way",
-    "fragment2": "So close, no matter how far\nCouldn t be much more from the heart",
-    "fragment3": "Never cared for what they say\nNever cared for games they play"
-  },
-  {
-    "id": 77,
-    "author": "Marilyn Manson",
-    "title": "Sweet Dreams",
-    "fragment1": "Some of them want to use you",
-    "fragment2": "Travel the world and the seven seas\nEverybody s looking for something",
-    "fragment3": "Sweet dreams are made of this\nWho am I to disagree"
-  },
-  {
-    "id": 78,
-    "author": "Queen",
-    "title": "Another one bites the dust",
-    "fragment1": "And kicked me out on my own\nAre you happy are you satisfied?",
-    "fragment2": "Steve walks warily down the street\nWith his brim pulled way down low",
-    "fragment3": "Another one bites the dust"
-  },
-  {
-    "id": 79,
-    "author": "Gerry",
-    "title": "You Will Never Know",
-    "fragment1": "Walk on through the wind\nWalk on through the rain",
-    "fragment2": "When you walk through a storm\nHold your head up high",
-    "fragment3": "With hope in your heart\nAnd you ll never walk alone\nWhat I feel, what I need from you, no"
-  },
-  {
-    "id": 80,
-    "author": "Beretta Lake",
-    "title": "Teflon Sega",
-    "fragment1": "Is it you or I, who the fucks giving up\nYou tell me why the fuck are you giving up",
-    "fragment2": "Drinking tonight but I swear I been sober",
-    "fragment3": "I m hopeless but I m yours\nStaring at Beretta Lake"
-  },
-  {
-    "id": 81,
-    "author": "STING",
-    "title": "Fields of Gold",
-    "fragment1": "So she took her love\nFor to gaze a while",
-    "fragment2": "You ll remember me when the west wind moves",
-    "fragment3": "When we walked in fields of gold"
-  },
-  {
-    "id": 82,
-    "author": "Phil Collins",
-    "title": "Another Day in Paradise",
-    "fragment1": "You can tell from the lines on her face\nYou can see that she s been there",
-    "fragment2": "She calls out to the man on the street",
-    "fragment3": "Paradise\nJust think about it (para-paradise)"
-  },
-  {
-    "id": 83,
-    "author": "Starship",
-    "title": "We Built This City",
-    "fragment1": "Marconi plays the mamba, listen to the radio, don t you remember?",
-    "fragment2": "It s just another Sunday in a tired old street",
-    "fragment3": "we built this city on rock and roll"
-  },
-  {
-    "id": 84,
-    "author": "Pink Floyd",
-    "title": "Wish You Were Here",
-    "fragment1": "Hot air for a cool breeze?\nCold comfort for change?",
-    "fragment2": "And disciplinary remains mercifully\nYes and um, I m with you Derek, this star nonsense",
-    "fragment3": "How I wish, how I wish you were here\nWe re just two lost souls"
-  },
-  {
-    "id": 85,
-    "author": "Simon & Garfunkel",
-    "title": "The Sound of Silence",
-    "fragment1": "Ten thousand people, maybe more\nPeople talking without speaking",
-    "fragment2": "Hello darkness, my old friend\nI ve come to talk with you again",
-    "fragment3": "Fools  said I,  You do not know\nSilence like a cancer grows"
-  },
-  {
-    "id": 86,
-    "author": "Queen",
-    "title": "Bohemian Rhapsody",
-    "fragment1": "Is this the real life?\nIs this just fantasy?",
-    "fragment2": "I m just a poor boy nobody loves me\nHe s just a poor boy from a poor family,",
-    "fragment3": "(Let him go!) Bismillah! We will not let you go"
-  },
-  {
-    "id": 87,
-    "author": "Sinéad O’Connor",
-    "title": "Nothing Compares 2 U",
-    "fragment1": "Nothing can stop these lonely tears from falling\nTell me baby, where did I go wrong?",
-    "fragment2": "It s been seven hours and 15 days\nSince you took your love away",
-    "fragment3": "But I m willing to give it another try\nNothing compares"
-  },
-  {
-    "id": 88,
-    "author": "Stevie Wonder",
-    "title": "I Just Called to Say I Love You",
-    "fragment1": "No autumn breeze, no falling leaves",
-    "fragment2": "No New Year s Day to celebrate\nNo chocolate covered candy hearts to give away",
-    "fragment3": "I just called to say how much I care"
-  },
-  {
-    "id": 89,
-    "author": "Frank Sinatra",
-    "title": "New York, New York",
-    "fragment1": "These vagabond shoes, are are longing to stray\nRight through the very heart of it",
-    "fragment2": "Start spreading the news, I m leaving today",
-    "fragment3": "And I m gonna make a brand new start of it in old New York"
-  },
-  {
-    "id": 90,
-    "author": "Sting",
-    "title": "Englishman In New York",
-    "fragment1": "You could end up as the only one\nGentleness, sobriety are rare in this society",
-    "fragment2": "I don t drink coffee, I take tea, my dear",
-    "fragment3": "Oh, I m an alien, I m a legal alien"
-  },
-  {
-    "id": 91,
-    "author": "Daft Punk",
-    "title": "One More Time",
-    "fragment1": "You know I m just feelin \nCelebration",
-    "fragment2": "Tonight, hey, just feeling\nMusic s got me feeling the need",
-    "fragment3": "One more time, a celebration\nYou know we re gonna do it right"
-  },
-  {
-    "id": 92,
-    "author": "Linkin Park",
-    "title": "Numb",
-    "fragment1": "Holding too tightly, afraid to lose control?\n Cause everything that you thought I would be",
-    "fragment2": "I m tired of being what you want me to be\nFeeling so faithless, lost under the surface",
-    "fragment3": "I can t feel you there\nBecome so tired\nSo much more aware"
-  },
-  {
-    "id": 93,
-    "author": "Czesław Niemen",
-    "title": "Dziwny jest ten świat",
-    "fragment1": "Że od tylu lat\nCzłowiekiem gardzi człowiek",
-    "fragment2": "Lecz ludzi dobrej woli jest więcej\nI mocno wierzę w to",
-    "fragment3": "Gdzie jeszcze wciąż\nMieści się wiele zła\nI dziwne jest to"
-  },
-  {
-    "id": 94,
-    "author": "Depeche Mode",
-    "title": "Enjoy the Silence",
-    "fragment1": "Painful to me\nPierce right through me",
-    "fragment2": "Words like violence\nBreak the silence",
-    "fragment3": "All I ever wanted\nAll I ever needed"
-  },
-  {
-    "id": 95,
-    "author": "Sting",
-    "title": "Shape Of My Heart",
-    "fragment1": "But those who speak know nothing\nAnd find out to their cost",
-    "fragment2": "He deals the cards as a meditation\nAnd those he plays never suspect",
-    "fragment3": "I know that the spades are the swords of a soldier\nI know that the clubs are weapons of war"
-  },
-  {
-    "id": 96,
-    "author": "Slums Attack",
-    "title": "Mój rap, moja rzeczywistość",
-    "fragment1": "Życia spieprzonego nikt z młodych nie chce naprawić\nTa, jeszcze nie dzisiaj, może jutro się rozejrzę",
-    "fragment2": "Częsty brak reakcji doprowadza do frustracji\nPiętno biurokracji doprowadza do wariacji",
-    "fragment3": "Jakie życie taki rap, w nim zawarte jest wszystko\nJestem z tych MC co pieprzą jak człowiekowi ciężko"
-  },
-  {
-    "id": 97,
-    "author": "jeden Osiem L",
-    "title": "jak zpaomniec",
-    "fragment1": "Snute kiedyś opowiastki, ja, Ty i srebrna taca\nKiedyś to nie przerażało, już do tego nie chcę wracać",
-    "fragment2": "Znowu widzę Ciebie przed swoimi oczami\nZnowu zasnąć nie mogę, owładnięty marzeniami",
-    "fragment3": "Nie myśleć o tym już\nZdmuchnąć wszystkie wspomnienia niczym zaległy kurz"
-  },
-  {
-    "id": 98,
-    "author": "Pięc dwa dębiec",
-    "title": "To my!",
-    "fragment1": "Co mu przyjdzie z żalu, nie ma tu konfesjonału\nNastępstwa Twoich czynów chwycą Cię za łeb synu",
-    "fragment2": "Polak Cię okradnie, Polak Cię dopadnie\nPolak nie popuści, gorsi to są tylko Ruscy",
-    "fragment3": "Głos kraju mataczy - to my Polacy\nGłos kraju bez pracy - to my Polacy"
-  },
-  {
-    "id": 99,
-    "author": "Kaliber 44",
-    "title": "Plus i minus",
-    "fragment1": "Idę tam, idę sam w tą czarną chwilę,\nTyle myśli w sekund tyle.",
-    "fragment2": "Może będzie mym najgorszym dniem, a może nie\nMój mózg płata mi figle gdy ja myślę, że plus",
-    "fragment3": "Plus i minus to jedyne co słyszę\nPlus i minus to jedyne czym żyje"
-  },
-  {
-    "id": 100,
-    "author": "Akon",
-    "title": "Lonely",
-    "fragment1": "Tryna figure out what I do to make it go bad\nCause ever since my girl left me",
-    "fragment2": "Yo! This one here\nGoes out to all my players out there man, ya know",
-    "fragment3": "I m Mr. Lonely\nI have nobody\nFor my own"
-  },
-  {
-    "id": 101,
-    "author": "Ronnie Ferrari",
-    "title": "Ona By Tak Chciała",
-    "fragment1": "Widzi tam coś we mnie, może ten napis z boku\nŻe napierdalamy we dnie, choć wolimy po zmroku",
-    "fragment2": "Jestem na dworze sam, deszcz pada mi na głowę",
-    "fragment3": "Kręcić blanty, po czym liczyć bankroll"
-  },
-  {
-    "id": 102,
-    "author": "Modjo",
-    "title": "Lady",
-    "fragment1": "I feel loved for the first time",
-    "fragment2": "Can t you see you re my delight?",
-    "fragment3": "Cause my feeling is just so right"
-  },
-  {
-    "id": 103,
-    "author": "Modjo",
-    "title": "Chillin",
-    "fragment1": "Spinning all around\nShe got me in a trance",
-    "fragment2": "One night in a disco",
-    "fragment3": "I feel so high\nDancing all night"
-  },
-  {
-    "id": 104,
-    "author": "Dawid Podsiadło",
-    "title": "Małomiasteczkowy",
-    "fragment1": "Wyśniłem sobie ciebie, gdy\nŚpiewałem głośno pod prysznicem",
-    "fragment2": "Znowu jadę do ciebie sam\nZnowu jadę do ciebie",
-    "fragment3": "Małomiasteczkowa głowa\nMałomiasteczkowy styl"
-  },
-  {
-    "id": 105,
-    "author": "Dawid Podsiadło",
-    "title": "Trójkąty i kwadraty",
-    "fragment1": "Unoszę się do chmur\nSpadam kulami gradu",
-    "fragment2": "Stoję na drodze\nNie widzi mnie tu nikt",
-    "fragment3": "Gwiazdy formują\nTrójkąty i kwadraty\nDziś je w kieszeniach\nBędę do ciebie niósł"
-  },
-  {
-    "id": 106,
-    "author": "Taco Hemingway",
-    "title": "Fiji",
-    "fragment1": "Tak mnie irytuje, gdy nie odpisujesz\nSobie wymyśliłaś chyba, że tu melanż",
-    "fragment2": "Gdy typy śpiewają o Legii pod oknem",
-    "fragment3": "Nawet nie wiesz jak mnie wkurwiasz, kiedy nie odbierasz\nTak mnie irytuje, gdy nie odpisujesz"
-  },
-  {
-    "id": 107,
-    "author": "Mietha",
-    "title": "Stars",
-    "fragment1": "Masz to w sobie\nI ja to widzę\nZobacz na te inne suki grasz w zupełnie innej lidze",
-    "fragment2": "Powinienem mniej pić\nI mieć wiele więcej czasu",
-    "fragment3": "Chciałbym cię zabrać\nEj tam i tam i tam i tam i tam"
-  },
-  {
-    "id": 108,
-    "author": "Mietha",
-    "title": "Szum",
-    "fragment1": "Poza tym bólem i blizn, nie dotyka mnie ten syf\nSzum fal, dźwięk silnika, nikt nie pachnie jak ty",
-    "fragment2": "Na zegarku zero, zero, jadę miastem",
-    "fragment3": "Szum fal, dźwięk silnika, niknie, niknie, niknie"
-  },
-  {
-    "id": 109,
-    "author": "Mietha",
-    "title": "Tak jak kiedyś",
-    "fragment1": "Ściany są cienkie na ośce, damy są piękne na ośce",
-    "fragment2": "Zdejmuję buty przed wejściem, rękę podaję za progiem",
-    "fragment3": "Nigdy nie było tak dobrze, jak kiedyś\nZnów zakładam starą czapkę"
-  },
-  {
-    "id": 110,
-    "author": "Sarius",
-    "title": "dziecko wojny",
-    "fragment1": "Ukryte w Twoich emocjach do dna\nSię nie przebije nikt",
-    "fragment2": "Czasem jest bliżej do słońca, to fakt\nSzczęśliwe dni",
-    "fragment3": "Lecz nie masz już strachu przed losem z gwiazd\nJesteś dzieckiem wojny"
-  },
-  {
-    "id": 111,
-    "author": "Guzior",
-    "title": "blueberry",
-    "fragment1": "Bujam głowę znam tę nutę gapię się trochę jak muppet\nHipnotyzują jej ruchy nie jaram się dzisiaj rapem oh",
-    "fragment2": "Wow wow ale bubel\nJak Pezet wyszedłem po chleb no a skończyłem w klubie",
-    "fragment3": "Olewam party i palę blueberry\nOna mi robi numery a ja wtedy robię numery"
-  },
-  {
-    "id": 112,
-    "author": "Gibbs Kacper HTA",
-    "title": "Zbrodnia i kara",
-    "fragment1": "Czekam aż moje serce coś ruszy\nZraniony jak Squishy nic nie warty sekret\nWszystko dookoła Yin Yang",
-    "fragment2": "Nie wszystko jest czarno białe\nGdzie pogrzebałem i straciłem wiarę",
-    "fragment3": "Za mną już zło i wina\nSumienie krzyczy wybacz\nIntencje złe na finał"
-  },
-  {
-    "id": 113,
-    "author": "Kacper HTA",
-    "title": "Mantra",
-    "fragment1": "Żeby nigdy nam ten zapał nie wystygł jeszcze\nNie opadł piasek klepsydry",
-    "fragment2": "Miałem już wybrany do Ciebie numer\nChoć pomieszałem wszystkie cyfry",
-    "fragment3": "Znowu nie zasnę\nW głowie mam tylko mantrę"
-  },
-  {
-    "id": 114,
-    "author": "Carlos Santana",
-    "title": "Maria Maria",
-    "fragment1": "Pick-pockin  on the corner\nSee as the rich is getting richer",
-    "fragment2": "Ladies and gents\nTurn up your sound systems",
-    "fragment3": "Oh, Maria, Maria\nShe fell in love in East L.A."
-  },
-  {
-    "id": 115,
-    "author": "Sobel",
-    "title": "Bandyta",
-    "fragment1": "Ale kocham małe kundle\nCzasami mogą mylić pozory",
-    "fragment2": "Panie myślą że zabijam\nA ja na chacie chodzę w klapkach różowych",
-    "fragment3": "Bandyta dziary na pół ryja bo kurwa je lubię a co\nŻaden ze mnie bandyta pierwsze słyszę"
-  },
-  {
-    "id": 116,
-    "author": "Sobel",
-    "title": "Testarossa",
-    "fragment1": "Muszę wrzucać szósty bieg, ciągle gonią mnie pragnienia\nWorek, a w nim cash, schowam na tylnich siedzeniach",
-    "fragment2": "Jak w Tokyo Drift, tak tu lubią latać\nA ona tańczy tam po linii jak Jurek Dudek",
-    "fragment3": "Mamy pełen bak, rozpędzimy fure\nRozbijemy bank, powiedz mi co czujesz"
-  },
-  {
-    "id": 117,
-    "author": "Sobel",
-    "title": "Wygladasz Tak Pięknie",
-    "fragment1": "Tak życia bez Ciebie\nUśmiechaj się więcej",
-    "fragment2": "Skarbie jak patrze na Ciebie\nSkarbie ja nadal nie wierze, że Bóg dał mi taką kobietę",
-    "fragment3": "Wyglądasz tak pięknie\nPozwól mi zabrać Cię stąd"
-  },
-  {
-    "id": 118,
-    "author": "Skorup",
-    "title": "Kurde nic",
-    "fragment1": "Życie to jest pastisz wszystkich górnolotnych zwrotów\nJeśli tylko długo się napatrzysz",
-    "fragment2": "Poradził mi laska z chłopaki nie płaczą\nRób to co lubisz to robić żem zaczął",
-    "fragment3": "Kurde balans jak szybko zleciało\nPiękna dziewczyna powiedziała ciao"
-  },
-  {
-    "id": 119,
-    "author": "Kekę",
-    "title": "Moja gwardia",
-    "fragment1": "Mnie akurat nikt nie woła no bo non stop robota",
-    "fragment2": "Maciek dawaj wziąłem piłkę i nóż\nGramy w grzyba potem w pola bez odbitek na dwóch",
-    "fragment3": "Trampki trzepak piłka pola do wieczora walka\nUlęgałki drzewa jabłka ja i moja gwardia"
-  },
-  {
-    "id": 120,
-    "author": "Kwiat jabłoni",
-    "title": "Dziś pójde późno spać",
-    "fragment1": "Lecz im bardziej spadam, tym bardziej widzę, że\nTo wszystko chyba nie jest sen",
-    "fragment2": "I nie wiem o czym myśleć mam\nŻeby mi się przyśnił taki świat",
-    "fragment3": "Dziś późno pójdę spać\nGdy wszyscy będą w łóżkach"
-  },
-  {
-    "id": 121,
-    "author": "Kwiat jabłoni",
-    "title": "Mogło być nic",
-    "fragment1": "Gdy budzisz się\nTo nadal jesteś ty",
-    "fragment2": "Estem tu zupełnie sam\nChoć przed chwilą stałem w tłumie",
-    "fragment3": "I to zabiera wdech\nŻe jest coś a nie nic"
-  },
-  {
-    "id": 122,
-    "author": "Quebonafide",
-    "title": "Bubbletea",
-    "fragment1": "Tęsknie za Tokio świecącym jak neon\nZa Tel a vivem białym jak welon",
-    "fragment2": "Tęsknie też za Ligą Plus bo bez Smoka\nTen program już nie wygląda tak samo",
-    "fragment3": "Tęskniłem za Tobą, nie kłamię jak zły"
-  },
-  {
-    "id": 123,
-    "author": "Łobuzy",
-    "title": "urok",
-    "fragment1": "Myślę co się stanie gdy w tym stanie nas nakryją\nWięc do dechy daję gaz nie dogonią nas ijo ijo",
-    "fragment2": "Mała działa na mnie działa na mnie jak bacardi\nPatrzy ciągle na mnie nieustannie gryzie wargi",
-    "fragment3": "Może to jej urok a może to make up\nJedziemy tą furą słuchamy se Zenka"
-  },
-  {
-    "id": 124,
-    "author": "Miły pan",
-    "title": "Małolatki",
-    "fragment1": "Jeszcze jedna, maleńka chwila\nA będę na kolanach błagał cię o syna",
-    "fragment2": "Każda chce mnie jak cysia matki\nNie, nie maleńka, plis, bez żartów",
-    "fragment3": "Małolatki auu, małolatki są tu\nMałolatki auu, jedna już wchodzi na stół"
-  },
-  {
-    "id": 125,
-    "author": "Hall & Oates",
-    "title": "Out of Touch",
-    "fragment1": "Or living in the middle between the two extremes\nSmoking guns hot to the touch",
-    "fragment2": "Shake it up is all that we know\nUsing the bodies up as we go",
-    "fragment3": "You Are out of touch\nI m out of time"
-  },
-  {
-    "id": 126,
-    "author": "Białas",
-    "title": "PDW",
-    "fragment1": "Rodzice przy narodzinach z dumą planowali kim będą ich dzieci",
-    "fragment2": "Małolatki z dobrych domów jarają chłopaki z bogatą przeszłością\nDlatego banany tak często próbują udawać że są patologią",
-    "fragment3": "PDW, PDW, Nie uwierzysz lecz zwątpienie też jest tu"
-  },
-  {
-    "id": 127,
-    "author": "Avil",
-    "title": "Jak mam żyć?",
-    "fragment1": "Prędzej się skaleczysz niż ze mną wygrasz\nPsycholog mi mówił,  Nie jesteś sam na świecie",
-    "fragment2": "Gaśnie światło, wszyscy wyszli, zostaję ja i natłok myśli",
-    "fragment3": "Nie mów mi jak mam żyć\nBo ja dobrze wiem jak i co"
-  },
-  {
-    "id": 128,
-    "author": "Earth, Wind & Fire",
-    "title": "September",
-    "fragment1": "How we knew love was here to stay\nNow December",
-    "fragment2": "Love was changing the mind of pretenders\nWhile chasing the clouds away",
-    "fragment3": "Hey, hey, hey\nBa-dee-ya, say, do you remember?"
-  },
-  {
-    "id": 129,
-    "author": "Maroon 5",
-    "title": "this love",
-    "fragment1": "My pressure on your hips, I m sinking my fingertips into\nEvery inch of you",
-    "fragment2": "I was so high I did not recognize\nThe fire burning in her eyes",
-    "fragment3": "This love has taken its toll on me\nShe said goodbye too many times before"
-  },
-  {
-    "id": 130,
-    "author": "Justin timberlake",
-    "title": "Cry me a river",
-    "fragment1": "All of these things people told me\nKeep messing with my head",
-    "fragment2": "You were my sun, you were my earth\nBut you didn t know all the ways I loved you, no",
-    "fragment3": "Now it s your turn, to cry\nCry me a river"
-  },
-  {
-    "id": 131,
-    "author": "Snoop dogg",
-    "title": "Still D R E",
-    "fragment1": "They want to know if he still got it\nThey say rap s changed",
-    "fragment2": "Yeah, nigga\nI m still fucking with you",
-    "fragment3": "I m representing for them gangstas all across the world"
-  },
-  {
-    "id": 132,
-    "author": "Estelle ft Kayne West",
-    "title": "west american boy",
-    "fragment1": "I never been to Brooklyn and I d like to see what s good\nDressed in all your fancy clothes",
-    "fragment2": "This a number one champion sound\nYeah, Estelle, we about to get down",
-    "fragment3": "Take me on a trip I d like to go some day\nTake me to New York, I d love to see LA"
-  },
-  {
-    "id": 133,
-    "author": "Sade",
-    "title": "The Sweetest Taboo",
-    "fragment1": "That s why I m in love with you (with you)",
-    "fragment2": "If I tell you\nIf I tell you now",
-    "fragment3": "You give me the sweetest taboo"
-  },
-  {
-    "id": 134,
-    "author": "bonson",
-    "title": "Głupie rzeczy",
-    "fragment1": "Osiedle masa wrogów prosiłem mamę o hajs na rozruch",
-    "fragment2": "Piętnaście lat mam nie istnieje fejs czy Glamrap\nSeks w gimnazjach na głośnikach był Eis i Skandal",
-    "fragment3": "Głupie głupie rzeczy ah\nGłupie głupie rzeczy w głowach"
-  },
-  {
-    "id": 135,
-    "author": "Stevie Wonder",
-    "title": "Superstition",
-    "fragment1": "The devil s on his way,",
-    "fragment2": "When you believe in things\nThat you don t understand,",
-    "fragment3": "Very superstitious,\nWriting s on the wall,"
-  },
-  {
-    "id": 136,
-    "author": "Gibbs",
-    "title": "Piękny świat",
-    "fragment1": "Naiwne spojrzenie na wszechświat\nTeraz się zawsze potwierdza",
-    "fragment2": "Łatwo się mówi, że przejdzie\nGorzej się znosi potknięcie",
-    "fragment3": "Lubię zapomnieć, że zło nas dosięga\nWystarczy łza"
-  },
-  {
-    "id": 137,
-    "author": "Gibbs & Szymi Szyms",
-    "title": "Oda do butli",
-    "fragment1": "Nim zostanie po nas wrak i będzie nam siebie brak\nBez oklasków i braw jestem dla ciebie sam",
-    "fragment2": "Gdyby miał już za coś pić, to za to żeby żyć",
-    "fragment3": "Zdobyłbym ten świat i jeszcze więcej"
-  },
-  {
-    "id": 138,
-    "author": "Gibbs",
-    "title": "ZTB",
-    "fragment1": "Na wyjazd ważne byś była obok mnie jak duch\nTam gdzie kończy się sen, a życie zaczyna",
-    "fragment2": "Piękny widok z osiemnastego piętra\nI tak przy twoim wymięka",
-    "fragment3": "Zatracić się, z tobą daleko gdzieś, z tobą"
-  },
-  {
-    "id": 139,
-    "author": "Gibbs i DOPEhouse",
-    "title": "Zodiak",
-    "fragment1": "Jej Chanel miesza się z mokrym asfaltem i Amnezją Haze",
-    "fragment2": "Zapętlony w słowach nie mam już ochoty zaczynać od nowa",
-    "fragment3": "Nad głową świeci mi neon dwa cztery jak aureola"
-  },
-  {
-    "id": 140,
-    "author": "Gibbs i DOPEhouse",
-    "title": "Pogoda, drinki, plaża",
-    "fragment1": "Lubię siedzieć w domu sam a jednak w ciągłych rozjazdach",
-    "fragment2": "Hej odkąd prędkość życia wzrasta",
-    "fragment3": "Nie marnuję już chwil chodzi tylko o vibe nam\nPoczułem życia smak kiedy przestałem zwalniać"
-  },
-  {
-    "id": 141,
-    "author": "Kacper HTA",
-    "title": "Puta madre",
-    "fragment1": "Zwykły Janusz sterczy w oknie niespełniony Bonaparte",
-    "fragment2": "Siekiera w klatce, siekiera w domu\nKiedyś tu więcej dymu a nie mefedronu",
-    "fragment3": "Nie zaprzątaj sobie nigdy nimi głowy\nKażdy z nich to tylko"
-  },
-  {
-    "id": 142,
-    "author": "Kacper HTA",
-    "title": "Nie zmieniam wizji",
-    "fragment1": "Demony w lustrze i demony w głowie, bo życie jest chore, nie mogę go znieść",
-    "fragment2": "Prawda, której nie chcesz znać o swoich bliskich, o sobie\nCzemu jestem własnym wrogiem?",
-    "fragment3": "Ja dalej nienawidzę hipokryzji\nA jako ludzie nosimy ją wszyscy"
-  },
-  {
-    "id": 143,
-    "author": "Kacper HTA & Gibbs",
-    "title": "Nirwana",
-    "fragment1": "Chciałem tylko pewność mieć wielką\nCzy serio już siebie znam",
-    "fragment2": "Wszystko co mogłem zostawiłem w rapie",
-    "fragment3": "Zrobię to sam\nTyle razy wróg już u bram"
-  },
-  {
-    "id": 144,
-    "author": "Janek",
-    "title": "Czarno na białym",
-    "fragment1": "Ludzie, pieniądze i fakty\nkażda chwila jak puste kartki",
-    "fragment2": "Powinienem skupić się na tym\nże w sumie tylko ja, nikt poza tym",
-    "fragment3": "skasowałem wszystkie kontakty"
-  },
-  {
-    "id": 145,
-    "author": "Tymek ft. Julia Wieniawa",
-    "title": "",
-    "fragment1": "Nieskazitelna łza\nTuż spod moich powiek",
-    "fragment2": "Co to jest za gość, tak dziwnie ubrany\nNie lubimy ram, przebijamy ściany",
-    "fragment3": "Każdy look i każdy krok, wymyśliłem słowa\nCo to znaczy \"być jak ktoś\", nie jako ikona"
-  },
-  {
-    "id": 146,
-    "author": "Guzior, Vito Bambino i Favst",
-    "title": "Chabo",
-    "fragment1": "Czy twój czek działa, żeby pani w banku mnie nie wyzywała",
-    "fragment2": "Rozmowy do późna, balaś z colą w kubkach\nNa dole taksówka, a",
-    "fragment3": "Bandyta czy hultaj, ryju z podwórka\nDawaj, bo zbiórka jest"
-  },
-  {
-    "id": 147,
-    "author": "Tymek & Ofelia",
-    "title": "Chcesz to ze mną bądź",
-    "fragment1": "Gadają za dużo, twoje koleżanki duszą mnie już tą rozmową\nO niczym i niczym",
-    "fragment2": "Czy to wszystko mi się śni?\nJacyś ludzie, brudny film",
-    "fragment3": "Odlatuję stąd, nie odstępują mnie nawet o krok"
-  },
-  {
-    "id": 148,
-    "author": "Gibbs & Przyłu",
-    "title": "Duchy",
-    "fragment1": "Nie mam już siły na bezdech\nZabrakło tlenu mi przez was już dawno",
-    "fragment2": "Moja wina\nPokazałem gdzie mnie ukłuć",
-    "fragment3": "Odkąd zapomniałem co to strach\nW moim domu nie ma żadnych duchów"
-  },
-  {
-    "id": 149,
-    "author": "Smolasty",
-    "title": "Sezon",
-    "fragment1": "I choć nie lubimy życia na pokaz masz na sobie bieliznę prosto z Milanu",
-    "fragment2": "Pijemy Bacardi za lepszy czas nie jesteś jak inne dziewczyny",
-    "fragment3": "W ten letni czas gdy smutku brak\nChcę przeżyć z tobą chwili szczęścia smak"
-  },
-  {
-    "id": 150,
-    "author": "Kartky",
-    "title": "Chmury",
-    "fragment1": "Kiedyś chciałem porozmawiać, znałem numer, teraz\nPołowy nie chcę pamiętać, ale taka cena",
-    "fragment2": "Ostatni raz dzisiaj piję Twoje zdrowie\nBo przez te lata byłeś dla mnie jak brat",
-    "fragment3": "Chciałaś mnie, jak byłem nikim, jestem taki sam\nPowiedz, ile lat mi zabierzesz więce"
-  },
-  {
-    "id": 151,
-    "author": "PlanBe",
-    "title": "Flash FM",
-    "fragment1": "Patrzymy kiedy całe miasto moknie w dzień\nTylko w telewizji",
-    "fragment2": "Potem skoczę sam do Santa Fe\nSamolotem, prawie private jet",
-    "fragment3": "Letni vibe 90 210\nDuży jacht, dużo miejsca w Mercedesie"
-  },
-  {
-    "id": 152,
-    "author": "Vito Bambino",
-    "title": "Poszło",
-    "fragment1": "Gdybym cię zobaczył to bym podszedł czy schował za czymś\nNiezakochani czekają na wiosnę",
-    "fragment2": "Jak wrócisz z nim na chawir\nTo nie zmieni się nic",
-    "fragment3": "Młoda jest jak u-u-uuu!\nBo ona lubi tańczyć\nOna lubi dogadywać się bez słów!"
-  },
-  {
-    "id": 153,
-    "author": "Vito Bambino",
-    "title": "Nudy",
-    "fragment1": "Tak sobie myślę, że Ty przecież też\nMiewasz gorszy dzień",
-    "fragment2": "Twoje serce ma długi też",
-    "fragment3": "Ale raczej tu nudy\nAle raczej to nie oczekuj nic"
-  },
-  {
-    "id": 154,
-    "author": "Kiwi",
-    "title": "Co chowasz",
-    "fragment1": "Zabierz mnie w głąb Twych lęków teraz\nChcę poznać najciemniejsze miejsce",
-    "fragment2": "Pokaż mi jak wołasz do diabła",
-    "fragment3": "Opowiedz mi swój marny dzień\nOpowiedz mi co chowasz w sercu"
-  },
-  {
-    "id": 155,
-    "author": "Kiwi",
-    "title": "Tańcz",
-    "fragment1": "Skieruj wzrok w drugą stronę\nNieważne to jest",
-    "fragment2": "Nie mów że to niemądre\nNiech się pali ten ogień\nOtwórz usta czerwone",
-    "fragment3": "I powiedz sobie głośno tańcz"
-  },
-  {
-    "id": 156,
-    "author": "Przyłu",
-    "title": "Usta",
-    "fragment1": "Gdzie zaczekasz na na tego typa gdy powróci tu\nMusisz bać, bać się, że nie ogarnę w bani syfu",
-    "fragment2": "Chodź zwiedzimy Meksyk, mam parę perspektyw\nŻadna z uczelni nie wchodzi w grę",
-    "fragment3": "Jestem gołosłowny, bo nie wiem w co je ubrać\nGęsia skóra, zimno, dzielę ogień na pół"
-  },
-  {
-    "id": 157,
-    "author": "Miętha",
-    "title": "Pewna",
-    "fragment1": "Nie dzwoń do mnie, jeśli się\nBoisz moich uczuć",
-    "fragment2": "Uwielbiam noc, latem jest piękna\nWodzę za nos siebie od dziecka",
-    "fragment3": "Pokaż mi to, oh, jak się tu mieszka\nKocham Twój gło-os, nie lubię mię-sa"
-  },
-  {
-    "id": 158,
-    "author": "Bajm",
-    "title": "Biała armia",
-    "fragment1": "Możesz wreszcie zabłądzić w wielkim mieście\nUrodziłeś się, by służyć nam",
-    "fragment2": "Właśnie nadszedł ten czas\nWoh, to jest właśnie ten czas",
-    "fragment3": "Jesteś żaglem, szalonym wiatrem\nTwoja siła to skarb"
-  },
-  {
-    "id": 159,
-    "author": "Bajm",
-    "title": "Ta sama chwila",
-    "fragment1": "Niech każdy dzień dodaje nam sił\nMoże znajdziemy siebie znów",
-    "fragment2": "Mów niech Twoje słowa zbudzą krew\nNiech wszystko będzie już okej",
-    "fragment3": "Nie odnajdzie więcej nas, ta sama chwila"
-  },
-  {
-    "id": 160,
-    "author": "Andrzej Dąbrowski",
-    "title": "Do zakochania jeden krok",
-    "fragment1": "Coś się gromadzi, coś dojrzewa w nas\nCo było ledwie nutką rzewną",
-    "fragment2": "Mijają dni, miesiące, mija rok\nPrawdziwe życie mija nas o krok",
-    "fragment3": "Dopóki się zapala wzrok, dopóki się splatają ręce"
-  },
-  {
-    "id": 161,
-    "author": "Feel",
-    "title": "A gdy jest już ciemno",
-    "fragment1": "Pod spojrzała, a Ty jesteś słaby, to patrz",
-    "fragment2": "Wiesz, zaufaj mi, jak chcesz\nZaczaruj mnie, jak chcesz",
-    "fragment3": "Chodź tu do mnie, poczuj się swobodnie, przy mnie bądź"
-  },
-  {
-    "id": 162,
-    "author": "Sanah & Daria Zawiałow",
-    "title": "Eldorado",
-    "fragment1": "Gdzieś za siódmą rzeką\nWe łzach znajdziesz mnie",
-    "fragment2": "Oczy były różowe\nDrogi blask świecił im",
-    "fragment3": "A w tobie ma Warszawo mój dom"
-  },
-  {
-    "id": 163,
-    "author": "Sanah & Daria Zawiałow",
-    "title": "Melodia",
-    "fragment1": "Nie uprzedził nikt, że wyleję łzy, czy za dużo ich\nTrochę to żałosne",
-    "fragment2": "Dla ciebie byłam jedną z wielu pań\nA ja już ślub planowałam",
-    "fragment3": "Mówię sobie tańcz, tańcz, tańcz\nAle nie wiem jak"
-  },
-  {
-    "id": 164,
-    "author": "Adele",
-    "title": "Someone like you",
-    "fragment1": "You know how the time flies\nOnly yesterday was the time of our lives",
-    "fragment2": "Sometimes it lasts in love, but sometimes it hurts instead",
-    "fragment3": "I wish nothing but the best for you\n\"Don't forget me, \" I beg"
-  },
-  {
-    "id": 165,
-    "author": "Sanah & Dawid Podsiadło",
-    "title": "Ostatnia nadzieja",
-    "fragment1": "Drżał jej we włosach piękny kwiat\nZe strachu, że go zmieni",
-    "fragment2": "Moja mama, mówiła\nOstatnia umiera nadzieja",
-    "fragment3": "Dziś odchodzę sam\nJuż nie zawrócę\nTo wszystko dziś porzucę"
-  },
-  {
-    "id": 166,
-    "author": "Boney M",
-    "title": "Rasputin",
-    "fragment1": "He was big and strong, in his eyes a flaming glow\nMost people looked at him with terror and with fear",
-    "fragment2": "Russia's greatest love machine\nIt was a shame how he carried on",
-    "fragment3": "Ra ra Rasputin\nLover of the Russian queen"
-  },
-  {
-    "id": 167,
-    "author": "Iris",
-    "title": "Goo Goo Dolls",
-    "fragment1": "And sooner or later, it's over\nI just don't wanna miss you tonight",
-    "fragment2": "I just want you to know who I am",
-    "fragment3": "And you can't fight the tears that ain't coming\nOr the moment of truth in your lies"
-  },
-  {
-    "id": 168,
-    "author": "Nickelback",
-    "title": "Trying not to love you",
-    "fragment1": "Now I see the silver lining, of what we're fighting for\nAnd if we just keep on trying, we could be much more",
-    "fragment2": "God knows I haven't found it yet\nBut I'm dying to, God I'm trying to",
-    "fragment3": "Cause trying not to love you\nOnly makes me love you more"
-  },
-  {
-    "id": 169,
-    "author": "Nickelback",
-    "title": "How you remind me",
-    "fragment1": "Yeah, yeah, are we having fun yet?",
-    "fragment2": "It's not like you to say \"Sorry\"\nI was waiting on a different story",
-    "fragment3": "This is how you remind me\nOf what I really am"
-  },
-  {
-    "id": 170,
-    "author": "Britney Spears",
-    "title": "Toxic",
-    "fragment1": "Intoxicate me now, with your lovin' now\nI think I'm ready now",
-    "fragment2": "Baby, can't you see I'm calling?\nA guy like you should wear a warning",
-    "fragment3": "With a taste of your lips, I'm on a ride\nYou're toxic, I'm slippin' under"
-  },
-  {
-    "id": 171,
-    "author": "Britney Spears",
-    "title": "Baby one more time",
-    "fragment1": "How was I supposed to know\nOh pretty baby",
-    "fragment2": "I must confess, that my loneliness\nIs killing me now",
-    "fragment3": "My loneliness is killing me\nI must confess, I still believe"
-  },
-  {
-    "id": 172,
-    "author": "Grzegorz Hyży",
-    "title": "Wstaję",
-    "fragment1": "Może gdzieś na końcu, na krzyk mój czeka ktoś",
-    "fragment2": "Już mi siły brak i słyszę swój głos\nMusi być tak, nie szkodzi, czasem idzie źle",
-    "fragment3": "Wstaje, mimo tylu ran i znów do góry głowę\nIdę dalej"
-  },
-  {
-    "id": 173,
-    "author": "Natalia Kukulska",
-    "title": "Im więcej Ciebie tym mniej",
-    "fragment1": "Im więcej słów dałeś mi już\nTym później mniej zostanie",
-    "fragment2": "Czy nie wiesz że\nJa nawet kiedy jesteś tak blisko mnie\nTęsknie już za tobą",
-    "fragment3": "Im więcej ciebie tym mniej\nBardziej to czuję niż wiem"
-  },
-  {
-    "id": 174,
-    "author": "Kasia Cerekwicka",
-    "title": "Na kolana",
-    "fragment1": "Zapomnij, zapomnij\nO wszystkim tym co było między nami",
-    "fragment2": "Od dziś jestem Twoim wrogiem, Ty moim wrogiem",
-    "fragment3": "To już nie działa na mnie żegnaj\nTwoja strata"
-  },
-  {
-    "id": 175,
-    "author": "Katy Perry",
-    "title": "I kissed a girl",
-    "fragment1": "I got so brave, drink in hand\nLost my discretion",
-    "fragment2": "Us girls, we are so magical\nSoft skin, red lips, so kissable",
-    "fragment3": "It felt so wrong, it felt so right\nDon't mean I'm in love tonight"
-  },
-  {
-    "id": 176,
-    "author": "Justin Timberlake",
-    "title": "Say something",
-    "fragment1": "Everyone knows all about my transgressions\nStill in my heart somewhere",
-    "fragment2": "Maybe I'm looking for something I can't have",
-    "fragment3": "Everybody says, say something"
-  },
-  {
-    "id": 177,
-    "author": "Twenty One Pilots",
-    "title": "Stressed out",
-    "fragment1": "It'd be to my brother, 'cause we have the same nose\nSame clothes, homegrown, a stone's throw from a creek we used to roam",
-    "fragment2": "Wish we could turn back time\nTo the good old days",
-    "fragment3": "When our mama sang us to sleep\nBut now we're stressed out"
+    "Id": 60,
+    "Answer": "Władysław Pasikowski",
+    "Tip1": "PITBULL. OSTATNI PIES",
+    "Tip2": "PSY",
+    "Tip3": "PSY II: OSTATNIA KREW"
   }
 ]
 
