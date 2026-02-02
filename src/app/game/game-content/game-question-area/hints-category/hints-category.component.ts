@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
 import {Hint} from '../../../../shared/category/category.interface';
 import {TipsComponent} from '../question/tips/tips.component';
 import {QuestionService} from '../../../../shared/question-service.service';
@@ -20,7 +20,7 @@ export class HintsCategoryComponent implements OnDestroy {
   constructor(private questionService: QuestionService) {}
 
   ngOnInit(): void {
-    // Subskrybujemy aktualne pytanie
+    // subscribe actual question
     this.sub = this.questionService.question$.subscribe(q => {
       this.hints = q?.hints ?? [];
     });
