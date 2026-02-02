@@ -16,4 +16,6 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'sebaquiz3.0';
+  //private priv = TEST
+  //private priv2 = quizData
 }

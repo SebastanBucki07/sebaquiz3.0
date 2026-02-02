@@ -1,0 +1,1843 @@
+export const MIASTO_WOJEWODZTWO = [{
+  "id": 1,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Warsaw",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 2, "answers": [{"value": "Małopolskie"}], "question": "Kraków", "hints": [], "revealedAnswers": []}, {
+  "id": 3,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Łódź",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 4,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Wrocław",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 5,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Poznań",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 6, "answers": [{"value": "Pomorskie"}], "question": "Gdańsk", "hints": [], "revealedAnswers": []}, {
+  "id": 7,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Szczecin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 8,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Bydgoszcz",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 9, "answers": [{"value": "Lubelskie"}], "question": "Lublin", "hints": [], "revealedAnswers": []}, {
+  "id": 10,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Białystok",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 11, "answers": [{"value": "Śląskie"}], "question": "Katowice", "hints": [], "revealedAnswers": []}, {
+  "id": 12,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Gdynia",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 13,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Częstochowa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 14,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Radom",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 15,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Toruń",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 16,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Sosnowiec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 17,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Kielce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 18,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Rzeszów",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 19, "answers": [{"value": "Śląskie"}], "question": "Gliwice", "hints": [], "revealedAnswers": []}, {
+  "id": 20,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Zabrze",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 21,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Olsztyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 22,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Bielsko-Biała",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 23, "answers": [{"value": "Śląskie"}], "question": "Bytom", "hints": [], "revealedAnswers": []}, {
+  "id": 24,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Rybnik",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 25,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Ruda Śląska",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 26,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Zielona Góra",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 27, "answers": [{"value": "Śląskie"}], "question": "Tychy", "hints": [], "revealedAnswers": []}, {
+  "id": 28,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Opole",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 29,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Gorzów Wielkopolski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 30,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Dąbrowa Górnicza",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 31,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Płock",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 32,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Elbląg",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 33,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Wałbrzych",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 34, "answers": [{"value": "Śląskie"}], "question": "Chorzów", "hints": [], "revealedAnswers": []}, {
+  "id": 35,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Tarnów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 36,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Koszalin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 37,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Kalisz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 38,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Legnica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 39,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Włocławek",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 40,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Grudziądz",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 41, "answers": [{"value": "Śląskie"}], "question": "Jaworzno", "hints": [], "revealedAnswers": []}, {
+  "id": 42,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Jelenia Góra",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 43,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Siedlce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 44,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Mysłowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 45,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Piotrków Trybunalski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 46,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Konin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 47,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Inowrocław",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 48,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Ostrowiec Świętokrzyski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 49,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Suwałki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 50,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Gniezno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 51,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Przemyśl",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 52,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Głogów",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 53, "answers": [{"value": "Lubelskie"}], "question": "Zamość", "hints": [], "revealedAnswers": []}, {
+  "id": 54,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Pabianice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 55,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Leszno",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 56, "answers": [{"value": "Podlaskie"}], "question": "Łomża", "hints": [], "revealedAnswers": []}, {
+  "id": 57,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Ełk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 58,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Tarnowskie Góry",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 59, "answers": [{"value": "Lubelskie"}], "question": "Chełm", "hints": [], "revealedAnswers": []}, {
+  "id": 60,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Pruszków",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 61,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Mielec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 62,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Bełchatów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 63,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Świdnica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 64,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Biała Podlaska",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 65, "answers": [{"value": "Śląskie"}], "question": "Będzin", "hints": [], "revealedAnswers": []}, {
+  "id": 66,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Legionowo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 67,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Ostrołęka",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 68, "answers": [{"value": "Lubelskie"}], "question": "Puławy", "hints": [], "revealedAnswers": []}, {
+  "id": 69,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Starogard Gdański",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 70,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Skierniewice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 71,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Tarnobrzeg",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 72,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Starachowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 73, "answers": [{"value": "Łódzkie"}], "question": "Kutno", "hints": [], "revealedAnswers": []}, {
+  "id": 74,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Rumia",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 75, "answers": [{"value": "Opolskie"}], "question": "Nysa", "hints": [], "revealedAnswers": []}, {
+  "id": 76,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Kołobrzeg",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 77,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Dębica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 78,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Ciechanów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 79,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Świdnik",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 80,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Otwock",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 81, "answers": [{"value": "Łódzkie"}], "question": "Sieradz", "hints": [], "revealedAnswers": []}, {
+  "id": 82,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Mikołów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 83,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Świnoujście",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 84,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Kwidzyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 85,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Chojnice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 86,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Nowa Sól",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 87,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Bolesławiec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 88,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Oświęcim",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 89,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Malbork",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 90, "answers": [{"value": "Lubuskie"}], "question": "Żary", "hints": [], "revealedAnswers": []}, {
+  "id": 91,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Jarosław",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 92, "answers": [{"value": "Pomorskie"}], "question": "Sopot", "hints": [], "revealedAnswers": []}, {
+  "id": 93,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Chrzanów",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 94, "answers": [{"value": "Opolskie"}], "question": "Brzeg", "hints": [], "revealedAnswers": []}, {
+  "id": 95,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Jasło",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 96, "answers": [{"value": "Pomorskie"}], "question": "Lębork", "hints": [], "revealedAnswers": []}, {
+  "id": 97,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Cieszyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 98, "answers": [{"value": "Śląskie"}], "question": "Czeladź", "hints": [], "revealedAnswers": []}, {
+  "id": 99,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Kraśnik",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 100,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Nowy Targ",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 101,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Iława",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 102,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Police",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 103,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Dzierżoniów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 104,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Grodzisk Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 105,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Zgorzelec",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 106, "answers": [{"value": "Łódzkie"}], "question": "Łowicz", "hints": [], "revealedAnswers": []}, {
+  "id": 107,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Łuków",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 108,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Bielsk Podlaski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 109,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Bielawa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 110,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Augustów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 111,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Bochnia",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 112,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Mława",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 113,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Giżycko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 114,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Brodnica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 115,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Krotoszyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 116,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Kętrzyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 117,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Zakopane",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 118,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Gorlice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 119,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Biłgoraj",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 120,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Kłodzko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 121,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Luboń",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 122,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Brzozów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 123,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Wałcz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 124,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Kluczbork",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 125,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Jarocin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 126,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Świecie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 127,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Wągrowiec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 128,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Skawina",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 129,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Sandomierz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 130,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Białogard",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 131,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Kościan",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 132,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Kościerzyna",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 133,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Szczytno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 134,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Ostrów Mazowiecka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 135,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Jawor",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 136,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Goleniów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 137,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Lubartów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 138,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Świedbodzin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 139,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Grajewo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 140,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Wieliczka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 141,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Łęczna",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 142,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Opoczno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 143,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Koło",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 144,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Działdowo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 145,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Prudnik",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 146,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Gryfino",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 147,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Hajnówka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 148,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Chełmno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 149,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Pleszew",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 150,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Gostyń",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 151,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Nakło nad Notecią",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 152,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Pułtusk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 153,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Chodzież",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 154,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Krasnystaw",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 155,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Gostynin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 156,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Międzyrzecz",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 157, "answers": [{"value": "Łódzkie"}], "question": "Łask", "hints": [], "revealedAnswers": []}, {
+  "id": 158,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Oborniki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 159,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Rawa Mazowiecka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 160,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Łańcut",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 161,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Garwolin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 162,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Kozienice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 163,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Braniewo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 164,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Bytów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 165,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Brzesko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 166,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Grójec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 167,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Krapkowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 168,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Rypin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 169,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Gryfice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 170,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Olecko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 171,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Złotoryja",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 172,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Przeworsk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 173,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Łęczyca",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 174,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Jędrzejów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 175,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Siemiatycze",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 176,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Choszczno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 177,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Limanowa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 178,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Grodzisk Wielkopolski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 179,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Wschowa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 180,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Nidzica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 181,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Człuchów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 182,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Gołdap",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 183,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Głubczyce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 184,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Wolsztyn",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 185,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Trzebnica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 186,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Włodawa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 187,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Golub-Dobrzyń",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 188,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Brzeziny",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 189,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Lubaczów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 190,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Aleksandrów Kujawski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 191,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Węgorzewo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 192,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Janów Lubelski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 193,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Góra",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 194,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Drawsko Pomorskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 195,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Krosno Odrzańskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 196,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Nowe description Lubawskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 197,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Kolno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 198,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Lwówek Śląski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 199,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Kamień Pomorski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 200,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Kolbuszowa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 201,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Kazimierza Wielka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 202,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Hrubieszów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 203,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Świętochłowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 204,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Lubin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 205,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Mińsk Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 206,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Żyrardów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 207,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Tczew",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 208,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Ostróda",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 209,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Siemianowice Śląskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 210, "answers": [{"value": "Pomorskie"}], "question": "Puck", "hints": [], "revealedAnswers": []}, {
+  "id": 211,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Wejherowo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 212,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Sokołów Podlaski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 213,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Płońsk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 214,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Wąbrzeźno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 215,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Mrągowo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 216,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Pruszcz Gdański",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 217,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Zduńska Wola",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 218,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Oleśnica",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 219,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Ostrów Wielkopolski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 220,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Turek",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 221,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Złotów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 222,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Tomaszów Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 223,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Tomaszów Lubelski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 224,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Nowy Sącz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 225,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Sochaczew",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 226,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Piekary Śląskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 227,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Stargard Szczeciński",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 228,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Lipno",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 229, "answers": [{"value": "Łódzkie"}], "question": "Zgierz", "hints": [], "revealedAnswers": []}, {
+  "id": 230,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Lubań",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 231,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Nowy Dwór Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 232,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Zambrów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 233,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Szczecinek",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 234,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Sejny",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 235,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Oława",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 236,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Czarnków",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 237,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Lidzbark Warmiński",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 238,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Kamienna Góra",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 239,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Słupca",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 240,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Jastrzębie-Zdrój",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 241,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Krosno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 242,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Skarżysko-Kamienna",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 243,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Sanok",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 244,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Radziejów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 245,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Bartoszyce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 246,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Maków Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 247,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Sierpc",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 248,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Wodzisław Śląski",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 249, "answers": [{"value": "Śląskie"}], "question": "Żory", "hints": [], "revealedAnswers": []}, {
+  "id": 250,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Radomsko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 251,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Wołomin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 252,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Radzyń Podlaski",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 253,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Sławno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 254,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Stalowa Wola",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 255,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Racibórz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 256,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Piła",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 257, "answers": [{"value": "Śląskie"}], "question": "Żywiec", "hints": [], "revealedAnswers": []}, {
+  "id": 258,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Świdwin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 259,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Przasnysz",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 260, "answers": [{"value": "Lubuskie"}], "question": "Żagań", "hints": [], "revealedAnswers": []}, {
+  "id": 261,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Piaseczno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 262,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Wysokie Mazowieckie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 263,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Leżajsk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 264,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Zawiercie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 265,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Kędzierzyn-Koźle",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 266, "answers": [{"value": "Śląskie"}], "question": "Bieruń", "hints": [], "revealedAnswers": []}, {
+  "id": 267,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Myszków",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 268,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Słupsk",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 269,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Węgrów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 270,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Wadowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 271,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Olkusz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 272,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Sucha Beskidzka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 273,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Ożarów Mazowiecki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 274,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Pszczyna",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 275,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Myślenice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 276,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Lubliniec",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 277, "answers": [{"value": "Łódzkie"}], "question": "Wieluń", "hints": [], "revealedAnswers": []}, {
+  "id": 278,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Wyszków",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 279,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Rawicz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 280,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Września",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 281,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Śrem",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 282,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Kępno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 283,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Ropczyce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 284,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Dąbrowa Tarnowska",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 285,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Polkowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 286,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Kartuzy",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 287,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Szamotuły",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 288,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Proszowice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 289,
+  "answers": [{"value": "Śląskie"}],
+  "question": "Kłobuck",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 290,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Nisko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 291,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Ząbkowice Śląskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 292,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Strzelce Opolskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 293,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Strzyżów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 294,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Środa Wielkopolska",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 295,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Wieruszów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 296,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Końskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 297,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Busko-Zdrój",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 298,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Nowy Tomyśl",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 299,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Białobrzegi",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 300,
+  "answers": [{"value": "Małopolskie"}],
+  "question": "Miechów",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 301, "answers": [{"value": "Lubelskie"}], "question": "Ryki", "hints": [], "revealedAnswers": []}, {
+  "id": 302,
+  "answers": [{"value": "Wielkopolskie"}],
+  "question": "Ostrzeszów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 303,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Strzelin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 304,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Szydłowiec",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 305,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Staszów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 306,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Żuromin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 307,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Opatów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 308,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Sztum",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 309,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Słubice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 310,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Lesko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 311,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Żnin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 312,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Pajęczno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 313,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Parczew",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 314,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Mogilno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 315,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Pińczów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 316,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Pyrzyce",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 317,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Mońki",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 318,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Środa Śląska",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 319,
+  "answers": [{"value": "Lubelskie"}],
+  "question": "Opole Lubelskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 320,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Łosice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 321,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Zwoleń",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 322,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Namysłów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 323,
+  "answers": [{"value": "Pomorskie"}],
+  "question": "Nowy Dwór Gdański",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 324,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Tuchola",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 325,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Lipsko",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 326,
+  "answers": [{"value": "Podlaskie"}],
+  "question": "Sokółka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 327,
+  "answers": [{"value": "Świętokrzyskie"}],
+  "question": "Włoszczowa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 328,
+  "answers": [{"value": "Opolskie"}],
+  "question": "Olesno",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 329,
+  "answers": [{"value": "Kujawsko-Pomorskie"}],
+  "question": "Sępólno Krajeńskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 330,
+  "answers": [{"value": "Łódzkie"}],
+  "question": "Poddębice",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 331,
+  "answers": [{"value": "Mazowieckie"}],
+  "question": "Przysucha",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 332,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Wołów",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 333,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Myślibórz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 334,
+  "answers": [{"value": "Zachodniopomorskie"}],
+  "question": "Łobez",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 335,
+  "answers": [{"value": "Dolnośląskie"}],
+  "question": "Milicz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 336,
+  "answers": [{"value": ""}],
+  "question": "Strzelce Krajeńskie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 337,
+  "answers": [{"value": "Warmińsko-Mazurskie"}],
+  "question": "Pisz",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 338,
+  "answers": [{"value": "Lubuskie"}],
+  "question": "Sulęcin",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 339,
+  "answers": [{"value": "Podkarpackie"}],
+  "question": "Ustrzyki Dolne",
+  "hints": [],
+  "revealedAnswers": []
+}, {"id": 340, "answers": [{"value": "Wielkopolskie"}], "question": "Międzychód", "hints": [], "revealedAnswers": []}]

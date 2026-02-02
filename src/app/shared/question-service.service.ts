@@ -3,6 +3,22 @@ import { BehaviorSubject } from 'rxjs';
 import { FILMY } from './questions/movies.questions';
 import { Question } from './questions/question.interface';
 import {BOOKS} from './questions/books.questions';
+import {CHEMIST} from './questions/chemists.questions';
+import {TV_SERIES} from "./questions/tvSeries.questions";
+import {GRY} from "./questions/games.questions";
+import {BIOLOGIA} from "./questions/biology.questions";
+import {BOGOWIE} from "./questions/gods.questions";
+import {HISTORIA} from "./questions/history.questions";
+import {MIASTO_WOJEWODZTWO} from "./questions/polishDistricts.questions";
+import {STADIONY} from "./questions/stadiums.questions";
+import {PILKA_NOZNA} from "./questions/football.questions";
+import {PRZYSLOWIA} from "./questions/proverbs.questions";
+import {FRAGMENTY_PIOSENEK} from "./questions/songs.questions";
+import {ARTYSTA_PO_UTWORACH} from "./questions/musicArtists.questions";
+import {BOHATEROWIE_FILMOWI} from "./questions/movieHeroes.questions";
+import {BOHATEROWIE_SERIALOWI} from "./questions/tvSeriesHeroes.question";
+import {MIASTA_SWIATA} from "./questions/worldCities.questions";
+import {REZYSEROWIE} from "./questions/directors.questions";
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -73,9 +89,58 @@ export class QuestionService {
     if (type === 'one-answer' && name === 'Film') {
       return FILMY;
     }
+    if (type === 'one-answer' && name === 'Seriale') {
+      return TV_SERIES;
+    }
+    if (type === 'one-answer' && name === 'Symbole Chemiczne') {
+      return CHEMIST;
+    }
+    if (type === 'one-answer' && name === 'Gry') {
+      return GRY;
+    }
+    if (type === 'one-answer' && name === 'Biologia') {
+      return BIOLOGIA;
+    }
+    if (type === 'one-answer' && name === 'Bogowie') {
+      return BOGOWIE;
+    }
+    if (type === 'one-answer' && name === 'Historia') {
+      return HISTORIA;
+    }
+    if (type === 'one-answer' && name === 'Miasto - Województwo') {
+      return MIASTO_WOJEWODZTWO;
+    }
+    if (type === 'one-answer' && name === 'Nazwy stadionów') {
+      return STADIONY;
+    }
+    if (type === 'one-answer' && name === 'Piłka nożna - wielkie imprezy') {
+      return PILKA_NOZNA;
+    }
+    if (type === 'one-answer' && name === 'Przysłowia') {
+      return PRZYSLOWIA;
+    }
     if (type === 'hints' && name === 'Lektury') {
       return BOOKS;
     }
+    if (type === 'hints' && name === 'Fragmenty piosenek') {
+      return FRAGMENTY_PIOSENEK;
+    }
+    if (type === 'hints' && name === 'Artysta po tytułach piosenek') {
+      return ARTYSTA_PO_UTWORACH;
+    }
+    if (type === 'hints' && name === 'Film po bohaterach') {
+      return BOHATEROWIE_FILMOWI;
+    }
+    if (type === 'hints' && name === 'Serial po bohaterach') {
+      return BOHATEROWIE_SERIALOWI;
+    }
+    if (type === 'hints' && name === 'Miasta świata') {
+      return MIASTA_SWIATA;
+    }
+    if (type === 'hints' && name === 'Reżyser po filmach') {
+      return REZYSEROWIE;
+    }
+
     return [];
   }
 }

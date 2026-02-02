@@ -16,7 +16,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 1,
     type: 'music',
     name: 'Muzyka',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
@@ -30,55 +30,55 @@ export const CATEGORY_LIST: Category[] = [
     id: 3,
     type: 'abcd',
     name: 'Wiedza ogólna',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 4,
     type: 'wpisywanie',
     name: 'Wypisz wspólne',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 5,
     type: 'music',
     name: 'Czołówki seriali',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 6,
     type: 'one-answer',
     name: 'Film',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
     id: 7,
     type: 'one-answer',
     name: 'Seriale',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
     id: 8,
     type: 'photos',
     name: 'Budowle',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   }, {
     id: 9,
     type: 'photos',
     name: 'Znane osoby',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 10,
     type: 'one-answer',
     name: 'Gry',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -92,7 +92,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 12,
     type: 'one-answer',
     name: 'Bogowie',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -113,21 +113,21 @@ export const CATEGORY_LIST: Category[] = [
     id: 15,
     type: 'one-answer',
     name: 'Nazwy stadionów',
-    basePoints: 5,
+    basePoints:3,
     hints: []
   },
   {
     id: 16,
     type: 'one-answer',
     name: 'Piłka nożna - wielkie imprezy',
-    basePoints: 5,
+    basePoints: 2,
     hints: []
   },
   {
     id: 17,
     type: 'one-answer',
     name: 'Przysłowia',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -157,7 +157,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 20,
     type: 'hints',
     name: 'Miasta świata',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {
         id: 'first',
@@ -165,8 +165,8 @@ export const CATEGORY_LIST: Category[] = [
         penaltyPercent: 0,
         content: 'Kraków'
       },
-      {id: 'second', label: 'Drugie miasto', penaltyPercent: 30, content: 'Katowice'},
-      {id: 'third', label: 'Trzecie miasto', penaltyPercent: 30, content: 'Gdańsk'}
+      {id: 'second', label: 'Drugie miasto', penaltyPercent: 20, content: 'Katowice'},
+      {id: 'third', label: 'Trzecie miasto', penaltyPercent: 20, content: 'Gdańsk'}
     ]
   },
   {
@@ -181,8 +181,8 @@ export const CATEGORY_LIST: Category[] = [
         penaltyPercent: 0,
         content: 'Papa Don\'t Preach'
       },
-      {id: 'second', label: 'Drugi tytuł', penaltyPercent: 30, content: 'Frozen'},
-      {id: 'third', label: 'Trzeci tytuł', penaltyPercent: 30, content: 'Hung Up'}
+      {id: 'second', label: 'Drugi tytuł', penaltyPercent: 20, content: 'Frozen'},
+      {id: 'third', label: 'Trzeci tytuł', penaltyPercent: 20, content: 'Hung Up'}
     ]
   },
   {
@@ -250,7 +250,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 28,
     type: 'one-answer',
     name: 'Stolice krajów',
-    basePoints: 5,
+    basePoints: 4,
     hints: []
   },
   {
@@ -268,7 +268,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 30,
     type: 'hints',
     name: 'Film po bohaterach',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {id: 'first', label: 'Pierwszy film', penaltyPercent: 0, content: 'Rezyser 1'},
       {id: 'second', label: 'Drugi film', penaltyPercent: 0, content: 'Film został wydany w 1999 roku.'},
@@ -279,7 +279,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 31,
     type: 'hints',
     name: 'Serial po bohaterach',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {id: 'first', label: 'Pierwszy film', penaltyPercent: 0, content: 'Rezyser 1'},
       {id: 'second', label: 'Drugi film', penaltyPercent: 0, content: 'Film został wydany w 1999 roku.'},
