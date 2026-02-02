@@ -13,18 +13,45 @@ type OutputMovie = {
 };
 
 function transformMovies(data: InputMovie[]): OutputMovie[] {
-  const tmp =  data.map(movie => ({
+  const tmp = data.map(movie => ({
     id: movie.id,
     answers: [{ value: movie.title }],
-    question: movie.description,
+    question: hideTitlePartsAdvanced(movie.description, movie.title),
     hints: [],
     revealedAnswers: []
   }));
-  console.log(JSON.stringify(tmp))
-  return tmp
+  console.log(JSON.stringify(tmp, null, 2));
+  return tmp;
 }
 
-// przykład użycia
+const STOP_WORDS = new Set([
+  "NA", "I", "Z", "W", "DO", "O", "A", "ORAZ", "POD", "NAD", "OD"
+]);
+
+function getStem(word: string): string {
+  // bardzo proste „stemowanie” pod PL
+  return word.slice(0, Math.max(4, word.length - 2));
+}
+
+function hideTitlePartsAdvanced(description: string, title: string): string {
+  const stems = title
+      .split(/\s+/)
+      .map(w => w.replace(/[^\p{L}]/gu, ""))
+      .filter(w =>
+          w.length >= 4 &&
+          !STOP_WORDS.has(w.toUpperCase())
+      )
+      .map(getStem);
+
+  if (stems.length === 0) return description;
+
+  const pattern = stems.join("|");
+  const regex = new RegExp(`\\b(${pattern})\\p{L}*\\b`, "giu");
+
+  return description.replace(regex, "[...]");
+}
+
+
 const input = [
   {
     "id": 1,
@@ -1527,6 +1554,5 @@ const input = [
     "description": "Na Dalekim Wschodzie rodzina O'Connellów próbuje powstrzymać wskrzeszonego cesarza Hana i jego armię terakotowych wojowników przed zawładnięciem światem."
   }
 ]
-
 
 export const TEST = transformMovies(input);

@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {TEST} from './shared/createQuestion.helper';
 
 @Component({
   selector: 'app-root',
@@ -16,4 +17,5 @@ import { FooterComponent } from './footer/footer.component';
 })
 export class AppComponent {
   title = 'sebaquiz3.0';
+  //private priv = TEST
 }

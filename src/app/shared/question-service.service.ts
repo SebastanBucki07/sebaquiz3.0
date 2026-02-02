@@ -3,6 +3,16 @@ import { BehaviorSubject } from 'rxjs';
 import { FILMY } from './questions/movies.questions';
 import { Question } from './questions/question.interface';
 import {BOOKS} from './questions/books.questions';
+import {CHEMIST} from './questions/chemists.questions';
+import {TV_SERIES} from "./questions/tvSeries.questions";
+import {GRY} from "./questions/games.questions";
+import {BIOLOGIA} from "./questions/biology.questions";
+import {BOGOWIE} from "./questions/gods.questions";
+import {HISTORIA} from "./questions/history.questions";
+import {MIASTO_WOJEWODZTWO} from "./questions/polishDistricts.questions";
+import {STADIONY} from "./questions/stadiums.questions";
+import {PILKA_NOZNA} from "./questions/football.questions";
+import {PRZYSLOWIA} from "./questions/proverbs.questions";
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -72,6 +82,36 @@ export class QuestionService {
   private getQuestions(type: string, name: string): Question[] {
     if (type === 'one-answer' && name === 'Film') {
       return FILMY;
+    }
+    if (type === 'one-answer' && name === 'Seriale') {
+      return TV_SERIES;
+    }
+    if (type === 'one-answer' && name === 'Symbole Chemiczne') {
+      return CHEMIST;
+    }
+    if (type === 'one-answer' && name === 'Gry') {
+      return GRY;
+    }
+    if (type === 'one-answer' && name === 'Biologia') {
+      return BIOLOGIA;
+    }
+    if (type === 'one-answer' && name === 'Bogowie') {
+      return BOGOWIE;
+    }
+    if (type === 'one-answer' && name === 'Historia') {
+      return HISTORIA;
+    }
+    if (type === 'one-answer' && name === 'Miasto - Województwo') {
+      return MIASTO_WOJEWODZTWO;
+    }
+    if (type === 'one-answer' && name === 'Nazwy stadionów') {
+      return STADIONY;
+    }
+    if (type === 'one-answer' && name === 'Piłka nożna - wielkie imprezy') {
+      return PILKA_NOZNA;
+    }
+    if (type === 'one-answer' && name === 'Przysłowia') {
+      return PRZYSLOWIA;
     }
     if (type === 'hints' && name === 'Lektury') {
       return BOOKS;

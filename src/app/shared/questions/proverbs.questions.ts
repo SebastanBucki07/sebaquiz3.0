@@ -1,0 +1,314 @@
+export const PRZYSLOWIA = [{
+  "id": 1,
+  "answers": [{"value": "Tam nie ma co jeść"}],
+  "question": "Gdzie kucharek sześc",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 2,
+  "answers": [{"value": "jabłko od jabłoni"}],
+  "question": "Nie daleko pada",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 3,
+  "answers": [{"value": "to nie zdrowo"}],
+  "question": "Co za dużo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 4,
+  "answers": [{"value": "jak nie ma w głowie mądrości"}],
+  "question": "a co po czyjej wielkości",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 5,
+  "answers": [{"value": "to nie obcy"}],
+  "question": "co swój,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 6,
+  "answers": [{"value": "to nie tobie, smrodzie"}],
+  "question": "co wolno wojewodzie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 7,
+  "answers": [{"value": "rozumowi przeczy"}],
+  "question": "fortuna często",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 8,
+  "answers": [{"value": "aż kobyłkę wilki zjedzą"}],
+  "question": "czekaj tatka latka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 9,
+  "answers": [{"value": "da i chleb"}],
+  "question": "dał Pan Bóg zęby,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 10,
+  "answers": [{"value": "Bóg nie zapomina"}],
+  "question": "dobrego syna nigdy",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 11,
+  "answers": [{"value": "jutro żal"}],
+  "question": "dzisiaj bal,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 12,
+  "answers": [{"value": "głosu nie mają"}],
+  "question": "dzieci i ryby",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 13,
+  "answers": [{"value": "ptak do lotu"}],
+  "question": "człek do pracy stworzon,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 14,
+  "answers": [{"value": "nie mierzą"}],
+  "question": "chłopa korcem",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 15,
+  "answers": [{"value": "do swego"}],
+  "question": "ciągnie swój",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 16,
+  "answers": [{"value": "zdobią szlachcica"}],
+  "question": "chleb, piwo i świéca",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 17,
+  "answers": [{"value": "tam się bieda wejść nie waży"}],
+  "question": "gdzie praca, pilność na straży,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 18,
+  "answers": [{"value": "całe stado zarazi"}],
+  "question": "jedna owca parszywa",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 19,
+  "answers": [{"value": "swój ogon chwali"}],
+  "question": "każda pliszka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 20,
+  "answers": [{"value": "będą goście"}],
+  "question": "kot się myje",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 21,
+  "answers": [{"value": "temu i wół cielę urodzi"}],
+  "question": "kto ma szczęście",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 22,
+  "answers": [{"value": "liczmy się jak Żydzi"}],
+  "question": "kochajmy się jak bracia",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 23,
+  "answers": [{"value": "jaka matka, taka córka"}],
+  "question": "jakie jabłko, taka skórka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 24,
+  "answers": [{"value": "piękną jesień przyprowadza"}],
+  "question": "gdy Zuzanna z pogodą chadza,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 25,
+  "answers": [{"value": "żaba nogę podstawia"}],
+  "question": "konia kują,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 26,
+  "answers": [{"value": "czapka gore"}],
+  "question": "na złodzieju",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 27,
+  "answers": [{"value": "ponieśli i wilka"}],
+  "question": "nosił wilk razy kilka",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 28,
+  "answers": [{"value": "idą rzeki do morza"}],
+  "question": "na świętego Grzegorza",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 29,
+  "answers": [{"value": "niż cietrzew na sęku"}],
+  "question": "lepszy wróbel w ręku",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 30,
+  "answers": [{"value": "ni do roboty, ni do pacierza"}],
+  "question": "pijak podobny jest do zwierza:",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 31,
+  "answers": [{"value": "broni od ognia chaty"}],
+  "question": "sól świętej Agaty",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 32,
+  "answers": [{"value": "nie ma kołaczy"}],
+  "question": "bez pracy",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 33,
+  "answers": [{"value": "w zęby się nie zagląda"}],
+  "question": "darowanemu koniowi",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 34,
+  "answers": [{"value": "przed zachodem słońca"}],
+  "question": "nie chwal dnia",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 35,
+  "answers": [{"value": "kołem się toczy"}],
+  "question": "Fortuna",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 36,
+  "answers": [{"value": "w miarę jedzenia"}],
+  "question": "apetyt rośnie",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 37,
+  "answers": [{"value": "nie utonie"}],
+  "question": "co ma wisieć",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 38,
+  "answers": [{"value": "a będzie kokosza"}],
+  "question": "grosz do grosza",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 39,
+  "answers": [{"value": "to po diable"}],
+  "question": "co nagle",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 40,
+  "answers": [{"value": "myszy harcuja"}],
+  "question": "gdy kota nie ma",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 41,
+  "answers": [{"value": "tak Bóg kubie"}],
+  "question": "jak Kuba Bogu",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 42,
+  "answers": [{"value": "od miecza ginie"}],
+  "question": "kto mieczem wojuje",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 43,
+  "answers": [{"value": "nie błądzi"}],
+  "question": "kto pyta",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 44,
+  "answers": [{"value": "póki gorące"}],
+  "question": "kuc żelazo",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 45,
+  "answers": [{"value": "a diabła ma za skórą"}],
+  "question": "modli się pod figurą",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 46,
+  "answers": [{"value": "to z serca"}],
+  "question": "co z oczu",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 47,
+  "answers": [{"value": "mały deszcz"}],
+  "question": "z dużej chmury",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 48,
+  "answers": [{"value": "sam w nie wpada"}],
+  "question": "kto pod kim dołki kopie,",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 49,
+  "answers": [{"value": "nie tuczy"}],
+  "question": "kradzione",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 50,
+  "answers": [{"value": "co tobie nie miłe"}],
+  "question": "nie rób komuś tego",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 51,
+  "answers": [{"value": "mędrcem nie czyni"}],
+  "question": "broda",
+  "hints": [],
+  "revealedAnswers": []
+}, {
+  "id": 52,
+  "answers": [{"value": "tym więcej chcesz mieć"}],
+  "question": "im więcej masz",
+  "hints": [],
+  "revealedAnswers": []
+}]
+

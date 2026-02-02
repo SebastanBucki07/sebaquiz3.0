@@ -16,7 +16,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 1,
     type: 'music',
     name: 'Muzyka',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
@@ -30,55 +30,55 @@ export const CATEGORY_LIST: Category[] = [
     id: 3,
     type: 'abcd',
     name: 'Wiedza ogólna',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 4,
     type: 'wpisywanie',
     name: 'Wypisz wspólne',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 5,
     type: 'music',
     name: 'Czołówki seriali',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 6,
     type: 'one-answer',
     name: 'Film',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
     id: 7,
     type: 'one-answer',
     name: 'Seriale',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
     id: 8,
     type: 'photos',
     name: 'Budowle',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   }, {
     id: 9,
     type: 'photos',
     name: 'Znane osoby',
-    basePoints: 5,
+    basePoints: 99,
     hints: []
   },
   {
     id: 10,
     type: 'one-answer',
     name: 'Gry',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -92,7 +92,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 12,
     type: 'one-answer',
     name: 'Bogowie',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -113,21 +113,21 @@ export const CATEGORY_LIST: Category[] = [
     id: 15,
     type: 'one-answer',
     name: 'Nazwy stadionów',
-    basePoints: 5,
+    basePoints:3,
     hints: []
   },
   {
     id: 16,
     type: 'one-answer',
     name: 'Piłka nożna - wielkie imprezy',
-    basePoints: 5,
+    basePoints: 2,
     hints: []
   },
   {
     id: 17,
     type: 'one-answer',
     name: 'Przysłowia',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
@@ -250,7 +250,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 28,
     type: 'one-answer',
     name: 'Stolice krajów',
-    basePoints: 5,
+    basePoints: 4,
     hints: []
   },
   {
