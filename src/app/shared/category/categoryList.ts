@@ -70,8 +70,8 @@ export const CATEGORY_LIST: Category[] = [
   }, {
     id: 9,
     type: 'photos',
-    name: 'Znane osoby',
-    basePoints: 99,
+    name: 'Znane postacie',
+    basePoints: 4,
     hints: []
   },
   {
