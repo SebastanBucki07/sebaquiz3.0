@@ -22,6 +22,7 @@ import {REZYSEROWIE} from "./questions/directors.questions";
 import {ZNANE_POSTACIE} from './questions/famousPeople.questions';
 import {BUDOWLE} from './questions/buildings.questions';
 import {FLAGI} from './questions/flag.questions';
+import {HISTORIA_PILKARZA} from './questions/footballHistory.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -151,6 +152,9 @@ export class QuestionService {
     }
     if (type === 'photos' && name === 'Flagi') {
       return FLAGI;
+    }
+    if (type === 'photo-hints' && name === 'Klubowa Historia piłkarza') {
+      return HISTORIA_PILKARZA
     }
 
 
