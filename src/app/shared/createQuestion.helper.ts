@@ -29,7 +29,6 @@ const STOP_WORDS = new Set([
 ]);
 
 function getStem(word: string): string {
-  // bardzo proste „stemowanie” pod PL
   return word.slice(0, Math.max(4, word.length - 2));
 }
 

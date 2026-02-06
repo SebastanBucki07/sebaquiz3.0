@@ -28,25 +28,22 @@ interface OutputItem {
 }
 
 function transformQuizWithHints(data: InputItem[]): OutputItem[] {
-  const tmp= data.map(item => {
+  const tmp = data.map(item => {
     const id = item.id ?? item.Id ?? 0;
 
-    // Answers
     const answers: { label: string; value: string }[] = [];
     if (item.title && item.title !== "-") {
-      answers.push({ label: "tytul", value: item.title });
+      answers.push({label: "tytul", value: item.title});
     }
     if (item.author) {
-      answers.push({ label: "autor", value: item.author });
+      answers.push({label: "autor", value: item.author});
     }
     if (item.Answer) {
-      answers.push({ label: "tytul", value: item.Answer });
+      answers.push({label: "tytul", value: item.Answer});
     }
 
-    // Question
     const question = item.Answer ?? item.fragment1 ?? "Brak opisu";
 
-    // Hints: zamiana fragmentów i tipów w Hint[]
     const hintKeys = ["fragment1", "fragment2", "fragment3", "Tip1", "Tip2", "Tip3"];
     const hints: Hint[] = [];
 
@@ -76,7 +73,6 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
   return tmp
 }
 
-// === PRZYKŁAD UŻYCIA ===
 
 const inputData: InputItem[] = [
   {

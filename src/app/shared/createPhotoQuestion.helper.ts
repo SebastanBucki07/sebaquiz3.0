@@ -2,9 +2,9 @@ interface InputItem {
   Id?: number;
   id?: number;
 
-  Answer?: string;   // stare quizy
-  name?: string;     // 👈 DLA ZDJĘĆ
-  photo?: string;    // 👈 DLA ZDJĘĆ
+  Answer?: string;
+  name?: string;
+  photo?: string;
 
   Tip1?: string;
   Tip2?: string;
@@ -63,7 +63,7 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
      *  QUESTION
      * ===================== */
     const question =
-      item.photo ??                 // 👈 zdjęcie ma PRIORYTET
+      item.photo ??
       item.Answer ??
       item.fragment1 ??
       "Brak opisu";
@@ -73,7 +73,6 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
      * ===================== */
     const hints: Hint[] = [];
 
-    // jeżeli to quiz ze zdjęciem → brak hintów
     if (!item.photo) {
       const hintKeys = ["fragment1", "fragment2", "fragment3", "Tip1", "Tip2", "Tip3"];
 

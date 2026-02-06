@@ -28,15 +28,12 @@ function transformCountriesToPhotoQuiz(data: CountryInput[]): OutputItem[] {
   const result = data.map(item => ({
     id: item.id,
 
-    // answer = nazwa kraju
     answers: [
       {value: item.name.trim()}
     ],
 
-    // question = flaga z flagcdn
     question: `https://flagcdn.com/w80/${item.code.toLowerCase()}.png`,
 
-    // dwa hinty
     hints: [
       {
         id: "0",

@@ -26,7 +26,6 @@ type QuizCountry = {
   revealedAnswers: any[];
 };
 
-// 🔹 Kontynenty po polsku, uwzględniając subregion dla Ameryk
 function getPolishRegion(region?: string, subregion?: string): string {
   if (!region) return "Nieznany";
 
@@ -49,7 +48,6 @@ function getPolishRegion(region?: string, subregion?: string): string {
 }
 
 export function transformCountriesToQuiz(data: RestCountry[]): QuizCountry[] {
-  // 🔹 1️⃣ pełna mapa ISO3 → polska nazwa kraju
   const cca3ToPolishName: Record<string, string> = {};
   data.forEach(c => {
     if (c.cca3) {
@@ -57,7 +55,6 @@ export function transformCountriesToQuiz(data: RestCountry[]): QuizCountry[] {
     }
   });
 
-  // 🔹 2️⃣ transformacja do quiz
   return data.map((c, index) => {
     const bordersNames = (c.borders ?? [])
       .map(code => cca3ToPolishName[code])
