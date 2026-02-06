@@ -1,19 +1,18 @@
-<div class="photo-hints" *ngIf="hints.length > 0; else noHints">
-  <button
-    class="hint-thumb"
+<div class="photo-hints-container" *ngIf="hints.length > 0; else noHints">
+  <mat-card
+    class="hint-card"
     *ngFor="let hint of hints"
     (click)="useHint(hint)"
   >
     <div class="hint-image-wrapper">
-      <img
-        [src]="hint.content"
-        [alt]="hint.content"
-      />
+      <img [src]="hint.content" [alt]="hint.label" />
     </div>
-    <div class="hint-caption">{{ hint.content }}</div>
-  </button>
+    <mat-card-footer>
+      <span class="hint-label">{{ hint.label }}</span>
+    </mat-card-footer>
+  </mat-card>
 </div>
 
 <ng-template #noHints>
   <p class="no-hints">Brak podpowiedzi dla tej kategorii</p>
-</ng-template>
+  </ng-template>

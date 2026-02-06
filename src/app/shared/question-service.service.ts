@@ -23,6 +23,9 @@ import {ZNANE_POSTACIE} from './questions/famousPeople.questions';
 import {BUDOWLE} from './questions/buildings.questions';
 import {FLAGI} from './questions/flag.questions';
 import {HISTORIA_PILKARZA} from './questions/footballHistory.questions';
+import {FILM_PO_AKTORACH} from './questions/moviesActors.questions';
+import {getImageUrl, getMovieCast, getMovieIdByTitle, TMDBActor} from './apiHelper/actor.helper';
+import {Hint} from './category/category.interface';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -32,16 +35,15 @@ export class QuestionService {
 
   private usedQuestions: Question[] = [];
 
-
-  loadRandomQuestion(type: string, name: string) {
-    const questions = this.getQuestions(type, name);
+  async loadRandomQuestion(type: string, name: string) {
+    const questions = await this.getQuestions(type, name);
 
     const availableQuestions = questions.filter(
       q => !this.usedQuestions.some(uq => uq.id === q.id)
     );
 
     if (availableQuestions.length === 0) {
-      alert('Wszystkie pytania zostały wyświetlone!'); // 🔥 alert
+      alert('Wszystkie pytania zostały wyświetlone!');
       return;
     }
 
@@ -54,6 +56,7 @@ export class QuestionService {
     this.usedQuestions.push(random);
     this.currentQuestion$.next(random);
   }
+
 
 
   revealAnswer(index: number) {
@@ -83,81 +86,92 @@ export class QuestionService {
   }
 
   /** ✅ PUBLIC: checks if there are any more questions in a given category */
-  hasMoreQuestions(type: string, name: string): boolean {
-    const questions = this.getQuestions(type, name);
-    const used = this.usedQuestions.filter(q => questions.some(aq => aq.id === q.id));
+  async hasMoreQuestions(type: string, name: string): Promise<boolean> {
+    const questions = await this.getQuestions(type, name);
+    const used = this.usedQuestions.filter(q =>
+      questions.some(aq => aq.id === q.id)
+    );
     return used.length < questions.length;
   }
 
-  private getQuestions(type: string, name: string): Question[] {
-    if (type === 'one-answer' && name === 'Film') {
-      return FILMY;
-    }
-    if (type === 'one-answer' && name === 'Seriale') {
-      return TV_SERIES;
-    }
-    if (type === 'one-answer' && name === 'Symbole Chemiczne') {
-      return CHEMIST;
-    }
-    if (type === 'one-answer' && name === 'Gry') {
-      return GRY;
-    }
-    if (type === 'one-answer' && name === 'Biologia') {
-      return BIOLOGIA;
-    }
-    if (type === 'one-answer' && name === 'Bogowie') {
-      return BOGOWIE;
-    }
-    if (type === 'one-answer' && name === 'Historia') {
-      return HISTORIA;
-    }
-    if (type === 'one-answer' && name === 'Miasto - Województwo') {
-      return MIASTO_WOJEWODZTWO;
-    }
-    if (type === 'one-answer' && name === 'Nazwy stadionów') {
-      return STADIONY;
-    }
-    if (type === 'one-answer' && name === 'Piłka nożna - wielkie imprezy') {
-      return PILKA_NOZNA;
-    }
-    if (type === 'one-answer' && name === 'Przysłowia') {
-      return PRZYSLOWIA;
-    }
-    if (type === 'hints' && name === 'Lektury') {
-      return BOOKS;
-    }
-    if (type === 'hints' && name === 'Fragmenty piosenek') {
-      return FRAGMENTY_PIOSENEK;
-    }
-    if (type === 'hints' && name === 'Artysta po tytułach piosenek') {
-      return ARTYSTA_PO_UTWORACH;
-    }
-    if (type === 'hints' && name === 'Film po bohaterach') {
-      return BOHATEROWIE_FILMOWI;
-    }
-    if (type === 'hints' && name === 'Serial po bohaterach') {
-      return BOHATEROWIE_SERIALOWI;
-    }
-    if (type === 'hints' && name === 'Miasta świata') {
-      return MIASTA_SWIATA;
-    }
-    if (type === 'hints' && name === 'Reżyser po filmach') {
-      return REZYSEROWIE;
-    }
-    if (type === 'photos' && name === 'Znane postacie') {
-      return ZNANE_POSTACIE;
-    }
-    if (type === 'photos' && name === 'Budowle') {
-      return BUDOWLE;
-    }
-    if (type === 'photos' && name === 'Flagi') {
-      return FLAGI;
-    }
+
+  private async getQuestions(type: string, name: string): Promise<Question[]> {
+
+    if (type === 'one-answer' && name === 'Film') return FILMY;
+    if (type === 'one-answer' && name === 'Seriale') return TV_SERIES;
+    if (type === 'one-answer' && name === 'Symbole Chemiczne') return CHEMIST;
+    if (type === 'one-answer' && name === 'Gry') return GRY;
+    if (type === 'one-answer' && name === 'Biologia') return BIOLOGIA;
+    if (type === 'one-answer' && name === 'Bogowie') return BOGOWIE;
+    if (type === 'one-answer' && name === 'Historia') return HISTORIA;
+    if (type === 'one-answer' && name === 'Miasto - Województwo') return MIASTO_WOJEWODZTWO;
+    if (type === 'one-answer' && name === 'Nazwy stadionów') return STADIONY;
+    if (type === 'one-answer' && name === 'Piłka nożna - wielkie imprezy') return PILKA_NOZNA;
+    if (type === 'one-answer' && name === 'Przysłowia') return PRZYSLOWIA;
+
+    if (type === 'hints' && name === 'Lektury') return BOOKS;
+    if (type === 'hints' && name === 'Fragmenty piosenek') return FRAGMENTY_PIOSENEK;
+    if (type === 'hints' && name === 'Artysta po tytułach piosenek') return ARTYSTA_PO_UTWORACH;
+    if (type === 'hints' && name === 'Film po bohaterach') return BOHATEROWIE_FILMOWI;
+    if (type === 'hints' && name === 'Serial po bohaterach') return BOHATEROWIE_SERIALOWI;
+    if (type === 'hints' && name === 'Miasta świata') return MIASTA_SWIATA;
+    if (type === 'hints' && name === 'Reżyser po filmach') return REZYSEROWIE;
+
+    if (type === 'photos' && name === 'Znane postacie') return ZNANE_POSTACIE;
+    if (type === 'photos' && name === 'Budowle') return BUDOWLE;
+    if (type === 'photos' && name === 'Flagi') return FLAGI;
+
     if (type === 'photo-hints' && name === 'Klubowa Historia piłkarza') {
-      return HISTORIA_PILKARZA
+      return HISTORIA_PILKARZA;
     }
 
+    if (type === 'photo-hints' && name === 'W jakim filmie zagrała taka obsada?') {
+      return FILM_PO_AKTORACH
+    }
 
+    // 👇 TWARDY fallback (TS2366 znika)
     return [];
   }
+
+  async getRemainingQuestions(
+    type: string,
+    name: string
+  ): Promise<number> {
+    const all = await this.getQuestions(type, name);
+    const used = this.usedQuestions.filter(q =>
+      all.some(aq => aq.id === q.id)
+    );
+    return all.length - used.length;
+  }
+
+  async fetchHintsForQuestion(question: Question): Promise<Hint[]> {
+    if (!question.answers?.length) return [];
+
+    const movieTitle = question.answers[0].value;
+    const movieId = await getMovieIdByTitle(movieTitle); // fetch po ID filmu
+
+    if (!movieId) return [];
+
+    const actors: TMDBActor[] = await getMovieCast(movieId, 8); // fetch cast
+
+    const hints: Hint[] = actors.map((actor, index) => ({
+      id: index.toString(),
+      label: actor.name,
+      content: actor.profile_path
+        ? getImageUrl(actor.profile_path)
+        : 'assets/no-image.png',
+      penaltyPercent: 0
+    }));
+
+    return hints;
+  }
+
+
+  updateCurrentQuestion(question: Question) {
+    this.currentQuestion$.next({ ...question });
+  }
+
+
+
+
 }
