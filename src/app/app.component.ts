@@ -2,6 +2,9 @@ import {Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import {photoQuiz} from './shared/createPhotoQuestion.helper';
+import {flagData} from './shared/createFlagQuestion.helper';
+import {transformed} from './shared/createFlagAPIQuestion.helper';
 
 @Component({
   selector: 'app-root',
@@ -18,4 +21,6 @@ export class AppComponent {
   title = 'sebaquiz3.0';
   //private priv = TEST
   //private priv2 = quizData
+  //private priv3 = photoQuiz
+  //private priv4 = transformed
 }

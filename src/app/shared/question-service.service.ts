@@ -19,6 +19,9 @@ import {BOHATEROWIE_FILMOWI} from "./questions/movieHeroes.questions";
 import {BOHATEROWIE_SERIALOWI} from "./questions/tvSeriesHeroes.question";
 import {MIASTA_SWIATA} from "./questions/worldCities.questions";
 import {REZYSEROWIE} from "./questions/directors.questions";
+import {ZNANE_POSTACIE} from './questions/famousPeople.questions';
+import {BUDOWLE} from './questions/buildings.questions';
+import {FLAGI} from './questions/flag.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -140,6 +143,16 @@ export class QuestionService {
     if (type === 'hints' && name === 'Reżyser po filmach') {
       return REZYSEROWIE;
     }
+    if (type === 'photos' && name === 'Znane postacie') {
+      return ZNANE_POSTACIE;
+    }
+    if (type === 'photos' && name === 'Budowle') {
+      return BUDOWLE;
+    }
+    if (type === 'photos' && name === 'Flagi') {
+      return FLAGI;
+    }
+
 
     return [];
   }
