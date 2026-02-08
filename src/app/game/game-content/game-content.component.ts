@@ -20,17 +20,37 @@ import {MATERIAL_IMPORTS} from '../../shared/material';
 })
 export class GameContentComponent implements OnInit{
   selectedCategories: Category[] = [];
+  categoryState = new Map<string, number>();
+
 
   constructor(private router: Router,private questionService: QuestionService) {}
 
-  ngOnInit() {
+  async ngOnInit() {
     const saved = localStorage.getItem('selectedCategories');
     this.selectedCategories = saved ? JSON.parse(saved) : [];
+
+    await this.preloadCategoryState();
+  }
+
+  private async preloadCategoryState() {
+    for (const category of this.selectedCategories) {
+      const remaining =
+        await this.questionService.getRemainingQuestions(
+          category.type,
+          category.name
+        );
+
+      this.categoryState.set(
+        `${category.type}|${category.name}`,
+        remaining
+      );
+    }
   }
 
 // Change getCategoryColor to gray for exhausted categories
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
+
     if (remaining === 0) {
       return '#9e9e9e';
     }
@@ -43,14 +63,14 @@ export class GameContentComponent implements OnInit{
   }
 
 
+
 // Number of available questions in a given category
   getRemainingQuestions(category: Category): number {
-    const allQuestions = this.questionService['getQuestions'](category.type, category.name);
-    const used = this.questionService['usedQuestions'].filter(q =>
-      allQuestions.some(aq => aq.id === q.id)
+    return (
+      this.categoryState.get(`${category.type}|${category.name}`) ?? 0
     );
-    return allQuestions.length - used.length;
   }
+
 
   goToCategory(category: Category) {
     const remaining = this.getRemainingQuestions(category);
@@ -72,7 +92,4 @@ export class GameContentComponent implements OnInit{
     ['#4caf50', '#81c784']
   ];
 
-  isCategoryExhausted(categoryName: string, categoryType: string): boolean {
-    return !this.questionService.hasMoreQuestions(categoryType, categoryName);
-  }
 }

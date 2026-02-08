@@ -1,1 +1,24 @@
-<p>photo-hints-category works!</p>
+<div *ngIf="question$ | async as currentQuestion" class="question-container">
+
+
+  <ng-container *ngIf="isImage(currentQuestion.question); else textQuestion">
+    <h2 class="question-title">Narodowość</h2>
+    <img
+      [src]="currentQuestion.question"
+      [alt]="currentQuestion.question"
+      class="question-image"
+    />
+  </ng-container>
+
+
+  <ng-template #textQuestion>
+    <p class="question-text">{{ currentQuestion.question }}</p>
+  </ng-template>
+
+  <!-- Photo hints -->
+  <app-photo-tips
+    [hints]="currentQuestion.hints ?? []"
+    (hintUsed)="onHintUsed($event)">
+  </app-photo-tips>
+
+</div>
