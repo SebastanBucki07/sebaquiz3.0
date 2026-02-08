@@ -77,7 +77,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Belgrade",
+        "content": "Belgrad",
         "penaltyPercent": 30
       },
       {
@@ -107,7 +107,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "London",
+        "content": "Londyn",
         "penaltyPercent": 30
       },
       {
@@ -317,7 +317,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Mexico City",
+        "content": "Meksyk",
         "penaltyPercent": 30
       },
       {
@@ -557,7 +557,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Riga",
+        "content": "Ryga",
         "penaltyPercent": 30
       },
       {
@@ -617,7 +617,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Kyiv",
+        "content": "Kijów",
         "penaltyPercent": 30
       },
       {
@@ -647,7 +647,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Pyongyang",
+        "content": "Pjongjang",
         "penaltyPercent": 30
       },
       {
@@ -947,7 +947,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Warsaw",
+        "content": "Warszawa",
         "penaltyPercent": 30
       },
       {
@@ -977,7 +977,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Lisbon",
+        "content": "Lizbona",
         "penaltyPercent": 30
       },
       {
@@ -1037,7 +1037,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Tehran",
+        "content": "Teheran",
         "penaltyPercent": 30
       },
       {
@@ -1097,7 +1097,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Addis Ababa",
+        "content": "Addis Abeba",
         "penaltyPercent": 30
       },
       {
@@ -1247,7 +1247,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Tallinn",
+        "content": "Tallin",
         "penaltyPercent": 30
       },
       {
@@ -1337,7 +1337,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Yaoundé",
+        "content": "Jaunde",
         "penaltyPercent": 30
       },
       {
@@ -1577,7 +1577,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Madrid",
+        "content": "Madryt",
         "penaltyPercent": 30
       },
       {
@@ -1667,7 +1667,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Copenhagen",
+        "content": "Kopenhaga",
         "penaltyPercent": 30
       },
       {
@@ -1787,7 +1787,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Taipei",
+        "content": "Tajpej",
         "penaltyPercent": 30
       },
       {
@@ -1967,7 +1967,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Prague",
+        "content": "Praga",
         "penaltyPercent": 30
       },
       {
@@ -2117,7 +2117,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Kinshasa",
+        "content": "Kinszasa",
         "penaltyPercent": 30
       },
       {
@@ -2267,7 +2267,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Accra",
+        "content": "Akra",
         "penaltyPercent": 30
       },
       {
@@ -2327,7 +2327,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Cairo",
+        "content": "Kair",
         "penaltyPercent": 30
       },
       {
@@ -2507,7 +2507,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Reykjavik",
+        "content": "Reykjavík",
         "penaltyPercent": 30
       },
       {
@@ -2627,7 +2627,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Khartoum",
+        "content": "Chartum",
         "penaltyPercent": 30
       },
       {
@@ -2777,7 +2777,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Ouagadougou",
+        "content": "Wagadugu",
         "penaltyPercent": 30
       },
       {
@@ -2867,7 +2867,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "St. George's",
+        "content": "Saint George's",
         "penaltyPercent": 30
       },
       {
@@ -2927,7 +2927,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Bern",
+        "content": "Berno",
         "penaltyPercent": 30
       },
       {
@@ -3077,7 +3077,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "New Delhi",
+        "content": "Nowe Delhi",
         "penaltyPercent": 30
       },
       {
@@ -3137,7 +3137,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Seoul",
+        "content": "Seul",
         "penaltyPercent": 30
       },
       {
@@ -3167,7 +3167,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Vilnius",
+        "content": "Wilno",
         "penaltyPercent": 30
       },
       {
@@ -3197,7 +3197,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Singapore",
+        "content": "Singapur",
         "penaltyPercent": 30
       },
       {
@@ -3527,7 +3527,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Ljubljana",
+        "content": "Lublana",
         "penaltyPercent": 30
       },
       {
@@ -3557,7 +3557,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Muscat",
+        "content": "Maskat",
         "penaltyPercent": 30
       },
       {
@@ -3617,7 +3617,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Tripoli",
+        "content": "Trypolis",
         "penaltyPercent": 30
       },
       {
@@ -3647,7 +3647,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "N'Djamena",
+        "content": "Ndżamena",
         "penaltyPercent": 30
       },
       {
@@ -3707,7 +3707,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Bishkek",
+        "content": "Biszkek",
         "penaltyPercent": 30
       },
       {
@@ -3737,7 +3737,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Djibouti",
+        "content": "Dżibuti",
         "penaltyPercent": 30
       },
       {
@@ -3797,7 +3797,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Washington, D.C.",
+        "content": "Waszyngton",
         "penaltyPercent": 30
       },
       {
@@ -3917,7 +3917,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Havana",
+        "content": "Hawana",
         "penaltyPercent": 30
       },
       {
@@ -4067,7 +4067,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Beirut",
+        "content": "Bejrut",
         "penaltyPercent": 30
       },
       {
@@ -4157,7 +4157,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Mogadishu",
+        "content": "Mogadiszu",
         "penaltyPercent": 30
       },
       {
@@ -4217,7 +4217,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Budapest",
+        "content": "Budapeszt",
         "penaltyPercent": 30
       },
       {
@@ -4247,7 +4247,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Luxembourg",
+        "content": "Luksemburg",
         "penaltyPercent": 30
       },
       {
@@ -4337,7 +4337,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Nouakchott",
+        "content": "Nawakszut",
         "penaltyPercent": 30
       },
       {
@@ -4367,7 +4367,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Algiers",
+        "content": "Algier",
         "penaltyPercent": 30
       },
       {
@@ -4427,7 +4427,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Zagreb",
+        "content": "Zagrzeb",
         "penaltyPercent": 30
       },
       {
@@ -4517,7 +4517,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Jakarta",
+        "content": "Dżakarta",
         "penaltyPercent": 30
       },
       {
@@ -4547,7 +4547,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Brussels",
+        "content": "Bruksela",
         "penaltyPercent": 30
       },
       {
@@ -4637,7 +4637,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Baghdad",
+        "content": "Bagdad",
         "penaltyPercent": 30
       },
       {
@@ -4667,7 +4667,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Antananarivo",
+        "content": "Antananarywa",
         "penaltyPercent": 30
       },
       {
@@ -4787,7 +4787,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Yamoussoukro",
+        "content": "Jamusukro",
         "penaltyPercent": 30
       },
       {
@@ -4877,7 +4877,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Rome",
+        "content": "Rzym",
         "penaltyPercent": 30
       },
       {
@@ -5087,7 +5087,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Riyadh",
+        "content": "Rijad",
         "penaltyPercent": 30
       },
       {
@@ -5117,7 +5117,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Juba",
+        "content": "Dżuba",
         "penaltyPercent": 30
       },
       {
@@ -5267,7 +5267,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Kuwait City",
+        "content": "Kuwejt",
         "penaltyPercent": 30
       },
       {
@@ -5327,7 +5327,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Banjul",
+        "content": "Bandżul",
         "penaltyPercent": 30
       },
       {
@@ -5477,7 +5477,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Yerevan",
+        "content": "Erywań",
         "penaltyPercent": 30
       },
       {
@@ -5537,7 +5537,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Kathmandu",
+        "content": "Katmandu",
         "penaltyPercent": 30
       },
       {
@@ -5657,7 +5657,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Conakry",
+        "content": "Konakry",
         "penaltyPercent": 30
       },
       {
@@ -5747,7 +5747,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Monaco",
+        "content": "Monako",
         "penaltyPercent": 30
       },
       {
@@ -5987,7 +5987,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Panama City",
+        "content": "Panama",
         "penaltyPercent": 30
       },
       {
@@ -6107,7 +6107,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Abu Dhabi",
+        "content": "Abu Zabi",
         "penaltyPercent": 30
       },
       {
@@ -6227,7 +6227,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Jerusalem",
+        "content": "Jerozolima",
         "penaltyPercent": 30
       },
       {
@@ -6257,7 +6257,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Vienna",
+        "content": "Wiedeń",
         "penaltyPercent": 30
       },
       {
@@ -6287,7 +6287,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Vientiane",
+        "content": "Wientian",
         "penaltyPercent": 30
       },
       {
@@ -6317,7 +6317,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Paris",
+        "content": "Paryż",
         "penaltyPercent": 30
       },
       {
@@ -6497,7 +6497,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Bratislava",
+        "content": "Bratysława",
         "penaltyPercent": 30
       },
       {
@@ -6587,7 +6587,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Malé",
+        "content": "Male",
         "penaltyPercent": 30
       },
       {
@@ -6647,7 +6647,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Tokyo",
+        "content": "Tokio",
         "penaltyPercent": 30
       },
       {
@@ -6707,7 +6707,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Bogotá",
+        "content": "Bogota",
         "penaltyPercent": 30
       },
       {
@@ -6797,7 +6797,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Beijing",
+        "content": "Pekin",
         "penaltyPercent": 30
       },
       {
@@ -6947,7 +6947,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Athens",
+        "content": "Ateny",
         "penaltyPercent": 30
       },
       {
@@ -7097,7 +7097,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Bucharest",
+        "content": "Bukareszt",
         "penaltyPercent": 30
       },
       {
@@ -7157,7 +7157,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Dushanbe",
+        "content": "Duszanbe",
         "penaltyPercent": 30
       },
       {
@@ -7217,7 +7217,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Abuja",
+        "content": "Abudża",
         "penaltyPercent": 30
       },
       {
@@ -7247,7 +7247,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Vatican City",
+        "content": "Watykan",
         "penaltyPercent": 30
       },
       {
@@ -7337,7 +7337,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Stockholm",
+        "content": "Sztokholm",
         "penaltyPercent": 30
       },
       {
@@ -7427,7 +7427,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Guatemala City",
+        "content": "Gwatemala",
         "penaltyPercent": 30
       },
       {
@@ -7457,7 +7457,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Damascus",
+        "content": "Damaszek",
         "penaltyPercent": 30
       },
       {
@@ -7487,7 +7487,7 @@ export const FLAGI = [
       {
         "id": "1",
         "label": "Stolica",
-        "content": "Ashgabat",
+        "content": "Aszchabad",
         "penaltyPercent": 30
       },
       {
