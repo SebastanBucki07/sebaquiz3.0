@@ -6,7 +6,7 @@
 }
 
 .hint-card {
-  width: 180px; /* możesz zwiększyć */
+  width: 180px;
   cursor: pointer;
   border-radius: 12px;
   overflow: hidden;
@@ -20,7 +20,7 @@
 
   .hint-image-wrapper {
     width: 100%;
-    padding-top: 150%; /* zachowuje proporcje 2:3 */
+    padding-top: 150%;
     position: relative;
     overflow: hidden;
   }
@@ -31,7 +31,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* naturalne proporcje + wypełnienie */
+    object-fit: cover;
   }
 
   mat-card-footer {

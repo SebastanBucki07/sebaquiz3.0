@@ -59,12 +59,10 @@ export class PhotoHintsCategoryComponent  implements OnInit{
     const q = await firstValueFrom(this.question$);
     if (!q) return;
 
-    // Sprawdzenie po treści pytania, możesz też użyć np. typu kategorii
     if (q.question === 'W jakim filmie zagrała taka obsada?' && (!q.hints || q.hints.length === 0)) {
       try {
-        // fetchujemy hints tylko dla tego pytania
         const hints = await this.questionService.fetchHintsForQuestion(q);
-        q.hints = hints; // zapisujemy do pytania
+        q.hints = hints;
       } catch (err) {
         console.error('Błąd pobierania aktorów:', err);
       }

@@ -140,7 +140,6 @@ export class QuestionService {
       return SERIAL_PO_AKTORACH
     }
 
-    // 👇 TWARDY fallback (TS2366 znika)
     return [];
   }
 

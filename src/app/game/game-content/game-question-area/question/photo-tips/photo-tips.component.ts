@@ -19,7 +19,7 @@ export class PhotoTipsComponent {
     this.hintUsed.emit(hint);
   }
 
-  gridCols = 4; // domyślnie 4 kolumny
+  gridCols = 4;
 
   ngOnInit() {
     this.updateGridCols();
