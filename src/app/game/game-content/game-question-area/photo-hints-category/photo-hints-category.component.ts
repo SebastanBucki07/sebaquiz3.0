@@ -20,26 +20,27 @@ import {Hint} from '../../../../shared/category/category.interface';
 export class PhotoHintsCategoryComponent  implements OnInit{
   question$!: Observable<Question | null>;
   @Output() hintUsed = new EventEmitter<Hint>();
+  private MOVIE_QUESTION = 'W jakim filmie zagrała taka obsada?';
+  private TV_QUESTION = 'W jakim serialu zagrała taka obsada?';
 
   constructor(private questionService: QuestionService) {}
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
-    // subskrypcja do aktualnego pytania
     this.question$.subscribe(async q => {
       if (!q) return;
 
-      // jeśli to kategoria film z obsadą i hints są puste
-      if (q.question === 'W jakim filmie zagrała taka obsada?' && (!q.hints || q.hints.length === 0)) {
+      const isCastQuestion =
+        q.question === this.MOVIE_QUESTION || q.question === this.TV_QUESTION;
+
+      if (isCastQuestion && (!q.hints || q.hints.length === 0)) {
         try {
           const hints = await this.questionService.fetchHintsForQuestion(q);
           q.hints = hints;
-
-          // force refresh w BehaviorSubject, żeby template się przeładował
           this.questionService.updateCurrentQuestion(q);
         } catch (err) {
-          console.error('Błąd pobierania aktorów:', err);
+          console.error('Błąd pobierania obsady:', err);
         }
       }
     });

@@ -24,8 +24,15 @@ import {BUDOWLE} from './questions/buildings.questions';
 import {FLAGI} from './questions/flag.questions';
 import {HISTORIA_PILKARZA} from './questions/footballHistory.questions';
 import {FILM_PO_AKTORACH} from './questions/moviesActors.questions';
-import {getImageUrl, getMovieCast, getMovieIdByTitle, TMDBActor} from './apiHelper/actor.helper';
+import {
+  getImageUrl,
+  getMovieCast,
+  getMovieIdByTitle,
+  getTvCast,
+  getTvIdByTitle,
+} from './apiHelper/actor.helper';
 import {Hint} from './category/category.interface';
+import {SERIAL_PO_AKTORACH} from './questions/tvSeriesActors.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -129,6 +136,10 @@ export class QuestionService {
       return FILM_PO_AKTORACH
     }
 
+    if (type === 'photo-hints' && name === 'W jakim serialu zagrała taka obsada?') {
+      return SERIAL_PO_AKTORACH
+    }
+
     // 👇 TWARDY fallback (TS2366 znika)
     return [];
   }
@@ -147,14 +158,22 @@ export class QuestionService {
   async fetchHintsForQuestion(question: Question): Promise<Hint[]> {
     if (!question.answers?.length) return [];
 
-    const movieTitle = question.answers[0].value;
-    const movieId = await getMovieIdByTitle(movieTitle); // fetch po ID filmu
+    const title = question.answers[0].value;
 
-    if (!movieId) return [];
+    const isTv =
+      question.question === 'W jakim serialu zagrała taka obsada?';
 
-    const actors: TMDBActor[] = await getMovieCast(movieId, 8); // fetch cast
+    const id = isTv
+      ? await getTvIdByTitle(title)
+      : await getMovieIdByTitle(title);
 
-    const hints: Hint[] = actors.map((actor, index) => ({
+    if (!id) return [];
+
+    const actors = isTv
+      ? await getTvCast(id, 8)
+      : await getMovieCast(id, 8);
+
+    return actors.map((actor, index) => ({
       id: index.toString(),
       label: actor.name,
       content: actor.profile_path
@@ -162,8 +181,6 @@ export class QuestionService {
         : 'assets/no-image.png',
       penaltyPercent: 0
     }));
-
-    return hints;
   }
 
 
