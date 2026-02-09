@@ -1,4 +1,4 @@
-<p>TEST</p>
-<p *ngIf="currentTeam$ | async as team">
-  Aktualna drużyna: {{ team }}
-</p>
+<div class="current-team-card" *ngIf="currentTeam$ | async as team">
+  <h3>Aktualna drużyna</h3>
+  <p class="team-name">{{ team }}</p>
+</div>

@@ -1,0 +1,26 @@
+.current-team-card {
+  padding: 20px;
+  background: linear-gradient(135deg, #42a5f5, #90caf9);
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.current-team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.current-team-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.current-team-card .team-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
