@@ -4027,7 +4027,7 @@ export const ZNANE_POSTACIE = [
         "value": "Louis de Funès"
       }
     ],
-    "question": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Louis_de_Fun%C3%A8s_1970.jpg/203px-Louis_de_Fun%C3%A8s_1970.jpg",
+    "question": "",
     "hints": [],
     "revealedAnswers": []
   },
@@ -4327,7 +4327,7 @@ export const ZNANE_POSTACIE = [
         "value": "Magdalena Popławska"
       }
     ],
-    "question": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Magdalena_Pop%C5%82awska.jpg/211px-Magdalena_Pop%C5%82awska.jpg",
+    "question": "",
     "hints": [],
     "revealedAnswers": []
   },

@@ -71,7 +71,6 @@ export class QuestionService {
       revealedAnswers: []
     };
 
-    // 🔥 JEDYNE MIEJSCE NA LOGIKĘ SPECJALNĄ
     question = await this.enrichQuestion(question, type, name);
 
     this.usedQuestions.push(question);
@@ -146,26 +145,51 @@ export class QuestionService {
   }
 
   private async enrichFamousPeople(question: Question): Promise<Question> {
-    // jeśli to już NIE jest placeholder → nic nie rób
-    if (!question.question?.includes('fwcdn.pl')) {
+    const q = question.question;
+
+    if (q?.toLowerCase().includes('piast-gliwice.eu')) {
       return question;
     }
 
-    const actorName = question.answers?.[0]?.value;
-    if (!actorName) return question;
 
+    if (q?.includes('fwcdn.pl')) {
+      const actorName = question.answers?.[0]?.value;
+      if (!actorName) return question;
+
+      const photo = await getActorPhotoByName(actorName);
+
+
+      if (photo.includes('no-image')) {
+        await this.loadRandomQuestion('photos', 'Znane postacie');
+        return this.getCurrentQuestion()!;
+      }
+
+      return { ...question, question: photo };
+    }
+
+    if (q?.startsWith('http')) {
+      const isValid = await this.checkImageUrl(q);
+      if (!isValid) {
+        await this.loadRandomQuestion('photos', 'Znane postacie');
+        return this.getCurrentQuestion()!;
+      }
+    }
+
+    return question;
+  }
+
+
+  private async checkImageUrl(url: string): Promise<boolean> {
     try {
-      const photoUrl = await getActorPhotoByName(actorName);
-
-      return {
-        ...question,
-        question: photoUrl
-      };
-    } catch (err) {
-      console.warn('TMDB enrich failed', err);
-      return question;
+      const res = await fetch(url, { method: 'HEAD' });
+      return res.ok;
+    } catch {
+      return false;
     }
   }
+
+
+
 
   // =========================
   // DATA

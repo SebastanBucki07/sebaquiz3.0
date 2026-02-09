@@ -7,10 +7,6 @@ export interface TMDBPerson {
   known_for_department: string;
 }
 
-interface TMDBPersonResponse {
-  results: TMDBPerson[];
-}
-
 export function getImageUrl(filePath: string | null, size = 'w500'): string {
   if (!filePath) return 'assets/no-image.png'; // placeholder
   const baseUrl = 'https://image.tmdb.org/t/p/';
@@ -90,36 +86,30 @@ export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> 
     }));
 }
 
-export async function getActorPhotoByName(
-  name: string,
-  size: 'w185' | 'w342' | 'w500' | 'original' = 'w500'
-): Promise<string> {
+export async function getActorPhotoByName(name: string): Promise<string> {
+  try {
+    const url = `https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(name)}`;
 
-  const url = `https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(name)}`;
+    const res = await fetch(url, {
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${environment.apiToken}`,
+      },
+    });
 
-  const res = await fetch(url, {
-    headers: {
-      accept: 'application/json',
-      Authorization: `Bearer ${environment.apiToken}`,
-    },
-  });
+    const data = await res.json();
 
-  if (!res.ok) {
-    return getImageUrl(null, size);
+    const personWithPhoto = data.results.find((p: any) => p.profile_path);
+
+    if (!personWithPhoto) {
+      return 'assets/no-image.png';
+    }
+
+    return getImageUrl(personWithPhoto.profile_path, 'w500');
+  } catch (err) {
+    console.warn('getActorPhotoByName failed', err);
+    return 'assets/no-image.png';
   }
-
-  const data: TMDBPersonResponse = await res.json();
-
-  if (!data.results?.length) {
-    return getImageUrl(null, size);
-  }
-
-  // Preferuj aktorów
-  const person =
-    data.results.find(p => p.known_for_department === 'Acting')
-    ?? data.results[0];
-
-  return getImageUrl(person.profile_path, size);
 }
 
 
