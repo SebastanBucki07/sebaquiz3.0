@@ -1,9 +1,10 @@
 import { environment } from "../../../environments/environment.prod"
 
-export interface TMDBActor {
+export interface TMDBPerson {
   id: number;
   name: string;
   profile_path: string | null;
+  known_for_department: string;
 }
 
 export function getImageUrl(filePath: string | null, size = 'w500'): string {
@@ -45,7 +46,7 @@ export async function getTvIdByTitle(title: string): Promise<number> {
 }
 
 
-export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBActor[]> {
+export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBPerson[]> {
   const url = `https://api.themoviedb.org/3/movie/${movieId}/credits`;
   const res = await fetch(url, {
     headers: {
@@ -64,7 +65,7 @@ export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBActo
     }));
 }
 
-export async function getTvCast(tvId: number, limit = 8): Promise<TMDBActor[]> {
+export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> {
   const url = `https://api.themoviedb.org/3/tv/${tvId}/credits`;
 
   const res = await fetch(url, {
@@ -85,6 +86,31 @@ export async function getTvCast(tvId: number, limit = 8): Promise<TMDBActor[]> {
     }));
 }
 
+export async function getActorPhotoByName(name: string): Promise<string> {
+  try {
+    const url = `https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(name)}`;
+
+    const res = await fetch(url, {
+      headers: {
+        accept: 'application/json',
+        Authorization: `Bearer ${environment.apiToken}`,
+      },
+    });
+
+    const data = await res.json();
+
+    const personWithPhoto = data.results.find((p: any) => p.profile_path);
+
+    if (!personWithPhoto) {
+      return 'assets/no-image.png';
+    }
+
+    return getImageUrl(personWithPhoto.profile_path, 'w500');
+  } catch (err) {
+    console.warn('getActorPhotoByName failed', err);
+    return 'assets/no-image.png';
+  }
+}
 
 
 
