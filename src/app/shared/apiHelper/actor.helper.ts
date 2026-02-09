@@ -1,9 +1,14 @@
 import { environment } from "../../../environments/environment.prod"
 
-export interface TMDBActor {
+export interface TMDBPerson {
   id: number;
   name: string;
   profile_path: string | null;
+  known_for_department: string;
+}
+
+interface TMDBPersonResponse {
+  results: TMDBPerson[];
 }
 
 export function getImageUrl(filePath: string | null, size = 'w500'): string {
@@ -45,7 +50,7 @@ export async function getTvIdByTitle(title: string): Promise<number> {
 }
 
 
-export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBActor[]> {
+export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBPerson[]> {
   const url = `https://api.themoviedb.org/3/movie/${movieId}/credits`;
   const res = await fetch(url, {
     headers: {
@@ -64,7 +69,7 @@ export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBActo
     }));
 }
 
-export async function getTvCast(tvId: number, limit = 8): Promise<TMDBActor[]> {
+export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> {
   const url = `https://api.themoviedb.org/3/tv/${tvId}/credits`;
 
   const res = await fetch(url, {
@@ -85,6 +90,37 @@ export async function getTvCast(tvId: number, limit = 8): Promise<TMDBActor[]> {
     }));
 }
 
+export async function getActorPhotoByName(
+  name: string,
+  size: 'w185' | 'w342' | 'w500' | 'original' = 'w500'
+): Promise<string> {
+
+  const url = `https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(name)}`;
+
+  const res = await fetch(url, {
+    headers: {
+      accept: 'application/json',
+      Authorization: `Bearer ${environment.apiToken}`,
+    },
+  });
+
+  if (!res.ok) {
+    return getImageUrl(null, size);
+  }
+
+  const data: TMDBPersonResponse = await res.json();
+
+  if (!data.results?.length) {
+    return getImageUrl(null, size);
+  }
+
+  // Preferuj aktorów
+  const person =
+    data.results.find(p => p.known_for_department === 'Acting')
+    ?? data.results[0];
+
+  return getImageUrl(person.profile_path, size);
+}
 
 
 

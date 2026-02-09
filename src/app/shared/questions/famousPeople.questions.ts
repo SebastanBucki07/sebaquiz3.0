@@ -1123,7 +1123,7 @@ export const ZNANE_POSTACIE = [
         "value": "Cezary Żak"
       }
     ],
-    "question": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/Cezary_Zak_2008.jpg/159px-Cezary_Zak_2008.jpg",
+    "question": "https://fwcdn.pl/ppo/22/77/132277/449724.2.jpg",
     "hints": [],
     "revealedAnswers": []
   },
