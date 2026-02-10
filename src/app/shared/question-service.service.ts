@@ -40,6 +40,7 @@ import {
   getTvCast,
   getTvIdByTitle,
 } from './apiHelper/actor.helper';
+import {JAKA_TO_MELODIA} from './questions/music.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -224,6 +225,8 @@ export class QuestionService {
     if (type === 'photo-hints' && name === 'Klubowa Historia piłkarza') return HISTORIA_PILKARZA;
     if (type === 'photo-hints' && name === 'W jakim filmie zagrała taka obsada?') return FILM_PO_AKTORACH;
     if (type === 'photo-hints' && name === 'W jakim serialu zagrała taka obsada?') return SERIAL_PO_AKTORACH;
+
+    if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
 
     return [];
   }

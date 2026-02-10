@@ -1,1 +1,15 @@
-<p>music-category works!</p>
+<div *ngIf="question$ | async as question">
+
+  <div id="player" style="display: none;"></div>
+
+  <button (click)="playIntro()">▶ Intro (pierwsze 30s)</button>
+  <button (click)="playMiddle()">▶ Środek (losowy 30s)</button>
+  <button (click)="playOutro()">▶ Outro (ostatnie 30s)</button>
+
+  <div *ngIf="answersVisible">
+    <div *ngFor="let answer of question.answers">
+      <strong>{{ answer.label }}:</strong> {{ answer.value }}
+    </div>
+  </div>
+
+</div>

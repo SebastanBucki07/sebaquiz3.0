@@ -15,8 +15,8 @@ export const CATEGORY_LIST: Category[] = [
   {
     id: 1,
     type: 'music',
-    name: 'Muzyka',
-    basePoints: 99,
+    name: 'Jaka to Melodia?',
+    basePoints: 6,
     hints: []
   },
   {
