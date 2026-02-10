@@ -12,4 +12,24 @@ export class MusicTipsComponent {
   @Output() playIntro = new EventEmitter<void>();
   @Output() playMiddle = new EventEmitter<void>();
   @Output() playOutro = new EventEmitter<void>();
+
+  // zmienne, które będą kontrolować, czy przycisk jest aktywny
+  introPlayed = false;
+  middlePlayed = false;
+  outroPlayed = false;
+
+  playIntroOnce() {
+    this.playIntro.emit();
+    this.introPlayed = true; // blokujemy przycisk
+  }
+
+  playMiddleOnce() {
+    this.playMiddle.emit();
+    this.middlePlayed = true;
+  }
+
+  playOutroOnce() {
+    this.playOutro.emit();
+    this.outroPlayed = true;
+  }
 }

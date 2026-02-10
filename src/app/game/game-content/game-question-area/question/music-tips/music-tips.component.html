@@ -1,5 +1,11 @@
 <div class="button-group">
-  <button mat-raised-button color="primary" (click)="playIntro.emit()">▶ Intro</button>
-  <button mat-raised-button color="accent" (click)="playMiddle.emit()">▶ Środek</button>
-  <button mat-raised-button color="warn" (click)="playOutro.emit()">▶ Outro</button>
+  <button mat-raised-button color="primary" (click)="playIntroOnce()" [disabled]="introPlayed">
+    ▶ Intro
+  </button>
+  <button mat-raised-button color="accent" (click)="playMiddleOnce()" [disabled]="middlePlayed">
+    ▶ Środek
+  </button>
+  <button mat-raised-button color="warn" (click)="playOutroOnce()" [disabled]="outroPlayed">
+    ▶ Outro
+  </button>
 </div>
