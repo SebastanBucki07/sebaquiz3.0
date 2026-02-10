@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import {Observable, Subscription } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { QuestionService } from '../../../../shared/question-service.service';
+import {MusicTipsComponent} from '../question/music-tips/music-tips.component';
 
 declare const YT: {
   Player: new (
@@ -26,7 +27,7 @@ declare const YT: {
 @Component ({
   selector: 'app-music-category',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MusicTipsComponent],
   templateUrl: './music-category.component.html',
   styleUrl: './music-category.component.css'
 })

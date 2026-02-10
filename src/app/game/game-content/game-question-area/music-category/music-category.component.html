@@ -2,9 +2,12 @@
 
   <div id="player" style="display: none;"></div>
 
-  <button (click)="playIntro()">▶ Intro (pierwsze 30s)</button>
-  <button (click)="playMiddle()">▶ Środek (losowy 30s)</button>
-  <button (click)="playOutro()">▶ Outro (ostatnie 30s)</button>
+  <!-- nowy komponent przycisków -->
+  <app-music-tips
+    (playIntro)="playIntro()"
+    (playMiddle)="playMiddle()"
+    (playOutro)="playOutro()"
+  ></app-music-tips>
 
   <div *ngIf="answersVisible">
     <div *ngFor="let answer of question.answers">
