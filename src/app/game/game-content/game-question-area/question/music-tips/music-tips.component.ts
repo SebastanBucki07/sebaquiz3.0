@@ -7,6 +7,7 @@ import {MATERIAL_IMPORTS} from '../../../../../shared/material';
   standalone: true,
   imports: [CommonModule, MATERIAL_IMPORTS],
   templateUrl: './music-tips.component.html',
+  styleUrl:'music-tips.component.scss'
 })
 export class MusicTipsComponent {
   @Output() playIntro = new EventEmitter<void>();
