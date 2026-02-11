@@ -13,21 +13,20 @@ declare const YT: {
       width: string;
       videoId: string;
       playerVars?: Record<string, string | number | boolean>;
+      events?: {
+        onReady?: (event: any) => void;
+      };
     }
   ) => {
-    playVideo: () => void;
-    pauseVideo: () => void;
-    stopVideo: () => void;
-    destroy: () => void;
-    getDuration: () => number;
     loadVideoById: (options: {
       videoId: string;
       startSeconds?: number;
       endSeconds?: number;
     }) => void;
+    getDuration: () => number;
+    destroy: () => void;
   };
 };
-
 
 
 @Component ({
@@ -45,6 +44,8 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   private questionSub?: Subscription;
   private fragmentCheckInterval?: any;
   private currentVideoId?: string;
+  private readonly FRAGMENT_DURATION = 15;
+  private videoDuration = 0;
 
   answersVisible = false;
 
@@ -81,41 +82,56 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
 // =========================
 
   playIntro(): void {
-    this.playFragment(15);
+    const SAFE_OFFSET = 5;
+
+    this.playFragment(SAFE_OFFSET);
   }
+
+
 
   playMiddle(): void {
-    if (!this.player) return;
-    const duration = this.player.getDuration();
-    if (!duration || duration < 60) {
-// fallback
-      this.playFragment(10);
+    if (!this.videoDuration) return;
+
+    const min = this.FRAGMENT_DURATION;
+    const max = this.videoDuration - this.FRAGMENT_DURATION * 2;
+
+    if (max <= min) {
+      // jeśli piosenka za krótka
+      this.playFragment(this.FRAGMENT_DURATION);
       return;
     }
-    const middleMin = 30;
-    const middleMax = duration - 60;
-    const start = Math.floor(Math.random() * (middleMax - middleMin)) + middleMin;
+
+    const start = Math.floor(Math.random() * (max - min)) + min;
+
     this.playFragment(start);
   }
+
 
   playOutro(): void {
-    if (!this.player) return;
-    const duration = this.player.getDuration();
-    const start = duration ? Math.max(duration - 30, 0) : 0;
+    if (!this.videoDuration) return;
+
+    const SAFE_OFFSET = 5;
+
+    const start = Math.max(
+      this.videoDuration - this.FRAGMENT_DURATION - SAFE_OFFSET,
+      0
+    );
+
     this.playFragment(start);
   }
 
-  private playFragment(start: number, duration = 30): void {
-    if (!this.player || !this.currentVideoId) return;
 
-    const end = start + duration;
+
+  private playFragment(start: number): void {
+    if (!this.player || !this.currentVideoId) return;
 
     this.player.loadVideoById({
       videoId: this.currentVideoId,
       startSeconds: start,
-      endSeconds: end
+      endSeconds: start + this.FRAGMENT_DURATION
     });
   }
+
 
 
 
@@ -126,6 +142,7 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
 
   private initPlayer(videoId: string): void {
     this.currentVideoId = videoId;
+    this.videoDuration = 0;
 
     this.player?.destroy();
 
@@ -138,9 +155,16 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
         controls: 0,
         disablekb: 1,
         fs: 0
+      },
+      events: {                     // 👈 TUTAJ dodajesz events
+        onReady: () => {
+          this.videoDuration = this.player?.getDuration() ?? 0;
+          console.log('Duration:', this.videoDuration);
+        }
       }
     });
   }
+
 
 
   private loadYouTubeApi(): Promise<void> {
