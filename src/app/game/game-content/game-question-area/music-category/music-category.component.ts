@@ -13,13 +13,23 @@ declare const YT: {
       width: string;
       videoId: string;
       playerVars?: Record<string, string | number | boolean>;
+      events?: {
+        onReady?: (event: any) => void;
+        onStateChange?: (event: any) => void;
+      };
     }
   ) => {
     playVideo: () => void;
+    pauseVideo: () => void;
     stopVideo: () => void;
     destroy: () => void;
     getDuration: () => number;
+    getCurrentTime: () => number;
     seekTo: (seconds: number, allowSeekAhead: boolean) => void;
+  };
+
+  PlayerState: {
+    PLAYING: number;
   };
 };
 
@@ -37,6 +47,10 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   // @ts-ignore
   private player?: ReturnType<typeof YT.Player>;
   private questionSub?: Subscription;
+  private fragmentStart = 0;
+  private fragmentDuration = 0;
+  private fragmentCheckInterval?: any;
+
   answersVisible = false;
 
   constructor(private questionService: QuestionService) {}
@@ -55,7 +69,13 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     this.player?.destroy();
     this.questionSub?.unsubscribe();
+
+    if (this.fragmentCheckInterval) {
+      clearInterval(this.fragmentCheckInterval);
+    }
   }
+
+
 
   showAnswers(): void {
     this.answersVisible = true;
@@ -90,16 +110,21 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     this.playFragment(start);
   }
 
-  private playFragment(start: number, fragmentDuration = 30): void {
+  private playFragment(start: number, duration = 30): void {
     if (!this.player) return;
+
+    this.fragmentStart = start;
+    this.fragmentDuration = duration;
+
+    if (this.fragmentCheckInterval) {
+      clearInterval(this.fragmentCheckInterval);
+    }
 
     this.player.seekTo(start, true);
     this.player.playVideo();
-
-    setTimeout(() => {
-      this.player.stopVideo();
-    }, fragmentDuration * 1000);
   }
+
+
 
 // =========================
 // prywatne metody
@@ -117,9 +142,13 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
         controls: 0,
         disablekb: 1,
         fs: 0
+      },
+      events: {
+        onStateChange: (event) => this.onPlayerStateChange(event)
       }
     });
   }
+
 
   private loadYouTubeApi(): Promise<void> {
     return new Promise(resolve => {
@@ -135,4 +164,29 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
       (window as any).onYouTubeIframeAPIReady = () => resolve();
     });
   }
+
+  private onPlayerStateChange(event: any): void {
+    if (event.data === YT.PlayerState.PLAYING) {
+
+      if (this.fragmentCheckInterval) {
+        clearInterval(this.fragmentCheckInterval);
+      }
+
+      this.fragmentCheckInterval = setInterval(() => {
+        if (!this.player) return;
+
+        const currentTime = this.player.getCurrentTime();
+        const elapsed = currentTime - this.fragmentStart;
+
+        if (elapsed >= this.fragmentDuration) {
+          this.player.pauseVideo(); // 🔥 używamy pause zamiast stop
+          clearInterval(this.fragmentCheckInterval);
+        }
+      }, 200);
+    }
+  }
+
+
 }
+
+
