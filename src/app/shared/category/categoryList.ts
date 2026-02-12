@@ -44,7 +44,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 5,
     type: 'music',
     name: 'Czołówki seriali',
-    basePoints: 99,
+    basePoints: 4,
     hints: []
   },
   {

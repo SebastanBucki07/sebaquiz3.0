@@ -49,6 +49,7 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   private videoDuration = 0;
 
   answersVisible = false;
+  private playerReady = false;
 
   constructor(private questionService: QuestionService) {}
 
@@ -65,14 +66,13 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.player?.destroy();
+    this.playerReady = false;
     this.questionSub?.unsubscribe();
 
     if (this.fragmentCheckInterval) {
       clearInterval(this.fragmentCheckInterval);
     }
   }
-
-
 
   showAnswers(): void {
     this.answersVisible = true;
@@ -85,8 +85,19 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   playIntro(): void {
     const SAFE_OFFSET = 5;
 
+    if (!this.playerReady) {
+      const checkReady = setInterval(() => {
+        if (this.playerReady) {
+          clearInterval(checkReady);
+          this.playFragment(SAFE_OFFSET);
+        }
+      }, 100);
+      return;
+    }
+
     this.playFragment(SAFE_OFFSET);
   }
+
 
 
 
@@ -157,9 +168,10 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
         disablekb: 1,
         fs: 0
       },
-      events: {                     // 👈 TUTAJ dodajesz events
+      events: {
         onReady: () => {
           this.videoDuration = this.player?.getDuration() ?? 0;
+          this.playerReady = true;
           console.log('Duration:', this.videoDuration);
         }
       }

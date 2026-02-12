@@ -20,7 +20,6 @@ button.circle {
   padding: 0;
   position: relative;
   text-align: center;
-  line-height: 90px;
   transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 
@@ -71,3 +70,29 @@ button.circle {
     box-shadow: 0 0 15px rgba(38, 115, 252, 0.6), 0 0 30px rgba(106, 17, 203, 0.6);
   }
 }
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+button.circle mat-icon {
+  font-size: 60px !important;
+  width: 60px !important;
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+
+

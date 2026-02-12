@@ -4,11 +4,12 @@
 
   <!-- nowy komponent przycisków -->
   <app-music-tips
+    [answerLabel]="(question$ | async)?.answers?.[0]?.label ?? ''"
     (playIntro)="playIntro()"
     (playMiddle)="playMiddle()"
     (playOutro)="playOutro()"
     (hintUsed)="onHintUsed($event)">
-  ></app-music-tips>
+  </app-music-tips>
 
   <div *ngIf="answersVisible">
     <div *ngFor="let answer of question.answers">

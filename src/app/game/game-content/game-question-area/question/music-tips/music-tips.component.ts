@@ -16,6 +16,7 @@ export class MusicTipsComponent {
   @Output() playOutro = new EventEmitter<void>();
   @Output() hintUsed = new EventEmitter<Hint>();
   @Input() hints: Hint[] = [];
+  @Input() answerLabel?: string;
 
   // zmienne, które będą kontrolować, czy przycisk jest aktywny
   introPlayed = false;
