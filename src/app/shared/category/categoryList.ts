@@ -15,8 +15,8 @@ export const CATEGORY_LIST: Category[] = [
   {
     id: 1,
     type: 'music',
-    name: 'Muzyka',
-    basePoints: 99,
+    name: 'Jaka to Melodia?',
+    basePoints: 6,
     hints: []
   },
   {
@@ -44,7 +44,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 5,
     type: 'music',
     name: 'Czołówki seriali',
-    basePoints: 99,
+    basePoints: 4,
     hints: []
   },
   {
@@ -134,7 +134,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 18,
     type: 'music',
     name: 'Piosenki mistrzostw',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {

@@ -40,6 +40,9 @@ import {
   getTvCast,
   getTvIdByTitle,
 } from './apiHelper/actor.helper';
+import {JAKA_TO_MELODIA} from './questions/music.questions';
+import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
+import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -224,6 +227,10 @@ export class QuestionService {
     if (type === 'photo-hints' && name === 'Klubowa Historia piłkarza') return HISTORIA_PILKARZA;
     if (type === 'photo-hints' && name === 'W jakim filmie zagrała taka obsada?') return FILM_PO_AKTORACH;
     if (type === 'photo-hints' && name === 'W jakim serialu zagrała taka obsada?') return SERIAL_PO_AKTORACH;
+
+    if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
+    if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
+    if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
 
     return [];
   }

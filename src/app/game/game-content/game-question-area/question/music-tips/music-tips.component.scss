@@ -1,0 +1,98 @@
+.button-group {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  margin: 40px 0;
+
+  .button-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+button.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+
+  &.active {
+    background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(38, 115, 252, 0.6), 0 0 30px rgba(106, 17, 203, 0.6);
+
+    &:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(38, 115, 252, 0.7), 0 0 40px rgba(106, 17, 203, 0.7);
+    }
+
+    // Pulsujące światło
+    animation: pulse 1.5s infinite;
+  }
+
+  &.played {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: scale(0.95);
+    background: #ddd;
+    color: #888;
+    box-shadow: none;
+  }
+}
+
+// podpis pod przyciskiem
+.label {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  text-align: center;
+}
+
+// animacja pulsowania
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 15px rgba(38, 115, 252, 0.6), 0 0 30px rgba(106, 17, 203, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(38, 115, 252, 0.9), 0 0 45px rgba(106, 17, 203, 0.9);
+    transform: scale(1.1);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(38, 115, 252, 0.6), 0 0 30px rgba(106, 17, 203, 0.6);
+  }
+}
+
+.circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.circle:hover:not(:disabled) {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+button.circle mat-icon {
+  font-size: 60px !important;
+  width: 60px !important;
+  height: 60px !important;
+  line-height: 60px !important;
+}
+
+
+
