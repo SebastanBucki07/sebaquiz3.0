@@ -1,9 +1,10 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Component, OnInit, OnDestroy, Output, EventEmitter} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {Observable, Subscription } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { QuestionService } from '../../../../shared/question-service.service';
 import {MusicTipsComponent} from '../question/music-tips/music-tips.component';
+import {Hint} from '../../../../shared/category/category.interface';
 
 declare const YT: {
   Player: new (
@@ -37,7 +38,7 @@ declare const YT: {
   styleUrl: './music-category.component.css'
 })
 export class MusicCategoryComponent implements OnInit, OnDestroy {
-
+  @Output() hintUsed = new EventEmitter<Hint>();
   question$!: Observable<Question | null>;
   // @ts-ignore
   private player?: ReturnType<typeof YT.Player>;
@@ -180,6 +181,11 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
 
       (window as any).onYouTubeIframeAPIReady = () => resolve();
     });
+  }
+
+  onHintUsed(hint: Hint): void {
+    console.log('FORWARDING HINT FROM MUSIC', hint);
+    this.hintUsed.emit(hint);
   }
 
 
