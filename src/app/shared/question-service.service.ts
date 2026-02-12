@@ -42,6 +42,7 @@ import {
 } from './apiHelper/actor.helper';
 import {JAKA_TO_MELODIA} from './questions/music.questions';
 import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
+import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -229,6 +230,7 @@ export class QuestionService {
 
     if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
     if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
+    if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
 
     return [];
   }

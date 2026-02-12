@@ -134,7 +134,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 18,
     type: 'music',
     name: 'Piosenki mistrzostw',
-    basePoints: 5,
+    basePoints: 3,
     hints: []
   },
   {
