@@ -52,7 +52,8 @@ export class QuestionService {
   private currentQuestionSubject = new BehaviorSubject<Question | null>(null);
   readonly question$ = this.currentQuestionSubject.asObservable();
 
-  private usedQuestions: Question[] = [];
+  private usedQuestions: Record<string, Question[]> = {};
+
 
   // =========================
   // PUBLIC
@@ -61,8 +62,14 @@ export class QuestionService {
   async loadRandomQuestion(type: string, name: string): Promise<void> {
     const questions = await this.getQuestions(type, name);
 
+    const key = `${type}-${name}`;
+
+    if (!this.usedQuestions[key]) {
+      this.usedQuestions[key] = [];
+    }
+
     const available = questions.filter(
-      q => !this.usedQuestions.some(uq => uq.id === q.id)
+      q => !this.usedQuestions[key].some(uq => uq.id === q.id)
     );
 
     if (!available.length) {
@@ -78,9 +85,10 @@ export class QuestionService {
 
     question = await this.enrichQuestion(question, type, name);
 
-    this.usedQuestions.push(question);
+    this.usedQuestions[key].push(question);
     this.currentQuestionSubject.next(question);
   }
+
 
   revealAnswer(index: number): void {
     const q = this.currentQuestionSubject.value;
@@ -97,7 +105,7 @@ export class QuestionService {
   }
 
   resetQuestions(): void {
-    this.usedQuestions = [];
+    this.usedQuestions = {};
 
     const q = this.currentQuestionSubject.value;
     if (!q) return;
@@ -113,21 +121,25 @@ export class QuestionService {
     return this.currentQuestionSubject.value;
   }
 
-  async hasMoreQuestions(type: string, name: string): Promise<boolean> {
-    const all = await this.getQuestions(type, name);
-    const used = this.usedQuestions.filter(q =>
-      all.some(aq => aq.id === q.id)
-    );
-    return used.length < all.length;
-  }
-
   async getRemainingQuestions(type: string, name: string): Promise<number> {
     const all = await this.getQuestions(type, name);
-    const used = this.usedQuestions.filter(q =>
-      all.some(aq => aq.id === q.id)
-    );
-    return all.length - used.length;
+
+    const key = `${type}-${name}`;
+
+    const usedForCategory = this.usedQuestions[key] ?? [];
+
+    return all.length - usedForCategory.length;
   }
+
+  async hasMoreQuestions(type: string, name: string): Promise<boolean> {
+    const all = await this.getQuestions(type, name);
+
+    const key = `${type}-${name}`;
+    const usedForCategory = this.usedQuestions[key] ?? [];
+
+    return usedForCategory.length < all.length;
+  }
+
 
   updateCurrentQuestion(question: Question): void {
     this.currentQuestionSubject.next({ ...question });
