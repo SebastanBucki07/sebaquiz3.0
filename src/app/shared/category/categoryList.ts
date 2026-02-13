@@ -301,7 +301,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 33,
     type: 'photo-fragments',
     name: 'Jaki to herb piłkarski?',
-    basePoints: 10,
+    basePoints: 6,
     hints: [
       {id: 'first', label: 'Pierwszy fragment', penaltyPercent: 0, content: 'Rezyser 1'},
       {id: 'second', label: 'Drugi fragment', penaltyPercent: 30, content: 'Film został wydany w 1999 roku.'},

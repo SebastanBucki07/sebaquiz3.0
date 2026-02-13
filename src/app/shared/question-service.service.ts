@@ -44,6 +44,7 @@ import {JAKA_TO_MELODIA} from './questions/music.questions';
 import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
 import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
 import {LOGO_FRAGMENTY} from './questions/logoFragments.questions';
+import {HERBY_PILKARSKIE} from './questions/footballCrestsFragments.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -235,6 +236,7 @@ export class QuestionService {
     if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
 
     if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
+    if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;
 
     return [];
   }
