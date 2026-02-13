@@ -21,7 +21,6 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   hints: Hint[] = [];
   tiles: boolean[] = [];
   private sub?: Subscription;
-  private revealSteps = [5,5,5];
 
 
   private hintStep = 0; // 🔥 licznik użytych hintów
@@ -65,9 +64,10 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   onHintUsed(hint: Hint): void {
     this.hintUsed.emit(hint);
 
-    if (this.hintStep < this.revealSteps.length) {
-      this.revealRandom(this.revealSteps[this.hintStep]);
-      this.hintStep++;
+    const tilesToReveal = Number(hint.content);
+
+    if (!isNaN(tilesToReveal) && tilesToReveal > 0) {
+      this.revealRandom(tilesToReveal);
     }
   }
 

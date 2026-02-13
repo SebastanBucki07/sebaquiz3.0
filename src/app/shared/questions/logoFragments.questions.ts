@@ -11,19 +11,19 @@ export const LOGO_FRAGMENTY = [
       {
         "id": "0",
         "label": "Odsłoń pierwsze fragmenty",
-        "content": "",
+        "content": "15",
         "penaltyPercent": 0
       },
       {
         "id": "1",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "10",
         "penaltyPercent": 30
       },
       {
         "id": "2",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "20",
         "penaltyPercent": 30
       }
     ],
@@ -41,19 +41,19 @@ export const LOGO_FRAGMENTY = [
       {
         "id": "0",
         "label": "Odsłoń pierwsze fragmenty",
-        "content": "",
+        "content": "15",
         "penaltyPercent": 0
       },
       {
         "id": "1",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "10",
         "penaltyPercent": 30
       },
       {
         "id": "2",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "20",
         "penaltyPercent": 30
       }
     ],
@@ -71,19 +71,19 @@ export const LOGO_FRAGMENTY = [
       {
         "id": "0",
         "label": "Odsłoń pierwsze fragmenty",
-        "content": "",
+        "content": "15",
         "penaltyPercent": 0
       },
       {
         "id": "1",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "10",
         "penaltyPercent": 30
       },
       {
         "id": "2",
         "label": "Odsłoń kolejne fragmenty",
-        "content": "",
+        "content": "20",
         "penaltyPercent": 30
       }
     ],
