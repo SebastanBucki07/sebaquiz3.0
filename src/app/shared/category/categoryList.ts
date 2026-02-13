@@ -2,17 +2,6 @@ import {Category} from './category.interface';
 
 export const CATEGORY_LIST: Category[] = [
   {
-    id: 0,
-    type: 'hints',
-    name: 'Filmy',
-    basePoints: 10,
-    hints: [
-      {id: 'director', label: 'Rezyser', penaltyPercent: 0, content: 'Rezyser 1'},
-      {id: 'year', label: 'Rok produkcji', penaltyPercent: 20, content: 'Film został wydany w 1999 roku.'},
-      {id: 'actor', label: 'Aktor', penaltyPercent: 30, content: 'Główną rolę grał Brad Pitt.'}
-    ]
-  },
-  {
     id: 1,
     type: 'music',
     name: 'Jaka to Melodia?',
