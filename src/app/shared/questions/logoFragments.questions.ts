@@ -33,10 +33,10 @@ export const LOGO_FRAGMENTY = [
     "id": 2,
     "answers": [
       {
-        "value": "no-image.png"
+        "value": "BandMBargains.png"
       }
     ],
-    "question": "no-image.png",
+    "question": "BandMBargains.png",
     "hints": [
       {
         "id": "0",
@@ -63,10 +63,10 @@ export const LOGO_FRAGMENTY = [
     "id": 3,
     "answers": [
       {
-        "value": "no-image.png"
+        "value": "Supreme.png"
       }
     ],
-    "question": "no-image.png",
+    "question": "Supreme.png",
     "hints": [
       {
         "id": "0",

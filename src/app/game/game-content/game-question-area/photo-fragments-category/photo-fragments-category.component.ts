@@ -21,7 +21,7 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   hints: Hint[] = [];
   tiles: boolean[] = [];
   private sub?: Subscription;
-  private revealSteps = [15, 15, 20];
+  private revealSteps = [10, 10, 10];
 
 
   private hintStep = 0; // 🔥 licznik użytych hintów

@@ -40,3 +40,13 @@
 .tile.revealed {
   opacity: 0;
 }
+
+.question-image-container {
+  display: flex;
+  justify-content: center; /* poziomo */
+  align-items: center;     /* pionowo */
+  width: 100%;
+  min-height: 500px; /* lub dopasuj do obszaru pytania */
+  padding:10px;
+}
+

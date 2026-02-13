@@ -49,12 +49,4 @@ export class AnswerComponent implements OnInit {
     }).unsubscribe(); // unsubscribe immediately, because we only want to check once
   }
 
-  onHalf() {
-    this.half.emit();
-  }
-
-  isImage(value: string): boolean {
-    return /\.(png|jpg|jpeg|webp|gif)$/i.test(value);
-  }
-
 }
