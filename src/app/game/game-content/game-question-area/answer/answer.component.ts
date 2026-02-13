@@ -53,4 +53,8 @@ export class AnswerComponent implements OnInit {
     this.half.emit();
   }
 
+  isImage(value: string): boolean {
+    return /\.(png|jpg|jpeg|webp|gif)$/i.test(value);
+  }
+
 }

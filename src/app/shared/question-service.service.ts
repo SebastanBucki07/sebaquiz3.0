@@ -43,6 +43,7 @@ import {
 import {JAKA_TO_MELODIA} from './questions/music.questions';
 import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
 import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
+import {LOGO_FRAGMENTY} from './questions/logoFragments.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -90,6 +91,7 @@ export class QuestionService {
       q.revealedAnswers.push(index);
     }
 
+    console.log(`revelad answer: ${JSON.stringify(q.revealedAnswers)}`)
     this.currentQuestionSubject.next({ ...q });
   }
 
@@ -231,6 +233,8 @@ export class QuestionService {
     if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
     if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
     if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
+
+    if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
 
     return [];
   }

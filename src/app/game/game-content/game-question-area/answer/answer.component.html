@@ -11,24 +11,43 @@
       Pokaż {{ answer.label || ('odpowiedź ' + (i + 1)) }}
     </button>
 
+    <!-- 👇 PRZEROBIONA ODPOWIEDŹ -->
     <div
       *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)"
-      class="answer-text revealed">
-      <div class="answer-label">
-        {{ answer.label || ('Odpowiedź ' + (i + 1)) }}
-      </div>
-      {{ answer.value }}
+      class="answer-card">
+
+      <!-- JEŚLI OBRAZEK -->
+      <ng-container *ngIf="isImage(answer.value); else textAnswer">
+        <div class="image-wrapper">
+          <img [src]="answer.value" class="answer-image" />
+          <div class="image-caption">
+            {{ answer.label || ('Odpowiedź ' + (i + 1)) }}
+          </div>
+        </div>
+      </ng-container>
+
+      <!-- JEŚLI TEKST -->
+      <ng-template #textAnswer>
+        <div class="text-wrapper">
+          <div class="answer-label">
+            {{ answer.label || ('Odpowiedź ' + (i + 1)) }}
+          </div>
+          <div class="answer-text">
+            {{ answer.value }}
+          </div>
+        </div>
+      </ng-template>
+
     </div>
 
   </div>
 
-  <!-- 🔥 HERE IS AnswerButtonComponent -->
+  <!-- ANSWER BUTTONS -->
   <app-answer-buttons
     *ngIf="showAnswerButtons"
     (correct)="correct.emit()"
     (wrong)="wrong.emit()"
     (half)="half.emit()">
   </app-answer-buttons>
-
 
 </div>

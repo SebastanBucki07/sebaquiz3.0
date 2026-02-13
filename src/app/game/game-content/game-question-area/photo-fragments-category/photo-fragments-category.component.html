@@ -1,1 +1,23 @@
 <p>photo-fragments-category works!</p>
+
+<app-tips
+  [hints]="hints"
+  (hintUsed)="onHintUsed($event)">
+</app-tips>
+
+<div class="image-wrapper" *ngIf="question$ | async as question">
+
+  <img *ngIf="question$ | async as question"
+       [src]="'/' + question.question"
+       alt="quiz image" />
+
+
+  <div class="grid">
+    <div
+      *ngFor="let tile of tiles"
+      class="tile"
+      [class.revealed]="tile">
+    </div>
+  </div>
+
+</div>
