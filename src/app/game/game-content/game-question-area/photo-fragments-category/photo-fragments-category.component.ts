@@ -97,4 +97,13 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
     this.tiles = this.tiles.map(() => true);
   }
 
+  getImageSrc(question: Question): string {
+    if (!question?.question) return '';
+
+    return question.question.startsWith('http')
+      ? question.question
+      : '/' + question.question;
+  }
+
+
 }

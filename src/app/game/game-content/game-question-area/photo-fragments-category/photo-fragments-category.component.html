@@ -6,7 +6,9 @@
 <!-- nowy kontener dla centrowania wrappera -->
 <div class="question-image-container" *ngIf="question$ | async as question">
   <div class="image-wrapper">
-    <img [src]="'/' + question.question" alt="quiz image" />
+    <img [src]="getImageSrc(question)" alt="quiz image" />
+
+
 
     <div class="grid">
       <div

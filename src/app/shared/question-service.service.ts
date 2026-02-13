@@ -45,6 +45,7 @@ import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
 import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
 import {LOGO_FRAGMENTY} from './questions/logoFragments.questions';
 import {HERBY_PILKARSKIE} from './questions/footballCrestsFragments.questions';
+import {FRAGMENT_FLAG} from './questions/flagFragments.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -249,6 +250,7 @@ export class QuestionService {
 
     if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;
+    if (type === 'photo-fragments' && name === 'Fragmenty Flag') return FRAGMENT_FLAG;
 
     return [];
   }
