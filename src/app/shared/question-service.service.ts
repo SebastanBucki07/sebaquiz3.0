@@ -46,6 +46,7 @@ import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
 import {LOGO_FRAGMENTY} from './questions/logoFragments.questions';
 import {HERBY_PILKARSKIE} from './questions/footballCrestsFragments.questions';
 import {FRAGMENT_FLAG} from './questions/flagFragments.questions';
+import {WYPISZ_WSPOLNE} from './questions/writtings.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -251,6 +252,8 @@ export class QuestionService {
     if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;
     if (type === 'photo-fragments' && name === 'Fragmenty Flag') return FRAGMENT_FLAG;
+
+    if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych') return WYPISZ_WSPOLNE;
 
     return [];
   }

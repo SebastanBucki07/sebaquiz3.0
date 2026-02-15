@@ -1,1 +1,37 @@
 <p>writing-category works!</p>
+<ng-container *ngIf="question as q">
+
+  <mat-card class="question-card">
+    <h2>{{ q.question }}</h2>
+  </mat-card>
+
+  <!-- INPUT TERAZ TUTAJ -->
+  <mat-card class="control-card" *ngIf="!gameFinished">
+    <h3>Tura: {{ currentPlayer.name }}</h3>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <input matInput
+             placeholder="Wpisz odpowiedź"
+             [(ngModel)]="inputValue"
+             (keyup.enter)="submitAnswer()" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary"
+            (click)="submitAnswer()">
+      Zatwierdź
+    </button>
+  </mat-card>
+
+  <!-- ODPOWIEDZI POD INPUTEM -->
+  <mat-grid-list cols="3" rowHeight="70px" gutterSize="10px">
+    <mat-grid-tile *ngFor="let answer of q.answers; let i = index">
+      <mat-card class="answer-card"
+                [class.revealed]="isRevealed(i)">
+        <span *ngIf="isRevealed(i)">
+          {{ answer.value }}
+        </span>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</ng-container>

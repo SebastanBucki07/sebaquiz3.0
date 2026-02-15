@@ -1,0 +1,61 @@
+.question-card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.control-card {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.answer-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 12px;
+  border: 3px solid #1976d2;
+  background: rgba(25, 118, 210, 0.15);
+  color: white;
+  transition: 0.3s ease;
+  height: 100%;
+}
+
+/* Odkryta odpowiedź */
+.answer-card.revealed {
+  background: #2e7d32;
+  border-color: #2e7d32;
+  color: white;
+  transform: scale(1.05);
+}
+
+.control-card {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.players-card {
+  margin-top: 20px;
+}
+
+.active-player {
+  font-weight: bold;
+  color: #1976d2;
+}
+
+.result-card {
+  margin-top: 20px;
+  text-align: center;
+  background: #1b5e20;
+  color: white;
+}
+
