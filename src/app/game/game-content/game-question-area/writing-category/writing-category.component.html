@@ -1,11 +1,58 @@
-<p>writing-category works!</p>
 <ng-container *ngIf="question as q">
+
+  <!-- ===================== -->
+  <!-- PYTANIE -->
+  <!-- ===================== -->
 
   <mat-card class="question-card">
     <h2>{{ q.question }}</h2>
   </mat-card>
 
-  <!-- INPUT TERAZ TUTAJ -->
+
+  <!-- ===================== -->
+  <!-- LICZNIK POZOSTAŁYCH -->
+  <!-- ===================== -->
+
+  <div class="counter-wrapper">
+    <div class="counter-badge">
+      <span class="counter-label">Pozostało</span>
+      <span class="counter-number">{{ getRemaining() }}</span>
+    </div>
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- GRACZE + SZANSE -->
+  <!-- ===================== -->
+
+  <mat-card class="players-card">
+    <div class="player-row"
+         *ngFor="let player of players"
+         [class.active-player]="player.id === currentPlayer.id">
+
+      <div class="player-name">
+        {{ player.name }}
+      </div>
+
+      <div class="player-chances">
+        Szanse:
+        <span class="chance-dot"
+              *ngFor="let c of [].constructor(player.chancesLeft)">
+        </span>
+
+        <span class="lost-dot"
+              *ngFor="let c of [].constructor(2 - player.chancesLeft)">
+        </span>
+      </div>
+
+    </div>
+  </mat-card>
+
+
+  <!-- ===================== -->
+  <!-- INPUT -->
+  <!-- ===================== -->
+
   <mat-card class="control-card" *ngIf="!gameFinished">
     <h3>Tura: {{ currentPlayer.name }}</h3>
 
@@ -22,16 +69,51 @@
     </button>
   </mat-card>
 
-  <!-- ODPOWIEDZI POD INPUTEM -->
-  <mat-grid-list cols="3" rowHeight="70px" gutterSize="10px">
-    <mat-grid-tile *ngFor="let answer of q.answers; let i = index">
-      <mat-card class="answer-card"
-                [class.revealed]="isRevealed(i)">
-        <span *ngIf="isRevealed(i)">
-          {{ answer.value }}
-        </span>
-      </mat-card>
-    </mat-grid-tile>
-  </mat-grid-list>
+
+  <!-- ===================== -->
+  <!-- ODPOWIEDZI -->
+  <!-- ===================== -->
+
+  <div class="answers-wrapper"
+       [class.flash]="wrongFlash">
+
+    <div class="answer-box"
+         *ngFor="let answer of q.answers; let i = index">
+
+      <div class="flip-card">
+        <div class="flip-card-inner"
+             [class.flipped]="isRevealed(i)">
+
+          <div class="flip-card-front">
+          </div>
+
+          <div class="flip-card-back">
+            {{ answer.value }}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- ===================== -->
+  <!-- KONIEC GRY -->
+  <!-- ===================== -->
+
+  <mat-card *ngIf="gameFinished" class="result-card">
+    <h2>Koniec gry!</h2>
+
+    <p *ngIf="lastCorrectPlayer">
+      Punkt zdobywa:
+      <strong>{{ lastCorrectPlayer.name }}</strong>
+    </p>
+
+    <p *ngIf="!lastCorrectPlayer">
+      Wszyscy stracili szanse!
+    </p>
+  </mat-card>
 
 </ng-container>

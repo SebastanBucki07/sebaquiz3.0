@@ -44,6 +44,11 @@ export class WritingCategoryComponent implements OnInit {
   inputValue = '';
   gameFinished = false;
   lastCorrectPlayer: Player | null = null;
+  remainingAnswers = 0;
+  wrongFlash = false;
+
+  private correctAudio = new Audio('assets/sounds/correct.mp3');
+  private wrongAudio = new Audio('assets/sounds/wrong.mp3');
 
   constructor(private questionService: QuestionService) {}
 
@@ -53,7 +58,12 @@ export class WritingCategoryComponent implements OnInit {
     this.question$.subscribe(q => {
       this.question = q;
       this.resetGame();
+
+      if (q?.answers) {
+        this.remainingAnswers = q.answers.length;
+      }
     });
+
   }
 
   get currentPlayer(): Player {
@@ -78,22 +88,32 @@ export class WritingCategoryComponent implements OnInit {
       if (!alreadyRevealed) {
         this.questionService.revealAnswer(answerIndex);
         this.lastCorrectPlayer = this.currentPlayer;
+
+        this.correctAudio.currentTime = 0;
+        this.correctAudio.play();
+
+        this.remainingAnswers--;
+
         this.checkIfAllRevealed();
         this.inputValue = '';
         return;
       }
+
     }
 
     this.handleMistake();
     this.inputValue = '';
   }
 
-
-
   handleMistake(): void {
     const player = this.currentPlayer;
     player.mistakes++;
     player.chancesLeft--;
+
+    this.wrongAudio.currentTime = 0;
+    this.wrongAudio.play();
+
+    this.triggerWrongFlash();
 
     if (player.mistakes >= 3) {
       this.revealAllAnswers();
@@ -104,15 +124,42 @@ export class WritingCategoryComponent implements OnInit {
     this.nextPlayer();
   }
 
-  nextPlayer(): void {
-    let next = (this.currentPlayerIndex + 1) % this.players.length;
+  triggerWrongFlash(): void {
+    this.wrongFlash = true;
+    setTimeout(() => {
+      this.wrongFlash = false;
+    }, 400);
+  }
 
-    while (this.players[next].chancesLeft <= 0) {
-      next = (next + 1) % this.players.length;
+  getRemaining(): number {
+    return this.remainingAnswers;
+  }
+
+
+  nextPlayer(): void {
+
+    const activePlayers = this.players.filter(p => p.chancesLeft > 0);
+
+    // Jeśli został tylko jeden aktywny gracz → wygrywa
+    if (activePlayers.length <= 1) {
+      this.finishGame();
+      return;
     }
+
+    let next = this.currentPlayerIndex;
+    let attempts = 0;
+
+    do {
+      next = (next + 1) % this.players.length;
+      attempts++;
+    } while (
+      this.players[next].chancesLeft <= 0 &&
+      attempts <= this.players.length
+      );
 
     this.currentPlayerIndex = next;
   }
+
 
   revealAllAnswers(): void {
     if (!this.question) return;
