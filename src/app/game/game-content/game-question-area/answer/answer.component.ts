@@ -49,8 +49,4 @@ export class AnswerComponent implements OnInit {
     }).unsubscribe(); // unsubscribe immediately, because we only want to check once
   }
 
-  onHalf() {
-    this.half.emit();
-  }
-
 }

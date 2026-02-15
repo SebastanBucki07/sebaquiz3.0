@@ -1,1 +1,21 @@
-<p>photo-fragments-category works!</p>
+<app-tips
+  [hints]="hints"
+  (hintUsed)="onHintUsed($event)">
+</app-tips>
+
+<!-- nowy kontener dla centrowania wrappera -->
+<div class="question-image-container" *ngIf="question$ | async as question">
+  <div class="image-wrapper">
+    <img [src]="getImageSrc(question)" alt="quiz image" />
+
+
+
+    <div class="grid">
+      <div
+        *ngFor="let tile of tiles"
+        class="tile"
+        [class.revealed]="tile">
+      </div>
+    </div>
+  </div>
+</div>
