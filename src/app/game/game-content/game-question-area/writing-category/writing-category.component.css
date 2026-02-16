@@ -1,7 +1,6 @@
 /* ===================== */
 /* LICZNIK */
 /* ===================== */
-
 .counter-wrapper {
   display: flex;
   justify-content: center;
@@ -11,33 +10,35 @@
 .counter-badge {
   display: flex;
   align-items: center;
-  gap: 10px;
-  background: white;
-  padding: 10px 20px;
+  gap: 12px;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  padding: 12px 24px;
   border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
 }
 
 .counter-label {
   font-weight: 600;
-  color: #1976d2;
   font-size: 16px;
 }
 
 .counter-number {
-  background: #1976d2;
-  color: white;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 18px;
+  background: white;
+  color: #1976d2;
+  padding: 8px 16px;
+  border-radius: 24px;
+  font-size: 20px;
   font-weight: bold;
+  min-width: 36px;
+  text-align: center;
 }
-
 
 /* ===================== */
 /* GRID WRAPPER */
 /* ===================== */
-
 .answers-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -58,12 +59,11 @@
 }
 
 /* ===================== */
-/* KAFELKI */
+/* KAFELKI ODPOWIEDZI */
 /* ===================== */
-
 .answer-box {
   width: 180px;
-  height: 80px;
+  height: 90px;
   position: relative;
 }
 
@@ -78,7 +78,6 @@
 /* ===================== */
 /* FLIP CARD */
 /* ===================== */
-
 .flip-card {
   width: 100%;
   height: 100%;
@@ -89,8 +88,9 @@
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .flip-card-inner.flipped {
@@ -108,12 +108,13 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  font-size: 1rem;
   border: 3px solid #1976d2;
 }
 
 /* przód – zakryte */
 .flip-card-front {
-  background: rgba(25,118,210,0.2);
+  background: rgba(25,118,210,0.15);
 }
 
 /* tył – odkryte */
@@ -123,6 +124,9 @@
   transform: rotateY(180deg);
 }
 
+/* ===================== */
+/* GRACZE */
+/* ===================== */
 .players-card {
   margin-bottom: 20px;
   padding: 10px;
@@ -144,35 +148,57 @@
   font-weight: bold;
 }
 
-/* GRACZE / SZANSE */
+/* SZANSE GRACZA */
 .player-chances {
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
 }
 
 .chance-dot,
 .lost-dot {
-  width: 18px;      /* większa średnica */
-  height: 18px;     /* większa średnica */
+  width: 22px;      /* większe kropki */
+  height: 22px;
   border-radius: 50%;
   display: inline-block;
-  margin-right: 2px;
-  transition: transform 0.2s;
+  transition: transform 0.3s, background 0.3s;
 }
 
-/* zielone wypełnione kropki = szansa */
+/* zielone = szansa */
 .chance-dot {
   background-color: #4caf50;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
-/* czerwone = stracona szansa */
+/* czerwone = utracona szansa */
 .lost-dot {
   background-color: #f44336;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
 }
 
-/* efekt hover (opcjonalny) */
+/* efekt hover */
 .chance-dot:hover,
 .lost-dot:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+}
+
+
+/* ===================== */
+/* WYŚRODKOWANIE PYTANIA I KONIEC GRY */
+/* ===================== */
+
+.question-card h2,
+.result-card h2,
+.result-card h3.winner-name,
+.result-card p {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }

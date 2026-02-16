@@ -144,7 +144,7 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   getRemaining(): number {
-    return this.remainingAnswers;
+    return (this.question?.answers?.length ?? 0) - (this.question?.revealedAnswers?.length ?? 0);
   }
 
   nextPlayer(): void {

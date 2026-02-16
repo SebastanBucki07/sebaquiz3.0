@@ -9,13 +9,13 @@
 
   <!-- ===================== -->
   <!-- LICZNIK POZOSTAŁYCH -->
-  <!-- ===================== -->
-  <div class="counter-wrapper">
+  <div class="counter-wrapper" *ngIf="!gameFinished">
     <div class="counter-badge">
       <span class="counter-label">Pozostało</span>
       <span class="counter-number">{{ getRemaining() }}</span>
     </div>
   </div>
+
 
   <!-- ===================== -->
   <!-- GRACZE / KONIEC -->

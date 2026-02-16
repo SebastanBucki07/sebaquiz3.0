@@ -1058,7 +1058,7 @@ export const BOOKS = [
       },
       {
         "label": "autor",
-        "value": "MArk Twain"
+        "value": "Mark Twain"
       }
     ],
     "question": "Nadszedł sobotni ranek. Słońce świeciło promiennie, cały świat dyszał radością lata i kipiał życiem. W każdym sercu dźwięczała muzyka, a jeśli serce było młode, pieśń sama cisnęła się na usta.",
