@@ -144,25 +144,35 @@
   font-weight: bold;
 }
 
+/* GRACZE / SZANSE */
 .player-chances {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .chance-dot,
 .lost-dot {
-  width: 12px;
-  height: 12px;
+  width: 18px;      /* większa średnica */
+  height: 18px;     /* większa średnica */
   border-radius: 50%;
+  display: inline-block;
+  margin-right: 2px;
+  transition: transform 0.2s;
 }
 
+/* zielone wypełnione kropki = szansa */
 .chance-dot {
-  background: #2e7d32;
+  background-color: #4caf50;
 }
 
+/* czerwone = stracona szansa */
 .lost-dot {
-  background: #c62828;
-  opacity: 0.5;
+  background-color: #f44336;
 }
 
+/* efekt hover (opcjonalny) */
+.chance-dot:hover,
+.lost-dot:hover {
+  transform: scale(1.2);
+}
