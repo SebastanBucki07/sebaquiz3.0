@@ -23,27 +23,29 @@
   <ng-container *ngIf="!gameFinished; else gameEnd">
 
     <mat-card class="players-card">
-      <div class="player-row"
-           *ngFor="let player of players"
-           [class.active-player]="player.id === activePlayerId">
+      <div class="player-row" *ngFor="let player of players" [class.active-player]="player.id === activePlayerId">
 
+        <!-- Imię gracza -->
         <div class="player-name">
           {{ player.name }}
         </div>
 
+
+        <div class="player-stats">
+          Odgadnięte: {{ player.correctAnswers }}
+          ({{ player.calculatedPoints || 0 }} pkt)
+        </div>
+
+        <!-- Szanse -->
         <div class="player-chances">
           Szanse:
-          <span class="chance-dot"
-                *ngFor="let c of [].constructor(player.chancesLeft)">
-          </span>
-
-          <span class="lost-dot"
-                *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)">
-          </span>
+          <span class="chance-dot" *ngFor="let c of [].constructor(player.chancesLeft)"></span>
+          <span class="lost-dot" *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)"></span>
         </div>
 
       </div>
     </mat-card>
+
 
     <!-- ===================== -->
     <!-- INPUT -->
@@ -71,11 +73,10 @@
   <!-- ===================== -->
   <ng-template #gameEnd>
     <mat-card class="result-card">
-      <h2>Koniec gry!</h2>
 
       <div *ngIf="winner; else noWinner">
-        <h3 class="winner-name">🏆 {{ winner.name }} wygrywa!</h3>
-        <p>Aktualne punkty: {{ winner.points + 1 }}</p>
+        <h2 class="winner-name">🏆 {{ winner.name }} wygrywa!</h2>
+        <h3>Zdobyte punkty: {{ winner.calculatedPoints }}</h3>
       </div>
 
       <ng-template #noWinner>

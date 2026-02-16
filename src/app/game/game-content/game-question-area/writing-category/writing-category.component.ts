@@ -13,6 +13,8 @@ import { GameStateService, Team } from '../../../../shared/game-state.service';
 interface Player extends Team {
   mistakes: number;
   chancesLeft: number;
+  correctAnswers: number;          // ile odpowiedzi odgadli
+  calculatedPoints?: number;       // lokalnie obliczone punkty
 }
 
 @Component({
@@ -32,13 +34,14 @@ interface Player extends Team {
 export class WritingCategoryComponent implements OnInit {
 
   readonly MAX_CHANCES = 3;
+  readonly MAX_POINTS = 10;
 
   question$!: Observable<Question | null>;
   question!: Question | null;
 
   players: Player[] = [];
   currentPlayerIndex = 0;
-  winner: Team | null = null;
+  winner: Player | null = null;
   inputValue = '';
   gameFinished = false;
   lastCorrectPlayer: Team | null = null;
@@ -61,7 +64,9 @@ export class WritingCategoryComponent implements OnInit {
       this.players = teams.map(team => ({
         ...team,
         mistakes: 0,
-        chancesLeft: this.MAX_CHANCES
+        chancesLeft: this.MAX_CHANCES,
+        correctAnswers: 0,
+        calculatedPoints: 0
       }));
       this.currentPlayerIndex = 0;
     });
@@ -71,7 +76,7 @@ export class WritingCategoryComponent implements OnInit {
       if (!q) return;
       this.question = q;
 
-      // sortowanie odpowiedzi alfabetycznie (bez uwzględnienia wielkości liter)
+      // sortowanie odpowiedzi alfabetycznie
       this.question.answers = [...q.answers].sort((a, b) =>
         a.value.toLowerCase().localeCompare(b.value.toLowerCase())
       );
@@ -79,7 +84,6 @@ export class WritingCategoryComponent implements OnInit {
       this.remainingAnswers = this.question.answers.length;
     });
   }
-
 
   get currentPlayer(): Player | null {
     return this.players.length > 0 ? this.players[this.currentPlayerIndex] : null;
@@ -103,17 +107,25 @@ export class WritingCategoryComponent implements OnInit {
 
       if (!alreadyRevealed) {
         this.questionService.revealAnswer(answerIndex);
+
         this.lastCorrectPlayer = this.currentPlayer;
+        this.currentPlayer.correctAnswers++;
+
+        // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE
+        const totalAnswers = this.question?.answers.length ?? 1;
+        this.currentPlayer.calculatedPoints = Math.ceil(
+          (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
+        );
 
         this.correctAudio.currentTime = 0;
         this.correctAudio.play();
 
         this.remainingAnswers--;
-
         this.checkIfAllRevealed();
         this.inputValue = '';
         return;
       }
+
     }
 
     this.handleMistake();
@@ -129,7 +141,7 @@ export class WritingCategoryComponent implements OnInit {
     this.wrongAudio.play();
     this.triggerWrongFlash();
 
-    if (player.mistakes >= 3) {
+    if (player.mistakes >= this.MAX_CHANCES) {
       this.revealAllAnswers();
       this.finishGame();
       return;
@@ -148,7 +160,7 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   nextPlayer(): void {
-    const alivePlayers = this.players.filter(p => p.mistakes < 3);
+    const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
     if (alivePlayers.length <= 1) {
       this.finishGame();
       return;
@@ -160,7 +172,7 @@ export class WritingCategoryComponent implements OnInit {
     do {
       next = (next + 1) % this.players.length;
       attempts++;
-    } while (this.players[next].mistakes >= 3 && attempts <= this.players.length);
+    } while (this.players[next].mistakes >= this.MAX_CHANCES && attempts <= this.players.length);
 
     this.currentPlayerIndex = next;
   }
@@ -182,24 +194,42 @@ export class WritingCategoryComponent implements OnInit {
 
   finishGame(): void {
     this.gameFinished = true;
+    if (!this.question) return;
 
-    const alivePlayers = this.players.filter(p => p.mistakes < 3);
+    const totalAnswers = this.question.answers?.length ?? 0;
+    if (totalAnswers === 0) return;
 
-    if (alivePlayers.length === 1) {
-      this.winner = alivePlayers[0];
-    } else if (this.lastCorrectPlayer) {
-      this.winner = this.lastCorrectPlayer;
-    }
+    // Obliczamy lokalnie punkty procentowo dla każdej drużyny
+    this.players.forEach(player => {
+      const ratio = player.correctAnswers / totalAnswers;
+      player.calculatedPoints = Math.ceil(ratio * this.MAX_POINTS);
+    });
 
-    if (this.winner) {
-      this.gameStateService.addPoint(this.winner.id);
-    }
+// aby Angular odświeżył widok
+    this.players = [...this.players];
+
+
+    // Wyłonienie zwycięzcy – priorytet: odgadnięte odpowiedzi, w razie remisu -> więcej szans
+    const sorted = [...this.players].sort((a, b) => {
+      if (b.correctAnswers === a.correctAnswers) {
+        return b.chancesLeft - a.chancesLeft; // więcej szans wygrywa w remisie
+      }
+      return b.correctAnswers - a.correctAnswers;
+    });
+
+    this.winner = sorted[0] || null;
+
+    // NIE DODAJEMY punktów do GameStateService — będzie zrobione w innym komponencie
   }
+
+
 
   resetGame(): void {
     this.players.forEach(p => {
       p.mistakes = 0;
       p.chancesLeft = this.MAX_CHANCES;
+      p.correctAnswers = 0;
+      p.calculatedPoints = 0;
     });
     this.currentPlayerIndex = 0;
     this.gameFinished = false;
@@ -213,4 +243,5 @@ export class WritingCategoryComponent implements OnInit {
   private normalize(value: string): string {
     return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
   }
+
 }

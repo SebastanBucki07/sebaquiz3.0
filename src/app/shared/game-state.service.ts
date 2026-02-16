@@ -31,7 +31,7 @@ export class GameStateService {
     }
   }
 
-  addPoint(teamId: number): void {
+  addPoint(teamId: number,points:number = 1): void {
     const teams = this.teamsSubject.value.map(team =>
       team.id === teamId
         ? { ...team, points: team.points + 1 }

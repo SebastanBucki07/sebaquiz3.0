@@ -26,7 +26,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 4,
     type: 'wpisywanie',
     name: 'Wypisz wspólne',
-    basePoints: 99,
+    basePoints: 10,
     hints: []
   },
   {
@@ -301,7 +301,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 34,
     type: 'writting-category',
     name: 'Wypisywanie róznych wspólnych',
-    basePoints: 5,
+    basePoints: 10,
     hints: []
   },
   {

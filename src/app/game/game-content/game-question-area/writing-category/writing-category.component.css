@@ -143,6 +143,14 @@
   font-weight: 600;
 }
 
+.player-correct {
+  font-weight: 600;
+  color: #2e7d32; /* ciemna zieleń */
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+
 .active-player {
   color: #1976d2;
   font-weight: bold;
