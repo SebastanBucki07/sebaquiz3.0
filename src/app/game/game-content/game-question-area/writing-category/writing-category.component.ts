@@ -14,7 +14,8 @@ interface Player extends Team {
   mistakes: number;
   chancesLeft: number;
   correctAnswers: number;          // ile odpowiedzi odgadli
-  calculatedPoints?: number;       // lokalnie obliczone punkty
+  calculatedPoints?: number;
+  color: string;
 }
 
 @Component({
@@ -47,6 +48,7 @@ export class WritingCategoryComponent implements OnInit {
   lastCorrectPlayer: Team | null = null;
   remainingAnswers = 0;
   wrongFlash = false;
+  answerOwners: { [key: number]: number } = {};
 
   private correctAudio = new Audio('assets/sounds/correct.mp3');
   private wrongAudio = new Audio('assets/sounds/wrong.mp3');
@@ -66,7 +68,8 @@ export class WritingCategoryComponent implements OnInit {
         mistakes: 0,
         chancesLeft: this.MAX_CHANCES,
         correctAnswers: 0,
-        calculatedPoints: 0
+        calculatedPoints: 0,
+        color: this.generateTeamColor()
       }));
       this.currentPlayerIndex = 0;
     });
@@ -85,6 +88,7 @@ export class WritingCategoryComponent implements OnInit {
     });
   }
 
+
   get currentPlayer(): Player | null {
     return this.players.length > 0 ? this.players[this.currentPlayerIndex] : null;
   }
@@ -93,14 +97,51 @@ export class WritingCategoryComponent implements OnInit {
     return this.currentPlayer?.id ?? null;
   }
 
+  private generateTeamColor(): string {
+    const hue = Math.floor(Math.random() * 360);     // losowy kolor
+    const saturation = 70;                           // żywy
+    const lightness = 45;                            // nie za jasny (czytelny tekst)
+
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+  }
+
+
+  getOwnerName(answerIndex: number): string | null {
+    const ownerId = this.answerOwners[answerIndex];
+    if (!ownerId) return null;
+
+    const player = this.players.find(player => player.id === ownerId);
+    return player ? player.name : null;
+  }
+
+  getAnswerColor(index: number): string {
+    const ownerId = this.answerOwners[index];
+    if (!ownerId) return '';
+
+    const player = this.players.find(p => p.id === ownerId);
+    return player ? player.color : '';
+  }
+
+
+
   submitAnswer(): void {
     if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentPlayer) return;
     if (!this.question.answers) return;
 
     const normalizedInput = this.normalize(this.inputValue);
-    const answerIndex = this.question.answers.findIndex(a =>
+
+// 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
+    let answerIndex = this.question.answers.findIndex(a =>
       this.normalize(a.value) === normalizedInput
     );
+
+// 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
+    if (answerIndex === -1) {
+      answerIndex = this.question.answers.findIndex(a =>
+        this.areSimilar(normalizedInput, a.value)
+      );
+    }
+
 
     if (answerIndex >= 0) {
       const alreadyRevealed = this.question.revealedAnswers?.includes(answerIndex) ?? false;
@@ -108,10 +149,17 @@ export class WritingCategoryComponent implements OnInit {
       if (!alreadyRevealed) {
         this.questionService.revealAnswer(answerIndex);
 
+// 🔥 zapamiętujemy kto odgadł
+        this.answerOwners[answerIndex] = this.currentPlayer.id;
+
         this.lastCorrectPlayer = this.currentPlayer;
         this.currentPlayer.correctAnswers++;
 
-        // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE
+
+        this.lastCorrectPlayer = this.currentPlayer;
+        this.currentPlayer.correctAnswers++;
+
+        // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
         this.currentPlayer.calculatedPoints = Math.ceil(
           (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
@@ -125,7 +173,6 @@ export class WritingCategoryComponent implements OnInit {
         this.inputValue = '';
         return;
       }
-
     }
 
     this.handleMistake();
@@ -240,8 +287,59 @@ export class WritingCategoryComponent implements OnInit {
     return this.question?.revealedAnswers?.includes(index) ?? false;
   }
 
+  // 🔹 Normalizacja: małe litery, polskie znaki, - traktujemy jak spację, redukcja spacji
   private normalize(value: string): string {
-    return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+    return value
+      .toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/-/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
   }
+
+// 🔹 Sprawdzenie zgodności odpowiedzi z tolerancją literówek i zamianą słów
+  private areSimilar(input: string, answer: string): boolean {
+    const normInput = this.normalize(input);
+    const normAnswer = this.normalize(answer);
+
+    // dokładne dopasowanie zawsze
+    if (normInput === normAnswer) return true;
+
+    // sprawdzamy zamianę kolejności słów (Robert Lewandowski ↔ Lewandowski Robert)
+    const inputWords = normInput.split(/[\s-]+/).sort().join(' ');
+    const answerWords = normAnswer.split(/[\s-]+/).sort().join(' ');
+    if (inputWords === answerWords) return true;
+
+    // ustalamy maksymalną liczbę literówek
+    const maxEdits = normAnswer.length >= 7 ? 3 : 1;
+
+    // dopuszczamy literówki
+    return this.levenshtein(normInput, normAnswer) <= maxEdits;
+  }
+
+
+
+// 🔹 Funkcja Levenshtein (do literówek)
+  private levenshtein(a: string, b: string): number {
+    const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
+      new Array(b.length + 1).fill(0)
+    );
+
+    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,       // usunięcie
+          matrix[i][j - 1] + 1,       // wstawienie
+          matrix[i - 1][j - 1] + cost // zamiana
+        );
+      }
+    }
+    return matrix[a.length][b.length];
+  }
+
 
 }

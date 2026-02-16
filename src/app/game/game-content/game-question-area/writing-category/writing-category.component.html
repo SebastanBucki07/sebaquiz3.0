@@ -23,28 +23,74 @@
   <ng-container *ngIf="!gameFinished; else gameEnd">
 
     <mat-card class="players-card">
-      <div class="player-row" *ngFor="let player of players" [class.active-player]="player.id === activePlayerId">
+      <div class="score-table">
 
-        <!-- Imię gracza -->
-        <div class="player-name">
-          {{ player.name }}
+        <!-- ===== NAZWY DRUŻYN ===== -->
+        <div class="row header-row">
+          <div class="cell header-cell">Drużyna</div>
+
+          <div
+            class="cell team-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.active-column]="player.id === activePlayerId"
+          >
+            {{ player.name }}
+          </div>
+        </div>
+
+        <!-- ===== SZANSE ===== -->
+        <div class="row alt-row">
+          <div class="cell header-cell">Szanse</div>
+
+          <div
+            class="cell team-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.active-column]="player.id === activePlayerId"
+          >
+            <div class="chances-wrapper">
+          <span class="chance-dot"
+                *ngFor="let c of [].constructor(player.chancesLeft)">
+          </span>
+
+              <span class="lost-dot"
+                    *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)">
+          </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row alt-row">
+          <div class="cell header-cell">Odgadnięte odpowiedzi</div>
+          <div class="cell team-cell answers-count-cell"
+               *ngFor="let player of players"
+               [class.active-column]="player.id === activePlayerId"
+               [style.background-color]="player.color">
+            {{ player.correctAnswers }}
+          </div>
         </div>
 
 
-        <div class="player-stats">
-          Odgadnięte: {{ player.correctAnswers }}
-          ({{ player.calculatedPoints || 0 }} pkt)
-        </div>
+        <!-- ===== PUNKTY ===== -->
+        <div class="row">
+          <div class="cell header-cell">Punkty</div>
 
-        <!-- Szanse -->
-        <div class="player-chances">
-          Szanse:
-          <span class="chance-dot" *ngFor="let c of [].constructor(player.chancesLeft)"></span>
-          <span class="lost-dot" *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)"></span>
+          <div
+            class="cell team-cell points-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.active-column]="player.id === activePlayerId"
+          >
+            {{ player.calculatedPoints || 0 }}
+          </div>
         </div>
 
       </div>
     </mat-card>
+
+
+
 
 
     <!-- ===================== -->
@@ -97,7 +143,23 @@
           <div class="flip-card-front"></div>
 
           <!-- back: odkryta odpowiedź -->
-          <div class="flip-card-back">{{ answer.value }}</div>
+          <div class="flip-card-back"
+               [style.background-color]="getAnswerColor(i)"
+               [class.unanswered]="gameFinished && !answerOwners[i]">
+
+            <div class="answer-text">
+              {{ answer.value }}
+            </div>
+
+            <div class="answer-owner"
+                 *ngIf="getOwnerName(i) as ownerName">
+              {{ ownerName }}
+            </div>
+
+          </div>
+
+
+
 
         </div>
       </div>
