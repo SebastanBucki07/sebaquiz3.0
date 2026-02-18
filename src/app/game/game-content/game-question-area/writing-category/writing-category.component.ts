@@ -61,18 +61,22 @@ export class WritingCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
-    // Pobranie drużyn z serwisu
     this.gameStateService.teams$.subscribe(teams => {
-      this.players = teams.map(team => ({
+
+      const colors = this.generateTeamColor(teams.length);
+
+      this.players = teams.map((team, index) => ({
         ...team,
         mistakes: 0,
         chancesLeft: this.MAX_CHANCES,
         correctAnswers: 0,
         calculatedPoints: 0,
-        color: this.generateTeamColor()
+        color: colors[index]
       }));
+
       this.currentPlayerIndex = 0;
     });
+
 
     // Subskrypcja pytania
     this.question$.subscribe(q => {
@@ -97,13 +101,21 @@ export class WritingCategoryComponent implements OnInit {
     return this.currentPlayer?.id ?? null;
   }
 
-  private generateTeamColor(): string {
-    const hue = Math.floor(Math.random() * 360);     // losowy kolor
-    const saturation = 70;                           // żywy
-    const lightness = 45;                            // nie za jasny (czytelny tekst)
+  private generateTeamColor(count: number): string[] {
+    const colors: string[] = [];
 
-    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+    const baseHue = Math.floor(Math.random() * 360);
+    const saturation = 75;
+    const lightness = 45;
+
+    for (let i = 0; i < count; i++) {
+      const hue = (baseHue + (360 / count) * i) % 360;
+      colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
+    }
+
+    return colors;
   }
+
 
 
   getOwnerName(answerIndex: number): string | null {
@@ -155,10 +167,6 @@ export class WritingCategoryComponent implements OnInit {
         this.lastCorrectPlayer = this.currentPlayer;
         this.currentPlayer.correctAnswers++;
 
-
-        this.lastCorrectPlayer = this.currentPlayer;
-        this.currentPlayer.correctAnswers++;
-
         // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
         this.currentPlayer.calculatedPoints = Math.ceil(
@@ -189,10 +197,19 @@ export class WritingCategoryComponent implements OnInit {
     this.triggerWrongFlash();
 
     if (player.mistakes >= this.MAX_CHANCES) {
-      this.revealAllAnswers();
-      this.finishGame();
+
+      const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
+
+      if (alivePlayers.length <= 1) {
+        this.revealAllAnswers();
+        this.finishGame();
+        return;
+      }
+
+      this.nextPlayer();
       return;
     }
+
 
     this.nextPlayer();
   }

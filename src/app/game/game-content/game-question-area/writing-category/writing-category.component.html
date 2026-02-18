@@ -33,6 +33,7 @@
             class="cell team-cell"
             *ngFor="let player of players"
             [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
             [class.active-column]="player.id === activePlayerId"
           >
             {{ player.name }}
@@ -47,6 +48,7 @@
             class="cell team-cell"
             *ngFor="let player of players"
             [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
             [class.active-column]="player.id === activePlayerId"
           >
             <div class="chances-wrapper">
@@ -66,7 +68,8 @@
           <div class="cell team-cell answers-count-cell"
                *ngFor="let player of players"
                [class.active-column]="player.id === activePlayerId"
-               [style.background-color]="player.color">
+               [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES">
             {{ player.correctAnswers }}
           </div>
         </div>
@@ -81,6 +84,7 @@
             *ngFor="let player of players"
             [style.background-color]="player.color"
             [class.active-column]="player.id === activePlayerId"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
           >
             {{ player.calculatedPoints || 0 }}
           </div>
