@@ -1,18 +1,11 @@
 <div class="question-card">
-
   <app-question-area-header
     [category]="currentCategory"
     [points]="currentPoints"
-    [usedHints]="usedHints">
-  </app-question-area-header>
-  <app-answer
-    (correct)="correct()"
-    (wrong)="wrong()"
-    (half)="half()">
-  </app-answer>
-
+    [usedHints]="usedHints"
+  ></app-question-area-header>
+  <app-answer (correct)="correct()" (wrong)="wrong()" (half)="half()"></app-answer>
 
   <!-- tu child route z pod-komponentem kategorii -->
   <router-outlet (activate)="onActivate($event)"></router-outlet>
-
 </div>

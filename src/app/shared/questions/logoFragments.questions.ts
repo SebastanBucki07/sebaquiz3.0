@@ -1,92 +1,92 @@
 export const LOGO_FRAGMENTY = [
   {
-    "id": 1,
-    "answers": [
+    id: 1,
+    answers: [
       {
-        "value": "Adidas.png"
-      }
+        value: 'Adidas.png',
+      },
     ],
-    "question": "Adidas.png",
-    "hints": [
+    question: 'Adidas.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "15",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '15',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
     ],
-    "revealedAnswers": []
+    revealedAnswers: [],
   },
   {
-    "id": 2,
-    "answers": [
+    id: 2,
+    answers: [
       {
-        "value": "BandMBargains.png"
-      }
+        value: 'BandMBargains.png',
+      },
     ],
-    "question": "BandMBargains.png",
-    "hints": [
+    question: 'BandMBargains.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "15",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '15',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
     ],
-    "revealedAnswers": []
+    revealedAnswers: [],
   },
   {
-    "id": 3,
-    "answers": [
+    id: 3,
+    answers: [
       {
-        "value": "Supreme.png"
-      }
+        value: 'Supreme.png',
+      },
     ],
-    "question": "Supreme.png",
-    "hints": [
+    question: 'Supreme.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "15",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '15',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
     ],
-    "revealedAnswers": []
+    revealedAnswers: [],
   },
-]
+];

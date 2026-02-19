@@ -1,1465 +1,1465 @@
 export const SERIAL_PO_AKTORACH = [
   {
-    "id": 1,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 1,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Czarnobyl"
-      }
+        value: 'Czarnobyl',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 2,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 2,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "GRA O TRON"
-      }
+        value: 'GRA O TRON',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 3,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 3,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "BREAKING BAD"
-      }
+        value: 'BREAKING BAD',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 4,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 4,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Ostatni taniec"
-      }
+        value: 'Ostatni taniec',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 5,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 5,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SHERLOCK"
-      }
+        value: 'SHERLOCK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 6,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 6,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PEAKY BLINDERS"
-      }
+        value: 'PEAKY BLINDERS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 7,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 7,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "NARCOS"
-      }
+        value: 'NARCOS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 8,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 8,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "MIASTECZKO TWIN PEAKS"
-      }
+        value: 'MIASTECZKO TWIN PEAKS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 9,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 9,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "HOUSE OF CARDS"
-      }
+        value: 'HOUSE OF CARDS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 10,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 10,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "WIKINGOWIE"
-      }
+        value: 'WIKINGOWIE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 11,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 11,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Gomorra"
-      }
+        value: 'Gomorra',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 12,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 12,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "STRANGER THINGS"
-      }
+        value: 'STRANGER THINGS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 13,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 13,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "CZARNE LUSTRO"
-      }
+        value: 'CZARNE LUSTRO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 14,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 14,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PRZYJACIELE"
-      }
+        value: 'PRZYJACIELE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 15,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 15,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DOM Z PAPIERU"
-      }
+        value: 'DOM Z PAPIERU',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 16,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 16,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DR HOUSE"
-      }
+        value: 'DR HOUSE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 17,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 17,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DARK"
-      }
+        value: 'DARK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 18,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 18,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PitBull"
-      }
+        value: 'PitBull',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 19,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 19,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE CROWN"
-      }
+        value: 'THE CROWN',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 20,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 20,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DEXTER"
-      }
+        value: 'DEXTER',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 21,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 21,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "UTOPIA"
-      }
+        value: 'UTOPIA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 22,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 22,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "GAMBIT KRÓLOWEJ"
-      }
+        value: 'GAMBIT KRÓLOWEJ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 23,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 23,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "W GARNITURACH"
-      }
+        value: 'W GARNITURACH',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 24,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 24,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SYNOWIE ANARCHII"
-      }
+        value: 'SYNOWIE ANARCHII',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 25,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 25,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Młody papież"
-      }
+        value: 'Młody papież',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 26,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 26,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "WATAHA"
-      }
+        value: 'WATAHA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 27,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 27,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "MR. ROBOT"
-      }
+        value: 'MR. ROBOT',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 28,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 28,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "AMERICAN HORROR STORY: ASYLUM"
-      }
+        value: 'AMERICAN HORROR STORY: ASYLUM',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 29,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 29,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "JAK POZNAŁEM WASZĄ MATKĘ"
-      }
+        value: 'JAK POZNAŁEM WASZĄ MATKĘ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 30,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 30,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SPARTAKUS: KREW I PIACH"
-      }
+        value: 'SPARTAKUS: KREW I PIACH',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 31,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 31,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "CZAS HONORU"
-      }
+        value: 'CZAS HONORU',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 32,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 32,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "RZYM"
-      }
+        value: 'RZYM',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 33,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 33,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "TEORIA WIELKIEGO PODRYWU"
-      }
+        value: 'TEORIA WIELKIEGO PODRYWU',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 34,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 34,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SQUID GAME"
-      }
+        value: 'SQUID GAME',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 35,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 35,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Z ARCHIWUM X"
-      }
+        value: 'Z ARCHIWUM X',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 36,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 36,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "EL CHAPO"
-      }
+        value: 'EL CHAPO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 37,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 37,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE WALKING DEAD"
-      }
+        value: 'THE WALKING DEAD',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 38,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 38,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PACYFIK"
-      }
+        value: 'PACYFIK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 39,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 39,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KOMPANIA BRACI"
-      }
+        value: 'KOMPANIA BRACI',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 40,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 40,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "LOST"
-      }
+        value: 'LOST',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 41,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 41,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PAMIĘTNIKI WAMPIRÓW"
-      }
+        value: 'PAMIĘTNIKI WAMPIRÓW',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 42,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 42,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE ORIGINALS"
-      }
+        value: 'THE ORIGINALS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 43,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 43,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "WAMPIRY: DZIEDZICTWO"
-      }
+        value: 'WAMPIRY: DZIEDZICTWO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 44,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 44,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SHADOWHUNTERS"
-      }
+        value: 'SHADOWHUNTERS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 45,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 45,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "CZYSTA KREW"
-      }
+        value: 'CZYSTA KREW',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 46,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 46,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SKAZANY NA SMIERĆ"
-      }
+        value: 'SKAZANY NA SMIERĆ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 47,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 47,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SŁONECZNY PATROL"
-      }
+        value: 'SŁONECZNY PATROL',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 48,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 48,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SKAZANA"
-      }
+        value: 'SKAZANA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 49,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 49,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KRUK"
-      }
+        value: 'KRUK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 50,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 50,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "BELFER"
-      }
+        value: 'BELFER',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 51,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 51,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DOLINA KRZEMOWA"
-      }
+        value: 'DOLINA KRZEMOWA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 52,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 52,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ODWRÓCENI"
-      }
+        value: 'ODWRÓCENI',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 53,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 53,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "WESTWORLD"
-      }
+        value: 'WESTWORLD',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 54,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 54,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KLANGOR"
-      }
+        value: 'KLANGOR',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 55,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 55,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ŚLEPNĄC OD ŚWIATEŁ"
-      }
+        value: 'ŚLEPNĄC OD ŚWIATEŁ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 56,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 56,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PAKT"
-      }
+        value: 'PAKT',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 57,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 57,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "STULECIE WINNYCH"
-      }
+        value: 'STULECIE WINNYCH',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 58,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 58,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "OFICER"
-      }
+        value: 'OFICER',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 59,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 59,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "CZTEREJ PANCERNI I PIES"
-      }
+        value: 'CZTEREJ PANCERNI I PIES',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 60,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 60,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "WIEDŹMIN"
-      }
+        value: 'WIEDŹMIN',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 61,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 61,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KRÓL"
-      }
+        value: 'KRÓL',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 62,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 62,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "07 ZGŁOŚ SIĘ"
-      }
+        value: '07 ZGŁOŚ SIĘ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 63,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 63,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "JANOSIK"
-      }
+        value: 'JANOSIK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 64,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 64,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "O MNIE SIĘ NIE MARTW"
-      }
+        value: 'O MNIE SIĘ NIE MARTW',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 65,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 65,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "CZTERDZIESTOLATEK"
-      }
+        value: 'CZTERDZIESTOLATEK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 66,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 66,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "RANCZO"
-      }
+        value: 'RANCZO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 67,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 67,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "POD POWIERZCHNIĄ"
-      }
+        value: 'POD POWIERZCHNIĄ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 68,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 68,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DOLINA KRZEMOWA"
-      }
+        value: 'DOLINA KRZEMOWA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 69,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 69,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SKAZANE"
-      }
+        value: 'SKAZANE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 70,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 70,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DIAGNOZA"
-      }
+        value: 'DIAGNOZA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 71,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 71,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ROJST"
-      }
+        value: 'ROJST',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 72,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 72,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PARADOKS"
-      }
+        value: 'PARADOKS',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 73,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 73,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KOWALSCY KONTRA KOWALSCY"
-      }
+        value: 'KOWALSCY KONTRA KOWALSCY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 74,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 74,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SINGIELKA"
-      }
+        value: 'SINGIELKA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 75,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 75,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ZAWSZE WARTO"
-      }
+        value: 'ZAWSZE WARTO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 76,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 76,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "MOTYW"
-      }
+        value: 'MOTYW',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 77,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 77,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PRAWO AGATY"
-      }
+        value: 'PRAWO AGATY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 78,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 78,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KOD GENETYCZNY"
-      }
+        value: 'KOD GENETYCZNY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 79,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 79,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ŻYWIOŁY SASZY – OGIEŃ"
-      }
+        value: 'ŻYWIOŁY SASZY – OGIEŃ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 80,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 80,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PAJĘCZYNA"
-      }
+        value: 'PAJĘCZYNA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 81,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 81,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SZADŹ"
-      }
+        value: 'SZADŹ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 82,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 82,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SEXIFY"
-      }
+        value: 'SEXIFY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 83,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 83,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "OTWÓRZ OCZY"
-      }
+        value: 'OTWÓRZ OCZY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 84,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 84,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE RAIN"
-      }
+        value: 'THE RAIN',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 85,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 85,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "MROCZNE POŻĄDANIE"
-      }
+        value: 'MROCZNE POŻĄDANIE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 86,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 86,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "TOY BOY"
-      }
+        value: 'TOY BOY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 87,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 87,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DARE ME"
-      }
+        value: 'DARE ME',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 88,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 88,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "EL CLUB"
-      }
+        value: 'EL CLUB',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 89,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 89,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "COBRA KAI"
-      }
+        value: 'COBRA KAI',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 90,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 90,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ARROW"
-      }
+        value: 'ARROW',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 91,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 91,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PRZEKLĘTA"
-      }
+        value: 'PRZEKLĘTA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 92,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 92,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "BERLIŃSKIE PSY"
-      }
+        value: 'BERLIŃSKIE PSY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 93,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 93,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "LUKE CAGE"
-      }
+        value: 'LUKE CAGE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 94,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 94,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DOPASOWANI"
-      }
+        value: 'DOPASOWANI',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 95,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 95,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "1983"
-      }
+        value: '1983',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 96,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 96,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "GRZESZNICA"
-      }
+        value: 'GRZESZNICA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 97,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 97,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE A LIST"
-      }
+        value: 'THE A LIST',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 98,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 98,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "RIVERDALLE"
-      }
+        value: 'RIVERDALLE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 99,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 99,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE GOOD DOCTOR"
-      }
+        value: 'THE GOOD DOCTOR',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 100,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 100,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SZKOŁA DLA ELITY"
-      }
+        value: 'SZKOŁA DLA ELITY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 101,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 101,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PLEMIONA EUROPY"
-      }
+        value: 'PLEMIONA EUROPY',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 102,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 102,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "MARCO POLO"
-      }
+        value: 'MARCO POLO',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 103,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 103,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "FRONTIER"
-      }
+        value: 'FRONTIER',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 104,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 104,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SEX/LIFE"
-      }
+        value: 'SEX/LIFE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 105,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 105,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "THE 100"
-      }
+        value: 'THE 100',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 106,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 106,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "ALTERED CARBON"
-      }
+        value: 'ALTERED CARBON',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 107,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 107,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "PIRACI"
-      }
+        value: 'PIRACI',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 108,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 108,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "DWÓCH I PÓŁ"
-      }
+        value: 'DWÓCH I PÓŁ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 109,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 109,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "SEE"
-      }
+        value: 'SEE',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 110,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 110,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "UPADEK KRÓLESTWA"
-      }
+        value: 'UPADEK KRÓLESTWA',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 111,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 111,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "STRAŻNIK TEKSASU"
-      }
+        value: 'STRAŻNIK TEKSASU',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 112,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 112,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "KOŁO CZASU"
-      }
+        value: 'KOŁO CZASU',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 113,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 113,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Pingwin"
-      }
+        value: 'Pingwin',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 114,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 114,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Matki pingwinów"
-      }
+        value: 'Matki pingwinów',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 115,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 115,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Szogun"
-      }
+        value: 'Szogun',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 116,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 116,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Prosta sprawa"
-      }
+        value: 'Prosta sprawa',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 117,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 117,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Idź przodem, bracie"
-      }
+        value: 'Idź przodem, bracie',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 118,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 118,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Stamtąd"
-      }
+        value: 'Stamtąd',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 119,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 119,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Dexter: Grzech pierworodny"
-      }
+        value: 'Dexter: Grzech pierworodny',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 120,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 120,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Profilerka"
-      }
+        value: 'Profilerka',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 121,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 121,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Bez tchu"
-      }
+        value: 'Bez tchu',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 122,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 122,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "1670"
-      }
+        value: '1670',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 123,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 123,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "The Last of Us"
-      }
+        value: 'The Last of Us',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 124,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 124,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Silos"
-      }
+        value: 'Silos',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 125,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 125,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Infamia"
-      }
+        value: 'Infamia',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 126,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 126,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Informacja zwrotna"
-      }
+        value: 'Informacja zwrotna',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 127,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 127,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Pati"
-      }
+        value: 'Pati',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 128,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 128,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "The Walking Dead: Daryl Dixon"
-      }
+        value: 'The Walking Dead: Daryl Dixon',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 129,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 129,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Minuta ciszy"
-      }
+        value: 'Minuta ciszy',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 130,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 130,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Wielka woda"
-      }
+        value: 'Wielka woda',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 131,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 131,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Ród Smoka"
-      }
+        value: 'Ród Smoka',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 132,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 132,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Wednesday"
-      }
+        value: 'Wednesday',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 133,
-    "question": "W jakim serialu zagrała taka obsada?",
-    "answers": [
+    id: 133,
+    question: 'W jakim serialu zagrała taka obsada?',
+    answers: [
       {
-        "value": "Wzgórze psów"
-      }
+        value: 'Wzgórze psów',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": []
-  }
-]
+    hints: [],
+    revealedAnswers: [],
+  },
+];

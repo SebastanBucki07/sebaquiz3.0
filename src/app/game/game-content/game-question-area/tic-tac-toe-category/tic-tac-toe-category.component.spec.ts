@@ -8,9 +8,8 @@ describe('TicTacToeCategoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [TicTacToeCategoryComponent]
-    })
-    .compileComponents();
+      imports: [TicTacToeCategoryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(TicTacToeCategoryComponent);
     component = fixture.componentInstance;

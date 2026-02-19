@@ -1,703 +1,821 @@
-export const CHEMIST = [{
-  "id": 1,
-  "answers": [{"value": "wodór"}],
-  "question": "Jaki pierwiastek ma symbol: H",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 2,
-  "answers": [{"value": "hel"}],
-  "question": "Jaki pierwiastek ma symbol: He",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 3,
-  "answers": [{"value": "lit"}],
-  "question": "Jaki pierwiastek ma symbol: Li",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 4,
-  "answers": [{"value": "beryl"}],
-  "question": "Jaki pierwiastek ma symbol: Be",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 5,
-  "answers": [{"value": "bor"}],
-  "question": "Jaki pierwiastek ma symbol: B",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 6,
-  "answers": [{"value": "węgiel"}],
-  "question": "Jaki pierwiastek ma symbol: C",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 7,
-  "answers": [{"value": "azot"}],
-  "question": "Jaki pierwiastek ma symbol: N",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 8,
-  "answers": [{"value": "tlen"}],
-  "question": "Jaki pierwiastek ma symbol: O",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 9,
-  "answers": [{"value": "fluor"}],
-  "question": "Jaki pierwiastek ma symbol: F",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 10,
-  "answers": [{"value": "neon"}],
-  "question": "Jaki pierwiastek ma symbol: Ne",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 11,
-  "answers": [{"value": "sód"}],
-  "question": "Jaki pierwiastek ma symbol: Na",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 12,
-  "answers": [{"value": "magnez"}],
-  "question": "Jaki pierwiastek ma symbol: Mg",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 13,
-  "answers": [{"value": "glin"}],
-  "question": "Jaki pierwiastek ma symbol: Al",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 14,
-  "answers": [{"value": "krzem"}],
-  "question": "Jaki pierwiastek ma symbol: Si",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 15,
-  "answers": [{"value": "fosfor"}],
-  "question": "Jaki pierwiastek ma symbol: P",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 16,
-  "answers": [{"value": "siarka"}],
-  "question": "Jaki pierwiastek ma symbol: S",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 17,
-  "answers": [{"value": "chlor"}],
-  "question": "Jaki pierwiastek ma symbol: Cl",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 18,
-  "answers": [{"value": "argon"}],
-  "question": "Jaki pierwiastek ma symbol: Ar",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 19,
-  "answers": [{"value": "potas"}],
-  "question": "Jaki pierwiastek ma symbol: K",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 20,
-  "answers": [{"value": "wapń"}],
-  "question": "Jaki pierwiastek ma symbol: Ca",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 21,
-  "answers": [{"value": "skand"}],
-  "question": "Jaki pierwiastek ma symbol: Sc",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 22,
-  "answers": [{"value": "tytan"}],
-  "question": "Jaki pierwiastek ma symbol: Ti",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 23,
-  "answers": [{"value": "wanad"}],
-  "question": "Jaki pierwiastek ma symbol: V",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 24,
-  "answers": [{"value": "chrom"}],
-  "question": "Jaki pierwiastek ma symbol: Cr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 25,
-  "answers": [{"value": "mangan"}],
-  "question": "Jaki pierwiastek ma symbol: Mn",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 26,
-  "answers": [{"value": "żelazo"}],
-  "question": "Jaki pierwiastek ma symbol: Fe",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 27,
-  "answers": [{"value": "kobalt"}],
-  "question": "Jaki pierwiastek ma symbol: Co",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 28,
-  "answers": [{"value": "nikiel"}],
-  "question": "Jaki pierwiastek ma symbol: Ni",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 29,
-  "answers": [{"value": "miedź"}],
-  "question": "Jaki pierwiastek ma symbol: Cu",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 30,
-  "answers": [{"value": "cynk"}],
-  "question": "Jaki pierwiastek ma symbol: Zn",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 31,
-  "answers": [{"value": "gal"}],
-  "question": "Jaki pierwiastek ma symbol: Ga",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 32,
-  "answers": [{"value": "german"}],
-  "question": "Jaki pierwiastek ma symbol: Ge",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 33,
-  "answers": [{"value": "arsen"}],
-  "question": "Jaki pierwiastek ma symbol: As",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 34,
-  "answers": [{"value": "selen"}],
-  "question": "Jaki pierwiastek ma symbol: Se",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 35,
-  "answers": [{"value": "brom"}],
-  "question": "Jaki pierwiastek ma symbol: Br",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 36,
-  "answers": [{"value": "krypton"}],
-  "question": "Jaki pierwiastek ma symbol: Kr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 37,
-  "answers": [{"value": "rubid"}],
-  "question": "Jaki pierwiastek ma symbol: Rb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 38,
-  "answers": [{"value": "stront"}],
-  "question": "Jaki pierwiastek ma symbol: Sr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 39,
-  "answers": [{"value": "itr"}],
-  "question": "Jaki pierwiastek ma symbol: Y",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 40,
-  "answers": [{"value": "cyrkon"}],
-  "question": "Jaki pierwiastek ma symbol: Zr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 41,
-  "answers": [{"value": "niob"}],
-  "question": "Jaki pierwiastek ma symbol: Nb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 42,
-  "answers": [{"value": "molibden"}],
-  "question": "Jaki pierwiastek ma symbol: Mo",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 43,
-  "answers": [{"value": "technet"}],
-  "question": "Jaki pierwiastek ma symbol: Tc",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 44,
-  "answers": [{"value": "ruten"}],
-  "question": "Jaki pierwiastek ma symbol: Ru",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 45,
-  "answers": [{"value": "rod"}],
-  "question": "Jaki pierwiastek ma symbol: Rh",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 46,
-  "answers": [{"value": "pallad"}],
-  "question": "Jaki pierwiastek ma symbol: Pd",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 47,
-  "answers": [{"value": "srebro"}],
-  "question": "Jaki pierwiastek ma symbol: Ag",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 48,
-  "answers": [{"value": "kadm"}],
-  "question": "Jaki pierwiastek ma symbol: Cd",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 49,
-  "answers": [{"value": "ind"}],
-  "question": "Jaki pierwiastek ma symbol: In",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 50,
-  "answers": [{"value": "cyna"}],
-  "question": "Jaki pierwiastek ma symbol: Sn",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 51,
-  "answers": [{"value": "antymon"}],
-  "question": "Jaki pierwiastek ma symbol: Sb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 52,
-  "answers": [{"value": "tellur"}],
-  "question": "Jaki pierwiastek ma symbol: Te",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 53,
-  "answers": [{"value": "jod"}],
-  "question": "Jaki pierwiastek ma symbol: I",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 54,
-  "answers": [{"value": "ksenon"}],
-  "question": "Jaki pierwiastek ma symbol: Xe",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 55,
-  "answers": [{"value": "cez"}],
-  "question": "Jaki pierwiastek ma symbol: Cs",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 56,
-  "answers": [{"value": "bar"}],
-  "question": "Jaki pierwiastek ma symbol: Ba",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 57,
-  "answers": [{"value": "lantan"}],
-  "question": "Jaki pierwiastek ma symbol: La",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 58,
-  "answers": [{"value": "cer"}],
-  "question": "Jaki pierwiastek ma symbol: Ce",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 59,
-  "answers": [{"value": "prazeodym"}],
-  "question": "Jaki pierwiastek ma symbol: Pr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 60,
-  "answers": [{"value": "neodym"}],
-  "question": "Jaki pierwiastek ma symbol: Nd",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 61,
-  "answers": [{"value": "promet"}],
-  "question": "Jaki pierwiastek ma symbol: Pm",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 62,
-  "answers": [{"value": "samar"}],
-  "question": "Jaki pierwiastek ma symbol: Sm",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 63,
-  "answers": [{"value": "europ"}],
-  "question": "Jaki pierwiastek ma symbol: Eu",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 64,
-  "answers": [{"value": "gadolin"}],
-  "question": "Jaki pierwiastek ma symbol: Gd",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 65,
-  "answers": [{"value": "terb"}],
-  "question": "Jaki pierwiastek ma symbol: Tb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 66,
-  "answers": [{"value": "dysproz"}],
-  "question": "Jaki pierwiastek ma symbol: Dy",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 67,
-  "answers": [{"value": "holm"}],
-  "question": "Jaki pierwiastek ma symbol: Ho",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 68,
-  "answers": [{"value": "erb"}],
-  "question": "Jaki pierwiastek ma symbol: Er",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 69,
-  "answers": [{"value": "tul"}],
-  "question": "Jaki pierwiastek ma symbol: Tm",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 70,
-  "answers": [{"value": "iterb"}],
-  "question": "Jaki pierwiastek ma symbol: Yb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 71,
-  "answers": [{"value": "lutet"}],
-  "question": "Jaki pierwiastek ma symbol: Lu",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 72,
-  "answers": [{"value": "hafn"}],
-  "question": "Jaki pierwiastek ma symbol: Hf",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 73,
-  "answers": [{"value": "tantal"}],
-  "question": "Jaki pierwiastek ma symbol: Ta",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 74,
-  "answers": [{"value": "wolfram"}],
-  "question": "Jaki pierwiastek ma symbol: W",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 75,
-  "answers": [{"value": "ren"}],
-  "question": "Jaki pierwiastek ma symbol: Re",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 76,
-  "answers": [{"value": "osm"}],
-  "question": "Jaki pierwiastek ma symbol: Os",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 77,
-  "answers": [{"value": "iryd"}],
-  "question": "Jaki pierwiastek ma symbol: Ir",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 78,
-  "answers": [{"value": "platyna"}],
-  "question": "Jaki pierwiastek ma symbol: Pt",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 79,
-  "answers": [{"value": "złoto"}],
-  "question": "Jaki pierwiastek ma symbol: Au",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 80,
-  "answers": [{"value": "rtęć"}],
-  "question": "Jaki pierwiastek ma symbol: Hg",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 81,
-  "answers": [{"value": "tal"}],
-  "question": "Jaki pierwiastek ma symbol: Tl",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 82,
-  "answers": [{"value": "ołów"}],
-  "question": "Jaki pierwiastek ma symbol: Pb",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 83,
-  "answers": [{"value": "bizmut"}],
-  "question": "Jaki pierwiastek ma symbol: Bi",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 84,
-  "answers": [{"value": "polon"}],
-  "question": "Jaki pierwiastek ma symbol: Po",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 85,
-  "answers": [{"value": "astat"}],
-  "question": "Jaki pierwiastek ma symbol: At",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 86,
-  "answers": [{"value": "radon"}],
-  "question": "Jaki pierwiastek ma symbol: Rn",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 87,
-  "answers": [{"value": "frans"}],
-  "question": "Jaki pierwiastek ma symbol: Fr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 88,
-  "answers": [{"value": "rad"}],
-  "question": "Jaki pierwiastek ma symbol: Ra",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 89,
-  "answers": [{"value": "aktyn"}],
-  "question": "Jaki pierwiastek ma symbol: Ac",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 90,
-  "answers": [{"value": "tor"}],
-  "question": "Jaki pierwiastek ma symbol: Th",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 91,
-  "answers": [{"value": "protaktyn"}],
-  "question": "Jaki pierwiastek ma symbol: Pa",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 92,
-  "answers": [{"value": "uran"}],
-  "question": "Jaki pierwiastek ma symbol: U",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 93,
-  "answers": [{"value": "neptun"}],
-  "question": "Jaki pierwiastek ma symbol: Np",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 94,
-  "answers": [{"value": "pluton"}],
-  "question": "Jaki pierwiastek ma symbol: Pu",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 95,
-  "answers": [{"value": "ameryk"}],
-  "question": "Jaki pierwiastek ma symbol: Am",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 96,
-  "answers": [{"value": "kiur"}],
-  "question": "Jaki pierwiastek ma symbol: Cm",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 97,
-  "answers": [{"value": "berkel"}],
-  "question": "Jaki pierwiastek ma symbol: Bk",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 98,
-  "answers": [{"value": "kaliforn"}],
-  "question": "Jaki pierwiastek ma symbol: Cf",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 99,
-  "answers": [{"value": "einstein"}],
-  "question": "Jaki pierwiastek ma symbol: Es",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 100,
-  "answers": [{"value": "ferm"}],
-  "question": "Jaki pierwiastek ma symbol: Fm",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 101,
-  "answers": [{"value": "mendelew"}],
-  "question": "Jaki pierwiastek ma symbol: Md",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 102,
-  "answers": [{"value": "nobel"}],
-  "question": "Jaki pierwiastek ma symbol: No",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 103,
-  "answers": [{"value": "lorens"}],
-  "question": "Jaki pierwiastek ma symbol: Lr",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 104,
-  "answers": [{"value": "rutherford"}],
-  "question": "Jaki pierwiastek ma symbol: Rf",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 105,
-  "answers": [{"value": "dubn"}],
-  "question": "Jaki pierwiastek ma symbol: Db",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 106,
-  "answers": [{"value": "seaborg"}],
-  "question": "Jaki pierwiastek ma symbol: Sg",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 107,
-  "answers": [{"value": "bohr"}],
-  "question": "Jaki pierwiastek ma symbol: Bh",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 108,
-  "answers": [{"value": "has"}],
-  "question": "Jaki pierwiastek ma symbol: Hs",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 109,
-  "answers": [{"value": "meitner"}],
-  "question": "Jaki pierwiastek ma symbol: Mt",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 110,
-  "answers": [{"value": "darmsztadt"}],
-  "question": "Jaki pierwiastek ma symbol: Ds",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 111,
-  "answers": [{"value": "roentgen"}],
-  "question": "Jaki pierwiastek ma symbol: Rg",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 112,
-  "answers": [{"value": "kopernik"}],
-  "question": "Jaki pierwiastek ma symbol: Cn",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 113,
-  "answers": [{"value": "nihon"}],
-  "question": "Jaki pierwiastek ma symbol: Nh",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 114,
-  "answers": [{"value": "flerow"}],
-  "question": "Jaki pierwiastek ma symbol: Fl",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 115,
-  "answers": [{"value": "moskow"}],
-  "question": "Jaki pierwiastek ma symbol: Mc",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 116,
-  "answers": [{"value": "liwermor"}],
-  "question": "Jaki pierwiastek ma symbol: Lv",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 117,
-  "answers": [{"value": "tenes"}],
-  "question": "Jaki pierwiastek ma symbol: Ts",
-  "hints": [],
-  "revealedAnswers": []
-}]
+export const CHEMIST = [
+  {
+    id: 1,
+    answers: [{ value: 'wodór' }],
+    question: 'Jaki pierwiastek ma symbol: H',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 2,
+    answers: [{ value: 'hel' }],
+    question: 'Jaki pierwiastek ma symbol: He',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 3,
+    answers: [{ value: 'lit' }],
+    question: 'Jaki pierwiastek ma symbol: Li',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 4,
+    answers: [{ value: 'beryl' }],
+    question: 'Jaki pierwiastek ma symbol: Be',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 5,
+    answers: [{ value: 'bor' }],
+    question: 'Jaki pierwiastek ma symbol: B',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 6,
+    answers: [{ value: 'węgiel' }],
+    question: 'Jaki pierwiastek ma symbol: C',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 7,
+    answers: [{ value: 'azot' }],
+    question: 'Jaki pierwiastek ma symbol: N',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 8,
+    answers: [{ value: 'tlen' }],
+    question: 'Jaki pierwiastek ma symbol: O',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 9,
+    answers: [{ value: 'fluor' }],
+    question: 'Jaki pierwiastek ma symbol: F',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 10,
+    answers: [{ value: 'neon' }],
+    question: 'Jaki pierwiastek ma symbol: Ne',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 11,
+    answers: [{ value: 'sód' }],
+    question: 'Jaki pierwiastek ma symbol: Na',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 12,
+    answers: [{ value: 'magnez' }],
+    question: 'Jaki pierwiastek ma symbol: Mg',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 13,
+    answers: [{ value: 'glin' }],
+    question: 'Jaki pierwiastek ma symbol: Al',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 14,
+    answers: [{ value: 'krzem' }],
+    question: 'Jaki pierwiastek ma symbol: Si',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 15,
+    answers: [{ value: 'fosfor' }],
+    question: 'Jaki pierwiastek ma symbol: P',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 16,
+    answers: [{ value: 'siarka' }],
+    question: 'Jaki pierwiastek ma symbol: S',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 17,
+    answers: [{ value: 'chlor' }],
+    question: 'Jaki pierwiastek ma symbol: Cl',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 18,
+    answers: [{ value: 'argon' }],
+    question: 'Jaki pierwiastek ma symbol: Ar',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 19,
+    answers: [{ value: 'potas' }],
+    question: 'Jaki pierwiastek ma symbol: K',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 20,
+    answers: [{ value: 'wapń' }],
+    question: 'Jaki pierwiastek ma symbol: Ca',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 21,
+    answers: [{ value: 'skand' }],
+    question: 'Jaki pierwiastek ma symbol: Sc',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 22,
+    answers: [{ value: 'tytan' }],
+    question: 'Jaki pierwiastek ma symbol: Ti',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 23,
+    answers: [{ value: 'wanad' }],
+    question: 'Jaki pierwiastek ma symbol: V',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 24,
+    answers: [{ value: 'chrom' }],
+    question: 'Jaki pierwiastek ma symbol: Cr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 25,
+    answers: [{ value: 'mangan' }],
+    question: 'Jaki pierwiastek ma symbol: Mn',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 26,
+    answers: [{ value: 'żelazo' }],
+    question: 'Jaki pierwiastek ma symbol: Fe',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 27,
+    answers: [{ value: 'kobalt' }],
+    question: 'Jaki pierwiastek ma symbol: Co',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 28,
+    answers: [{ value: 'nikiel' }],
+    question: 'Jaki pierwiastek ma symbol: Ni',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 29,
+    answers: [{ value: 'miedź' }],
+    question: 'Jaki pierwiastek ma symbol: Cu',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 30,
+    answers: [{ value: 'cynk' }],
+    question: 'Jaki pierwiastek ma symbol: Zn',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 31,
+    answers: [{ value: 'gal' }],
+    question: 'Jaki pierwiastek ma symbol: Ga',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 32,
+    answers: [{ value: 'german' }],
+    question: 'Jaki pierwiastek ma symbol: Ge',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 33,
+    answers: [{ value: 'arsen' }],
+    question: 'Jaki pierwiastek ma symbol: As',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 34,
+    answers: [{ value: 'selen' }],
+    question: 'Jaki pierwiastek ma symbol: Se',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 35,
+    answers: [{ value: 'brom' }],
+    question: 'Jaki pierwiastek ma symbol: Br',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 36,
+    answers: [{ value: 'krypton' }],
+    question: 'Jaki pierwiastek ma symbol: Kr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 37,
+    answers: [{ value: 'rubid' }],
+    question: 'Jaki pierwiastek ma symbol: Rb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 38,
+    answers: [{ value: 'stront' }],
+    question: 'Jaki pierwiastek ma symbol: Sr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 39,
+    answers: [{ value: 'itr' }],
+    question: 'Jaki pierwiastek ma symbol: Y',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 40,
+    answers: [{ value: 'cyrkon' }],
+    question: 'Jaki pierwiastek ma symbol: Zr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 41,
+    answers: [{ value: 'niob' }],
+    question: 'Jaki pierwiastek ma symbol: Nb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 42,
+    answers: [{ value: 'molibden' }],
+    question: 'Jaki pierwiastek ma symbol: Mo',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 43,
+    answers: [{ value: 'technet' }],
+    question: 'Jaki pierwiastek ma symbol: Tc',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 44,
+    answers: [{ value: 'ruten' }],
+    question: 'Jaki pierwiastek ma symbol: Ru',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 45,
+    answers: [{ value: 'rod' }],
+    question: 'Jaki pierwiastek ma symbol: Rh',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 46,
+    answers: [{ value: 'pallad' }],
+    question: 'Jaki pierwiastek ma symbol: Pd',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 47,
+    answers: [{ value: 'srebro' }],
+    question: 'Jaki pierwiastek ma symbol: Ag',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 48,
+    answers: [{ value: 'kadm' }],
+    question: 'Jaki pierwiastek ma symbol: Cd',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 49,
+    answers: [{ value: 'ind' }],
+    question: 'Jaki pierwiastek ma symbol: In',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 50,
+    answers: [{ value: 'cyna' }],
+    question: 'Jaki pierwiastek ma symbol: Sn',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 51,
+    answers: [{ value: 'antymon' }],
+    question: 'Jaki pierwiastek ma symbol: Sb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 52,
+    answers: [{ value: 'tellur' }],
+    question: 'Jaki pierwiastek ma symbol: Te',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 53,
+    answers: [{ value: 'jod' }],
+    question: 'Jaki pierwiastek ma symbol: I',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 54,
+    answers: [{ value: 'ksenon' }],
+    question: 'Jaki pierwiastek ma symbol: Xe',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 55,
+    answers: [{ value: 'cez' }],
+    question: 'Jaki pierwiastek ma symbol: Cs',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 56,
+    answers: [{ value: 'bar' }],
+    question: 'Jaki pierwiastek ma symbol: Ba',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 57,
+    answers: [{ value: 'lantan' }],
+    question: 'Jaki pierwiastek ma symbol: La',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 58,
+    answers: [{ value: 'cer' }],
+    question: 'Jaki pierwiastek ma symbol: Ce',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 59,
+    answers: [{ value: 'prazeodym' }],
+    question: 'Jaki pierwiastek ma symbol: Pr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 60,
+    answers: [{ value: 'neodym' }],
+    question: 'Jaki pierwiastek ma symbol: Nd',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 61,
+    answers: [{ value: 'promet' }],
+    question: 'Jaki pierwiastek ma symbol: Pm',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 62,
+    answers: [{ value: 'samar' }],
+    question: 'Jaki pierwiastek ma symbol: Sm',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 63,
+    answers: [{ value: 'europ' }],
+    question: 'Jaki pierwiastek ma symbol: Eu',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 64,
+    answers: [{ value: 'gadolin' }],
+    question: 'Jaki pierwiastek ma symbol: Gd',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 65,
+    answers: [{ value: 'terb' }],
+    question: 'Jaki pierwiastek ma symbol: Tb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 66,
+    answers: [{ value: 'dysproz' }],
+    question: 'Jaki pierwiastek ma symbol: Dy',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 67,
+    answers: [{ value: 'holm' }],
+    question: 'Jaki pierwiastek ma symbol: Ho',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 68,
+    answers: [{ value: 'erb' }],
+    question: 'Jaki pierwiastek ma symbol: Er',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 69,
+    answers: [{ value: 'tul' }],
+    question: 'Jaki pierwiastek ma symbol: Tm',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 70,
+    answers: [{ value: 'iterb' }],
+    question: 'Jaki pierwiastek ma symbol: Yb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 71,
+    answers: [{ value: 'lutet' }],
+    question: 'Jaki pierwiastek ma symbol: Lu',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 72,
+    answers: [{ value: 'hafn' }],
+    question: 'Jaki pierwiastek ma symbol: Hf',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 73,
+    answers: [{ value: 'tantal' }],
+    question: 'Jaki pierwiastek ma symbol: Ta',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 74,
+    answers: [{ value: 'wolfram' }],
+    question: 'Jaki pierwiastek ma symbol: W',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 75,
+    answers: [{ value: 'ren' }],
+    question: 'Jaki pierwiastek ma symbol: Re',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 76,
+    answers: [{ value: 'osm' }],
+    question: 'Jaki pierwiastek ma symbol: Os',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 77,
+    answers: [{ value: 'iryd' }],
+    question: 'Jaki pierwiastek ma symbol: Ir',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 78,
+    answers: [{ value: 'platyna' }],
+    question: 'Jaki pierwiastek ma symbol: Pt',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 79,
+    answers: [{ value: 'złoto' }],
+    question: 'Jaki pierwiastek ma symbol: Au',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 80,
+    answers: [{ value: 'rtęć' }],
+    question: 'Jaki pierwiastek ma symbol: Hg',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 81,
+    answers: [{ value: 'tal' }],
+    question: 'Jaki pierwiastek ma symbol: Tl',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 82,
+    answers: [{ value: 'ołów' }],
+    question: 'Jaki pierwiastek ma symbol: Pb',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 83,
+    answers: [{ value: 'bizmut' }],
+    question: 'Jaki pierwiastek ma symbol: Bi',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 84,
+    answers: [{ value: 'polon' }],
+    question: 'Jaki pierwiastek ma symbol: Po',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 85,
+    answers: [{ value: 'astat' }],
+    question: 'Jaki pierwiastek ma symbol: At',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 86,
+    answers: [{ value: 'radon' }],
+    question: 'Jaki pierwiastek ma symbol: Rn',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 87,
+    answers: [{ value: 'frans' }],
+    question: 'Jaki pierwiastek ma symbol: Fr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 88,
+    answers: [{ value: 'rad' }],
+    question: 'Jaki pierwiastek ma symbol: Ra',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 89,
+    answers: [{ value: 'aktyn' }],
+    question: 'Jaki pierwiastek ma symbol: Ac',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 90,
+    answers: [{ value: 'tor' }],
+    question: 'Jaki pierwiastek ma symbol: Th',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 91,
+    answers: [{ value: 'protaktyn' }],
+    question: 'Jaki pierwiastek ma symbol: Pa',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 92,
+    answers: [{ value: 'uran' }],
+    question: 'Jaki pierwiastek ma symbol: U',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 93,
+    answers: [{ value: 'neptun' }],
+    question: 'Jaki pierwiastek ma symbol: Np',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 94,
+    answers: [{ value: 'pluton' }],
+    question: 'Jaki pierwiastek ma symbol: Pu',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 95,
+    answers: [{ value: 'ameryk' }],
+    question: 'Jaki pierwiastek ma symbol: Am',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 96,
+    answers: [{ value: 'kiur' }],
+    question: 'Jaki pierwiastek ma symbol: Cm',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 97,
+    answers: [{ value: 'berkel' }],
+    question: 'Jaki pierwiastek ma symbol: Bk',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 98,
+    answers: [{ value: 'kaliforn' }],
+    question: 'Jaki pierwiastek ma symbol: Cf',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 99,
+    answers: [{ value: 'einstein' }],
+    question: 'Jaki pierwiastek ma symbol: Es',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 100,
+    answers: [{ value: 'ferm' }],
+    question: 'Jaki pierwiastek ma symbol: Fm',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 101,
+    answers: [{ value: 'mendelew' }],
+    question: 'Jaki pierwiastek ma symbol: Md',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 102,
+    answers: [{ value: 'nobel' }],
+    question: 'Jaki pierwiastek ma symbol: No',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 103,
+    answers: [{ value: 'lorens' }],
+    question: 'Jaki pierwiastek ma symbol: Lr',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 104,
+    answers: [{ value: 'rutherford' }],
+    question: 'Jaki pierwiastek ma symbol: Rf',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 105,
+    answers: [{ value: 'dubn' }],
+    question: 'Jaki pierwiastek ma symbol: Db',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 106,
+    answers: [{ value: 'seaborg' }],
+    question: 'Jaki pierwiastek ma symbol: Sg',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 107,
+    answers: [{ value: 'bohr' }],
+    question: 'Jaki pierwiastek ma symbol: Bh',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 108,
+    answers: [{ value: 'has' }],
+    question: 'Jaki pierwiastek ma symbol: Hs',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 109,
+    answers: [{ value: 'meitner' }],
+    question: 'Jaki pierwiastek ma symbol: Mt',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 110,
+    answers: [{ value: 'darmsztadt' }],
+    question: 'Jaki pierwiastek ma symbol: Ds',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 111,
+    answers: [{ value: 'roentgen' }],
+    question: 'Jaki pierwiastek ma symbol: Rg',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 112,
+    answers: [{ value: 'kopernik' }],
+    question: 'Jaki pierwiastek ma symbol: Cn',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 113,
+    answers: [{ value: 'nihon' }],
+    question: 'Jaki pierwiastek ma symbol: Nh',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 114,
+    answers: [{ value: 'flerow' }],
+    question: 'Jaki pierwiastek ma symbol: Fl',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 115,
+    answers: [{ value: 'moskow' }],
+    question: 'Jaki pierwiastek ma symbol: Mc',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 116,
+    answers: [{ value: 'liwermor' }],
+    question: 'Jaki pierwiastek ma symbol: Lv',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 117,
+    answers: [{ value: 'tenes' }],
+    question: 'Jaki pierwiastek ma symbol: Ts',
+    hints: [],
+    revealedAnswers: [],
+  },
+];

@@ -8,9 +8,8 @@ describe('GameSidebarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GameSidebarComponent]
-    })
-    .compileComponents();
+      imports: [GameSidebarComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(GameSidebarComponent);
     component = fixture.componentInstance;

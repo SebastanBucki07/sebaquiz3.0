@@ -1,18 +1,17 @@
-import {Hint} from '../../../../shared/category/category.interface';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {distinctUntilChanged, map, Observable, Subscription} from 'rxjs';
-import {Component, EventEmitter, OnDestroy, OnInit, Output} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {TipsComponent} from '../question/tips/tips.component';
-import {Question} from '../../../../shared/questions/question.interface';
-
+import { Hint } from '../../../../shared/category/category.interface';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { distinctUntilChanged, map, Observable, Subscription } from 'rxjs';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { TipsComponent } from '../question/tips/tips.component';
+import { Question } from '../../../../shared/questions/question.interface';
 
 @Component({
   selector: 'app-photo-fragments-category',
   standalone: true,
   imports: [CommonModule, TipsComponent],
   templateUrl: './photo-fragments-category.component.html',
-  styleUrl: './photo-fragments-category.component.css'
+  styleUrl: './photo-fragments-category.component.css',
 })
 export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   question$!: Observable<Question | null>;
@@ -21,7 +20,6 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   hints: Hint[] = [];
   tiles: boolean[] = [];
   private sub?: Subscription;
-
 
   private hintStep = 0; // 🔥 licznik użytych hintów
 
@@ -34,7 +32,7 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
     // 🔹 Subskrypcja zmian pytania (tylko ID)
     this.sub = this.questionService.question$
       .pipe(
-        map(q => q?.id),
+        map((q) => q?.id),
         distinctUntilChanged()
       )
       .subscribe(() => {
@@ -47,19 +45,15 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
 
     this.questionService.question$
       .pipe(
-        map(q => q?.revealedAnswers?.length ?? 0),
+        map((q) => q?.revealedAnswers?.length ?? 0),
         distinctUntilChanged()
       )
-      .subscribe(count => {
+      .subscribe((count) => {
         if (count > 0) {
           this.revealAll();
         }
       });
-
   }
-
-
-
 
   onHintUsed(hint: Hint): void {
     this.hintUsed.emit(hint);
@@ -72,9 +66,7 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   }
 
   private revealRandom(count: number): void {
-    const hiddenIndexes = this.tiles
-      .map((val, i) => (!val ? i : -1))
-      .filter(i => i !== -1);
+    const hiddenIndexes = this.tiles.map((val, i) => (!val ? i : -1)).filter((i) => i !== -1);
 
     for (let i = 0; i < count && hiddenIndexes.length > 0; i++) {
       const randomIndex = Math.floor(Math.random() * hiddenIndexes.length);
@@ -100,10 +92,6 @@ export class PhotoFragmentsCategoryComponent implements OnDestroy, OnInit {
   getImageSrc(question: Question): string {
     if (!question?.question) return '';
 
-    return question.question.startsWith('http')
-      ? question.question
-      : '/' + question.question;
+    return question.question.startsWith('http') ? question.question : '/' + question.question;
   }
-
-
 }

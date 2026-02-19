@@ -18,7 +18,9 @@
   letter-spacing: 0.5px;
 
   border-radius: 12px; /* Material 3 vibe */
-  transition: transform 120ms ease, box-shadow 120ms ease;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
 }
 
 /* hover (when active) */

@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-football-game-category',
   imports: [],
   templateUrl: './football-game-category.component.html',
-  styleUrl: './football-game-category.component.css'
+  styleUrl: './football-game-category.component.css',
 })
-export class FootballGameCategoryComponent {
-
-}
+export class FootballGameCategoryComponent {}

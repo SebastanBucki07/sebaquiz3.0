@@ -15,7 +15,7 @@
   background: linear-gradient(135deg, #42a5f5, #1976d2);
   padding: 14px 28px;
   border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
   color: white;
   font-weight: 600;
   font-size: 16px;
@@ -31,7 +31,6 @@
   min-width: 40px;
   text-align: center;
 }
-
 
 /* ===================== */
 /* GRID ODPOWIEDZI */
@@ -51,10 +50,13 @@
 }
 
 @keyframes flashRed {
-  0% { background: rgba(255,0,0,0.3); }
-  100% { background: transparent; }
+  0% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background: transparent;
+  }
 }
-
 
 /* ===================== */
 /* KAFELKI ODPOWIEDZI */
@@ -85,7 +87,7 @@
   height: 100%;
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
 }
 
 .flip-card-inner.flipped {
@@ -109,7 +111,7 @@
 
 /* przód */
 .flip-card-front {
-  background: linear-gradient(135deg, rgba(25,118,210,0.15), rgba(25,118,210,0.05));
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.15), rgba(25, 118, 210, 0.05));
 }
 
 /* tył */
@@ -134,7 +136,6 @@
   opacity: 0.9;
 }
 
-
 /* ===================== */
 /* TABLICA WYNIKÓW */
 /* ===================== */
@@ -149,8 +150,8 @@
   border-radius: 18px;
   overflow: hidden;
   font-size: 19px;
-  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
-  border: 2px solid rgba(0,0,0,0.06);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(0, 0, 0, 0.06);
 }
 
 .row {
@@ -167,8 +168,8 @@
   align-items: center;
   justify-content: center;
   padding: 20px 14px;
-  border-right: 1px solid rgba(0,0,0,0.08);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: 0.25s ease;
 }
 
@@ -180,7 +181,6 @@
   border-right: none;
 }
 
-
 /* ===== Pierwsza kolumna ===== */
 
 .header-cell {
@@ -191,7 +191,6 @@
   font-size: 17px;
 }
 
-
 /* ===== Kolumny drużyn ===== */
 
 .team-cell {
@@ -200,7 +199,6 @@
   font-weight: 600;
   font-size: 21px;
 }
-
 
 /* ===== Aktywna drużyna ===== */
 .active-column {
@@ -214,9 +212,12 @@
 
 /* efekt gradientowego obramowania */
 .active-column::before {
-  content: "";
+  content: '';
   position: absolute;
-  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: 14px;
   padding: 2px;
   background: linear-gradient(135deg, #42a5f5, #1976d2);
@@ -225,8 +226,6 @@
   opacity: 0.8;
 }
 
-
-
 /* ===== Punkty ===== */
 
 .points-cell {
@@ -234,14 +233,12 @@
   font-weight: 800;
 }
 
-
 /* ===== Odgadnięte odpowiedzi ===== */
 
 .answers-count-cell {
   font-size: 24px;
   font-weight: 700;
 }
-
 
 /* ===================== */
 /* KULKI SZANS */
@@ -261,14 +258,13 @@
 
 .chance-dot {
   background-color: #4caf50;
-  box-shadow: 0 0 6px rgba(76,175,80,0.5);
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
 }
 
 .lost-dot {
   background-color: #e53935;
   opacity: 0.35;
 }
-
 
 /* ===================== */
 /* WYŚRODKOWANIE PYTANIA I WYNIKU */
@@ -289,5 +285,3 @@
   justify-content: center;
   padding: 24px;
 }
-
-

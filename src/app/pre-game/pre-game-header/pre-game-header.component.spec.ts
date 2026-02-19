@@ -8,9 +8,8 @@ describe('PreGameHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PreGameHeaderComponent]
-    })
-    .compileComponents();
+      imports: [PreGameHeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PreGameHeaderComponent);
     component = fixture.componentInstance;

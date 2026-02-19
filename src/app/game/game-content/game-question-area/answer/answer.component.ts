@@ -10,10 +10,9 @@ import { AnswerButtonsComponent } from './answer-buttons/answer-buttons.componen
   standalone: true,
   imports: [AsyncPipe, CommonModule, AnswerButtonsComponent],
   templateUrl: './answer.component.html',
-  styleUrls: ['./answer.component.css']
+  styleUrls: ['./answer.component.css'],
 })
 export class AnswerComponent implements OnInit, OnDestroy {
-
   @Output() correct = new EventEmitter<void>();
   @Output() wrong = new EventEmitter<void>();
   @Output() half = new EventEmitter<void>();
@@ -29,7 +28,7 @@ export class AnswerComponent implements OnInit, OnDestroy {
     this.question$ = this.questionService.question$;
 
     // Stała subskrypcja – przy każdej zmianie revealedAnswers sprawdzamy, czy wszystkie odpowiedzi ujawnione
-    this.subscription = this.question$.subscribe(currentQuestion => {
+    this.subscription = this.question$.subscribe((currentQuestion) => {
       if (!currentQuestion) {
         this.showAnswerButtons = false;
         return;
@@ -51,5 +50,4 @@ export class AnswerComponent implements OnInit, OnDestroy {
     this.questionService.revealAnswer(index);
     // Nie trzeba nic ustawiać showAnswerButtons – zrobi to subskrypcja
   }
-
 }

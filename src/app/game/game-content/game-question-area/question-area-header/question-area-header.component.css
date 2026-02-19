@@ -25,10 +25,10 @@ p span {
 
 /* full-width mat-card */
 .category-header {
-  width: 100%;              /* ⬅️ FULLWIDTH */
+  width: 100%; /* ⬅️ FULLWIDTH */
   display: flex;
-  justify-content: center;   /* center h2 */
-  box-sizing: border-box;    /* includes padding */
+  justify-content: center; /* center h2 */
+  box-sizing: border-box; /* includes padding */
   margin: 24px 0;
 }
 

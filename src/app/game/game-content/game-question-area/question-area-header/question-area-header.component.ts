@@ -1,22 +1,20 @@
-import {Component, Input} from '@angular/core';
-import {CATEGORY_LIST} from '../../../../shared/category/categoryList';
-import {Category, Hint} from '../../../../shared/category/category.interface';
+import { Component, Input } from '@angular/core';
+import { CATEGORY_LIST } from '../../../../shared/category/categoryList';
+import { Category, Hint } from '../../../../shared/category/category.interface';
 
 @Component({
   selector: 'app-question-area-header',
   templateUrl: './question-area-header.component.html',
-  imports: [
-  ],
-  styleUrl: './question-area-header.component.css'
+  imports: [],
+  styleUrl: './question-area-header.component.css',
 })
 export class QuestionAreaHeaderComponent {
   @Input() category!: Category;
   @Input() usedHints: Hint[] = [];
   @Input() points!: number;
 
-
   ngOnInit() {
-    this.category = CATEGORY_LIST.find(cat => cat.name === this.category.name)!;
+    this.category = CATEGORY_LIST.find((cat) => cat.name === this.category.name)!;
 
     if (this.category) {
       this.points = this.category.basePoints;

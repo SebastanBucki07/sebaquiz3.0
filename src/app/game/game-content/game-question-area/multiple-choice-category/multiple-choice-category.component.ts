@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-multiple-choice-category',
   imports: [],
   templateUrl: './multiple-choice-category.component.html',
-  styleUrl: './multiple-choice-category.component.css'
+  styleUrl: './multiple-choice-category.component.css',
 })
-export class MultipleChoiceCategoryComponent {
-
-}
+export class MultipleChoiceCategoryComponent {}

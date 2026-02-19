@@ -14,13 +14,9 @@ interface Team {
 
 @Component({
   selector: 'app-game-sidebar',
-  imports: [
-    CommonModule,
-    MatTableModule,
-    GameActualTeamComponent
-  ],
+  imports: [CommonModule, MatTableModule, GameActualTeamComponent],
   templateUrl: './game-sidebar.component.html',
-  styleUrl: './game-sidebar.component.css'
+  styleUrl: './game-sidebar.component.css',
 })
 export class GameSidebarComponent implements OnInit, OnDestroy {
   teams: Team[] = [];
@@ -31,20 +27,18 @@ export class GameSidebarComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.loadTeams();
-    
+
     // Refresh when data changes (e.g., points)
-    this.gameService.dataChanged$.pipe(
-      takeUntil(this.destroy$)
-    ).subscribe(() => {
+    this.gameService.dataChanged$.pipe(takeUntil(this.destroy$)).subscribe(() => {
       this.loadTeams();
     });
 
     // Refresh every 1 second to always display latest data
-    interval(1000).pipe(
-      takeUntil(this.destroy$)
-    ).subscribe(() => {
-      this.loadTeams();
-    });
+    interval(1000)
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.loadTeams();
+      });
   }
 
   ngOnDestroy(): void {

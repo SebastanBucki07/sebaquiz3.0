@@ -1,17 +1,14 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Hint} from '../../../../shared/category/category.interface';
-import {CommonModule} from '@angular/common';
-import {TipsComponent} from './tips/tips.component';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Hint } from '../../../../shared/category/category.interface';
+import { CommonModule } from '@angular/common';
+import { TipsComponent } from './tips/tips.component';
 
 @Component({
   selector: 'app-question',
-  imports: [
-    CommonModule,
-    TipsComponent
-  ],
+  imports: [CommonModule, TipsComponent],
   templateUrl: './question.component.html',
   standalone: true,
-  styleUrl: './question.component.css'
+  styleUrl: './question.component.css',
 })
 export class QuestionComponent {
   @Input() hints: Hint[] = [];

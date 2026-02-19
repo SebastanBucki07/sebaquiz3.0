@@ -1,962 +1,962 @@
 export const CZOLOWKI_SERIALI = [
   {
-    "id": 1,
-    "answers": [
+    id: 1,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Klan"
-      }
+        label: 'Serial',
+        value: 'Klan',
+      },
     ],
-    "question": "MVDWP5BuEJs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'MVDWP5BuEJs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 2,
-    "answers": [
+    id: 2,
+    answers: [
       {
-        "label": "Serial",
-        "value": "M jak miłość"
-      }
+        label: 'Serial',
+        value: 'M jak miłość',
+      },
     ],
-    "question": "R9NVZcpLjJY",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'R9NVZcpLjJY',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 3,
-    "answers": [
+    id: 3,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Ojciec Mateusz"
-      }
+        label: 'Serial',
+        value: 'Ojciec Mateusz',
+      },
     ],
-    "question": "8lI6zYkkltk",
-    "hints": [],
-    "revealedAnswers": []
+    question: '8lI6zYkkltk',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 4,
-    "answers": [
+    id: 4,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Świat według kiepskich"
-      }
+        label: 'Serial',
+        value: 'Świat według kiepskich',
+      },
     ],
-    "question": "xNEq63SAMBA",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'xNEq63SAMBA',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 5,
-    "answers": [
+    id: 5,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Alternatywy 4"
-      }
+        label: 'Serial',
+        value: 'Alternatywy 4',
+      },
     ],
-    "question": "9s8vtBjbI4k",
-    "hints": [],
-    "revealedAnswers": []
+    question: '9s8vtBjbI4k',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 6,
-    "answers": [
+    id: 6,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Janosik"
-      }
+        label: 'Serial',
+        value: 'Janosik',
+      },
     ],
-    "question": "UX2xcoB1Pa0",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'UX2xcoB1Pa0',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 7,
-    "answers": [
+    id: 7,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Stawka większa niż życie"
-      }
+        label: 'Serial',
+        value: 'Stawka większa niż życie',
+      },
     ],
-    "question": "ZfuqBofhYEg",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ZfuqBofhYEg',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 8,
-    "answers": [
+    id: 8,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Czterej pancerni"
-      }
+        label: 'Serial',
+        value: 'Czterej pancerni',
+      },
     ],
-    "question": "F2lo8fsAOB4",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'F2lo8fsAOB4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 9,
-    "answers": [
+    id: 9,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Czterdziestolatek"
-      }
+        label: 'Serial',
+        value: 'Czterdziestolatek',
+      },
     ],
-    "question": "7od4JA2Y274",
-    "hints": [],
-    "revealedAnswers": []
+    question: '7od4JA2Y274',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 10,
-    "answers": [
+    id: 10,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Samo życie"
-      }
+        label: 'Serial',
+        value: 'Samo życie',
+      },
     ],
-    "question": "sTcWJ-C-5x4",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'sTcWJ-C-5x4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 11,
-    "answers": [
+    id: 11,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Barwy szczescia"
-      }
+        label: 'Serial',
+        value: 'Barwy szczescia',
+      },
     ],
-    "question": "UlyuKoIsVqc",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'UlyuKoIsVqc',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 12,
-    "answers": [
+    id: 12,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Belfer"
-      }
+        label: 'Serial',
+        value: 'Belfer',
+      },
     ],
-    "question": "qJbNBBxR_FE",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'qJbNBBxR_FE',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 13,
-    "answers": [
+    id: 13,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Ranczo"
-      }
+        label: 'Serial',
+        value: 'Ranczo',
+      },
     ],
-    "question": "sZkBoUnC2Os",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'sZkBoUnC2Os',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 14,
-    "answers": [
+    id: 14,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Na wspólnej"
-      }
+        label: 'Serial',
+        value: 'Na wspólnej',
+      },
     ],
-    "question": "hj5-N2pd4Xs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'hj5-N2pd4Xs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 15,
-    "answers": [
+    id: 15,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Pensjonat pod różą"
-      }
+        label: 'Serial',
+        value: 'Pensjonat pod różą',
+      },
     ],
-    "question": "zUJcIy_l_tk",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'zUJcIy_l_tk',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 16,
-    "answers": [
+    id: 16,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Pierwsza miłość"
-      }
+        label: 'Serial',
+        value: 'Pierwsza miłość',
+      },
     ],
-    "question": "ww7VSlG86Ho",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ww7VSlG86Ho',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 17,
-    "answers": [
+    id: 17,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Wojna domowa"
-      }
+        label: 'Serial',
+        value: 'Wojna domowa',
+      },
     ],
-    "question": "d2SlMuMBGqQ",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'd2SlMuMBGqQ',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 18,
-    "answers": [
+    id: 18,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Wataha"
-      }
+        label: 'Serial',
+        value: 'Wataha',
+      },
     ],
-    "question": "P64Xqdxi_b8",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'P64Xqdxi_b8',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 19,
-    "answers": [
+    id: 19,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Gra o tron"
-      }
+        label: 'Serial',
+        value: 'Gra o tron',
+      },
     ],
-    "question": "s7L2PVdrb_8",
-    "hints": [],
-    "revealedAnswers": []
+    question: 's7L2PVdrb_8',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 20,
-    "answers": [
+    id: 20,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Breaking Bad"
-      }
+        label: 'Serial',
+        value: 'Breaking Bad',
+      },
     ],
-    "question": "3U6PSWyv5sc",
-    "hints": [],
-    "revealedAnswers": []
+    question: '3U6PSWyv5sc',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 21,
-    "answers": [
+    id: 21,
+    answers: [
       {
-        "label": "Serial",
-        "value": "SCHERLOCK"
-      }
+        label: 'Serial',
+        value: 'SCHERLOCK',
+      },
     ],
-    "question": "Pk2FME6HVdA",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'Pk2FME6HVdA',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 22,
-    "answers": [
+    id: 22,
+    answers: [
       {
-        "label": "Serial",
-        "value": "EL CHAPO"
-      }
+        label: 'Serial',
+        value: 'EL CHAPO',
+      },
     ],
-    "question": "9NSWB5IcAwI",
-    "hints": [],
-    "revealedAnswers": []
+    question: '9NSWB5IcAwI',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 23,
-    "answers": [
+    id: 23,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Narcos"
-      }
+        label: 'Serial',
+        value: 'Narcos',
+      },
     ],
-    "question": "PtJ6yAGjsIs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'PtJ6yAGjsIs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 24,
-    "answers": [
+    id: 24,
+    answers: [
       {
-        "label": "Serial",
-        "value": "PEKAY BLINDERS"
-      }
+        label: 'Serial',
+        value: 'PEKAY BLINDERS',
+      },
     ],
-    "question": "Be56k1Ui2Yg",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'Be56k1Ui2Yg',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 25,
-    "answers": [
+    id: 25,
+    answers: [
       {
-        "label": "Serial",
-        "value": "BIG BANG THEORY"
-      }
+        label: 'Serial',
+        value: 'BIG BANG THEORY',
+      },
     ],
-    "question": "X41bA4l-h0w",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'X41bA4l-h0w',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 26,
-    "answers": [
+    id: 26,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Prison Break"
-      }
+        label: 'Serial',
+        value: 'Prison Break',
+      },
     ],
-    "question": "LVFk2u6b5ZY",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'LVFk2u6b5ZY',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 27,
-    "answers": [
+    id: 27,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE 100"
-      }
+        label: 'Serial',
+        value: 'THE 100',
+      },
     ],
-    "question": "HBxbOjExY0c",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'HBxbOjExY0c',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 28,
-    "answers": [
+    id: 28,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Jak poznałem wasza matkę"
-      }
+        label: 'Serial',
+        value: 'Jak poznałem wasza matkę',
+      },
     ],
-    "question": "ZPLOsabhQSM",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ZPLOsabhQSM',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 29,
-    "answers": [
+    id: 29,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Friends"
-      }
+        label: 'Serial',
+        value: 'Friends',
+      },
     ],
-    "question": "W9GYMfLcnDY",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'W9GYMfLcnDY',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 30,
-    "answers": [
+    id: 30,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Inspector Gadget"
-      }
+        label: 'Serial',
+        value: 'Inspector Gadget',
+      },
     ],
-    "question": "psnCd3aFLmc",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'psnCd3aFLmc',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 31,
-    "answers": [
+    id: 31,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Twin Peaks"
-      }
+        label: 'Serial',
+        value: 'Twin Peaks',
+      },
     ],
-    "question": "yFMaEIHIrGw",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'yFMaEIHIrGw',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 32,
-    "answers": [
+    id: 32,
+    answers: [
       {
-        "label": "Serial",
-        "value": "HOUSE OF CARDS"
-      }
+        label: 'Serial',
+        value: 'HOUSE OF CARDS',
+      },
     ],
-    "question": "9w-O60x1bYk",
-    "hints": [],
-    "revealedAnswers": []
+    question: '9w-O60x1bYk',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 33,
-    "answers": [
+    id: 33,
+    answers: [
       {
-        "label": "Serial",
-        "value": "WIKINGOWIE"
-      }
+        label: 'Serial',
+        value: 'WIKINGOWIE',
+      },
     ],
-    "question": "gmyCRJkKeKs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'gmyCRJkKeKs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 34,
-    "answers": [
+    id: 34,
+    answers: [
       {
-        "label": "Serial",
-        "value": "GOMORA"
-      }
+        label: 'Serial',
+        value: 'GOMORA',
+      },
     ],
-    "question": "tUwat6BpgVI",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'tUwat6BpgVI',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 35,
-    "answers": [
+    id: 35,
+    answers: [
       {
-        "label": "Serial",
-        "value": "The Stranger Things"
-      }
+        label: 'Serial',
+        value: 'The Stranger Things',
+      },
     ],
-    "question": "-RcPZdihrp4",
-    "hints": [],
-    "revealedAnswers": []
+    question: '-RcPZdihrp4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 36,
-    "answers": [
+    id: 36,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Dom z papieru"
-      }
+        label: 'Serial',
+        value: 'Dom z papieru',
+      },
     ],
-    "question": "THHjJcOpolo",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'THHjJcOpolo',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 37,
-    "answers": [
+    id: 37,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Fargo"
-      }
+        label: 'Serial',
+        value: 'Fargo',
+      },
     ],
-    "question": "aM2l8TPzKmY",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'aM2l8TPzKmY',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 38,
-    "answers": [
+    id: 38,
+    answers: [
       {
-        "label": "Serial",
-        "value": "DR HOUSE"
-      }
+        label: 'Serial',
+        value: 'DR HOUSE',
+      },
     ],
-    "question": "pRXCo6IjXqk",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'pRXCo6IjXqk',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 39,
-    "answers": [
+    id: 39,
+    answers: [
       {
-        "label": "Serial",
-        "value": "DEXTER"
-      }
+        label: 'Serial',
+        value: 'DEXTER',
+      },
     ],
-    "question": "ej8-Rqo-VT4",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ej8-Rqo-VT4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 40,
-    "answers": [
+    id: 40,
+    answers: [
       {
-        "label": "Serial",
-        "value": "GAMBIT KRÓLOWEJ"
-      }
+        label: 'Serial',
+        value: 'GAMBIT KRÓLOWEJ',
+      },
     ],
-    "question": "gXtmCdWd1Cs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'gXtmCdWd1Cs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 41,
-    "answers": [
+    id: 41,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Synowie Anarchi"
-      }
+        label: 'Serial',
+        value: 'Synowie Anarchi',
+      },
     ],
-    "question": "Qd9ULJf2jqU",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'Qd9ULJf2jqU',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 42,
-    "answers": [
+    id: 42,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Archiwum X"
-      }
+        label: 'Serial',
+        value: 'Archiwum X',
+      },
     ],
-    "question": "zaRMx04Z4G4",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'zaRMx04Z4G4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 43,
-    "answers": [
+    id: 43,
+    answers: [
       {
-        "label": "Serial",
-        "value": "True Blood"
-      }
+        label: 'Serial',
+        value: 'True Blood',
+      },
     ],
-    "question": "MiBhZIaJsQ4",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'MiBhZIaJsQ4',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 44,
-    "answers": [
+    id: 44,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Słonecnzy patrol"
-      }
+        label: 'Serial',
+        value: 'Słonecnzy patrol',
+      },
     ],
-    "question": "NvaeMbo0NEQ",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'NvaeMbo0NEQ',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 45,
-    "answers": [
+    id: 45,
+    answers: [
       {
-        "label": "Serial",
-        "value": "WESTWORLD"
-      }
+        label: 'Serial',
+        value: 'WESTWORLD',
+      },
     ],
-    "question": "ZgvXU5R-xWs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ZgvXU5R-xWs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 46,
-    "answers": [
+    id: 46,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Wiedźmin"
-      }
+        label: 'Serial',
+        value: 'Wiedźmin',
+      },
     ],
-    "question": "4SjV1e-B4Ns",
-    "hints": [],
-    "revealedAnswers": []
+    question: '4SjV1e-B4Ns',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 47,
-    "answers": [
+    id: 47,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Sense8"
-      }
+        label: 'Serial',
+        value: 'Sense8',
+      },
     ],
-    "question": "8AHK2NXQD4A",
-    "hints": [],
-    "revealedAnswers": []
+    question: '8AHK2NXQD4A',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 48,
-    "answers": [
+    id: 48,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Sukcesja"
-      }
+        label: 'Serial',
+        value: 'Sukcesja',
+      },
     ],
-    "question": "77PsqaWzwG0",
-    "hints": [],
-    "revealedAnswers": []
+    question: '77PsqaWzwG0',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 49,
-    "answers": [
+    id: 49,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Jesica Jones"
-      }
+        label: 'Serial',
+        value: 'Jesica Jones',
+      },
     ],
-    "question": "kmUQAZ7K3co",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'kmUQAZ7K3co',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 50,
-    "answers": [
+    id: 50,
+    answers: [
       {
-        "label": "Serial",
-        "value": "SABRINA"
-      }
+        label: 'Serial',
+        value: 'SABRINA',
+      },
     ],
-    "question": "vsb8_KiUPqM",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'vsb8_KiUPqM',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 51,
-    "answers": [
+    id: 51,
+    answers: [
       {
-        "label": "Serial",
-        "value": "ORANGE IS THE NEW BLACK"
-      }
+        label: 'Serial',
+        value: 'ORANGE IS THE NEW BLACK',
+      },
     ],
-    "question": "fBITGyJynfA",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'fBITGyJynfA',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 52,
-    "answers": [
+    id: 52,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE NEW POPE"
-      }
+        label: 'Serial',
+        value: 'THE NEW POPE',
+      },
     ],
-    "question": "sgwYToaSQ90",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'sgwYToaSQ90',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 53,
-    "answers": [
+    id: 53,
+    answers: [
       {
-        "label": "Serial",
-        "value": "TOY BOY"
-      }
+        label: 'Serial',
+        value: 'TOY BOY',
+      },
     ],
-    "question": "OIBE2qlEvxs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'OIBE2qlEvxs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 54,
-    "answers": [
+    id: 54,
+    answers: [
       {
-        "label": "Serial",
-        "value": "ALTERED CARBON"
-      }
+        label: 'Serial',
+        value: 'ALTERED CARBON',
+      },
     ],
-    "question": "RRj2XPQnbho",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'RRj2XPQnbho',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 55,
-    "answers": [
+    id: 55,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE WALKING DEAD"
-      }
+        label: 'Serial',
+        value: 'THE WALKING DEAD',
+      },
     ],
-    "question": "v5ISBJc1wFk",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'v5ISBJc1wFk',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 56,
-    "answers": [
+    id: 56,
+    answers: [
       {
-        "label": "Serial",
-        "value": "PUNISHER"
-      }
+        label: 'Serial',
+        value: 'PUNISHER',
+      },
     ],
-    "question": "ROZQ8S6QEmU",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'ROZQ8S6QEmU',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 57,
-    "answers": [
+    id: 57,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE SINNER"
-      }
+        label: 'Serial',
+        value: 'THE SINNER',
+      },
     ],
-    "question": "qH34c-QKmeU",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'qH34c-QKmeU',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 58,
-    "answers": [
+    id: 58,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE TUDORS"
-      }
+        label: 'Serial',
+        value: 'THE TUDORS',
+      },
     ],
-    "question": "x5CbMkYNfUg",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'x5CbMkYNfUg',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 59,
-    "answers": [
+    id: 59,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE DEFENDERS"
-      }
+        label: 'Serial',
+        value: 'THE DEFENDERS',
+      },
     ],
-    "question": "Qo_kUQ5tcBE",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'Qo_kUQ5tcBE',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 60,
-    "answers": [
+    id: 60,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Dolina Krzemowa"
-      }
+        label: 'Serial',
+        value: 'Dolina Krzemowa',
+      },
     ],
-    "question": "OEq7yvE6pSU",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'OEq7yvE6pSU',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 61,
-    "answers": [
+    id: 61,
+    answers: [
       {
-        "label": "Serial",
-        "value": "STAR TREK"
-      }
+        label: 'Serial',
+        value: 'STAR TREK',
+      },
     ],
-    "question": "HnDtvZXYHgE",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'HnDtvZXYHgE',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 62,
-    "answers": [
+    id: 62,
+    answers: [
       {
-        "label": "Serial",
-        "value": "MARCO POLO"
-      }
+        label: 'Serial',
+        value: 'MARCO POLO',
+      },
     ],
-    "question": "6onwcVx8BDg",
-    "hints": [],
-    "revealedAnswers": []
+    question: '6onwcVx8BDg',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 63,
-    "answers": [
+    id: 63,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Ślepnąc od świateł"
-      }
+        label: 'Serial',
+        value: 'Ślepnąc od świateł',
+      },
     ],
-    "question": "jCAbpWjZyZ8",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'jCAbpWjZyZ8',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 64,
-    "answers": [
+    id: 64,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Skazana"
-      }
+        label: 'Serial',
+        value: 'Skazana',
+      },
     ],
-    "question": "LITzRkcotWw",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'LITzRkcotWw',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 65,
-    "answers": [
+    id: 65,
+    answers: [
       {
-        "label": "Serial",
-        "value": "STRAŻNIK TEKSASU"
-      }
+        label: 'Serial',
+        value: 'STRAŻNIK TEKSASU',
+      },
     ],
-    "question": "LVgFLfvHQYI",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'LVgFLfvHQYI',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 66,
-    "answers": [
+    id: 66,
+    answers: [
       {
-        "label": "Serial",
-        "value": "UPADEK KRÓLESTWA"
-      }
+        label: 'Serial',
+        value: 'UPADEK KRÓLESTWA',
+      },
     ],
-    "question": "KKpjHGqb9xs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'KKpjHGqb9xs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 67,
-    "answers": [
+    id: 67,
+    answers: [
       {
-        "label": "Serial",
-        "value": "SEE"
-      }
+        label: 'Serial',
+        value: 'SEE',
+      },
     ],
-    "question": "n4Ugh6wbz94",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'n4Ugh6wbz94',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 68,
-    "answers": [
+    id: 68,
+    answers: [
       {
-        "label": "Serial",
-        "value": "DWÓCH I PÓŁ"
-      }
+        label: 'Serial',
+        value: 'DWÓCH I PÓŁ',
+      },
     ],
-    "question": "zJV_STpyiTE",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'zJV_STpyiTE',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 69,
-    "answers": [
+    id: 69,
+    answers: [
       {
-        "label": "Serial",
-        "value": "PIRACI"
-      }
+        label: 'Serial',
+        value: 'PIRACI',
+      },
     ],
-    "question": "XFTcA4QLHw0",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'XFTcA4QLHw0',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 70,
-    "answers": [
+    id: 70,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE GOOD DOCTOR"
-      }
+        label: 'Serial',
+        value: 'THE GOOD DOCTOR',
+      },
     ],
-    "question": "JGsfu43y-8Q",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'JGsfu43y-8Q',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 71,
-    "answers": [
+    id: 71,
+    answers: [
       {
-        "label": "Serial",
-        "value": "RIVERDALLE"
-      }
+        label: 'Serial',
+        value: 'RIVERDALLE',
+      },
     ],
-    "question": "5KQ9E5Sk5k0",
-    "hints": [],
-    "revealedAnswers": []
+    question: '5KQ9E5Sk5k0',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 72,
-    "answers": [
+    id: 72,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE A LIST"
-      }
+        label: 'Serial',
+        value: 'THE A LIST',
+      },
     ],
-    "question": "wv517Ru5GEY",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'wv517Ru5GEY',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 73,
-    "answers": [
+    id: 73,
+    answers: [
       {
-        "label": "Serial",
-        "value": "ARROW"
-      }
+        label: 'Serial',
+        value: 'ARROW',
+      },
     ],
-    "question": "Pg69BpgyFZs",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'Pg69BpgyFZs',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 74,
-    "answers": [
+    id: 74,
+    answers: [
       {
-        "label": "Serial",
-        "value": "COBRA KAI"
-      }
+        label: 'Serial',
+        value: 'COBRA KAI',
+      },
     ],
-    "question": "2HbcUfpbULw",
-    "hints": [],
-    "revealedAnswers": []
+    question: '2HbcUfpbULw',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 75,
-    "answers": [
+    id: 75,
+    answers: [
       {
-        "label": "Serial",
-        "value": "THE RAIN"
-      }
+        label: 'Serial',
+        value: 'THE RAIN',
+      },
     ],
-    "question": "s0bPC0Oa9Rg",
-    "hints": [],
-    "revealedAnswers": []
+    question: 's0bPC0Oa9Rg',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 76,
-    "answers": [
+    id: 76,
+    answers: [
       {
-        "label": "Serial",
-        "value": "13 POSTERUNEK"
-      }
+        label: 'Serial',
+        value: '13 POSTERUNEK',
+      },
     ],
-    "question": "zIrtaMbnBOM",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'zIrtaMbnBOM',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 77,
-    "answers": [
+    id: 77,
+    answers: [
       {
-        "label": "Serial",
-        "value": "SQUid GAME"
-      }
+        label: 'Serial',
+        value: 'SQUid GAME',
+      },
     ],
-    "question": "OgDraEI7i8Y",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'OgDraEI7i8Y',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 78,
-    "answers": [
+    id: 78,
+    answers: [
       {
-        "label": "Serial",
-        "value": "CZAS HONORU"
-      }
+        label: 'Serial',
+        value: 'CZAS HONORU',
+      },
     ],
-    "question": "hccuH8JRD8A",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'hccuH8JRD8A',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 79,
-    "answers": [
+    id: 79,
+    answers: [
       {
-        "label": "Serial",
-        "value": "COBRA"
-      }
+        label: 'Serial',
+        value: 'COBRA',
+      },
     ],
-    "question": "JET-GKgMC2A",
-    "hints": [],
-    "revealedAnswers": []
+    question: 'JET-GKgMC2A',
+    hints: [],
+    revealedAnswers: [],
   },
   {
-    "id": 80,
-    "answers": [
+    id: 80,
+    answers: [
       {
-        "label": "Serial",
-        "value": "Herkules"
-      }
+        label: 'Serial',
+        value: 'Herkules',
+      },
     ],
-    "question": "WY6Ji-FGi_o",
-    "hints": [],
-    "revealedAnswers": []
-  }
-]
+    question: 'WY6Ji-FGi_o',
+    hints: [],
+    revealedAnswers: [],
+  },
+];

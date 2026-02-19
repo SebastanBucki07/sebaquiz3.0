@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { GameService } from './game.service';
-import {Hint} from './category/category.interface';
+import { Hint } from './category/category.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PointsService {
-
   // aktualna liczba punktów możliwa do zdobycia
   private availablePointsSubject = new BehaviorSubject<number>(0);
   availablePoints$ = this.availablePointsSubject.asObservable();
@@ -47,7 +46,6 @@ export class PointsService {
     this.availablePointsSubject.next(updated);
   }
 
-
   decreasePoints(amount: number): void {
     const current = this.availablePointsSubject.value;
     const updated = Math.max(0, current - amount);
@@ -63,9 +61,7 @@ export class PointsService {
     if (!team) return;
 
     const pointsToAward =
-      customPoints !== undefined
-        ? customPoints
-        : this.availablePointsSubject.value;
+      customPoints !== undefined ? customPoints : this.availablePointsSubject.value;
 
     if (pointsToAward <= 0) return;
 

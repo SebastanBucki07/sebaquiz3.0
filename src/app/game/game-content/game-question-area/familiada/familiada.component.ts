@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-familiada',
   imports: [],
   templateUrl: './familiada.component.html',
-  styleUrl: './familiada.component.css'
+  styleUrl: './familiada.component.css',
 })
-export class FamiliadaComponent {
-
-}
+export class FamiliadaComponent {}

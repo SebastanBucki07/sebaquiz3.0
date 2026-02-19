@@ -40,22 +40,20 @@ import {
   getTvCast,
   getTvIdByTitle,
 } from './apiHelper/actor.helper';
-import {JAKA_TO_MELODIA} from './questions/music.questions';
-import {CZOLOWKI_SERIALI} from './questions/tvSeriesIntro.questions';
-import {IMPREZY_SPORTOWE} from './questions/footballChampionsMusic.questions';
-import {LOGO_FRAGMENTY} from './questions/logoFragments.questions';
-import {HERBY_PILKARSKIE} from './questions/footballCrestsFragments.questions';
-import {FRAGMENT_FLAG} from './questions/flagFragments.questions';
-import {WYPISZ_WSPOLNE} from './questions/writtings.questions';
+import { JAKA_TO_MELODIA } from './questions/music.questions';
+import { CZOLOWKI_SERIALI } from './questions/tvSeriesIntro.questions';
+import { IMPREZY_SPORTOWE } from './questions/footballChampionsMusic.questions';
+import { LOGO_FRAGMENTY } from './questions/logoFragments.questions';
+import { HERBY_PILKARSKIE } from './questions/footballCrestsFragments.questions';
+import { FRAGMENT_FLAG } from './questions/flagFragments.questions';
+import { WYPISZ_WSPOLNE } from './questions/writtings.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
-
   private currentQuestionSubject = new BehaviorSubject<Question | null>(null);
   readonly question$ = this.currentQuestionSubject.asObservable();
 
   private usedQuestions: Record<string, Question[]> = {};
-
 
   // =========================
   // PUBLIC
@@ -71,7 +69,7 @@ export class QuestionService {
     }
 
     const available = questions.filter(
-      q => !this.usedQuestions[key].some(uq => uq.id === q.id)
+      (q) => !this.usedQuestions[key].some((uq) => uq.id === q.id)
     );
 
     if (!available.length) {
@@ -82,7 +80,7 @@ export class QuestionService {
     let question: Question = {
       ...available[Math.floor(Math.random() * available.length)],
       showAnswer: false,
-      revealedAnswers: []
+      revealedAnswers: [],
     };
 
     question = await this.enrichQuestion(question, type, name);
@@ -90,7 +88,6 @@ export class QuestionService {
     this.usedQuestions[key].push(question);
     this.currentQuestionSubject.next(question);
   }
-
 
   revealAnswer(index: number): void {
     const q = this.currentQuestionSubject.value;
@@ -102,7 +99,7 @@ export class QuestionService {
       q.revealedAnswers.push(index);
     }
 
-    console.log(`revelad answer: ${JSON.stringify(q.revealedAnswers)}`)
+    console.log(`revelad answer: ${JSON.stringify(q.revealedAnswers)}`);
     this.currentQuestionSubject.next({ ...q });
   }
 
@@ -115,7 +112,7 @@ export class QuestionService {
     this.currentQuestionSubject.next({
       ...q,
       revealedAnswers: [],
-      showAnswer: false
+      showAnswer: false,
     });
   }
 
@@ -142,7 +139,6 @@ export class QuestionService {
     return usedForCategory.length < all.length;
   }
 
-
   updateCurrentQuestion(question: Question): void {
     this.currentQuestionSubject.next({ ...question });
   }
@@ -151,12 +147,7 @@ export class QuestionService {
   // ENRICHERS (ANTI-SPAGHETTI)
   // =========================
 
-  private async enrichQuestion(
-    question: Question,
-    type: string,
-    name: string
-  ): Promise<Question> {
-
+  private async enrichQuestion(question: Question, type: string, name: string): Promise<Question> {
     if (type === 'photos' && name === 'Znane postacie') {
       return this.enrichFamousPeople(question);
     }
@@ -171,13 +162,11 @@ export class QuestionService {
       return question;
     }
 
-
     if (q?.includes('fwcdn.pl')) {
       const actorName = question.answers?.[0]?.value;
       if (!actorName) return question;
 
       const photo = await getActorPhotoByName(actorName);
-
 
       if (photo.includes('no-image')) {
         await this.loadRandomQuestion('photos', 'Znane postacie');
@@ -198,7 +187,6 @@ export class QuestionService {
     return question;
   }
 
-
   private async checkImageUrl(url: string): Promise<boolean> {
     try {
       const res = await fetch(url, { method: 'HEAD' });
@@ -208,15 +196,11 @@ export class QuestionService {
     }
   }
 
-
-
-
   // =========================
   // DATA
   // =========================
 
   private async getQuestions(type: string, name: string): Promise<Question[]> {
-
     if (type === 'one-answer' && name === 'Film') return FILMY;
     if (type === 'one-answer' && name === 'Seriale') return TV_SERIES;
     if (type === 'one-answer' && name === 'Symbole Chemiczne') return CHEMIST;
@@ -242,8 +226,10 @@ export class QuestionService {
     if (type === 'photos' && name === 'Flagi') return FLAGI;
 
     if (type === 'photo-hints' && name === 'Klubowa Historia piłkarza') return HISTORIA_PILKARZA;
-    if (type === 'photo-hints' && name === 'W jakim filmie zagrała taka obsada?') return FILM_PO_AKTORACH;
-    if (type === 'photo-hints' && name === 'W jakim serialu zagrała taka obsada?') return SERIAL_PO_AKTORACH;
+    if (type === 'photo-hints' && name === 'W jakim filmie zagrała taka obsada?')
+      return FILM_PO_AKTORACH;
+    if (type === 'photo-hints' && name === 'W jakim serialu zagrała taka obsada?')
+      return SERIAL_PO_AKTORACH;
 
     if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
     if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
@@ -253,7 +239,8 @@ export class QuestionService {
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;
     if (type === 'photo-fragments' && name === 'Fragmenty Flag') return FRAGMENT_FLAG;
 
-    if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych') return WYPISZ_WSPOLNE;
+    if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych')
+      return WYPISZ_WSPOLNE;
 
     return [];
   }
@@ -268,23 +255,17 @@ export class QuestionService {
     const title = question.answers[0].value;
     const isTv = question.question === 'W jakim serialu zagrała taka obsada?';
 
-    const id = isTv
-      ? await getTvIdByTitle(title)
-      : await getMovieIdByTitle(title);
+    const id = isTv ? await getTvIdByTitle(title) : await getMovieIdByTitle(title);
 
     if (!id) return [];
 
-    const cast = isTv
-      ? await getTvCast(id, 8)
-      : await getMovieCast(id, 8);
+    const cast = isTv ? await getTvCast(id, 8) : await getMovieCast(id, 8);
 
     return cast.map((actor, index) => ({
       id: index.toString(),
       label: actor.name,
-      content: actor.profile_path
-        ? getImageUrl(actor.profile_path)
-        : 'assets/no-image.png',
-      penaltyPercent: 0
+      content: actor.profile_path ? getImageUrl(actor.profile_path) : 'assets/no-image.png',
+      penaltyPercent: 0,
     }));
   }
 }
