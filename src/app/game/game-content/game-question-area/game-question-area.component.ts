@@ -7,6 +7,7 @@ import {CATEGORY_LIST} from '../../../shared/category/categoryList';
 import {Category, Hint} from '../../../shared/category/category.interface';
 import {QuestionService} from '../../../shared/question-service.service';
 import {AnswerComponent} from './answer/answer.component';
+import {PointsService} from '../../../shared/points-service.service';
 
 @Component({
   selector: 'app-game-question-area',
@@ -26,7 +27,8 @@ export class GameQuestionAreaComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private gameService: GameService,
-    private questionService: QuestionService
+    private questionService: QuestionService,
+    private pointsService: PointsService
   ) {
   }
 
@@ -49,6 +51,10 @@ export class GameQuestionAreaComponent implements OnInit {
       }
 
       this.currentCategory = category;
+
+      this.pointsService.setPoints(this.currentCategory.basePoints);
+
+
       //this.currentPoints = category.basePoints;
 
       // 🔥 HERE WE DRAW A QUESTION
@@ -79,54 +85,83 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   correct() {
-    const points = this.currentPoints; // <-- getter
-    this.gameService.addPointsToCurrentTeam(points);
-    this.usedHints = []; // reset hintów
-    this.gameService.nextTeam();
-    this.router.navigate(['/game']);
-  }
-
-
-
-  onHintUsed(hint: Hint): void {
-// add hint if not used before
-    if (!this.usedHints.some(h => h.id === hint.id)) {
-      this.usedHints.push(hint);
-    }
-    console.log('usedHints:', this.usedHints);
-  }
-
-  onActivate(component: any): void {
-    console.log('Activated component:', component);
-
-
-    if (component.hintUsed) {
-      component.hintUsed.subscribe((hint: Hint) => {
-        console.log('HINT RECEIVED IN GAME', hint); // 🔥
-        this.onHintUsed(hint);
-      });
-    }
-  }
-
-  get currentPoints(): number {
-    if (!this.currentCategory) return 0;
-
-    const totalPenalty = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
-    const multiplier = Math.max(0, 1 - totalPenalty / 100);
-
-    return Math.round(this.currentCategory.basePoints * multiplier);
-  }
-
-  half() {
-    const points = Math.ceil(this.currentPoints / 2);
-    this.gameService.addPointsToCurrentTeam(points);
+    this.pointsService.awardPointsToCurrentTeam(); // automatycznie bierze aktualne availablePoints
     this.usedHints = [];
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
   }
 
+
+  onHintUsed(hint: Hint): void {
+    if (!this.usedHints.some(h => h.id === hint.id)) {
+      this.usedHints.push(hint);
+      this.pointsService.applyHintPenalty(); // zmniejszamy punkty automatycznie
+    }
+    console.log('usedHints:', this.usedHints, 'availablePoints:', this.pointsService.getAvailablePoints());
+  }
+
+
+  // get currentPoints(): number {
+  //   if (!this.currentCategory) return 0;
+  //
+  //   const totalPenalty = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
+  //   const multiplier = Math.max(0, 1 - totalPenalty / 100);
+  //
+  //   return Math.round(this.currentCategory.basePoints * multiplier);
+  // }
+
+  // get currentPoints(): number {
+  //   let points = this.pointsService.getAvailablePoints();
+  //
+  //   const totalPenalty = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
+  //   const multiplier = Math.max(0, 1 - totalPenalty / 100);
+  //
+  //   return Math.round(points * multiplier);
+  // }
+
+  get currentPoints(): number {
+    if (!this.currentCategory) return 0;
+
+    const base = this.currentCategory.basePoints;
+
+    // pobranie dostępnych punktów z PointsService, fallback na base jeśli 0
+    const available = this.pointsService.getAvailablePoints();
+    const effectivePoints = available > 0 ? available : base;
+
+    // uwzględnienie użytych hintów
+    const totalPenaltyPercent = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
+    const multiplier = Math.max(0, 1 - totalPenaltyPercent / 100);
+
+    return Math.round(effectivePoints * multiplier);
+  }
+
+
+
+
+  half() {
+    const points = Math.ceil(this.pointsService.getAvailablePoints() / 2);
+    this.pointsService.awardPointsToCurrentTeam(points);
+    this.usedHints = [];
+    this.gameService.nextTeam();
+    this.router.navigate(['/game']);
+  }
+
+
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
   }
+
+  // GameQuestionAreaComponent
+  public onActivate(component: any): void {
+    console.log('Activated component:', component);
+
+    if (component.hintUsed) {
+      component.hintUsed.subscribe((hint: Hint) => {
+        console.log('HINT RECEIVED IN GAME', hint);
+        this.onHintUsed(hint);
+      });
+    }
+  }
+
 
 }

@@ -97,7 +97,7 @@ export const PILKA_NOZNA = [{
 }, {
   "id": 17,
   "answers": [{"value": "Belgia"}],
-  "question": "3 miejsce na msitrzostwach świata 2018",
+  "question": "3 miejsce na mistrzostwach świata 2018",
   "hints": [],
   "revealedAnswers": []
 }, {
@@ -325,13 +325,13 @@ export const PILKA_NOZNA = [{
 }, {
   "id": 55,
   "answers": [{"value": "Francja"}],
-  "question": "Vicemsitrz świata 2006",
+  "question": "Vicemistrz świata 2006",
   "hints": [],
   "revealedAnswers": []
 }, {
   "id": 56,
   "answers": [{"value": "Niemcy"}],
-  "question": "III na msitrzostwach świata 2006",
+  "question": "III na mistrzostwach świata 2006",
   "hints": [],
   "revealedAnswers": []
 }, {
@@ -397,7 +397,7 @@ export const PILKA_NOZNA = [{
 }, {
   "id": 67,
   "answers": [{"value": "Niemcy"}],
-  "question": "Vicemsitrz świata 2002",
+  "question": "Vicemistrz świata 2002",
   "hints": [],
   "revealedAnswers": []
 }, {

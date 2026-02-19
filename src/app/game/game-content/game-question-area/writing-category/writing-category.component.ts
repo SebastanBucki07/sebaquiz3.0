@@ -9,6 +9,8 @@ import { QuestionService } from '../../../../shared/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Observable } from 'rxjs';
 import { GameStateService, Team } from '../../../../shared/game-state.service';
+import {PointsService} from '../../../../shared/points-service.service';
+import {GameService} from '../../../../shared/game.service';
 
 interface Player extends Team {
   mistakes: number;
@@ -55,7 +57,9 @@ export class WritingCategoryComponent implements OnInit {
 
   constructor(
     private questionService: QuestionService,
-    private gameStateService: GameStateService
+    private gameStateService: GameStateService,
+    private gameService: GameService,
+    private pointsService: PointsService
   ) {}
 
   ngOnInit(): void {
@@ -263,30 +267,33 @@ export class WritingCategoryComponent implements OnInit {
     const totalAnswers = this.question.answers?.length ?? 0;
     if (totalAnswers === 0) return;
 
-    // Obliczamy lokalnie punkty procentowo dla każdej drużyny
+    // Obliczamy punkty dla każdej drużyny/gracza
     this.players.forEach(player => {
       const ratio = player.correctAnswers / totalAnswers;
       player.calculatedPoints = Math.ceil(ratio * this.MAX_POINTS);
     });
 
-// aby Angular odświeżył widok
     this.players = [...this.players];
 
-
-    // Wyłonienie zwycięzcy – priorytet: odgadnięte odpowiedzi, w razie remisu -> więcej szans
+    // Wyłonienie zwycięzcy
     const sorted = [...this.players].sort((a, b) => {
       if (b.correctAnswers === a.correctAnswers) {
-        return b.chancesLeft - a.chancesLeft; // więcej szans wygrywa w remisie
+        return b.chancesLeft - a.chancesLeft;
       }
       return b.correctAnswers - a.correctAnswers;
     });
 
     this.winner = sorted[0] || null;
 
-    // NIE DODAJEMY punktów do GameStateService — będzie zrobione w innym komponencie
+    if (this.winner) {
+      // ustaw aktualną drużynę na zwycięzcę
+      this.gameService.setCurrentTeam(this.winner.name);
+
+      // ustaw dostępne punkty na obiekt zwycięzcy
+      this.pointsService.setPoints(this.winner.calculatedPoints ?? 0);
+    }
+
   }
-
-
 
   resetGame(): void {
     this.players.forEach(p => {
@@ -358,5 +365,9 @@ export class WritingCategoryComponent implements OnInit {
     return matrix[a.length][b.length];
   }
 
+  awardPointsToTeam(teamName: string, points: number): void {
+    if (!teamName || points <= 0) return;
+
+  }
 
 }

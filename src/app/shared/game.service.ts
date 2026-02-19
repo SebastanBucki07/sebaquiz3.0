@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Subject} from 'rxjs';
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GameService {
+
   private resetSubject = new Subject<void>();
   reset$ = this.resetSubject.asObservable();
 
@@ -14,9 +15,13 @@ export class GameService {
   private currentTeamSubject = new BehaviorSubject<string | null>(null);
   currentTeam$ = this.currentTeamSubject.asObservable();
 
-  constructor() { }
+  constructor() {}
 
-  setCurrentTeam(team: string) {
+  // =========================
+  // TEAM MANAGEMENT
+  // =========================
+
+  setCurrentTeam(team: string): void {
     this.currentTeamSubject.next(team);
   }
 
@@ -24,20 +29,8 @@ export class GameService {
     return this.currentTeamSubject.value;
   }
 
-  resetGame() {
-    localStorage.removeItem('teams');
-    localStorage.removeItem('selectedCategories');
-    this.currentTeamSubject.next(null); // reset team
-    this.resetSubject.next();
-  }
-
-  notifyDataChanged() {
-    this.dataChangedSubject.next();
-  }
-
-  nextTeam() {
+  nextTeam(): void {
     const teams = JSON.parse(localStorage.getItem('teams') || '[]');
-
     if (!teams.length) return;
 
     const currentTeam = this.currentTeamSubject.value;
@@ -54,18 +47,35 @@ export class GameService {
     this.currentTeamSubject.next(teams[nextIndex].name);
   }
 
-  addPointsToCurrentTeam(points: number) {
+  // =========================
+  // POINTS UPDATE (wywoływane przez PointsService)
+  // =========================
+
+  updateTeamPoints(teamName: string, points: number): void {
     const teams = JSON.parse(localStorage.getItem('teams') || '[]');
-    const currentTeam = this.currentTeamSubject.value;
+    if (!teams.length) return;
 
-    if (!currentTeam || !teams.length) return;
-
-    const team = teams.find((t: any) => t.name === currentTeam);
+    const team = teams.find((t: any) => t.name === teamName);
     if (!team) return;
 
     team.points += points;
 
     localStorage.setItem('teams', JSON.stringify(teams));
     this.notifyDataChanged();
+  }
+
+  // =========================
+  // RESET
+  // =========================
+
+  resetGame(): void {
+    localStorage.removeItem('teams');
+    localStorage.removeItem('selectedCategories');
+    this.currentTeamSubject.next(null);
+    this.resetSubject.next();
+  }
+
+  notifyDataChanged(): void {
+    this.dataChangedSubject.next();
   }
 }
