@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { GameService } from './game.service';
+import {Hint} from './category/category.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -39,14 +40,13 @@ export class PointsService {
   // ZMNIEJSZANIE PUNKTÓW
   // =========================
 
-  applyHintPenalty(): void {
-    if (this.penaltyPerHint <= 0) return;
-
+  applyHintPenalty(hint: Hint): void {
     const current = this.availablePointsSubject.value;
-    const updated = Math.max(0, current - this.penaltyPerHint);
-
+    const penalty = Math.round(this.basePoints * (hint.penaltyPercent / 100));
+    const updated = Math.max(0, current - penalty);
     this.availablePointsSubject.next(updated);
   }
+
 
   decreasePoints(amount: number): void {
     const current = this.availablePointsSubject.value;
