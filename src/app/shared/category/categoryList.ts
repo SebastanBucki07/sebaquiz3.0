@@ -54,7 +54,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 8,
     type: 'photos',
     name: 'Budowle',
-    basePoints: 99,
+    basePoints: 5,
     hints: []
   }, {
     id: 9,
