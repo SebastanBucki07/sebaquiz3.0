@@ -1,27 +1,25 @@
-import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute, Router, RouterOutlet} from '@angular/router';
-import {CommonModule} from '@angular/common';
-import {QuestionAreaHeaderComponent} from './question-area-header/question-area-header.component';
-import {GameService} from '../../../shared/game.service';
-import {CATEGORY_LIST} from '../../../shared/category/categoryList';
-import {Category, Hint} from '../../../shared/category/category.interface';
-import {QuestionService} from '../../../shared/question-service.service';
-import {AnswerComponent} from './answer/answer.component';
-import {PointsService} from '../../../shared/points-service.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { QuestionAreaHeaderComponent } from './question-area-header/question-area-header.component';
+import { GameService } from '../../../shared/game.service';
+import { CATEGORY_LIST } from '../../../shared/category/categoryList';
+import { Category, Hint } from '../../../shared/category/category.interface';
+import { QuestionService } from '../../../shared/question-service.service';
+import { AnswerComponent } from './answer/answer.component';
+import { PointsService } from '../../../shared/points-service.service';
 
 @Component({
   selector: 'app-game-question-area',
   templateUrl: './game-question-area.component.html',
   standalone: true,
   imports: [CommonModule, QuestionAreaHeaderComponent, RouterOutlet, AnswerComponent],
-  styleUrl: './game-question-area.component.css'
+  styleUrl: './game-question-area.component.css',
 })
 export class GameQuestionAreaComponent implements OnInit {
   currentCategory!: Category;
   basePoints = 0;
   usedHints: Hint[] = [];
-
-
 
   constructor(
     private route: ActivatedRoute,
@@ -29,12 +27,10 @@ export class GameQuestionAreaComponent implements OnInit {
     private gameService: GameService,
     private questionService: QuestionService,
     private pointsService: PointsService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
-
-    this.route.paramMap.subscribe(params => {
+    this.route.paramMap.subscribe((params) => {
       const type = params.get('type');
       const name = params.get('name');
 
@@ -42,9 +38,7 @@ export class GameQuestionAreaComponent implements OnInit {
         throw new Error('Brak parametrów kategorii w URL');
       }
 
-      const category = CATEGORY_LIST.find(
-        c => c.type === type && c.name === name
-      );
+      const category = CATEGORY_LIST.find((c) => c.type === type && c.name === name);
 
       if (!category) {
         throw new Error('Nie znaleziono kategorii');
@@ -54,7 +48,6 @@ export class GameQuestionAreaComponent implements OnInit {
 
       this.pointsService.setPoints(this.currentCategory.basePoints);
 
-
       //this.currentPoints = category.basePoints;
 
       // 🔥 HERE WE DRAW A QUESTION
@@ -63,9 +56,8 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   wrong() {
-// also reset hints if you want the next question to be "clean"
+    // also reset hints if you want the next question to be "clean"
     this.usedHints = [];
-
 
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
@@ -79,19 +71,22 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
-
   onHintUsed(hint: Hint): void {
-    if (!this.usedHints.some(h => h.id === hint.id)) {
+    if (!this.usedHints.some((h) => h.id === hint.id)) {
       // przypisanie nowej tablicy dla Angular change detection
       this.usedHints = [...this.usedHints, hint];
 
       // zmniejszamy punkty w serwisie, przekazując hint
       this.pointsService.applyHintPenalty(hint);
 
-      console.log('usedHints:', this.usedHints, 'availablePoints:', this.pointsService.getAvailablePoints());
+      console.log(
+        'usedHints:',
+        this.usedHints,
+        'availablePoints:',
+        this.pointsService.getAvailablePoints()
+      );
     }
   }
-
 
   get currentPoints(): number {
     if (!this.currentCategory) return 0;
@@ -117,7 +112,6 @@ export class GameQuestionAreaComponent implements OnInit {
     this.router.navigate(['/game']);
   }
 
-
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
   }
@@ -133,6 +127,4 @@ export class GameQuestionAreaComponent implements OnInit {
       });
     }
   }
-
-
 }

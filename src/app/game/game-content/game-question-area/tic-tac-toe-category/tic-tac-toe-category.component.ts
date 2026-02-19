@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-tic-tac-toe-category',
   imports: [],
   templateUrl: './tic-tac-toe-category.component.html',
-  styleUrl: './tic-tac-toe-category.component.css'
+  styleUrl: './tic-tac-toe-category.component.css',
 })
-export class TicTacToeCategoryComponent {
-
-}
+export class TicTacToeCategoryComponent {}

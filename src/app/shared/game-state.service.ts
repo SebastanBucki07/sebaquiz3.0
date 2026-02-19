@@ -8,10 +8,9 @@ export interface Team {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GameStateService {
-
   private teamsSubject = new BehaviorSubject<Team[]>([]);
   teams$ = this.teamsSubject.asObservable();
 
@@ -25,17 +24,13 @@ export class GameStateService {
     if (storedTeams) {
       const teams = JSON.parse(storedTeams) as Team[];
 
-      this.teamsSubject.next(
-        teams.sort((a, b) => b.points - a.points)
-      );
+      this.teamsSubject.next(teams.sort((a, b) => b.points - a.points));
     }
   }
 
-  addPoint(teamId: number,points:number = 1): void {
-    const teams = this.teamsSubject.value.map(team =>
-      team.id === teamId
-        ? { ...team, points: team.points + 1 }
-        : team
+  addPoint(teamId: number, points: number = 1): void {
+    const teams = this.teamsSubject.value.map((team) =>
+      team.id === teamId ? { ...team, points: team.points + 1 } : team
     );
 
     localStorage.setItem('teams', JSON.stringify(teams));

@@ -1,9 +1,5 @@
 <div class="photo-hints-container" *ngIf="hints.length > 0; else noHints">
-  <mat-card
-    class="hint-card"
-    *ngFor="let hint of hints"
-    (click)="useHint(hint)"
-  >
+  <mat-card class="hint-card" *ngFor="let hint of hints" (click)="useHint(hint)">
     <div class="hint-image-wrapper">
       <img [src]="hint.content" [alt]="hint.label" />
     </div>
@@ -15,4 +11,4 @@
 
 <ng-template #noHints>
   <p class="no-hints">Brak podpowiedzi dla tej kategorii</p>
-  </ng-template>
+</ng-template>

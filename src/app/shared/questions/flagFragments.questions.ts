@@ -1,7002 +1,7502 @@
 export const FRAGMENT_FLAG = [
   {
-    "id": 1,
-    "answers": [
+    id: 1,
+    answers: [
       {
-        "value": "Andora"
-      }
+        value: 'Andora',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ad.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ad.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 2,
-    "answers": [
+    id: 2,
+    answers: [
       {
-        "value": "Trynidad i Tobago"
-      }
+        value: 'Trynidad i Tobago',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 3,
-    "answers": [
+    id: 3,
+    answers: [
       {
-        "value": "Serbia"
-      }
+        value: 'Serbia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/rs.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/rs.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 4,
-    "answers": [
+    id: 4,
+    answers: [
       {
-        "value": "Zjednoczone Królestwo"
-      }
+        value: 'Zjednoczone Królestwo',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gb.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gb.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 5,
-    "answers": [
+    id: 5,
+    answers: [
       {
-        "value": "Rosja"
-      }
+        value: 'Rosja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ru.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ru.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 6,
-    "answers": [
+    id: 6,
+    answers: [
       {
-        "value": "Hongkong"
-      }
+        value: 'Hongkong',
+      },
     ],
-    "question": "https://flagcdn.com/w320/hk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/hk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 7,
-    "answers": [
+    id: 7,
+    answers: [
       {
-        "value": "Sahara Zachodnia"
-      }
+        value: 'Sahara Zachodnia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/eh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/eh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 8,
-    "answers": [
+    id: 8,
+    answers: [
       {
-        "value": "Urugwaj"
-      }
+        value: 'Urugwaj',
+      },
     ],
-    "question": "https://flagcdn.com/w320/uy.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/uy.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 9,
-    "answers": [
+    id: 9,
+    answers: [
       {
-        "value": "Barbados"
-      }
+        value: 'Barbados',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bb.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bb.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 10,
-    "answers": [
+    id: 10,
+    answers: [
       {
-        "value": "Palestyna"
-      }
+        value: 'Palestyna',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ps.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ps.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 11,
-    "answers": [
+    id: 11,
+    answers: [
       {
-        "value": "Meksyk"
-      }
+        value: 'Meksyk',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mx.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mx.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 12,
-    "answers": [
+    id: 12,
+    answers: [
       {
-        "value": "Malawi"
-      }
+        value: 'Malawi',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 13,
-    "answers": [
+    id: 13,
+    answers: [
       {
-        "value": "Antarktyka"
-      }
+        value: 'Antarktyka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/aq.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/aq.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 14,
-    "answers": [
+    id: 14,
+    answers: [
       {
-        "value": "Nowa Kaledonia"
-      }
+        value: 'Nowa Kaledonia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 15,
-    "answers": [
+    id: 15,
+    answers: [
       {
-        "value": "Svalbard i Jan Mayen"
-      }
+        value: 'Svalbard i Jan Mayen',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sj.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sj.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 16,
-    "answers": [
+    id: 16,
+    answers: [
       {
-        "value": "Wyspa Norfolk"
-      }
+        value: 'Wyspa Norfolk',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 17,
-    "answers": [
+    id: 17,
+    answers: [
       {
-        "value": "Wyspa Bożego Narodzenia"
-      }
+        value: 'Wyspa Bożego Narodzenia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cx.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cx.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 18,
-    "answers": [
+    id: 18,
+    answers: [
       {
-        "value": "Mongolia"
-      }
+        value: 'Mongolia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 19,
-    "answers": [
+    id: 19,
+    answers: [
       {
-        "value": "Łotwa"
-      }
+        value: 'Łotwa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 20,
-    "answers": [
+    id: 20,
+    answers: [
       {
-        "value": "Brunei"
-      }
+        value: 'Brunei',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 21,
-    "answers": [
+    id: 21,
+    answers: [
       {
-        "value": "Ukraina"
-      }
+        value: 'Ukraina',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ua.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ua.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 22,
-    "answers": [
+    id: 22,
+    answers: [
       {
-        "value": "Korea Północna"
-      }
+        value: 'Korea Północna',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kp.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kp.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 23,
-    "answers": [
+    id: 23,
+    answers: [
       {
-        "value": "Finlandia"
-      }
+        value: 'Finlandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fi.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fi.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 24,
-    "answers": [
+    id: 24,
+    answers: [
       {
-        "value": "Anguilla"
-      }
+        value: 'Anguilla',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ai.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ai.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 25,
-    "answers": [
+    id: 25,
+    answers: [
       {
-        "value": "Azerbejdżan"
-      }
+        value: 'Azerbejdżan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/az.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/az.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 26,
-    "answers": [
+    id: 26,
+    answers: [
       {
-        "value": "Kajmany"
-      }
+        value: 'Kajmany',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ky.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ky.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 27,
-    "answers": [
+    id: 27,
+    answers: [
       {
-        "value": "Uzbekistan"
-      }
+        value: 'Uzbekistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/uz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/uz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 28,
-    "answers": [
+    id: 28,
+    answers: [
       {
-        "value": "Irlandia"
-      }
+        value: 'Irlandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ie.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ie.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 29,
-    "answers": [
+    id: 29,
+    answers: [
       {
-        "value": "Jersey"
-      }
+        value: 'Jersey',
+      },
     ],
-    "question": "https://flagcdn.com/w320/je.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/je.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 30,
-    "answers": [
+    id: 30,
+    answers: [
       {
-        "value": "Rwanda"
-      }
+        value: 'Rwanda',
+      },
     ],
-    "question": "https://flagcdn.com/w320/rw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/rw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 31,
-    "answers": [
+    id: 31,
+    answers: [
       {
-        "value": "Bośnia i Hercegowina"
-      }
+        value: 'Bośnia i Hercegowina',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ba.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ba.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 32,
-    "answers": [
+    id: 32,
+    answers: [
       {
-        "value": "Polska"
-      }
+        value: 'Polska',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 33,
-    "answers": [
+    id: 33,
+    answers: [
       {
-        "value": "Portugalia"
-      }
+        value: 'Portugalia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 34,
-    "answers": [
+    id: 34,
+    answers: [
       {
-        "value": "Haiti"
-      }
+        value: 'Haiti',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ht.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ht.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 35,
-    "answers": [
+    id: 35,
+    answers: [
       {
-        "value": "Iran"
-      }
+        value: 'Iran',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ir.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ir.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 36,
-    "answers": [
+    id: 36,
+    answers: [
       {
-        "value": "Francuskie Terytoria Południowe i Antarktyczne"
-      }
+        value: 'Francuskie Terytoria Południowe i Antarktyczne',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 37,
-    "answers": [
+    id: 37,
+    answers: [
       {
-        "value": "Etiopia"
-      }
+        value: 'Etiopia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/et.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/et.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 38,
-    "answers": [
+    id: 38,
+    answers: [
       {
-        "value": "Kazachstan"
-      }
+        value: 'Kazachstan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 39,
-    "answers": [
+    id: 39,
+    answers: [
       {
-        "value": "Mali"
-      }
+        value: 'Mali',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ml.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ml.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 40,
-    "answers": [
+    id: 40,
+    answers: [
       {
-        "value": "Nikaragua"
-      }
+        value: 'Nikaragua',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ni.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ni.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 41,
-    "answers": [
+    id: 41,
+    answers: [
       {
-        "value": "Niemcy"
-      }
+        value: 'Niemcy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/de.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/de.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 42,
-    "answers": [
+    id: 42,
+    answers: [
       {
-        "value": "Estonia"
-      }
+        value: 'Estonia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ee.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ee.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 43,
-    "answers": [
+    id: 43,
+    answers: [
       {
-        "value": "Tunezja"
-      }
+        value: 'Tunezja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 44,
-    "answers": [
+    id: 44,
+    answers: [
       {
-        "value": "Saint-Martin"
-      }
+        value: 'Saint-Martin',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 45,
-    "answers": [
+    id: 45,
+    answers: [
       {
-        "value": "Kamerun"
-      }
+        value: 'Kamerun',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 46,
-    "answers": [
+    id: 46,
+    answers: [
       {
-        "value": "Mikronezja"
-      }
+        value: 'Mikronezja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 47,
-    "answers": [
+    id: 47,
+    answers: [
       {
-        "value": "Sint Maarten"
-      }
+        value: 'Sint Maarten',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sx.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sx.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 48,
-    "answers": [
+    id: 48,
+    answers: [
       {
-        "value": "Cypr"
-      }
+        value: 'Cypr',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cy.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cy.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 49,
-    "answers": [
+    id: 49,
+    answers: [
       {
-        "value": "Maroko"
-      }
+        value: 'Maroko',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ma.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ma.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 50,
-    "answers": [
+    id: 50,
+    answers: [
       {
-        "value": "Pitcairn"
-      }
+        value: 'Pitcairn',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 51,
-    "answers": [
+    id: 51,
+    answers: [
       {
-        "value": "Curaçao"
-      }
+        value: 'Curaçao',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 52,
-    "answers": [
+    id: 52,
+    answers: [
       {
-        "value": "Aruba"
-      }
+        value: 'Aruba',
+      },
     ],
-    "question": "https://flagcdn.com/w320/aw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/aw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 53,
-    "answers": [
+    id: 53,
+    answers: [
       {
-        "value": "Hiszpania"
-      }
+        value: 'Hiszpania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/es.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/es.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 54,
-    "answers": [
+    id: 54,
+    answers: [
       {
-        "value": "Gabon"
-      }
+        value: 'Gabon',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ga.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ga.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 55,
-    "answers": [
+    id: 55,
+    answers: [
       {
-        "value": "Wyspy Alandzkie"
-      }
+        value: 'Wyspy Alandzkie',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ax.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ax.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 56,
-    "answers": [
+    id: 56,
+    answers: [
       {
-        "value": "Dania"
-      }
+        value: 'Dania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/dk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/dk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 57,
-    "answers": [
+    id: 57,
+    answers: [
       {
-        "value": "Martynika"
-      }
+        value: 'Martynika',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mq.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mq.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 58,
-    "answers": [
+    id: 58,
+    answers: [
       {
-        "value": "Antigua i Barbuda"
-      }
+        value: 'Antigua i Barbuda',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ag.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ag.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 59,
-    "answers": [
+    id: 59,
+    answers: [
       {
-        "value": "Suazi"
-      }
+        value: 'Suazi',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 60,
-    "answers": [
+    id: 60,
+    answers: [
       {
-        "value": "Tajwan"
-      }
+        value: 'Tajwan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 61,
-    "answers": [
+    id: 61,
+    answers: [
       {
-        "value": "Vanuatu"
-      }
+        value: 'Vanuatu',
+      },
     ],
-    "question": "https://flagcdn.com/w320/vu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/vu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 62,
-    "answers": [
+    id: 62,
+    answers: [
       {
-        "value": "Wyspy Cooka"
-      }
+        value: 'Wyspy Cooka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ck.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ck.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 63,
-    "answers": [
+    id: 63,
+    answers: [
       {
-        "value": "Wyspy Kokosowe"
-      }
+        value: 'Wyspy Kokosowe',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 64,
-    "answers": [
+    id: 64,
+    answers: [
       {
-        "value": "Republika Zielonego Przylądka"
-      }
+        value: 'Republika Zielonego Przylądka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 65,
-    "answers": [
+    id: 65,
+    answers: [
       {
-        "value": "Białoruś"
-      }
+        value: 'Białoruś',
+      },
     ],
-    "question": "https://flagcdn.com/w320/by.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/by.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 66,
-    "answers": [
+    id: 66,
+    answers: [
       {
-        "value": "Czechy"
-      }
+        value: 'Czechy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 67,
-    "answers": [
+    id: 67,
+    answers: [
       {
-        "value": "Peru"
-      }
+        value: 'Peru',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pe.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pe.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 68,
-    "answers": [
+    id: 68,
+    answers: [
       {
-        "value": "Timor Wschodni"
-      }
+        value: 'Timor Wschodni',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 69,
-    "answers": [
+    id: 69,
+    answers: [
       {
-        "value": "Namibia"
-      }
+        value: 'Namibia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/na.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/na.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 70,
-    "answers": [
+    id: 70,
+    answers: [
       {
-        "value": "Tokelau"
-      }
+        value: 'Tokelau',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 71,
-    "answers": [
+    id: 71,
+    answers: [
       {
-        "value": "Demokratyczna Republika Konga"
-      }
+        value: 'Demokratyczna Republika Konga',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cd.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cd.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 72,
-    "answers": [
+    id: 72,
+    answers: [
       {
-        "value": "Saint Lucia"
-      }
+        value: 'Saint Lucia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 73,
-    "answers": [
+    id: 73,
+    answers: [
       {
-        "value": "Surinam"
-      }
+        value: 'Surinam',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 74,
-    "answers": [
+    id: 74,
+    answers: [
       {
-        "value": "Burundi"
-      }
+        value: 'Burundi',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bi.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bi.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 75,
-    "answers": [
+    id: 75,
+    answers: [
       {
-        "value": "Gruzja"
-      }
+        value: 'Gruzja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ge.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ge.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 76,
-    "answers": [
+    id: 76,
+    answers: [
       {
-        "value": "Ghana"
-      }
+        value: 'Ghana',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 77,
-    "answers": [
+    id: 77,
+    answers: [
       {
-        "value": "Brytyjskie Terytorium Oceanu Indyjskiego"
-      }
+        value: 'Brytyjskie Terytorium Oceanu Indyjskiego',
+      },
     ],
-    "question": "https://flagcdn.com/w320/io.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/io.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 78,
-    "answers": [
+    id: 78,
+    answers: [
       {
-        "value": "Egipt"
-      }
+        value: 'Egipt',
+      },
     ],
-    "question": "https://flagcdn.com/w320/eg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/eg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 79,
-    "answers": [
+    id: 79,
+    answers: [
       {
-        "value": "Gujana Francuska"
-      }
+        value: 'Gujana Francuska',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 80,
-    "answers": [
+    id: 80,
+    answers: [
       {
-        "value": "Wyspy Marshalla"
-      }
+        value: 'Wyspy Marshalla',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 81,
-    "answers": [
+    id: 81,
+    answers: [
       {
-        "value": "Gwinea Bissau"
-      }
+        value: 'Gwinea Bissau',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 82,
-    "answers": [
+    id: 82,
+    answers: [
       {
-        "value": "Fidżi"
-      }
+        value: 'Fidżi',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fj.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fj.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 83,
-    "answers": [
+    id: 83,
+    answers: [
       {
-        "value": "Zambia"
-      }
+        value: 'Zambia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/zm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/zm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 84,
-    "answers": [
+    id: 84,
+    answers: [
       {
-        "value": "Islandia"
-      }
+        value: 'Islandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/is.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/is.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 85,
-    "answers": [
+    id: 85,
+    answers: [
       {
-        "value": "Bermudy"
-      }
+        value: 'Bermudy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 86,
-    "answers": [
+    id: 86,
+    answers: [
       {
-        "value": "Brazylia"
-      }
+        value: 'Brazylia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/br.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/br.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 87,
-    "answers": [
+    id: 87,
+    answers: [
       {
-        "value": "Palau"
-      }
+        value: 'Palau',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 88,
-    "answers": [
+    id: 88,
+    answers: [
       {
-        "value": "Sudan"
-      }
+        value: 'Sudan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sd.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sd.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 89,
-    "answers": [
+    id: 89,
+    answers: [
       {
-        "value": "Australia"
-      }
+        value: 'Australia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/au.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/au.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 90,
-    "answers": [
+    id: 90,
+    answers: [
       {
-        "value": "Kambodża"
-      }
+        value: 'Kambodża',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 91,
-    "answers": [
+    id: 91,
+    answers: [
       {
-        "value": "Nowa Zelandia"
-      }
+        value: 'Nowa Zelandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 92,
-    "answers": [
+    id: 92,
+    answers: [
       {
-        "value": "Filipiny"
-      }
+        value: 'Filipiny',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ph.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ph.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 93,
-    "answers": [
+    id: 93,
+    answers: [
       {
-        "value": "Burkina Faso"
-      }
+        value: 'Burkina Faso',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 94,
-    "answers": [
+    id: 94,
+    answers: [
       {
-        "value": "Wyspy Owcze"
-      }
+        value: 'Wyspy Owcze',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fo.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fo.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 95,
-    "answers": [
+    id: 95,
+    answers: [
       {
-        "value": "Sierra Leone"
-      }
+        value: 'Sierra Leone',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 96,
-    "answers": [
+    id: 96,
+    answers: [
       {
-        "value": "Grenada"
-      }
+        value: 'Grenada',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gd.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gd.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 97,
-    "answers": [
+    id: 97,
+    answers: [
       {
-        "value": "Boliwia"
-      }
+        value: 'Boliwia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bo.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bo.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 98,
-    "answers": [
+    id: 98,
+    answers: [
       {
-        "value": "Szwajcaria"
-      }
+        value: 'Szwajcaria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ch.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ch.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 99,
-    "answers": [
+    id: 99,
+    answers: [
       {
-        "value": "Saint Vincent i Grenadyny"
-      }
+        value: 'Saint Vincent i Grenadyny',
+      },
     ],
-    "question": "https://flagcdn.com/w320/vc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/vc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 100,
-    "answers": [
+    id: 100,
+    answers: [
       {
-        "value": "Ekwador"
-      }
+        value: 'Ekwador',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ec.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ec.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 101,
-    "answers": [
+    id: 101,
+    answers: [
       {
-        "value": "Seszele"
-      }
+        value: 'Seszele',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 102,
-    "answers": [
+    id: 102,
+    answers: [
       {
-        "value": "Południowa Afryka"
-      }
+        value: 'Południowa Afryka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/za.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/za.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 103,
-    "answers": [
+    id: 103,
+    answers: [
       {
-        "value": "Indie"
-      }
+        value: 'Indie',
+      },
     ],
-    "question": "https://flagcdn.com/w320/in.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/in.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 104,
-    "answers": [
+    id: 104,
+    answers: [
       {
-        "value": "Liberia"
-      }
+        value: 'Liberia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 105,
-    "answers": [
+    id: 105,
+    answers: [
       {
-        "value": "Korea Południowa"
-      }
+        value: 'Korea Południowa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 106,
-    "answers": [
+    id: 106,
+    answers: [
       {
-        "value": "Litwa"
-      }
+        value: 'Litwa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 107,
-    "answers": [
+    id: 107,
+    answers: [
       {
-        "value": "Singapur"
-      }
+        value: 'Singapur',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 108,
-    "answers": [
+    id: 108,
+    answers: [
       {
-        "value": "Portoryko"
-      }
+        value: 'Portoryko',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 109,
-    "answers": [
+    id: 109,
+    answers: [
       {
-        "value": "Belize"
-      }
+        value: 'Belize',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 110,
-    "answers": [
+    id: 110,
+    answers: [
       {
-        "value": "Holandia"
-      }
+        value: 'Holandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 111,
-    "answers": [
+    id: 111,
+    answers: [
       {
-        "value": "Erytrea"
-      }
+        value: 'Erytrea',
+      },
     ],
-    "question": "https://flagcdn.com/w320/er.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/er.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 112,
-    "answers": [
+    id: 112,
+    answers: [
       {
-        "value": "Montserrat"
-      }
+        value: 'Montserrat',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ms.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ms.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 113,
-    "answers": [
+    id: 113,
+    answers: [
       {
-        "value": "Reunion"
-      }
+        value: 'Reunion',
+      },
     ],
-    "question": "https://flagcdn.com/w320/re.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/re.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 114,
-    "answers": [
+    id: 114,
+    answers: [
       {
-        "value": "Georgia Południowa i Sandwich Południowy"
-      }
+        value: 'Georgia Południowa i Sandwich Południowy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gs.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gs.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 115,
-    "answers": [
+    id: 115,
+    answers: [
       {
-        "value": "Bangladesz"
-      }
+        value: 'Bangladesz',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bd.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bd.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 116,
-    "answers": [
+    id: 116,
+    answers: [
       {
-        "value": "Jemen"
-      }
+        value: 'Jemen',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ye.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ye.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 117,
-    "answers": [
+    id: 117,
+    answers: [
       {
-        "value": "Norwegia"
-      }
+        value: 'Norwegia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/no.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/no.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 118,
-    "answers": [
+    id: 118,
+    answers: [
       {
-        "value": "Słowenia"
-      }
+        value: 'Słowenia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/si.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/si.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 119,
-    "answers": [
+    id: 119,
+    answers: [
       {
-        "value": "Oman"
-      }
+        value: 'Oman',
+      },
     ],
-    "question": "https://flagcdn.com/w320/om.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/om.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 120,
-    "answers": [
+    id: 120,
+    answers: [
       {
-        "value": "Mozambik"
-      }
+        value: 'Mozambik',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 121,
-    "answers": [
+    id: 121,
+    answers: [
       {
-        "value": "Libia"
-      }
+        value: 'Libia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ly.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ly.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 122,
-    "answers": [
+    id: 122,
+    answers: [
       {
-        "value": "Czad"
-      }
+        value: 'Czad',
+      },
     ],
-    "question": "https://flagcdn.com/w320/td.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/td.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 123,
-    "answers": [
+    id: 123,
+    answers: [
       {
-        "value": "Gujana"
-      }
+        value: 'Gujana',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gy.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gy.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 124,
-    "answers": [
+    id: 124,
+    answers: [
       {
-        "value": "Kirgistan"
-      }
+        value: 'Kirgistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 125,
-    "answers": [
+    id: 125,
+    answers: [
       {
-        "value": "Dżibuti"
-      }
+        value: 'Dżibuti',
+      },
     ],
-    "question": "https://flagcdn.com/w320/dj.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/dj.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 126,
-    "answers": [
+    id: 126,
+    answers: [
       {
-        "value": "Mariany Północne"
-      }
+        value: 'Mariany Północne',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mp.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mp.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 127,
-    "answers": [
+    id: 127,
+    answers: [
       {
-        "value": "Stany Zjednoczone"
-      }
+        value: 'Stany Zjednoczone',
+      },
     ],
-    "question": "https://flagcdn.com/w320/us.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/us.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 128,
-    "answers": [
+    id: 128,
+    answers: [
       {
-        "value": "Togo"
-      }
+        value: 'Togo',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 129,
-    "answers": [
+    id: 129,
+    answers: [
       {
-        "value": "Sri Lanka"
-      }
+        value: 'Sri Lanka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 130,
-    "answers": [
+    id: 130,
+    answers: [
       {
-        "value": "Komory"
-      }
+        value: 'Komory',
+      },
     ],
-    "question": "https://flagcdn.com/w320/km.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/km.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 131,
-    "answers": [
+    id: 131,
+    answers: [
       {
-        "value": "Kuba"
-      }
+        value: 'Kuba',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 132,
-    "answers": [
+    id: 132,
+    answers: [
       {
-        "value": "Guam"
-      }
+        value: 'Guam',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 133,
-    "answers": [
+    id: 133,
+    answers: [
       {
-        "value": "Argentyna"
-      }
+        value: 'Argentyna',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ar.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ar.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 134,
-    "answers": [
+    id: 134,
+    answers: [
       {
-        "value": "Wallis i Futuna"
-      }
+        value: 'Wallis i Futuna',
+      },
     ],
-    "question": "https://flagcdn.com/w320/wf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/wf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 135,
-    "answers": [
+    id: 135,
+    answers: [
       {
-        "value": "Bhutan"
-      }
+        value: 'Bhutan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 136,
-    "answers": [
+    id: 136,
+    answers: [
       {
-        "value": "Liban"
-      }
+        value: 'Liban',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lb.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lb.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 137,
-    "answers": [
+    id: 137,
+    answers: [
       {
-        "value": "Wyspy Heard i McDonalda"
-      }
+        value: 'Wyspy Heard i McDonalda',
+      },
     ],
-    "question": "https://flagcdn.com/w320/hm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/hm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 138,
-    "answers": [
+    id: 138,
+    answers: [
       {
-        "value": "Lesotho"
-      }
+        value: 'Lesotho',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ls.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ls.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 139,
-    "answers": [
+    id: 139,
+    answers: [
       {
-        "value": "Somalia"
-      }
+        value: 'Somalia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/so.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/so.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 140,
-    "answers": [
+    id: 140,
+    answers: [
       {
-        "value": "Dominika"
-      }
+        value: 'Dominika',
+      },
     ],
-    "question": "https://flagcdn.com/w320/dm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/dm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 141,
-    "answers": [
+    id: 141,
+    answers: [
       {
-        "value": "Węgry"
-      }
+        value: 'Węgry',
+      },
     ],
-    "question": "https://flagcdn.com/w320/hu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/hu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 142,
-    "answers": [
+    id: 142,
+    answers: [
       {
-        "value": "Luksemburg"
-      }
+        value: 'Luksemburg',
+      },
     ],
-    "question": "https://flagcdn.com/w320/lu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/lu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 143,
-    "answers": [
+    id: 143,
+    answers: [
       {
-        "value": "San Marino"
-      }
+        value: 'San Marino',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 144,
-    "answers": [
+    id: 144,
+    answers: [
       {
-        "value": "Afganistan"
-      }
+        value: 'Afganistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/af.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/af.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 145,
-    "answers": [
+    id: 145,
+    answers: [
       {
-        "value": "Mauretania"
-      }
+        value: 'Mauretania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 146,
-    "answers": [
+    id: 146,
+    answers: [
       {
-        "value": "Algieria"
-      }
+        value: 'Algieria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/dz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/dz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 147,
-    "answers": [
+    id: 147,
+    answers: [
       {
-        "value": "Gwadelupa"
-      }
+        value: 'Gwadelupa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gp.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gp.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 148,
-    "answers": [
+    id: 148,
+    answers: [
       {
-        "value": "Chorwacja"
-      }
+        value: 'Chorwacja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/hr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/hr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 149,
-    "answers": [
+    id: 149,
+    answers: [
       {
-        "value": "Bułgaria"
-      }
+        value: 'Bułgaria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 150,
-    "answers": [
+    id: 150,
+    answers: [
       {
-        "value": "Niue"
-      }
+        value: 'Niue',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 151,
-    "answers": [
+    id: 151,
+    answers: [
       {
-        "value": "Indonezja"
-      }
+        value: 'Indonezja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/id.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/id.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 152,
-    "answers": [
+    id: 152,
+    answers: [
       {
-        "value": "Belgia"
-      }
+        value: 'Belgia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/be.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/be.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 153,
-    "answers": [
+    id: 153,
+    answers: [
       {
-        "value": "Nauru"
-      }
+        value: 'Nauru',
+      },
     ],
-    "question": "https://flagcdn.com/w320/nr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/nr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 154,
-    "answers": [
+    id: 154,
+    answers: [
       {
-        "value": "Polinezja Francuska"
-      }
+        value: 'Polinezja Francuska',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 155,
-    "answers": [
+    id: 155,
+    answers: [
       {
-        "value": "Irak"
-      }
+        value: 'Irak',
+      },
     ],
-    "question": "https://flagcdn.com/w320/iq.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/iq.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 156,
-    "answers": [
+    id: 156,
+    answers: [
       {
-        "value": "Madagaskar"
-      }
+        value: 'Madagaskar',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 157,
-    "answers": [
+    id: 157,
+    answers: [
       {
-        "value": "Wietnam"
-      }
+        value: 'Wietnam',
+      },
     ],
-    "question": "https://flagcdn.com/w320/vn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/vn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 158,
-    "answers": [
+    id: 158,
+    answers: [
       {
-        "value": "Mauritius"
-      }
+        value: 'Mauritius',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mu.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mu.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 159,
-    "answers": [
+    id: 159,
+    answers: [
       {
-        "value": "Samoa Amerykańskie"
-      }
+        value: 'Samoa Amerykańskie',
+      },
     ],
-    "question": "https://flagcdn.com/w320/as.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/as.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 160,
-    "answers": [
+    id: 160,
+    answers: [
       {
-        "value": "WybrzeŻe Kości Słoniowej"
-      }
+        value: 'WybrzeŻe Kości Słoniowej',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ci.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ci.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 161,
-    "answers": [
+    id: 161,
+    answers: [
       {
-        "value": "Antyle Holenderskie"
-      }
+        value: 'Antyle Holenderskie',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bq.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bq.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 162,
-    "answers": [
+    id: 162,
+    answers: [
       {
-        "value": "Liechtenstein"
-      }
+        value: 'Liechtenstein',
+      },
     ],
-    "question": "https://flagcdn.com/w320/li.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/li.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 163,
-    "answers": [
+    id: 163,
+    answers: [
       {
-        "value": "Włochy"
-      }
+        value: 'Włochy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/it.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/it.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 164,
-    "answers": [
+    id: 164,
+    answers: [
       {
-        "value": "Saint Kitts i Nevis"
-      }
+        value: 'Saint Kitts i Nevis',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 165,
-    "answers": [
+    id: 165,
+    answers: [
       {
-        "value": "Katar"
-      }
+        value: 'Katar',
+      },
     ],
-    "question": "https://flagcdn.com/w320/qa.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/qa.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 166,
-    "answers": [
+    id: 166,
+    answers: [
       {
-        "value": "Turcja"
-      }
+        value: 'Turcja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 167,
-    "answers": [
+    id: 167,
+    answers: [
       {
-        "value": "Wyspy Dziewicze Stanów Zjednoczonych"
-      }
+        value: 'Wyspy Dziewicze Stanów Zjednoczonych',
+      },
     ],
-    "question": "https://flagcdn.com/w320/vi.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/vi.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 168,
-    "answers": [
+    id: 168,
+    answers: [
       {
-        "value": "Angola"
-      }
+        value: 'Angola',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ao.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ao.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 169,
-    "answers": [
+    id: 169,
+    answers: [
       {
-        "value": "Kenia"
-      }
+        value: 'Kenia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ke.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ke.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 170,
-    "answers": [
+    id: 170,
+    answers: [
       {
-        "value": "Arabia Saudyjska"
-      }
+        value: 'Arabia Saudyjska',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sa.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sa.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 171,
-    "answers": [
+    id: 171,
+    answers: [
       {
-        "value": "Sudan"
-      }
+        value: 'Sudan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ss.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ss.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 172,
-    "answers": [
+    id: 172,
+    answers: [
       {
-        "value": "Turks i Caicos"
-      }
+        value: 'Turks i Caicos',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 173,
-    "answers": [
+    id: 173,
+    answers: [
       {
-        "value": "Kanada"
-      }
+        value: 'Kanada',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ca.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ca.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 174,
-    "answers": [
+    id: 174,
+    answers: [
       {
-        "value": "Niger"
-      }
+        value: 'Niger',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ne.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ne.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 175,
-    "answers": [
+    id: 175,
+    answers: [
       {
-        "value": "Gibraltar"
-      }
+        value: 'Gibraltar',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gi.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gi.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 176,
-    "answers": [
+    id: 176,
+    answers: [
       {
-        "value": "Kuwejt"
-      }
+        value: 'Kuwejt',
+      },
     ],
-    "question": "https://flagcdn.com/w320/kw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/kw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 177,
-    "answers": [
+    id: 177,
+    answers: [
       {
-        "value": "Wenezuela"
-      }
+        value: 'Wenezuela',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ve.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ve.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 178,
-    "answers": [
+    id: 178,
+    answers: [
       {
-        "value": "Gambia"
-      }
+        value: 'Gambia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 179,
-    "answers": [
+    id: 179,
+    answers: [
       {
-        "value": "Paragwaj"
-      }
+        value: 'Paragwaj',
+      },
     ],
-    "question": "https://flagcdn.com/w320/py.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/py.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 180,
-    "answers": [
+    id: 180,
+    answers: [
       {
-        "value": "Chile"
-      }
+        value: 'Chile',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 181,
-    "answers": [
+    id: 181,
+    answers: [
       {
-        "value": "Macedonia Północna"
-      }
+        value: 'Macedonia Północna',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 182,
-    "answers": [
+    id: 182,
+    answers: [
       {
-        "value": "Makau"
-      }
+        value: 'Makau',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mo.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mo.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 183,
-    "answers": [
+    id: 183,
+    answers: [
       {
-        "value": "Armenia"
-      }
+        value: 'Armenia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/am.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/am.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 184,
-    "answers": [
+    id: 184,
+    answers: [
       {
-        "value": "Botswana"
-      }
+        value: 'Botswana',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 185,
-    "answers": [
+    id: 185,
+    answers: [
       {
-        "value": "Nepal"
-      }
+        value: 'Nepal',
+      },
     ],
-    "question": "https://flagcdn.com/w320/np.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/np.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 186,
-    "answers": [
+    id: 186,
+    answers: [
       {
-        "value": "Wyspy Świętego Tomasza i Książęca"
-      }
+        value: 'Wyspy Świętego Tomasza i Książęca',
+      },
     ],
-    "question": "https://flagcdn.com/w320/st.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/st.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 187,
-    "answers": [
+    id: 187,
+    answers: [
       {
-        "value": "Benin"
-      }
+        value: 'Benin',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bj.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bj.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 188,
-    "answers": [
+    id: 188,
+    answers: [
       {
-        "value": "Wyspy Salomona"
-      }
+        value: 'Wyspy Salomona',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sb.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sb.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 189,
-    "answers": [
+    id: 189,
+    answers: [
       {
-        "value": "Gwinea"
-      }
+        value: 'Gwinea',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 190,
-    "answers": [
+    id: 190,
+    answers: [
       {
-        "value": "Majotta"
-      }
+        value: 'Majotta',
+      },
     ],
-    "question": "https://flagcdn.com/w320/yt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/yt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 191,
-    "answers": [
+    id: 191,
+    answers: [
       {
-        "value": "Grenlandia"
-      }
+        value: 'Grenlandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 192,
-    "answers": [
+    id: 192,
+    answers: [
       {
-        "value": "Monako"
-      }
+        value: 'Monako',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mc.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mc.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 193,
-    "answers": [
+    id: 193,
+    answers: [
       {
-        "value": "Pakistan"
-      }
+        value: 'Pakistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 194,
-    "answers": [
+    id: 194,
+    answers: [
       {
-        "value": "Malezja"
-      }
+        value: 'Malezja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/my.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/my.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 195,
-    "answers": [
+    id: 195,
+    answers: [
       {
-        "value": "Kosowo"
-      }
+        value: 'Kosowo',
+      },
     ],
-    "question": "https://flagcdn.com/w320/xk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/xk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 196,
-    "answers": [
+    id: 196,
+    answers: [
       {
-        "value": "Mołdawia"
-      }
+        value: 'Mołdawia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/md.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/md.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 197,
-    "answers": [
+    id: 197,
+    answers: [
       {
-        "value": "Tuvalu"
-      }
+        value: 'Tuvalu',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 198,
-    "answers": [
+    id: 198,
+    answers: [
       {
-        "value": "Saint-Pierre i Miquelon"
-      }
+        value: 'Saint-Pierre i Miquelon',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 199,
-    "answers": [
+    id: 199,
+    answers: [
       {
-        "value": "Senegal"
-      }
+        value: 'Senegal',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 200,
-    "answers": [
+    id: 200,
+    answers: [
       {
-        "value": "Panama"
-      }
+        value: 'Panama',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pa.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pa.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 201,
-    "answers": [
+    id: 201,
+    answers: [
       {
-        "value": "Malta"
-      }
+        value: 'Malta',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 202,
-    "answers": [
+    id: 202,
+    answers: [
       {
-        "value": "Uganda"
-      }
+        value: 'Uganda',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ug.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ug.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 203,
-    "answers": [
+    id: 203,
+    answers: [
       {
-        "value": "Albania"
-      }
+        value: 'Albania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/al.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/al.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 204,
-    "answers": [
+    id: 204,
+    answers: [
       {
-        "value": "Emiraty Arabskie"
-      }
+        value: 'Emiraty Arabskie',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ae.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ae.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 205,
-    "answers": [
+    id: 205,
+    answers: [
       {
-        "value": "Kostaryka"
-      }
+        value: 'Kostaryka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 206,
-    "answers": [
+    id: 206,
+    answers: [
       {
-        "value": "Saint-Barthélemy"
-      }
+        value: 'Saint-Barthélemy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bl.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bl.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 207,
-    "answers": [
+    id: 207,
+    answers: [
       {
-        "value": "Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha"
-      }
+        value: 'Wyspa Świętej Heleny, Wyspa Wniebowstąpienia i Tristan da Cunha',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 208,
-    "answers": [
+    id: 208,
+    answers: [
       {
-        "value": "Izrael"
-      }
+        value: 'Izrael',
+      },
     ],
-    "question": "https://flagcdn.com/w320/il.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/il.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 209,
-    "answers": [
+    id: 209,
+    answers: [
       {
-        "value": "Austria"
-      }
+        value: 'Austria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/at.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/at.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 210,
-    "answers": [
+    id: 210,
+    answers: [
       {
-        "value": "Laos"
-      }
+        value: 'Laos',
+      },
     ],
-    "question": "https://flagcdn.com/w320/la.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/la.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 211,
-    "answers": [
+    id: 211,
+    answers: [
       {
-        "value": "Francja"
-      }
+        value: 'Francja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 212,
-    "answers": [
+    id: 212,
+    answers: [
       {
-        "value": "Papua-Nowa Gwinea"
-      }
+        value: 'Papua-Nowa Gwinea',
+      },
     ],
-    "question": "https://flagcdn.com/w320/pg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/pg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 213,
-    "answers": [
+    id: 213,
+    answers: [
       {
-        "value": "Dominikana"
-      }
+        value: 'Dominikana',
+      },
     ],
-    "question": "https://flagcdn.com/w320/do.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/do.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 214,
-    "answers": [
+    id: 214,
+    answers: [
       {
-        "value": "Tonga"
-      }
+        value: 'Tonga',
+      },
     ],
-    "question": "https://flagcdn.com/w320/to.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/to.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 215,
-    "answers": [
+    id: 215,
+    answers: [
       {
-        "value": "Jamajka"
-      }
+        value: 'Jamajka',
+      },
     ],
-    "question": "https://flagcdn.com/w320/jm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/jm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 216,
-    "answers": [
+    id: 216,
+    answers: [
       {
-        "value": "Wyspa Bouveta"
-      }
+        value: 'Wyspa Bouveta',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 217,
-    "answers": [
+    id: 217,
+    answers: [
       {
-        "value": "Słowacja"
-      }
+        value: 'Słowacja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 218,
-    "answers": [
+    id: 218,
+    answers: [
       {
-        "value": "Kiribati"
-      }
+        value: 'Kiribati',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ki.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ki.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 219,
-    "answers": [
+    id: 219,
+    answers: [
       {
-        "value": "Jordania"
-      }
+        value: 'Jordania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/jo.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/jo.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 220,
-    "answers": [
+    id: 220,
+    answers: [
       {
-        "value": "Malediwy"
-      }
+        value: 'Malediwy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 221,
-    "answers": [
+    id: 221,
+    answers: [
       {
-        "value": "Czarnogóra"
-      }
+        value: 'Czarnogóra',
+      },
     ],
-    "question": "https://flagcdn.com/w320/me.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/me.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 222,
-    "answers": [
+    id: 222,
+    answers: [
       {
-        "value": "Japonia"
-      }
+        value: 'Japonia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/jp.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/jp.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 223,
-    "answers": [
+    id: 223,
+    answers: [
       {
-        "value": "Salwador"
-      }
+        value: 'Salwador',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sv.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sv.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 224,
-    "answers": [
+    id: 224,
+    answers: [
       {
-        "value": "Kolumbia"
-      }
+        value: 'Kolumbia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/co.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/co.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 225,
-    "answers": [
+    id: 225,
+    answers: [
       {
-        "value": "Zimbabwe"
-      }
+        value: 'Zimbabwe',
+      },
     ],
-    "question": "https://flagcdn.com/w320/zw.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/zw.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 226,
-    "answers": [
+    id: 226,
+    answers: [
       {
-        "value": "Gwinea Równikowa"
-      }
+        value: 'Gwinea Równikowa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gq.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gq.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 227,
-    "answers": [
+    id: 227,
+    answers: [
       {
-        "value": "Chiny"
-      }
+        value: 'Chiny',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 228,
-    "answers": [
+    id: 228,
+    answers: [
       {
-        "value": "Honduras"
-      }
+        value: 'Honduras',
+      },
     ],
-    "question": "https://flagcdn.com/w320/hn.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/hn.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 229,
-    "answers": [
+    id: 229,
+    answers: [
       {
-        "value": "Wyspa Man"
-      }
+        value: 'Wyspa Man',
+      },
     ],
-    "question": "https://flagcdn.com/w320/im.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/im.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 230,
-    "answers": [
+    id: 230,
+    answers: [
       {
-        "value": "Kongo"
-      }
+        value: 'Kongo',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 231,
-    "answers": [
+    id: 231,
+    answers: [
       {
-        "value": "Mjanma"
-      }
+        value: 'Mjanma',
+      },
     ],
-    "question": "https://flagcdn.com/w320/mm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/mm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 232,
-    "answers": [
+    id: 232,
+    answers: [
       {
-        "value": "Grecja"
-      }
+        value: 'Grecja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gr.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gr.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 233,
-    "answers": [
+    id: 233,
+    answers: [
       {
-        "value": "Samoa"
-      }
+        value: 'Samoa',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ws.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ws.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 234,
-    "answers": [
+    id: 234,
+    answers: [
       {
-        "value": "Falklandy"
-      }
+        value: 'Falklandy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/fk.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/fk.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 235,
-    "answers": [
+    id: 235,
+    answers: [
       {
-        "value": "Tanzania"
-      }
+        value: 'Tanzania',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tz.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tz.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 236,
-    "answers": [
+    id: 236,
+    answers: [
       {
-        "value": "Republika Środkowoafrykańska"
-      }
+        value: 'Republika Środkowoafrykańska',
+      },
     ],
-    "question": "https://flagcdn.com/w320/cf.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/cf.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 237,
-    "answers": [
+    id: 237,
+    answers: [
       {
-        "value": "Rumunia"
-      }
+        value: 'Rumunia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ro.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ro.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 238,
-    "answers": [
+    id: 238,
+    answers: [
       {
-        "value": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych"
-      }
+        value: 'Dalekie Wyspy Mniejsze Stanów Zjednoczonych',
+      },
     ],
-    "question": "https://flagcdn.com/w320/um.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/um.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 239,
-    "answers": [
+    id: 239,
+    answers: [
       {
-        "value": "Tadżykistan"
-      }
+        value: 'Tadżykistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tj.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tj.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 240,
-    "answers": [
+    id: 240,
+    answers: [
       {
-        "value": "Bahamy"
-      }
+        value: 'Bahamy',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bs.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bs.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 241,
-    "answers": [
+    id: 241,
+    answers: [
       {
-        "value": "Nigeria"
-      }
+        value: 'Nigeria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/ng.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/ng.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 242,
-    "answers": [
+    id: 242,
+    answers: [
       {
-        "value": "Watykan"
-      }
+        value: 'Watykan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/va.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/va.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 243,
-    "answers": [
+    id: 243,
+    answers: [
       {
-        "value": "Bahrajn"
-      }
+        value: 'Bahrajn',
+      },
     ],
-    "question": "https://flagcdn.com/w320/bh.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/bh.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 244,
-    "answers": [
+    id: 244,
+    answers: [
       {
-        "value": "Tajlandia"
-      }
+        value: 'Tajlandia',
+      },
     ],
-    "question": "https://flagcdn.com/w320/th.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/th.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 245,
-    "answers": [
+    id: 245,
+    answers: [
       {
-        "value": "Szwecja"
-      }
+        value: 'Szwecja',
+      },
     ],
-    "question": "https://flagcdn.com/w320/se.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/se.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 246,
-    "answers": [
+    id: 246,
+    answers: [
       {
-        "value": "Brytyjskie Wyspy Dziewicze"
-      }
+        value: 'Brytyjskie Wyspy Dziewicze',
+      },
     ],
-    "question": "https://flagcdn.com/w320/vg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/vg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 247,
-    "answers": [
+    id: 247,
+    answers: [
       {
-        "value": "Guernsey"
-      }
+        value: 'Guernsey',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gg.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gg.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 248,
-    "answers": [
+    id: 248,
+    answers: [
       {
-        "value": "Gwatemala"
-      }
+        value: 'Gwatemala',
+      },
     ],
-    "question": "https://flagcdn.com/w320/gt.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/gt.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 249,
-    "answers": [
+    id: 249,
+    answers: [
       {
-        "value": "Syria"
-      }
+        value: 'Syria',
+      },
     ],
-    "question": "https://flagcdn.com/w320/sy.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/sy.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  },
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
   {
-    "id": 250,
-    "answers": [
+    id: 250,
+    answers: [
       {
-        "value": "Turkmenistan"
-      }
+        value: 'Turkmenistan',
+      },
     ],
-    "question": "https://flagcdn.com/w320/tm.png",
-    "hints": [
+    question: 'https://flagcdn.com/w320/tm.png',
+    hints: [
       {
-        "id": "0",
-        "label": "Odsłoń pierwsze fragmenty",
-        "content": "10",
-        "penaltyPercent": 0
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty',
+        content: '10',
+        penaltyPercent: 0,
       },
       {
-        "id": "1",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "10",
-        "penaltyPercent": 30
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '10',
+        penaltyPercent: 30,
       },
       {
-        "id": "2",
-        "label": "Odsłoń kolejne fragmenty",
-        "content": "20",
-        "penaltyPercent": 30
-      }
-    ],"revealedAnswers": []  }
-]
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty',
+        content: '20',
+        penaltyPercent: 30,
+      },
+    ],
+    revealedAnswers: [],
+  },
+];

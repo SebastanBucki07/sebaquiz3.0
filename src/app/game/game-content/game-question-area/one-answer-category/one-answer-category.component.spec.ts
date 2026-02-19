@@ -8,9 +8,8 @@ describe('OneAnswerCategoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [OneAnswerCategoryComponent]
-    })
-    .compileComponents();
+      imports: [OneAnswerCategoryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(OneAnswerCategoryComponent);
     component = fixture.componentInstance;

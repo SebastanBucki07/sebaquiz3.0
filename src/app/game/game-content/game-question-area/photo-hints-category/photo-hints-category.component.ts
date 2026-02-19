@@ -1,23 +1,19 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
-import {AsyncPipe, NgIf} from '@angular/common';
-import {PhotoTipsComponent} from '../question/photo-tips/photo-tips.component';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {firstValueFrom, Observable} from 'rxjs';
-import {Question} from '../../../../shared/questions/question.interface';
-import {Hint} from '../../../../shared/category/category.interface';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AsyncPipe, NgIf } from '@angular/common';
+import { PhotoTipsComponent } from '../question/photo-tips/photo-tips.component';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { firstValueFrom, Observable } from 'rxjs';
+import { Question } from '../../../../shared/questions/question.interface';
+import { Hint } from '../../../../shared/category/category.interface';
 
 @Component({
   selector: 'app-photo-hints-category',
   standalone: true,
-  imports: [
-    AsyncPipe,
-    NgIf,
-    PhotoTipsComponent,
-  ],
+  imports: [AsyncPipe, NgIf, PhotoTipsComponent],
   templateUrl: './photo-hints-category.component.html',
-  styleUrl: './photo-hints-category.component.css'
+  styleUrl: './photo-hints-category.component.css',
 })
-export class PhotoHintsCategoryComponent  implements OnInit{
+export class PhotoHintsCategoryComponent implements OnInit {
   question$!: Observable<Question | null>;
   @Output() hintUsed = new EventEmitter<Hint>();
   private MOVIE_QUESTION = 'W jakim filmie zagrała taka obsada?';
@@ -28,11 +24,10 @@ export class PhotoHintsCategoryComponent  implements OnInit{
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
-    this.question$.subscribe(async q => {
+    this.question$.subscribe(async (q) => {
       if (!q) return;
 
-      const isCastQuestion =
-        q.question === this.MOVIE_QUESTION || q.question === this.TV_QUESTION;
+      const isCastQuestion = q.question === this.MOVIE_QUESTION || q.question === this.TV_QUESTION;
 
       if (isCastQuestion && (!q.hints || q.hints.length === 0)) {
         try {
@@ -59,7 +54,10 @@ export class PhotoHintsCategoryComponent  implements OnInit{
     const q = await firstValueFrom(this.question$);
     if (!q) return;
 
-    if (q.question === 'W jakim filmie zagrała taka obsada?' && (!q.hints || q.hints.length === 0)) {
+    if (
+      q.question === 'W jakim filmie zagrała taka obsada?' &&
+      (!q.hints || q.hints.length === 0)
+    ) {
       try {
         const hints = await this.questionService.fetchHintsForQuestion(q);
         q.hints = hints;

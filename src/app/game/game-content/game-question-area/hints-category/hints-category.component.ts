@@ -1,16 +1,14 @@
-import {Component, EventEmitter, OnDestroy, Output} from '@angular/core';
-import {Hint} from '../../../../shared/category/category.interface';
-import {TipsComponent} from '../question/tips/tips.component';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {Subscription} from 'rxjs';
+import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
+import { Hint } from '../../../../shared/category/category.interface';
+import { TipsComponent } from '../question/tips/tips.component';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-hints-category',
   templateUrl: './hints-category.component.html',
-  imports: [
-    TipsComponent
-  ],
-  styleUrls: ['./hints-category.component.css']
+  imports: [TipsComponent],
+  styleUrls: ['./hints-category.component.css'],
 })
 export class HintsCategoryComponent implements OnDestroy {
   @Output() hintUsed = new EventEmitter<Hint>();
@@ -21,7 +19,7 @@ export class HintsCategoryComponent implements OnDestroy {
 
   ngOnInit(): void {
     // subscribe actual question
-    this.sub = this.questionService.question$.subscribe(q => {
+    this.sub = this.questionService.question$.subscribe((q) => {
       this.hints = q?.hints ?? [];
     });
   }

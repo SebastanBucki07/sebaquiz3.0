@@ -1,29 +1,26 @@
-import {Component, OnInit} from '@angular/core';
-import {Router, RouterOutlet} from '@angular/router';
-import {CommonModule} from '@angular/common';
-import {MatButtonModule} from '@angular/material/button';
-import {Category} from '../../shared/category/category.interface';
-import {QuestionService} from '../../shared/question-service.service';
-import {MATERIAL_IMPORTS} from '../../shared/material';
+import { Component, OnInit } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { Category } from '../../shared/category/category.interface';
+import { QuestionService } from '../../shared/question-service.service';
+import { MATERIAL_IMPORTS } from '../../shared/material';
 
 @Component({
   selector: 'app-game-content',
   templateUrl: './game-content.component.html',
   standalone: true,
-  imports: [
-    CommonModule,
-    MatButtonModule,
-    RouterOutlet,
-    MATERIAL_IMPORTS
-  ],
-  styleUrl: './game-content.component.css'
+  imports: [CommonModule, MatButtonModule, RouterOutlet, MATERIAL_IMPORTS],
+  styleUrl: './game-content.component.css',
 })
-export class GameContentComponent implements OnInit{
+export class GameContentComponent implements OnInit {
   selectedCategories: Category[] = [];
   categoryState = new Map<string, number>();
 
-
-  constructor(private router: Router,private questionService: QuestionService) {}
+  constructor(
+    private router: Router,
+    private questionService: QuestionService
+  ) {}
 
   async ngOnInit() {
     const saved = localStorage.getItem('selectedCategories');
@@ -34,20 +31,16 @@ export class GameContentComponent implements OnInit{
 
   private async preloadCategoryState() {
     for (const category of this.selectedCategories) {
-      const remaining =
-        await this.questionService.getRemainingQuestions(
-          category.type,
-          category.name
-        );
-
-      this.categoryState.set(
-        `${category.type}|${category.name}`,
-        remaining
+      const remaining = await this.questionService.getRemainingQuestions(
+        category.type,
+        category.name
       );
+
+      this.categoryState.set(`${category.type}|${category.name}`, remaining);
     }
   }
 
-// Change getCategoryColor to gray for exhausted categories
+  // Change getCategoryColor to gray for exhausted categories
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
 
@@ -62,15 +55,10 @@ export class GameContentComponent implements OnInit{
     return `linear-gradient(45deg, ${colorStart}, ${colorEnd})`;
   }
 
-
-
-// Number of available questions in a given category
+  // Number of available questions in a given category
   getRemainingQuestions(category: Category): number {
-    return (
-      this.categoryState.get(`${category.type}|${category.name}`) ?? 0
-    );
+    return this.categoryState.get(`${category.type}|${category.name}`) ?? 0;
   }
-
 
   goToCategory(category: Category) {
     const remaining = this.getRemainingQuestions(category);
@@ -89,7 +77,6 @@ export class GameContentComponent implements OnInit{
     ['#009688', '#26a69a'],
     ['#ff9800', '#ffc107'],
     ['#673ab7', '#9575cd'],
-    ['#4caf50', '#81c784']
+    ['#4caf50', '#81c784'],
   ];
-
 }

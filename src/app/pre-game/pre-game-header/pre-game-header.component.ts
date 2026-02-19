@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import {Router} from '@angular/router';
-import {MatButtonModule} from '@angular/material/button';
-import {MatDividerModule} from '@angular/material/divider';
-import {MatIconModule} from '@angular/material/icon';
-import {MatCardActions} from '@angular/material/card';
+import { Router } from '@angular/router';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatCardActions } from '@angular/material/card';
 import { GameService } from '../../shared/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
@@ -21,7 +21,10 @@ export class PreGameHeaderComponent implements OnInit, OnDestroy {
   canStartGame = false;
   private destroy$ = new Subject<void>();
 
-  constructor(private router: Router, private gameService: GameService) {}
+  constructor(
+    private router: Router,
+    private gameService: GameService
+  ) {}
 
   ngOnInit() {
     this.checkGameReady();
@@ -48,17 +51,20 @@ export class PreGameHeaderComponent implements OnInit, OnDestroy {
   }
 
   goToTeam() {
-    this.router.navigate(['choose-team'], { relativeTo: this.router.routerState.root.firstChild?.firstChild });
+    this.router.navigate(['choose-team'], {
+      relativeTo: this.router.routerState.root.firstChild?.firstChild,
+    });
   }
 
   goToCategory() {
-    this.router.navigate(['choose-category'], { relativeTo: this.router.routerState.root.firstChild?.firstChild });
+    this.router.navigate(['choose-category'], {
+      relativeTo: this.router.routerState.root.firstChild?.firstChild,
+    });
   }
 
   startGame() {
     if (this.canStartGame) {
       const teams = JSON.parse(localStorage.getItem('teams') || '[]');
-
 
       if (teams.length > 0) {
         this.gameService.setCurrentTeam(teams[0].name);

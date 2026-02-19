@@ -1,5 +1,5 @@
-import {AnswerItem} from '../answers/answerItem.interface';
-import {Hint} from "../category/category.interface";
+import { AnswerItem } from '../answers/answerItem.interface';
+import { Hint } from '../category/category.interface';
 
 export interface Question {
   id: number;
@@ -7,5 +7,5 @@ export interface Question {
   answers: AnswerItem[];
   hints?: Hint[];
   showAnswer?: boolean;
-  revealedAnswers?: number[]
+  revealedAnswers?: number[];
 }

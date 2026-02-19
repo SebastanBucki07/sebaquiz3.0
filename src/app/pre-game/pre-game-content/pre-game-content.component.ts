@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-pre-game-content',
   standalone: true,
-  imports: [
-    RouterOutlet,
-  ],
+  imports: [RouterOutlet],
   templateUrl: './pre-game-content.component.html',
-  styleUrl: './pre-game-content.component.css'
+  styleUrl: './pre-game-content.component.css',
 })
 export class PreGameContentComponent {}

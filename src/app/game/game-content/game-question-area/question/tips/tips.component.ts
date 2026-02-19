@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MATERIAL_IMPORTS } from '../../../../../shared/material';
 import { Hint } from '../../../../../shared/category/category.interface';

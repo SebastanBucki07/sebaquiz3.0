@@ -8,9 +8,8 @@ describe('WritingCategoryComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [WritingCategoryComponent]
-    })
-    .compileComponents();
+      imports: [WritingCategoryComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(WritingCategoryComponent);
     component = fixture.componentInstance;

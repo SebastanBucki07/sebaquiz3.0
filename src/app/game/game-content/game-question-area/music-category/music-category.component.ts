@@ -1,10 +1,10 @@
-import {Component, OnInit, OnDestroy, Output, EventEmitter} from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {Observable, Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { QuestionService } from '../../../../shared/question-service.service';
-import {MusicTipsComponent} from '../question/music-tips/music-tips.component';
-import {Hint} from '../../../../shared/category/category.interface';
+import { MusicTipsComponent } from '../question/music-tips/music-tips.component';
+import { Hint } from '../../../../shared/category/category.interface';
 
 declare const YT: {
   Player: new (
@@ -29,13 +29,12 @@ declare const YT: {
   };
 };
 
-
-@Component ({
+@Component({
   selector: 'app-music-category',
   standalone: true,
   imports: [CommonModule, MusicTipsComponent],
   templateUrl: './music-category.component.html',
-  styleUrl: './music-category.component.css'
+  styleUrl: './music-category.component.css',
 })
 export class MusicCategoryComponent implements OnInit, OnDestroy {
   @Output() hintUsed = new EventEmitter<Hint>();
@@ -57,7 +56,7 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     this.question$ = this.questionService.question$;
 
     this.loadYouTubeApi().then(() => {
-      this.questionSub = this.question$.subscribe(question => {
+      this.questionSub = this.question$.subscribe((question) => {
         if (!question) return;
         this.initPlayer(question.question);
       });
@@ -78,9 +77,9 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     this.answersVisible = true;
   }
 
-// =========================
-// Odtwarzanie fragmentów
-// =========================
+  // =========================
+  // Odtwarzanie fragmentów
+  // =========================
 
   playIntro(): void {
     const SAFE_OFFSET = 5;
@@ -97,9 +96,6 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
 
     this.playFragment(SAFE_OFFSET);
   }
-
-
-
 
   playMiddle(): void {
     if (!this.videoDuration) return;
@@ -118,21 +114,15 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     this.playFragment(start);
   }
 
-
   playOutro(): void {
     if (!this.videoDuration) return;
 
     const SAFE_OFFSET = 5;
 
-    const start = Math.max(
-      this.videoDuration - this.FRAGMENT_DURATION - SAFE_OFFSET,
-      0
-    );
+    const start = Math.max(this.videoDuration - this.FRAGMENT_DURATION - SAFE_OFFSET, 0);
 
     this.playFragment(start);
   }
-
-
 
   private playFragment(start: number): void {
     if (!this.player || !this.currentVideoId) return;
@@ -140,17 +130,13 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     this.player.loadVideoById({
       videoId: this.currentVideoId,
       startSeconds: start,
-      endSeconds: start + this.FRAGMENT_DURATION
+      endSeconds: start + this.FRAGMENT_DURATION,
     });
   }
 
-
-
-
-
-// =========================
-// prywatne metody
-// =========================
+  // =========================
+  // prywatne metody
+  // =========================
 
   private initPlayer(videoId: string): void {
     this.currentVideoId = videoId;
@@ -166,22 +152,20 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
         autoplay: 0,
         controls: 0,
         disablekb: 1,
-        fs: 0
+        fs: 0,
       },
       events: {
         onReady: () => {
           this.videoDuration = this.player?.getDuration() ?? 0;
           this.playerReady = true;
           console.log('Duration:', this.videoDuration);
-        }
-      }
+        },
+      },
     });
   }
 
-
-
   private loadYouTubeApi(): Promise<void> {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       if ((window as any).YT?.Player) {
         resolve();
         return;
@@ -199,6 +183,4 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
     console.log('FORWARDING HINT FROM MUSIC', hint);
     this.hintUsed.emit(hint);
   }
-
-
 }

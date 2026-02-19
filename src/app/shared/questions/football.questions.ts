@@ -1,685 +1,800 @@
-export const PILKA_NOZNA = [{
-  "id": 1,
-  "answers": [{"value": "Argentyna"}],
-  "question": "Mistrz Świata 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 2,
-  "answers": [{"value": "Francja"}],
-  "question": "Vicemistrz Świata 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 3,
-  "answers": [{"value": "Chorwacja"}],
-  "question": "III na mistrzostwach Świata 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 4,
-  "answers": [{"value": "Kylian Mbape"}],
-  "question": "Król strzelców mundialu 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 5,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Najlepszy zawodnik mistrzostw świata 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 6,
-  "answers": [{"value": "Emiliano Martínez"}],
-  "question": "zdobył złotą rekawice mundialu 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 7,
-  "answers": [{"value": "Enzo Fernández"}],
-  "question": "Najlepszy młody zawodnik mundialu 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 8,
-  "answers": [{"value": "Anglia"}],
-  "question": "zdobyła nagrodę Fifa fair play mundial 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 9,
-  "answers": [{"value": "Włochy"}],
-  "question": "mistrz Europy 2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 10,
-  "answers": [{"value": "Anglia"}],
-  "question": "vicemistrz Europy 2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 11,
-  "answers": [{"value": "Cristiano Ronaldo/ Patrick Schick"}],
-  "question": "król strzelców Euro 2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 12,
-  "answers": [{"value": "Gianluigi Donnarumma"}],
-  "question": "Najlepszy zawoodnik Mistrzostw europy 2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 13,
-  "answers": [{"value": "Arabia Saudyjska, Argentyna, Meksyk, Francja"}],
-  "question": "Drużyny z którymi Polska grała na mundialu 2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 14,
-  "answers": [{"value": "Słowacja, Szwecja, Hiszpania"}],
-  "question": "Druzyny z którymi Polska grała na euro 2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 15,
-  "answers": [{"value": "Francja"}],
-  "question": "Mistrz świata 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 16,
-  "answers": [{"value": "Chorwacja"}],
-  "question": "Vicemistrz świata 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 17,
-  "answers": [{"value": "Belgia"}],
-  "question": "3 miejsce na mistrzostwach świata 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 18,
-  "answers": [{"value": "Harry Kane"}],
-  "question": "Król strzelców MŚ 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 19,
-  "answers": [{"value": "Luka Modrić"}],
-  "question": "Najlepszy zawodnik MŚ 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 20,
-  "answers": [{"value": "Thibaut Courtois"}],
-  "question": "zdobył złotą rekawice mundialu 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 21,
-  "answers": [{"value": "Kylian Mbappé"}],
-  "question": "Najlepszy młody zawodnik mundialu 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 22,
-  "answers": [{"value": "Hiszpania"}],
-  "question": "zdobyła nagrodę Fifa fair play mundial 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 23,
-  "answers": [{"value": "Kolumbia, Japonia, Senegal"}],
-  "question": "Rywale Polaków na mundialu 2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 24,
-  "answers": [{"value": "Portugalia"}],
-  "question": "Mistrz Europy 2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 25,
-  "answers": [{"value": "Francja"}],
-  "question": "vicemistrz Europy 2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 26,
-  "answers": [{"value": "Antoine Griezmann"}],
-  "question": "Król strzelców Mistrzostw Europy 2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 27,
-  "answers": [{"value": "Antoine Griezmann"}],
-  "question": "Najlepszy zawodnik mistrzostw Europy 2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 28,
-  "answers": [{"value": "Niemcy, Irlandia Północna, Ukraina, Szwajcaria, Portugalia"}],
-  "question": "Rywale Polaków na Euro 2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 29,
-  "answers": [{"value": "Niemcy"}],
-  "question": "Mistrz świata 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 30,
-  "answers": [{"value": "Argentyna"}],
-  "question": "Vicemistrz świata 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 31,
-  "answers": [{"value": "James rodriguez"}],
-  "question": "Król strzelców mistrzostw świata 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 32,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Najlepszy zawodnik mistrzostw świata 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 33,
-  "answers": [{"value": "Manuel Neuer"}],
-  "question": "zdobył złotą rekawice mundialu 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 34,
-  "answers": [{"value": "Paul Pogba"}],
-  "question": "Najlepszy młody zawodnik mundialu 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 35,
-  "answers": [{"value": "Kolumbia"}],
-  "question": "zdobyła nagrodę Fifa fair play mundial 2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 36,
-  "answers": [{"value": "Hiszpania"}],
-  "question": "Mistrz Europy 2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 37,
-  "answers": [{"value": "Włochy"}],
-  "question": "Vicemistrz Europy 2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 38,
-  "answers": [{"value": "Fernando Torres"}],
-  "question": "Król strzelców msitrzostw Europy 2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 39,
-  "answers": [{"value": "Andrés Iniesta"}],
-  "question": "Najlepszy zawodnik mistrzostw Europy 2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 40,
-  "answers": [{"value": "Rosja, Grecja, Czechy"}],
-  "question": "Rywale Polaków Euro 2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 41,
-  "answers": [{"value": "Hiszpania"}],
-  "question": "Mistrz świata 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 42,
-  "answers": [{"value": "Holandia"}],
-  "question": "Vicemistrz świata 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 43,
-  "answers": [{"value": "Niemcy"}],
-  "question": "III na mistrzostwach świata 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 44,
-  "answers": [{"value": "Thomas Müller/David Villa/Wesley Sneijder,/Diego Forlán"}],
-  "question": "Król strzelców MŚ 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 45,
-  "answers": [{"value": "Diego Forlan"}],
-  "question": "Najlepszy zawodnik mistrzostw świata 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 46,
-  "answers": [{"value": "Iker Casillas"}],
-  "question": "Zdobył złote rękawice na mundialu 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 47,
-  "answers": [{"value": "Thomas Müller"}],
-  "question": "Najlepszy młody zawodnik mundialu 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 48,
-  "answers": [{"value": "Hiszpania"}],
-  "question": "Zdobyła nagrodę FIFA fair play mundial 2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 49,
-  "answers": [{"value": "Hispzania"}],
-  "question": "Mistrz europy 2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 50,
-  "answers": [{"value": "Niemcy"}],
-  "question": "Vicemistrz Europy 2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 51,
-  "answers": [{"value": "David Villa"}],
-  "question": "Król strzelców mistrzostw Europy 2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 52,
-  "answers": [{"value": "Xavi"}],
-  "question": "Najlepszy zawodnik mistrzostw Europy 2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 53,
-  "answers": [{"value": "Chorwacja, Niemcy, Austria"}],
-  "question": "Rywale Polaków na Euro 2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 54,
-  "answers": [{"value": "Włochy"}],
-  "question": "Mistrz Świata 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 55,
-  "answers": [{"value": "Francja"}],
-  "question": "Vicemistrz świata 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 56,
-  "answers": [{"value": "Niemcy"}],
-  "question": "III na mistrzostwach świata 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 57,
-  "answers": [{"value": "Miroslav Klose"}],
-  "question": "Król strzelców MŚ 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 58,
-  "answers": [{"value": "Zinedine Zidane"}],
-  "question": "Najlepszy zawodnik MŚ 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 59,
-  "answers": [{"value": "Lukas Podolski"}],
-  "question": "Najlepszy młody zawodnik 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 60,
-  "answers": [{"value": "Gianiligi Buffon"}],
-  "question": "Zdobywca nagrody Lwa Jasyzna na MŚ 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 61,
-  "answers": [{"value": "Brazylia / Hiszpania"}],
-  "question": "Zdobyła nagrode Fair play na MŚ 2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 62,
-  "answers": [{"value": "Grecja"}],
-  "question": "Mistrz europy 2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 63,
-  "answers": [{"value": "Portugalia"}],
-  "question": "Vicemistrz europy 2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 64,
-  "answers": [{"value": "Milan Baros"}],
-  "question": "Król strzelców Mistrzostw Europy 2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 65,
-  "answers": [{"value": "Theodoros Zagorakis"}],
-  "question": "Najlepszy zawodnik mistrzostw Europy 2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 66,
-  "answers": [{"value": "Brazylia"}],
-  "question": "Mistrz świata 2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 67,
-  "answers": [{"value": "Niemcy"}],
-  "question": "Vicemistrz świata 2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 68,
-  "answers": [{"value": "Turcja"}],
-  "question": "III na mistrzostwach świata 2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 69,
-  "answers": [{"value": "Ronaldo"}],
-  "question": "Król strzelców MŚ 2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 70,
-  "answers": [{"value": "Oliver Kahn"}],
-  "question": "Najlepszy zawodnik MŚ 2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 71,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2021/202",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 72,
-  "answers": [{"value": "Chelsea F.C."}],
-  "question": "Zdobywca ligi mistrzów 2020/2021",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 73,
-  "answers": [{"value": "Bayern Monachium"}],
-  "question": "Zdobywca ligi mistrzów 2019/2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 74,
-  "answers": [{"value": "Liverpool F.C."}],
-  "question": "Zdobywca ligi mistrzów 2018/2019",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 75,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2017/2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 76,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2016/2017",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 77,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2015/2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 78,
-  "answers": [{"value": "FC Barcelona"}],
-  "question": "Zdobywca ligi mistrzów 2014/2015",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 79,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2013/2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 80,
-  "answers": [{"value": "Bayern Monachium"}],
-  "question": "Zdobywca ligi mistrzów 2012/2013",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 81,
-  "answers": [{"value": "Chelsea F.C."}],
-  "question": "Zdobywca ligi mistrzów 2011/2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 82,
-  "answers": [{"value": "FC Barcelona"}],
-  "question": "Zdobywca ligi mistrzów 2010/2011",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 83,
-  "answers": [{"value": "Inter Mediolan"}],
-  "question": "Zdobywca ligi mistrzów 2009/2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 84,
-  "answers": [{"value": "FC Barcelona"}],
-  "question": "Zdobywca ligi mistrzów 2008/2009",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 85,
-  "answers": [{"value": "Manchester United"}],
-  "question": "Zdobywca ligi mistrzów 2007/2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 86,
-  "answers": [{"value": "A.C. Milan"}],
-  "question": "Zdobywca ligi mistrzów 2006/2007",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 87,
-  "answers": [{"value": "FC Barcelona"}],
-  "question": "Zdobywca ligi mistrzów 2005/2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 88,
-  "answers": [{"value": "Liverpool F.C."}],
-  "question": "Zdobywca ligi mistrzów 2004/2005",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 89,
-  "answers": [{"value": "FC Porto"}],
-  "question": "Zdobywca ligi mistrzów 2003/2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 90,
-  "answers": [{"value": "A.C. Milan"}],
-  "question": "Zdobywca ligi mistrzów 2002/2003",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 91,
-  "answers": [{"value": "Real Madryt"}],
-  "question": "Zdobywca ligi mistrzów 2001/2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 92,
-  "answers": [{"value": "Bayern Monachium"}],
-  "question": "Zdobywca ligi mistrzów 2000/2001",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 93,
-  "answers": [{"value": "Karim Benzema"}],
-  "question": "Król strzelców LM 2021/2022",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 94,
-  "answers": [{"value": "Erling Haaland"}],
-  "question": "Król strzelców LM 2020/2021",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 95,
-  "answers": [{"value": "Robert Lewandowski"}],
-  "question": "Król strzelców LM 2019/2020",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 96,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Król strzelców LM 2018/2019",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 97,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2017/2018",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 98,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2016/2017",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 99,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2015/2016",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 100,
-  "answers": [{"value": "Cristiano Ronaldo/Lionel Messi/Neymar"}],
-  "question": "Król strzelców LM 2014/2015",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 101,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2013/2014",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 102,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2012/2013",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 103,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Król strzelców LM 2011/2012",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 104,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Król strzelców LM 2010/2011",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 105,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Król strzelców LM 2009/2010",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 106,
-  "answers": [{"value": "Lionel Messi"}],
-  "question": "Król strzelców LM2008/2009",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 107,
-  "answers": [{"value": "Cristiano Ronaldo"}],
-  "question": "Król strzelców LM 2007/2008",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 108,
-  "answers": [{"value": "Kaka"}],
-  "question": "Król strzelców LM 2006/2007",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 109,
-  "answers": [{"value": "Andriy Shevchenko"}],
-  "question": "Król strzelców LM 2005/2006",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 110,
-  "answers": [{"value": "Ruud van Nistelrooy"}],
-  "question": "Król strzelców LM 2004/2005",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 111,
-  "answers": [{"value": "Fernando Morientes"}],
-  "question": "Król strzelców LM 2003/2004",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 112,
-  "answers": [{"value": "Ruud van Nistelrooy"}],
-  "question": "Król strzelców LM 2002/2003",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 113,
-  "answers": [{"value": "Ruud van Nistelrooy"}],
-  "question": "Król strzelców LM 2001/2002",
-  "hints": [],
-  "revealedAnswers": []
-}, {
-  "id": 114,
-  "answers": [{"value": "Andriy Shevchenko"}],
-  "question": "Król strzelców LM 2000/2001",
-  "hints": [],
-  "revealedAnswers": []
-}]
+export const PILKA_NOZNA = [
+  {
+    id: 1,
+    answers: [{ value: 'Argentyna' }],
+    question: 'Mistrz Świata 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 2,
+    answers: [{ value: 'Francja' }],
+    question: 'Vicemistrz Świata 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 3,
+    answers: [{ value: 'Chorwacja' }],
+    question: 'III na mistrzostwach Świata 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 4,
+    answers: [{ value: 'Kylian Mbape' }],
+    question: 'Król strzelców mundialu 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 5,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Najlepszy zawodnik mistrzostw świata 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 6,
+    answers: [{ value: 'Emiliano Martínez' }],
+    question: 'zdobył złotą rekawice mundialu 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 7,
+    answers: [{ value: 'Enzo Fernández' }],
+    question: 'Najlepszy młody zawodnik mundialu 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 8,
+    answers: [{ value: 'Anglia' }],
+    question: 'zdobyła nagrodę Fifa fair play mundial 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 9,
+    answers: [{ value: 'Włochy' }],
+    question: 'mistrz Europy 2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 10,
+    answers: [{ value: 'Anglia' }],
+    question: 'vicemistrz Europy 2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 11,
+    answers: [{ value: 'Cristiano Ronaldo/ Patrick Schick' }],
+    question: 'król strzelców Euro 2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 12,
+    answers: [{ value: 'Gianluigi Donnarumma' }],
+    question: 'Najlepszy zawoodnik Mistrzostw europy 2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 13,
+    answers: [{ value: 'Arabia Saudyjska, Argentyna, Meksyk, Francja' }],
+    question: 'Drużyny z którymi Polska grała na mundialu 2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 14,
+    answers: [{ value: 'Słowacja, Szwecja, Hiszpania' }],
+    question: 'Druzyny z którymi Polska grała na euro 2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 15,
+    answers: [{ value: 'Francja' }],
+    question: 'Mistrz świata 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 16,
+    answers: [{ value: 'Chorwacja' }],
+    question: 'Vicemistrz świata 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 17,
+    answers: [{ value: 'Belgia' }],
+    question: '3 miejsce na mistrzostwach świata 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 18,
+    answers: [{ value: 'Harry Kane' }],
+    question: 'Król strzelców MŚ 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 19,
+    answers: [{ value: 'Luka Modrić' }],
+    question: 'Najlepszy zawodnik MŚ 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 20,
+    answers: [{ value: 'Thibaut Courtois' }],
+    question: 'zdobył złotą rekawice mundialu 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 21,
+    answers: [{ value: 'Kylian Mbappé' }],
+    question: 'Najlepszy młody zawodnik mundialu 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 22,
+    answers: [{ value: 'Hiszpania' }],
+    question: 'zdobyła nagrodę Fifa fair play mundial 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 23,
+    answers: [{ value: 'Kolumbia, Japonia, Senegal' }],
+    question: 'Rywale Polaków na mundialu 2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 24,
+    answers: [{ value: 'Portugalia' }],
+    question: 'Mistrz Europy 2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 25,
+    answers: [{ value: 'Francja' }],
+    question: 'vicemistrz Europy 2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 26,
+    answers: [{ value: 'Antoine Griezmann' }],
+    question: 'Król strzelców Mistrzostw Europy 2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 27,
+    answers: [{ value: 'Antoine Griezmann' }],
+    question: 'Najlepszy zawodnik mistrzostw Europy 2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 28,
+    answers: [{ value: 'Niemcy, Irlandia Północna, Ukraina, Szwajcaria, Portugalia' }],
+    question: 'Rywale Polaków na Euro 2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 29,
+    answers: [{ value: 'Niemcy' }],
+    question: 'Mistrz świata 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 30,
+    answers: [{ value: 'Argentyna' }],
+    question: 'Vicemistrz świata 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 31,
+    answers: [{ value: 'James rodriguez' }],
+    question: 'Król strzelców mistrzostw świata 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 32,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Najlepszy zawodnik mistrzostw świata 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 33,
+    answers: [{ value: 'Manuel Neuer' }],
+    question: 'zdobył złotą rekawice mundialu 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 34,
+    answers: [{ value: 'Paul Pogba' }],
+    question: 'Najlepszy młody zawodnik mundialu 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 35,
+    answers: [{ value: 'Kolumbia' }],
+    question: 'zdobyła nagrodę Fifa fair play mundial 2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 36,
+    answers: [{ value: 'Hiszpania' }],
+    question: 'Mistrz Europy 2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 37,
+    answers: [{ value: 'Włochy' }],
+    question: 'Vicemistrz Europy 2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 38,
+    answers: [{ value: 'Fernando Torres' }],
+    question: 'Król strzelców msitrzostw Europy 2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 39,
+    answers: [{ value: 'Andrés Iniesta' }],
+    question: 'Najlepszy zawodnik mistrzostw Europy 2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 40,
+    answers: [{ value: 'Rosja, Grecja, Czechy' }],
+    question: 'Rywale Polaków Euro 2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 41,
+    answers: [{ value: 'Hiszpania' }],
+    question: 'Mistrz świata 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 42,
+    answers: [{ value: 'Holandia' }],
+    question: 'Vicemistrz świata 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 43,
+    answers: [{ value: 'Niemcy' }],
+    question: 'III na mistrzostwach świata 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 44,
+    answers: [{ value: 'Thomas Müller/David Villa/Wesley Sneijder,/Diego Forlán' }],
+    question: 'Król strzelców MŚ 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 45,
+    answers: [{ value: 'Diego Forlan' }],
+    question: 'Najlepszy zawodnik mistrzostw świata 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 46,
+    answers: [{ value: 'Iker Casillas' }],
+    question: 'Zdobył złote rękawice na mundialu 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 47,
+    answers: [{ value: 'Thomas Müller' }],
+    question: 'Najlepszy młody zawodnik mundialu 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 48,
+    answers: [{ value: 'Hiszpania' }],
+    question: 'Zdobyła nagrodę FIFA fair play mundial 2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 49,
+    answers: [{ value: 'Hispzania' }],
+    question: 'Mistrz europy 2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 50,
+    answers: [{ value: 'Niemcy' }],
+    question: 'Vicemistrz Europy 2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 51,
+    answers: [{ value: 'David Villa' }],
+    question: 'Król strzelców mistrzostw Europy 2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 52,
+    answers: [{ value: 'Xavi' }],
+    question: 'Najlepszy zawodnik mistrzostw Europy 2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 53,
+    answers: [{ value: 'Chorwacja, Niemcy, Austria' }],
+    question: 'Rywale Polaków na Euro 2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 54,
+    answers: [{ value: 'Włochy' }],
+    question: 'Mistrz Świata 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 55,
+    answers: [{ value: 'Francja' }],
+    question: 'Vicemistrz świata 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 56,
+    answers: [{ value: 'Niemcy' }],
+    question: 'III na mistrzostwach świata 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 57,
+    answers: [{ value: 'Miroslav Klose' }],
+    question: 'Król strzelców MŚ 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 58,
+    answers: [{ value: 'Zinedine Zidane' }],
+    question: 'Najlepszy zawodnik MŚ 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 59,
+    answers: [{ value: 'Lukas Podolski' }],
+    question: 'Najlepszy młody zawodnik 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 60,
+    answers: [{ value: 'Gianiligi Buffon' }],
+    question: 'Zdobywca nagrody Lwa Jasyzna na MŚ 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 61,
+    answers: [{ value: 'Brazylia / Hiszpania' }],
+    question: 'Zdobyła nagrode Fair play na MŚ 2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 62,
+    answers: [{ value: 'Grecja' }],
+    question: 'Mistrz europy 2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 63,
+    answers: [{ value: 'Portugalia' }],
+    question: 'Vicemistrz europy 2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 64,
+    answers: [{ value: 'Milan Baros' }],
+    question: 'Król strzelców Mistrzostw Europy 2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 65,
+    answers: [{ value: 'Theodoros Zagorakis' }],
+    question: 'Najlepszy zawodnik mistrzostw Europy 2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 66,
+    answers: [{ value: 'Brazylia' }],
+    question: 'Mistrz świata 2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 67,
+    answers: [{ value: 'Niemcy' }],
+    question: 'Vicemistrz świata 2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 68,
+    answers: [{ value: 'Turcja' }],
+    question: 'III na mistrzostwach świata 2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 69,
+    answers: [{ value: 'Ronaldo' }],
+    question: 'Król strzelców MŚ 2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 70,
+    answers: [{ value: 'Oliver Kahn' }],
+    question: 'Najlepszy zawodnik MŚ 2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 71,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2021/202',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 72,
+    answers: [{ value: 'Chelsea F.C.' }],
+    question: 'Zdobywca ligi mistrzów 2020/2021',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 73,
+    answers: [{ value: 'Bayern Monachium' }],
+    question: 'Zdobywca ligi mistrzów 2019/2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 74,
+    answers: [{ value: 'Liverpool F.C.' }],
+    question: 'Zdobywca ligi mistrzów 2018/2019',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 75,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2017/2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 76,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2016/2017',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 77,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2015/2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 78,
+    answers: [{ value: 'FC Barcelona' }],
+    question: 'Zdobywca ligi mistrzów 2014/2015',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 79,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2013/2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 80,
+    answers: [{ value: 'Bayern Monachium' }],
+    question: 'Zdobywca ligi mistrzów 2012/2013',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 81,
+    answers: [{ value: 'Chelsea F.C.' }],
+    question: 'Zdobywca ligi mistrzów 2011/2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 82,
+    answers: [{ value: 'FC Barcelona' }],
+    question: 'Zdobywca ligi mistrzów 2010/2011',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 83,
+    answers: [{ value: 'Inter Mediolan' }],
+    question: 'Zdobywca ligi mistrzów 2009/2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 84,
+    answers: [{ value: 'FC Barcelona' }],
+    question: 'Zdobywca ligi mistrzów 2008/2009',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 85,
+    answers: [{ value: 'Manchester United' }],
+    question: 'Zdobywca ligi mistrzów 2007/2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 86,
+    answers: [{ value: 'A.C. Milan' }],
+    question: 'Zdobywca ligi mistrzów 2006/2007',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 87,
+    answers: [{ value: 'FC Barcelona' }],
+    question: 'Zdobywca ligi mistrzów 2005/2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 88,
+    answers: [{ value: 'Liverpool F.C.' }],
+    question: 'Zdobywca ligi mistrzów 2004/2005',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 89,
+    answers: [{ value: 'FC Porto' }],
+    question: 'Zdobywca ligi mistrzów 2003/2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 90,
+    answers: [{ value: 'A.C. Milan' }],
+    question: 'Zdobywca ligi mistrzów 2002/2003',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 91,
+    answers: [{ value: 'Real Madryt' }],
+    question: 'Zdobywca ligi mistrzów 2001/2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 92,
+    answers: [{ value: 'Bayern Monachium' }],
+    question: 'Zdobywca ligi mistrzów 2000/2001',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 93,
+    answers: [{ value: 'Karim Benzema' }],
+    question: 'Król strzelców LM 2021/2022',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 94,
+    answers: [{ value: 'Erling Haaland' }],
+    question: 'Król strzelców LM 2020/2021',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 95,
+    answers: [{ value: 'Robert Lewandowski' }],
+    question: 'Król strzelców LM 2019/2020',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 96,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Król strzelców LM 2018/2019',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 97,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2017/2018',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 98,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2016/2017',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 99,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2015/2016',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 100,
+    answers: [{ value: 'Cristiano Ronaldo/Lionel Messi/Neymar' }],
+    question: 'Król strzelców LM 2014/2015',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 101,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2013/2014',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 102,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2012/2013',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 103,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Król strzelców LM 2011/2012',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 104,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Król strzelców LM 2010/2011',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 105,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Król strzelców LM 2009/2010',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 106,
+    answers: [{ value: 'Lionel Messi' }],
+    question: 'Król strzelców LM2008/2009',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 107,
+    answers: [{ value: 'Cristiano Ronaldo' }],
+    question: 'Król strzelców LM 2007/2008',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 108,
+    answers: [{ value: 'Kaka' }],
+    question: 'Król strzelców LM 2006/2007',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 109,
+    answers: [{ value: 'Andriy Shevchenko' }],
+    question: 'Król strzelców LM 2005/2006',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 110,
+    answers: [{ value: 'Ruud van Nistelrooy' }],
+    question: 'Król strzelców LM 2004/2005',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 111,
+    answers: [{ value: 'Fernando Morientes' }],
+    question: 'Król strzelców LM 2003/2004',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 112,
+    answers: [{ value: 'Ruud van Nistelrooy' }],
+    question: 'Król strzelców LM 2002/2003',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 113,
+    answers: [{ value: 'Ruud van Nistelrooy' }],
+    question: 'Król strzelców LM 2001/2002',
+    hints: [],
+    revealedAnswers: [],
+  },
+  {
+    id: 114,
+    answers: [{ value: 'Andriy Shevchenko' }],
+    question: 'Król strzelców LM 2000/2001',
+    hints: [],
+    revealedAnswers: [],
+  },
+];

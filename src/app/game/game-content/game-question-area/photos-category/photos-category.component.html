@@ -1,14 +1,5 @@
 <div *ngIf="question$ | async as question">
+  <img [src]="question.question" alt="question image" class="question-image" />
 
-  <img
-    [src]="question.question"
-    alt="question image"
-    class="question-image"
-  />
-
-  <app-tips
-    [hints]="hints"
-    (hintUsed)="onHintUsed($event)">
-  </app-tips>
-
+  <app-tips [hints]="hints" (hintUsed)="onHintUsed($event)"></app-tips>
 </div>

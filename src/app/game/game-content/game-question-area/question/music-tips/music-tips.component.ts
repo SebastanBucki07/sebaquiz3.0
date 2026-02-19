@@ -1,14 +1,14 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MATERIAL_IMPORTS} from '../../../../../shared/material';
-import {Hint} from '../../../../../shared/category/category.interface';
+import { MATERIAL_IMPORTS } from '../../../../../shared/material';
+import { Hint } from '../../../../../shared/category/category.interface';
 
 @Component({
   selector: 'app-music-tips',
   standalone: true,
   imports: [CommonModule, MATERIAL_IMPORTS],
   templateUrl: './music-tips.component.html',
-  styleUrl:'music-tips.component.scss'
+  styleUrl: 'music-tips.component.scss',
 })
 export class MusicTipsComponent {
   @Output() playIntro = new EventEmitter<void>();
@@ -27,9 +27,9 @@ export class MusicTipsComponent {
     this.playIntro.emit();
     this.hintUsed.emit({
       id: 1,
-      label: "intro",
+      label: 'intro',
       penaltyPercent: 0,
-      content: "intro",
+      content: 'intro',
     } as unknown as Hint);
     this.introPlayed = true; // blokujemy przycisk
   }
@@ -38,9 +38,9 @@ export class MusicTipsComponent {
     this.playMiddle.emit();
     this.hintUsed.emit({
       id: 2,
-      label: "middle",
+      label: 'middle',
       penaltyPercent: 30,
-      content: "middle",
+      content: 'middle',
     } as unknown as Hint);
     this.middlePlayed = true;
   }
@@ -49,9 +49,9 @@ export class MusicTipsComponent {
     this.playOutro.emit();
     this.hintUsed.emit({
       id: 3,
-      label: "outro",
+      label: 'outro',
       penaltyPercent: 30,
-      content: "outro",
+      content: 'outro',
     } as unknown as Hint);
     this.outroPlayed = true;
   }

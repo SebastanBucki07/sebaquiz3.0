@@ -1,4 +1,4 @@
 export interface AnswerItem {
-  label?: string;   // optional: "title", "author"
+  label?: string; // optional: "title", "author"
   value: string;
 }

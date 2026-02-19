@@ -35,7 +35,7 @@ interface Hint {
 }
 
 function transformQuizWithHints(data: InputItem[]): OutputItem[] {
-  const tmp = data.map(item => {
+  const tmp = data.map((item) => {
     const id = item.id ?? item.Id ?? 0;
 
     /** =====================
@@ -45,28 +45,24 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
 
     // case: PHOTO QUIZ
     if (item.name) {
-      answers.push({ label: "odpowiedz", value: item.name });
+      answers.push({ label: 'odpowiedz', value: item.name });
     }
 
     // case: NORMAL QUIZ
-    if (item.title && item.title !== "-") {
-      answers.push({ label: "tytul", value: item.title });
+    if (item.title && item.title !== '-') {
+      answers.push({ label: 'tytul', value: item.title });
     }
     if (item.author) {
-      answers.push({ label: "autor", value: item.author });
+      answers.push({ label: 'autor', value: item.author });
     }
     if (item.Answer) {
-      answers.push({ label: "odpowiedz", value: item.Answer });
+      answers.push({ label: 'odpowiedz', value: item.Answer });
     }
 
     /** =====================
      *  QUESTION
      * ===================== */
-    const question =
-      item.photo ??
-      item.Answer ??
-      item.fragment1 ??
-      "Brak opisu";
+    const question = item.photo ?? item.Answer ?? item.fragment1 ?? 'Brak opisu';
 
     /** =====================
      *  HINTS
@@ -74,17 +70,17 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
     const hints: Hint[] = [];
 
     if (!item.photo) {
-      const hintKeys = ["fragment1", "fragment2", "fragment3", "Tip1", "Tip2", "Tip3"];
+      const hintKeys = ['fragment1', 'fragment2', 'fragment3', 'Tip1', 'Tip2', 'Tip3'];
 
-      hintKeys.forEach(key => {
+      hintKeys.forEach((key) => {
         const value = (item as any)[key];
-        if (value && value !== "-") {
+        if (value && value !== '-') {
           const hintIndex = hints.length;
           hints.push({
             id: `${hintIndex}`,
             label: `Podpowiedź ${hintIndex + 1}`,
             content: value,
-            penaltyPercent: hintIndex * 20
+            penaltyPercent: hintIndex * 20,
           });
         }
       });
@@ -95,7 +91,7 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
       answers,
       question,
       hints,
-      revealedAnswers: []
+      revealedAnswers: [],
     };
   });
 
@@ -103,18 +99,19 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
   return tmp;
 }
 
-
 const inputPhotos: InputItem[] = [
   {
-    "id": 1,
-    "name": "Wieża Eiffla",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/129px-Tour_Eiffel_Wikimedia_Commons.jpg"
+    id: 1,
+    name: 'Wieża Eiffla',
+    photo:
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg/129px-Tour_Eiffel_Wikimedia_Commons.jpg',
   },
   {
-    "id": 2,
-    "name": "Koloseum",
-    "photo": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg"
-  }
-]
+    id: 2,
+    name: 'Koloseum',
+    photo:
+      'https://upload.wikimedia.org/wikipedia/commons/d/d8/Colosseum_in_Rome-April_2007-1-_copie_2B.jpg',
+  },
+];
 
 export const photoQuiz = transformQuizWithHints(inputPhotos);

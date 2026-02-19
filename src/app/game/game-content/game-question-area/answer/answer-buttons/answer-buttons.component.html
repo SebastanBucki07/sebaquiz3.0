@@ -1,11 +1,11 @@
 <div class="answer-buttons-container">
-
   <button
     mat-raised-button
     color="warn"
     class="answer-btn wrong"
     [disabled]="disabled"
-    (click)="wrong.emit()">
+    (click)="wrong.emit()"
+  >
     ❌ Źle
   </button>
 
@@ -14,7 +14,8 @@
     color="primary"
     class="answer-btn correct"
     [disabled]="disabled"
-    (click)="correct.emit()">
+    (click)="correct.emit()"
+  >
     ✅ Dobrze
   </button>
 
@@ -23,8 +24,8 @@
     color="accent"
     class="answer-btn half"
     [disabled]="disabled"
-    (click)="half.emit()">
+    (click)="half.emit()"
+  >
     ✅ Pół punktu
   </button>
-
 </div>

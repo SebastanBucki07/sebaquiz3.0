@@ -1,6 +1,5 @@
 <div *ngIf="question$ | async as question">
-
-  <div id="player" style="display: none;"></div>
+  <div id="player" style="display: none"></div>
 
   <!-- nowy komponent przycisków -->
   <app-music-tips
@@ -8,13 +7,13 @@
     (playIntro)="playIntro()"
     (playMiddle)="playMiddle()"
     (playOutro)="playOutro()"
-    (hintUsed)="onHintUsed($event)">
-  </app-music-tips>
+    (hintUsed)="onHintUsed($event)"
+  ></app-music-tips>
 
   <div *ngIf="answersVisible">
     <div *ngFor="let answer of question.answers">
-      <strong>{{ answer.label }}:</strong> {{ answer.value }}
+      <strong>{{ answer.label }}:</strong>
+      {{ answer.value }}
     </div>
   </div>
-
 </div>

@@ -1,6 +1,8 @@
 <!-- TRYB SERIAL -->
-<div *ngIf="answerLabel === 'Serial' || answerLabel === 'Impreza'; else normalMode" class="button-group">
-
+<div
+  *ngIf="answerLabel === 'Serial' || answerLabel === 'Impreza'; else normalMode"
+  class="button-group"
+>
   <div class="button-wrapper">
     <button
       mat-raised-button
@@ -8,22 +10,18 @@
       class="circle"
       (click)="playIntroOnce()"
       [disabled]="introPlayed"
-      [ngClass]="{'played': introPlayed, 'active': !introPlayed}">
-
+      [ngClass]="{ played: introPlayed, active: !introPlayed }"
+    >
       <mat-icon>play_arrow</mat-icon>
-
     </button>
     <span *ngIf="answerLabel === 'Serial'" class="label">Jaki to Serial?</span>
     <span *ngIf="answerLabel === 'Impreza'" class="label">Jaka to Impreza?</span>
   </div>
-
 </div>
-
 
 <!-- TRYB NORMALNY -->
 <ng-template #normalMode>
   <div class="button-group">
-
     <div class="button-wrapper">
       <button
         mat-raised-button
@@ -31,11 +29,9 @@
         class="circle"
         (click)="playIntroOnce()"
         [disabled]="introPlayed"
-        [ngClass]="{'played': introPlayed, 'active': !introPlayed}">
-
+        [ngClass]="{ played: introPlayed, active: !introPlayed }"
+      >
         <mat-icon class="play-icon">play_arrow</mat-icon>
-
-
       </button>
       <span class="label">Intro</span>
     </div>
@@ -47,10 +43,9 @@
         class="circle"
         (click)="playMiddleOnce()"
         [disabled]="middlePlayed"
-        [ngClass]="{'played': middlePlayed, 'active': !middlePlayed}">
-
+        [ngClass]="{ played: middlePlayed, active: !middlePlayed }"
+      >
         <mat-icon class="play-icon">play_arrow</mat-icon>
-
       </button>
       <span class="label">Środek</span>
     </div>
@@ -62,14 +57,11 @@
         class="circle"
         (click)="playOutroOnce()"
         [disabled]="outroPlayed"
-        [ngClass]="{'played': outroPlayed, 'active': !outroPlayed}">
-
+        [ngClass]="{ played: outroPlayed, active: !outroPlayed }"
+      >
         <mat-icon class="play-icon">play_arrow</mat-icon>
-
-
       </button>
       <span class="label">Outro</span>
     </div>
-
   </div>
 </ng-template>

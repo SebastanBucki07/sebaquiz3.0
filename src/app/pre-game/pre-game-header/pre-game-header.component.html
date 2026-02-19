@@ -1,12 +1,16 @@
 <mat-card-actions align="end">
-<div class="center-buttons">
-  <button mat-flat-button (click)="goToTeam()">Wybierz drużyny</button>
-  <button mat-flat-button (click)="goToCategory()">Wybierz kategorie</button>
-  <button mat-flat-button color="primary" (click)="startGame()" [disabled]="!canStartGame" class="start-button">
-    <mat-icon>play_arrow</mat-icon>
-    Rozpocznij grę!
-  </button>
-</div>
+  <div class="center-buttons">
+    <button mat-flat-button (click)="goToTeam()">Wybierz drużyny</button>
+    <button mat-flat-button (click)="goToCategory()">Wybierz kategorie</button>
+    <button
+      mat-flat-button
+      color="primary"
+      (click)="startGame()"
+      [disabled]="!canStartGame"
+      class="start-button"
+    >
+      <mat-icon>play_arrow</mat-icon>
+      Rozpocznij grę!
+    </button>
+  </div>
 </mat-card-actions>
-
-

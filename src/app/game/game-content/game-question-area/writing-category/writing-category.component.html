@@ -1,5 +1,4 @@
 <ng-container *ngIf="question as q">
-
   <!-- ===================== -->
   <!-- PYTANIE -->
   <!-- ===================== -->
@@ -16,15 +15,12 @@
     </div>
   </div>
 
-
   <!-- ===================== -->
   <!-- GRACZE / KONIEC -->
   <!-- ===================== -->
   <ng-container *ngIf="!gameFinished; else gameEnd">
-
     <mat-card class="players-card">
       <div class="score-table">
-
         <!-- ===== NAZWY DRUŻYN ===== -->
         <div class="row header-row">
           <div class="cell header-cell">Drużyna</div>
@@ -52,28 +48,28 @@
             [class.active-column]="player.id === activePlayerId"
           >
             <div class="chances-wrapper">
-          <span class="chance-dot"
-                *ngFor="let c of [].constructor(player.chancesLeft)">
-          </span>
+              <span class="chance-dot" *ngFor="let c of [].constructor(player.chancesLeft)"></span>
 
-              <span class="lost-dot"
-                    *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)">
-          </span>
+              <span
+                class="lost-dot"
+                *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)"
+              ></span>
             </div>
           </div>
         </div>
 
         <div class="row alt-row">
           <div class="cell header-cell">Odgadnięte odpowiedzi</div>
-          <div class="cell team-cell answers-count-cell"
-               *ngFor="let player of players"
-               [class.active-column]="player.id === activePlayerId"
-               [style.background-color]="player.color"
-            [class.eliminated]="player.mistakes >= MAX_CHANCES">
+          <div
+            class="cell team-cell answers-count-cell"
+            *ngFor="let player of players"
+            [class.active-column]="player.id === activePlayerId"
+            [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+          >
             {{ player.correctAnswers }}
           </div>
         </div>
-
 
         <!-- ===== PUNKTY ===== -->
         <div class="row">
@@ -89,13 +85,8 @@
             {{ player.calculatedPoints || 0 }}
           </div>
         </div>
-
       </div>
     </mat-card>
-
-
-
-
 
     <!-- ===================== -->
     <!-- INPUT -->
@@ -104,18 +95,16 @@
       <h3>Tura: {{ currentPlayer.name }}</h3>
 
       <mat-form-field appearance="outline" class="full-width">
-        <input matInput
-               placeholder="Wpisz odpowiedź"
-               [(ngModel)]="inputValue"
-               (keyup.enter)="submitAnswer()" />
+        <input
+          matInput
+          placeholder="Wpisz odpowiedź"
+          [(ngModel)]="inputValue"
+          (keyup.enter)="submitAnswer()"
+        />
       </mat-form-field>
 
-      <button mat-raised-button color="primary" (click)="submitAnswer()">
-        Zatwierdź
-      </button>
+      <button mat-raised-button color="primary" (click)="submitAnswer()">Zatwierdź</button>
     </mat-card>
-
-
   </ng-container>
 
   <!-- ===================== -->
@@ -123,7 +112,6 @@
   <!-- ===================== -->
   <ng-template #gameEnd>
     <mat-card class="result-card">
-
       <div *ngIf="winner; else noWinner">
         <h2 class="winner-name">🏆 {{ winner.name }} wygrywa!</h2>
         <h3>Zdobyte punkty: {{ winner.calculatedPoints }}</h3>
@@ -142,32 +130,25 @@
     <div class="answer-box" *ngFor="let answer of q.answers; let i = index">
       <div class="flip-card">
         <div class="flip-card-inner" [class.flipped]="isRevealed(i)">
-
           <!-- front: kolorowa ramka bez odpowiedzi -->
           <div class="flip-card-front"></div>
 
           <!-- back: odkryta odpowiedź -->
-          <div class="flip-card-back"
-               [style.background-color]="getAnswerColor(i)"
-               [class.unanswered]="gameFinished && !answerOwners[i]">
-
+          <div
+            class="flip-card-back"
+            [style.background-color]="getAnswerColor(i)"
+            [class.unanswered]="gameFinished && !answerOwners[i]"
+          >
             <div class="answer-text">
               {{ answer.value }}
             </div>
 
-            <div class="answer-owner"
-                 *ngIf="getOwnerName(i) as ownerName">
+            <div class="answer-owner" *ngIf="getOwnerName(i) as ownerName">
               {{ ownerName }}
             </div>
-
           </div>
-
-
-
-
         </div>
       </div>
     </div>
   </div>
-
 </ng-container>

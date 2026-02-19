@@ -1,4 +1,4 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MATERIAL_IMPORTS } from '../../shared/material';
 import { GameService } from '../../shared/game.service';
 import { Subject } from 'rxjs';
@@ -15,7 +15,7 @@ export interface Team {
   standalone: true,
   imports: MATERIAL_IMPORTS,
   templateUrl: './choose-team.component.html',
-  styleUrl: './choose-team.component.css'
+  styleUrl: './choose-team.component.css',
 })
 export class ChooseTeamComponent implements OnInit, OnDestroy {
   teams: Team[] = [];
@@ -27,14 +27,12 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.loadTeams();
-    
+
     // Listen for game reset
-    this.gameService.reset$
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(() => {
-        this.teams = [];
-        this.newTeamName = '';
-      });
+    this.gameService.reset$.pipe(takeUntil(this.destroy$)).subscribe(() => {
+      this.teams = [];
+      this.newTeamName = '';
+    });
   }
 
   ngOnDestroy() {
@@ -51,7 +49,7 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
 
   getNextId(): number {
     let newId = 1;
-    while (this.teams.some(t => t.id === newId)) {
+    while (this.teams.some((t) => t.id === newId)) {
       newId++;
     }
     return newId;
@@ -59,14 +57,17 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
 
   addTeam() {
     if (this.newTeamName.trim()) {
-      this.teams = [...this.teams, { id: this.getNextId(), name: this.newTeamName.trim(), points: 0 }];
+      this.teams = [
+        ...this.teams,
+        { id: this.getNextId(), name: this.newTeamName.trim(), points: 0 },
+      ];
       this.saveTeams();
       this.newTeamName = '';
     }
   }
 
   removeTeam(id: number) {
-    this.teams = this.teams.filter(t => t.id !== id);
+    this.teams = this.teams.filter((t) => t.id !== id);
     this.saveTeams();
   }
 

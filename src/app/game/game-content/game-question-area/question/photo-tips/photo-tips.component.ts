@@ -1,15 +1,15 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Hint} from '../../../../../shared/category/category.interface';
-import {NgFor, NgIf} from '@angular/common';
-import {MATERIAL_IMPORTS} from '../../../../../shared/material';
-import {MatCardFooter} from '@angular/material/card';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Hint } from '../../../../../shared/category/category.interface';
+import { NgFor, NgIf } from '@angular/common';
+import { MATERIAL_IMPORTS } from '../../../../../shared/material';
+import { MatCardFooter } from '@angular/material/card';
 
 @Component({
   selector: 'app-photo-tips',
   standalone: true,
-  imports: [NgIf, NgFor,MATERIAL_IMPORTS, MatCardFooter],
+  imports: [NgIf, NgFor, MATERIAL_IMPORTS, MatCardFooter],
   templateUrl: './photo-tips.component.html',
-  styleUrl: './photo-tips.component.css'
+  styleUrl: './photo-tips.component.css',
 })
 export class PhotoTipsComponent {
   @Input() hints: Hint[] = [];

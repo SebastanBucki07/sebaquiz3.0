@@ -25,7 +25,9 @@
   width: clamp(300px, 90%, 700px); /* responsive width: min 300px, preferred 90%, max 700px */
   margin: 0 auto; /* center horizontally */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   display: flex;
   flex-direction: column;
   gap: 16px; /* spacing between child elements */
@@ -96,4 +98,3 @@
     width: 90%; /* fill 90% of screen width on large screens */
   }
 }
-

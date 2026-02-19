@@ -9,13 +9,13 @@ import { QuestionService } from '../../../../shared/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Observable } from 'rxjs';
 import { GameStateService, Team } from '../../../../shared/game-state.service';
-import {PointsService} from '../../../../shared/points-service.service';
-import {GameService} from '../../../../shared/game.service';
+import { PointsService } from '../../../../shared/points-service.service';
+import { GameService } from '../../../../shared/game.service';
 
 interface Player extends Team {
   mistakes: number;
   chancesLeft: number;
-  correctAnswers: number;          // ile odpowiedzi odgadli
+  correctAnswers: number; // ile odpowiedzi odgadli
   calculatedPoints?: number;
   color: string;
 }
@@ -29,13 +29,12 @@ interface Player extends Team {
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatGridListModule
+    MatGridListModule,
   ],
   templateUrl: './writing-category.component.html',
-  styleUrls: ['./writing-category.component.css']
+  styleUrls: ['./writing-category.component.css'],
 })
 export class WritingCategoryComponent implements OnInit {
-
   readonly MAX_CHANCES = 3;
   readonly MAX_POINTS = 10;
 
@@ -65,8 +64,7 @@ export class WritingCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
-    this.gameStateService.teams$.subscribe(teams => {
-
+    this.gameStateService.teams$.subscribe((teams) => {
       const colors = this.generateTeamColor(teams.length);
 
       this.players = teams.map((team, index) => ({
@@ -75,15 +73,14 @@ export class WritingCategoryComponent implements OnInit {
         chancesLeft: this.MAX_CHANCES,
         correctAnswers: 0,
         calculatedPoints: 0,
-        color: colors[index]
+        color: colors[index],
       }));
 
       this.currentPlayerIndex = 0;
     });
 
-
     // Subskrypcja pytania
-    this.question$.subscribe(q => {
+    this.question$.subscribe((q) => {
       if (!q) return;
       this.question = q;
 
@@ -95,7 +92,6 @@ export class WritingCategoryComponent implements OnInit {
       this.remainingAnswers = this.question.answers.length;
     });
   }
-
 
   get currentPlayer(): Player | null {
     return this.players.length > 0 ? this.players[this.currentPlayerIndex] : null;
@@ -120,13 +116,11 @@ export class WritingCategoryComponent implements OnInit {
     return colors;
   }
 
-
-
   getOwnerName(answerIndex: number): string | null {
     const ownerId = this.answerOwners[answerIndex];
     if (!ownerId) return null;
 
-    const player = this.players.find(player => player.id === ownerId);
+    const player = this.players.find((player) => player.id === ownerId);
     return player ? player.name : null;
   }
 
@@ -134,30 +128,28 @@ export class WritingCategoryComponent implements OnInit {
     const ownerId = this.answerOwners[index];
     if (!ownerId) return '';
 
-    const player = this.players.find(p => p.id === ownerId);
+    const player = this.players.find((p) => p.id === ownerId);
     return player ? player.color : '';
   }
 
-
-
   submitAnswer(): void {
-    if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentPlayer) return;
+    if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentPlayer)
+      return;
     if (!this.question.answers) return;
 
     const normalizedInput = this.normalize(this.inputValue);
 
-// 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
-    let answerIndex = this.question.answers.findIndex(a =>
-      this.normalize(a.value) === normalizedInput
+    // 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
+    let answerIndex = this.question.answers.findIndex(
+      (a) => this.normalize(a.value) === normalizedInput
     );
 
-// 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
+    // 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
     if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex(a =>
+      answerIndex = this.question.answers.findIndex((a) =>
         this.areSimilar(normalizedInput, a.value)
       );
     }
-
 
     if (answerIndex >= 0) {
       const alreadyRevealed = this.question.revealedAnswers?.includes(answerIndex) ?? false;
@@ -165,7 +157,7 @@ export class WritingCategoryComponent implements OnInit {
       if (!alreadyRevealed) {
         this.questionService.revealAnswer(answerIndex);
 
-// 🔥 zapamiętujemy kto odgadł
+        // 🔥 zapamiętujemy kto odgadł
         this.answerOwners[answerIndex] = this.currentPlayer.id;
 
         this.lastCorrectPlayer = this.currentPlayer;
@@ -201,8 +193,7 @@ export class WritingCategoryComponent implements OnInit {
     this.triggerWrongFlash();
 
     if (player.mistakes >= this.MAX_CHANCES) {
-
-      const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
+      const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
 
       if (alivePlayers.length <= 1) {
         this.revealAllAnswers();
@@ -214,13 +205,12 @@ export class WritingCategoryComponent implements OnInit {
       return;
     }
 
-
     this.nextPlayer();
   }
 
   triggerWrongFlash(): void {
     this.wrongFlash = true;
-    setTimeout(() => this.wrongFlash = false, 400);
+    setTimeout(() => (this.wrongFlash = false), 400);
   }
 
   getRemaining(): number {
@@ -228,7 +218,7 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   nextPlayer(): void {
-    const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
+    const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
     if (alivePlayers.length <= 1) {
       this.finishGame();
       return;
@@ -268,7 +258,7 @@ export class WritingCategoryComponent implements OnInit {
     if (totalAnswers === 0) return;
 
     // Obliczamy punkty dla każdej drużyny/gracza
-    this.players.forEach(player => {
+    this.players.forEach((player) => {
       const ratio = player.correctAnswers / totalAnswers;
       player.calculatedPoints = Math.ceil(ratio * this.MAX_POINTS);
     });
@@ -292,11 +282,10 @@ export class WritingCategoryComponent implements OnInit {
       // ustaw dostępne punkty na obiekt zwycięzcy
       this.pointsService.setPoints(this.winner.calculatedPoints ?? 0);
     }
-
   }
 
   resetGame(): void {
-    this.players.forEach(p => {
+    this.players.forEach((p) => {
       p.mistakes = 0;
       p.chancesLeft = this.MAX_CHANCES;
       p.correctAnswers = 0;
@@ -315,13 +304,14 @@ export class WritingCategoryComponent implements OnInit {
   private normalize(value: string): string {
     return value
       .toLowerCase()
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
       .replace(/-/g, ' ')
       .replace(/\s+/g, ' ')
       .trim();
   }
 
-// 🔹 Sprawdzenie zgodności odpowiedzi z tolerancją literówek i zamianą słów
+  // 🔹 Sprawdzenie zgodności odpowiedzi z tolerancją literówek i zamianą słów
   private areSimilar(input: string, answer: string): boolean {
     const normInput = this.normalize(input);
     const normAnswer = this.normalize(answer);
@@ -330,8 +320,14 @@ export class WritingCategoryComponent implements OnInit {
     if (normInput === normAnswer) return true;
 
     // sprawdzamy zamianę kolejności słów (Robert Lewandowski ↔ Lewandowski Robert)
-    const inputWords = normInput.split(/[\s-]+/).sort().join(' ');
-    const answerWords = normAnswer.split(/[\s-]+/).sort().join(' ');
+    const inputWords = normInput
+      .split(/[\s-]+/)
+      .sort()
+      .join(' ');
+    const answerWords = normAnswer
+      .split(/[\s-]+/)
+      .sort()
+      .join(' ');
     if (inputWords === answerWords) return true;
 
     // ustalamy maksymalną liczbę literówek
@@ -341,9 +337,7 @@ export class WritingCategoryComponent implements OnInit {
     return this.levenshtein(normInput, normAnswer) <= maxEdits;
   }
 
-
-
-// 🔹 Funkcja Levenshtein (do literówek)
+  // 🔹 Funkcja Levenshtein (do literówek)
   private levenshtein(a: string, b: string): number {
     const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
       new Array(b.length + 1).fill(0)
@@ -356,8 +350,8 @@ export class WritingCategoryComponent implements OnInit {
       for (let j = 1; j <= b.length; j++) {
         const cost = a[i - 1] === b[j - 1] ? 0 : 1;
         matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1,       // usunięcie
-          matrix[i][j - 1] + 1,       // wstawienie
+          matrix[i - 1][j] + 1, // usunięcie
+          matrix[i][j - 1] + 1, // wstawienie
           matrix[i - 1][j - 1] + cost // zamiana
         );
       }
@@ -367,7 +361,5 @@ export class WritingCategoryComponent implements OnInit {
 
   awardPointsToTeam(teamName: string, points: number): void {
     if (!teamName || points <= 0) return;
-
   }
-
 }

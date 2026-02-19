@@ -1,16991 +1,16991 @@
 export const WYPISZ_WSPOLNE = [
   {
-    "id": 1,
-    "question": "Pokemon 1 seria",
-    "answers": [
+    id: 1,
+    question: 'Pokemon 1 seria',
+    answers: [
       {
-        "value": "Bulbasaur"
+        value: 'Bulbasaur',
       },
       {
-        "value": "Ivysaur"
+        value: 'Ivysaur',
       },
       {
-        "value": "Venusaur"
+        value: 'Venusaur',
       },
       {
-        "value": "Charmander"
+        value: 'Charmander',
       },
       {
-        "value": "Charmeleon"
+        value: 'Charmeleon',
       },
       {
-        "value": "Charizard"
+        value: 'Charizard',
       },
       {
-        "value": "Squirtle"
+        value: 'Squirtle',
       },
       {
-        "value": "Wartortle"
+        value: 'Wartortle',
       },
       {
-        "value": "Blastoise"
+        value: 'Blastoise',
       },
       {
-        "value": "Caterpie"
+        value: 'Caterpie',
       },
       {
-        "value": "Metapod"
+        value: 'Metapod',
       },
       {
-        "value": "Butterfree"
+        value: 'Butterfree',
       },
       {
-        "value": "Weedle"
+        value: 'Weedle',
       },
       {
-        "value": "Kakuna"
+        value: 'Kakuna',
       },
       {
-        "value": "Beedrill"
+        value: 'Beedrill',
       },
       {
-        "value": "Pidgey"
+        value: 'Pidgey',
       },
       {
-        "value": "Pidgeotto"
+        value: 'Pidgeotto',
       },
       {
-        "value": "Pidgeot"
+        value: 'Pidgeot',
       },
       {
-        "value": "Rattata"
+        value: 'Rattata',
       },
       {
-        "value": "Raticate"
+        value: 'Raticate',
       },
       {
-        "value": "Spearow"
+        value: 'Spearow',
       },
       {
-        "value": "Fearow"
+        value: 'Fearow',
       },
       {
-        "value": "Ekans"
+        value: 'Ekans',
       },
       {
-        "value": "Arbok"
+        value: 'Arbok',
       },
       {
-        "value": "Pikachu"
+        value: 'Pikachu',
       },
       {
-        "value": "Raichu"
+        value: 'Raichu',
       },
       {
-        "value": "Sandshrew"
+        value: 'Sandshrew',
       },
       {
-        "value": "Sandslash"
+        value: 'Sandslash',
       },
       {
-        "value": "Nidoran"
+        value: 'Nidoran',
       },
       {
-        "value": "Nidorina"
+        value: 'Nidorina',
       },
       {
-        "value": "Nidoqueen"
+        value: 'Nidoqueen',
       },
       {
-        "value": "Nidoran"
+        value: 'Nidoran',
       },
       {
-        "value": "Nidorino"
+        value: 'Nidorino',
       },
       {
-        "value": "Nidoking"
+        value: 'Nidoking',
       },
       {
-        "value": "Clefairy"
+        value: 'Clefairy',
       },
       {
-        "value": "Clefable"
+        value: 'Clefable',
       },
       {
-        "value": "Vulpix"
+        value: 'Vulpix',
       },
       {
-        "value": "Ninetales"
+        value: 'Ninetales',
       },
       {
-        "value": "Jigglypuff"
+        value: 'Jigglypuff',
       },
       {
-        "value": "Wigglytuff"
+        value: 'Wigglytuff',
       },
       {
-        "value": "Zubat"
+        value: 'Zubat',
       },
       {
-        "value": "Golbat"
+        value: 'Golbat',
       },
       {
-        "value": "Oddish"
+        value: 'Oddish',
       },
       {
-        "value": "Gloom"
+        value: 'Gloom',
       },
       {
-        "value": "Vileplume"
+        value: 'Vileplume',
       },
       {
-        "value": "Paras"
+        value: 'Paras',
       },
       {
-        "value": "Parasect"
+        value: 'Parasect',
       },
       {
-        "value": "Venonat"
+        value: 'Venonat',
       },
       {
-        "value": "Venomoth"
+        value: 'Venomoth',
       },
       {
-        "value": "Diglett"
+        value: 'Diglett',
       },
       {
-        "value": "Dugtrio"
+        value: 'Dugtrio',
       },
       {
-        "value": "Meowth"
+        value: 'Meowth',
       },
       {
-        "value": "Persian"
+        value: 'Persian',
       },
       {
-        "value": "Psyduck"
+        value: 'Psyduck',
       },
       {
-        "value": "Golduck"
+        value: 'Golduck',
       },
       {
-        "value": "Mankey"
+        value: 'Mankey',
       },
       {
-        "value": "Primeape"
+        value: 'Primeape',
       },
       {
-        "value": "Growlithe"
+        value: 'Growlithe',
       },
       {
-        "value": "Arcanine"
+        value: 'Arcanine',
       },
       {
-        "value": "Poliwag"
+        value: 'Poliwag',
       },
       {
-        "value": "Poliwhirl"
+        value: 'Poliwhirl',
       },
       {
-        "value": "Poliwrath"
+        value: 'Poliwrath',
       },
       {
-        "value": "Abra"
+        value: 'Abra',
       },
       {
-        "value": "Kadabra"
+        value: 'Kadabra',
       },
       {
-        "value": "Alakazam"
+        value: 'Alakazam',
       },
       {
-        "value": "Machop"
+        value: 'Machop',
       },
       {
-        "value": "Machoke"
+        value: 'Machoke',
       },
       {
-        "value": "Machamp"
+        value: 'Machamp',
       },
       {
-        "value": "Bellsprout"
+        value: 'Bellsprout',
       },
       {
-        "value": "Weepinbell"
+        value: 'Weepinbell',
       },
       {
-        "value": "Victreebel"
+        value: 'Victreebel',
       },
       {
-        "value": "Tentacool"
+        value: 'Tentacool',
       },
       {
-        "value": "Tentacruel"
+        value: 'Tentacruel',
       },
       {
-        "value": "Geodude"
+        value: 'Geodude',
       },
       {
-        "value": "Graveler"
+        value: 'Graveler',
       },
       {
-        "value": "Golem"
+        value: 'Golem',
       },
       {
-        "value": "Ponyta"
+        value: 'Ponyta',
       },
       {
-        "value": "Rapidash"
+        value: 'Rapidash',
       },
       {
-        "value": "Slowpoke"
+        value: 'Slowpoke',
       },
       {
-        "value": "Slowbro"
+        value: 'Slowbro',
       },
       {
-        "value": "Magnemite"
+        value: 'Magnemite',
       },
       {
-        "value": "Magneton"
+        value: 'Magneton',
       },
       {
-        "value": "Farfetch'd"
+        value: "Farfetch'd",
       },
       {
-        "value": "Doduo"
+        value: 'Doduo',
       },
       {
-        "value": "Dodrio"
+        value: 'Dodrio',
       },
       {
-        "value": "Seel"
+        value: 'Seel',
       },
       {
-        "value": "Dewgong"
+        value: 'Dewgong',
       },
       {
-        "value": "Grimer"
+        value: 'Grimer',
       },
       {
-        "value": "Muk"
+        value: 'Muk',
       },
       {
-        "value": "Shellder"
+        value: 'Shellder',
       },
       {
-        "value": "Cloyster"
+        value: 'Cloyster',
       },
       {
-        "value": "Gastly"
+        value: 'Gastly',
       },
       {
-        "value": "Haunter"
+        value: 'Haunter',
       },
       {
-        "value": "Gengar"
+        value: 'Gengar',
       },
       {
-        "value": "Onix"
+        value: 'Onix',
       },
       {
-        "value": "Drowzee"
+        value: 'Drowzee',
       },
       {
-        "value": "Hypno"
+        value: 'Hypno',
       },
       {
-        "value": "Krabby"
+        value: 'Krabby',
       },
       {
-        "value": "Kingler"
+        value: 'Kingler',
       },
       {
-        "value": "Voltorb"
+        value: 'Voltorb',
       },
       {
-        "value": "Electrode"
+        value: 'Electrode',
       },
       {
-        "value": "Exeggcute"
+        value: 'Exeggcute',
       },
       {
-        "value": "Exeggutor"
+        value: 'Exeggutor',
       },
       {
-        "value": "Cubone"
+        value: 'Cubone',
       },
       {
-        "value": "Marowak"
+        value: 'Marowak',
       },
       {
-        "value": "Hitmonlee"
+        value: 'Hitmonlee',
       },
       {
-        "value": "Hitmonchan"
+        value: 'Hitmonchan',
       },
       {
-        "value": "Lickitung"
+        value: 'Lickitung',
       },
       {
-        "value": "Koffing"
+        value: 'Koffing',
       },
       {
-        "value": "Weezing"
+        value: 'Weezing',
       },
       {
-        "value": "Rhyhorn"
+        value: 'Rhyhorn',
       },
       {
-        "value": "Rhydon"
+        value: 'Rhydon',
       },
       {
-        "value": "Chansey"
+        value: 'Chansey',
       },
       {
-        "value": "Tangela"
+        value: 'Tangela',
       },
       {
-        "value": "Kangaskhan"
+        value: 'Kangaskhan',
       },
       {
-        "value": "Horsea"
+        value: 'Horsea',
       },
       {
-        "value": "Seadra"
+        value: 'Seadra',
       },
       {
-        "value": "Goldeen"
+        value: 'Goldeen',
       },
       {
-        "value": "Seaking"
+        value: 'Seaking',
       },
       {
-        "value": "Staryu"
+        value: 'Staryu',
       },
       {
-        "value": "Starmie"
+        value: 'Starmie',
       },
       {
-        "value": "Mr. Mime"
+        value: 'Mr. Mime',
       },
       {
-        "value": "Scyther"
+        value: 'Scyther',
       },
       {
-        "value": "Jynx"
+        value: 'Jynx',
       },
       {
-        "value": "Electabuzz"
+        value: 'Electabuzz',
       },
       {
-        "value": "Magmar"
+        value: 'Magmar',
       },
       {
-        "value": "Pinsir"
+        value: 'Pinsir',
       },
       {
-        "value": "Tauros"
+        value: 'Tauros',
       },
       {
-        "value": "Magikarp"
+        value: 'Magikarp',
       },
       {
-        "value": "Gyarados"
+        value: 'Gyarados',
       },
       {
-        "value": "Lapras"
+        value: 'Lapras',
       },
       {
-        "value": "Ditto"
+        value: 'Ditto',
       },
       {
-        "value": "Eevee"
+        value: 'Eevee',
       },
       {
-        "value": "Vaporeon"
+        value: 'Vaporeon',
       },
       {
-        "value": "Jolteon"
+        value: 'Jolteon',
       },
       {
-        "value": "Flareon"
+        value: 'Flareon',
       },
       {
-        "value": "Porygon"
+        value: 'Porygon',
       },
       {
-        "value": "Omanyte"
+        value: 'Omanyte',
       },
       {
-        "value": "Omastar"
+        value: 'Omastar',
       },
       {
-        "value": "Kabuto"
+        value: 'Kabuto',
       },
       {
-        "value": "Kabutops"
+        value: 'Kabutops',
       },
       {
-        "value": "Aerodactyl"
+        value: 'Aerodactyl',
       },
       {
-        "value": "Snorlax"
+        value: 'Snorlax',
       },
       {
-        "value": "Articuno"
+        value: 'Articuno',
       },
       {
-        "value": "Zapdos"
+        value: 'Zapdos',
       },
       {
-        "value": "Moltres"
+        value: 'Moltres',
       },
       {
-        "value": "Dratini"
+        value: 'Dratini',
       },
       {
-        "value": "Dragonair"
+        value: 'Dragonair',
       },
       {
-        "value": "Dragonite"
+        value: 'Dragonite',
       },
       {
-        "value": "Mewtwo"
+        value: 'Mewtwo',
       },
       {
-        "value": "Mew"
-      }
+        value: 'Mew',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 2,
-    "question": "Pokemon 2 seria",
-    "answers": [
+    id: 2,
+    question: 'Pokemon 2 seria',
+    answers: [
       {
-        "value": "Chikorita"
+        value: 'Chikorita',
       },
       {
-        "value": "Bayleef"
+        value: 'Bayleef',
       },
       {
-        "value": "Meganium"
+        value: 'Meganium',
       },
       {
-        "value": "Cyndaquil"
+        value: 'Cyndaquil',
       },
       {
-        "value": "Quilava"
+        value: 'Quilava',
       },
       {
-        "value": "Typhlosion"
+        value: 'Typhlosion',
       },
       {
-        "value": "Totodile"
+        value: 'Totodile',
       },
       {
-        "value": "Croconaw"
+        value: 'Croconaw',
       },
       {
-        "value": "Feraligatr"
+        value: 'Feraligatr',
       },
       {
-        "value": "Sentret"
+        value: 'Sentret',
       },
       {
-        "value": "Furret"
+        value: 'Furret',
       },
       {
-        "value": "Hoothoot"
+        value: 'Hoothoot',
       },
       {
-        "value": "Noctowl"
+        value: 'Noctowl',
       },
       {
-        "value": "Ledyba"
+        value: 'Ledyba',
       },
       {
-        "value": "Ledian"
+        value: 'Ledian',
       },
       {
-        "value": "Spinarak"
+        value: 'Spinarak',
       },
       {
-        "value": "Ariados"
+        value: 'Ariados',
       },
       {
-        "value": "Crobat"
+        value: 'Crobat',
       },
       {
-        "value": "Chinchou"
+        value: 'Chinchou',
       },
       {
-        "value": "Lanturn"
+        value: 'Lanturn',
       },
       {
-        "value": "Pichu"
+        value: 'Pichu',
       },
       {
-        "value": "Cleffa"
+        value: 'Cleffa',
       },
       {
-        "value": "Igglybuff"
+        value: 'Igglybuff',
       },
       {
-        "value": "Togepi"
+        value: 'Togepi',
       },
       {
-        "value": "Togetic"
+        value: 'Togetic',
       },
       {
-        "value": "Natu"
+        value: 'Natu',
       },
       {
-        "value": "Xatu"
+        value: 'Xatu',
       },
       {
-        "value": "Mareep"
+        value: 'Mareep',
       },
       {
-        "value": "Flaaffy"
+        value: 'Flaaffy',
       },
       {
-        "value": "Ampharos"
+        value: 'Ampharos',
       },
       {
-        "value": "Bellossom"
+        value: 'Bellossom',
       },
       {
-        "value": "Marill"
+        value: 'Marill',
       },
       {
-        "value": "Azumarill"
+        value: 'Azumarill',
       },
       {
-        "value": "Sudowoodo"
+        value: 'Sudowoodo',
       },
       {
-        "value": "Politoed"
+        value: 'Politoed',
       },
       {
-        "value": "Hoppip"
+        value: 'Hoppip',
       },
       {
-        "value": "Skiploom"
+        value: 'Skiploom',
       },
       {
-        "value": "Jumpluff"
+        value: 'Jumpluff',
       },
       {
-        "value": "Aipom"
+        value: 'Aipom',
       },
       {
-        "value": "Sunkern"
+        value: 'Sunkern',
       },
       {
-        "value": "Sunflora"
+        value: 'Sunflora',
       },
       {
-        "value": "Yanma"
+        value: 'Yanma',
       },
       {
-        "value": "Wooper"
+        value: 'Wooper',
       },
       {
-        "value": "Quagsire"
+        value: 'Quagsire',
       },
       {
-        "value": "Espeon"
+        value: 'Espeon',
       },
       {
-        "value": "Umbreon"
+        value: 'Umbreon',
       },
       {
-        "value": "Murkrow"
+        value: 'Murkrow',
       },
       {
-        "value": "Slowking"
+        value: 'Slowking',
       },
       {
-        "value": "Misdreavus"
+        value: 'Misdreavus',
       },
       {
-        "value": "Wobbuffet"
+        value: 'Wobbuffet',
       },
       {
-        "value": "Girafarig"
+        value: 'Girafarig',
       },
       {
-        "value": "Pineco"
+        value: 'Pineco',
       },
       {
-        "value": "Forretress"
+        value: 'Forretress',
       },
       {
-        "value": "Dunsparce"
+        value: 'Dunsparce',
       },
       {
-        "value": "Gligar"
+        value: 'Gligar',
       },
       {
-        "value": "Steelix"
+        value: 'Steelix',
       },
       {
-        "value": "Snubbull"
+        value: 'Snubbull',
       },
       {
-        "value": "Granbull"
+        value: 'Granbull',
       },
       {
-        "value": "Qwilfish"
+        value: 'Qwilfish',
       },
       {
-        "value": "Scizor"
+        value: 'Scizor',
       },
       {
-        "value": "Shuckle"
+        value: 'Shuckle',
       },
       {
-        "value": "Heracross"
+        value: 'Heracross',
       },
       {
-        "value": "Sneasel"
+        value: 'Sneasel',
       },
       {
-        "value": "Teddiursa"
+        value: 'Teddiursa',
       },
       {
-        "value": "Ursaring"
+        value: 'Ursaring',
       },
       {
-        "value": "Slugma"
+        value: 'Slugma',
       },
       {
-        "value": "Magcargo"
+        value: 'Magcargo',
       },
       {
-        "value": "Swinub"
+        value: 'Swinub',
       },
       {
-        "value": "Piloswine"
+        value: 'Piloswine',
       },
       {
-        "value": "Corsola"
+        value: 'Corsola',
       },
       {
-        "value": "Remoraid"
+        value: 'Remoraid',
       },
       {
-        "value": "Octillery"
+        value: 'Octillery',
       },
       {
-        "value": "Delibird"
+        value: 'Delibird',
       },
       {
-        "value": "Mantine"
+        value: 'Mantine',
       },
       {
-        "value": "Skarmory"
+        value: 'Skarmory',
       },
       {
-        "value": "Houndour"
+        value: 'Houndour',
       },
       {
-        "value": "Houndoom"
+        value: 'Houndoom',
       },
       {
-        "value": "Kingdra"
+        value: 'Kingdra',
       },
       {
-        "value": "Phanpy"
+        value: 'Phanpy',
       },
       {
-        "value": "Donphan"
+        value: 'Donphan',
       },
       {
-        "value": "Porygon2"
+        value: 'Porygon2',
       },
       {
-        "value": "Stantler"
+        value: 'Stantler',
       },
       {
-        "value": "Smeargle"
+        value: 'Smeargle',
       },
       {
-        "value": "Tyrogue"
+        value: 'Tyrogue',
       },
       {
-        "value": "Hitmontop"
+        value: 'Hitmontop',
       },
       {
-        "value": "Smoochum"
+        value: 'Smoochum',
       },
       {
-        "value": "Elekid"
+        value: 'Elekid',
       },
       {
-        "value": "Magby"
+        value: 'Magby',
       },
       {
-        "value": "Miltank"
+        value: 'Miltank',
       },
       {
-        "value": "Blissey"
+        value: 'Blissey',
       },
       {
-        "value": "Raikou"
+        value: 'Raikou',
       },
       {
-        "value": "Entei"
+        value: 'Entei',
       },
       {
-        "value": "Suicune"
+        value: 'Suicune',
       },
       {
-        "value": "Larvitar"
+        value: 'Larvitar',
       },
       {
-        "value": "Pupitar"
+        value: 'Pupitar',
       },
       {
-        "value": "Tyranitar"
+        value: 'Tyranitar',
       },
       {
-        "value": "Lugia"
+        value: 'Lugia',
       },
       {
-        "value": "Ho-Oh"
+        value: 'Ho-Oh',
       },
       {
-        "value": "Celebi"
-      }
+        value: 'Celebi',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 3,
-    "question": "Pokemon 3 seria",
-    "answers": [
+    id: 3,
+    question: 'Pokemon 3 seria',
+    answers: [
       {
-        "value": "Treecko"
+        value: 'Treecko',
       },
       {
-        "value": "Grovyle"
+        value: 'Grovyle',
       },
       {
-        "value": "Sceptile"
+        value: 'Sceptile',
       },
       {
-        "value": "Torchic"
+        value: 'Torchic',
       },
       {
-        "value": "Combusken"
+        value: 'Combusken',
       },
       {
-        "value": "Blaziken"
+        value: 'Blaziken',
       },
       {
-        "value": "Mudkip"
+        value: 'Mudkip',
       },
       {
-        "value": "Marshtomp"
+        value: 'Marshtomp',
       },
       {
-        "value": "Swampert"
+        value: 'Swampert',
       },
       {
-        "value": "Poochyena"
+        value: 'Poochyena',
       },
       {
-        "value": "Mightyena"
+        value: 'Mightyena',
       },
       {
-        "value": "Zigzagoon"
+        value: 'Zigzagoon',
       },
       {
-        "value": "Linoone"
+        value: 'Linoone',
       },
       {
-        "value": "Wurmple"
+        value: 'Wurmple',
       },
       {
-        "value": "Silcoon"
+        value: 'Silcoon',
       },
       {
-        "value": "Beautifly"
+        value: 'Beautifly',
       },
       {
-        "value": "Cascoon"
+        value: 'Cascoon',
       },
       {
-        "value": "Dustox"
+        value: 'Dustox',
       },
       {
-        "value": "Lotad"
+        value: 'Lotad',
       },
       {
-        "value": "Lombre"
+        value: 'Lombre',
       },
       {
-        "value": "Ludicolo"
+        value: 'Ludicolo',
       },
       {
-        "value": "Seedot"
+        value: 'Seedot',
       },
       {
-        "value": "Nuzleaf"
+        value: 'Nuzleaf',
       },
       {
-        "value": "Shiftry"
+        value: 'Shiftry',
       },
       {
-        "value": "Taillow"
+        value: 'Taillow',
       },
       {
-        "value": "Swellow"
+        value: 'Swellow',
       },
       {
-        "value": "Wingull"
+        value: 'Wingull',
       },
       {
-        "value": "Pelipper"
+        value: 'Pelipper',
       },
       {
-        "value": "Ralts"
+        value: 'Ralts',
       },
       {
-        "value": "Kirlia"
+        value: 'Kirlia',
       },
       {
-        "value": "Gardevoir"
+        value: 'Gardevoir',
       },
       {
-        "value": "Surskit"
+        value: 'Surskit',
       },
       {
-        "value": "Masquerain"
+        value: 'Masquerain',
       },
       {
-        "value": "Shroomish"
+        value: 'Shroomish',
       },
       {
-        "value": "Breloom"
+        value: 'Breloom',
       },
       {
-        "value": "Slakoth"
+        value: 'Slakoth',
       },
       {
-        "value": "Vigoroth"
+        value: 'Vigoroth',
       },
       {
-        "value": "Slaking"
+        value: 'Slaking',
       },
       {
-        "value": "Nincada"
+        value: 'Nincada',
       },
       {
-        "value": "Ninjask"
+        value: 'Ninjask',
       },
       {
-        "value": "Shedinja"
+        value: 'Shedinja',
       },
       {
-        "value": "Whismur"
+        value: 'Whismur',
       },
       {
-        "value": "Loudred"
+        value: 'Loudred',
       },
       {
-        "value": "Exploud"
+        value: 'Exploud',
       },
       {
-        "value": "Makuhita"
+        value: 'Makuhita',
       },
       {
-        "value": "Hariyama"
+        value: 'Hariyama',
       },
       {
-        "value": "Azurill"
+        value: 'Azurill',
       },
       {
-        "value": "Nosepass"
+        value: 'Nosepass',
       },
       {
-        "value": "Skitty"
+        value: 'Skitty',
       },
       {
-        "value": "Delcatty"
+        value: 'Delcatty',
       },
       {
-        "value": "Sableye"
+        value: 'Sableye',
       },
       {
-        "value": "Mawile"
+        value: 'Mawile',
       },
       {
-        "value": "Aron"
+        value: 'Aron',
       },
       {
-        "value": "Lairon"
+        value: 'Lairon',
       },
       {
-        "value": "Aggron"
+        value: 'Aggron',
       },
       {
-        "value": "Meditite"
+        value: 'Meditite',
       },
       {
-        "value": "Medicham"
+        value: 'Medicham',
       },
       {
-        "value": "Electrike"
+        value: 'Electrike',
       },
       {
-        "value": "Manectric"
+        value: 'Manectric',
       },
       {
-        "value": "Plusle"
+        value: 'Plusle',
       },
       {
-        "value": "Minun"
+        value: 'Minun',
       },
       {
-        "value": "Volbeat"
+        value: 'Volbeat',
       },
       {
-        "value": "Illumise"
+        value: 'Illumise',
       },
       {
-        "value": "Roselia"
+        value: 'Roselia',
       },
       {
-        "value": "Gulpin"
+        value: 'Gulpin',
       },
       {
-        "value": "Swalot"
+        value: 'Swalot',
       },
       {
-        "value": "Carvanha"
+        value: 'Carvanha',
       },
       {
-        "value": "Sharpedo"
+        value: 'Sharpedo',
       },
       {
-        "value": "Wailmer"
+        value: 'Wailmer',
       },
       {
-        "value": "Wailord"
+        value: 'Wailord',
       },
       {
-        "value": "Numel"
+        value: 'Numel',
       },
       {
-        "value": "Camerupt"
+        value: 'Camerupt',
       },
       {
-        "value": "Torkoal"
+        value: 'Torkoal',
       },
       {
-        "value": "Spoink"
+        value: 'Spoink',
       },
       {
-        "value": "Grumpig"
+        value: 'Grumpig',
       },
       {
-        "value": "Spinda"
+        value: 'Spinda',
       },
       {
-        "value": "Trapinch"
+        value: 'Trapinch',
       },
       {
-        "value": "Vibrava"
+        value: 'Vibrava',
       },
       {
-        "value": "Flygon"
+        value: 'Flygon',
       },
       {
-        "value": "Cacnea"
+        value: 'Cacnea',
       },
       {
-        "value": "Cacturne"
+        value: 'Cacturne',
       },
       {
-        "value": "Swablu"
+        value: 'Swablu',
       },
       {
-        "value": "Altaria"
+        value: 'Altaria',
       },
       {
-        "value": "Zangoose"
+        value: 'Zangoose',
       },
       {
-        "value": "Seviper"
+        value: 'Seviper',
       },
       {
-        "value": "Lunatone"
+        value: 'Lunatone',
       },
       {
-        "value": "Solrock"
+        value: 'Solrock',
       },
       {
-        "value": "Barboach"
+        value: 'Barboach',
       },
       {
-        "value": "Whiscash"
+        value: 'Whiscash',
       },
       {
-        "value": "Corphish"
+        value: 'Corphish',
       },
       {
-        "value": "Crawdaunt"
+        value: 'Crawdaunt',
       },
       {
-        "value": "Baltoy"
+        value: 'Baltoy',
       },
       {
-        "value": "Claydol"
+        value: 'Claydol',
       },
       {
-        "value": "Lileep"
+        value: 'Lileep',
       },
       {
-        "value": "Cradily"
+        value: 'Cradily',
       },
       {
-        "value": "Anorith"
+        value: 'Anorith',
       },
       {
-        "value": "Armaldo"
+        value: 'Armaldo',
       },
       {
-        "value": "Feebas"
+        value: 'Feebas',
       },
       {
-        "value": "Milotic"
+        value: 'Milotic',
       },
       {
-        "value": "Castform"
+        value: 'Castform',
       },
       {
-        "value": "Kecleon"
+        value: 'Kecleon',
       },
       {
-        "value": "Shuppet"
+        value: 'Shuppet',
       },
       {
-        "value": "Banette"
+        value: 'Banette',
       },
       {
-        "value": "Duskull"
+        value: 'Duskull',
       },
       {
-        "value": "Dusclops"
+        value: 'Dusclops',
       },
       {
-        "value": "Tropius"
+        value: 'Tropius',
       },
       {
-        "value": "Chimecho"
+        value: 'Chimecho',
       },
       {
-        "value": "Absol"
+        value: 'Absol',
       },
       {
-        "value": "Wynaut"
+        value: 'Wynaut',
       },
       {
-        "value": "Snorunt"
+        value: 'Snorunt',
       },
       {
-        "value": "Glalie"
+        value: 'Glalie',
       },
       {
-        "value": "Spheal"
+        value: 'Spheal',
       },
       {
-        "value": "Sealeo"
+        value: 'Sealeo',
       },
       {
-        "value": "Walrein"
+        value: 'Walrein',
       },
       {
-        "value": "Clamperl"
+        value: 'Clamperl',
       },
       {
-        "value": "Huntail"
+        value: 'Huntail',
       },
       {
-        "value": "Gorebyss"
+        value: 'Gorebyss',
       },
       {
-        "value": "Relicanth"
+        value: 'Relicanth',
       },
       {
-        "value": "Luvdisc"
+        value: 'Luvdisc',
       },
       {
-        "value": "Bagon"
+        value: 'Bagon',
       },
       {
-        "value": "Shelgon"
+        value: 'Shelgon',
       },
       {
-        "value": "Salamence"
+        value: 'Salamence',
       },
       {
-        "value": "Beldum"
+        value: 'Beldum',
       },
       {
-        "value": "Metang"
+        value: 'Metang',
       },
       {
-        "value": "Metagross"
+        value: 'Metagross',
       },
       {
-        "value": "Regirock"
+        value: 'Regirock',
       },
       {
-        "value": "Regice"
+        value: 'Regice',
       },
       {
-        "value": "Registeel"
+        value: 'Registeel',
       },
       {
-        "value": "Latias"
+        value: 'Latias',
       },
       {
-        "value": "Latios"
+        value: 'Latios',
       },
       {
-        "value": "Kyogre"
+        value: 'Kyogre',
       },
       {
-        "value": "Groudon"
+        value: 'Groudon',
       },
       {
-        "value": "Rayquaza"
+        value: 'Rayquaza',
       },
       {
-        "value": "Jirachi"
+        value: 'Jirachi',
       },
       {
-        "value": "Deoxys"
-      }
+        value: 'Deoxys',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 4,
-    "question": "Postacie spider-man bajka Fox Kids",
-    "answers": [
+    id: 4,
+    question: 'Postacie spider-man bajka Fox Kids',
+    answers: [
       {
-        "value": "Peter Parker"
+        value: 'Peter Parker',
       },
       {
-        "value": "Spider-Man"
+        value: 'Spider-Man',
       },
       {
-        "value": "J. Jonah Jameson"
+        value: 'J. Jonah Jameson',
       },
       {
-        "value": "May Parker"
+        value: 'May Parker',
       },
       {
-        "value": "Mary Jane Watson"
+        value: 'Mary Jane Watson',
       },
       {
-        "value": "Felicia Hardy"
+        value: 'Felicia Hardy',
       },
       {
-        "value": "Czarny Kot"
+        value: 'Czarny Kot',
       },
       {
-        "value": "Harry Osborn"
+        value: 'Harry Osborn',
       },
       {
-        "value": "Flash Thompson"
+        value: 'Flash Thompson',
       },
       {
-        "value": "Debra Whitman"
+        value: 'Debra Whitman',
       },
       {
-        "value": "Wilson Fisk"
+        value: 'Wilson Fisk',
       },
       {
-        "value": "Kingpin"
+        value: 'Kingpin',
       },
       {
-        "value": "Silvermane"
+        value: 'Silvermane',
       },
       {
-        "value": "Dr Curt Connors"
+        value: 'Dr Curt Connors',
       },
       {
-        "value": "Jaszczur"
+        value: 'Jaszczur',
       },
       {
-        "value": "Jason Macendale"
+        value: 'Jason Macendale',
       },
       {
-        "value": "Hobgoblin"
+        value: 'Hobgoblin',
       },
       {
-        "value": "Shocker"
+        value: 'Shocker',
       },
       {
-        "value": "Skorpion"
+        value: 'Skorpion',
       },
       {
-        "value": "Tombstone"
+        value: 'Tombstone',
       },
       {
-        "value": "Octo Octavius"
+        value: 'Octo Octavius',
       },
       {
-        "value": "Doktor Ośmiornica"
+        value: 'Doktor Ośmiornica',
       },
       {
-        "value": "Kraven Myśliwy"
+        value: 'Kraven Myśliwy',
       },
       {
-        "value": "Doktor Mariah Crawford"
+        value: 'Doktor Mariah Crawford',
       },
       {
-        "value": "Bestia"
+        value: 'Bestia',
       },
       {
-        "value": "Michael Morbius"
+        value: 'Michael Morbius',
       },
       {
-        "value": "Mściciel"
+        value: 'Mściciel',
       },
       {
-        "value": "Hydro-człowiek"
+        value: 'Hydro-człowiek',
       },
       {
-        "value": "Ben Parker"
+        value: 'Ben Parker',
       },
       {
-        "value": "Terri Lee"
-      }
+        value: 'Terri Lee',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 5,
-    "question": "Postacie x-man bajka Fox Kids",
-    "answers": [
+    id: 5,
+    question: 'Postacie x-man bajka Fox Kids',
+    answers: [
       {
-        "value": "Jubilee"
+        value: 'Jubilee',
       },
       {
-        "value": "Scarlet Witch"
+        value: 'Scarlet Witch',
       },
       {
-        "value": "Feniks"
+        value: 'Feniks',
       },
       {
-        "value": "Ruda"
+        value: 'Ruda',
       },
       {
-        "value": "Profesor X"
+        value: 'Profesor X',
       },
       {
-        "value": "Cyklop"
+        value: 'Cyklop',
       },
       {
-        "value": "Wolverine"
+        value: 'Wolverine',
       },
       {
-        "value": "Gambit"
+        value: 'Gambit',
       },
       {
-        "value": "Lodowy Człowiek"
+        value: 'Lodowy Człowiek',
       },
       {
-        "value": "Szablozęby"
+        value: 'Szablozęby',
       },
       {
-        "value": "Quark"
+        value: 'Quark',
       },
       {
-        "value": "Morph"
+        value: 'Morph',
       },
       {
-        "value": "Amphibius"
+        value: 'Amphibius',
       },
       {
-        "value": "Calisto"
+        value: 'Calisto',
       },
       {
-        "value": "Storm"
+        value: 'Storm',
       },
       {
-        "value": "Rogue"
+        value: 'Rogue',
       },
       {
-        "value": "Bestia"
+        value: 'Bestia',
       },
       {
-        "value": "Cable"
+        value: 'Cable',
       },
       {
-        "value": "Bishop"
+        value: 'Bishop',
       },
       {
-        "value": "Nightcrawler"
+        value: 'Nightcrawler',
       },
       {
-        "value": "Colossus"
+        value: 'Colossus',
       },
       {
-        "value": "Pyro"
+        value: 'Pyro',
       },
       {
-        "value": "Avalanche"
+        value: 'Avalanche',
       },
       {
-        "value": "Juggernaut"
+        value: 'Juggernaut',
       },
       {
-        "value": "Mystique"
+        value: 'Mystique',
       },
       {
-        "value": "Blob"
+        value: 'Blob',
       },
       {
-        "value": "Sabertooth"
-      }
+        value: 'Sabertooth',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 6,
-    "question": "tytułowi bochaterowie Marvela",
-    "answers": [
+    id: 6,
+    question: 'tytułowi bochaterowie Marvela',
+    answers: [
       {
-        "value": "Deadpool"
+        value: 'Deadpool',
       },
       {
-        "value": "Kapitan Ameryka"
+        value: 'Kapitan Ameryka',
       },
       {
-        "value": "Blade"
+        value: 'Blade',
       },
       {
-        "value": "Dardevil"
+        value: 'Dardevil',
       },
       {
-        "value": "Ant-Man"
+        value: 'Ant-Man',
       },
       {
-        "value": "IRONHEART"
+        value: 'IRONHEART',
       },
       {
-        "value": "czarna pantera"
+        value: 'czarna pantera',
       },
       {
-        "value": "Doktor Strange"
+        value: 'Doktor Strange',
       },
       {
-        "value": "Thor"
+        value: 'Thor',
       },
       {
-        "value": "Morbius"
+        value: 'Morbius',
       },
       {
-        "value": "She-Hulk"
+        value: 'She-Hulk',
       },
       {
-        "value": "czarna wdowa"
+        value: 'czarna wdowa',
       },
       {
-        "value": "Shang-chi"
+        value: 'Shang-chi',
       },
       {
-        "value": "Spider-man"
+        value: 'Spider-man',
       },
       {
-        "value": "Venom"
+        value: 'Venom',
       },
       {
-        "value": "Loki"
+        value: 'Loki',
       },
       {
-        "value": "Falcon"
+        value: 'Falcon',
       },
       {
-        "value": "Hawkeye"
+        value: 'Hawkeye',
       },
       {
-        "value": "Kapitan Marvel"
+        value: 'Kapitan Marvel',
       },
       {
-        "value": "Logan"
+        value: 'Logan',
       },
       {
-        "value": "The punisher"
+        value: 'The punisher',
       },
       {
-        "value": "Iron Fist"
+        value: 'Iron Fist',
       },
       {
-        "value": "Luke Cage"
+        value: 'Luke Cage',
       },
       {
-        "value": "Jesica Jones"
+        value: 'Jesica Jones',
       },
       {
-        "value": "Agentka carter"
+        value: 'Agentka carter',
       },
       {
-        "value": "Wolverine"
+        value: 'Wolverine',
       },
       {
-        "value": "Ghost rider"
+        value: 'Ghost rider',
       },
       {
-        "value": "Iron man"
+        value: 'Iron man',
       },
       {
-        "value": "Hulk"
+        value: 'Hulk',
       },
       {
-        "value": "Elektra"
-      }
+        value: 'Elektra',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 7,
-    "question": "tytułowi bochaterowie DC",
-    "answers": [
+    id: 7,
+    question: 'tytułowi bochaterowie DC',
+    answers: [
       {
-        "value": "Wonder Woman"
+        value: 'Wonder Woman',
       },
       {
-        "value": "Joker"
+        value: 'Joker',
       },
       {
-        "value": "BLUE BEETLE"
+        value: 'BLUE BEETLE',
       },
       {
-        "value": "Flash"
+        value: 'Flash',
       },
       {
-        "value": "Aquaman"
+        value: 'Aquaman',
       },
       {
-        "value": "Shazam"
+        value: 'Shazam',
       },
       {
-        "value": "green latern"
+        value: 'green latern',
       },
       {
-        "value": "Black adam"
+        value: 'Black adam',
       },
       {
-        "value": "Batman"
+        value: 'Batman',
       },
       {
-        "value": "Naoim"
+        value: 'Naoim',
       },
       {
-        "value": "peacemaker"
+        value: 'peacemaker',
       },
       {
-        "value": "Superman"
+        value: 'Superman',
       },
       {
-        "value": "Watchman"
+        value: 'Watchman',
       },
       {
-        "value": "Batwoman"
+        value: 'Batwoman',
       },
       {
-        "value": "Supergirl"
+        value: 'Supergirl',
       },
       {
-        "value": "Arrow"
+        value: 'Arrow',
       },
       {
-        "value": "Kobieta kot"
+        value: 'Kobieta kot',
       },
       {
-        "value": "Grayson"
-      }
+        value: 'Grayson',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 8,
-    "question": "bajki oraz seriale aktorskie FoxKids",
-    "answers": [
+    id: 8,
+    question: 'bajki oraz seriale aktorskie FoxKids',
+    answers: [
       {
-        "value": "Ach ten Andy"
+        value: 'Ach ten Andy',
       },
       {
-        "value": "Beyblade"
+        value: 'Beyblade',
       },
       {
-        "value": "Bob budowniczy"
+        value: 'Bob budowniczy',
       },
       {
-        "value": "Dennis Rozrabiaka"
+        value: 'Dennis Rozrabiaka',
       },
       {
-        "value": "Digimon"
+        value: 'Digimon',
       },
       {
-        "value": "Diplodo"
+        value: 'Diplodo',
       },
       {
-        "value": "Dzieciaki z klasy 402"
+        value: 'Dzieciaki z klasy 402',
       },
       {
-        "value": "Eskadra Orła"
+        value: 'Eskadra Orła',
       },
       {
-        "value": "Fantastyczna Czwórka"
+        value: 'Fantastyczna Czwórka',
       },
       {
-        "value": "Farma pełna strachów"
+        value: 'Farma pełna strachów',
       },
       {
-        "value": "Filiputki"
+        value: 'Filiputki',
       },
       {
-        "value": "Gadżet i Gadżetinis"
+        value: 'Gadżet i Gadżetinis',
       },
       {
-        "value": "Guziczek"
+        value: 'Guziczek',
       },
       {
-        "value": "Hamtaro"
+        value: 'Hamtaro',
       },
       {
-        "value": "Huckleberry Finn"
+        value: 'Huckleberry Finn',
       },
       {
-        "value": "Hutch miodowe serce"
+        value: 'Hutch miodowe serce',
       },
       {
-        "value": "Incredible Hulk"
+        value: 'Incredible Hulk',
       },
       {
-        "value": "Inspektor Gadżet"
+        value: 'Inspektor Gadżet',
       },
       {
-        "value": "Iron Man"
+        value: 'Iron Man',
       },
       {
-        "value": "Kleszcz"
+        value: 'Kleszcz',
       },
       {
-        "value": "Kosmiczne Biuro Śledcze"
+        value: 'Kosmiczne Biuro Śledcze',
       },
       {
-        "value": "Kosmiczne wojny"
+        value: 'Kosmiczne wojny',
       },
       {
-        "value": "Kot Ik"
+        value: 'Kot Ik',
       },
       {
-        "value": "Królewna Złoty Loczek"
+        value: 'Królewna Złoty Loczek',
       },
       {
-        "value": "Księżniczka Sissi"
+        value: 'Księżniczka Sissi',
       },
       {
-        "value": "Księżniczka Tenko"
+        value: 'Księżniczka Tenko',
       },
       {
-        "value": "Leśna rodzina"
+        value: 'Leśna rodzina',
       },
       {
-        "value": "Łebski Harry"
+        value: 'Łebski Harry',
       },
       {
-        "value": "M.A.S.K."
+        value: 'M.A.S.K.',
       },
       {
-        "value": "Medaboty"
+        value: 'Medaboty',
       },
       {
-        "value": "Mysz i potwór"
+        value: 'Mysz i potwór',
       },
       {
-        "value": "Myszorki na prerii"
+        value: 'Myszorki na prerii',
       },
       {
-        "value": "Nowe podróże Guliwera"
+        value: 'Nowe podróże Guliwera',
       },
       {
-        "value": "Lucky Luke"
+        value: 'Lucky Luke',
       },
       {
-        "value": "Odlotowe agentki"
+        value: 'Odlotowe agentki',
       },
       {
-        "value": "Patrol Jin Jina"
+        value: 'Patrol Jin Jina',
       },
       {
-        "value": "Pecola"
+        value: 'Pecola',
       },
       {
-        "value": "Pełzando"
+        value: 'Pełzando',
       },
       {
-        "value": "Pinokio"
+        value: 'Pinokio',
       },
       {
-        "value": "Piotruś Pan"
+        value: 'Piotruś Pan',
       },
       {
-        "value": "Pokemon"
+        value: 'Pokemon',
       },
       {
-        "value": "Pole Position"
+        value: 'Pole Position',
       },
       {
-        "value": "Potworne pomidory"
+        value: 'Potworne pomidory',
       },
       {
-        "value": "Prosiaczkowo"
+        value: 'Prosiaczkowo',
       },
       {
-        "value": "Przygody Kuby Guzika"
+        value: 'Przygody Kuby Guzika',
       },
       {
-        "value": "Przygody Olivera Twista"
+        value: 'Przygody Olivera Twista',
       },
       {
-        "value": "Przygody Pytalskich"
+        value: 'Przygody Pytalskich',
       },
       {
-        "value": "Przygody Syrenki"
+        value: 'Przygody Syrenki',
       },
       {
-        "value": "Roboluch"
+        value: 'Roboluch',
       },
       {
-        "value": "Shin-chan"
+        value: 'Shin-chan',
       },
       {
-        "value": "Sonic X"
+        value: 'Sonic X',
       },
       {
-        "value": "Spider-Man"
+        value: 'Spider-Man',
       },
       {
-        "value": "Srebrny Surfer"
+        value: 'Srebrny Surfer',
       },
       {
-        "value": "Starcom"
+        value: 'Starcom',
       },
       {
-        "value": "Szalony Jack pirat"
+        value: 'Szalony Jack pirat',
       },
       {
-        "value": "Szczęśliwa Ness"
+        value: 'Szczęśliwa Ness',
       },
       {
-        "value": "Świat Bobbiego"
+        value: 'Świat Bobbiego',
       },
       {
-        "value": "Świat według Ludwiczka"
+        value: 'Świat według Ludwiczka',
       },
       {
-        "value": "Tajemnicze opowieści Moville’a"
+        value: 'Tajemnicze opowieści Moville’a',
       },
       {
-        "value": "Tajne akta Psiej Agencji"
+        value: 'Tajne akta Psiej Agencji',
       },
       {
-        "value": "Teknoman"
+        value: 'Teknoman',
       },
       {
-        "value": "Tęczowa kraina"
+        value: 'Tęczowa kraina',
       },
       {
-        "value": "Trzy małe duszki"
+        value: 'Trzy małe duszki',
       },
       {
-        "value": "Tutenstein"
+        value: 'Tutenstein',
       },
       {
-        "value": "Ulisses"
+        value: 'Ulisses',
       },
       {
-        "value": "Walter Melon"
+        value: 'Walter Melon',
       },
       {
-        "value": "Wesoła siódemka"
+        value: 'Wesoła siódemka',
       },
       {
-        "value": "Wojownicze Żółwie Ninja"
+        value: 'Wojownicze Żółwie Ninja',
       },
       {
-        "value": "Wunschpunsch"
+        value: 'Wunschpunsch',
       },
       {
-        "value": "Wyścigi NASCAR"
+        value: 'Wyścigi NASCAR',
       },
       {
-        "value": "X-Men"
+        value: 'X-Men',
       },
       {
-        "value": "Zły pies"
+        value: 'Zły pies',
       },
       {
-        "value": "Beetleborgi"
+        value: 'Beetleborgi',
       },
       {
-        "value": "Dzielne żółwie: Następna mutacja"
+        value: 'Dzielne żółwie: Następna mutacja',
       },
       {
-        "value": "Dziwne przypadki w Blake Holsey High"
+        value: 'Dziwne przypadki w Blake Holsey High',
       },
       {
-        "value": "Eerie Indiana"
+        value: 'Eerie Indiana',
       },
       {
-        "value": "Liceum na morzu"
+        value: 'Liceum na morzu',
       },
       {
-        "value": "Gęsia skórka"
+        value: 'Gęsia skórka',
       },
       {
-        "value": "Gwiezdny rycerz"
+        value: 'Gwiezdny rycerz',
       },
       {
-        "value": "Jak dwie krople wody"
+        value: 'Jak dwie krople wody',
       },
       {
-        "value": "Nowe przygody rodziny Addamsów"
+        value: 'Nowe przygody rodziny Addamsów',
       },
       {
-        "value": "Power Rangers Ninja Storm"
+        value: 'Power Rangers Ninja Storm',
       },
       {
-        "value": "Power Rangers Time Force"
+        value: 'Power Rangers Time Force',
       },
       {
-        "value": "VR-Troopers"
-      }
+        value: 'VR-Troopers',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 9,
-    "question": "bajki oraz seriale aktorskie Jetix",
-    "answers": [
+    id: 9,
+    question: 'bajki oraz seriale aktorskie Jetix',
+    answers: [
       {
-        "value": "A.T.O.M. Alpha Teens On Machines"
+        value: 'A.T.O.M. Alpha Teens On Machines',
       },
       {
-        "value": "Ach, ten Andy!"
+        value: 'Ach, ten Andy!',
       },
       {
-        "value": "Amerykański smok Jake Long"
+        value: 'Amerykański smok Jake Long',
       },
       {
-        "value": "Bobobo-bo Bo-bobo"
+        value: 'Bobobo-bo Bo-bobo',
       },
       {
-        "value": "Dennis Rozrabiaka"
+        value: 'Dennis Rozrabiaka',
       },
       {
-        "value": "Digimon"
+        value: 'Digimon',
       },
       {
-        "value": "Dzieciak kontra Kot"
+        value: 'Dzieciak kontra Kot',
       },
       {
-        "value": "Dzieciaki z klasy 402"
+        value: 'Dzieciaki z klasy 402',
       },
       {
-        "value": "Fantastyczna Czwórka"
+        value: 'Fantastyczna Czwórka',
       },
       {
-        "value": "Farma pełna strachów"
+        value: 'Farma pełna strachów',
       },
       {
-        "value": "Fineasz i Ferb"
+        value: 'Fineasz i Ferb',
       },
       {
-        "value": "Gadżet i Gadżetinis"
+        value: 'Gadżet i Gadżetinis',
       },
       {
-        "value": "Galactik Football"
+        value: 'Galactik Football',
       },
       {
-        "value": "Hamtaro"
+        value: 'Hamtaro',
       },
       {
-        "value": "Iggy Arbuckle"
+        value: 'Iggy Arbuckle',
       },
       {
-        "value": "Incredible Hulk"
+        value: 'Incredible Hulk',
       },
       {
-        "value": "Iron Man: Obrońca dobra"
+        value: 'Iron Man: Obrońca dobra',
       },
       {
-        "value": "Jerry i paczka"
+        value: 'Jerry i paczka',
       },
       {
-        "value": "Jimmy Cool"
+        value: 'Jimmy Cool',
       },
       {
-        "value": "Johnny Test"
+        value: 'Johnny Test',
       },
       {
-        "value": "Kapitan Flamingo"
+        value: 'Kapitan Flamingo',
       },
       {
-        "value": "Kleszcz"
+        value: 'Kleszcz',
       },
       {
-        "value": "Kosmiczne Biuro Śledcze"
+        value: 'Kosmiczne Biuro Śledcze',
       },
       {
-        "value": "Kot Ik"
+        value: 'Kot Ik',
       },
       {
-        "value": "Król szamanów"
+        value: 'Król szamanów',
       },
       {
-        "value": "M.A.S.K."
+        value: 'M.A.S.K.',
       },
       {
-        "value": "Magi-Nation"
+        value: 'Magi-Nation',
       },
       {
-        "value": "Medabots"
+        value: 'Medabots',
       },
       {
-        "value": "MegaMan NT Warrior"
+        value: 'MegaMan NT Warrior',
       },
       {
-        "value": "Miejskie szkodniki"
+        value: 'Miejskie szkodniki',
       },
       {
-        "value": "Monster Buster Club"
+        value: 'Monster Buster Club',
       },
       {
-        "value": "Motomyszy z Marsa"
+        value: 'Motomyszy z Marsa',
       },
       {
-        "value": "Naruto"
+        value: 'Naruto',
       },
       {
-        "value": "Nowe przygody Lucky Luke’a"
+        value: 'Nowe przygody Lucky Luke’a',
       },
       {
-        "value": "Odlotowe agentki"
+        value: 'Odlotowe agentki',
       },
       {
-        "value": "Oggy i karaluchy"
+        value: 'Oggy i karaluchy',
       },
       {
-        "value": "Oban Star Racers"
+        value: 'Oban Star Racers',
       },
       {
-        "value": "Planeta Sketch"
+        value: 'Planeta Sketch',
       },
       {
-        "value": "Pokemon"
+        value: 'Pokemon',
       },
       {
-        "value": "Przygody Kuby Guzika"
+        value: 'Przygody Kuby Guzika',
       },
       {
-        "value": "Pucca"
+        value: 'Pucca',
       },
       {
-        "value": "Roboluch"
+        value: 'Roboluch',
       },
       {
-        "value": "Rodzina Tofu"
+        value: 'Rodzina Tofu',
       },
       {
-        "value": "Sąsiedzi"
+        value: 'Sąsiedzi',
       },
       {
-        "value": "Shin-chan"
+        value: 'Shin-chan',
       },
       {
-        "value": "Sówka"
+        value: 'Sówka',
       },
       {
-        "value": "Spider-man"
+        value: 'Spider-man',
       },
       {
-        "value": "Sonic X"
+        value: 'Sonic X',
       },
       {
-        "value": "Srebrny Surfer"
+        value: 'Srebrny Surfer',
       },
       {
-        "value": "Super Robot Monkey Team Hyperforce Go!"
+        value: 'Super Robot Monkey Team Hyperforce Go!',
       },
       {
-        "value": "Szalony Jack, pirat"
+        value: 'Szalony Jack, pirat',
       },
       {
-        "value": "Szkoła Shuriken"
+        value: 'Szkoła Shuriken',
       },
       {
-        "value": "Świat Questa"
+        value: 'Świat Questa',
       },
       {
-        "value": "Świat według Ludwiczka"
+        value: 'Świat według Ludwiczka',
       },
       {
-        "value": "Tajemnicze opowieści Moville’a"
+        value: 'Tajemnicze opowieści Moville’a',
       },
       {
-        "value": "Tajne akta Psiej Agencji"
+        value: 'Tajne akta Psiej Agencji',
       },
       {
-        "value": "Team Galaxy – kosmiczne przygody galaktycznej drużyny"
+        value: 'Team Galaxy – kosmiczne przygody galaktycznej drużyny',
       },
       {
-        "value": "Teknoman"
+        value: 'Teknoman',
       },
       {
-        "value": "The Sensibles"
+        value: 'The Sensibles',
       },
       {
-        "value": "Transformers Animated"
+        value: 'Transformers Animated',
       },
       {
-        "value": "Trzy małe duszki"
+        value: 'Trzy małe duszki',
       },
       {
-        "value": "Tutenstein"
+        value: 'Tutenstein',
       },
       {
-        "value": "W.I.T.C.H"
+        value: 'W.I.T.C.H',
       },
       {
-        "value": "Walter Melon"
+        value: 'Walter Melon',
       },
       {
-        "value": "Wojownicze Żółwie Ninja"
+        value: 'Wojownicze Żółwie Ninja',
       },
       {
-        "value": "Wunschpunsch"
+        value: 'Wunschpunsch',
       },
       {
-        "value": "Wyścigi NASCAR"
+        value: 'Wyścigi NASCAR',
       },
       {
-        "value": "X-Men"
+        value: 'X-Men',
       },
       {
-        "value": "Yin Yang Yo!"
+        value: 'Yin Yang Yo!',
       },
       {
-        "value": "Zły pies"
+        value: 'Zły pies',
       },
       {
-        "value": "Dziwne przypadki w Blake Holsey High"
+        value: 'Dziwne przypadki w Blake Holsey High',
       },
       {
-        "value": "Eerie, Indiana"
+        value: 'Eerie, Indiana',
       },
       {
-        "value": "Gęsia skórka"
+        value: 'Gęsia skórka',
       },
       {
-        "value": "H2O – wystarczy kropla"
+        value: 'H2O – wystarczy kropla',
       },
       {
-        "value": "Jak dwie krople wody"
+        value: 'Jak dwie krople wody',
       },
       {
-        "value": "Leniuchowo"
+        value: 'Leniuchowo',
       },
       {
-        "value": "Mighty Morphin Power Rangers"
+        value: 'Mighty Morphin Power Rangers',
       },
       {
-        "value": "Monster Warriors"
+        value: 'Monster Warriors',
       },
       {
-        "value": "Mroczna przepowiednia"
+        value: 'Mroczna przepowiednia',
       },
       {
-        "value": "Nie ma to jak hotel"
+        value: 'Nie ma to jak hotel',
       },
       {
-        "value": "Nowe przygody rodziny Addamsów"
+        value: 'Nowe przygody rodziny Addamsów',
       },
       {
-        "value": "Power Rangers: Dino Grzmot"
+        value: 'Power Rangers: Dino Grzmot',
       },
       {
-        "value": "Power Rangers: Furia dżungli"
+        value: 'Power Rangers: Furia dżungli',
       },
       {
-        "value": "Power Rangers: Mistyczna moc"
+        value: 'Power Rangers: Mistyczna moc',
       },
       {
-        "value": "Power Rangers Ninja Storm"
+        value: 'Power Rangers Ninja Storm',
       },
       {
-        "value": "Power Rangers: Operacja Overdrive"
+        value: 'Power Rangers: Operacja Overdrive',
       },
       {
-        "value": "Power Rangers S.P.D."
+        value: 'Power Rangers S.P.D.',
       },
       {
-        "value": "Power Rangers Time Force"
-      }
+        value: 'Power Rangers Time Force',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 10,
-    "question": "bajki oraz seriale aktorskie MiniMax",
-    "answers": [
+    id: 10,
+    question: 'bajki oraz seriale aktorskie MiniMax',
+    answers: [
       {
-        "value": "Aparatka"
+        value: 'Aparatka',
       },
       {
-        "value": "Niefortunna Czarownica"
+        value: 'Niefortunna Czarownica',
       },
       {
-        "value": "Radiostacja Roscoe"
+        value: 'Radiostacja Roscoe',
       },
       {
-        "value": "George Niewielki"
+        value: 'George Niewielki',
       },
       {
-        "value": "Kotopies"
+        value: 'Kotopies',
       },
       {
-        "value": "Magiczny autobus"
+        value: 'Magiczny autobus',
       },
       {
-        "value": "Dwa koty i pies"
+        value: 'Dwa koty i pies',
       },
       {
-        "value": "Klub Winx"
+        value: 'Klub Winx',
       },
       {
-        "value": "Martin Tajemniczy"
+        value: 'Martin Tajemniczy',
       },
       {
-        "value": "Pełzaki"
+        value: 'Pełzaki',
       },
       {
-        "value": "Przygody Tintina"
+        value: 'Przygody Tintina',
       },
       {
-        "value": "Sabrina"
-      }
+        value: 'Sabrina',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 11,
-    "question": "bajki oraz seriale aktorskie zigzap",
-    "answers": [
+    id: 11,
+    question: 'bajki oraz seriale aktorskie zigzap',
+    answers: [
       {
-        "value": "6 w pracy"
+        value: '6 w pracy',
       },
       {
-        "value": "Aparatka"
+        value: 'Aparatka',
       },
       {
-        "value": "Dziewczyny, chłopaki"
+        value: 'Dziewczyny, chłopaki',
       },
       {
-        "value": "Hot Wheels: Battle Force 5"
+        value: 'Hot Wheels: Battle Force 5',
       },
       {
-        "value": "Kapitan Biceps"
+        value: 'Kapitan Biceps',
       },
       {
-        "value": "Kosmiczni Ścigacze"
+        value: 'Kosmiczni Ścigacze',
       },
       {
-        "value": "Młodzi mistrzowie Shaolin"
+        value: 'Młodzi mistrzowie Shaolin',
       },
       {
-        "value": "Pinky i Mózg"
+        value: 'Pinky i Mózg',
       },
       {
-        "value": "Ralf, szczur rekordzista"
+        value: 'Ralf, szczur rekordzista',
       },
       {
-        "value": "Skyland: Początek Nowego Świata"
+        value: 'Skyland: Początek Nowego Świata',
       },
       {
-        "value": "Tajna misja"
+        value: 'Tajna misja',
       },
       {
-        "value": "Wybraniec smoka"
+        value: 'Wybraniec smoka',
       },
       {
-        "value": "Ziemniak – ostatnie starcie"
+        value: 'Ziemniak – ostatnie starcie',
       },
       {
-        "value": "Degrassi"
+        value: 'Degrassi',
       },
       {
-        "value": "Dziewczyny i miłość"
+        value: 'Dziewczyny i miłość',
       },
       {
-        "value": "Lizzie McGuire"
+        value: 'Lizzie McGuire',
       },
       {
-        "value": "Na wysokiej fali"
+        value: 'Na wysokiej fali',
       },
       {
-        "value": "Niefortunna czarownica"
+        value: 'Niefortunna czarownica',
       },
       {
-        "value": "Planeta Rocka"
+        value: 'Planeta Rocka',
       },
       {
-        "value": "Radiostacja Roscoe"
+        value: 'Radiostacja Roscoe',
       },
       {
-        "value": "Szał na Amandę"
+        value: 'Szał na Amandę',
       },
       {
-        "value": "Zagubieni z lotu 29"
+        value: 'Zagubieni z lotu 29',
       },
       {
-        "value": "Zoey 101"
-      }
+        value: 'Zoey 101',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 12,
-    "question": "bajki oraz seriale aktorskie carton Network",
-    "answers": [
+    id: 12,
+    question: 'bajki oraz seriale aktorskie carton Network',
+    answers: [
       {
-        "value": "Laboratorium Dextera"
+        value: 'Laboratorium Dextera',
       },
       {
-        "value": "Johnny Bravo"
+        value: 'Johnny Bravo',
       },
       {
-        "value": "Krowa i Kurczak"
+        value: 'Krowa i Kurczak',
       },
       {
-        "value": "Atomówki"
+        value: 'Atomówki',
       },
       {
-        "value": "Ed, Edd i Eddy"
+        value: 'Ed, Edd i Eddy',
       },
       {
-        "value": "Chojrak – tchórzliwy pies"
+        value: 'Chojrak – tchórzliwy pies',
       },
       {
-        "value": "Strażnicy czasu"
+        value: 'Strażnicy czasu',
       },
       {
-        "value": "Samuraj Jack"
+        value: 'Samuraj Jack',
       },
       {
-        "value": "Gwiezdne wojny: Wojny klonów"
+        value: 'Gwiezdne wojny: Wojny klonów',
       },
       {
-        "value": "Dom dla zmyślonych przyjaciół pani Foster"
+        value: 'Dom dla zmyślonych przyjaciół pani Foster',
       },
       {
-        "value": "Podwójne życie Jagody Lee"
+        value: 'Podwójne życie Jagody Lee',
       },
       {
-        "value": "Ben 10"
+        value: 'Ben 10',
       },
       {
-        "value": "Klasa 3000"
+        value: 'Klasa 3000',
       },
       {
-        "value": "Co gryzie Jimmy’ego?"
+        value: 'Co gryzie Jimmy’ego?',
       },
       {
-        "value": "Transformers Animated"
+        value: 'Transformers Animated',
       },
       {
-        "value": "Pora na przygodę!"
+        value: 'Pora na przygodę!',
       },
       {
-        "value": "Generator Rex"
+        value: 'Generator Rex',
       },
       {
-        "value": "Niesamowity świat Gumballa"
+        value: 'Niesamowity świat Gumballa',
       },
       {
-        "value": "Wujcio Dobra Rada"
+        value: 'Wujcio Dobra Rada',
       },
       {
-        "value": "Między nami, misiami"
+        value: 'Między nami, misiami',
       },
       {
-        "value": "Ninjago: Mistrzowie Spinjitzu"
-      }
+        value: 'Ninjago: Mistrzowie Spinjitzu',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 13,
-    "question": "Kolory power rangersów",
-    "answers": [
+    id: 13,
+    question: 'Kolory power rangersów',
+    answers: [
       {
-        "value": "Czerwony"
+        value: 'Czerwony',
       },
       {
-        "value": "Żółty"
+        value: 'Żółty',
       },
       {
-        "value": "Niebieski"
+        value: 'Niebieski',
       },
       {
-        "value": "Rózowy"
+        value: 'Rózowy',
       },
       {
-        "value": "Czarny"
+        value: 'Czarny',
       },
       {
-        "value": "Zielony"
+        value: 'Zielony',
       },
       {
-        "value": "Biały"
+        value: 'Biały',
       },
       {
-        "value": "Fioletowy"
+        value: 'Fioletowy',
       },
       {
-        "value": "Srebrny"
+        value: 'Srebrny',
       },
       {
-        "value": "Złoty"
+        value: 'Złoty',
       },
       {
-        "value": "Pomarańczowy"
-      }
+        value: 'Pomarańczowy',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 14,
-    "question": "Tytuły serii power rangers",
-    "answers": [
+    id: 14,
+    question: 'Tytuły serii power rangers',
+    answers: [
       {
-        "value": "Mighty Morphin"
+        value: 'Mighty Morphin',
       },
       {
-        "value": "Zeo"
+        value: 'Zeo',
       },
       {
-        "value": "Turbo"
+        value: 'Turbo',
       },
       {
-        "value": "w Kosmosie"
+        value: 'w Kosmosie',
       },
       {
-        "value": "Zagubiona Galaktyka"
+        value: 'Zagubiona Galaktyka',
       },
       {
-        "value": "Lightspeed Rescue"
+        value: 'Lightspeed Rescue',
       },
       {
-        "value": "Time Force"
+        value: 'Time Force',
       },
       {
-        "value": "Wild Force"
+        value: 'Wild Force',
       },
       {
-        "value": "Ninja Storm"
+        value: 'Ninja Storm',
       },
       {
-        "value": "Dino Grzmot"
+        value: 'Dino Grzmot',
       },
       {
-        "value": "S.P.D."
+        value: 'S.P.D.',
       },
       {
-        "value": "Mistyczna moc"
+        value: 'Mistyczna moc',
       },
       {
-        "value": "Operacja Overdrive"
+        value: 'Operacja Overdrive',
       },
       {
-        "value": "Furia dżungli"
+        value: 'Furia dżungli',
       },
       {
-        "value": "RPM"
+        value: 'RPM',
       },
       {
-        "value": "Samurai"
+        value: 'Samurai',
       },
       {
-        "value": "Super Samurai"
+        value: 'Super Samurai',
       },
       {
-        "value": "Megaforce"
+        value: 'Megaforce',
       },
       {
-        "value": "Super Megaforce"
+        value: 'Super Megaforce',
       },
       {
-        "value": "Dino Charge"
+        value: 'Dino Charge',
       },
       {
-        "value": "Dino Super Charge"
+        value: 'Dino Super Charge',
       },
       {
-        "value": "Ninja Steel"
+        value: 'Ninja Steel',
       },
       {
-        "value": "Super Ninja Steel"
+        value: 'Super Ninja Steel',
       },
       {
-        "value": "Beast Morphers"
+        value: 'Beast Morphers',
       },
       {
-        "value": "Dino Fury"
-      }
+        value: 'Dino Fury',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 15,
-    "question": "zaklęcia w serii Harry Potter",
-    "answers": [
+    id: 15,
+    question: 'zaklęcia w serii Harry Potter',
+    answers: [
       {
-        "value": "Accio"
+        value: 'Accio',
       },
       {
-        "value": "Aguamenti"
+        value: 'Aguamenti',
       },
       {
-        "value": "Alohomora"
+        value: 'Alohomora',
       },
       {
-        "value": "Anapneo"
+        value: 'Anapneo',
       },
       {
-        "value": "Aperacjum"
+        value: 'Aperacjum',
       },
       {
-        "value": "Aqua Eructo"
+        value: 'Aqua Eructo',
       },
       {
-        "value": "Arania Exumei"
+        value: 'Arania Exumei',
       },
       {
-        "value": "Aresto Momentum"
+        value: 'Aresto Momentum',
       },
       {
-        "value": "Avada Kedavra"
+        value: 'Avada Kedavra',
       },
       {
-        "value": "Avis"
+        value: 'Avis',
       },
       {
-        "value": "Bąblogłowy"
+        value: 'Bąblogłowy',
       },
       {
-        "value": "Bombarda"
+        value: 'Bombarda',
       },
       {
-        "value": "Bracchium Emendo"
+        value: 'Bracchium Emendo',
       },
       {
-        "value": "Carpe Retractum"
+        value: 'Carpe Retractum',
       },
       {
-        "value": "Cave inimicum"
+        value: 'Cave inimicum',
       },
       {
-        "value": "Chłoszczyść"
+        value: 'Chłoszczyść',
       },
       {
-        "value": "Colloportus"
+        value: 'Colloportus',
       },
       {
-        "value": "Confundus"
+        value: 'Confundus',
       },
       {
-        "value": "Confringo"
+        value: 'Confringo',
       },
       {
-        "value": "Conjunctivus"
+        value: 'Conjunctivus',
       },
       {
-        "value": "Cruciatus"
+        value: 'Cruciatus',
       },
       {
-        "value": "Cameleo"
+        value: 'Cameleo',
       },
       {
-        "value": "Deletrius"
+        value: 'Deletrius',
       },
       {
-        "value": "Densaugeo"
+        value: 'Densaugeo',
       },
       {
-        "value": "Deprimo"
+        value: 'Deprimo',
       },
       {
-        "value": "Depulso"
+        value: 'Depulso',
       },
       {
-        "value": "Diffindo"
+        value: 'Diffindo',
       },
       {
-        "value": "Diminuendo"
+        value: 'Diminuendo',
       },
       {
-        "value": "Draconifors"
+        value: 'Draconifors',
       },
       {
-        "value": "Drętwota"
+        value: 'Drętwota',
       },
       {
-        "value": "Ducklifors"
+        value: 'Ducklifors',
       },
       {
-        "value": "Desmaio"
+        value: 'Desmaio',
       },
       {
-        "value": "Enervate"
+        value: 'Enervate',
       },
       {
-        "value": "Engorgio"
+        value: 'Engorgio',
       },
       {
-        "value": "Episkey"
+        value: 'Episkey',
       },
       {
-        "value": "Evanesco"
+        value: 'Evanesco',
       },
       {
-        "value": "Everte Stati"
+        value: 'Everte Stati',
       },
       {
-        "value": "Expecto Patronum"
+        value: 'Expecto Patronum',
       },
       {
-        "value": "Expelliarmus"
+        value: 'Expelliarmus',
       },
       {
-        "value": "Expulso"
+        value: 'Expulso',
       },
       {
-        "value": "Ferula"
+        value: 'Ferula',
       },
       {
-        "value": "Ferraverto"
+        value: 'Ferraverto',
       },
       {
-        "value": "Finite"
+        value: 'Finite',
       },
       {
-        "value": "Flagrate"
+        value: 'Flagrate',
       },
       {
-        "value": "Flagrante"
+        value: 'Flagrante',
       },
       {
-        "value": "Flippendo"
+        value: 'Flippendo',
       },
       {
-        "value": "Furnunculus"
+        value: 'Furnunculus',
       },
       {
-        "value": "Geminio"
+        value: 'Geminio',
       },
       {
-        "value": "Glacius"
+        value: 'Glacius',
       },
       {
-        "value": "Glisseo"
+        value: 'Glisseo',
       },
       {
-        "value": "Herbivicus"
+        value: 'Herbivicus',
       },
       {
-        "value": "Homenum Revelio"
+        value: 'Homenum Revelio',
       },
       {
-        "value": "Immovius"
+        value: 'Immovius',
       },
       {
-        "value": "Immobilus"
+        value: 'Immobilus',
       },
       {
-        "value": "Impedimenta"
+        value: 'Impedimenta',
       },
       {
-        "value": "Imperius"
+        value: 'Imperius',
       },
       {
-        "value": "Impervirus"
+        value: 'Impervirus',
       },
       {
-        "value": "Incarcerous"
+        value: 'Incarcerous',
       },
       {
-        "value": "Incarcorpus"
+        value: 'Incarcorpus',
       },
       {
-        "value": "Incendio"
+        value: 'Incendio',
       },
       {
-        "value": "Jęzlep"
+        value: 'Jęzlep',
       },
       {
-        "value": "Lacarnum Inflamarae"
+        value: 'Lacarnum Inflamarae',
       },
       {
-        "value": "Lapifors"
+        value: 'Lapifors',
       },
       {
-        "value": "Legilimens"
+        value: 'Legilimens',
       },
       {
-        "value": "Levicorpus"
+        value: 'Levicorpus',
       },
       {
-        "value": "Liberacorpus"
+        value: 'Liberacorpus',
       },
       {
-        "value": "Locomotor"
+        value: 'Locomotor',
       },
       {
-        "value": "Lumos"
+        value: 'Lumos',
       },
       {
-        "value": "Melofors"
+        value: 'Melofors',
       },
       {
-        "value": "Mimblewimble"
+        value: 'Mimblewimble',
       },
       {
-        "value": "Mobiliarbus"
+        value: 'Mobiliarbus',
       },
       {
-        "value": "Mobilicorpus"
+        value: 'Mobilicorpus',
       },
       {
-        "value": "Morsmordre"
+        value: 'Morsmordre',
       },
       {
-        "value": "Muffilato"
+        value: 'Muffilato',
       },
       {
-        "value": "Nox"
+        value: 'Nox',
       },
       {
-        "value": "Obscuro"
+        value: 'Obscuro',
       },
       {
-        "value": "Obliviate"
+        value: 'Obliviate',
       },
       {
-        "value": "Orbis"
+        value: 'Orbis',
       },
       {
-        "value": "Orchideus"
+        value: 'Orchideus',
       },
       {
-        "value": "Oppungo"
+        value: 'Oppungo',
       },
       {
-        "value": "Perriculum"
+        value: 'Perriculum',
       },
       {
-        "value": "Peskipiksi Pesternomi"
+        value: 'Peskipiksi Pesternomi',
       },
       {
-        "value": "Portus"
+        value: 'Portus',
       },
       {
-        "value": "Priori Incantatem"
+        value: 'Priori Incantatem',
       },
       {
-        "value": "Protego"
+        value: 'Protego',
       },
       {
-        "value": "Piertotum locomotor"
+        value: 'Piertotum locomotor',
       },
       {
-        "value": "Quietus"
+        value: 'Quietus',
       },
       {
-        "value": "Reducio"
+        value: 'Reducio',
       },
       {
-        "value": "Reducto"
+        value: 'Reducto',
       },
       {
-        "value": "Relashio"
+        value: 'Relashio',
       },
       {
-        "value": "Reparo"
+        value: 'Reparo',
       },
       {
-        "value": "Repello Mugoletum"
+        value: 'Repello Mugoletum',
       },
       {
-        "value": "Zniewalająca Łaskotka"
+        value: 'Zniewalająca Łaskotka',
       },
       {
-        "value": "Riddiculus"
+        value: 'Riddiculus',
       },
       {
-        "value": "Salvio Hexia"
+        value: 'Salvio Hexia',
       },
       {
-        "value": "Sectumsempra"
+        value: 'Sectumsempra',
       },
       {
-        "value": "Serpensortia"
+        value: 'Serpensortia',
       },
       {
-        "value": "Sezam Materio"
+        value: 'Sezam Materio',
       },
       {
-        "value": "Silencio"
+        value: 'Silencio',
       },
       {
-        "value": "Skurge"
+        value: 'Skurge',
       },
       {
-        "value": "Sonorus"
+        value: 'Sonorus',
       },
       {
-        "value": "Spongify/Spongifus"
+        value: 'Spongify/Spongifus',
       },
       {
-        "value": "Tarantallegra"
+        value: 'Tarantallegra',
       },
       {
-        "value": "Tergeo"
+        value: 'Tergeo',
       },
       {
-        "value": "Upiorogacek"
-      }
+        value: 'Upiorogacek',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 16,
-    "question": "Rywale Piasta Gliwice na poziomie Ekstraklasy",
-    "answers": [
+    id: 16,
+    question: 'Rywale Piasta Gliwice na poziomie Ekstraklasy',
+    answers: [
       {
-        "value": "Legia Warszawa"
+        value: 'Legia Warszawa',
       },
       {
-        "value": "Lech Poznań"
+        value: 'Lech Poznań',
       },
       {
-        "value": "Śląsk Wrocław"
+        value: 'Śląsk Wrocław',
       },
       {
-        "value": "Górnik Zabrze"
+        value: 'Górnik Zabrze',
       },
       {
-        "value": "Polonia Warszawa"
+        value: 'Polonia Warszawa',
       },
       {
-        "value": "Wisła Kraków"
+        value: 'Wisła Kraków',
       },
       {
-        "value": "Lechia Gdańsk"
+        value: 'Lechia Gdańsk',
       },
       {
-        "value": "Zagłębie Lubin"
+        value: 'Zagłębie Lubin',
       },
       {
-        "value": "Jagiellonia Białystok"
+        value: 'Jagiellonia Białystok',
       },
       {
-        "value": "Korona Kielce"
+        value: 'Korona Kielce',
       },
       {
-        "value": "Pogoń Szczecin"
+        value: 'Pogoń Szczecin',
       },
       {
-        "value": "Widzew Łódź"
+        value: 'Widzew Łódź',
       },
       {
-        "value": "Podbeskidzie Bielsko-Biała"
+        value: 'Podbeskidzie Bielsko-Biała',
       },
       {
-        "value": "Ruch Chorzów"
+        value: 'Ruch Chorzów',
       },
       {
-        "value": "GKS Bełchatów"
+        value: 'GKS Bełchatów',
       },
       {
-        "value": "Polonia Bytom"
+        value: 'Polonia Bytom',
       },
       {
-        "value": "Odra Wodzisław Śląski"
+        value: 'Odra Wodzisław Śląski',
       },
       {
-        "value": "Cracovia"
+        value: 'Cracovia',
       },
       {
-        "value": "ŁKS"
+        value: 'ŁKS',
       },
       {
-        "value": "Arka Gdynia"
+        value: 'Arka Gdynia',
       },
       {
-        "value": "Podbeskidzie Bielsko-Biała"
+        value: 'Podbeskidzie Bielsko-Biała',
       },
       {
-        "value": "Zawisza Bydgoszcz"
+        value: 'Zawisza Bydgoszcz',
       },
       {
-        "value": "Górnik Łęczna"
+        value: 'Górnik Łęczna',
       },
       {
-        "value": "Termalica Bruk-Bet Nieciecza"
+        value: 'Termalica Bruk-Bet Nieciecza',
       },
       {
-        "value": "Wisła Płock"
+        value: 'Wisła Płock',
       },
       {
-        "value": "Sandecja Nowy Sącz"
+        value: 'Sandecja Nowy Sącz',
       },
       {
-        "value": "Miedź Legnica"
+        value: 'Miedź Legnica',
       },
       {
-        "value": "Raków Częstochowa"
+        value: 'Raków Częstochowa',
       },
       {
-        "value": "Stal Mielec"
+        value: 'Stal Mielec',
       },
       {
-        "value": "Radomiak Radom"
+        value: 'Radomiak Radom',
       },
       {
-        "value": "Warta Poznań"
-      }
+        value: 'Warta Poznań',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 17,
-    "question": "Postacie z serialu gra o tron",
-    "answers": [
+    id: 17,
+    question: 'Postacie z serialu gra o tron',
+    answers: [
       {
-        "value": "Tyrion Lannister"
+        value: 'Tyrion Lannister',
       },
       {
-        "value": "Daenerys Targaryen"
+        value: 'Daenerys Targaryen',
       },
       {
-        "value": "Jon Snow"
+        value: 'Jon Snow',
       },
       {
-        "value": "Arya Stark"
+        value: 'Arya Stark',
       },
       {
-        "value": "Jaime Lannister"
+        value: 'Jaime Lannister',
       },
       {
-        "value": "Sandor Clegane"
+        value: 'Sandor Clegane',
       },
       {
-        "value": "Eddard Stark"
+        value: 'Eddard Stark',
       },
       {
-        "value": "Tormund"
+        value: 'Tormund',
       },
       {
-        "value": "Oberyn Martell"
+        value: 'Oberyn Martell',
       },
       {
-        "value": "Cersei Lannister"
+        value: 'Cersei Lannister',
       },
       {
-        "value": "Tywin Lannister"
+        value: 'Tywin Lannister',
       },
       {
-        "value": "Jorah Mormont"
+        value: 'Jorah Mormont',
       },
       {
-        "value": "Brienne z Tarthu"
+        value: 'Brienne z Tarthu',
       },
       {
-        "value": "Robb Stark"
+        value: 'Robb Stark',
       },
       {
-        "value": "Bronn"
+        value: 'Bronn',
       },
       {
-        "value": "Petyr Baelish"
+        value: 'Petyr Baelish',
       },
       {
-        "value": "Sansa Stark"
+        value: 'Sansa Stark',
       },
       {
-        "value": "Ygritte"
+        value: 'Ygritte',
       },
       {
-        "value": "Olenna Tyrell"
+        value: 'Olenna Tyrell',
       },
       {
-        "value": "Margaery Tyrell"
+        value: 'Margaery Tyrell',
       },
       {
-        "value": "Samwell Tarly"
+        value: 'Samwell Tarly',
       },
       {
-        "value": "Davos Seaworth"
+        value: 'Davos Seaworth',
       },
       {
-        "value": "Drogo"
+        value: 'Drogo',
       },
       {
-        "value": "Ramsay Bolton"
+        value: 'Ramsay Bolton',
       },
       {
-        "value": "Varys"
+        value: 'Varys',
       },
       {
-        "value": "Nocny Król"
+        value: 'Nocny Król',
       },
       {
-        "value": "Hodor"
+        value: 'Hodor',
       },
       {
-        "value": "Missandei"
+        value: 'Missandei',
       },
       {
-        "value": "Jaqen H'ghar"
+        value: "Jaqen H'ghar",
       },
       {
-        "value": "Podrick Payne"
+        value: 'Podrick Payne',
       },
       {
-        "value": "Stannis Baratheon"
+        value: 'Stannis Baratheon',
       },
       {
-        "value": "Melisandre"
+        value: 'Melisandre',
       },
       {
-        "value": "Joffrey Baratheon"
+        value: 'Joffrey Baratheon',
       },
       {
-        "value": "Theon Greyjoy"
+        value: 'Theon Greyjoy',
       },
       {
-        "value": "Shireen Baratheon"
+        value: 'Shireen Baratheon',
       },
       {
-        "value": "Catelyn Stark"
+        value: 'Catelyn Stark',
       },
       {
-        "value": "Yara Greyjoy"
+        value: 'Yara Greyjoy',
       },
       {
-        "value": "Maester Aemon"
+        value: 'Maester Aemon',
       },
       {
-        "value": "Benjen Stark"
+        value: 'Benjen Stark',
       },
       {
-        "value": "Gendry"
+        value: 'Gendry',
       },
       {
-        "value": "Jojen Reed"
+        value: 'Jojen Reed',
       },
       {
-        "value": "Beric Dondarrion"
+        value: 'Beric Dondarrion',
       },
       {
-        "value": "Goździk"
+        value: 'Goździk',
       },
       {
-        "value": "Jeor Mormont"
+        value: 'Jeor Mormont',
       },
       {
-        "value": "Viserys Targaryen"
+        value: 'Viserys Targaryen',
       },
       {
-        "value": "Szary Robak"
+        value: 'Szary Robak',
       },
       {
-        "value": "Daario Naharis"
+        value: 'Daario Naharis',
       },
       {
-        "value": "Myrcella Baratheon"
+        value: 'Myrcella Baratheon',
       },
       {
-        "value": "Brandon Stark"
+        value: 'Brandon Stark',
       },
       {
-        "value": "Barristan Selmy"
+        value: 'Barristan Selmy',
       },
       {
-        "value": "Osha"
+        value: 'Osha',
       },
       {
-        "value": "Mance Rayder"
+        value: 'Mance Rayder',
       },
       {
-        "value": "Euron Greyjoy"
+        value: 'Euron Greyjoy',
       },
       {
-        "value": "Robert Baratheon"
+        value: 'Robert Baratheon',
       },
       {
-        "value": "Tommen Baratheon"
+        value: 'Tommen Baratheon',
       },
       {
-        "value": "Gregor Clegane"
+        value: 'Gregor Clegane',
       },
       {
-        "value": "Eddison Tollett"
+        value: 'Eddison Tollett',
       },
       {
-        "value": "Meera Reed"
+        value: 'Meera Reed',
       },
       {
-        "value": "Brynden Tully"
+        value: 'Brynden Tully',
       },
       {
-        "value": "Grenn"
+        value: 'Grenn',
       },
       {
-        "value": "Shae"
+        value: 'Shae',
       },
       {
-        "value": "Edmure Tully"
+        value: 'Edmure Tully',
       },
       {
-        "value": "Gorąca Bułka"
+        value: 'Gorąca Bułka',
       },
       {
-        "value": "Luwin"
+        value: 'Luwin',
       },
       {
-        "value": "Ellaria Sand"
+        value: 'Ellaria Sand',
       },
       {
-        "value": "Pypar"
+        value: 'Pypar',
       },
       {
-        "value": "Renly Baratheon"
+        value: 'Renly Baratheon',
       },
       {
-        "value": "Loras Tyrell"
+        value: 'Loras Tyrell',
       },
       {
-        "value": "Roose Bolton"
+        value: 'Roose Bolton',
       },
       {
-        "value": "Rhaenys Velaryon"
+        value: 'Rhaenys Velaryon',
       },
       {
-        "value": "Rickon Stark"
+        value: 'Rickon Stark',
       },
       {
-        "value": "Doran Martell"
+        value: 'Doran Martell',
       },
       {
-        "value": "Thoros z Myr"
+        value: 'Thoros z Myr',
       },
       {
-        "value": "Daemon Targaryen"
+        value: 'Daemon Targaryen',
       },
       {
-        "value": "Qhorin Półręki"
+        value: 'Qhorin Półręki',
       },
       {
-        "value": "Rodrik Cassel"
+        value: 'Rodrik Cassel',
       },
       {
-        "value": "Qyburn"
+        value: 'Qyburn',
       },
       {
-        "value": "Trójoka wrona"
+        value: 'Trójoka wrona',
       },
       {
-        "value": "Rhaenyra I Targaryen"
+        value: 'Rhaenyra I Targaryen',
       },
       {
-        "value": "Tyene Sand"
+        value: 'Tyene Sand',
       },
       {
-        "value": "Walder Frey"
+        value: 'Walder Frey',
       },
       {
-        "value": "Lysa Arryn"
+        value: 'Lysa Arryn',
       },
       {
-        "value": "Alliser Thorne"
+        value: 'Alliser Thorne',
       },
       {
-        "value": "Yoren"
+        value: 'Yoren',
       },
       {
-        "value": "Pycelle"
+        value: 'Pycelle',
       },
       {
-        "value": "Trystane Martell"
+        value: 'Trystane Martell',
       },
       {
-        "value": "Mace Tyrell"
+        value: 'Mace Tyrell',
       },
       {
-        "value": "Olly"
+        value: 'Olly',
       },
       {
-        "value": "Lord Kości"
+        value: 'Lord Kości',
       },
       {
-        "value": "Robin Arryn"
+        value: 'Robin Arryn',
       },
       {
-        "value": "Kevan Lannister"
+        value: 'Kevan Lannister',
       },
       {
-        "value": "Balon Greyjoy"
+        value: 'Balon Greyjoy',
       },
       {
-        "value": "Obara Sand"
+        value: 'Obara Sand',
       },
       {
-        "value": "Nymeria Sand"
+        value: 'Nymeria Sand',
       },
       {
-        "value": "Meryn Trant"
+        value: 'Meryn Trant',
       },
       {
-        "value": "Lancel Lannister"
+        value: 'Lancel Lannister',
       },
       {
-        "value": "Selyse Baratheon"
+        value: 'Selyse Baratheon',
       },
       {
-        "value": "Janos Slynt"
+        value: 'Janos Slynt',
       },
       {
-        "value": "Viserys I Targaryen"
+        value: 'Viserys I Targaryen',
       },
       {
-        "value": "Corlys Velaryon"
+        value: 'Corlys Velaryon',
       },
       {
-        "value": "Alicent Hightower"
+        value: 'Alicent Hightower',
       },
       {
-        "value": "Otto Hightower"
+        value: 'Otto Hightower',
       },
       {
-        "value": "Bowen Marsh"
+        value: 'Bowen Marsh',
       },
       {
-        "value": "Rast"
-      }
+        value: 'Rast',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 18,
-    "question": "Postacie z Władcy pierścieni",
-    "answers": [
+    id: 18,
+    question: 'Postacie z Władcy pierścieni',
+    answers: [
       {
-        "value": "Sauron"
+        value: 'Sauron',
       },
       {
-        "value": "Galadriela"
+        value: 'Galadriela',
       },
       {
-        "value": "Gandalf"
+        value: 'Gandalf',
       },
       {
-        "value": "Aragorn"
+        value: 'Aragorn',
       },
       {
-        "value": "Frodo Baggins"
+        value: 'Frodo Baggins',
       },
       {
-        "value": "Isildur"
+        value: 'Isildur',
       },
       {
-        "value": "Elrond"
+        value: 'Elrond',
       },
       {
-        "value": "Morgoth"
+        value: 'Morgoth',
       },
       {
-        "value": "Legolas"
+        value: 'Legolas',
       },
       {
-        "value": "Gollum"
+        value: 'Gollum',
       },
       {
-        "value": "Arwena"
+        value: 'Arwena',
       },
       {
-        "value": "Gimli"
+        value: 'Gimli',
       },
       {
-        "value": "Bilbo Baggins"
+        value: 'Bilbo Baggins',
       },
       {
-        "value": "Balrog"
+        value: 'Balrog',
       },
       {
-        "value": "Saruman"
+        value: 'Saruman',
       },
       {
-        "value": "Samwise Gamgee"
+        value: 'Samwise Gamgee',
       },
       {
-        "value": "Elendil"
+        value: 'Elendil',
       },
       {
-        "value": "Boromir"
+        value: 'Boromir',
       },
       {
-        "value": "Eowina"
+        value: 'Eowina',
       },
       {
-        "value": "Peregrin Tuk"
+        value: 'Peregrin Tuk',
       },
       {
-        "value": "Tom Bombadil"
+        value: 'Tom Bombadil',
       },
       {
-        "value": "Meriadok Brandybuck"
+        value: 'Meriadok Brandybuck',
       },
       {
-        "value": "Czarnoksiężnik z Angmaru"
+        value: 'Czarnoksiężnik z Angmaru',
       },
       {
-        "value": "Theoden"
+        value: 'Theoden',
       },
       {
-        "value": "Eomer"
+        value: 'Eomer',
       },
       {
-        "value": "Faramir"
+        value: 'Faramir',
       },
       {
-        "value": "Szeloba"
+        value: 'Szeloba',
       },
       {
-        "value": "Radagast"
+        value: 'Radagast',
       },
       {
-        "value": "Glorfindel"
+        value: 'Glorfindel',
       },
       {
-        "value": "Grima"
+        value: 'Grima',
       },
       {
-        "value": "Celeborn"
+        value: 'Celeborn',
       },
       {
-        "value": "Drzewiec"
+        value: 'Drzewiec',
       },
       {
-        "value": "Anarion"
+        value: 'Anarion',
       },
       {
-        "value": "Denethor II"
+        value: 'Denethor II',
       },
       {
-        "value": "Eldarion"
+        value: 'Eldarion',
       },
       {
-        "value": "Tuor"
+        value: 'Tuor',
       },
       {
-        "value": "Elrohir"
+        value: 'Elrohir',
       },
       {
-        "value": "Gamling"
+        value: 'Gamling',
       },
       {
-        "value": "Fredegar Bolger"
+        value: 'Fredegar Bolger',
       },
       {
-        "value": "Stara Wierzba"
+        value: 'Stara Wierzba',
       },
       {
-        "value": "Forlong"
+        value: 'Forlong',
       },
       {
-        "value": "Harry Goatleaf"
+        value: 'Harry Goatleaf',
       },
       {
-        "value": "Beregond"
+        value: 'Beregond',
       },
       {
-        "value": "Ondoher"
+        value: 'Ondoher',
       },
       {
-        "value": "Folcwine"
+        value: 'Folcwine',
       },
       {
-        "value": "Bergil"
-      }
+        value: 'Bergil',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 19,
-    "question": "Postacie z Harrego Pottera",
-    "answers": [
+    id: 19,
+    question: 'Postacie z Harrego Pottera',
+    answers: [
       {
-        "value": "Severus Snape"
+        value: 'Severus Snape',
       },
       {
-        "value": "Harry Potter"
+        value: 'Harry Potter',
       },
       {
-        "value": "Hermiona Granger"
+        value: 'Hermiona Granger',
       },
       {
-        "value": "Syriusz Black"
+        value: 'Syriusz Black',
       },
       {
-        "value": "Albus Dumbledore"
+        value: 'Albus Dumbledore',
       },
       {
-        "value": "Rubeus Hagrid"
+        value: 'Rubeus Hagrid',
       },
       {
-        "value": "Minerwa McGonagall"
+        value: 'Minerwa McGonagall',
       },
       {
-        "value": "Remus Lupin"
+        value: 'Remus Lupin',
       },
       {
-        "value": "Lord Voldemort"
+        value: 'Lord Voldemort',
       },
       {
-        "value": "Bellatrix Lestrange"
+        value: 'Bellatrix Lestrange',
       },
       {
-        "value": "Luna Lovegood"
+        value: 'Luna Lovegood',
       },
       {
-        "value": "Ron Weasley"
+        value: 'Ron Weasley',
       },
       {
-        "value": "Draco Malfoy"
+        value: 'Draco Malfoy',
       },
       {
-        "value": "Zgredek"
+        value: 'Zgredek',
       },
       {
-        "value": "Gellert Grindelwald"
+        value: 'Gellert Grindelwald',
       },
       {
-        "value": "Fred Weasley"
+        value: 'Fred Weasley',
       },
       {
-        "value": "George Weasley"
+        value: 'George Weasley',
       },
       {
-        "value": "Neville Longbottom"
+        value: 'Neville Longbottom',
       },
       {
-        "value": "Alastor Moody"
+        value: 'Alastor Moody',
       },
       {
-        "value": "Molly Weasley"
+        value: 'Molly Weasley',
       },
       {
-        "value": "Lucjusz Malfoy"
+        value: 'Lucjusz Malfoy',
       },
       {
-        "value": "Artur Weasley"
+        value: 'Artur Weasley',
       },
       {
-        "value": "Ginny Weasley"
+        value: 'Ginny Weasley',
       },
       {
-        "value": "Horacy Slughorn"
+        value: 'Horacy Slughorn',
       },
       {
-        "value": "Sybilla Trelawney"
+        value: 'Sybilla Trelawney',
       },
       {
-        "value": "Dolores Umbridge"
+        value: 'Dolores Umbridge',
       },
       {
-        "value": "Tina Goldstein"
+        value: 'Tina Goldstein',
       },
       {
-        "value": "Filius Flitwick"
+        value: 'Filius Flitwick',
       },
       {
-        "value": "Rolanda Hooch"
+        value: 'Rolanda Hooch',
       },
       {
-        "value": "James Potter"
+        value: 'James Potter',
       },
       {
-        "value": "Bartemiusz Crouch Junior"
+        value: 'Bartemiusz Crouch Junior',
       },
       {
-        "value": "Lily Potter"
+        value: 'Lily Potter',
       },
       {
-        "value": "Garrick Ollivander"
+        value: 'Garrick Ollivander',
       },
       {
-        "value": "Peter Pettigrew"
+        value: 'Peter Pettigrew',
       },
       {
-        "value": "Gilderoy Lockhart"
+        value: 'Gilderoy Lockhart',
       },
       {
-        "value": "Firenzo"
+        value: 'Firenzo',
       },
       {
-        "value": "Vernon Dursley"
+        value: 'Vernon Dursley',
       },
       {
-        "value": "Argus Filch"
+        value: 'Argus Filch',
       },
       {
-        "value": "Dean Thomas"
+        value: 'Dean Thomas',
       },
       {
-        "value": "Seamus Finnigan"
+        value: 'Seamus Finnigan',
       },
       {
-        "value": "Perciwal Graves"
+        value: 'Perciwal Graves',
       },
       {
-        "value": "Percy Weasley"
+        value: 'Percy Weasley',
       },
       {
-        "value": "Korneliusz Knot"
+        value: 'Korneliusz Knot',
       },
       {
-        "value": "Kwiryniusz Quirrell"
+        value: 'Kwiryniusz Quirrell',
       },
       {
-        "value": "Igor Karkarow"
+        value: 'Igor Karkarow',
       },
       {
-        "value": "Petunia Dursley"
+        value: 'Petunia Dursley',
       },
       {
-        "value": "Dudley Dursley"
+        value: 'Dudley Dursley',
       },
       {
-        "value": "Antonin Dołohow"
+        value: 'Antonin Dołohow',
       },
       {
-        "value": "Alecto Carrow"
-      }
+        value: 'Alecto Carrow',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 20,
-    "question": "Teleturnieje",
-    "answers": [
+    id: 20,
+    question: 'Teleturnieje',
+    answers: [
       {
-        "value": "5 × 5 – wygrajmy razem"
+        value: '5 × 5 – wygrajmy razem',
       },
       {
-        "value": "99 – gra o wszystko"
+        value: '99 – gra o wszystko',
       },
       {
-        "value": "300 procent normy"
+        value: '300 procent normy',
       },
       {
-        "value": "Awantura o kasę"
+        value: 'Awantura o kasę',
       },
       {
-        "value": "Big Music Quiz"
+        value: 'Big Music Quiz',
       },
       {
-        "value": "Budujemy mosty"
+        value: 'Budujemy mosty',
       },
       {
-        "value": "Chwila prawdy"
+        value: 'Chwila prawdy',
       },
       {
-        "value": "Co? Gdzie? Kiedy?"
+        value: 'Co? Gdzie? Kiedy?',
       },
       {
-        "value": "Crime Scene"
+        value: 'Crime Scene',
       },
       {
-        "value": "Czar par"
+        value: 'Czar par',
       },
       {
-        "value": "Czy jesteś mądrzejszy od 5-klasisty"
+        value: 'Czy jesteś mądrzejszy od 5-klasisty',
       },
       {
-        "value": "Disney’s Friends for Change Games"
+        value: 'Disney’s Friends for Change Games',
       },
       {
-        "value": "Dobra cena"
+        value: 'Dobra cena',
       },
       {
-        "value": "Dubidu"
+        value: 'Dubidu',
       },
       {
-        "value": "Dzieciaki górą"
+        value: 'Dzieciaki górą',
       },
       {
-        "value": "Dzieciaki z klasą"
+        value: 'Dzieciaki z klasą',
       },
       {
-        "value": "Dźwiękogra"
+        value: 'Dźwiękogra',
       },
       {
-        "value": "Eureko, ja to wiem"
+        value: 'Eureko, ja to wiem',
       },
       {
-        "value": "Familiada"
+        value: 'Familiada',
       },
       {
-        "value": "Fort Boyard: Ostateczne starcie"
+        value: 'Fort Boyard: Ostateczne starcie',
       },
       {
-        "value": "Galaktyka"
+        value: 'Galaktyka',
       },
       {
-        "value": "Gdzie jest Kłamczuch"
+        value: 'Gdzie jest Kłamczuch',
       },
       {
-        "value": "Giganci historii"
+        value: 'Giganci historii',
       },
       {
-        "value": "Gilotyna"
+        value: 'Gilotyna',
       },
       {
-        "value": "Gra muzyka"
+        value: 'Gra muzyka',
       },
       {
-        "value": "Gra słów. Krzyżówka"
+        value: 'Gra słów. Krzyżówka',
       },
       {
-        "value": "Gra w ciemno"
+        value: 'Gra w ciemno',
       },
       {
-        "value": "Grasz czy nie grasz"
+        value: 'Grasz czy nie grasz',
       },
       {
-        "value": "Hole in the Wall"
+        value: 'Hole in the Wall',
       },
       {
-        "value": "Hugo"
+        value: 'Hugo',
       },
       {
-        "value": "Idź na całość"
+        value: 'Idź na całość',
       },
       {
-        "value": "Jaka to melodia"
+        value: 'Jaka to melodia',
       },
       {
-        "value": "Jeden z dziesięciu"
+        value: 'Jeden z dziesięciu',
       },
       {
-        "value": "Joker"
+        value: 'Joker',
       },
       {
-        "value": "Kocham cię, Polsko"
+        value: 'Kocham cię, Polsko',
       },
       {
-        "value": "Koło Fortuny"
+        value: 'Koło Fortuny',
       },
       {
-        "value": "Królestwo Maciusia"
+        value: 'Królestwo Maciusia',
       },
       {
-        "value": "Marek Krukowski"
+        value: 'Marek Krukowski',
       },
       {
-        "value": "Kwizerr"
+        value: 'Kwizerr',
       },
       {
-        "value": "Śpiewające fortepiany"
+        value: 'Śpiewające fortepiany',
       },
       {
-        "value": "Łowcy nagród"
+        value: 'Łowcy nagród',
       },
       {
-        "value": "Miliard w rozumie"
+        value: 'Miliard w rozumie',
       },
       {
-        "value": "Milion w minutę"
+        value: 'Milion w minutę',
       },
       {
-        "value": "Milionerzy"
+        value: 'Milionerzy',
       },
       {
-        "value": "Million Dollar Money Drop"
+        value: 'Million Dollar Money Drop',
       },
       {
-        "value": "Moment prawdy"
+        value: 'Moment prawdy',
       },
       {
-        "value": "Najlepszy z najlepszych"
+        value: 'Najlepszy z najlepszych',
       },
       {
-        "value": "Najsłabsze ogniwo"
+        value: 'Najsłabsze ogniwo',
       },
       {
-        "value": "Only Connect"
+        value: 'Only Connect',
       },
       {
-        "value": "Postaw na milion"
+        value: 'Postaw na milion',
       },
       {
-        "value": "Reazione a catena"
+        value: 'Reazione a catena',
       },
       {
-        "value": "Rodzina jak z nut"
+        value: 'Rodzina jak z nut',
       },
       {
-        "value": "Rodzina wie lepiej"
+        value: 'Rodzina wie lepiej',
       },
       {
-        "value": "Rosyjska ruletka"
+        value: 'Rosyjska ruletka',
       },
       {
-        "value": "Strzał w 10"
+        value: 'Strzał w 10',
       },
       {
-        "value": "Śpiewające fortepiany"
+        value: 'Śpiewające fortepiany',
       },
       {
-        "value": "Tak to leciało"
+        value: 'Tak to leciało',
       },
       {
-        "value": "Takeshi's Castle"
+        value: "Takeshi's Castle",
       },
       {
-        "value": "Taxi kasa"
+        value: 'Taxi kasa',
       },
       {
-        "value": "Tele Gra"
+        value: 'Tele Gra',
       },
       {
-        "value": "Tele Milenium"
+        value: 'Tele Milenium',
       },
       {
-        "value": "Teleadwokat"
+        value: 'Teleadwokat',
       },
       {
-        "value": "Telefoniada"
+        value: 'Telefoniada',
       },
       {
-        "value": "The £100K Drop"
+        value: 'The £100K Drop',
       },
       {
-        "value": "The Cube"
+        value: 'The Cube',
       },
       {
-        "value": "The Genius"
+        value: 'The Genius',
       },
       {
-        "value": "The Wall. Wygraj marzenia"
+        value: 'The Wall. Wygraj marzenia',
       },
       {
-        "value": "To był rok"
+        value: 'To był rok',
       },
       {
-        "value": "Turbokozak"
+        value: 'Turbokozak',
       },
       {
-        "value": "Turniej Miast"
+        value: 'Turniej Miast',
       },
       {
-        "value": "Tylko Ty"
+        value: 'Tylko Ty',
       },
       {
-        "value": "Va banque"
+        value: 'Va banque',
       },
       {
-        "value": "Wheel of Fortune"
+        value: 'Wheel of Fortune',
       },
       {
-        "value": "Who Wants to Be a Millionaire"
+        value: 'Who Wants to Be a Millionaire',
       },
       {
-        "value": "Wielka gra"
+        value: 'Wielka gra',
       },
       {
-        "value": "Wielki Poker"
+        value: 'Wielki Poker',
       },
       {
-        "value": "Wipeout – Wymiatacze"
+        value: 'Wipeout – Wymiatacze',
       },
       {
-        "value": "Zgadula"
+        value: 'Zgadula',
       },
       {
-        "value": "Znaki zodiaku"
+        value: 'Znaki zodiaku',
       },
       {
-        "value": "Życiowa szansa"
-      }
+        value: 'Życiowa szansa',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 21,
-    "question": "Postacie dające misje w GTA III",
-    "answers": [
+    id: 21,
+    question: 'Postacie dające misje w GTA III',
+    answers: [
       {
-        "value": "LUIGI GOTERELLI"
+        value: 'LUIGI GOTERELLI',
       },
       {
-        "value": "JOEY LEONE"
+        value: 'JOEY LEONE',
       },
       {
-        "value": "TONI CIPRIANI"
+        value: 'TONI CIPRIANI',
       },
       {
-        "value": "SALVATORE LEONE"
+        value: 'SALVATORE LEONE',
       },
       {
-        "value": "ASUKA KASEN"
+        value: 'ASUKA KASEN',
       },
       {
-        "value": "KENJI KASEN"
+        value: 'KENJI KASEN',
       },
       {
-        "value": "RAY MACHOWSKI"
+        value: 'RAY MACHOWSKI',
       },
       {
-        "value": "DONALD LOVE"
+        value: 'DONALD LOVE',
       },
       {
-        "value": "RAY MACHOWSKI"
+        value: 'RAY MACHOWSKI',
       },
       {
-        "value": "CATALINA"
+        value: 'CATALINA',
       },
       {
-        "value": "MARTY CHONKS"
+        value: 'MARTY CHONKS',
       },
       {
-        "value": "EL BURRO"
+        value: 'EL BURRO',
       },
       {
-        "value": "KING COUNTREY"
+        value: 'KING COUNTREY',
       },
       {
-        "value": "D-ICE"
+        value: 'D-ICE',
       },
       {
-        "value": "Claude"
-      }
+        value: 'Claude',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 22,
-    "question": "Postacie GTA VC",
-    "answers": [
+    id: 22,
+    question: 'Postacie GTA VC',
+    answers: [
       {
-        "value": "Tommy Vercetti"
+        value: 'Tommy Vercetti',
       },
       {
-        "value": "Sonny Forelli"
+        value: 'Sonny Forelli',
       },
       {
-        "value": "Ken Rosenberg"
+        value: 'Ken Rosenberg',
       },
       {
-        "value": "Lance Vance"
+        value: 'Lance Vance',
       },
       {
-        "value": "Colonel Juan Cortez"
+        value: 'Colonel Juan Cortez',
       },
       {
-        "value": "Mercedes Cortez"
+        value: 'Mercedes Cortez',
       },
       {
-        "value": "Ricardo Diaz"
+        value: 'Ricardo Diaz',
       },
       {
-        "value": "Avery Carrington"
+        value: 'Avery Carrington',
       },
       {
-        "value": "Phil Cassidy"
+        value: 'Phil Cassidy',
       },
       {
-        "value": "Cam Jones"
+        value: 'Cam Jones',
       },
       {
-        "value": "Hilary King"
+        value: 'Hilary King',
       },
       {
-        "value": "Steve Scoot"
+        value: 'Steve Scoot',
       },
       {
-        "value": "Paul Kent"
+        value: 'Paul Kent',
       },
       {
-        "value": "Mr. Kelly"
+        value: 'Mr. Kelly',
       },
       {
-        "value": "Big Mitch Baker"
+        value: 'Big Mitch Baker',
       },
       {
-        "value": "Umberto Robina"
+        value: 'Umberto Robina',
       },
       {
-        "value": "Auntie Poulet"
+        value: 'Auntie Poulet',
       },
       {
-        "value": "BJ Smith"
+        value: 'BJ Smith',
       },
       {
-        "value": "Earnest Kelly"
+        value: 'Earnest Kelly',
       },
       {
-        "value": "Gonzalez"
+        value: 'Gonzalez',
       },
       {
-        "value": "Jethro"
-      }
+        value: 'Jethro',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 23,
-    "question": "Postacie z GTA SA",
-    "answers": [
+    id: 23,
+    question: 'Postacie z GTA SA',
+    answers: [
       {
-        "value": "Carl Johnson"
+        value: 'Carl Johnson',
       },
       {
-        "value": "Sweet Johnson"
+        value: 'Sweet Johnson',
       },
       {
-        "value": "Big Smoke"
+        value: 'Big Smoke',
       },
       {
-        "value": "Ryder"
+        value: 'Ryder',
       },
       {
-        "value": "Kendl Johnson"
+        value: 'Kendl Johnson',
       },
       {
-        "value": "Cesar Vialpando"
+        value: 'Cesar Vialpando',
       },
       {
-        "value": "Frank Tenpenny"
+        value: 'Frank Tenpenny',
       },
       {
-        "value": "Eddie Polaski"
+        value: 'Eddie Polaski',
       },
       {
-        "value": "The Truth"
+        value: 'The Truth',
       },
       {
-        "value": "OG LOC"
+        value: 'OG LOC',
       },
       {
-        "value": "Wu Zi Mu"
+        value: 'Wu Zi Mu',
       },
       {
-        "value": "Ken Rosenberg"
+        value: 'Ken Rosenberg',
       },
       {
-        "value": "Salvatore Leone"
+        value: 'Salvatore Leone',
       },
       {
-        "value": "Kent Paul"
+        value: 'Kent Paul',
       },
       {
-        "value": "Mike Torreno"
+        value: 'Mike Torreno',
       },
       {
-        "value": "Catalina"
+        value: 'Catalina',
       },
       {
-        "value": "Madd Dogg"
+        value: 'Madd Dogg',
       },
       {
-        "value": "Jetrho"
+        value: 'Jetrho',
       },
       {
-        "value": "Dwayne"
+        value: 'Dwayne',
       },
       {
-        "value": "Mark \"B-DUP\" Wayne"
+        value: 'Mark "B-DUP" Wayne',
       },
       {
-        "value": "Zero"
+        value: 'Zero',
       },
       {
-        "value": "Mike Toreno"
+        value: 'Mike Toreno',
       },
       {
-        "value": "Salvatore Leone"
+        value: 'Salvatore Leone',
       },
       {
-        "value": "Emmet"
+        value: 'Emmet',
       },
       {
-        "value": "Jizzy"
+        value: 'Jizzy',
       },
       {
-        "value": "T-Bone Mendez"
+        value: 'T-Bone Mendez',
       },
       {
-        "value": "Denise Robinson"
-      }
+        value: 'Denise Robinson',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 24,
-    "question": "Postacie z GTA IV",
-    "answers": [
+    id: 24,
+    question: 'Postacie z GTA IV',
+    answers: [
       {
-        "value": "Niko Bellic"
+        value: 'Niko Bellic',
       },
       {
-        "value": "Roman Bellic"
+        value: 'Roman Bellic',
       },
       {
-        "value": "Brucie Kibbutz"
+        value: 'Brucie Kibbutz',
       },
       {
-        "value": "Dimitri Rascalov"
+        value: 'Dimitri Rascalov',
       },
       {
-        "value": "Maureen McReary"
+        value: 'Maureen McReary',
       },
       {
-        "value": "Thomas Lyons"
+        value: 'Thomas Lyons',
       },
       {
-        "value": "Francis McReary"
+        value: 'Francis McReary',
       },
       {
-        "value": "Gerry McReary"
+        value: 'Gerry McReary',
       },
       {
-        "value": "Packie"
+        value: 'Packie',
       },
       {
-        "value": "Mary Catherine Donnelly"
+        value: 'Mary Catherine Donnelly',
       },
       {
-        "value": "Kate McReary"
+        value: 'Kate McReary',
       },
       {
-        "value": "Little Jacob"
+        value: 'Little Jacob',
       },
       {
-        "value": "Teafore \"Real Badman"
+        value: 'Teafore "Real Badman',
       },
       {
-        "value": "Elizabeta Torres"
+        value: 'Elizabeta Torres',
       },
       {
-        "value": "Jimmy Pegorino"
+        value: 'Jimmy Pegorino',
       },
       {
-        "value": "Ray Boccino"
+        value: 'Ray Boccino',
       },
       {
-        "value": "Phil Bell"
+        value: 'Phil Bell',
       },
       {
-        "value": "Angie Pegorino"
+        value: 'Angie Pegorino',
       },
       {
-        "value": "Mallorie Bardas"
+        value: 'Mallorie Bardas',
       },
       {
-        "value": "Anthony Corrado"
+        value: 'Anthony Corrado',
       },
       {
-        "value": "Vlad"
+        value: 'Vlad',
       },
       {
-        "value": "Darko Brevic"
+        value: 'Darko Brevic',
       },
       {
-        "value": "Manny Escuela"
+        value: 'Manny Escuela',
       },
       {
-        "value": "Florian Cravic"
+        value: 'Florian Cravic',
       },
       {
-        "value": "Bernie Crane"
+        value: 'Bernie Crane',
       },
       {
-        "value": "Jay Hamilton"
+        value: 'Jay Hamilton',
       },
       {
-        "value": "Gordon Sargent"
+        value: 'Gordon Sargent',
       },
       {
-        "value": "Playboy X"
+        value: 'Playboy X',
       },
       {
-        "value": "Derrick McReary"
+        value: 'Derrick McReary',
       },
       {
-        "value": "Mikhail Faustin"
+        value: 'Mikhail Faustin',
       },
       {
-        "value": "Ileyna Fausti"
+        value: 'Ileyna Fausti',
       },
       {
-        "value": "Michelle"
+        value: 'Michelle',
       },
       {
-        "value": "Johnny Klebitz"
+        value: 'Johnny Klebitz',
       },
       {
-        "value": "Dwayne Forge"
+        value: 'Dwayne Forge',
       },
       {
-        "value": "Eddie Low"
+        value: 'Eddie Low',
       },
       {
-        "value": "Marnie Allen"
+        value: 'Marnie Allen',
       },
       {
-        "value": "Jon Gravelli"
+        value: 'Jon Gravelli',
       },
       {
-        "value": "Mitch"
+        value: 'Mitch',
       },
       {
-        "value": "Michael \"Saint\" Keane"
+        value: 'Michael "Saint" Keane',
       },
       {
-        "value": "Dardan Petrela"
+        value: 'Dardan Petrela',
       },
       {
-        "value": "Charlie"
+        value: 'Charlie',
       },
       {
-        "value": "Mała Clarence"
+        value: 'Mała Clarence',
       },
       {
-        "value": "Gracie Ancelotti"
+        value: 'Gracie Ancelotti',
       },
       {
-        "value": "Pathos"
+        value: 'Pathos',
       },
       {
-        "value": "Sara"
+        value: 'Sara',
       },
       {
-        "value": "Carmen Ortiz"
+        value: 'Carmen Ortiz',
       },
       {
-        "value": "Kiki Jenkins"
+        value: 'Kiki Jenkins',
       },
       {
-        "value": "Luis Fernando Lopez"
+        value: 'Luis Fernando Lopez',
       },
       {
-        "value": "Mori Green"
+        value: 'Mori Green',
       },
       {
-        "value": "Dave Bosoy"
+        value: 'Dave Bosoy',
       },
       {
-        "value": "Bobby Jefferson"
-      }
+        value: 'Bobby Jefferson',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 25,
-    "question": "Postacie z GTA IV TBOGT",
-    "answers": [
+    id: 25,
+    question: 'Postacie z GTA IV TBOGT',
+    answers: [
       {
-        "value": "Luis Fernando Lopez"
+        value: 'Luis Fernando Lopez',
       },
       {
-        "value": "Tony"
+        value: 'Tony',
       },
       {
-        "value": "Armando Torres"
+        value: 'Armando Torres',
       },
       {
-        "value": "Henrique Bardas"
+        value: 'Henrique Bardas',
       },
       {
-        "value": "Yusuf"
+        value: 'Yusuf',
       },
       {
-        "value": "Rodislav Bulgarin"
+        value: 'Rodislav Bulgarin',
       },
       {
-        "value": "Gracie Ancelotti"
+        value: 'Gracie Ancelotti',
       },
       {
-        "value": "Evan Moss"
+        value: 'Evan Moss',
       },
       {
-        "value": "Mori Kibbutz"
+        value: 'Mori Kibbutz',
       },
       {
-        "value": "Rocco Pelosi"
+        value: 'Rocco Pelosi',
       },
       {
-        "value": "Vincenzo Pelosi"
+        value: 'Vincenzo Pelosi',
       },
       {
-        "value": "Adriana Lopez"
-      }
+        value: 'Adriana Lopez',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 26,
-    "question": "Polskie seriale kryminalne",
-    "answers": [
+    id: 26,
+    question: 'Polskie seriale kryminalne',
+    answers: [
       {
-        "value": "07 zgłoś się"
+        value: '07 zgłoś się',
       },
       {
-        "value": "Agentki"
+        value: 'Agentki',
       },
       {
-        "value": "Alfabet mafii"
+        value: 'Alfabet mafii',
       },
       {
-        "value": "Archiwista"
+        value: 'Archiwista',
       },
       {
-        "value": "As"
+        value: 'As',
       },
       {
-        "value": "Behawiorysta"
+        value: 'Behawiorysta',
       },
       {
-        "value": "Belfer"
+        value: 'Belfer',
       },
       {
-        "value": "Belle Epoque"
+        value: 'Belle Epoque',
       },
       {
-        "value": "Biuro kryminalne"
+        value: 'Biuro kryminalne',
       },
       {
-        "value": "Chyłka"
+        value: 'Chyłka',
       },
       {
-        "value": "Crimen"
+        value: 'Crimen',
       },
       {
-        "value": "Detektywi"
+        value: 'Detektywi',
       },
       {
-        "value": "Determinator"
+        value: 'Determinator',
       },
       {
-        "value": "Dublerzy"
+        value: 'Dublerzy',
       },
       {
-        "value": "Ekstradycja"
+        value: 'Ekstradycja',
       },
       {
-        "value": "Fala zbrodni"
+        value: 'Fala zbrodni',
       },
       {
-        "value": "Glina"
+        value: 'Glina',
       },
       {
-        "value": "Herkules"
+        value: 'Herkules',
       },
       {
-        "value": "Instynkt"
+        value: 'Instynkt',
       },
       {
-        "value": "Kapitan Sowa na tropie"
+        value: 'Kapitan Sowa na tropie',
       },
       {
-        "value": "Klangor"
+        value: 'Klangor',
       },
       {
-        "value": "Kod genetyczny"
+        value: 'Kod genetyczny',
       },
       {
-        "value": "Komisarz Alex"
+        value: 'Komisarz Alex',
       },
       {
-        "value": "Komisarz Mama"
+        value: 'Komisarz Mama',
       },
       {
-        "value": "Komisja morderstw"
+        value: 'Komisja morderstw',
       },
       {
-        "value": "Krew z krwi"
+        value: 'Krew z krwi',
       },
       {
-        "value": "Król"
+        value: 'Król',
       },
       {
-        "value": "Kruk"
+        value: 'Kruk',
       },
       {
-        "value": "Kryminalne gry"
+        value: 'Kryminalne gry',
       },
       {
-        "value": "Kryminalni"
+        value: 'Kryminalni',
       },
       {
-        "value": "Mały zgon"
+        value: 'Mały zgon',
       },
       {
-        "value": "Miasto skarbów"
+        value: 'Miasto skarbów',
       },
       {
-        "value": "Motyw"
+        value: 'Motyw',
       },
       {
-        "value": "Mrok"
+        value: 'Mrok',
       },
       {
-        "value": "Na kłopoty… Bednarski"
+        value: 'Na kłopoty… Bednarski',
       },
       {
-        "value": "Na krawędzi"
+        value: 'Na krawędzi',
       },
       {
-        "value": "Nielegalni"
+        value: 'Nielegalni',
       },
       {
-        "value": "Nieobecni"
+        value: 'Nieobecni',
       },
       {
-        "value": "Niesamowite historie"
+        value: 'Niesamowite historie',
       },
       {
-        "value": "Nowa"
+        value: 'Nowa',
       },
       {
-        "value": "Odwilż"
+        value: 'Odwilż',
       },
       {
-        "value": "Odwróceni. Ojcowie i córki"
+        value: 'Odwróceni. Ojcowie i córki',
       },
       {
-        "value": "Oficer"
+        value: 'Oficer',
       },
       {
-        "value": "Oficerowie"
+        value: 'Oficerowie',
       },
       {
-        "value": "Ojciec Mateusz"
+        value: 'Ojciec Mateusz',
       },
       {
-        "value": "Pajęczyna"
+        value: 'Pajęczyna',
       },
       {
-        "value": "Parada oszustów"
+        value: 'Parada oszustów',
       },
       {
-        "value": "Paradoks"
+        value: 'Paradoks',
       },
       {
-        "value": "Paragraf 148 – Kara śmierci"
+        value: 'Paragraf 148 – Kara śmierci',
       },
       {
-        "value": "Pełną parą"
+        value: 'Pełną parą',
       },
       {
-        "value": "Pod powierzchnią"
+        value: 'Pod powierzchnią',
       },
       {
-        "value": "Policjanci"
+        value: 'Policjanci',
       },
       {
-        "value": "Prokurator"
+        value: 'Prokurator',
       },
       {
-        "value": "Przeznaczenie"
+        value: 'Przeznaczenie',
       },
       {
-        "value": "Pułapka"
+        value: 'Pułapka',
       },
       {
-        "value": "Rycerze i rabusie"
+        value: 'Rycerze i rabusie',
       },
       {
-        "value": "Rysa"
+        value: 'Rysa',
       },
       {
-        "value": "S.O.S."
+        value: 'S.O.S.',
       },
       {
-        "value": "Sherlock Holmes i doktor Watson"
+        value: 'Sherlock Holmes i doktor Watson',
       },
       {
-        "value": "Skazana"
+        value: 'Skazana',
       },
       {
-        "value": "Skazane"
+        value: 'Skazane',
       },
       {
-        "value": "Służby specjalne"
+        value: 'Służby specjalne',
       },
       {
-        "value": "Sprawiedliwi – Wydział Kryminalny"
+        value: 'Sprawiedliwi – Wydział Kryminalny',
       },
       {
-        "value": "Szadź"
+        value: 'Szadź',
       },
       {
-        "value": "Ślad"
+        value: 'Ślad',
       },
       {
-        "value": "Ślepnąc od świateł"
+        value: 'Ślepnąc od świateł',
       },
       {
-        "value": "Tajemnica zawodowa"
+        value: 'Tajemnica zawodowa',
       },
       {
-        "value": "Tak czy nie?"
+        value: 'Tak czy nie?',
       },
       {
-        "value": "Temida"
+        value: 'Temida',
       },
       {
-        "value": "Trzeci oficer"
+        value: 'Trzeci oficer',
       },
       {
-        "value": "Tulipan"
+        value: 'Tulipan',
       },
       {
-        "value": "Twarzą w twarz"
+        value: 'Twarzą w twarz',
       },
       {
-        "value": "Układ warszawski"
+        value: 'Układ warszawski',
       },
       {
-        "value": "Ultraviolet"
+        value: 'Ultraviolet',
       },
       {
-        "value": "Uwikłani"
+        value: 'Uwikłani',
       },
       {
-        "value": "W głębi lasu"
+        value: 'W głębi lasu',
       },
       {
-        "value": "W11 – Wydział Śledczy"
+        value: 'W11 – Wydział Śledczy',
       },
       {
-        "value": "Wataha"
+        value: 'Wataha',
       },
       {
-        "value": "Wydział zabójstw"
+        value: 'Wydział zabójstw',
       },
       {
-        "value": "Zachowaj spokój"
+        value: 'Zachowaj spokój',
       },
       {
-        "value": "Zasada przyjemności"
+        value: 'Zasada przyjemności',
       },
       {
-        "value": "Zbrodnia"
+        value: 'Zbrodnia',
       },
       {
-        "value": "Znaki"
+        value: 'Znaki',
       },
       {
-        "value": "Żmijowisko"
+        value: 'Żmijowisko',
       },
       {
-        "value": "Żywioły Saszy. Ogień"
-      }
+        value: 'Żywioły Saszy. Ogień',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 27,
-    "question": "Polskie seriale paradokumentalne",
-    "answers": [
+    id: 27,
+    question: 'Polskie seriale paradokumentalne',
+    answers: [
       {
-        "value": "19+"
+        value: '19+',
       },
       {
-        "value": "Biuro kryminalne"
+        value: 'Biuro kryminalne',
       },
       {
-        "value": "Detektywi"
+        value: 'Detektywi',
       },
       {
-        "value": "Detektywi w akcji"
+        value: 'Detektywi w akcji',
       },
       {
-        "value": "Dlaczego ja?"
+        value: 'Dlaczego ja?',
       },
       {
-        "value": "Dzień, który zmienił moje życie"
+        value: 'Dzień, który zmienił moje życie',
       },
       {
-        "value": "Gliniarze"
+        value: 'Gliniarze',
       },
       {
-        "value": "Idealna niania"
+        value: 'Idealna niania',
       },
       {
-        "value": "Kasta"
+        value: 'Kasta',
       },
       {
-        "value": "Komisariat"
+        value: 'Komisariat',
       },
       {
-        "value": "Lombard. Życie pod zastaw"
+        value: 'Lombard. Życie pod zastaw',
       },
       {
-        "value": "Malanowski i Partnerzy"
+        value: 'Malanowski i Partnerzy',
       },
       {
-        "value": "Miłość w rytmie disco"
+        value: 'Miłość w rytmie disco',
       },
       {
-        "value": "Na ratunek 112"
+        value: 'Na ratunek 112',
       },
       {
-        "value": "Na sygnale"
+        value: 'Na sygnale',
       },
       {
-        "value": "Niesamowite historie"
+        value: 'Niesamowite historie',
       },
       {
-        "value": "Pamiętniki z wakacji"
+        value: 'Pamiętniki z wakacji',
       },
       {
-        "value": "Pielęgniarki"
+        value: 'Pielęgniarki',
       },
       {
-        "value": "Policjantki i policjanci"
+        value: 'Policjantki i policjanci',
       },
       {
-        "value": "Sąd rodzinny"
+        value: 'Sąd rodzinny',
       },
       {
-        "value": "Sekrety rodziny"
+        value: 'Sekrety rodziny',
       },
       {
-        "value": "Septagon"
+        value: 'Septagon',
       },
       {
-        "value": "Sędzia Anna Maria Wesołowska"
+        value: 'Sędzia Anna Maria Wesołowska',
       },
       {
-        "value": "Szkoła"
+        value: 'Szkoła',
       },
       {
-        "value": "Szkoła życia"
+        value: 'Szkoła życia',
       },
       {
-        "value": "Szpital"
+        value: 'Szpital',
       },
       {
-        "value": "Szpital dziecięcy"
+        value: 'Szpital dziecięcy',
       },
       {
-        "value": "The Office PL"
+        value: 'The Office PL',
       },
       {
-        "value": "Trudne sprawy"
+        value: 'Trudne sprawy',
       },
       {
-        "value": "Ukryta prawda"
+        value: 'Ukryta prawda',
       },
       {
-        "value": "Wawa Non Stop"
+        value: 'Wawa Non Stop',
       },
       {
-        "value": "Zdrady"
-      }
+        value: 'Zdrady',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 28,
-    "question": "Polskie seriale komediowe",
-    "answers": [
+    id: 28,
+    question: 'Polskie seriale komediowe',
+    answers: [
       {
-        "value": "13 posterunek"
+        value: '13 posterunek',
       },
       {
-        "value": "39 i pół"
+        value: '39 i pół',
       },
       {
-        "value": "Agentki"
+        value: 'Agentki',
       },
       {
-        "value": "Aida"
+        value: 'Aida',
       },
       {
-        "value": "Ale się kręci"
+        value: 'Ale się kręci',
       },
       {
-        "value": "Alternatywy 4"
+        value: 'Alternatywy 4',
       },
       {
-        "value": "Anioł Stróż"
+        value: 'Anioł Stróż',
       },
       {
-        "value": "Artyści"
+        value: 'Artyści',
       },
       {
-        "value": "Badziewiakowie"
+        value: 'Badziewiakowie',
       },
       {
-        "value": "Bank nie z tej ziemi"
+        value: 'Bank nie z tej ziemi',
       },
       {
-        "value": "Bao-Bab, czyli zielono mi"
+        value: 'Bao-Bab, czyli zielono mi',
       },
       {
-        "value": "Bar Atlantic"
+        value: 'Bar Atlantic',
       },
       {
-        "value": "Barbara i Jan"
+        value: 'Barbara i Jan',
       },
       {
-        "value": "Baron24"
+        value: 'Baron24',
       },
       {
-        "value": "Będzie dobrze, kochanie"
+        value: 'Będzie dobrze, kochanie',
       },
       {
-        "value": "Blok Ekipa"
+        value: 'Blok Ekipa',
       },
       {
-        "value": "BrzydUla"
+        value: 'BrzydUla',
       },
       {
-        "value": "Bulionerzy"
+        value: 'Bulionerzy',
       },
       {
-        "value": "Całkiem nowe lata miodowe"
+        value: 'Całkiem nowe lata miodowe',
       },
       {
-        "value": "Camera Café"
+        value: 'Camera Café',
       },
       {
-        "value": "Chłop i baba"
+        value: 'Chłop i baba',
       },
       {
-        "value": "Codzienna 2 m. 3"
+        value: 'Codzienna 2 m. 3',
       },
       {
-        "value": "Czego się boją faceci, czyli seks w mniejszym mieście"
+        value: 'Czego się boją faceci, czyli seks w mniejszym mieście',
       },
       {
-        "value": "Czterdziestolatek"
+        value: 'Czterdziestolatek',
       },
       {
-        "value": "Cztery poziomo"
+        value: 'Cztery poziomo',
       },
       {
-        "value": "Daleko od noszy"
+        value: 'Daleko od noszy',
       },
       {
-        "value": "Dublerzy"
+        value: 'Dublerzy',
       },
       {
-        "value": "Duch w dom"
+        value: 'Duch w dom',
       },
       {
-        "value": "Duża przerwa"
+        value: 'Duża przerwa',
       },
       {
-        "value": "Dylematu 5"
+        value: 'Dylematu 5',
       },
       {
-        "value": "Dziki"
+        value: 'Dziki',
       },
       {
-        "value": "Dziupla Cezara"
+        value: 'Dziupla Cezara',
       },
       {
-        "value": "Egzorcysta"
+        value: 'Egzorcysta',
       },
       {
-        "value": "Faceci do wzięcia"
+        value: 'Faceci do wzięcia',
       },
       {
-        "value": "Fitness Club"
+        value: 'Fitness Club',
       },
       {
-        "value": "Garderoba damska"
+        value: 'Garderoba damska',
       },
       {
-        "value": "Generał Italia"
+        value: 'Generał Italia',
       },
       {
-        "value": "Gosia i Małgosia"
+        value: 'Gosia i Małgosia',
       },
       {
-        "value": "Graczykowie"
+        value: 'Graczykowie',
       },
       {
-        "value": "Halo Hans"
+        value: 'Halo Hans',
       },
       {
-        "value": "Hela w opałach"
+        value: 'Hela w opałach',
       },
       {
-        "value": "Herkule"
+        value: 'Herkule',
       },
       {
-        "value": "I kto tu rządzi"
+        value: 'I kto tu rządzi',
       },
       {
-        "value": "Ja to mam szczęście"
+        value: 'Ja to mam szczęście',
       },
       {
-        "value": "Ja, Malinowski"
+        value: 'Ja, Malinowski',
       },
       {
-        "value": "Kaliber 200 volt"
+        value: 'Kaliber 200 volt',
       },
       {
-        "value": "Kapitan Bomba"
+        value: 'Kapitan Bomba',
       },
       {
-        "value": "Kasia i Tomek"
+        value: 'Kasia i Tomek',
       },
       {
-        "value": "Klatka B"
+        value: 'Klatka B',
       },
       {
-        "value": "Klub szalonych dziewic"
+        value: 'Klub szalonych dziewic',
       },
       {
-        "value": "Kocham Klarę"
+        value: 'Kocham Klarę',
       },
       {
-        "value": "Komisarz Mama"
+        value: 'Komisarz Mama',
       },
       {
-        "value": "Kowalscy kontra Kowalscy"
+        value: 'Kowalscy kontra Kowalscy',
       },
       {
-        "value": "Król przedmieścia"
+        value: 'Król przedmieścia',
       },
       {
-        "value": "Królestwo kobiet"
+        value: 'Królestwo kobiet',
       },
       {
-        "value": "Królowie śródmieścia"
+        value: 'Królowie śródmieścia',
       },
       {
-        "value": "Kuchnia"
+        value: 'Kuchnia',
       },
       {
-        "value": "Licencja na wychowanie"
+        value: 'Licencja na wychowanie',
       },
       {
-        "value": "Lokatorzy"
+        value: 'Lokatorzy',
       },
       {
-        "value": "Lot 001"
+        value: 'Lot 001',
       },
       {
-        "value": "Ludzie Chudego"
+        value: 'Ludzie Chudego',
       },
       {
-        "value": "Małopole czyli świat"
+        value: 'Małopole czyli świat',
       },
       {
-        "value": "Mamuśki"
+        value: 'Mamuśki',
       },
       {
-        "value": "Mąż czy nie mąż"
+        value: 'Mąż czy nie mąż',
       },
       {
-        "value": "Mecenas Porada"
+        value: 'Mecenas Porada',
       },
       {
-        "value": "Mental"
+        value: 'Mental',
       },
       {
-        "value": "Męskie-żeńskie"
+        value: 'Męskie-żeńskie',
       },
       {
-        "value": "Miodowe lata"
+        value: 'Miodowe lata',
       },
       {
-        "value": "Mój agent"
+        value: 'Mój agent',
       },
       {
-        "value": "Na kłopoty Bednarski"
+        value: 'Na kłopoty Bednarski',
       },
       {
-        "value": "Niania"
+        value: 'Niania',
       },
       {
-        "value": "Nie rób scen"
+        value: 'Nie rób scen',
       },
       {
-        "value": "O mnie się nie martw"
+        value: 'O mnie się nie martw',
       },
       {
-        "value": "Okazja"
+        value: 'Okazja',
       },
       {
-        "value": "Palce lizać"
+        value: 'Palce lizać',
       },
       {
-        "value": "Panienki"
+        value: 'Panienki',
       },
       {
-        "value": "Piąty Stadion"
+        value: 'Piąty Stadion',
       },
       {
-        "value": "Pod wspólnym niebem"
+        value: 'Pod wspólnym niebem',
       },
       {
-        "value": "Pokój 107"
+        value: 'Pokój 107',
       },
       {
-        "value": "Przypadki Cezarego P"
+        value: 'Przypadki Cezarego P',
       },
       {
-        "value": "Ranczo"
+        value: 'Ranczo',
       },
       {
-        "value": "Reggae Rabbits"
+        value: 'Reggae Rabbits',
       },
       {
-        "value": "Reguły gry"
+        value: 'Reguły gry',
       },
       {
-        "value": "Rodziców nie ma w domu"
+        value: 'Rodziców nie ma w domu',
       },
       {
-        "value": "Rodzina na Maxa"
+        value: 'Rodzina na Maxa',
       },
       {
-        "value": "Rodzina zastępcza"
+        value: 'Rodzina zastępcza',
       },
       {
-        "value": "Rodzinka"
+        value: 'Rodzinka',
       },
       {
-        "value": "Rodzinka.pl"
+        value: 'Rodzinka.pl',
       },
       {
-        "value": "Sąsiedzi"
+        value: 'Sąsiedzi',
       },
       {
-        "value": "Sex FM"
+        value: 'Sex FM',
       },
       {
-        "value": "Sexify"
+        value: 'Sexify',
       },
       {
-        "value": "Siedem stron świata"
+        value: 'Siedem stron świata',
       },
       {
-        "value": "Siedem życzeń"
+        value: 'Siedem życzeń',
       },
       {
-        "value": "Siła wyższa"
+        value: 'Siła wyższa',
       },
       {
-        "value": "Skarb sekretarza"
+        value: 'Skarb sekretarza',
       },
       {
-        "value": "Słodkie życie"
+        value: 'Słodkie życie',
       },
       {
-        "value": "Spadkobiercy"
+        value: 'Spadkobiercy',
       },
       {
-        "value": "Stacja"
+        value: 'Stacja',
       },
       {
-        "value": "Stacyjka"
+        value: 'Stacyjka',
       },
       {
-        "value": "Sublokatorzy"
+        value: 'Sublokatorzy',
       },
       {
-        "value": "Synowie"
+        value: 'Synowie',
       },
       {
-        "value": "Synowie, czyli po moim trupie"
+        value: 'Synowie, czyli po moim trupie',
       },
       {
-        "value": "Szpital na perypetiach"
+        value: 'Szpital na perypetiach',
       },
       {
-        "value": "Świat według Kiepskich"
+        value: 'Świat według Kiepskich',
       },
       {
-        "value": "Święta wojna"
+        value: 'Święta wojna',
       },
       {
-        "value": "Święty"
+        value: 'Święty',
       },
       {
-        "value": "Talki z resztą"
+        value: 'Talki z resztą',
       },
       {
-        "value": "Tata, a Marcin powiedział"
+        value: 'Tata, a Marcin powiedział',
       },
       {
-        "value": "The Office PL"
+        value: 'The Office PL',
       },
       {
-        "value": "Trzecia połowa"
+        value: 'Trzecia połowa',
       },
       {
-        "value": "Trzy po trzy – Numery z kwatery"
+        value: 'Trzy po trzy – Numery z kwatery',
       },
       {
-        "value": "Tygrysy Europy"
+        value: 'Tygrysy Europy',
       },
       {
-        "value": "U fryzjera"
+        value: 'U fryzjera',
       },
       {
-        "value": "U Pana Boga w ogródku"
+        value: 'U Pana Boga w ogródku',
       },
       {
-        "value": "Usta usta"
+        value: 'Usta usta',
       },
       {
-        "value": "Wiadomości z drugiej ręki"
+        value: 'Wiadomości z drugiej ręki',
       },
       {
-        "value": "Wiedźmy"
+        value: 'Wiedźmy',
       },
       {
-        "value": "Wojna domowa"
+        value: 'Wojna domowa',
       },
       {
-        "value": "Wszyscy kochają Romana"
+        value: 'Wszyscy kochają Romana',
       },
       {
-        "value": "Z pianką czy bez"
+        value: 'Z pianką czy bez',
       },
       {
-        "value": "Za marzenia"
+        value: 'Za marzenia',
       },
       {
-        "value": "Zakręcone"
+        value: 'Zakręcone',
       },
       {
-        "value": "Zameldowani"
+        value: 'Zameldowani',
       },
       {
-        "value": "Zmiennicy"
-      }
+        value: 'Zmiennicy',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 29,
-    "question": "Postacie mortal kombat",
-    "answers": [
+    id: 29,
+    question: 'Postacie mortal kombat',
+    answers: [
       {
-        "value": "Sub-Zero"
+        value: 'Sub-Zero',
       },
       {
-        "value": "Scorpion"
+        value: 'Scorpion',
       },
       {
-        "value": "Liu Kang"
+        value: 'Liu Kang',
       },
       {
-        "value": "Kung Lao"
+        value: 'Kung Lao',
       },
       {
-        "value": "Sonya"
+        value: 'Sonya',
       },
       {
-        "value": "Johnny Cage"
+        value: 'Johnny Cage',
       },
       {
-        "value": "Raiden"
+        value: 'Raiden',
       },
       {
-        "value": "Jax"
+        value: 'Jax',
       },
       {
-        "value": "Sektor"
+        value: 'Sektor',
       },
       {
-        "value": "Cyrax"
+        value: 'Cyrax',
       },
       {
-        "value": "Smoke"
+        value: 'Smoke',
       },
       {
-        "value": "Nightwolf"
+        value: 'Nightwolf',
       },
       {
-        "value": "Stryker"
+        value: 'Stryker',
       },
       {
-        "value": "Baraka"
+        value: 'Baraka',
       },
       {
-        "value": "Sheeva"
+        value: 'Sheeva',
       },
       {
-        "value": "Kabal"
+        value: 'Kabal',
       },
       {
-        "value": "Kano"
+        value: 'Kano',
       },
       {
-        "value": "Shang Tsung"
+        value: 'Shang Tsung',
       },
       {
-        "value": "Kitana"
+        value: 'Kitana',
       },
       {
-        "value": "Mileena"
+        value: 'Mileena',
       },
       {
-        "value": "Jade"
+        value: 'Jade',
       },
       {
-        "value": "Sindel"
+        value: 'Sindel',
       },
       {
-        "value": "Ermac"
+        value: 'Ermac',
       },
       {
-        "value": "Noob Saibot"
+        value: 'Noob Saibot',
       },
       {
-        "value": "Quan-Chi"
+        value: 'Quan-Chi',
       },
       {
-        "value": "Reptile"
+        value: 'Reptile',
       },
       {
-        "value": "Cyber Sub-Zero"
+        value: 'Cyber Sub-Zero',
       },
       {
-        "value": "Goro"
+        value: 'Goro',
       },
       {
-        "value": "Kintaro"
+        value: 'Kintaro',
       },
       {
-        "value": "Shao Khan"
+        value: 'Shao Khan',
       },
       {
-        "value": "Kratos"
-      }
+        value: 'Kratos',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 30,
-    "question": "Postacie Tekken",
-    "answers": [
+    id: 30,
+    question: 'Postacie Tekken',
+    answers: [
       {
-        "value": "Akuma"
+        value: 'Akuma',
       },
       {
-        "value": "Alex"
+        value: 'Alex',
       },
       {
-        "value": "Alisa Bosconovitch"
+        value: 'Alisa Bosconovitch',
       },
       {
-        "value": "Ancient Ogre"
+        value: 'Ancient Ogre',
       },
       {
-        "value": "Angel"
+        value: 'Angel',
       },
       {
-        "value": "Anna Williams"
+        value: 'Anna Williams',
       },
       {
-        "value": "Armor King"
+        value: 'Armor King',
       },
       {
-        "value": "Asuka Kazama"
+        value: 'Asuka Kazama',
       },
       {
-        "value": "Azazel"
+        value: 'Azazel',
       },
       {
-        "value": "Baek Doo San"
+        value: 'Baek Doo San',
       },
       {
-        "value": "Bob Richards"
+        value: 'Bob Richards',
       },
       {
-        "value": "Bruce Irvin"
+        value: 'Bruce Irvin',
       },
       {
-        "value": "Bryan Fury"
+        value: 'Bryan Fury',
       },
       {
-        "value": "Christie Monteiro"
+        value: 'Christie Monteiro',
       },
       {
-        "value": "Claudio Serafino"
+        value: 'Claudio Serafino',
       },
       {
-        "value": "Combot"
+        value: 'Combot',
       },
       {
-        "value": "Craig Marduk"
+        value: 'Craig Marduk',
       },
       {
-        "value": "Crow"
+        value: 'Crow',
       },
       {
-        "value": "Devil Kazuya"
+        value: 'Devil Kazuya',
       },
       {
-        "value": "Devil Jin"
+        value: 'Devil Jin',
       },
       {
-        "value": "Devil Kazumi"
+        value: 'Devil Kazumi',
       },
       {
-        "value": "Dr. Bosconovitch"
+        value: 'Dr. Bosconovitch',
       },
       {
-        "value": "Eddy Gordo"
+        value: 'Eddy Gordo',
       },
       {
-        "value": "Eliza"
+        value: 'Eliza',
       },
       {
-        "value": "Fahkumram"
+        value: 'Fahkumram',
       },
       {
-        "value": "Feng Wei"
+        value: 'Feng Wei',
       },
       {
-        "value": "Forest Law"
+        value: 'Forest Law',
       },
       {
-        "value": "Ganryu"
+        value: 'Ganryu',
       },
       {
-        "value": "Geese Howard"
+        value: 'Geese Howard',
       },
       {
-        "value": "Gigas"
+        value: 'Gigas',
       },
       {
-        "value": "Gon"
+        value: 'Gon',
       },
       {
-        "value": "Gun Jack"
+        value: 'Gun Jack',
       },
       {
-        "value": "Heihachi Mishima"
+        value: 'Heihachi Mishima',
       },
       {
-        "value": "Hwoarang"
+        value: 'Hwoarang',
       },
       {
-        "value": "Jack"
+        value: 'Jack',
       },
       {
-        "value": "Jin Kazama"
+        value: 'Jin Kazama',
       },
       {
-        "value": "Jinpachi Mishima"
+        value: 'Jinpachi Mishima',
       },
       {
-        "value": "Josie Rizal"
+        value: 'Josie Rizal',
       },
       {
-        "value": "Julia Chang"
+        value: 'Julia Chang',
       },
       {
-        "value": "Jun Kazama"
+        value: 'Jun Kazama',
       },
       {
-        "value": "Katarina Alves"
+        value: 'Katarina Alves',
       },
       {
-        "value": "Kazumi Mishima"
+        value: 'Kazumi Mishima',
       },
       {
-        "value": "Kazuya Mishima"
+        value: 'Kazuya Mishima',
       },
       {
-        "value": "Kid Kazuya"
+        value: 'Kid Kazuya',
       },
       {
-        "value": "King"
+        value: 'King',
       },
       {
-        "value": "Kinjin"
+        value: 'Kinjin',
       },
       {
-        "value": "Kuma"
+        value: 'Kuma',
       },
       {
-        "value": "Kunimitsu"
+        value: 'Kunimitsu',
       },
       {
-        "value": "Lars Alexandersson"
+        value: 'Lars Alexandersson',
       },
       {
-        "value": "Lee Chaolan"
+        value: 'Lee Chaolan',
       },
       {
-        "value": "Lei Wulong"
+        value: 'Lei Wulong',
       },
       {
-        "value": "Leo Kliesen"
+        value: 'Leo Kliesen',
       },
       {
-        "value": "Leroy Smith"
+        value: 'Leroy Smith',
       },
       {
-        "value": "Lidia Sobieska"
+        value: 'Lidia Sobieska',
       },
       {
-        "value": "Lili De Rochefort"
+        value: 'Lili De Rochefort',
       },
       {
-        "value": "Ling Xiaoyu"
+        value: 'Ling Xiaoyu',
       },
       {
-        "value": "Lucky Chloe"
+        value: 'Lucky Chloe',
       },
       {
-        "value": "Marshall Law"
+        value: 'Marshall Law',
       },
       {
-        "value": "Master Raven"
+        value: 'Master Raven',
       },
       {
-        "value": "Michelle Chang"
+        value: 'Michelle Chang',
       },
       {
-        "value": "Miguel Caballero Rojo"
+        value: 'Miguel Caballero Rojo',
       },
       {
-        "value": "Miharu Hirano"
+        value: 'Miharu Hirano',
       },
       {
-        "value": "Mokujin"
+        value: 'Mokujin',
       },
       {
-        "value": "NANCY-MI847J"
+        value: 'NANCY-MI847J',
       },
       {
-        "value": "States Negan Smith"
+        value: 'States Negan Smith',
       },
       {
-        "value": "Nina Williams"
+        value: 'Nina Williams',
       },
       {
-        "value": "Noctis Lucis Caelum"
+        value: 'Noctis Lucis Caelum',
       },
       {
-        "value": "Panda"
+        value: 'Panda',
       },
       {
-        "value": "Paul Phoenix"
+        value: 'Paul Phoenix',
       },
       {
-        "value": "Prototype Jack"
+        value: 'Prototype Jack',
       },
       {
-        "value": "Raven"
+        value: 'Raven',
       },
       {
-        "value": "Roger"
+        value: 'Roger',
       },
       {
-        "value": "Roger Jr."
+        value: 'Roger Jr.',
       },
       {
-        "value": "Sebastian"
+        value: 'Sebastian',
       },
       {
-        "value": "Sergei Dragunov"
+        value: 'Sergei Dragunov',
       },
       {
-        "value": "Arabia Shaheen"
+        value: 'Arabia Shaheen',
       },
       {
-        "value": "Slim Bob"
+        value: 'Slim Bob',
       },
       {
-        "value": "Steve Fox"
+        value: 'Steve Fox',
       },
       {
-        "value": "Tiger Jackson"
+        value: 'Tiger Jackson',
       },
       {
-        "value": "True Ogre"
+        value: 'True Ogre',
       },
       {
-        "value": "Violet"
+        value: 'Violet',
       },
       {
-        "value": "Wang Jinrei"
+        value: 'Wang Jinrei',
       },
       {
-        "value": "Yoshimitsu"
-      }
+        value: 'Yoshimitsu',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 31,
-    "question": "Stany Zjednoczone",
-    "answers": [
+    id: 31,
+    question: 'Stany Zjednoczone',
+    answers: [
       {
-        "value": "Alabama"
+        value: 'Alabama',
       },
       {
-        "value": "Alaska"
+        value: 'Alaska',
       },
       {
-        "value": "Arizona"
+        value: 'Arizona',
       },
       {
-        "value": "Arkansas"
+        value: 'Arkansas',
       },
       {
-        "value": "Connecticut"
+        value: 'Connecticut',
       },
       {
-        "value": "Dakota Południowa"
+        value: 'Dakota Południowa',
       },
       {
-        "value": "Dakota Północna"
+        value: 'Dakota Północna',
       },
       {
-        "value": "Delaware"
+        value: 'Delaware',
       },
       {
-        "value": "Floryda"
+        value: 'Floryda',
       },
       {
-        "value": "Georgi"
+        value: 'Georgi',
       },
       {
-        "value": "Hawaje"
+        value: 'Hawaje',
       },
       {
-        "value": "Idaho"
+        value: 'Idaho',
       },
       {
-        "value": "Illinois"
+        value: 'Illinois',
       },
       {
-        "value": "Indiana"
+        value: 'Indiana',
       },
       {
-        "value": "Iowa"
+        value: 'Iowa',
       },
       {
-        "value": "Kalifornia"
+        value: 'Kalifornia',
       },
       {
-        "value": "Kansas"
+        value: 'Kansas',
       },
       {
-        "value": "Karolina Południowa"
+        value: 'Karolina Południowa',
       },
       {
-        "value": "Karolina Północna"
+        value: 'Karolina Północna',
       },
       {
-        "value": "Kentucky"
+        value: 'Kentucky',
       },
       {
-        "value": "Kolorado"
+        value: 'Kolorado',
       },
       {
-        "value": "Luizjana"
+        value: 'Luizjana',
       },
       {
-        "value": "Maine"
+        value: 'Maine',
       },
       {
-        "value": "Maryland"
+        value: 'Maryland',
       },
       {
-        "value": "Massachusetts"
+        value: 'Massachusetts',
       },
       {
-        "value": "Michigan"
+        value: 'Michigan',
       },
       {
-        "value": "Minnesota"
+        value: 'Minnesota',
       },
       {
-        "value": "Missisipi"
+        value: 'Missisipi',
       },
       {
-        "value": "Missouri"
+        value: 'Missouri',
       },
       {
-        "value": "Montana"
+        value: 'Montana',
       },
       {
-        "value": "Nebraska"
+        value: 'Nebraska',
       },
       {
-        "value": "Nevada"
+        value: 'Nevada',
       },
       {
-        "value": "New Hampshire"
+        value: 'New Hampshire',
       },
       {
-        "value": "New Jersey"
+        value: 'New Jersey',
       },
       {
-        "value": "Nowy Jork"
+        value: 'Nowy Jork',
       },
       {
-        "value": "Nowy Meksyk"
+        value: 'Nowy Meksyk',
       },
       {
-        "value": "Ohio"
+        value: 'Ohio',
       },
       {
-        "value": "Oklahoma"
+        value: 'Oklahoma',
       },
       {
-        "value": "Oregon"
+        value: 'Oregon',
       },
       {
-        "value": "Pensylwania"
+        value: 'Pensylwania',
       },
       {
-        "value": "Rhode Island"
+        value: 'Rhode Island',
       },
       {
-        "value": "Teksas"
+        value: 'Teksas',
       },
       {
-        "value": "Tennessee"
+        value: 'Tennessee',
       },
       {
-        "value": "Utah"
+        value: 'Utah',
       },
       {
-        "value": "Vermont"
+        value: 'Vermont',
       },
       {
-        "value": "Waszyngton"
+        value: 'Waszyngton',
       },
       {
-        "value": "Wirginia"
+        value: 'Wirginia',
       },
       {
-        "value": "Wirginia Zachodnia"
+        value: 'Wirginia Zachodnia',
       },
       {
-        "value": "Wisconsin"
+        value: 'Wisconsin',
       },
       {
-        "value": "Wyoming"
+        value: 'Wyoming',
       },
       {
-        "value": "Dystrykt Kolumbii"
-      }
+        value: 'Dystrykt Kolumbii',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 32,
-    "question": "Marki samochodów",
-    "answers": [
+    id: 32,
+    question: 'Marki samochodów',
+    answers: [
       {
-        "value": "Audi"
+        value: 'Audi',
       },
       {
-        "value": "BMW"
+        value: 'BMW',
       },
       {
-        "value": "Citroen"
+        value: 'Citroen',
       },
       {
-        "value": "Dacia"
+        value: 'Dacia',
       },
       {
-        "value": "Fiat"
+        value: 'Fiat',
       },
       {
-        "value": "Ford"
+        value: 'Ford',
       },
       {
-        "value": "Hyundai"
+        value: 'Hyundai',
       },
       {
-        "value": "Kia"
+        value: 'Kia',
       },
       {
-        "value": "Mercedes"
+        value: 'Mercedes',
       },
       {
-        "value": "Nissan"
+        value: 'Nissan',
       },
       {
-        "value": "Opel"
+        value: 'Opel',
       },
       {
-        "value": "Peugeot"
+        value: 'Peugeot',
       },
       {
-        "value": "Renault"
+        value: 'Renault',
       },
       {
-        "value": "SEAT"
+        value: 'SEAT',
       },
       {
-        "value": "Skoda"
+        value: 'Skoda',
       },
       {
-        "value": "Toyota"
+        value: 'Toyota',
       },
       {
-        "value": "Volkswagen"
+        value: 'Volkswagen',
       },
       {
-        "value": "Volvo"
+        value: 'Volvo',
       },
       {
-        "value": "Abarth"
+        value: 'Abarth',
       },
       {
-        "value": "Alfa Romeo"
+        value: 'Alfa Romeo',
       },
       {
-        "value": "Alpina"
+        value: 'Alpina',
       },
       {
-        "value": "Alpine"
+        value: 'Alpine',
       },
       {
-        "value": "Aston Martin"
+        value: 'Aston Martin',
       },
       {
-        "value": "Bentley"
+        value: 'Bentley',
       },
       {
-        "value": "Cupra"
+        value: 'Cupra',
       },
       {
-        "value": "Dodge"
+        value: 'Dodge',
       },
       {
-        "value": "DS"
+        value: 'DS',
       },
       {
-        "value": "Ferrari"
+        value: 'Ferrari',
       },
       {
-        "value": "Fuso"
+        value: 'Fuso',
       },
       {
-        "value": "Honda"
+        value: 'Honda',
       },
       {
-        "value": "Ineos"
+        value: 'Ineos',
       },
       {
-        "value": "Isuzu"
+        value: 'Isuzu',
       },
       {
-        "value": "Iveco"
+        value: 'Iveco',
       },
       {
-        "value": "Jaguar"
+        value: 'Jaguar',
       },
       {
-        "value": "Jeep"
+        value: 'Jeep',
       },
       {
-        "value": "Kawasaki"
+        value: 'Kawasaki',
       },
       {
-        "value": "Lamborghini"
+        value: 'Lamborghini',
       },
       {
-        "value": "Land Rover"
+        value: 'Land Rover',
       },
       {
-        "value": "LEVC"
+        value: 'LEVC',
       },
       {
-        "value": "Lexus"
+        value: 'Lexus',
       },
       {
-        "value": "MAN"
+        value: 'MAN',
       },
       {
-        "value": "Maserati"
+        value: 'Maserati',
       },
       {
-        "value": "Maxus"
+        value: 'Maxus',
       },
       {
-        "value": "Mazda"
+        value: 'Mazda',
       },
       {
-        "value": "McLaren"
+        value: 'McLaren',
       },
       {
-        "value": "MINI"
+        value: 'MINI',
       },
       {
-        "value": "Mitsubishi"
+        value: 'Mitsubishi',
       },
       {
-        "value": "Piaggio"
+        value: 'Piaggio',
       },
       {
-        "value": "Porsche"
+        value: 'Porsche',
       },
       {
-        "value": "RAM"
+        value: 'RAM',
       },
       {
-        "value": "Renault Trucks"
+        value: 'Renault Trucks',
       },
       {
-        "value": "Rolls-Royce"
+        value: 'Rolls-Royce',
       },
       {
-        "value": "Seres"
+        value: 'Seres',
       },
       {
-        "value": "Skywell"
+        value: 'Skywell',
       },
       {
-        "value": "Smart"
+        value: 'Smart',
       },
       {
-        "value": "SsangYong"
+        value: 'SsangYong',
       },
       {
-        "value": "Subaru"
+        value: 'Subaru',
       },
       {
-        "value": "Suzuki"
+        value: 'Suzuki',
       },
       {
-        "value": "Tesla"
+        value: 'Tesla',
       },
       {
-        "value": "Andoria"
+        value: 'Andoria',
       },
       {
-        "value": "Autobianchi"
+        value: 'Autobianchi',
       },
       {
-        "value": "Cadillac"
+        value: 'Cadillac',
       },
       {
-        "value": "Caterham"
+        value: 'Caterham',
       },
       {
-        "value": "Chevrolet"
+        value: 'Chevrolet',
       },
       {
-        "value": "Chrysler"
+        value: 'Chrysler',
       },
       {
-        "value": "Corvette"
+        value: 'Corvette',
       },
       {
-        "value": "Daewoo"
+        value: 'Daewoo',
       },
       {
-        "value": "Daewoo Motor"
+        value: 'Daewoo Motor',
       },
       {
-        "value": "Damis"
+        value: 'Damis',
       },
       {
-        "value": "DMC"
+        value: 'DMC',
       },
       {
-        "value": "FSO"
+        value: 'FSO',
       },
       {
-        "value": "GAZ"
+        value: 'GAZ',
       },
       {
-        "value": "GAZ-AVC"
+        value: 'GAZ-AVC',
       },
       {
-        "value": "Hummer"
+        value: 'Hummer',
       },
       {
-        "value": "Infiniti"
+        value: 'Infiniti',
       },
       {
-        "value": "Intrall"
+        value: 'Intrall',
       },
       {
-        "value": "Izera"
+        value: 'Izera',
       },
       {
-        "value": "Lada"
+        value: 'Lada',
       },
       {
-        "value": "Lancia"
+        value: 'Lancia',
       },
       {
-        "value": "LDV"
+        value: 'LDV',
       },
       {
-        "value": "Ligier"
+        value: 'Ligier',
       },
       {
-        "value": "Lotus"
+        value: 'Lotus',
       },
       {
-        "value": "LTI"
+        value: 'LTI',
       },
       {
-        "value": "Maybach"
+        value: 'Maybach',
       },
       {
-        "value": "MG"
+        value: 'MG',
       },
       {
-        "value": "Polski Fiat"
+        value: 'Polski Fiat',
       },
       {
-        "value": "Rover"
+        value: 'Rover',
       },
       {
-        "value": "Saab"
+        value: 'Saab',
       },
       {
-        "value": "Tata"
+        value: 'Tata',
       },
       {
-        "value": "WSK Mielec"
+        value: 'WSK Mielec',
       },
       {
-        "value": "ZD"
-      }
+        value: 'ZD',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 33,
-    "question": "Rosyjskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 33,
+    question: 'Rosyjskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Krylja Sowietow Samara"
+        value: 'Krylja Sowietow Samara',
       },
       {
-        "value": "Zenit Petersburg"
+        value: 'Zenit Petersburg',
       },
       {
-        "value": "FK Rostów"
+        value: 'FK Rostów',
       },
       {
-        "value": "Spartak Moskwa"
+        value: 'Spartak Moskwa',
       },
       {
-        "value": "Dynamo Moskwa"
+        value: 'Dynamo Moskwa',
       },
       {
-        "value": "CSKA Moskwa"
+        value: 'CSKA Moskwa',
       },
       {
-        "value": "Akhmat Grozny"
+        value: 'Akhmat Grozny',
       },
       {
-        "value": "Orenburg"
+        value: 'Orenburg',
       },
       {
-        "value": "Krasnodar"
+        value: 'Krasnodar',
       },
       {
-        "value": "Soczi"
+        value: 'Soczi',
       },
       {
-        "value": "Urał Jekaterynburg"
+        value: 'Urał Jekaterynburg',
       },
       {
-        "value": "Lokomotiv Moskwa"
+        value: 'Lokomotiv Moskwa',
       },
       {
-        "value": "Krylja Sowietow Samara"
+        value: 'Krylja Sowietow Samara',
       },
       {
-        "value": "Nizhny Novgorod"
+        value: 'Nizhny Novgorod',
       },
       {
-        "value": "Fakieł Woroneż"
+        value: 'Fakieł Woroneż',
       },
       {
-        "value": "Khimki"
+        value: 'Khimki',
       },
       {
-        "value": "Torpedo Moskwa"
-      }
+        value: 'Torpedo Moskwa',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 34,
-    "question": "Sieci handlowe w Polsce ( wikipedia)",
-    "answers": [
+    id: 34,
+    question: 'Sieci handlowe w Polsce ( wikipedia)',
+    answers: [
       {
-        "value": "Abc"
+        value: 'Abc',
       },
       {
-        "value": "Agata"
+        value: 'Agata',
       },
       {
-        "value": "Albert"
+        value: 'Albert',
       },
       {
-        "value": "Aldik Nova"
+        value: 'Aldik Nova',
       },
       {
-        "value": "Alma Market"
+        value: 'Alma Market',
       },
       {
-        "value": "Avans"
+        value: 'Avans',
       },
       {
-        "value": "Biedronka"
+        value: 'Biedronka',
       },
       {
-        "value": "Big Star Limited"
+        value: 'Big Star Limited',
       },
       {
-        "value": "Bomi"
+        value: 'Bomi',
       },
       {
-        "value": "Bricomarché"
+        value: 'Bricomarché',
       },
       {
-        "value": "Carrefour Market"
+        value: 'Carrefour Market',
       },
       {
-        "value": "Carry"
+        value: 'Carry',
       },
       {
-        "value": "CCC"
+        value: 'CCC',
       },
       {
-        "value": "Cepelia"
+        value: 'Cepelia',
       },
       {
-        "value": "Chata Polska"
+        value: 'Chata Polska',
       },
       {
-        "value": "Chorten"
+        value: 'Chorten',
       },
       {
-        "value": "Coccodrillo"
+        value: 'Coccodrillo',
       },
       {
-        "value": "Cropp"
+        value: 'Cropp',
       },
       {
-        "value": "Dealz"
+        value: 'Dealz',
       },
       {
-        "value": "Deep"
+        value: 'Deep',
       },
       {
-        "value": "Dekada"
+        value: 'Dekada',
       },
       {
-        "value": "Delikatesy Centrum"
+        value: 'Delikatesy Centrum',
       },
       {
-        "value": "Dino"
+        value: 'Dino',
       },
       {
-        "value": "DM Drogerie Markt"
+        value: 'DM Drogerie Markt',
       },
       {
-        "value": "Domar"
+        value: 'Domar',
       },
       {
-        "value": "Natura"
+        value: 'Natura',
       },
       {
-        "value": "Duży Ben"
+        value: 'Duży Ben',
       },
       {
-        "value": "Eko Holding"
+        value: 'Eko Holding',
       },
       {
-        "value": "Eldom"
+        value: 'Eldom',
       },
       {
-        "value": "Elektromis"
+        value: 'Elektromis',
       },
       {
-        "value": "Empik"
+        value: 'Empik',
       },
       {
-        "value": "Esotiq"
+        value: 'Esotiq',
       },
       {
-        "value": "Euro Sklep"
+        value: 'Euro Sklep',
       },
       {
-        "value": "Eurocash Cash&Carry"
+        value: 'Eurocash Cash&Carry',
       },
       {
-        "value": "Fabryka Mebli Bodzio"
+        value: 'Fabryka Mebli Bodzio',
       },
       {
-        "value": "Flying Tiger Copenhagen"
+        value: 'Flying Tiger Copenhagen',
       },
       {
-        "value": "Fotojoker"
+        value: 'Fotojoker',
       },
       {
-        "value": "Frac"
+        value: 'Frac',
       },
       {
-        "value": "Freshmarket"
+        value: 'Freshmarket',
       },
       {
-        "value": "Galeria Centrum"
+        value: 'Galeria Centrum',
       },
       {
-        "value": "Globi"
+        value: 'Globi',
       },
       {
-        "value": "Groszek"
+        value: 'Groszek',
       },
       {
-        "value": "Grupa Handlo-Budowa"
+        value: 'Grupa Handlo-Budowa',
       },
       {
-        "value": "H&M"
+        value: 'H&M',
       },
       {
-        "value": "Handlowa Spółdzielnia „Jubilat”"
+        value: 'Handlowa Spółdzielnia „Jubilat”',
       },
       {
-        "value": "House"
+        value: 'House',
       },
       {
-        "value": "Hypernova"
+        value: 'Hypernova',
       },
       {
-        "value": "Indigo Nails Lab"
+        value: 'Indigo Nails Lab',
       },
       {
-        "value": "ISpot"
+        value: 'ISpot',
       },
       {
-        "value": "Komandor"
+        value: 'Komandor',
       },
       {
-        "value": "Komputronik"
+        value: 'Komputronik',
       },
       {
-        "value": "Lewiatan"
+        value: 'Lewiatan',
       },
       {
-        "value": "LPP"
+        value: 'LPP',
       },
       {
-        "value": "Małpka Express"
+        value: 'Małpka Express',
       },
       {
-        "value": "MarcPol"
+        value: 'MarcPol',
       },
       {
-        "value": "Marketing Investment Group"
+        value: 'Marketing Investment Group',
       },
       {
-        "value": "Martes Sport"
+        value: 'Martes Sport',
       },
       {
-        "value": "Matras"
+        value: 'Matras',
       },
       {
-        "value": "Media Expert"
+        value: 'Media Expert',
       },
       {
-        "value": "Mila"
+        value: 'Mila',
       },
       {
-        "value": "Mix Electronics"
+        value: 'Mix Electronics',
       },
       {
-        "value": "Mławska Spółdzielnia Spożywców „Spójnia”"
+        value: 'Mławska Spółdzielnia Spożywców „Spójnia”',
       },
       {
-        "value": "Mohito"
+        value: 'Mohito',
       },
       {
-        "value": "Moliera 2"
+        value: 'Moliera 2',
       },
       {
-        "value": "Neonet"
+        value: 'Neonet',
       },
       {
-        "value": "Nomi"
+        value: 'Nomi',
       },
       {
-        "value": "Norauto"
+        value: 'Norauto',
       },
       {
-        "value": "Odido"
+        value: 'Odido',
       },
       {
-        "value": "Partner"
+        value: 'Partner',
       },
       {
-        "value": "Pepco"
+        value: 'Pepco',
       },
       {
-        "value": "Pewex"
+        value: 'Pewex',
       },
       {
-        "value": "Piotr i Paweł"
+        value: 'Piotr i Paweł',
       },
       {
-        "value": "Polomarket"
+        value: 'Polomarket',
       },
       {
-        "value": "Powszechna Spółdzielnia Spożywców w Sanoku"
+        value: 'Powszechna Spółdzielnia Spożywców w Sanoku',
       },
       {
-        "value": "Powszechne Domy Towarowe"
+        value: 'Powszechne Domy Towarowe',
       },
       {
-        "value": "Primark"
+        value: 'Primark',
       },
       {
-        "value": "PSB-Mrówka"
+        value: 'PSB-Mrówka',
       },
       {
-        "value": "Powszechna Spółdzielnia Spożywców „Zorza”"
+        value: 'Powszechna Spółdzielnia Spożywców „Zorza”',
       },
       {
-        "value": "Społem"
+        value: 'Społem',
       },
       {
-        "value": "Quiosque"
+        value: 'Quiosque',
       },
       {
-        "value": "Reporter"
+        value: 'Reporter',
       },
       {
-        "value": "Reserved"
+        value: 'Reserved',
       },
       {
-        "value": "RTV Euro AGD"
+        value: 'RTV Euro AGD',
       },
       {
-        "value": "Sinsay"
+        value: 'Sinsay',
       },
       {
-        "value": "Komfort"
+        value: 'Komfort',
       },
       {
-        "value": "Razem"
+        value: 'Razem',
       },
       {
-        "value": "Smyk"
+        value: 'Smyk',
       },
       {
-        "value": "Stokrotka"
+        value: 'Stokrotka',
       },
       {
-        "value": "Stradivarius"
+        value: 'Stradivarius',
       },
       {
-        "value": "Supeco"
+        value: 'Supeco',
       },
       {
-        "value": "Tatuum"
+        value: 'Tatuum',
       },
       {
-        "value": "TEDi"
+        value: 'TEDi',
       },
       {
-        "value": "Tesco Polska"
+        value: 'Tesco Polska',
       },
       {
-        "value": "Top Market"
+        value: 'Top Market',
       },
       {
-        "value": "Topaz"
+        value: 'Topaz',
       },
       {
-        "value": "Troll"
+        value: 'Troll',
       },
       {
-        "value": "Twój Market"
+        value: 'Twój Market',
       },
       {
-        "value": "X-kom"
+        value: 'X-kom',
       },
       {
-        "value": "Zatoka"
+        value: 'Zatoka',
       },
       {
-        "value": "Żabka"
-      }
+        value: 'Żabka',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 35,
-    "question": "Polskie Województwa",
-    "answers": [
+    id: 35,
+    question: 'Polskie Województwa',
+    answers: [
       {
-        "value": "dolnośląskie"
+        value: 'dolnośląskie',
       },
       {
-        "value": "kujawsko-pomorskie"
+        value: 'kujawsko-pomorskie',
       },
       {
-        "value": "lubelskie"
+        value: 'lubelskie',
       },
       {
-        "value": "lubuskie"
+        value: 'lubuskie',
       },
       {
-        "value": "łódzkie"
+        value: 'łódzkie',
       },
       {
-        "value": "małopolskie"
+        value: 'małopolskie',
       },
       {
-        "value": "mazowieckie"
+        value: 'mazowieckie',
       },
       {
-        "value": "opolskie"
+        value: 'opolskie',
       },
       {
-        "value": "podkarpackie"
+        value: 'podkarpackie',
       },
       {
-        "value": "podlaskie"
+        value: 'podlaskie',
       },
       {
-        "value": "pomorskie"
+        value: 'pomorskie',
       },
       {
-        "value": "śląskie"
+        value: 'śląskie',
       },
       {
-        "value": "świętokrzyskie"
+        value: 'świętokrzyskie',
       },
       {
-        "value": "warmińsko-mazurskie"
+        value: 'warmińsko-mazurskie',
       },
       {
-        "value": "wielkopolskie"
+        value: 'wielkopolskie',
       },
       {
-        "value": "zachodniopomorskie"
-      }
+        value: 'zachodniopomorskie',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 36,
-    "question": "Specjalizacje Lekarskie",
-    "answers": [
+    id: 36,
+    question: 'Specjalizacje Lekarskie',
+    answers: [
       {
-        "value": "Alergologia"
+        value: 'Alergologia',
       },
       {
-        "value": "Anestezjologia"
+        value: 'Anestezjologia',
       },
       {
-        "value": "Balneologia"
+        value: 'Balneologia',
       },
       {
-        "value": "Bariatria"
+        value: 'Bariatria',
       },
       {
-        "value": "Chirurgia"
+        value: 'Chirurgia',
       },
       {
-        "value": "Dermatologia"
+        value: 'Dermatologia',
       },
       {
-        "value": "Endokrynologia"
+        value: 'Endokrynologia',
       },
       {
-        "value": "Epidemiologia"
+        value: 'Epidemiologia',
       },
       {
-        "value": "Medycyna estetyczna"
+        value: 'Medycyna estetyczna',
       },
       {
-        "value": "Farmakologia kliniczna"
+        value: 'Farmakologia kliniczna',
       },
       {
-        "value": "Gastroenterologia"
+        value: 'Gastroenterologia',
       },
       {
-        "value": "Genetyka kliniczna"
+        value: 'Genetyka kliniczna',
       },
       {
-        "value": "Geriatria"
+        value: 'Geriatria',
       },
       {
-        "value": "Ginekologia"
+        value: 'Ginekologia',
       },
       {
-        "value": "Immunologia"
+        value: 'Immunologia',
       },
       {
-        "value": "Kardiologia"
+        value: 'Kardiologia',
       },
       {
-        "value": "Medycyna paliatywna"
+        value: 'Medycyna paliatywna',
       },
       {
-        "value": "Medycyna pracy"
+        value: 'Medycyna pracy',
       },
       {
-        "value": "Medycyna ratunkowa"
+        value: 'Medycyna ratunkowa',
       },
       {
-        "value": "Medycyna rodzinna"
+        value: 'Medycyna rodzinna',
       },
       {
-        "value": "Medycyna sądowa"
+        value: 'Medycyna sądowa',
       },
       {
-        "value": "Medycyna sportowa"
+        value: 'Medycyna sportowa',
       },
       {
-        "value": "Medycyna transportu"
+        value: 'Medycyna transportu',
       },
       {
-        "value": "Medycyna tropikalna"
+        value: 'Medycyna tropikalna',
       },
       {
-        "value": "Mikrobiologia lekarska"
+        value: 'Mikrobiologia lekarska',
       },
       {
-        "value": "Nefrologia"
+        value: 'Nefrologia',
       },
       {
-        "value": "Neonatologia"
+        value: 'Neonatologia',
       },
       {
-        "value": "Neurologia"
+        value: 'Neurologia',
       },
       {
-        "value": "Neuropatologia"
+        value: 'Neuropatologia',
       },
       {
-        "value": "Okulistyka"
+        value: 'Okulistyka',
       },
       {
-        "value": "Onkologia"
+        value: 'Onkologia',
       },
       {
-        "value": "Ortopedia"
+        value: 'Ortopedia',
       },
       {
-        "value": "Otorynolaryngologia"
+        value: 'Otorynolaryngologia',
       },
       {
-        "value": "Patologia"
+        value: 'Patologia',
       },
       {
-        "value": "Pediatria"
+        value: 'Pediatria',
       },
       {
-        "value": "Położnictwo"
+        value: 'Położnictwo',
       },
       {
-        "value": "Psychiatria"
+        value: 'Psychiatria',
       },
       {
-        "value": "Pulmonologia"
+        value: 'Pulmonologia',
       },
       {
-        "value": "Radiologia"
+        value: 'Radiologia',
       },
       {
-        "value": "Rehabilitacja medyczna"
+        value: 'Rehabilitacja medyczna',
       },
       {
-        "value": "Reumatologia"
+        value: 'Reumatologia',
       },
       {
-        "value": "Seksuologia"
+        value: 'Seksuologia',
       },
       {
-        "value": "Telerehabilitacja"
+        value: 'Telerehabilitacja',
       },
       {
-        "value": "Toksykologia"
+        value: 'Toksykologia',
       },
       {
-        "value": "Transfuzjologia"
+        value: 'Transfuzjologia',
       },
       {
-        "value": "Urologia"
+        value: 'Urologia',
       },
       {
-        "value": "Wenerologia"
-      }
+        value: 'Wenerologia',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 37,
-    "question": "Owoce",
-    "answers": [
+    id: 37,
+    question: 'Owoce',
+    answers: [
       {
-        "value": "Agrest"
+        value: 'Agrest',
       },
       {
-        "value": "Ananas"
+        value: 'Ananas',
       },
       {
-        "value": "Arbuz"
+        value: 'Arbuz',
       },
       {
-        "value": "Aronia"
+        value: 'Aronia',
       },
       {
-        "value": "Awokado"
+        value: 'Awokado',
       },
       {
-        "value": "Banan"
+        value: 'Banan',
       },
       {
-        "value": "Borówka"
+        value: 'Borówka',
       },
       {
-        "value": "Brzoskwinia"
+        value: 'Brzoskwinia',
       },
       {
-        "value": "Cytryna"
+        value: 'Cytryna',
       },
       {
-        "value": "Czarny bez"
+        value: 'Czarny bez',
       },
       {
-        "value": "Czereśnia"
+        value: 'Czereśnia',
       },
       {
-        "value": "Daktyl"
+        value: 'Daktyl',
       },
       {
-        "value": "Dereń"
+        value: 'Dereń',
       },
       {
-        "value": "Dzika róża"
+        value: 'Dzika róża',
       },
       {
-        "value": "Figa"
+        value: 'Figa',
       },
       {
-        "value": "Granat"
+        value: 'Granat',
       },
       {
-        "value": "Grejpfrut"
+        value: 'Grejpfrut',
       },
       {
-        "value": "Gruszka"
+        value: 'Gruszka',
       },
       {
-        "value": "Guawa"
+        value: 'Guawa',
       },
       {
-        "value": "Jabłko"
+        value: 'Jabłko',
       },
       {
-        "value": "Jagoda"
+        value: 'Jagoda',
       },
       {
-        "value": "Jeżyna"
+        value: 'Jeżyna',
       },
       {
-        "value": "Kaki"
+        value: 'Kaki',
       },
       {
-        "value": "Kiwi"
+        value: 'Kiwi',
       },
       {
-        "value": "Kokos"
+        value: 'Kokos',
       },
       {
-        "value": "Kumkwat"
+        value: 'Kumkwat',
       },
       {
-        "value": "Liczi"
+        value: 'Liczi',
       },
       {
-        "value": "Limonka"
+        value: 'Limonka',
       },
       {
-        "value": "Malina"
+        value: 'Malina',
       },
       {
-        "value": "Mandarynka"
+        value: 'Mandarynka',
       },
       {
-        "value": "Mango"
+        value: 'Mango',
       },
       {
-        "value": "Melon"
+        value: 'Melon',
       },
       {
-        "value": "Morela"
+        value: 'Morela',
       },
       {
-        "value": "Nektarynka"
+        value: 'Nektarynka',
       },
       {
-        "value": "Opuncja"
+        value: 'Opuncja',
       },
       {
-        "value": "Orzech brazylijski"
+        value: 'Orzech brazylijski',
       },
       {
-        "value": "Orzech laskowy"
+        value: 'Orzech laskowy',
       },
       {
-        "value": "Orzech piniowy"
+        value: 'Orzech piniowy',
       },
       {
-        "value": "Orzech pistacjowy"
+        value: 'Orzech pistacjowy',
       },
       {
-        "value": "Orzech włoski"
+        value: 'Orzech włoski',
       },
       {
-        "value": "Orzech ziemny"
+        value: 'Orzech ziemny',
       },
       {
-        "value": "Papaja"
+        value: 'Papaja',
       },
       {
-        "value": "Pigwa"
+        value: 'Pigwa',
       },
       {
-        "value": "Pomarańcza"
+        value: 'Pomarańcza',
       },
       {
-        "value": "Poziomka"
+        value: 'Poziomka',
       },
       {
-        "value": "Porzeczka"
+        value: 'Porzeczka',
       },
       {
-        "value": "Renkloda"
+        value: 'Renkloda',
       },
       {
-        "value": "Rokitnik"
+        value: 'Rokitnik',
       },
       {
-        "value": "Smoczy owoc"
+        value: 'Smoczy owoc',
       },
       {
-        "value": "Śliwka"
+        value: 'Śliwka',
       },
       {
-        "value": "Tarnina"
+        value: 'Tarnina',
       },
       {
-        "value": "Truskawka"
+        value: 'Truskawka',
       },
       {
-        "value": "Winogrono"
+        value: 'Winogrono',
       },
       {
-        "value": "Wiśnia"
+        value: 'Wiśnia',
       },
       {
-        "value": "Żurawina"
-      }
+        value: 'Żurawina',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 38,
-    "question": "Warzywa",
-    "answers": [
+    id: 38,
+    question: 'Warzywa',
+    answers: [
       {
-        "value": "Bakłażan"
+        value: 'Bakłażan',
       },
       {
-        "value": "Batat"
+        value: 'Batat',
       },
       {
-        "value": "Bób"
+        value: 'Bób',
       },
       {
-        "value": "Brokuł"
+        value: 'Brokuł',
       },
       {
-        "value": "Brukiew"
+        value: 'Brukiew',
       },
       {
-        "value": "Brukselka"
+        value: 'Brukselka',
       },
       {
-        "value": "Burak"
+        value: 'Burak',
       },
       {
-        "value": "Cebula"
+        value: 'Cebula',
       },
       {
-        "value": "Chrzan"
+        value: 'Chrzan',
       },
       {
-        "value": "Ciecierzyca"
+        value: 'Ciecierzyca',
       },
       {
-        "value": "Cukinia"
+        value: 'Cukinia',
       },
       {
-        "value": "Cykoria"
+        value: 'Cykoria',
       },
       {
-        "value": "Czosnek"
+        value: 'Czosnek',
       },
       {
-        "value": "Dynia"
+        value: 'Dynia',
       },
       {
-        "value": "Fasola"
+        value: 'Fasola',
       },
       {
-        "value": "Fasolka szparagowa"
+        value: 'Fasolka szparagowa',
       },
       {
-        "value": "Fenkuł"
+        value: 'Fenkuł',
       },
       {
-        "value": "Groch"
+        value: 'Groch',
       },
       {
-        "value": "Jarmuż"
+        value: 'Jarmuż',
       },
       {
-        "value": "Kalafior"
+        value: 'Kalafior',
       },
       {
-        "value": "Kalarepa"
+        value: 'Kalarepa',
       },
       {
-        "value": "Kapar"
+        value: 'Kapar',
       },
       {
-        "value": "Kapusta"
+        value: 'Kapusta',
       },
       {
-        "value": "Karczoch"
+        value: 'Karczoch',
       },
       {
-        "value": "Koper"
+        value: 'Koper',
       },
       {
-        "value": "Kukurydza"
+        value: 'Kukurydza',
       },
       {
-        "value": "Marchew"
+        value: 'Marchew',
       },
       {
-        "value": "Miechunka"
+        value: 'Miechunka',
       },
       {
-        "value": "Ogórek"
+        value: 'Ogórek',
       },
       {
-        "value": "Oliwka"
+        value: 'Oliwka',
       },
       {
-        "value": "Papryka"
+        value: 'Papryka',
       },
       {
-        "value": "Pasternak"
+        value: 'Pasternak',
       },
       {
-        "value": "Patison"
+        value: 'Patison',
       },
       {
-        "value": "Pietruszka"
+        value: 'Pietruszka',
       },
       {
-        "value": "Pomidor"
+        value: 'Pomidor',
       },
       {
-        "value": "Por"
+        value: 'Por',
       },
       {
-        "value": "Rabarbar"
+        value: 'Rabarbar',
       },
       {
-        "value": "Roszponka"
+        value: 'Roszponka',
       },
       {
-        "value": "Rukola"
+        value: 'Rukola',
       },
       {
-        "value": "Rzepa"
+        value: 'Rzepa',
       },
       {
-        "value": "Rzeżucha"
+        value: 'Rzeżucha',
       },
       {
-        "value": "Rzodkiew"
+        value: 'Rzodkiew',
       },
       {
-        "value": "Rzodkiewka"
+        value: 'Rzodkiewka',
       },
       {
-        "value": "Sałata"
+        value: 'Sałata',
       },
       {
-        "value": "Seler"
+        value: 'Seler',
       },
       {
-        "value": "Soczewica"
+        value: 'Soczewica',
       },
       {
-        "value": "Soja"
+        value: 'Soja',
       },
       {
-        "value": "Szalotka"
+        value: 'Szalotka',
       },
       {
-        "value": "Szczaw"
+        value: 'Szczaw',
       },
       {
-        "value": "Szczypiorek"
+        value: 'Szczypiorek',
       },
       {
-        "value": "Szparag"
+        value: 'Szparag',
       },
       {
-        "value": "Szpinak"
+        value: 'Szpinak',
       },
       {
-        "value": "Ziemniak"
-      }
+        value: 'Ziemniak',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 39,
-    "question": "Przyprawy kuchenne",
-    "answers": [
+    id: 39,
+    question: 'Przyprawy kuchenne',
+    answers: [
       {
-        "value": "Adżwan"
+        value: 'Adżwan',
       },
       {
-        "value": "Aframon"
+        value: 'Aframon',
       },
       {
-        "value": "Amchur"
+        value: 'Amchur',
       },
       {
-        "value": "Annanto"
+        value: 'Annanto',
       },
       {
-        "value": "Anyż"
+        value: 'Anyż',
       },
       {
-        "value": "Asafetida"
+        value: 'Asafetida',
       },
       {
-        "value": "Bazylia"
+        value: 'Bazylia',
       },
       {
-        "value": "Boldo"
+        value: 'Boldo',
       },
       {
-        "value": "Cebula"
+        value: 'Cebula',
       },
       {
-        "value": "Chili"
+        value: 'Chili',
       },
       {
-        "value": "Chrzan"
+        value: 'Chrzan',
       },
       {
-        "value": "Curry"
+        value: 'Curry',
       },
       {
-        "value": "Cynamon"
+        value: 'Cynamon',
       },
       {
-        "value": "Cynamonowiec wonny"
+        value: 'Cynamonowiec wonny',
       },
       {
-        "value": "Cząber"
+        value: 'Cząber',
       },
       {
-        "value": "Czarnuszka"
+        value: 'Czarnuszka',
       },
       {
-        "value": "Czosnek"
+        value: 'Czosnek',
       },
       {
-        "value": "Czosnek Niedzwiedzi"
+        value: 'Czosnek Niedzwiedzi',
       },
       {
-        "value": "Czubrica"
+        value: 'Czubrica',
       },
       {
-        "value": "Dzięgiel"
+        value: 'Dzięgiel',
       },
       {
-        "value": "Estragon"
+        value: 'Estragon',
       },
       {
-        "value": "Galangal"
+        value: 'Galangal',
       },
       {
-        "value": "Gałka muszkatałowa"
+        value: 'Gałka muszkatałowa',
       },
       {
-        "value": "Gorczyca"
+        value: 'Gorczyca',
       },
       {
-        "value": "Goździki"
+        value: 'Goździki',
       },
       {
-        "value": "Hibiskus"
+        value: 'Hibiskus',
       },
       {
-        "value": "Hyzop"
+        value: 'Hyzop',
       },
       {
-        "value": "Imbir"
+        value: 'Imbir',
       },
       {
-        "value": "Jałowiec"
+        value: 'Jałowiec',
       },
       {
-        "value": "Kapary"
+        value: 'Kapary',
       },
       {
-        "value": "Kardamon"
+        value: 'Kardamon',
       },
       {
-        "value": "Kmin rzymski"
+        value: 'Kmin rzymski',
       },
       {
-        "value": "Kminek"
+        value: 'Kminek',
       },
       {
-        "value": "Kminek czarny"
+        value: 'Kminek czarny',
       },
       {
-        "value": "Kokum"
+        value: 'Kokum',
       },
       {
-        "value": "Kolendra"
+        value: 'Kolendra',
       },
       {
-        "value": "Komosa piżmowa"
+        value: 'Komosa piżmowa',
       },
       {
-        "value": "Koper włoski"
+        value: 'Koper włoski',
       },
       {
-        "value": "Koperek"
+        value: 'Koperek',
       },
       {
-        "value": "Kozieradk"
+        value: 'Kozieradk',
       },
       {
-        "value": "Kurkuma"
+        value: 'Kurkuma',
       },
       {
-        "value": "Kurkuma Biała"
+        value: 'Kurkuma Biała',
       },
       {
-        "value": "Lawenda"
+        value: 'Lawenda',
       },
       {
-        "value": "Lippia trójlistna"
+        value: 'Lippia trójlistna',
       },
       {
-        "value": "Liść laurowy"
+        value: 'Liść laurowy',
       },
       {
-        "value": "Lubczyk"
+        value: 'Lubczyk',
       },
       {
-        "value": "Lukrecja"
+        value: 'Lukrecja',
       },
       {
-        "value": "Macis"
+        value: 'Macis',
       },
       {
-        "value": "Mahlab"
+        value: 'Mahlab',
       },
       {
-        "value": "Majeranek"
+        value: 'Majeranek',
       },
       {
-        "value": "Mak"
+        value: 'Mak',
       },
       {
-        "value": "Mastyks"
+        value: 'Mastyks',
       },
       {
-        "value": "Melisa"
+        value: 'Melisa',
       },
       {
-        "value": "Mięta"
+        value: 'Mięta',
       },
       {
-        "value": "Mirt"
+        value: 'Mirt',
       },
       {
-        "value": "Mydlinica"
+        value: 'Mydlinica',
       },
       {
-        "value": "Nasiona akacji australijskiej"
+        value: 'Nasiona akacji australijskiej',
       },
       {
-        "value": "Nasiona selera"
+        value: 'Nasiona selera',
       },
       {
-        "value": "Oregano"
+        value: 'Oregano',
       },
       {
-        "value": "Papeda"
+        value: 'Papeda',
       },
       {
-        "value": "Papryczka peperoni"
+        value: 'Papryczka peperoni',
       },
       {
-        "value": "Papryka"
+        value: 'Papryka',
       },
       {
-        "value": "Papryka Aleppo"
+        value: 'Papryka Aleppo',
       },
       {
-        "value": "Pieprz"
+        value: 'Pieprz',
       },
       {
-        "value": "Pieprz Cayenne"
+        value: 'Pieprz Cayenne',
       },
       {
-        "value": "Pieprz kubeba"
+        value: 'Pieprz kubeba',
       },
       {
-        "value": "Pieprz Syczuański"
+        value: 'Pieprz Syczuański',
       },
       {
-        "value": "Pietruszka"
+        value: 'Pietruszka',
       },
       {
-        "value": "Rozmaryn"
+        value: 'Rozmaryn',
       },
       {
-        "value": "Rukiew wodna"
+        value: 'Rukiew wodna',
       },
       {
-        "value": "Sasafras"
+        value: 'Sasafras',
       },
       {
-        "value": "Sezam"
+        value: 'Sezam',
       },
       {
-        "value": "Shorama"
+        value: 'Shorama',
       },
       {
-        "value": "Siemie Lniane"
+        value: 'Siemie Lniane',
       },
       {
-        "value": "Sól"
+        value: 'Sól',
       },
       {
-        "value": "Sumak"
+        value: 'Sumak',
       },
       {
-        "value": "Święty pieprz"
+        value: 'Święty pieprz',
       },
       {
-        "value": "Szafran"
+        value: 'Szafran',
       },
       {
-        "value": "Szałwia"
+        value: 'Szałwia',
       },
       {
-        "value": "Szczaw"
+        value: 'Szczaw',
       },
       {
-        "value": "Szczypiorek"
+        value: 'Szczypiorek',
       },
       {
-        "value": "Tamarynd"
+        value: 'Tamarynd',
       },
       {
-        "value": "Tatarak, Kalamus"
+        value: 'Tatarak, Kalamus',
       },
       {
-        "value": "Trawa cytrynowa"
+        value: 'Trawa cytrynowa',
       },
       {
-        "value": "Trybula"
+        value: 'Trybula',
       },
       {
-        "value": "Tymianek"
+        value: 'Tymianek',
       },
       {
-        "value": "Wanilia"
+        value: 'Wanilia',
       },
       {
-        "value": "Wasabi"
+        value: 'Wasabi',
       },
       {
-        "value": "Ziele angielskie"
-      }
+        value: 'Ziele angielskie',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 40,
-    "question": "Smaki chipsów Lays",
-    "answers": [
+    id: 40,
+    question: 'Smaki chipsów Lays',
+    answers: [
       {
-        "value": "solone"
+        value: 'solone',
       },
       {
-        "value": "zielona cebulka"
+        value: 'zielona cebulka',
       },
       {
-        "value": "paprykowe"
+        value: 'paprykowe',
       },
       {
-        "value": "fromage"
+        value: 'fromage',
       },
       {
-        "value": "pikantna papryka"
+        value: 'pikantna papryka',
       },
       {
-        "value": "ser i cebula"
+        value: 'ser i cebula',
       },
       {
-        "value": "orientalna salsa"
+        value: 'orientalna salsa',
       },
       {
-        "value": "zielona cebulka"
+        value: 'zielona cebulka',
       },
       {
-        "value": "chili i limonka"
+        value: 'chili i limonka',
       },
       {
-        "value": "ostre pepperoni"
+        value: 'ostre pepperoni',
       },
       {
-        "value": "ser i jalapeño"
+        value: 'ser i jalapeño',
       },
       {
-        "value": "piri-piri"
+        value: 'piri-piri',
       },
       {
-        "value": "wasabi"
+        value: 'wasabi',
       },
       {
-        "value": "pieprz syczuański"
+        value: 'pieprz syczuański',
       },
       {
-        "value": "grillowana papryka"
+        value: 'grillowana papryka',
       },
       {
-        "value": "jogurt z ziołami"
+        value: 'jogurt z ziołami',
       },
       {
-        "value": "grillowane warzywa"
+        value: 'grillowane warzywa',
       },
       {
-        "value": "suszony pomidor"
+        value: 'suszony pomidor',
       },
       {
-        "value": "kurki w sosie kremowym"
+        value: 'kurki w sosie kremowym',
       },
       {
-        "value": "keczupowe"
-      }
+        value: 'keczupowe',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 41,
-    "question": "Gry Rockstar Games",
-    "answers": [
+    id: 41,
+    question: 'Gry Rockstar Games',
+    answers: [
       {
-        "value": "Canis Canem Edit"
+        value: 'Canis Canem Edit',
       },
       {
-        "value": "Grand Theft Auto"
+        value: 'Grand Theft Auto',
       },
       {
-        "value": "Grand Theft Auto 2"
+        value: 'Grand Theft Auto 2',
       },
       {
-        "value": "Grand Theft Auto Advance"
+        value: 'Grand Theft Auto Advance',
       },
       {
-        "value": "Grand Theft Auto III"
+        value: 'Grand Theft Auto III',
       },
       {
-        "value": "Grand Theft Auto IV"
+        value: 'Grand Theft Auto IV',
       },
       {
-        "value": "Grand Theft Auto Chinatown Wars"
+        value: 'Grand Theft Auto Chinatown Wars',
       },
       {
-        "value": "Grand Theft Auto Episodes from Liberty City"
+        value: 'Grand Theft Auto Episodes from Liberty City',
       },
       {
-        "value": "Grand Theft Auto Liberty City Stories"
+        value: 'Grand Theft Auto Liberty City Stories',
       },
       {
-        "value": "Grand Theft Auto London 1969"
+        value: 'Grand Theft Auto London 1969',
       },
       {
-        "value": "Grand Theft Auto San Andreas"
+        value: 'Grand Theft Auto San Andreas',
       },
       {
-        "value": "Grand Theft Auto The Ballad of Gay Tony"
+        value: 'Grand Theft Auto The Ballad of Gay Tony',
       },
       {
-        "value": "Grand Theft Auto The Trilogy – The Definitive Edition"
+        value: 'Grand Theft Auto The Trilogy – The Definitive Edition',
       },
       {
-        "value": "Grand Theft Auto Vice City"
+        value: 'Grand Theft Auto Vice City',
       },
       {
-        "value": "Grand Theft Auto Vice City Stories"
+        value: 'Grand Theft Auto Vice City Stories',
       },
       {
-        "value": "L.A. Noire"
+        value: 'L.A. Noire',
       },
       {
-        "value": "Manhunt"
+        value: 'Manhunt',
       },
       {
-        "value": "Manhunt 2"
+        value: 'Manhunt 2',
       },
       {
-        "value": "Max Payne"
+        value: 'Max Payne',
       },
       {
-        "value": "Max Payne 2: The Fall of Max Payne"
+        value: 'Max Payne 2: The Fall of Max Payne',
       },
       {
-        "value": "Midnight Club 3: DUB Edition"
+        value: 'Midnight Club 3: DUB Edition',
       },
       {
-        "value": "Midnight Club II"
+        value: 'Midnight Club II',
       },
       {
-        "value": "Midnight Club: Los Angeles"
+        value: 'Midnight Club: Los Angeles',
       },
       {
-        "value": "Midnight Club: Street Racing"
+        value: 'Midnight Club: Street Racing',
       },
       {
-        "value": "Red Dead Online"
+        value: 'Red Dead Online',
       },
       {
-        "value": "Red Dead Redemption"
+        value: 'Red Dead Redemption',
       },
       {
-        "value": "Red Dead Redemption 2"
+        value: 'Red Dead Redemption 2',
       },
       {
-        "value": "Red Dead Redemption: Undead Nightmare"
+        value: 'Red Dead Redemption: Undead Nightmare',
       },
       {
-        "value": "Rockstar Games Presents Table Tennis"
-      }
+        value: 'Rockstar Games Presents Table Tennis',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 42,
-    "question": "Gry z serii Need For Speed",
-    "answers": [
+    id: 42,
+    question: 'Gry z serii Need For Speed',
+    answers: [
       {
-        "value": "The Need for Speed"
+        value: 'The Need for Speed',
       },
       {
-        "value": "Need for Speed II"
+        value: 'Need for Speed II',
       },
       {
-        "value": "Need for Speed III Hot Pursuit"
+        value: 'Need for Speed III Hot Pursuit',
       },
       {
-        "value": "Need for Speed Road Challenge"
+        value: 'Need for Speed Road Challenge',
       },
       {
-        "value": "Need for Speed Porsche 2000"
+        value: 'Need for Speed Porsche 2000',
       },
       {
-        "value": "Need for Speed Hot Pursuit 2"
+        value: 'Need for Speed Hot Pursuit 2',
       },
       {
-        "value": "Need for Speed Underground"
+        value: 'Need for Speed Underground',
       },
       {
-        "value": "Need for Speed Underground 2"
+        value: 'Need for Speed Underground 2',
       },
       {
-        "value": "Need for Speed Underground Rivals"
+        value: 'Need for Speed Underground Rivals',
       },
       {
-        "value": "Need for Speed Most Wanted"
+        value: 'Need for Speed Most Wanted',
       },
       {
-        "value": "Need for Speed Most Wanted 5-1-0"
+        value: 'Need for Speed Most Wanted 5-1-0',
       },
       {
-        "value": "Need for Speed Carbon"
+        value: 'Need for Speed Carbon',
       },
       {
-        "value": "Need for Speed Carbon Own the City"
+        value: 'Need for Speed Carbon Own the City',
       },
       {
-        "value": "Need for Speed ProStreet"
+        value: 'Need for Speed ProStreet',
       },
       {
-        "value": "Need for Speed Undercover"
+        value: 'Need for Speed Undercover',
       },
       {
-        "value": "Need for Speed Shift"
+        value: 'Need for Speed Shift',
       },
       {
-        "value": "Need for Speed Nitro"
+        value: 'Need for Speed Nitro',
       },
       {
-        "value": "Need for Speed World"
+        value: 'Need for Speed World',
       },
       {
-        "value": "Need for Speed Hot Pursuit"
+        value: 'Need for Speed Hot Pursuit',
       },
       {
-        "value": "Shift 2 Unleashed"
+        value: 'Shift 2 Unleashed',
       },
       {
-        "value": "Need for Speed The Run"
+        value: 'Need for Speed The Run',
       },
       {
-        "value": "Need for Speed Most Wanted"
+        value: 'Need for Speed Most Wanted',
       },
       {
-        "value": "Need for Speed Rivals"
+        value: 'Need for Speed Rivals',
       },
       {
-        "value": "Need for Speed No Limits"
+        value: 'Need for Speed No Limits',
       },
       {
-        "value": "Need for Speed"
+        value: 'Need for Speed',
       },
       {
-        "value": "Need for Speed Payback"
+        value: 'Need for Speed Payback',
       },
       {
-        "value": "Need for Speed Heat"
+        value: 'Need for Speed Heat',
       },
       {
-        "value": "Need for Speed Hot Pursuit Remastered"
+        value: 'Need for Speed Hot Pursuit Remastered',
       },
       {
-        "value": "Need for Speed Unbound"
-      }
+        value: 'Need for Speed Unbound',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 43,
-    "question": "polskie drużyny piłki nożnej 3ligi stan na 2022/2023",
-    "answers": [
+    id: 43,
+    question: 'polskie drużyny piłki nożnej 3ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "Raków Częstochowa"
+        value: 'Raków Częstochowa',
       },
       {
-        "value": "Legia Warszawa"
+        value: 'Legia Warszawa',
       },
       {
-        "value": "Lech Poznań"
+        value: 'Lech Poznań',
       },
       {
-        "value": "Pogoń Szczecin"
+        value: 'Pogoń Szczecin',
       },
       {
-        "value": "Warta Poznań"
+        value: 'Warta Poznań',
       },
       {
-        "value": "Widzew Łódź"
+        value: 'Widzew Łódź',
       },
       {
-        "value": "Cracovia"
+        value: 'Cracovia',
       },
       {
-        "value": "Wisła Płock"
+        value: 'Wisła Płock',
       },
       {
-        "value": "Radomiak Radom"
+        value: 'Radomiak Radom',
       },
       {
-        "value": "Piast Gliwice"
+        value: 'Piast Gliwice',
       },
       {
-        "value": "Stal Mielec"
+        value: 'Stal Mielec',
       },
       {
-        "value": "Śląsk Wrocław"
+        value: 'Śląsk Wrocław',
       },
       {
-        "value": "Zagłębie Lubin"
+        value: 'Zagłębie Lubin',
       },
       {
-        "value": "Jagiellonia Białystok"
+        value: 'Jagiellonia Białystok',
       },
       {
-        "value": "Górnik Zabrze"
+        value: 'Górnik Zabrze',
       },
       {
-        "value": "Korona Kielce"
+        value: 'Korona Kielce',
       },
       {
-        "value": "Lechia Gdańsk"
+        value: 'Lechia Gdańsk',
       },
       {
-        "value": "Miedź Legnica"
+        value: 'Miedź Legnica',
       },
       {
-        "value": "ŁKS Łódź"
+        value: 'ŁKS Łódź',
       },
       {
-        "value": "Ruch Chorzów"
+        value: 'Ruch Chorzów',
       },
       {
-        "value": "Wisła Kraków"
+        value: 'Wisła Kraków',
       },
       {
-        "value": "Bruk-Bet Termalica Nieciecza"
+        value: 'Bruk-Bet Termalica Nieciecza',
       },
       {
-        "value": "Puszcza Niepołomice"
+        value: 'Puszcza Niepołomice',
       },
       {
-        "value": "Arka Gdynia"
+        value: 'Arka Gdynia',
       },
       {
-        "value": "Podbeskidzie Bielsko-Biała"
+        value: 'Podbeskidzie Bielsko-Biała',
       },
       {
-        "value": "Chrobry Głogów"
+        value: 'Chrobry Głogów',
       },
       {
-        "value": "Stal Rzeszów"
+        value: 'Stal Rzeszów',
       },
       {
-        "value": "GKS Katowice"
+        value: 'GKS Katowice',
       },
       {
-        "value": "GKS Tychy"
+        value: 'GKS Tychy',
       },
       {
-        "value": "Górnik Łęczna"
+        value: 'Górnik Łęczna',
       },
       {
-        "value": "Resovia"
+        value: 'Resovia',
       },
       {
-        "value": "Zagłębie Sosnowiec"
+        value: 'Zagłębie Sosnowiec',
       },
       {
-        "value": "Odra Opole"
+        value: 'Odra Opole',
       },
       {
-        "value": "Sandecja Nowy Sącz"
+        value: 'Sandecja Nowy Sącz',
       },
       {
-        "value": "Skra Częstochowa"
+        value: 'Skra Częstochowa',
       },
       {
-        "value": "Chojniczanka Chojnice"
+        value: 'Chojniczanka Chojnice',
       },
       {
-        "value": "Kotwica Kołobrzeg"
+        value: 'Kotwica Kołobrzeg',
       },
       {
-        "value": "KKS 1925 Kalisz"
+        value: 'KKS 1925 Kalisz',
       },
       {
-        "value": "Polonia Warszawa"
+        value: 'Polonia Warszawa',
       },
       {
-        "value": "Olimpia Elbląg"
+        value: 'Olimpia Elbląg',
       },
       {
-        "value": "Znicz Pruszków"
+        value: 'Znicz Pruszków',
       },
       {
-        "value": "Stomil Olsztyn"
+        value: 'Stomil Olsztyn',
       },
       {
-        "value": "Wisła Puławy"
+        value: 'Wisła Puławy',
       },
       {
-        "value": "Motor Lublin"
+        value: 'Motor Lublin',
       },
       {
-        "value": "Lech II Poznań"
+        value: 'Lech II Poznań',
       },
       {
-        "value": "GKS Jastrzębie"
+        value: 'GKS Jastrzębie',
       },
       {
-        "value": "Pogoń Siedlce"
+        value: 'Pogoń Siedlce',
       },
       {
-        "value": "Radunia Stężyca"
+        value: 'Radunia Stężyca',
       },
       {
-        "value": "Hutnik Kraków"
+        value: 'Hutnik Kraków',
       },
       {
-        "value": "Górnik Polkowice"
+        value: 'Górnik Polkowice',
       },
       {
-        "value": "Garbarnia Kraków"
+        value: 'Garbarnia Kraków',
       },
       {
-        "value": "Zagłębie II Lubin"
+        value: 'Zagłębie II Lubin',
       },
       {
-        "value": "Siarka Tarnobrzeg"
+        value: 'Siarka Tarnobrzeg',
       },
       {
-        "value": "Śląsk II Wrocław"
-      }
+        value: 'Śląsk II Wrocław',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 44,
-    "question": "angielskie drużyny piłki nożnej 3ligi stan na 2022/2023",
-    "answers": [
+    id: 44,
+    question: 'angielskie drużyny piłki nożnej 3ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "Arsenal Londyn"
+        value: 'Arsenal Londyn',
       },
       {
-        "value": "Manchester City"
+        value: 'Manchester City',
       },
       {
-        "value": "Manchester United"
+        value: 'Manchester United',
       },
       {
-        "value": "Tottenham Hotspur"
+        value: 'Tottenham Hotspur',
       },
       {
-        "value": "Newcastle United"
+        value: 'Newcastle United',
       },
       {
-        "value": "Liverpool"
+        value: 'Liverpool',
       },
       {
-        "value": "Brighton"
+        value: 'Brighton',
       },
       {
-        "value": "Brentford"
+        value: 'Brentford',
       },
       {
-        "value": "Fulham"
+        value: 'Fulham',
       },
       {
-        "value": "Chelsea Londyn"
+        value: 'Chelsea Londyn',
       },
       {
-        "value": "Aston Villa"
+        value: 'Aston Villa',
       },
       {
-        "value": "Crystal Palace"
+        value: 'Crystal Palace',
       },
       {
-        "value": "Wolverhampton Wanderers"
+        value: 'Wolverhampton Wanderers',
       },
       {
-        "value": "Leeds"
+        value: 'Leeds',
       },
       {
-        "value": "Everton"
+        value: 'Everton',
       },
       {
-        "value": "Nottingham Forest"
+        value: 'Nottingham Forest',
       },
       {
-        "value": "Leicester City"
+        value: 'Leicester City',
       },
       {
-        "value": "West Ham United"
+        value: 'West Ham United',
       },
       {
-        "value": "Bournemouth"
+        value: 'Bournemouth',
       },
       {
-        "value": "Southampton"
+        value: 'Southampton',
       },
       {
-        "value": "Burnley"
+        value: 'Burnley',
       },
       {
-        "value": "Sheffield United"
+        value: 'Sheffield United',
       },
       {
-        "value": "Middlesbrough"
+        value: 'Middlesbrough',
       },
       {
-        "value": "Luton Town"
+        value: 'Luton Town',
       },
       {
-        "value": "Blackburn Rovers"
+        value: 'Blackburn Rovers',
       },
       {
-        "value": "Millwall"
+        value: 'Millwall',
       },
       {
-        "value": "Norwich City"
+        value: 'Norwich City',
       },
       {
-        "value": "Coventry City"
+        value: 'Coventry City',
       },
       {
-        "value": "West Bromwich Albion"
+        value: 'West Bromwich Albion',
       },
       {
-        "value": "Watford"
+        value: 'Watford',
       },
       {
-        "value": "Sunderland"
+        value: 'Sunderland',
       },
       {
-        "value": "Preston North End"
+        value: 'Preston North End',
       },
       {
-        "value": "Stoke City"
+        value: 'Stoke City',
       },
       {
-        "value": "Bristol City"
+        value: 'Bristol City',
       },
       {
-        "value": "Hull City"
+        value: 'Hull City',
       },
       {
-        "value": "Swansea City"
+        value: 'Swansea City',
       },
       {
-        "value": "Birmingham City"
+        value: 'Birmingham City',
       },
       {
-        "value": "Reading"
+        value: 'Reading',
       },
       {
-        "value": "Queens Park Rangers"
+        value: 'Queens Park Rangers',
       },
       {
-        "value": "Rotherham United"
+        value: 'Rotherham United',
       },
       {
-        "value": "Cardiff City"
+        value: 'Cardiff City',
       },
       {
-        "value": "Huddersfield town"
+        value: 'Huddersfield town',
       },
       {
-        "value": "Blackpool"
+        value: 'Blackpool',
       },
       {
-        "value": "Wigan Athletic"
+        value: 'Wigan Athletic',
       },
       {
-        "value": "Plymouth Argyle"
+        value: 'Plymouth Argyle',
       },
       {
-        "value": "Sheffield Wednesday"
+        value: 'Sheffield Wednesday',
       },
       {
-        "value": "Ipswich Town"
+        value: 'Ipswich Town',
       },
       {
-        "value": "Barnsley"
+        value: 'Barnsley',
       },
       {
-        "value": "Bolton Wanderers"
+        value: 'Bolton Wanderers',
       },
       {
-        "value": "Derby Country"
+        value: 'Derby Country',
       },
       {
-        "value": "Peterborough united"
+        value: 'Peterborough united',
       },
       {
-        "value": "Wycombe Wanderers"
+        value: 'Wycombe Wanderers',
       },
       {
-        "value": "Portsmouth"
+        value: 'Portsmouth',
       },
       {
-        "value": "Shrewsbury Town"
+        value: 'Shrewsbury Town',
       },
       {
-        "value": "Exeter City"
+        value: 'Exeter City',
       },
       {
-        "value": "Charlton Athletic"
+        value: 'Charlton Athletic',
       },
       {
-        "value": "Fleetwood Town"
+        value: 'Fleetwood Town',
       },
       {
-        "value": "Lincoln City"
+        value: 'Lincoln City',
       },
       {
-        "value": "Bristol Rovers"
+        value: 'Bristol Rovers',
       },
       {
-        "value": "Port Vale"
+        value: 'Port Vale',
       },
       {
-        "value": "Cheltenham Town"
+        value: 'Cheltenham Town',
       },
       {
-        "value": "Burton Albion"
+        value: 'Burton Albion',
       },
       {
-        "value": "Milton Keynes Dons"
+        value: 'Milton Keynes Dons',
       },
       {
-        "value": "Oxford United"
+        value: 'Oxford United',
       },
       {
-        "value": "Accrington Stanley"
+        value: 'Accrington Stanley',
       },
       {
-        "value": "Morecambe"
+        value: 'Morecambe',
       },
       {
-        "value": "Cambridge United"
+        value: 'Cambridge United',
       },
       {
-        "value": "Forest Green Rovers"
-      }
+        value: 'Forest Green Rovers',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 45,
-    "question": "włoskie drużyny piłki nożnej 2ligi stan na 2022/2023",
-    "answers": [
+    id: 45,
+    question: 'włoskie drużyny piłki nożnej 2ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "Napoli"
+        value: 'Napoli',
       },
       {
-        "value": "Lazio"
+        value: 'Lazio',
       },
       {
-        "value": "Inter Mediolan"
+        value: 'Inter Mediolan',
       },
       {
-        "value": "AC Milan"
+        value: 'AC Milan',
       },
       {
-        "value": "AS Roma"
+        value: 'AS Roma',
       },
       {
-        "value": "Atalanta"
+        value: 'Atalanta',
       },
       {
-        "value": "Juventus Turyn"
+        value: 'Juventus Turyn',
       },
       {
-        "value": "Udinese"
+        value: 'Udinese',
       },
       {
-        "value": "Fiorentina"
+        value: 'Fiorentina',
       },
       {
-        "value": "Bologna"
+        value: 'Bologna',
       },
       {
-        "value": "Torino"
+        value: 'Torino',
       },
       {
-        "value": "Sassuolo Calcio"
+        value: 'Sassuolo Calcio',
       },
       {
-        "value": "Monza"
+        value: 'Monza',
       },
       {
-        "value": "Empoli"
+        value: 'Empoli',
       },
       {
-        "value": "Lecce"
+        value: 'Lecce',
       },
       {
-        "value": "Salernitana"
+        value: 'Salernitana',
       },
       {
-        "value": "Spezia Calcio"
+        value: 'Spezia Calcio',
       },
       {
-        "value": "Hellas Verona"
+        value: 'Hellas Verona',
       },
       {
-        "value": "Sampdoria"
+        value: 'Sampdoria',
       },
       {
-        "value": "Cremonese"
+        value: 'Cremonese',
       },
       {
-        "value": "Frosinone Calcio"
+        value: 'Frosinone Calcio',
       },
       {
-        "value": "Genoa"
+        value: 'Genoa',
       },
       {
-        "value": "Sudtirol"
+        value: 'Sudtirol',
       },
       {
-        "value": "Bari"
+        value: 'Bari',
       },
       {
-        "value": "Pisa"
+        value: 'Pisa',
       },
       {
-        "value": "Cagliari Calcio"
+        value: 'Cagliari Calcio',
       },
       {
-        "value": "Reggina"
+        value: 'Reggina',
       },
       {
-        "value": "Palermo"
+        value: 'Palermo',
       },
       {
-        "value": "Parma Calcio"
+        value: 'Parma Calcio',
       },
       {
-        "value": "Como"
+        value: 'Como',
       },
       {
-        "value": "Ternana Calcio"
+        value: 'Ternana Calcio',
       },
       {
-        "value": "Modena"
+        value: 'Modena',
       },
       {
-        "value": "Ascoli Calcio"
+        value: 'Ascoli Calcio',
       },
       {
-        "value": "Cittadella"
+        value: 'Cittadella',
       },
       {
-        "value": "Perugia Calcio"
+        value: 'Perugia Calcio',
       },
       {
-        "value": "Venezia"
+        value: 'Venezia',
       },
       {
-        "value": "Cosenza Calcio"
+        value: 'Cosenza Calcio',
       },
       {
-        "value": "Benevento Calcio"
+        value: 'Benevento Calcio',
       },
       {
-        "value": "Spal"
+        value: 'Spal',
       },
       {
-        "value": "Brescia"
+        value: 'Brescia',
       },
       {
-        "value": "PSG"
+        value: 'PSG',
       },
       {
-        "value": "Olympique Marsylia"
+        value: 'Olympique Marsylia',
       },
       {
-        "value": "RC Lens"
+        value: 'RC Lens',
       },
       {
-        "value": "AS Monaco"
+        value: 'AS Monaco',
       },
       {
-        "value": "Stade Rennais"
+        value: 'Stade Rennais',
       },
       {
-        "value": "LOSC Lille"
+        value: 'LOSC Lille',
       },
       {
-        "value": "OGC Nice"
+        value: 'OGC Nice',
       },
       {
-        "value": "FC Lorient"
+        value: 'FC Lorient',
       },
       {
-        "value": "STADE DE REIMS"
+        value: 'STADE DE REIMS',
       },
       {
-        "value": "Olympique Lyon"
+        value: 'Olympique Lyon',
       },
       {
-        "value": "Montpellier HSC"
+        value: 'Montpellier HSC',
       },
       {
-        "value": "Toulouse"
+        value: 'Toulouse',
       },
       {
-        "value": "Clermont Foot 63"
+        value: 'Clermont Foot 63',
       },
       {
-        "value": "Nantes"
+        value: 'Nantes',
       },
       {
-        "value": "RC Strasbourg"
+        value: 'RC Strasbourg',
       },
       {
-        "value": "Stade Brestois 29"
+        value: 'Stade Brestois 29',
       },
       {
-        "value": "AJ Auxerre"
+        value: 'AJ Auxerre',
       },
       {
-        "value": "Troyes AC"
+        value: 'Troyes AC',
       },
       {
-        "value": "AC Ajaccio"
+        value: 'AC Ajaccio',
       },
       {
-        "value": "Angers SCO"
+        value: 'Angers SCO',
       },
       {
-        "value": "Le Havre AC"
+        value: 'Le Havre AC',
       },
       {
-        "value": "Girondins Bordeaux"
+        value: 'Girondins Bordeaux',
       },
       {
-        "value": "Sochaux-Montbéliard"
+        value: 'Sochaux-Montbéliard',
       },
       {
-        "value": "Metz"
+        value: 'Metz',
       },
       {
-        "value": "Bastia"
+        value: 'Bastia',
       },
       {
-        "value": "Caen"
+        value: 'Caen',
       },
       {
-        "value": "Grenoble Foot 38"
+        value: 'Grenoble Foot 38',
       },
       {
-        "value": "Quevilly Rouen"
+        value: 'Quevilly Rouen',
       },
       {
-        "value": "En Avant Guingamp"
+        value: 'En Avant Guingamp',
       },
       {
-        "value": "Paris FC"
+        value: 'Paris FC',
       },
       {
-        "value": "Amiens SC"
+        value: 'Amiens SC',
       },
       {
-        "value": "AS Saint-Étienne"
+        value: 'AS Saint-Étienne',
       },
       {
-        "value": "Annecy"
+        value: 'Annecy',
       },
       {
-        "value": "Valenciennes"
+        value: 'Valenciennes',
       },
       {
-        "value": "Pau FC"
+        value: 'Pau FC',
       },
       {
-        "value": "Rodez"
+        value: 'Rodez',
       },
       {
-        "value": "Stade Lavallois"
+        value: 'Stade Lavallois',
       },
       {
-        "value": "Dijon FCO"
+        value: 'Dijon FCO',
       },
       {
-        "value": "Nîmes Olympique"
+        value: 'Nîmes Olympique',
       },
       {
-        "value": "Chamois Niortais FC"
-      }
+        value: 'Chamois Niortais FC',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 46,
-    "question": "hiszpanskie drużyny piłki nożnej 2ligi stan na 2022/2023",
-    "answers": [
+    id: 46,
+    question: 'hiszpanskie drużyny piłki nożnej 2ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "FC Barcelona"
+        value: 'FC Barcelona',
       },
       {
-        "value": "Real Madryt"
+        value: 'Real Madryt',
       },
       {
-        "value": "Atlético Madryt"
+        value: 'Atlético Madryt',
       },
       {
-        "value": "Real Sociedad"
+        value: 'Real Sociedad',
       },
       {
-        "value": "Real Betis"
+        value: 'Real Betis',
       },
       {
-        "value": "Villarreal CF"
+        value: 'Villarreal CF',
       },
       {
-        "value": "Athletic Bilbao"
+        value: 'Athletic Bilbao',
       },
       {
-        "value": "Rayo Vallecano"
+        value: 'Rayo Vallecano',
       },
       {
-        "value": "CA Osasuna"
+        value: 'CA Osasuna',
       },
       {
-        "value": "Celta Vigo"
+        value: 'Celta Vigo',
       },
       {
-        "value": "RCD Mallorca"
+        value: 'RCD Mallorca',
       },
       {
-        "value": "Girona"
+        value: 'Girona',
       },
       {
-        "value": "Getafe"
+        value: 'Getafe',
       },
       {
-        "value": "Sevilla"
+        value: 'Sevilla',
       },
       {
-        "value": "Cadiz"
+        value: 'Cadiz',
       },
       {
-        "value": "Real Valladolid"
+        value: 'Real Valladolid',
       },
       {
-        "value": "RCD Espanyol"
+        value: 'RCD Espanyol',
       },
       {
-        "value": "Valencia CF"
+        value: 'Valencia CF',
       },
       {
-        "value": "UD Almería"
+        value: 'UD Almería',
       },
       {
-        "value": "Elche CF"
+        value: 'Elche CF',
       },
       {
-        "value": "SD Eibar"
+        value: 'SD Eibar',
       },
       {
-        "value": "Granada CF"
+        value: 'Granada CF',
       },
       {
-        "value": "UD Las Palmas"
+        value: 'UD Las Palmas',
       },
       {
-        "value": "Levante UD"
+        value: 'Levante UD',
       },
       {
-        "value": "Deportivo Alavés"
+        value: 'Deportivo Alavés',
       },
       {
-        "value": "Albacete Balompié"
+        value: 'Albacete Balompié',
       },
       {
-        "value": "FC Cartagena"
+        value: 'FC Cartagena',
       },
       {
-        "value": "Burgos CF"
+        value: 'Burgos CF',
       },
       {
-        "value": "Villarreal B"
+        value: 'Villarreal B',
       },
       {
-        "value": "SD Huesca"
+        value: 'SD Huesca',
       },
       {
-        "value": "Andorra"
+        value: 'Andorra',
       },
       {
-        "value": "CD Tenerife"
+        value: 'CD Tenerife',
       },
       {
-        "value": "CD Mirandés"
+        value: 'CD Mirandés',
       },
       {
-        "value": "Real Saragossa"
+        value: 'Real Saragossa',
       },
       {
-        "value": "CD Leganés"
+        value: 'CD Leganés',
       },
       {
-        "value": "Real Oviedo"
+        value: 'Real Oviedo',
       },
       {
-        "value": "Racing Santander"
+        value: 'Racing Santander',
       },
       {
-        "value": "Sporting Gijón"
+        value: 'Sporting Gijón',
       },
       {
-        "value": "SD Ponferradina"
+        value: 'SD Ponferradina',
       },
       {
-        "value": "Malaga CF"
+        value: 'Malaga CF',
       },
       {
-        "value": "UD Ibiza"
+        value: 'UD Ibiza',
       },
       {
-        "value": "CD Lugo"
-      }
+        value: 'CD Lugo',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 47,
-    "question": "niemieckie drużyny piłki nożnej 3ligi stan na 2022/2023",
-    "answers": [
+    id: 47,
+    question: 'niemieckie drużyny piłki nożnej 3ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "Borussia Dortmund"
+        value: 'Borussia Dortmund',
       },
       {
-        "value": "Bayern Monachium"
+        value: 'Bayern Monachium',
       },
       {
-        "value": "FC Union Berlin"
+        value: 'FC Union Berlin',
       },
       {
-        "value": "SC Freiburg"
+        value: 'SC Freiburg',
       },
       {
-        "value": "RB Lipsk"
+        value: 'RB Lipsk',
       },
       {
-        "value": "Eintracht Frankfurt"
+        value: 'Eintracht Frankfurt',
       },
       {
-        "value": "VfL Wolfsburg"
+        value: 'VfL Wolfsburg',
       },
       {
-        "value": "Bayer Leverkusen"
+        value: 'Bayer Leverkusen',
       },
       {
-        "value": "FSV Mainz 05"
+        value: 'FSV Mainz 05',
       },
       {
-        "value": "Borussia Mönchengladbach"
+        value: 'Borussia Mönchengladbach',
       },
       {
-        "value": "Werder Brema"
+        value: 'Werder Brema',
       },
       {
-        "value": "FC Augsburg"
+        value: 'FC Augsburg',
       },
       {
-        "value": "FC Koeln"
+        value: 'FC Koeln',
       },
       {
-        "value": "VfL Bochum"
+        value: 'VfL Bochum',
       },
       {
-        "value": "TSG Hoffenheim"
+        value: 'TSG Hoffenheim',
       },
       {
-        "value": "Hertha Berlin"
+        value: 'Hertha Berlin',
       },
       {
-        "value": "FC Schalke 04"
+        value: 'FC Schalke 04',
       },
       {
-        "value": "VfB Stuttgart"
+        value: 'VfB Stuttgart',
       },
       {
-        "value": "SV Darmstadt 98"
+        value: 'SV Darmstadt 98',
       },
       {
-        "value": "FC Heidenheim"
+        value: 'FC Heidenheim',
       },
       {
-        "value": "Hamburger SV"
+        value: 'Hamburger SV',
       },
       {
-        "value": "Fortuna Düsseldorf"
+        value: 'Fortuna Düsseldorf',
       },
       {
-        "value": "St. Pauli"
+        value: 'St. Pauli',
       },
       {
-        "value": "SC Paderborn 07"
+        value: 'SC Paderborn 07',
       },
       {
-        "value": "FC Kaiserslautern"
+        value: 'FC Kaiserslautern',
       },
       {
-        "value": "Holstein Kiel"
+        value: 'Holstein Kiel',
       },
       {
-        "value": "Karlsruher"
+        value: 'Karlsruher',
       },
       {
-        "value": "Hannover 96"
+        value: 'Hannover 96',
       },
       {
-        "value": "SpVgg Greuther Fürth"
+        value: 'SpVgg Greuther Fürth',
       },
       {
-        "value": "FC Nürnberg"
+        value: 'FC Nürnberg',
       },
       {
-        "value": "FC Magdeburg"
+        value: 'FC Magdeburg',
       },
       {
-        "value": "SSV Jahn Regensburg"
+        value: 'SSV Jahn Regensburg',
       },
       {
-        "value": "Arminia Bielefeld"
+        value: 'Arminia Bielefeld',
       },
       {
-        "value": "Eintracht Brunszwik"
+        value: 'Eintracht Brunszwik',
       },
       {
-        "value": "Hansa Rostock"
+        value: 'Hansa Rostock',
       },
       {
-        "value": "SV Sandhausen"
+        value: 'SV Sandhausen',
       },
       {
-        "value": "SV 07 Elversberg"
+        value: 'SV 07 Elversberg',
       },
       {
-        "value": "SC Freiburg II"
+        value: 'SC Freiburg II',
       },
       {
-        "value": "SV Wehen Wiesbaden"
+        value: 'SV Wehen Wiesbaden',
       },
       {
-        "value": "VfL Osnabrück"
+        value: 'VfL Osnabrück',
       },
       {
-        "value": "Dynamo Dresden"
+        value: 'Dynamo Dresden',
       },
       {
-        "value": "FC Saarbrücken"
+        value: 'FC Saarbrücken',
       },
       {
-        "value": "SV Waldhof Mannheim"
+        value: 'SV Waldhof Mannheim',
       },
       {
-        "value": "FC Viktoria Köln"
+        value: 'FC Viktoria Köln',
       },
       {
-        "value": "TSV 1860 Monachium"
+        value: 'TSV 1860 Monachium',
       },
       {
-        "value": "SC Verl"
+        value: 'SC Verl',
       },
       {
-        "value": "MSV Duisburg"
+        value: 'MSV Duisburg',
       },
       {
-        "value": "FC Erzgebirge Aue"
+        value: 'FC Erzgebirge Aue',
       },
       {
-        "value": "FC Ingolstadt 04"
+        value: 'FC Ingolstadt 04',
       },
       {
-        "value": "Rot-Weiss Essen"
+        value: 'Rot-Weiss Essen',
       },
       {
-        "value": "Borussia Dortmund II"
+        value: 'Borussia Dortmund II',
       },
       {
-        "value": "Hallescher FC"
+        value: 'Hallescher FC',
       },
       {
-        "value": "SpVgg Bayreuth"
+        value: 'SpVgg Bayreuth',
       },
       {
-        "value": "VfB Oldenburg"
+        value: 'VfB Oldenburg',
       },
       {
-        "value": "FSV Zwickau"
+        value: 'FSV Zwickau',
       },
       {
-        "value": "SV Meppen"
-      }
+        value: 'SV Meppen',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 48,
-    "question": "Austriackie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 48,
+    question: 'Austriackie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Red Bull Salzburg"
+        value: 'Red Bull Salzburg',
       },
       {
-        "value": "SK Sturm Graz"
+        value: 'SK Sturm Graz',
       },
       {
-        "value": "LASK Linz"
+        value: 'LASK Linz',
       },
       {
-        "value": "Rapid Wiedeń"
+        value: 'Rapid Wiedeń',
       },
       {
-        "value": "Austria Wiedeń"
+        value: 'Austria Wiedeń',
       },
       {
-        "value": "SK Austria Klagenfurt"
+        value: 'SK Austria Klagenfurt',
       },
       {
-        "value": "WSG Tirol"
+        value: 'WSG Tirol',
       },
       {
-        "value": "Austria Lustenau"
+        value: 'Austria Lustenau',
       },
       {
-        "value": "Wolfsberger AC"
+        value: 'Wolfsberger AC',
       },
       {
-        "value": "TSV Hartberg"
+        value: 'TSV Hartberg',
       },
       {
-        "value": "SV Ried"
+        value: 'SV Ried',
       },
       {
-        "value": "Rheindorf Altach"
-      }
+        value: 'Rheindorf Altach',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 49,
-    "question": "Belgijskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 49,
+    question: 'Belgijskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "KRC Genk"
+        value: 'KRC Genk',
       },
       {
-        "value": "Royale Union Saint-Gilloise"
+        value: 'Royale Union Saint-Gilloise',
       },
       {
-        "value": "Royal Antwerp FC"
+        value: 'Royal Antwerp FC',
       },
       {
-        "value": "KAA Gent"
+        value: 'KAA Gent',
       },
       {
-        "value": "Club Brugge"
+        value: 'Club Brugge',
       },
       {
-        "value": "KVC Westerlo"
+        value: 'KVC Westerlo',
       },
       {
-        "value": "Standard Liège"
+        value: 'Standard Liège',
       },
       {
-        "value": "RSC Anderlecht"
+        value: 'RSC Anderlecht',
       },
       {
-        "value": "Royal Charleroi"
+        value: 'Royal Charleroi',
       },
       {
-        "value": "Cercle Brugge"
+        value: 'Cercle Brugge',
       },
       {
-        "value": "Oud-Heverlee Leuven"
+        value: 'Oud-Heverlee Leuven',
       },
       {
-        "value": "Sint-Truidense VV"
+        value: 'Sint-Truidense VV',
       },
       {
-        "value": "KV Mechelen"
+        value: 'KV Mechelen',
       },
       {
-        "value": "KV Kortrijk"
+        value: 'KV Kortrijk',
       },
       {
-        "value": "KAS Eupen"
+        value: 'KAS Eupen',
       },
       {
-        "value": "KV Oostende"
+        value: 'KV Oostende',
       },
       {
-        "value": "SV Zulte Waregem"
+        value: 'SV Zulte Waregem',
       },
       {
-        "value": "RFC Seraing"
-      }
+        value: 'RFC Seraing',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 50,
-    "question": "Białoruskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 50,
+    question: 'Białoruskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Dynamo Mińsk"
+        value: 'Dynamo Mińsk',
       },
       {
-        "value": "BATE Borysów"
+        value: 'BATE Borysów',
       },
       {
-        "value": "FC Mińsk"
+        value: 'FC Mińsk',
       },
       {
-        "value": "Szachcior Soligorsk"
+        value: 'Szachcior Soligorsk',
       },
       {
-        "value": "FK Smorgonie"
+        value: 'FK Smorgonie',
       },
       {
-        "value": "Torpedo Zhodino"
+        value: 'Torpedo Zhodino',
       },
       {
-        "value": "Eniergietyk-BDU Mińsk"
+        value: 'Eniergietyk-BDU Mińsk',
       },
       {
-        "value": "Nioman Grodno"
+        value: 'Nioman Grodno',
       },
       {
-        "value": "Naftan Nowopołock"
+        value: 'Naftan Nowopołock',
       },
       {
-        "value": "Dynamo Brześć"
+        value: 'Dynamo Brześć',
       },
       {
-        "value": "Biełszyna Bobrujsk"
+        value: 'Biełszyna Bobrujsk',
       },
       {
-        "value": "FK Słuck"
+        value: 'FK Słuck',
       },
       {
-        "value": "FK Homel"
+        value: 'FK Homel',
       },
       {
-        "value": "Sławija Mozyrz"
+        value: 'Sławija Mozyrz',
       },
       {
-        "value": "Isłacz Minski Rajon"
-      }
+        value: 'Isłacz Minski Rajon',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 51,
-    "question": "Piłkarze Piasta Gliwice obecni i historyczni",
-    "answers": [
+    id: 51,
+    question: 'Piłkarze Piasta Gliwice obecni i historyczni',
+    answers: [
       {
-        "value": "ALVES TIAGO"
+        value: 'ALVES TIAGO',
       },
       {
-        "value": "AMEYAW MICHAEL"
+        value: 'AMEYAW MICHAEL',
       },
       {
-        "value": "ANDRASZAK RAFAŁ"
+        value: 'ANDRASZAK RAFAŁ',
       },
       {
-        "value": "ANGIELSKI KAROL"
+        value: 'ANGIELSKI KAROL',
       },
       {
-        "value": "APPIAH KOFI KYERE"
+        value: 'APPIAH KOFI KYERE',
       },
       {
-        "value": "AQUINO DANI"
+        value: 'AQUINO DANI',
       },
       {
-        "value": "AYONG KARSTEN"
+        value: 'AYONG KARSTEN',
       },
       {
-        "value": "BADIA GERARD"
+        value: 'BADIA GERARD',
       },
       {
-        "value": "BAJCER PIOTR"
+        value: 'BAJCER PIOTR',
       },
       {
-        "value": "BALUL TOMASZ"
+        value: 'BALUL TOMASZ',
       },
       {
-        "value": "BAŁUSZYŃSKI HENRYK"
+        value: 'BAŁUSZYŃSKI HENRYK',
       },
       {
-        "value": "BANAŚ ADAM"
+        value: 'BANAŚ ADAM',
       },
       {
-        "value": "BAŃKA ARTUR"
+        value: 'BAŃKA ARTUR',
       },
       {
-        "value": "BARISIĆ JOSIP"
+        value: 'BARISIĆ JOSIP',
       },
       {
-        "value": "BEDNARZ ANDRZEJ"
+        value: 'BEDNARZ ANDRZEJ',
       },
       {
-        "value": "BIAŁEK MICHAŁ"
+        value: 'BIAŁEK MICHAŁ',
       },
       {
-        "value": "BISKUP JAKUB"
+        value: 'BISKUP JAKUB',
       },
       {
-        "value": "BŁACHUT MARIUSZ"
+        value: 'BŁACHUT MARIUSZ',
       },
       {
-        "value": "BOCHENEK DARIUSZ"
+        value: 'BOCHENEK DARIUSZ',
       },
       {
-        "value": "BODYS MICHAŁ"
+        value: 'BODYS MICHAŁ',
       },
       {
-        "value": "BODZIOCH JANUSZ"
+        value: 'BODZIOCH JANUSZ',
       },
       {
-        "value": "BODZIOCH MATEUSZ"
+        value: 'BODZIOCH MATEUSZ',
       },
       {
-        "value": "BOJARSKI MARCIN"
+        value: 'BOJARSKI MARCIN',
       },
       {
-        "value": "BOK ADRIAN"
+        value: 'BOK ADRIAN',
       },
       {
-        "value": "BORKAŁA REMIGIUSZ"
+        value: 'BORKAŁA REMIGIUSZ',
       },
       {
-        "value": "BRONOWICKI PIOTR"
+        value: 'BRONOWICKI PIOTR',
       },
       {
-        "value": "BROŻEK PIOTR"
+        value: 'BROŻEK PIOTR',
       },
       {
-        "value": "BUDKA MIROSŁAW"
+        value: 'BUDKA MIROSŁAW',
       },
       {
-        "value": "BUDZICH DAWID"
+        value: 'BUDZICH DAWID',
       },
       {
-        "value": "BUDZIK DOMINIK"
+        value: 'BUDZIK DOMINIK',
       },
       {
-        "value": "BUKATA MARTIN"
+        value: 'BUKATA MARTIN',
       },
       {
-        "value": "BUKOWIEC MATEUSZ"
+        value: 'BUKOWIEC MATEUSZ',
       },
       {
-        "value": "BURYAN JAN"
+        value: 'BURYAN JAN',
       },
       {
-        "value": "BYRTEK DAMIAN"
+        value: 'BYRTEK DAMIAN',
       },
       {
-        "value": "BZDĘGA TOMASZ"
+        value: 'BZDĘGA TOMASZ',
       },
       {
-        "value": "CALIJURI MAYCON"
+        value: 'CALIJURI MAYCON',
       },
       {
-        "value": "CHAŁBIŃSKI MICHAŁ"
+        value: 'CHAŁBIŃSKI MICHAŁ',
       },
       {
-        "value": "CHAMERA MICHAŁ"
+        value: 'CHAMERA MICHAŁ',
       },
       {
-        "value": "CHARMUŁOWICZ SŁAWOMIR"
+        value: 'CHARMUŁOWICZ SŁAWOMIR',
       },
       {
-        "value": "CHOLEWA DAWID"
+        value: 'CHOLEWA DAWID',
       },
       {
-        "value": "CHRAPEK MICHAŁ"
+        value: 'CHRAPEK MICHAŁ',
       },
       {
-        "value": "CHYLASZEK DANIEL"
+        value: 'CHYLASZEK DANIEL',
       },
       {
-        "value": "CHYŁA MARCIN"
+        value: 'CHYŁA MARCIN',
       },
       {
-        "value": "CICMAN PAVOL"
+        value: 'CICMAN PAVOL',
       },
       {
-        "value": "CIECHAŃSKI DANIEL"
+        value: 'CIECHAŃSKI DANIEL',
       },
       {
-        "value": "CIFUENTES ALBERTO"
+        value: 'CIFUENTES ALBERTO',
       },
       {
-        "value": "CMELIK LUKAS"
+        value: 'CMELIK LUKAS',
       },
       {
-        "value": "CUERDA FERNANDO"
+        value: 'CUERDA FERNANDO',
       },
       {
-        "value": "CZEKAJ SŁAWOMIR"
+        value: 'CZEKAJ SŁAWOMIR',
       },
       {
-        "value": "CZEKAŃSKI WITOLD"
+        value: 'CZEKAŃSKI WITOLD',
       },
       {
-        "value": "CZERWIŃSKI JAKUB"
+        value: 'CZERWIŃSKI JAKUB',
       },
       {
-        "value": "DĄBROWSKI MIROSŁAW"
+        value: 'DĄBROWSKI MIROSŁAW',
       },
       {
-        "value": "DĄBROWSKI WOJCIECH"
+        value: 'DĄBROWSKI WOJCIECH',
       },
       {
-        "value": "DEMIANIUK CEZARY"
+        value: 'DEMIANIUK CEZARY',
       },
       {
-        "value": "DŁUGOŁĘCKI MATEUSZ"
+        value: 'DŁUGOŁĘCKI MATEUSZ',
       },
       {
-        "value": "DOCEKAL TOMAS"
+        value: 'DOCEKAL TOMAS',
       },
       {
-        "value": "DUMAŁA RAFAŁ"
+        value: 'DUMAŁA RAFAŁ',
       },
       {
-        "value": "DUNAJCZYK WOJCIECH"
+        value: 'DUNAJCZYK WOJCIECH',
       },
       {
-        "value": "DUSZARA PRZEMYSŁAW"
+        value: 'DUSZARA PRZEMYSŁAW',
       },
       {
-        "value": "DYBOWSKI KAROL"
+        value: 'DYBOWSKI KAROL',
       },
       {
-        "value": "DYTKO PATRICK"
+        value: 'DYTKO PATRICK',
       },
       {
-        "value": "DZICZEK PATRYK"
+        value: 'DZICZEK PATRYK',
       },
       {
-        "value": "FEĆ MARCIN"
+        value: 'FEĆ MARCIN',
       },
       {
-        "value": "FELIX JORGE"
+        value: 'FELIX JORGE',
       },
       {
-        "value": "FILIPCZYK MAREK"
+        value: 'FILIPCZYK MAREK',
       },
       {
-        "value": "FILIPOWICZ MICHAŁ"
+        value: 'FILIPOWICZ MICHAŁ',
       },
       {
-        "value": "FILIPOWICZ GRZEGORZ"
+        value: 'FILIPOWICZ GRZEGORZ',
       },
       {
-        "value": "FLIS MARCIN"
+        value: 'FLIS MARCIN',
       },
       {
-        "value": "FOLC MARCIN"
+        value: 'FOLC MARCIN',
       },
       {
-        "value": "FREITAG JAKUB"
+        value: 'FREITAG JAKUB',
       },
       {
-        "value": "GAŁUSZKA RAFAŁ"
+        value: 'GAŁUSZKA RAFAŁ',
       },
       {
-        "value": "GAMLA PAWEŁ"
+        value: 'GAMLA PAWEŁ',
       },
       {
-        "value": "GARDIASZ ŁUKASZ"
+        value: 'GARDIASZ ŁUKASZ',
       },
       {
-        "value": "GENDERA MAKSYM"
+        value: 'GENDERA MAKSYM',
       },
       {
-        "value": "GIL GRZEGORZ"
+        value: 'GIL GRZEGORZ',
       },
       {
-        "value": "GIRDVAINIS EDVINAS"
+        value: 'GIRDVAINIS EDVINAS',
       },
       {
-        "value": "GLIK KAMIL"
+        value: 'GLIK KAMIL',
       },
       {
-        "value": "GŁOWIENKO JAN"
+        value: 'GŁOWIENKO JAN',
       },
       {
-        "value": "GOJKO DENIS"
+        value: 'GOJKO DENIS',
       },
       {
-        "value": "GONTAREWICZ WOJCIECH"
+        value: 'GONTAREWICZ WOJCIECH',
       },
       {
-        "value": "GORCZYCA JACEK"
+        value: 'GORCZYCA JACEK',
       },
       {
-        "value": "GOTAL SANDRO"
+        value: 'GOTAL SANDRO',
       },
       {
-        "value": "GRAJNER TOMASZ"
+        value: 'GRAJNER TOMASZ',
       },
       {
-        "value": "GROBORZ KAMIL"
+        value: 'GROBORZ KAMIL',
       },
       {
-        "value": "GROLIK MARCIN"
+        value: 'GROLIK MARCIN',
       },
       {
-        "value": "GRYMEL MARCIN"
+        value: 'GRYMEL MARCIN',
       },
       {
-        "value": "GRZEMSKI BARTŁOMIEJ"
+        value: 'GRZEMSKI BARTŁOMIEJ',
       },
       {
-        "value": "HADJ SAID MOHAMED AMINE"
+        value: 'HADJ SAID MOHAMED AMINE',
       },
       {
-        "value": "HAŁGAS KRZYSZTOF"
+        value: 'HAŁGAS KRZYSZTOF',
       },
       {
-        "value": "HANZEL ŁUKASZ"
+        value: 'HANZEL ŁUKASZ',
       },
       {
-        "value": "HATELEY TOM"
+        value: 'HATELEY TOM',
       },
       {
-        "value": "HEBERT"
+        value: 'HEBERT',
       },
       {
-        "value": "HOLUBEK JAKUB"
+        value: 'HOLUBEK JAKUB',
       },
       {
-        "value": "HORVATH CSABA"
+        value: 'HORVATH CSABA',
       },
       {
-        "value": "HUK TOMAS"
+        value: 'HUK TOMAS',
       },
       {
-        "value": "HUMERSKI MACIEJ"
+        value: 'HUMERSKI MACIEJ',
       },
       {
-        "value": "HYJEK JAVIER AJENJO"
+        value: 'HYJEK JAVIER AJENJO',
       },
       {
-        "value": "IPSA KRISTIJAN"
+        value: 'IPSA KRISTIJAN',
       },
       {
-        "value": "IWAN BARTOSZ"
+        value: 'IWAN BARTOSZ',
       },
       {
-        "value": "IWAN DANIEL"
+        value: 'IWAN DANIEL',
       },
       {
-        "value": "IWANICKI LESZEK"
+        value: 'IWANICKI LESZEK',
       },
       {
-        "value": "IZVOLT MATEJ"
+        value: 'IZVOLT MATEJ',
       },
       {
-        "value": "JAGIEŁŁO ALEKSANDER"
+        value: 'JAGIEŁŁO ALEKSANDER',
       },
       {
-        "value": "JANCZAREK ŁUKASZ"
+        value: 'JANCZAREK ŁUKASZ',
       },
       {
-        "value": "JANCZYK DAWID"
+        value: 'JANCZYK DAWID',
       },
       {
-        "value": "JANKOWSKI MACIEJ"
+        value: 'JANKOWSKI MACIEJ',
       },
       {
-        "value": "JARKIEWICZ ANDRZEJ"
+        value: 'JARKIEWICZ ANDRZEJ',
       },
       {
-        "value": "JELONEK BARTŁOMIEJ"
+        value: 'JELONEK BARTŁOMIEJ',
       },
       {
-        "value": "JODŁOWIEC TOMASZ"
+        value: 'JODŁOWIEC TOMASZ',
       },
       {
-        "value": "JOHN COLLINS"
+        value: 'JOHN COLLINS',
       },
       {
-        "value": "JURADO ALVARO"
+        value: 'JURADO ALVARO',
       },
       {
-        "value": "JURADO RUBEN"
+        value: 'JURADO RUBEN',
       },
       {
-        "value": "KAMIŃSKI WOJCIECH"
+        value: 'KAMIŃSKI WOJCIECH',
       },
       {
-        "value": "KAPUSTA ŁUKASZ"
+        value: 'KAPUSTA ŁUKASZ',
       },
       {
-        "value": "KAPUT MICHAŁ"
+        value: 'KAPUT MICHAŁ',
       },
       {
-        "value": "KARASAUSKS ARTURS"
+        value: 'KARASAUSKS ARTURS',
       },
       {
-        "value": "KARWAN PIOTR"
+        value: 'KARWAN PIOTR',
       },
       {
-        "value": "KASPRZIK TOMASZ"
+        value: 'KASPRZIK TOMASZ',
       },
       {
-        "value": "KASPRZIK GRZEGORZ"
+        value: 'KASPRZIK GRZEGORZ',
       },
       {
-        "value": "KASZOWSKI JAROSŁAW"
+        value: 'KASZOWSKI JAROSŁAW',
       },
       {
-        "value": "KATRANIS ALEXANDROS"
+        value: 'KATRANIS ALEXANDROS',
       },
       {
-        "value": "KĄDZIOR DAMIAN"
+        value: 'KĄDZIOR DAMIAN',
       },
       {
-        "value": "KĘDZIORA WOJCIECH"
+        value: 'KĘDZIORA WOJCIECH',
       },
       {
-        "value": "KIREJCZYK GABRIEL"
+        value: 'KIREJCZYK GABRIEL',
       },
       {
-        "value": "KIRKESKOV MIKKEL"
+        value: 'KIRKESKOV MIKKEL',
       },
       {
-        "value": "KLEPCZYŃSKI ADRIAN"
+        value: 'KLEPCZYŃSKI ADRIAN',
       },
       {
-        "value": "KLUPŚ TYMOTEUSZ"
+        value: 'KLUPŚ TYMOTEUSZ',
       },
       {
-        "value": "KMIETOWICZ KRZYSZTOF"
+        value: 'KMIETOWICZ KRZYSZTOF',
       },
       {
-        "value": "KNAP TOMASZ"
+        value: 'KNAP TOMASZ',
       },
       {
-        "value": "KOCUR MARCIN"
+        value: 'KOCUR MARCIN',
       },
       {
-        "value": "KOCYBA RAFAŁ"
+        value: 'KOCYBA RAFAŁ',
       },
       {
-        "value": "KOCZON DANIEL"
+        value: 'KOCZON DANIEL',
       },
       {
-        "value": "KOLASIŃSKI KRZYSZTOF"
+        value: 'KOLASIŃSKI KRZYSZTOF',
       },
       {
-        "value": "KOŁACKI DARIUSZ"
+        value: 'KOŁACKI DARIUSZ',
       },
       {
-        "value": "KOŁSUT RAFAŁ"
+        value: 'KOŁSUT RAFAŁ',
       },
       {
-        "value": "KOMAR MARIUSZ"
+        value: 'KOMAR MARIUSZ',
       },
       {
-        "value": "KOMPAŁA ADAM"
+        value: 'KOMPAŁA ADAM',
       },
       {
-        "value": "KONCZKOWSKI MARTIN"
+        value: 'KONCZKOWSKI MARTIN',
       },
       {
-        "value": "KORBECKI MARCIN"
+        value: 'KORBECKI MARCIN',
       },
       {
-        "value": "KORONA KAROL"
+        value: 'KORONA KAROL',
       },
       {
-        "value": "KORUN UROS"
+        value: 'KORUN UROS',
       },
       {
-        "value": "KOSTADINOV TIHOMIR"
+        value: 'KOSTADINOV TIHOMIR',
       },
       {
-        "value": "KOWALIK IGOR"
+        value: 'KOWALIK IGOR',
       },
       {
-        "value": "KOWALSKI MATEUSZ"
+        value: 'KOWALSKI MATEUSZ',
       },
       {
-        "value": "KOZIK KRZYSZTOF"
+        value: 'KOZIK KRZYSZTOF',
       },
       {
-        "value": "KRAKOWCZYK ŁUKASZ"
+        value: 'KRAKOWCZYK ŁUKASZ',
       },
       {
-        "value": "KRÓL WOJCIECH"
+        value: 'KRÓL WOJCIECH',
       },
       {
-        "value": "KRÓL KRZYSZTOF"
+        value: 'KRÓL KRZYSZTOF',
       },
       {
-        "value": "KRÓLICKI BARTŁOMIEJ"
+        value: 'KRÓLICKI BARTŁOMIEJ',
       },
       {
-        "value": "KRUPA PAWEŁ"
+        value: 'KRUPA PAWEŁ',
       },
       {
-        "value": "KRYGER ADAM"
+        value: 'KRYGER ADAM',
       },
       {
-        "value": "KRZYCKI ŁUKASZ"
+        value: 'KRZYCKI ŁUKASZ',
       },
       {
-        "value": "KRZYWKO RAFAŁ"
+        value: 'KRZYWKO RAFAŁ',
       },
       {
-        "value": "KUKIEŁKA KRZYSZTOF"
+        value: 'KUKIEŁKA KRZYSZTOF',
       },
       {
-        "value": "KUKULSKI KRZYSZTOF"
+        value: 'KUKULSKI KRZYSZTOF',
       },
       {
-        "value": "KUPIS JAROSŁAW"
+        value: 'KUPIS JAROSŁAW',
       },
       {
-        "value": "KUREK KRZYSZTOF"
+        value: 'KUREK KRZYSZTOF',
       },
       {
-        "value": "KUZDRA JAKUB"
+        value: 'KUZDRA JAKUB',
       },
       {
-        "value": "KWAPISZ RAFAŁ"
+        value: 'KWAPISZ RAFAŁ',
       },
       {
-        "value": "KWAŚNIEWSKI PIOTR"
+        value: 'KWAŚNIEWSKI PIOTR',
       },
       {
-        "value": "LASOTA TOMASZ"
+        value: 'LASOTA TOMASZ',
       },
       {
-        "value": "LAZDINS ARTIS"
+        value: 'LAZDINS ARTIS',
       },
       {
-        "value": "LECH SŁAWOMIR"
+        value: 'LECH SŁAWOMIR',
       },
       {
-        "value": "LENARCIK MAREK"
+        value: 'LENARCIK MAREK',
       },
       {
-        "value": "LENARTOWSKI ARTUR"
+        value: 'LENARTOWSKI ARTUR',
       },
       {
-        "value": "LESZCZYŃSKI RAFAŁ"
+        value: 'LESZCZYŃSKI RAFAŁ',
       },
       {
-        "value": "LEŚNIAK OSKAR"
+        value: 'LEŚNIAK OSKAR',
       },
       {
-        "value": "LEWCZUK IGOR"
+        value: 'LEWCZUK IGOR',
       },
       {
-        "value": "LEŻAŁA GRZEGORZ"
+        value: 'LEŻAŁA GRZEGORZ',
       },
       {
-        "value": "LIPSKI PATRYK"
+        value: 'LIPSKI PATRYK',
       },
       {
-        "value": "LISOWSKI PAWEŁ"
+        value: 'LISOWSKI PAWEŁ',
       },
       {
-        "value": "LISOWSKI WOJCIECH"
+        value: 'LISOWSKI WOJCIECH',
       },
       {
-        "value": "LISZEWSKI PIOTR"
+        value: 'LISZEWSKI PIOTR',
       },
       {
-        "value": "LORENS MICHAŁ"
+        value: 'LORENS MICHAŁ',
       },
       {
-        "value": "ŁABOJKO JAKUB"
+        value: 'ŁABOJKO JAKUB',
       },
       {
-        "value": "ŁUCZAK BARTOSZ"
+        value: 'ŁUCZAK BARTOSZ',
       },
       {
-        "value": "ŁUDZIŃSKI PRZEMYSŁAW"
+        value: 'ŁUDZIŃSKI PRZEMYSŁAW',
       },
       {
-        "value": "ŁUPIEŻOWIEC TOMASZ"
+        value: 'ŁUPIEŻOWIEC TOMASZ',
       },
       {
-        "value": "MACIEJAK ROMAN"
+        value: 'MACIEJAK ROMAN',
       },
       {
-        "value": "MAK MATEUSZ"
+        value: 'MAK MATEUSZ',
       },
       {
-        "value": "MALARCZYK PIOTR"
+        value: 'MALARCZYK PIOTR',
       },
       {
-        "value": "MARTINEZ CARLES MARC"
+        value: 'MARTINEZ CARLES MARC',
       },
       {
-        "value": "MASŁOWSKI MICHAŁ"
+        value: 'MASŁOWSKI MICHAŁ',
       },
       {
-        "value": "MATRAS MATEUSZ"
+        value: 'MATRAS MATEUSZ',
       },
       {
-        "value": "MATUSIAK JAROSŁAW"
+        value: 'MATUSIAK JAROSŁAW',
       },
       {
-        "value": "MATUSZEK SZYMON"
+        value: 'MATUSZEK SZYMON',
       },
       {
-        "value": "MAZUR TOMASZ"
+        value: 'MAZUR TOMASZ',
       },
       {
-        "value": "MAZUR KRZYSZTOF"
+        value: 'MAZUR KRZYSZTOF',
       },
       {
-        "value": "MICHNIEWICZ MACIEJ"
+        value: 'MICHNIEWICZ MACIEJ',
       },
       {
-        "value": "MIDO EL MEHDI SIDQY"
+        value: 'MIDO EL MEHDI SIDQY',
       },
       {
-        "value": "MILEWSKI SEBASTIAN"
+        value: 'MILEWSKI SEBASTIAN',
       },
       {
-        "value": "MIZGAJSKI MACIEJ"
+        value: 'MIZGAJSKI MACIEJ',
       },
       {
-        "value": "MŁOCEK KAMIL"
+        value: 'MŁOCEK KAMIL',
       },
       {
-        "value": "MODLISZEWSKI MACIEJ"
+        value: 'MODLISZEWSKI MACIEJ',
       },
       {
-        "value": "MOKWA TOMASZ"
+        value: 'MOKWA TOMASZ',
       },
       {
-        "value": "MOSKWIK PAWEŁ"
+        value: 'MOSKWIK PAWEŁ',
       },
       {
-        "value": "MOSÓR ARIEL"
+        value: 'MOSÓR ARIEL',
       },
       {
-        "value": "MÓJTA ADAM"
+        value: 'MÓJTA ADAM',
       },
       {
-        "value": "MRAZ PATRIK"
+        value: 'MRAZ PATRIK',
       },
       {
-        "value": "MUCHA DAMIAN"
+        value: 'MUCHA DAMIAN',
       },
       {
-        "value": "MUCHA SZCZEPAN"
+        value: 'MUCHA SZCZEPAN',
       },
       {
-        "value": "MUNOZ MIGUEL"
+        value: 'MUNOZ MIGUEL',
       },
       {
-        "value": "MURAWSKI RADOSŁAW"
+        value: 'MURAWSKI RADOSŁAW',
       },
       {
-        "value": "MUSIOLIK SEBASTIAN"
+        value: 'MUSIOLIK SEBASTIAN',
       },
       {
-        "value": "MUSZALIK MARIUSZ"
+        value: 'MUSZALIK MARIUSZ',
       },
       {
-        "value": "NALEPA MACIEJ"
+        value: 'NALEPA MACIEJ',
       },
       {
-        "value": "NALEPA PATRYK"
+        value: 'NALEPA PATRYK',
       },
       {
-        "value": "NESPOR MARTIN"
+        value: 'NESPOR MARTIN',
       },
       {
-        "value": "NIEBRZYDOWSKI PIOTR"
+        value: 'NIEBRZYDOWSKI PIOTR',
       },
       {
-        "value": "NIEDBAŁA JAKUB"
+        value: 'NIEDBAŁA JAKUB',
       },
       {
-        "value": "NIEVES ARMANDO"
+        value: 'NIEVES ARMANDO',
       },
       {
-        "value": "NIKIEMA VICTOR"
+        value: 'NIKIEMA VICTOR',
       },
       {
-        "value": "NOWAK MARCIN"
+        value: 'NOWAK MARCIN',
       },
       {
-        "value": "OLSZAR SEBASTIAN"
+        value: 'OLSZAR SEBASTIAN',
       },
       {
-        "value": "OPELDUS ARTUR"
+        value: 'OPELDUS ARTUR',
       },
       {
-        "value": "OSYRA KORNEL"
+        value: 'OSYRA KORNEL',
       },
       {
-        "value": "PALUCHOWSKI ADRIAN"
+        value: 'PALUCHOWSKI ADRIAN',
       },
       {
-        "value": "PAŁKUS PRZEMYSŁAW"
+        value: 'PAŁKUS PRZEMYSŁAW',
       },
       {
-        "value": "PAPADOPULOS MICHAL"
+        value: 'PAPADOPULOS MICHAL',
       },
       {
-        "value": "PARADZIEJ MARIAN"
+        value: 'PARADZIEJ MARIAN',
       },
       {
-        "value": "PARZYSZEK PIOTR"
+        value: 'PARZYSZEK PIOTR',
       },
       {
-        "value": "PAULAUSKAS GEDIMINAS"
+        value: 'PAULAUSKAS GEDIMINAS',
       },
       {
-        "value": "PETASZ PIOTR"
+        value: 'PETASZ PIOTR',
       },
       {
-        "value": "PIECHOCKI ADAM"
+        value: 'PIECHOCKI ADAM',
       },
       {
-        "value": "PIECHOTA PIOTR"
+        value: 'PIECHOTA PIOTR',
       },
       {
-        "value": "PIEKARSKI ROBERT"
+        value: 'PIEKARSKI ROBERT',
       },
       {
-        "value": "PIETREK ROBERT"
+        value: 'PIETREK ROBERT',
       },
       {
-        "value": "PIETROŃ MARCIN"
+        value: 'PIETROŃ MARCIN',
       },
       {
-        "value": "PIETROWSKI MARCIN"
+        value: 'PIETROWSKI MARCIN',
       },
       {
-        "value": "PIETRZAK RAFAŁ"
+        value: 'PIETRZAK RAFAŁ',
       },
       {
-        "value": "PIEWKO JAROSŁAW"
+        value: 'PIEWKO JAROSŁAW',
       },
       {
-        "value": "PLACH FRANTISEK"
+        value: 'PLACH FRANTISEK',
       },
       {
-        "value": "PLEWA JANUSZ"
+        value: 'PLEWA JANUSZ',
       },
       {
-        "value": "PŁATEK DAMIAN"
+        value: 'PŁATEK DAMIAN',
       },
       {
-        "value": "POCIECHA SEBASTIAN"
+        value: 'POCIECHA SEBASTIAN',
       },
       {
-        "value": "PODGÓRSKI TOMASZ"
+        value: 'PODGÓRSKI TOMASZ',
       },
       {
-        "value": "POLAK JAN"
+        value: 'POLAK JAN',
       },
       {
-        "value": "PONICHTERA ŁUKASZ"
+        value: 'PONICHTERA ŁUKASZ',
       },
       {
-        "value": "PREUSS WIKTOR"
+        value: 'PREUSS WIKTOR',
       },
       {
-        "value": "PRĘDOTA PIOTR"
+        value: 'PRĘDOTA PIOTR',
       },
       {
-        "value": "PRZEWOŹNIAK CEZARY"
+        value: 'PRZEWOŹNIAK CEZARY',
       },
       {
-        "value": "PRZYBYŁA MICHAŁ"
+        value: 'PRZYBYŁA MICHAŁ',
       },
       {
-        "value": "PYRKA ARKADIUSZ"
+        value: 'PYRKA ARKADIUSZ',
       },
       {
-        "value": "RABIN PAWEŁ"
+        value: 'RABIN PAWEŁ',
       },
       {
-        "value": "RABIOLA"
+        value: 'RABIOLA',
       },
       {
-        "value": "RADZEWICZ MARCIN"
+        value: 'RADZEWICZ MARCIN',
       },
       {
-        "value": "REINER CONSTANTIN"
+        value: 'REINER CONSTANTIN',
       },
       {
-        "value": "RISS ANDRZEJ"
+        value: 'RISS ANDRZEJ',
       },
       {
-        "value": "ROBAK MARCIN"
+        value: 'ROBAK MARCIN',
       },
       {
-        "value": "ROGALSKI MARCIN"
+        value: 'ROGALSKI MARCIN',
       },
       {
-        "value": "RUBAJ TOMASZ"
+        value: 'RUBAJ TOMASZ',
       },
       {
-        "value": "RUGASEVIĆ DARIO"
+        value: 'RUGASEVIĆ DARIO',
       },
       {
-        "value": "RUSOV DOBRIVOJ"
+        value: 'RUSOV DOBRIVOJ',
       },
       {
-        "value": "RYMANIAK BARTOSZ"
+        value: 'RYMANIAK BARTOSZ',
       },
       {
-        "value": "RYŃ ALEKSANDER"
+        value: 'RYŃ ALEKSANDER',
       },
       {
-        "value": "SALA ANDRZEJ"
+        value: 'SALA ANDRZEJ',
       },
       {
-        "value": "SAMAD SURAJ ABDUL"
+        value: 'SAMAD SURAJ ABDUL',
       },
       {
-        "value": "SAPAŁA IGOR"
+        value: 'SAPAŁA IGOR',
       },
       {
-        "value": "SAPPINEN RAUNO"
+        value: 'SAPPINEN RAUNO',
       },
       {
-        "value": "SARATOWICZ PIOTR"
+        value: 'SARATOWICZ PIOTR',
       },
       {
-        "value": "SEDLACEK LUMIR"
+        value: 'SEDLACEK LUMIR',
       },
       {
-        "value": "SEDLAR ALEKSANDAR"
+        value: 'SEDLAR ALEKSANDAR',
       },
       {
-        "value": "SEGOVIA KEITH"
+        value: 'SEGOVIA KEITH',
       },
       {
-        "value": "SEKULSKI ŁUKASZ"
+        value: 'SEKULSKI ŁUKASZ',
       },
       {
-        "value": "SEWERYN DAMIAN"
+        value: 'SEWERYN DAMIAN',
       },
       {
-        "value": "SIELEWSKI BARTŁOMIEJ"
+        value: 'SIELEWSKI BARTŁOMIEJ',
       },
       {
-        "value": "SIELSKI ANDRZEJ"
+        value: 'SIELSKI ANDRZEJ',
       },
       {
-        "value": "SIERKA ROBERT"
+        value: 'SIERKA ROBERT',
       },
       {
-        "value": "SIKORA MIECZYSŁAW"
+        value: 'SIKORA MIECZYSŁAW',
       },
       {
-        "value": "SIKORA ADRIAN"
+        value: 'SIKORA ADRIAN',
       },
       {
-        "value": "SŁODCZYK GRZEGORZ"
+        value: 'SŁODCZYK GRZEGORZ',
       },
       {
-        "value": "SMEKTAŁA JAKUB"
+        value: 'SMEKTAŁA JAKUB',
       },
       {
-        "value": "SOBCZYK ALEX"
+        value: 'SOBCZYK ALEX',
       },
       {
-        "value": "SOKOŁOWSKI PATRYK"
+        value: 'SOKOŁOWSKI PATRYK',
       },
       {
-        "value": "SOLNICA DARIUSZ"
+        value: 'SOLNICA DARIUSZ',
       },
       {
-        "value": "SOPEL ALEKSANDER"
+        value: 'SOPEL ALEKSANDER',
       },
       {
-        "value": "SOPEL BARTOSZ"
+        value: 'SOPEL BARTOSZ',
       },
       {
-        "value": "STACHERA TOMASZ"
+        value: 'STACHERA TOMASZ',
       },
       {
-        "value": "STANEK KAROL"
+        value: 'STANEK KAROL',
       },
       {
-        "value": "STANICZEK RAFAŁ"
+        value: 'STANICZEK RAFAŁ',
       },
       {
-        "value": "STANIEK RYSZARD"
+        value: 'STANIEK RYSZARD',
       },
       {
-        "value": "STAWICKI MARIUSZ"
+        value: 'STAWICKI MARIUSZ',
       },
       {
-        "value": "STECZYK DOMINIK"
+        value: 'STECZYK DOMINIK',
       },
       {
-        "value": "STĘPIEŃ TOMASZ"
+        value: 'STĘPIEŃ TOMASZ',
       },
       {
-        "value": "STOJILJKOVIĆ NIKOLA"
+        value: 'STOJILJKOVIĆ NIKOLA',
       },
       {
-        "value": "STOLARZ MICHAŁ"
+        value: 'STOLARZ MICHAŁ',
       },
       {
-        "value": "SZARY SŁAWOMIR"
+        value: 'SZARY SŁAWOMIR',
       },
       {
-        "value": "SZCZEPANIAK MATEUSZ"
+        value: 'SZCZEPANIAK MATEUSZ',
       },
       {
-        "value": "SZCZYRBA MICHAŁ"
+        value: 'SZCZYRBA MICHAŁ',
       },
       {
-        "value": "SZEJA TOMASZ"
+        value: 'SZEJA TOMASZ',
       },
       {
-        "value": "SZELIGA BARTOSZ"
+        value: 'SZELIGA BARTOSZ',
       },
       {
-        "value": "SZMATIUK MACIEJ"
+        value: 'SZMATIUK MACIEJ',
       },
       {
-        "value": "SZMATUŁA JAKUB"
+        value: 'SZMATUŁA JAKUB',
       },
       {
-        "value": "SZTORC TADEUSZ"
+        value: 'SZTORC TADEUSZ',
       },
       {
-        "value": "SZUMSKI KRZYSZTOF"
+        value: 'SZUMSKI KRZYSZTOF',
       },
       {
-        "value": "SZUMSKI JAKUB"
+        value: 'SZUMSKI JAKUB',
       },
       {
-        "value": "SZYMAŃSKI KAROL"
+        value: 'SZYMAŃSKI KAROL',
       },
       {
-        "value": "ŚWIĄTEK ADRIAN"
+        value: 'ŚWIĄTEK ADRIAN',
       },
       {
-        "value": "ŚWIERCZOK JAKUB"
+        value: 'ŚWIERCZOK JAKUB',
       },
       {
-        "value": "TARASZKIEWICZ ARKADIUSZ"
+        value: 'TARASZKIEWICZ ARKADIUSZ',
       },
       {
-        "value": "TOMANEK DAWID"
+        value: 'TOMANEK DAWID',
       },
       {
-        "value": "TOMASIEWICZ GRZEGORZ"
+        value: 'TOMASIEWICZ GRZEGORZ',
       },
       {
-        "value": "TOMCZYK PAWEŁ"
+        value: 'TOMCZYK PAWEŁ',
       },
       {
-        "value": "TRELA DARIUSZ"
+        value: 'TRELA DARIUSZ',
       },
       {
-        "value": "TUSZYŃSKI PATRYK"
+        value: 'TUSZYŃSKI PATRYK',
       },
       {
-        "value": "TYMIŃSKI ADAM"
+        value: 'TYMIŃSKI ADAM',
       },
       {
-        "value": "URBAN RUDOLF"
+        value: 'URBAN RUDOLF',
       },
       {
-        "value": "USS PIOTR"
+        value: 'USS PIOTR',
       },
       {
-        "value": "VACEK KAMIL"
+        value: 'VACEK KAMIL',
       },
       {
-        "value": "VALENCIA JOEL"
+        value: 'VALENCIA JOEL',
       },
       {
-        "value": "VASSILJEV KONSTANTIN"
+        value: 'VASSILJEV KONSTANTIN',
       },
       {
-        "value": "VIDA KRISTOPHER"
+        value: 'VIDA KRISTOPHER',
       },
       {
-        "value": "VRANA PAVEL"
+        value: 'VRANA PAVEL',
       },
       {
-        "value": "VRANJES STOJAN"
+        value: 'VRANJES STOJAN',
       },
       {
-        "value": "WALKOWIAK ROBERT"
+        value: 'WALKOWIAK ROBERT',
       },
       {
-        "value": "WARSZEWSKI ANDRZEJ"
+        value: 'WARSZEWSKI ANDRZEJ',
       },
       {
-        "value": "WARZECHA PIOTR"
+        value: 'WARZECHA PIOTR',
       },
       {
-        "value": "WASILEWSKI TOMASZ"
+        value: 'WASILEWSKI TOMASZ',
       },
       {
-        "value": "WESECKI ŁUKASZ"
+        value: 'WESECKI ŁUKASZ',
       },
       {
-        "value": "WĘGIER PRZEMYSŁAW"
+        value: 'WĘGIER PRZEMYSŁAW',
       },
       {
-        "value": "WIDUCH MIROSŁAW"
+        value: 'WIDUCH MIROSŁAW',
       },
       {
-        "value": "WILCZEK KAMIL"
+        value: 'WILCZEK KAMIL',
       },
       {
-        "value": "WILK BARTŁOMIEJ"
+        value: 'WILK BARTŁOMIEJ',
       },
       {
-        "value": "WILUK WOJCIECH"
+        value: 'WILUK WOJCIECH',
       },
       {
-        "value": "WINCIERSZ MATEUSZ"
+        value: 'WINCIERSZ MATEUSZ',
       },
       {
-        "value": "WINIARCZYK ŁUKASZ"
+        value: 'WINIARCZYK ŁUKASZ',
       },
       {
-        "value": "WIŚNIEWSKI DARIUSZ"
+        value: 'WIŚNIEWSKI DARIUSZ',
       },
       {
-        "value": "WIŚNIEWSKI ŁUKASZ"
+        value: 'WIŚNIEWSKI ŁUKASZ',
       },
       {
-        "value": "WIŚNIOWSKI KRZYSZTOF"
+        value: 'WIŚNIOWSKI KRZYSZTOF',
       },
       {
-        "value": "WOLNY FRYDERYK"
+        value: 'WOLNY FRYDERYK',
       },
       {
-        "value": "WRÓBEL STANISŁAW"
+        value: 'WRÓBEL STANISŁAW',
       },
       {
-        "value": "WYSOCKI PRZEMYSŁAW"
+        value: 'WYSOCKI PRZEMYSŁAW',
       },
       {
-        "value": "WYSOGLĄD PIOTR"
+        value: 'WYSOGLĄD PIOTR',
       },
       {
-        "value": "ZACHARIASZ RAFAŁ"
+        value: 'ZACHARIASZ RAFAŁ',
       },
       {
-        "value": "ZACHCIAŁ MICHAŁ"
+        value: 'ZACHCIAŁ MICHAŁ',
       },
       {
-        "value": "ZADYLAK JAROSŁAW"
+        value: 'ZADYLAK JAROSŁAW',
       },
       {
-        "value": "ZAGÓRSKI KRZYSZTOF"
+        value: 'ZAGÓRSKI KRZYSZTOF',
       },
       {
-        "value": "ZAJĄCZKOWSKI PAWEŁ"
+        value: 'ZAJĄCZKOWSKI PAWEŁ',
       },
       {
-        "value": "ZBOZIEŃ DAMIAN"
+        value: 'ZBOZIEŃ DAMIAN',
       },
       {
-        "value": "ZGANIACZ MARIUSZ"
+        value: 'ZGANIACZ MARIUSZ',
       },
       {
-        "value": "ZIVEC SASA"
+        value: 'ZIVEC SASA',
       },
       {
-        "value": "ZUBEL SŁAWOMIR"
+        value: 'ZUBEL SŁAWOMIR',
       },
       {
-        "value": "ŻAK ARTUR"
+        value: 'ŻAK ARTUR',
       },
       {
-        "value": "ŻBIKOWSKI ROBERT"
+        value: 'ŻBIKOWSKI ROBERT',
       },
       {
-        "value": "ŻYRKOWSKI ŁUKASZ"
+        value: 'ŻYRKOWSKI ŁUKASZ',
       },
       {
-        "value": "ŻYRO MICHAŁ"
-      }
+        value: 'ŻYRO MICHAŁ',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 52,
-    "question": "Chorwackie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 52,
+    question: 'Chorwackie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Dinamo Zagrzeb"
+        value: 'Dinamo Zagrzeb',
       },
       {
-        "value": "Hajduk Split"
+        value: 'Hajduk Split',
       },
       {
-        "value": "NK Osijek"
+        value: 'NK Osijek',
       },
       {
-        "value": "NK Varaždin"
+        value: 'NK Varaždin',
       },
       {
-        "value": "NK Istra 1961"
+        value: 'NK Istra 1961',
       },
       {
-        "value": "HNK Rijeka"
+        value: 'HNK Rijeka',
       },
       {
-        "value": "NK Slaven Belupo"
+        value: 'NK Slaven Belupo',
       },
       {
-        "value": "NK Lokomotiv Zagrzeb"
+        value: 'NK Lokomotiv Zagrzeb',
       },
       {
-        "value": "HNK Šibenik"
+        value: 'HNK Šibenik',
       },
       {
-        "value": "HNK Gorica"
-      }
+        value: 'HNK Gorica',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 53,
-    "question": "Bułgarskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 53,
+    question: 'Bułgarskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "CSKA Sofia"
+        value: 'CSKA Sofia',
       },
       {
-        "value": "Łudogorec Razgrad"
+        value: 'Łudogorec Razgrad',
       },
       {
-        "value": "CSKA 1948 Sofia"
+        value: 'CSKA 1948 Sofia',
       },
       {
-        "value": "Lewski Sofia"
+        value: 'Lewski Sofia',
       },
       {
-        "value": "Łokomotiw Płowdiw"
+        value: 'Łokomotiw Płowdiw',
       },
       {
-        "value": "Czerno More Warna"
+        value: 'Czerno More Warna',
       },
       {
-        "value": "Slavia Sofia"
+        value: 'Slavia Sofia',
       },
       {
-        "value": "Arda Kyrdżali"
+        value: 'Arda Kyrdżali',
       },
       {
-        "value": "Łokomotiw Sofia"
+        value: 'Łokomotiw Sofia',
       },
       {
-        "value": "Botew Płowdiw"
+        value: 'Botew Płowdiw',
       },
       {
-        "value": "Botev Vratsa"
+        value: 'Botev Vratsa',
       },
       {
-        "value": "Septemvri Sofia"
+        value: 'Septemvri Sofia',
       },
       {
-        "value": "Beroe Stara Zagora"
+        value: 'Beroe Stara Zagora',
       },
       {
-        "value": "Pirin Błagojewgrad"
+        value: 'Pirin Błagojewgrad',
       },
       {
-        "value": "FC Hebar Pazardzhik"
+        value: 'FC Hebar Pazardzhik',
       },
       {
-        "value": "Spartak Varna"
-      }
+        value: 'Spartak Varna',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 54,
-    "question": "Cypryjskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 54,
+    question: 'Cypryjskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "APOEL FC"
+        value: 'APOEL FC',
       },
       {
-        "value": "AEK Larnaka"
+        value: 'AEK Larnaka',
       },
       {
-        "value": "Aris Limassol"
+        value: 'Aris Limassol',
       },
       {
-        "value": "AEP Pafos"
+        value: 'AEP Pafos',
       },
       {
-        "value": "Apollon Limassol"
+        value: 'Apollon Limassol',
       },
       {
-        "value": "Omonia Nikozja"
+        value: 'Omonia Nikozja',
       },
       {
-        "value": "Nea Salamis"
+        value: 'Nea Salamis',
       },
       {
-        "value": "AEL Limassol"
+        value: 'AEL Limassol',
       },
       {
-        "value": "Anorthosis Famagusta"
+        value: 'Anorthosis Famagusta',
       },
       {
-        "value": "Karmiotissa"
+        value: 'Karmiotissa',
       },
       {
-        "value": "Enosis Neon Paralimni"
+        value: 'Enosis Neon Paralimni',
       },
       {
-        "value": "Doksa Katokopia"
+        value: 'Doksa Katokopia',
       },
       {
-        "value": "Olympiakos Nikozja"
+        value: 'Olympiakos Nikozja',
       },
       {
-        "value": "Akritas Chlorakas"
-      }
+        value: 'Akritas Chlorakas',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 55,
-    "question": "Czeskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 55,
+    question: 'Czeskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Slavia Praga"
+        value: 'Slavia Praga',
       },
       {
-        "value": "Sparta Praga"
+        value: 'Sparta Praga',
       },
       {
-        "value": "FC Viktoria Plzeň"
+        value: 'FC Viktoria Plzeň',
       },
       {
-        "value": "Bohemians Praga 1905"
+        value: 'Bohemians Praga 1905',
       },
       {
-        "value": "FC Slovácko"
+        value: 'FC Slovácko',
       },
       {
-        "value": "Sigma Ołomuniec"
+        value: 'Sigma Ołomuniec',
       },
       {
-        "value": "Hradec Kralove"
+        value: 'Hradec Kralove',
       },
       {
-        "value": "Mlada Bolesław"
+        value: 'Mlada Bolesław',
       },
       {
-        "value": "FK Jablonec"
+        value: 'FK Jablonec',
       },
       {
-        "value": "Dynamo Czeskie Budziejowice"
+        value: 'Dynamo Czeskie Budziejowice',
       },
       {
-        "value": "Slovan Liberec"
+        value: 'Slovan Liberec',
       },
       {
-        "value": "FC Zbrojovka Brno"
+        value: 'FC Zbrojovka Brno',
       },
       {
-        "value": "Banik Ostrava"
+        value: 'Banik Ostrava',
       },
       {
-        "value": "FK Pardubice"
+        value: 'FK Pardubice',
       },
       {
-        "value": "FK Teplice"
+        value: 'FK Teplice',
       },
       {
-        "value": "FC Trinity Zlin"
-      }
+        value: 'FC Trinity Zlin',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 56,
-    "question": "Dunskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 56,
+    question: 'Dunskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Nordsjaelland"
+        value: 'Nordsjaelland',
       },
       {
-        "value": "FC Kopenhaga"
+        value: 'FC Kopenhaga',
       },
       {
-        "value": "Viborg FF"
+        value: 'Viborg FF',
       },
       {
-        "value": "Aarhus GF"
+        value: 'Aarhus GF',
       },
       {
-        "value": "Randers FC"
+        value: 'Randers FC',
       },
       {
-        "value": "Brøndby IF"
+        value: 'Brøndby IF',
       },
       {
-        "value": "Silkeborg IF"
+        value: 'Silkeborg IF',
       },
       {
-        "value": "FC Midtjylland"
+        value: 'FC Midtjylland',
       },
       {
-        "value": "Odense Boldklub"
+        value: 'Odense Boldklub',
       },
       {
-        "value": "AC Horsens"
+        value: 'AC Horsens',
       },
       {
-        "value": "Lyngby BK"
+        value: 'Lyngby BK',
       },
       {
-        "value": "Aalborg BK"
-      }
+        value: 'Aalborg BK',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 57,
-    "question": "Greckie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 57,
+    question: 'Greckie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Panathinaikos AO"
+        value: 'Panathinaikos AO',
       },
       {
-        "value": "AEK Ateny"
+        value: 'AEK Ateny',
       },
       {
-        "value": "Olympiakos Pireus"
+        value: 'Olympiakos Pireus',
       },
       {
-        "value": "PAOK Saloniki"
+        value: 'PAOK Saloniki',
       },
       {
-        "value": "Aris Salonik"
+        value: 'Aris Salonik',
       },
       {
-        "value": "Volos NFC"
+        value: 'Volos NFC',
       },
       {
-        "value": "Panetolikos GFS"
+        value: 'Panetolikos GFS',
       },
       {
-        "value": "PAE Atromitos"
+        value: 'PAE Atromitos',
       },
       {
-        "value": "OFI 1925"
+        value: 'OFI 1925',
       },
       {
-        "value": "Asteras Tripolis"
+        value: 'Asteras Tripolis',
       },
       {
-        "value": "PAS Giannina"
+        value: 'PAS Giannina',
       },
       {
-        "value": "AO Ionikos"
+        value: 'AO Ionikos',
       },
       {
-        "value": "PAS Lamia 1964"
+        value: 'PAS Lamia 1964',
       },
       {
-        "value": "APO Lewadiakos"
-      }
+        value: 'APO Lewadiakos',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 58,
-    "question": "Gruzińskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 58,
+    question: 'Gruzińskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Dinamo Tbilisi"
+        value: 'Dinamo Tbilisi',
       },
       {
-        "value": "Dinamo Batumi"
+        value: 'Dinamo Batumi',
       },
       {
-        "value": "Torpedo Kutaisi"
+        value: 'Torpedo Kutaisi',
       },
       {
-        "value": "Samgurali Ckaltubo"
+        value: 'Samgurali Ckaltubo',
       },
       {
-        "value": "Dila Gori"
+        value: 'Dila Gori',
       },
       {
-        "value": "Saburtalo Tbilisi"
+        value: 'Saburtalo Tbilisi',
       },
       {
-        "value": "FC Telavi"
+        value: 'FC Telavi',
       },
       {
-        "value": "SK Samtredia"
+        value: 'SK Samtredia',
       },
       {
-        "value": "Shukura Kobuleti"
+        value: 'Shukura Kobuleti',
       },
       {
-        "value": "FC Gagra"
-      }
+        value: 'FC Gagra',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 59,
-    "question": "Holenderskie drużyny piłki nożnej 2ligi stan na 2022/2023",
-    "answers": [
+    id: 59,
+    question: 'Holenderskie drużyny piłki nożnej 2ligi stan na 2022/2023',
+    answers: [
       {
-        "value": "Feyenoord Rotterdam"
+        value: 'Feyenoord Rotterdam',
       },
       {
-        "value": "Ajax Amsterdam"
+        value: 'Ajax Amsterdam',
       },
       {
-        "value": "PSV Eindhoven"
+        value: 'PSV Eindhoven',
       },
       {
-        "value": "AZ Alkmaar"
+        value: 'AZ Alkmaar',
       },
       {
-        "value": "FC Twente"
+        value: 'FC Twente',
       },
       {
-        "value": "Sparta Rotterdam"
+        value: 'Sparta Rotterdam',
       },
       {
-        "value": "FC Utrecht"
+        value: 'FC Utrecht',
       },
       {
-        "value": "NEC Nijmegen"
+        value: 'NEC Nijmegen',
       },
       {
-        "value": "sc Heerenveen"
+        value: 'sc Heerenveen',
       },
       {
-        "value": "RKC Waalwijk"
+        value: 'RKC Waalwijk',
       },
       {
-        "value": "Go Ahead Eagles"
+        value: 'Go Ahead Eagles',
       },
       {
-        "value": "Fortuna Sittard"
+        value: 'Fortuna Sittard',
       },
       {
-        "value": "FC Volendam"
+        value: 'FC Volendam',
       },
       {
-        "value": "SBV Vitesse"
+        value: 'SBV Vitesse',
       },
       {
-        "value": "Excelsior Rotterdam"
+        value: 'Excelsior Rotterdam',
       },
       {
-        "value": "FC Emmen"
+        value: 'FC Emmen',
       },
       {
-        "value": "FC Groningen"
+        value: 'FC Groningen',
       },
       {
-        "value": "SC Cambuur"
+        value: 'SC Cambuur',
       },
       {
-        "value": "PEC Zwolle"
+        value: 'PEC Zwolle',
       },
       {
-        "value": "Heracles Almelo"
+        value: 'Heracles Almelo',
       },
       {
-        "value": "Almere City FC"
+        value: 'Almere City FC',
       },
       {
-        "value": "VVV Venlo"
+        value: 'VVV Venlo',
       },
       {
-        "value": "Willem II Tilburg"
+        value: 'Willem II Tilburg',
       },
       {
-        "value": "FC Eindhoven"
+        value: 'FC Eindhoven',
       },
       {
-        "value": "MVV Maastricht"
+        value: 'MVV Maastricht',
       },
       {
-        "value": "NAC Breda"
+        value: 'NAC Breda',
       },
       {
-        "value": "SC Telstar"
+        value: 'SC Telstar',
       },
       {
-        "value": "Roda JC Kerkrade"
+        value: 'Roda JC Kerkrade',
       },
       {
-        "value": "Jong AZ ALKMAR"
+        value: 'Jong AZ ALKMAR',
       },
       {
-        "value": "De Graafschap"
+        value: 'De Graafschap',
       },
       {
-        "value": "ADO Den Haag"
+        value: 'ADO Den Haag',
       },
       {
-        "value": "Jong PSV Eindhoven"
+        value: 'Jong PSV Eindhoven',
       },
       {
-        "value": "Helmond Sport"
+        value: 'Helmond Sport',
       },
       {
-        "value": "Jong Ajax Amsterdam"
+        value: 'Jong Ajax Amsterdam',
       },
       {
-        "value": "TOP Oss"
+        value: 'TOP Oss',
       },
       {
-        "value": "FC Den Bosch"
+        value: 'FC Den Bosch',
       },
       {
-        "value": "FC Dordrecht"
+        value: 'FC Dordrecht',
       },
       {
-        "value": "Jong Utrecht"
-      }
+        value: 'Jong Utrecht',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 60,
-    "question": "Norweskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 60,
+    question: 'Norweskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Stabæk Fotball"
+        value: 'Stabæk Fotball',
       },
       {
-        "value": "Aalesunds FK"
+        value: 'Aalesunds FK',
       },
       {
-        "value": "SK Brann"
+        value: 'SK Brann',
       },
       {
-        "value": "Molde FK"
+        value: 'Molde FK',
       },
       {
-        "value": "Strømsgodset IF"
+        value: 'Strømsgodset IF',
       },
       {
-        "value": "Hamarkameratene"
+        value: 'Hamarkameratene',
       },
       {
-        "value": "Tromsø IL"
+        value: 'Tromsø IL',
       },
       {
-        "value": "Rosenborg BK"
+        value: 'Rosenborg BK',
       },
       {
-        "value": "Viking FK"
+        value: 'Viking FK',
       },
       {
-        "value": "Vålerenga Fotball"
+        value: 'Vålerenga Fotball',
       },
       {
-        "value": "FK Bodø/Glimt"
+        value: 'FK Bodø/Glimt',
       },
       {
-        "value": "Lillestrøm SK"
+        value: 'Lillestrøm SK',
       },
       {
-        "value": "FK Haugesund"
+        value: 'FK Haugesund',
       },
       {
-        "value": "Odds BK"
+        value: 'Odds BK',
       },
       {
-        "value": "Sandefjord Fotball"
+        value: 'Sandefjord Fotball',
       },
       {
-        "value": "Sarpsborg 08 FF"
-      }
+        value: 'Sarpsborg 08 FF',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 61,
-    "question": "Portugalskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 61,
+    question: 'Portugalskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "SL Benfica"
+        value: 'SL Benfica',
       },
       {
-        "value": "FC Porto"
+        value: 'FC Porto',
       },
       {
-        "value": "SC Braga"
+        value: 'SC Braga',
       },
       {
-        "value": "Sporting CP"
+        value: 'Sporting CP',
       },
       {
-        "value": "Vitoria Guimarães SC"
+        value: 'Vitoria Guimarães SC',
       },
       {
-        "value": "FC Arouca"
+        value: 'FC Arouca',
       },
       {
-        "value": "Casa Pia AC"
+        value: 'Casa Pia AC',
       },
       {
-        "value": "Rio Ave FC"
+        value: 'Rio Ave FC',
       },
       {
-        "value": "FC Famalicão"
+        value: 'FC Famalicão',
       },
       {
-        "value": "FC Vizela"
+        value: 'FC Vizela',
       },
       {
-        "value": "GD Chaves"
+        value: 'GD Chaves',
       },
       {
-        "value": "Boavista FC"
+        value: 'Boavista FC',
       },
       {
-        "value": "Gil Vicente FC"
+        value: 'Gil Vicente FC',
       },
       {
-        "value": "Portimonense SC"
+        value: 'Portimonense SC',
       },
       {
-        "value": "GD Estoril Praia"
+        value: 'GD Estoril Praia',
       },
       {
-        "value": "CS Marítimo"
+        value: 'CS Marítimo',
       },
       {
-        "value": "FC Paços de Ferreira"
+        value: 'FC Paços de Ferreira',
       },
       {
-        "value": "CD Santa Clara"
-      }
+        value: 'CD Santa Clara',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 62,
-    "question": "Słowackie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 62,
+    question: 'Słowackie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "DAC 1904 Dunajská Streda"
+        value: 'DAC 1904 Dunajská Streda',
       },
       {
-        "value": "Slovan Bratysława"
+        value: 'Slovan Bratysława',
       },
       {
-        "value": "Spartak Trnawa"
+        value: 'Spartak Trnawa',
       },
       {
-        "value": "FK Železiarne Podbrezová"
+        value: 'FK Železiarne Podbrezová',
       },
       {
-        "value": "MŠK Žilina"
+        value: 'MŠK Žilina',
       },
       {
-        "value": "FK Dukla Bańska Bystrzyca"
+        value: 'FK Dukla Bańska Bystrzyca',
       },
       {
-        "value": "MFK Ružomberok"
+        value: 'MFK Ružomberok',
       },
       {
-        "value": "MFK Zemplín Michalovce"
+        value: 'MFK Zemplín Michalovce',
       },
       {
-        "value": "FC ViOn Zlaté Moravce"
+        value: 'FC ViOn Zlaté Moravce',
       },
       {
-        "value": "FK AS Trenčín"
+        value: 'FK AS Trenčín',
       },
       {
-        "value": "MFK Skalica"
+        value: 'MFK Skalica',
       },
       {
-        "value": "Tatran Liptovsky Mikulas"
-      }
+        value: 'Tatran Liptovsky Mikulas',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 63,
-    "question": "Słoweńskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 63,
+    question: 'Słoweńskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "NK Olimpija Lublana"
+        value: 'NK Olimpija Lublana',
       },
       {
-        "value": "NK Maribor"
+        value: 'NK Maribor',
       },
       {
-        "value": "NK Celj"
+        value: 'NK Celj',
       },
       {
-        "value": "FC Koper"
+        value: 'FC Koper',
       },
       {
-        "value": "NK Domžale"
+        value: 'NK Domžale',
       },
       {
-        "value": "NK Mura"
+        value: 'NK Mura',
       },
       {
-        "value": "NK Bravo"
+        value: 'NK Bravo',
       },
       {
-        "value": "NK Radomlje"
+        value: 'NK Radomlje',
       },
       {
-        "value": "HNK Gorica"
+        value: 'HNK Gorica',
       },
       {
-        "value": "NK Tabor Sežana"
-      }
+        value: 'NK Tabor Sežana',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 64,
-    "question": "Szkockie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 64,
+    question: 'Szkockie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Celtic Glasgow"
+        value: 'Celtic Glasgow',
       },
       {
-        "value": "Rangers"
+        value: 'Rangers',
       },
       {
-        "value": "Heart of Midlothian"
+        value: 'Heart of Midlothian',
       },
       {
-        "value": "Aberdeen"
+        value: 'Aberdeen',
       },
       {
-        "value": "Hibernian"
+        value: 'Hibernian',
       },
       {
-        "value": "Livingston"
+        value: 'Livingston',
       },
       {
-        "value": "St. Mirren"
+        value: 'St. Mirren',
       },
       {
-        "value": "St. Johnstone"
+        value: 'St. Johnstone',
       },
       {
-        "value": "Motherwell"
+        value: 'Motherwell',
       },
       {
-        "value": "Kilmarnock"
+        value: 'Kilmarnock',
       },
       {
-        "value": "Ross County"
+        value: 'Ross County',
       },
       {
-        "value": "Dundee United"
-      }
+        value: 'Dundee United',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 65,
-    "question": "Tureckie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 65,
+    question: 'Tureckie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Galatasaray"
+        value: 'Galatasaray',
       },
       {
-        "value": "Fenerbahce"
+        value: 'Fenerbahce',
       },
       {
-        "value": "Besiktas"
+        value: 'Besiktas',
       },
       {
-        "value": "Adana Demirspor"
+        value: 'Adana Demirspor',
       },
       {
-        "value": "Trabzonspor"
+        value: 'Trabzonspor',
       },
       {
-        "value": "Istanbul Başakşehir"
+        value: 'Istanbul Başakşehir',
       },
       {
-        "value": "Kayserispor"
+        value: 'Kayserispor',
       },
       {
-        "value": "Konyaspor"
+        value: 'Konyaspor',
       },
       {
-        "value": "Fatih Karagümrük"
+        value: 'Fatih Karagümrük',
       },
       {
-        "value": "Antalyaspor"
+        value: 'Antalyaspor',
       },
       {
-        "value": "Alanyaspor"
+        value: 'Alanyaspor',
       },
       {
-        "value": "Sivasspor"
+        value: 'Sivasspor',
       },
       {
-        "value": "Kasimpasa"
+        value: 'Kasimpasa',
       },
       {
-        "value": "Gaziantep"
+        value: 'Gaziantep',
       },
       {
-        "value": "MKE Ankaragücü"
+        value: 'MKE Ankaragücü',
       },
       {
-        "value": "Istanbulspor"
+        value: 'Istanbulspor',
       },
       {
-        "value": "Giresunspor"
+        value: 'Giresunspor',
       },
       {
-        "value": "Hatayspor"
+        value: 'Hatayspor',
       },
       {
-        "value": "Umraniyespor"
-      }
+        value: 'Umraniyespor',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 66,
-    "question": "Ukraińskie drużyny piłki nożnej 1liga stan na 2022/2023",
-    "answers": [
+    id: 66,
+    question: 'Ukraińskie drużyny piłki nożnej 1liga stan na 2022/2023',
+    answers: [
       {
-        "value": "Szachtar Donieck"
+        value: 'Szachtar Donieck',
       },
       {
-        "value": "SK Dnipro-1"
+        value: 'SK Dnipro-1',
       },
       {
-        "value": "FK Zoria Ługańsk"
+        value: 'FK Zoria Ługańsk',
       },
       {
-        "value": "Dynamo Kijów"
+        value: 'Dynamo Kijów',
       },
       {
-        "value": "Oleksandriya"
+        value: 'Oleksandriya',
       },
       {
-        "value": "Kołos Kowaliwka"
+        value: 'Kołos Kowaliwka',
       },
       {
-        "value": "Kryvbas Kryvy Rih"
+        value: 'Kryvbas Kryvy Rih',
       },
       {
-        "value": "Metalist 1925 Charków"
+        value: 'Metalist 1925 Charków',
       },
       {
-        "value": "Worskła Połtawa"
+        value: 'Worskła Połtawa',
       },
       {
-        "value": "Inhułeć Petrowe"
+        value: 'Inhułeć Petrowe',
       },
       {
-        "value": "Czornomoreć Odessa"
+        value: 'Czornomoreć Odessa',
       },
       {
-        "value": "Weres Równe"
+        value: 'Weres Równe',
       },
       {
-        "value": "FK Mynaj"
+        value: 'FK Mynaj',
       },
       {
-        "value": "Ruch Lwów"
+        value: 'Ruch Lwów',
       },
       {
-        "value": "Metalist Charków"
+        value: 'Metalist Charków',
       },
       {
-        "value": "FC Lwów"
-      }
+        value: 'FC Lwów',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 67,
-    "question": "60 najdłuższych rzek Polski",
-    "answers": [
+    id: 67,
+    question: '60 najdłuższych rzek Polski',
+    answers: [
       {
-        "value": "Wisła"
+        value: 'Wisła',
       },
       {
-        "value": "Odra"
+        value: 'Odra',
       },
       {
-        "value": "Warta"
+        value: 'Warta',
       },
       {
-        "value": "Bug"
+        value: 'Bug',
       },
       {
-        "value": "Narew"
+        value: 'Narew',
       },
       {
-        "value": "San"
+        value: 'San',
       },
       {
-        "value": "Noteć"
+        value: 'Noteć',
       },
       {
-        "value": "Pilica"
+        value: 'Pilica',
       },
       {
-        "value": "Wieprz"
+        value: 'Wieprz',
       },
       {
-        "value": "Bóbr"
+        value: 'Bóbr',
       },
       {
-        "value": "Łyna"
+        value: 'Łyna',
       },
       {
-        "value": "Nysa Łużycka"
+        value: 'Nysa Łużycka',
       },
       {
-        "value": "Wkra"
+        value: 'Wkra',
       },
       {
-        "value": "Dunajec"
+        value: 'Dunajec',
       },
       {
-        "value": "Brda"
+        value: 'Brda',
       },
       {
-        "value": "Prosna"
+        value: 'Prosna',
       },
       {
-        "value": "Drwęca"
+        value: 'Drwęca',
       },
       {
-        "value": "Wisłok"
+        value: 'Wisłok',
       },
       {
-        "value": "Wda"
+        value: 'Wda',
       },
       {
-        "value": "Drawa"
+        value: 'Drawa',
       },
       {
-        "value": "Nysa Kłodzka"
+        value: 'Nysa Kłodzka',
       },
       {
-        "value": "Poprad"
+        value: 'Poprad',
       },
       {
-        "value": "Pasłęka"
+        value: 'Pasłęka',
       },
       {
-        "value": "Rega"
+        value: 'Rega',
       },
       {
-        "value": "Bzura"
+        value: 'Bzura',
       },
       {
-        "value": "Wisłoka"
+        value: 'Wisłoka',
       },
       {
-        "value": "Obra"
+        value: 'Obra',
       },
       {
-        "value": "Lega"
+        value: 'Lega',
       },
       {
-        "value": "Biebrza"
+        value: 'Biebrza',
       },
       {
-        "value": "Wierzyca"
+        value: 'Wierzyca',
       },
       {
-        "value": "Nida"
+        value: 'Nida',
       },
       {
-        "value": "Gwda"
+        value: 'Gwda',
       },
       {
-        "value": "Czarna Hańcza"
+        value: 'Czarna Hańcza',
       },
       {
-        "value": "Liwiec"
+        value: 'Liwiec',
       },
       {
-        "value": "Orzyc"
+        value: 'Orzyc',
       },
       {
-        "value": "Wieprza"
+        value: 'Wieprza',
       },
       {
-        "value": "Barycz"
+        value: 'Barycz',
       },
       {
-        "value": "Parsęta"
+        value: 'Parsęta',
       },
       {
-        "value": "Słupia"
+        value: 'Słupia',
       },
       {
-        "value": "Kamienna"
+        value: 'Kamienna',
       },
       {
-        "value": "Ner"
+        value: 'Ner',
       },
       {
-        "value": "Mała Panew"
+        value: 'Mała Panew',
       },
       {
-        "value": "Raba"
+        value: 'Raba',
       },
       {
-        "value": "Omulew"
+        value: 'Omulew',
       },
       {
-        "value": "Kwisa"
+        value: 'Kwisa',
       },
       {
-        "value": "Ina"
+        value: 'Ina',
       },
       {
-        "value": "Krzna"
+        value: 'Krzna',
       },
       {
-        "value": "Wełna"
+        value: 'Wełna',
       },
       {
-        "value": "Radomka"
+        value: 'Radomka',
       },
       {
-        "value": "Skrwa"
+        value: 'Skrwa',
       },
       {
-        "value": "Ełk"
+        value: 'Ełk',
       },
       {
-        "value": "Wel"
+        value: 'Wel',
       },
       {
-        "value": "Radunia"
+        value: 'Radunia',
       },
       {
-        "value": "Szkwa"
+        value: 'Szkwa',
       },
       {
-        "value": "Netta"
+        value: 'Netta',
       },
       {
-        "value": "Supraśl"
+        value: 'Supraśl',
       },
       {
-        "value": "Biała"
+        value: 'Biała',
       },
       {
-        "value": "Nurzec"
+        value: 'Nurzec',
       },
       {
-        "value": "Oława"
-      }
+        value: 'Oława',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 68,
-    "question": "Polskie pasma górskie",
-    "answers": [
+    id: 68,
+    question: 'Polskie pasma górskie',
+    answers: [
       {
-        "value": "Karkonosze"
+        value: 'Karkonosze',
       },
       {
-        "value": "Góry Izerskie"
+        value: 'Góry Izerskie',
       },
       {
-        "value": "Góry Kaczawskie"
+        value: 'Góry Kaczawskie',
       },
       {
-        "value": "Rudawy Janowickie"
+        value: 'Rudawy Janowickie',
       },
       {
-        "value": "Góry Wałbrzyskie"
+        value: 'Góry Wałbrzyskie',
       },
       {
-        "value": "Góry Kamienne"
+        value: 'Góry Kamienne',
       },
       {
-        "value": "Góry Sowie"
+        value: 'Góry Sowie',
       },
       {
-        "value": "Góry Bardzkie"
+        value: 'Góry Bardzkie',
       },
       {
-        "value": "Góry Stołowe"
+        value: 'Góry Stołowe',
       },
       {
-        "value": "Góry Bystrzyckie"
+        value: 'Góry Bystrzyckie',
       },
       {
-        "value": "Góry Orlickie"
+        value: 'Góry Orlickie',
       },
       {
-        "value": "Masyw Śnieżnika"
+        value: 'Masyw Śnieżnika',
       },
       {
-        "value": "Góry Bialskie"
+        value: 'Góry Bialskie',
       },
       {
-        "value": "Góry Złote"
+        value: 'Góry Złote',
       },
       {
-        "value": "Góry Opawskie"
+        value: 'Góry Opawskie',
       },
       {
-        "value": "Tatry"
+        value: 'Tatry',
       },
       {
-        "value": "Pieniny"
+        value: 'Pieniny',
       },
       {
-        "value": "Beskid Śląski"
+        value: 'Beskid Śląski',
       },
       {
-        "value": "Beskid Mały"
+        value: 'Beskid Mały',
       },
       {
-        "value": "Beskid Makowski"
+        value: 'Beskid Makowski',
       },
       {
-        "value": "Beskid Żywiecki"
+        value: 'Beskid Żywiecki',
       },
       {
-        "value": "Beskid Wyspowy"
+        value: 'Beskid Wyspowy',
       },
       {
-        "value": "Gorce"
+        value: 'Gorce',
       },
       {
-        "value": "Beskid Sądecki"
+        value: 'Beskid Sądecki',
       },
       {
-        "value": "Beskid Niski"
+        value: 'Beskid Niski',
       },
       {
-        "value": "Bieszczady i Góry Sanocko-Turczańskie"
+        value: 'Bieszczady i Góry Sanocko-Turczańskie',
       },
       {
-        "value": "Pasmo Klonowskie"
+        value: 'Pasmo Klonowskie',
       },
       {
-        "value": "Pasmo Bostowskie"
+        value: 'Pasmo Bostowskie',
       },
       {
-        "value": "Pasmo Oblęgorskie"
+        value: 'Pasmo Oblęgorskie',
       },
       {
-        "value": "Pasmo Masłowskie"
+        value: 'Pasmo Masłowskie',
       },
       {
-        "value": "Łysogóry"
+        value: 'Łysogóry',
       },
       {
-        "value": "Pasmo Jeleniowskie"
+        value: 'Pasmo Jeleniowskie',
       },
       {
-        "value": "Pasmo Zgórskie"
+        value: 'Pasmo Zgórskie',
       },
       {
-        "value": "Pasmo Posłowickie"
+        value: 'Pasmo Posłowickie',
       },
       {
-        "value": "Pasmo Dymińskie"
+        value: 'Pasmo Dymińskie',
       },
       {
-        "value": "Pasmo Brzechowskie"
+        value: 'Pasmo Brzechowskie',
       },
       {
-        "value": "Pasmo Orłowińskie"
+        value: 'Pasmo Orłowińskie',
       },
       {
-        "value": "Pasmo Iwaniskie"
+        value: 'Pasmo Iwaniskie',
       },
       {
-        "value": "Pasmo Wygiełzowskie"
+        value: 'Pasmo Wygiełzowskie',
       },
       {
-        "value": "Pasmo Chęcińskie"
+        value: 'Pasmo Chęcińskie',
       },
       {
-        "value": "Grzbiet Bolechowicki"
+        value: 'Grzbiet Bolechowicki',
       },
       {
-        "value": "Pasmo Daleszyckie"
+        value: 'Pasmo Daleszyckie',
       },
       {
-        "value": "Pasmo Cisowskie"
+        value: 'Pasmo Cisowskie',
       },
       {
-        "value": "Pasmo Ociesęckie"
+        value: 'Pasmo Ociesęckie',
       },
       {
-        "value": "Pasmo Kadzielniańskie"
-      }
+        value: 'Pasmo Kadzielniańskie',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 69,
-    "question": "Najwyższe szcyzty w polskich pasmach górskich (Wikipedia)",
-    "answers": [
+    id: 69,
+    question: 'Najwyższe szcyzty w polskich pasmach górskich (Wikipedia)',
+    answers: [
       {
-        "value": "Rysy"
+        value: 'Rysy',
       },
       {
-        "value": "Mięguszowiecki Szczyt"
+        value: 'Mięguszowiecki Szczyt',
       },
       {
-        "value": "Niżnie Rysy"
+        value: 'Niżnie Rysy',
       },
       {
-        "value": "Mięguszowiecki Szczyt Czarny"
+        value: 'Mięguszowiecki Szczyt Czarny',
       },
       {
-        "value": "Mięguszowiecki Szczyt Pośredni"
+        value: 'Mięguszowiecki Szczyt Pośredni',
       },
       {
-        "value": "Hińczowa Turnia"
+        value: 'Hińczowa Turnia',
       },
       {
-        "value": "Cubryna"
+        value: 'Cubryna',
       },
       {
-        "value": "Wołowa Turnia"
+        value: 'Wołowa Turnia',
       },
       {
-        "value": "Żabia Turnia Mięguszowiecka"
+        value: 'Żabia Turnia Mięguszowiecka',
       },
       {
-        "value": "Świnica"
+        value: 'Świnica',
       },
       {
-        "value": "Kozi Wierch"
+        value: 'Kozi Wierch',
       },
       {
-        "value": "Żabi Koń"
+        value: 'Żabi Koń',
       },
       {
-        "value": "Gąsienicowa Turnia"
+        value: 'Gąsienicowa Turnia',
       },
       {
-        "value": "Kozie Czuby"
+        value: 'Kozie Czuby',
       },
       {
-        "value": "Niebieska Turnia"
+        value: 'Niebieska Turnia',
       },
       {
-        "value": "Żabi Szczyt Wyżni"
+        value: 'Żabi Szczyt Wyżni',
       },
       {
-        "value": "Spadowa Kopa"
+        value: 'Spadowa Kopa',
       },
       {
-        "value": "Zawratowa Turnia"
+        value: 'Zawratowa Turnia',
       },
       {
-        "value": "Buczynowa Strażnica"
+        value: 'Buczynowa Strażnica',
       },
       {
-        "value": "Czarne Ściany"
+        value: 'Czarne Ściany',
       },
       {
-        "value": "Zadni Granat"
+        value: 'Zadni Granat',
       },
       {
-        "value": "Pośredni Granat"
+        value: 'Pośredni Granat',
       },
       {
-        "value": "Miedziane"
+        value: 'Miedziane',
       },
       {
-        "value": "Mały Kozi Wierch"
+        value: 'Mały Kozi Wierch',
       },
       {
-        "value": "Skrajny Granat"
+        value: 'Skrajny Granat',
       },
       {
-        "value": "Wielka Koszysta"
+        value: 'Wielka Koszysta',
       },
       {
-        "value": "Waksmundzki Wierch"
+        value: 'Waksmundzki Wierch',
       },
       {
-        "value": "Wielka Buczynowa Turnia"
+        value: 'Wielka Buczynowa Turnia',
       },
       {
-        "value": "Zamarła Turnia"
+        value: 'Zamarła Turnia',
       },
       {
-        "value": "Starorobociański Wierch"
+        value: 'Starorobociański Wierch',
       },
       {
-        "value": "Orla Baszta"
+        value: 'Orla Baszta',
       },
       {
-        "value": "Mała Buczynowa Turnia"
+        value: 'Mała Buczynowa Turnia',
       },
       {
-        "value": "Szpiglasowy Wierch"
+        value: 'Szpiglasowy Wierch',
       },
       {
-        "value": "Zadni Mnich"
+        value: 'Zadni Mnich',
       },
       {
-        "value": "Zadni Kościelec"
+        value: 'Zadni Kościelec',
       },
       {
-        "value": "Kazalnica Mięguszowiecka"
+        value: 'Kazalnica Mięguszowiecka',
       },
       {
-        "value": "Walentkowy Wierch"
+        value: 'Walentkowy Wierch',
       },
       {
-        "value": "Wielki Wołoszyn"
+        value: 'Wielki Wołoszyn',
       },
       {
-        "value": "Kościelec"
+        value: 'Kościelec',
       },
       {
-        "value": "Żabi Mnich"
+        value: 'Żabi Mnich',
       },
       {
-        "value": "Mały Wołoszyn"
+        value: 'Mały Wołoszyn',
       },
       {
-        "value": "Ciemnosmreczyńska Turnia"
+        value: 'Ciemnosmreczyńska Turnia',
       },
       {
-        "value": "Jarząbczy Wierch"
+        value: 'Jarząbczy Wierch',
       },
       {
-        "value": "Wierch pod Fajki"
+        value: 'Wierch pod Fajki',
       },
       {
-        "value": "Pośrednia Turnia"
+        value: 'Pośrednia Turnia',
       },
       {
-        "value": "Buczynowe Czuby"
+        value: 'Buczynowe Czuby',
       },
       {
-        "value": "Kamienista"
+        value: 'Kamienista',
       },
       {
-        "value": "Krzesanica"
+        value: 'Krzesanica',
       },
       {
-        "value": "Pośredni Wołoszyn"
+        value: 'Pośredni Wołoszyn',
       },
       {
-        "value": "Opalony Wierch"
+        value: 'Opalony Wierch',
       },
       {
-        "value": "Kołowa Czuba"
+        value: 'Kołowa Czuba',
       },
       {
-        "value": "Żabi Szczyt Niżni"
+        value: 'Żabi Szczyt Niżni',
       },
       {
-        "value": "Skrajna Turnia"
+        value: 'Skrajna Turnia',
       },
       {
-        "value": "Ciemniak"
+        value: 'Ciemniak',
       },
       {
-        "value": "Małołączniak"
+        value: 'Małołączniak',
       },
       {
-        "value": "Żabia Lalka"
+        value: 'Żabia Lalka',
       },
       {
-        "value": "Skrajny Wołoszyn"
+        value: 'Skrajny Wołoszyn',
       },
       {
-        "value": "Mnichowa Kopa"
+        value: 'Mnichowa Kopa',
       },
       {
-        "value": "Żółta Turnia"
+        value: 'Żółta Turnia',
       },
       {
-        "value": "Wyżni Kostur"
+        value: 'Wyżni Kostur',
       },
       {
-        "value": "Żabia Czuba"
+        value: 'Żabia Czuba',
       },
       {
-        "value": "Mnich"
+        value: 'Mnich',
       },
       {
-        "value": "Smreczyński Wierch"
+        value: 'Smreczyński Wierch',
       },
       {
-        "value": "Gładki Wierch"
+        value: 'Gładki Wierch',
       },
       {
-        "value": "Wołowiec"
+        value: 'Wołowiec',
       },
       {
-        "value": "Niżni Kostur"
+        value: 'Niżni Kostur',
       },
       {
-        "value": "Mniszek"
+        value: 'Mniszek',
       },
       {
-        "value": "Mała Koszysta"
+        value: 'Mała Koszysta',
       },
       {
-        "value": "Beskid"
+        value: 'Beskid',
       },
       {
-        "value": "Kopa Kondracka"
+        value: 'Kopa Kondracka',
       },
       {
-        "value": "Kończysty Wierch"
+        value: 'Kończysty Wierch',
       },
       {
-        "value": "Babia Góra"
+        value: 'Babia Góra',
       },
       {
-        "value": "Gówniak"
+        value: 'Gówniak',
       },
       {
-        "value": "Pilsko"
+        value: 'Pilsko',
       },
       {
-        "value": "Kępa"
+        value: 'Kępa',
       },
       {
-        "value": "Mała Babia Góra"
+        value: 'Mała Babia Góra',
       },
       {
-        "value": "Polica"
+        value: 'Polica',
       },
       {
-        "value": "Sokolica"
+        value: 'Sokolica',
       },
       {
-        "value": "Romanka"
+        value: 'Romanka',
       },
       {
-        "value": "Munczolik"
+        value: 'Munczolik',
       },
       {
-        "value": "Palenica"
+        value: 'Palenica',
       },
       {
-        "value": "Lipowski Wierch"
+        value: 'Lipowski Wierch',
       },
       {
-        "value": "Rysianka"
+        value: 'Rysianka',
       },
       {
-        "value": "Czernic"
+        value: 'Czernic',
       },
       {
-        "value": "Kiczorka"
+        value: 'Kiczorka',
       },
       {
-        "value": "Boraczy Wierch"
+        value: 'Boraczy Wierch',
       },
       {
-        "value": "Jasna Grapa"
+        value: 'Jasna Grapa',
       },
       {
-        "value": "Okrąglica"
+        value: 'Okrąglica',
       },
       {
-        "value": "Wielka Racza"
+        value: 'Wielka Racza',
       },
       {
-        "value": "Wielka Rycerzowa"
+        value: 'Wielka Rycerzowa',
       },
       {
-        "value": "Śnieżka"
+        value: 'Śnieżka',
       },
       {
-        "value": "Wielki Szyszak"
+        value: 'Wielki Szyszak',
       },
       {
-        "value": "Smogornia"
+        value: 'Smogornia',
       },
       {
-        "value": "Łabski Szczyt"
+        value: 'Łabski Szczyt',
       },
       {
-        "value": "Mały Szyszak"
+        value: 'Mały Szyszak',
       },
       {
-        "value": "Śmielec"
+        value: 'Śmielec',
       },
       {
-        "value": "Czeskie Kamienie"
+        value: 'Czeskie Kamienie',
       },
       {
-        "value": "Śląskie Kamienie"
+        value: 'Śląskie Kamienie',
       },
       {
-        "value": "Czarna Kopa"
+        value: 'Czarna Kopa',
       },
       {
-        "value": "Tępy Szczyt"
+        value: 'Tępy Szczyt',
       },
       {
-        "value": "Kopa"
+        value: 'Kopa',
       },
       {
-        "value": "Szrenica"
+        value: 'Szrenica',
       },
       {
-        "value": "Śnieżnik"
+        value: 'Śnieżnik',
       },
       {
-        "value": "Mały Śnieżnik"
+        value: 'Mały Śnieżnik',
       },
       {
-        "value": "Czarna Góra"
+        value: 'Czarna Góra',
       },
       {
-        "value": "Trójmorski Wierch"
+        value: 'Trójmorski Wierch',
       },
       {
-        "value": "Tarnica"
+        value: 'Tarnica',
       },
       {
-        "value": "Krzemień"
+        value: 'Krzemień',
       },
       {
-        "value": "Halicz"
+        value: 'Halicz',
       },
       {
-        "value": "Kopa Bukowska"
+        value: 'Kopa Bukowska',
       },
       {
-        "value": "Szeroki Wierch"
+        value: 'Szeroki Wierch',
       },
       {
-        "value": "Bukowe Berdo"
+        value: 'Bukowe Berdo',
       },
       {
-        "value": "Wielka Rawka"
+        value: 'Wielka Rawka',
       },
       {
-        "value": "Połonina Caryńska"
+        value: 'Połonina Caryńska',
       },
       {
-        "value": "Rozsypaniec"
+        value: 'Rozsypaniec',
       },
       {
-        "value": "Mała Rawka"
+        value: 'Mała Rawka',
       },
       {
-        "value": "Połonina Wetlińska"
+        value: 'Połonina Wetlińska',
       },
       {
-        "value": "Kińczyk Bukowski"
+        value: 'Kińczyk Bukowski',
       },
       {
-        "value": "Wołowy Garb"
+        value: 'Wołowy Garb',
       },
       {
-        "value": "Smerek"
+        value: 'Smerek',
       },
       {
-        "value": "Krzemieniec"
+        value: 'Krzemieniec',
       },
       {
-        "value": "Kamienna"
+        value: 'Kamienna',
       },
       {
-        "value": "Riaba Skała"
+        value: 'Riaba Skała',
       },
       {
-        "value": "Paportna"
+        value: 'Paportna',
       },
       {
-        "value": "Dziurkowiec"
+        value: 'Dziurkowiec',
       },
       {
-        "value": "Hrubki"
+        value: 'Hrubki',
       },
       {
-        "value": "Płasza"
+        value: 'Płasza',
       },
       {
-        "value": "Jasło"
+        value: 'Jasło',
       },
       {
-        "value": "Okrąglik"
+        value: 'Okrąglik',
       },
       {
-        "value": "Stryb"
+        value: 'Stryb',
       },
       {
-        "value": "Rypi Wierch"
+        value: 'Rypi Wierch',
       },
       {
-        "value": "Turbacz"
+        value: 'Turbacz',
       },
       {
-        "value": "Jaworzyna Kamienicka"
+        value: 'Jaworzyna Kamienicka',
       },
       {
-        "value": "Kiczora"
+        value: 'Kiczora',
       },
       {
-        "value": "Kudłoń"
+        value: 'Kudłoń',
       },
       {
-        "value": "Czoło Turbacza"
+        value: 'Czoło Turbacza',
       },
       {
-        "value": "Mostownica"
+        value: 'Mostownica',
       },
       {
-        "value": "Gorc Troszacki"
+        value: 'Gorc Troszacki',
       },
       {
-        "value": "Gorc"
+        value: 'Gorc',
       },
       {
-        "value": "Lubań"
+        value: 'Lubań',
       },
       {
-        "value": "Radziejowa"
+        value: 'Radziejowa',
       },
       {
-        "value": "Złomisty Wierch"
+        value: 'Złomisty Wierch',
       },
       {
-        "value": "Mała Radziejowa"
+        value: 'Mała Radziejowa',
       },
       {
-        "value": "Wielka Przehyba"
+        value: 'Wielka Przehyba',
       },
       {
-        "value": "Wielki Rogacz"
+        value: 'Wielki Rogacz',
       },
       {
-        "value": "Przehyba"
+        value: 'Przehyba',
       },
       {
-        "value": "Skałka"
+        value: 'Skałka',
       },
       {
-        "value": "Mały Rogacz"
+        value: 'Mały Rogacz',
       },
       {
-        "value": "Jasiennik"
+        value: 'Jasiennik',
       },
       {
-        "value": "Czeremcha"
+        value: 'Czeremcha',
       },
       {
-        "value": "Zgrzypy"
+        value: 'Zgrzypy',
       },
       {
-        "value": "Jaworzyna Krynicka"
+        value: 'Jaworzyna Krynicka',
       },
       {
-        "value": "Wielka Bukowa"
+        value: 'Wielka Bukowa',
       },
       {
-        "value": "Skrzyczne"
+        value: 'Skrzyczne',
       },
       {
-        "value": "Barania Góra"
+        value: 'Barania Góra',
       },
       {
-        "value": "Małe Skrzyczne"
+        value: 'Małe Skrzyczne',
       },
       {
-        "value": "Kopa Skrzyczeńska"
+        value: 'Kopa Skrzyczeńska',
       },
       {
-        "value": "Zielony Kopiec"
+        value: 'Zielony Kopiec',
       },
       {
-        "value": "Malinowska Skała"
+        value: 'Malinowska Skała',
       },
       {
-        "value": "Magurka Wiślańska"
+        value: 'Magurka Wiślańska',
       },
       {
-        "value": "Klimczok"
+        value: 'Klimczok',
       },
       {
-        "value": "Malinów"
+        value: 'Malinów',
       },
       {
-        "value": "Magura"
+        value: 'Magura',
       },
       {
-        "value": "Magurka Radziechowska"
+        value: 'Magurka Radziechowska',
       },
       {
-        "value": "Trzy Kopce"
+        value: 'Trzy Kopce',
       },
       {
-        "value": "Cebula"
+        value: 'Cebula',
       },
       {
-        "value": "Stołów"
+        value: 'Stołów',
       },
       {
-        "value": "Glinne"
+        value: 'Glinne',
       },
       {
-        "value": "Szyndzielnia"
+        value: 'Szyndzielnia',
       },
       {
-        "value": "Przysłop"
+        value: 'Przysłop',
       },
       {
-        "value": "Kościelec"
+        value: 'Kościelec',
       },
       {
-        "value": "Skałka"
+        value: 'Skałka',
       },
       {
-        "value": "Murońka"
+        value: 'Murońka',
       },
       {
-        "value": "Przypór"
+        value: 'Przypór',
       },
       {
-        "value": "Mogielica"
+        value: 'Mogielica',
       },
       {
-        "value": "Ćwilin"
+        value: 'Ćwilin',
       },
       {
-        "value": "Jasień"
+        value: 'Jasień',
       },
       {
-        "value": "Modyń"
+        value: 'Modyń',
       },
       {
-        "value": "Luboń Wielki"
+        value: 'Luboń Wielki',
       },
       {
-        "value": "Krzystonów"
+        value: 'Krzystonów',
       },
       {
-        "value": "Śnieżnica"
+        value: 'Śnieżnica',
       },
       {
-        "value": "Szczebel"
+        value: 'Szczebel',
       },
       {
-        "value": "Lubogoszcz"
+        value: 'Lubogoszcz',
       },
       {
-        "value": "Łopień"
+        value: 'Łopień',
       },
       {
-        "value": "Cichoń"
+        value: 'Cichoń',
       },
       {
-        "value": "Ostra"
+        value: 'Ostra',
       },
       {
-        "value": "Jaworz"
+        value: 'Jaworz',
       },
       {
-        "value": "Wysoka Kopa"
+        value: 'Wysoka Kopa',
       },
       {
-        "value": "Smrek"
+        value: 'Smrek',
       },
       {
-        "value": "Stóg Izerski"
+        value: 'Stóg Izerski',
       },
       {
-        "value": "Wysoki Kamień"
+        value: 'Wysoki Kamień',
       },
       {
-        "value": "Zwalisko"
+        value: 'Zwalisko',
       },
       {
-        "value": "Postawna"
+        value: 'Postawna',
       },
       {
-        "value": "Rudawiec"
+        value: 'Rudawiec',
       },
       {
-        "value": "Iwinka"
+        value: 'Iwinka',
       },
       {
-        "value": "Kowadło"
+        value: 'Kowadło',
       },
       {
-        "value": "Mędralowa"
+        value: 'Mędralowa',
       },
       {
-        "value": "Jałowiec"
+        value: 'Jałowiec',
       },
       {
-        "value": "Czerniawa Sucha"
+        value: 'Czerniawa Sucha',
       },
       {
-        "value": "Lachów Groń"
+        value: 'Lachów Groń',
       },
       {
-        "value": "Mała Mędralowa"
+        value: 'Mała Mędralowa',
       },
       {
-        "value": "Mędralowa Zachodni"
+        value: 'Mędralowa Zachodni',
       },
       {
-        "value": "Orlica"
+        value: 'Orlica',
       },
       {
-        "value": "Wysoka"
+        value: 'Wysoka',
       },
       {
-        "value": "Smerekowa"
+        value: 'Smerekowa',
       },
       {
-        "value": "Trzy Korony"
+        value: 'Trzy Korony',
       },
       {
-        "value": "Wierchliczka"
+        value: 'Wierchliczka',
       },
       {
-        "value": "Watrisko"
+        value: 'Watrisko',
       },
       {
-        "value": "Durbaszka"
+        value: 'Durbaszka',
       },
       {
-        "value": "Borsuczyny"
+        value: 'Borsuczyny',
       },
       {
-        "value": "Nowa Góra"
+        value: 'Nowa Góra',
       },
       {
-        "value": "Wysoki Wierch"
+        value: 'Wysoki Wierch',
       },
       {
-        "value": "Wielka Sowa"
+        value: 'Wielka Sowa',
       },
       {
-        "value": "Mała Sowa"
+        value: 'Mała Sowa',
       },
       {
-        "value": "Kalenica"
+        value: 'Kalenica',
       },
       {
-        "value": "Słoneczna"
+        value: 'Słoneczna',
       },
       {
-        "value": "Grabina"
+        value: 'Grabina',
       },
       {
-        "value": "Kozia Równia"
+        value: 'Kozia Równia',
       },
       {
-        "value": "Sokolica"
+        value: 'Sokolica',
       },
       {
-        "value": "Rymarz"
+        value: 'Rymarz',
       },
       {
-        "value": "Lackowa"
+        value: 'Lackowa',
       },
       {
-        "value": "Ostry Wierch"
+        value: 'Ostry Wierch',
       },
       {
-        "value": "Biała Skała"
+        value: 'Biała Skała',
       },
       {
-        "value": "Jaworzyna Konieczniańska"
+        value: 'Jaworzyna Konieczniańska',
       },
       {
-        "value": "Jaworzynka"
+        value: 'Jaworzynka',
       },
       {
-        "value": "Kamień nad Jaśliskami"
+        value: 'Kamień nad Jaśliskami',
       },
       {
-        "value": "Wielki Bukowiec"
+        value: 'Wielki Bukowiec',
       },
       {
-        "value": "Kozie Żebro"
+        value: 'Kozie Żebro',
       },
       {
-        "value": "Wątkowa"
+        value: 'Wątkowa',
       },
       {
-        "value": "Jagodna"
+        value: 'Jagodna',
       },
       {
-        "value": "Sasanka"
+        value: 'Sasanka',
       },
       {
-        "value": "Łomnicka Równia"
+        value: 'Łomnicka Równia',
       },
       {
-        "value": "Czerniec"
+        value: 'Czerniec',
       },
       {
-        "value": "Anielska Kopa"
+        value: 'Anielska Kopa',
       },
       {
-        "value": "Smolna"
+        value: 'Smolna',
       },
       {
-        "value": "Bielec"
+        value: 'Bielec',
       },
       {
-        "value": "Bobrzak"
+        value: 'Bobrzak',
       },
       {
-        "value": "Dzicza Góra"
+        value: 'Dzicza Góra',
       },
       {
-        "value": "Rudnik"
+        value: 'Rudnik',
       },
       {
-        "value": "Skalnik"
+        value: 'Skalnik',
       },
       {
-        "value": "Wielka Kopa"
+        value: 'Wielka Kopa',
       },
       {
-        "value": "Wołek"
+        value: 'Wołek',
       },
       {
-        "value": "Waligóra"
+        value: 'Waligóra',
       },
       {
-        "value": "Suchawa"
+        value: 'Suchawa',
       },
       {
-        "value": "Kostrzyna"
+        value: 'Kostrzyna',
       },
       {
-        "value": "Włostowa"
+        value: 'Włostowa',
       },
       {
-        "value": "Jeleniec"
+        value: 'Jeleniec',
       },
       {
-        "value": "Bukowiec"
+        value: 'Bukowiec',
       },
       {
-        "value": "Turzyna"
+        value: 'Turzyna',
       },
       {
-        "value": "Ruprechticki Szpicak"
+        value: 'Ruprechticki Szpicak',
       },
       {
-        "value": "Rogowiec"
+        value: 'Rogowiec',
       },
       {
-        "value": "Czarnek"
+        value: 'Czarnek',
       },
       {
-        "value": "Klin"
+        value: 'Klin',
       },
       {
-        "value": "Lesista Wielka"
+        value: 'Lesista Wielka',
       },
       {
-        "value": "Czupel"
+        value: 'Czupel',
       },
       {
-        "value": "Łamana Skała"
+        value: 'Łamana Skała',
       },
       {
-        "value": "Leskowiec"
+        value: 'Leskowiec',
       },
       {
-        "value": "Magurka Wilkowicka"
+        value: 'Magurka Wilkowicka',
       },
       {
-        "value": "Wielka Cisowa Grapa"
+        value: 'Wielka Cisowa Grapa',
       },
       {
-        "value": "Groniczki"
+        value: 'Groniczki',
       },
       {
-        "value": "Kiczera"
+        value: 'Kiczera',
       },
       {
-        "value": "Jawornica"
+        value: 'Jawornica',
       },
       {
-        "value": "Chrobacza Łąka"
+        value: 'Chrobacza Łąka',
       },
       {
-        "value": "Gaiki"
+        value: 'Gaiki',
       },
       {
-        "value": "Żar"
+        value: 'Żar',
       },
       {
-        "value": "Złota Góra"
+        value: 'Złota Góra',
       },
       {
-        "value": "Bukowski Groń"
+        value: 'Bukowski Groń',
       },
       {
-        "value": "Snoza"
+        value: 'Snoza',
       },
       {
-        "value": "Szczeliniec Wielki"
+        value: 'Szczeliniec Wielki',
       },
       {
-        "value": "Skalniak"
+        value: 'Skalniak',
       },
       {
-        "value": "Szczeliniec Mały"
+        value: 'Szczeliniec Mały',
       },
       {
-        "value": "Narożnik"
+        value: 'Narożnik',
       },
       {
-        "value": "Błędne Skały"
+        value: 'Błędne Skały',
       },
       {
-        "value": "Biskupia Kopa"
+        value: 'Biskupia Kopa',
       },
       {
-        "value": "Srebrna Kopa"
+        value: 'Srebrna Kopa',
       },
       {
-        "value": "Zamkowa Góra"
+        value: 'Zamkowa Góra',
       },
       {
-        "value": "Szyndzielowa Kopa"
+        value: 'Szyndzielowa Kopa',
       },
       {
-        "value": "Bukowa Góra"
+        value: 'Bukowa Góra',
       },
       {
-        "value": "Przednia Kopa"
+        value: 'Przednia Kopa',
       },
       {
-        "value": "Długota"
+        value: 'Długota',
       },
       {
-        "value": "Olszak"
+        value: 'Olszak',
       },
       {
-        "value": "Krzyżówka"
+        value: 'Krzyżówka',
       },
       {
-        "value": "Borowa"
+        value: 'Borowa',
       },
       {
-        "value": "Chełmiec"
+        value: 'Chełmiec',
       },
       {
-        "value": "Trójgarb"
+        value: 'Trójgarb',
       },
       {
-        "value": "Szeroka Góra"
+        value: 'Szeroka Góra',
       },
       {
-        "value": "Kłodzka Góra"
+        value: 'Kłodzka Góra',
       },
       {
-        "value": "Ostra Góra"
+        value: 'Ostra Góra',
       },
       {
-        "value": "Wilczak"
+        value: 'Wilczak',
       },
       {
-        "value": "Bardzka Góra"
+        value: 'Bardzka Góra',
       },
       {
-        "value": "Skopiec"
+        value: 'Skopiec',
       },
       {
-        "value": "Baraniec"
+        value: 'Baraniec',
       },
       {
-        "value": "Okole"
+        value: 'Okole',
       },
       {
-        "value": "Maślak"
+        value: 'Maślak',
       },
       {
-        "value": "Łysa Góra"
+        value: 'Łysa Góra',
       },
       {
-        "value": "Turzec"
+        value: 'Turzec',
       },
       {
-        "value": "Poręba"
+        value: 'Poręba',
       },
       {
-        "value": "Połom"
+        value: 'Połom',
       },
       {
-        "value": "Ślęża"
+        value: 'Ślęża',
       },
       {
-        "value": "Radunia"
+        value: 'Radunia',
       },
       {
-        "value": "Wieżyca"
+        value: 'Wieżyca',
       },
       {
-        "value": "Łysica"
+        value: 'Łysica',
       },
       {
-        "value": "Łysa Góra"
+        value: 'Łysa Góra',
       },
       {
-        "value": "Szczytniak"
+        value: 'Szczytniak',
       },
       {
-        "value": "Księża Skała"
+        value: 'Księża Skała',
       },
       {
-        "value": "Góra Jeleniowska"
+        value: 'Góra Jeleniowska',
       },
       {
-        "value": "Liwocz"
+        value: 'Liwocz',
       },
       {
-        "value": "Brzanka"
+        value: 'Brzanka',
       },
       {
-        "value": "Góra Janowskiego"
+        value: 'Góra Janowskiego',
       },
       {
-        "value": "Skałka 502"
+        value: 'Skałka 502',
       },
       {
-        "value": "Wielka Skała"
+        value: 'Wielka Skała',
       },
       {
-        "value": "Straszykowa Góra"
+        value: 'Straszykowa Góra',
       },
       {
-        "value": "Łysa"
+        value: 'Łysa',
       },
       {
-        "value": "Działynia"
+        value: 'Działynia',
       },
       {
-        "value": "Wrona"
+        value: 'Wrona',
       },
       {
-        "value": "Orzeł"
+        value: 'Orzeł',
       },
       {
-        "value": "Góra Świętej Anny"
-      }
+        value: 'Góra Świętej Anny',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 70,
-    "question": "Morza świata",
-    "answers": [
+    id: 70,
+    question: 'Morza świata',
+    answers: [
       {
-        "value": "Arafura"
+        value: 'Arafura',
       },
       {
-        "value": "Balijskie"
+        value: 'Balijskie',
       },
       {
-        "value": "Beringa"
+        value: 'Beringa',
       },
       {
-        "value": "Bismarcka"
+        value: 'Bismarcka',
       },
       {
-        "value": "Celebes"
+        value: 'Celebes',
       },
       {
-        "value": "Fidżi"
+        value: 'Fidżi',
       },
       {
-        "value": "Filipińskie"
+        value: 'Filipińskie',
       },
       {
-        "value": "Flores"
+        value: 'Flores',
       },
       {
-        "value": "Halmahera"
+        value: 'Halmahera',
       },
       {
-        "value": "Japońskie"
+        value: 'Japońskie',
       },
       {
-        "value": "Jawajskie"
+        value: 'Jawajskie',
       },
       {
-        "value": "Koralowe"
+        value: 'Koralowe',
       },
       {
-        "value": "Moluckie"
+        value: 'Moluckie',
       },
       {
-        "value": "Ochockie"
+        value: 'Ochockie',
       },
       {
-        "value": "Południowochińskie"
+        value: 'Południowochińskie',
       },
       {
-        "value": "Salomona"
+        value: 'Salomona',
       },
       {
-        "value": "Sawu"
+        value: 'Sawu',
       },
       {
-        "value": "Seram"
+        value: 'Seram',
       },
       {
-        "value": "Sulu"
+        value: 'Sulu',
       },
       {
-        "value": "Tasmana"
+        value: 'Tasmana',
       },
       {
-        "value": "Wewnętrzne"
+        value: 'Wewnętrzne',
       },
       {
-        "value": "Wschodniochińskie"
+        value: 'Wschodniochińskie',
       },
       {
-        "value": "Żółte"
+        value: 'Żółte',
       },
       {
-        "value": "Adriatyckie"
+        value: 'Adriatyckie',
       },
       {
-        "value": "Alandzkie"
+        value: 'Alandzkie',
       },
       {
-        "value": "Alborańskie"
+        value: 'Alborańskie',
       },
       {
-        "value": "Archipelagowe"
+        value: 'Archipelagowe',
       },
       {
-        "value": "Azowskie"
+        value: 'Azowskie',
       },
       {
-        "value": "Balearskie"
+        value: 'Balearskie',
       },
       {
-        "value": "Bałtyckie"
+        value: 'Bałtyckie',
       },
       {
-        "value": "Celtyckie"
+        value: 'Celtyckie',
       },
       {
-        "value": "Czarne"
+        value: 'Czarne',
       },
       {
-        "value": "Egejskie"
+        value: 'Egejskie',
       },
       {
-        "value": "Hebrydzkie"
+        value: 'Hebrydzkie',
       },
       {
-        "value": "Irlandzkie"
+        value: 'Irlandzkie',
       },
       {
-        "value": "Jońskie"
+        value: 'Jońskie',
       },
       {
-        "value": "Karaibskie"
+        value: 'Karaibskie',
       },
       {
-        "value": "Kreteńskie"
+        value: 'Kreteńskie',
       },
       {
-        "value": "Labradorskie"
+        value: 'Labradorskie',
       },
       {
-        "value": "Liguryjskie"
+        value: 'Liguryjskie',
       },
       {
-        "value": "Marmara"
+        value: 'Marmara',
       },
       {
-        "value": "Mirtejskie"
+        value: 'Mirtejskie',
       },
       {
-        "value": "Norweskie"
+        value: 'Norweskie',
       },
       {
-        "value": "Północne"
+        value: 'Północne',
       },
       {
-        "value": "Sargassowe"
+        value: 'Sargassowe',
       },
       {
-        "value": "Scotia"
+        value: 'Scotia',
       },
       {
-        "value": "Szkockie"
+        value: 'Szkockie',
       },
       {
-        "value": "Śródziemne"
+        value: 'Śródziemne',
       },
       {
-        "value": "Trackie"
+        value: 'Trackie',
       },
       {
-        "value": "Tyrreńskie"
+        value: 'Tyrreńskie',
       },
       {
-        "value": "Wattowe"
+        value: 'Wattowe',
       },
       {
-        "value": "Andamańskie"
+        value: 'Andamańskie',
       },
       {
-        "value": "Arabskie"
+        value: 'Arabskie',
       },
       {
-        "value": "Czerwone"
+        value: 'Czerwone',
       },
       {
-        "value": "Lakkadiwskie"
+        value: 'Lakkadiwskie',
       },
       {
-        "value": "Timor"
+        value: 'Timor',
       },
       {
-        "value": "Baffina"
+        value: 'Baffina',
       },
       {
-        "value": "Barentsa"
+        value: 'Barentsa',
       },
       {
-        "value": "Beauforta"
+        value: 'Beauforta',
       },
       {
-        "value": "Białe"
+        value: 'Białe',
       },
       {
-        "value": "Czukockie"
+        value: 'Czukockie',
       },
       {
-        "value": "Grenlandzkie"
+        value: 'Grenlandzkie',
       },
       {
-        "value": "Karskie"
+        value: 'Karskie',
       },
       {
-        "value": "Lincolna"
+        value: 'Lincolna',
       },
       {
-        "value": "Łaptiewów"
+        value: 'Łaptiewów',
       },
       {
-        "value": "Peczorskie"
+        value: 'Peczorskie',
       },
       {
-        "value": "Wandela"
+        value: 'Wandela',
       },
       {
-        "value": "Wschodniosyberyjskie"
+        value: 'Wschodniosyberyjskie',
       },
       {
-        "value": "Amundsena"
+        value: 'Amundsena',
       },
       {
-        "value": "Bellingshausena"
+        value: 'Bellingshausena',
       },
       {
-        "value": "Davisa"
+        value: 'Davisa',
       },
       {
-        "value": "Dumont d’Urville’a"
+        value: 'Dumont d’Urville’a',
       },
       {
-        "value": "Kosmonautów"
+        value: 'Kosmonautów',
       },
       {
-        "value": "Króla Haakona VII"
+        value: 'Króla Haakona VII',
       },
       {
-        "value": "Łazariewa"
+        value: 'Łazariewa',
       },
       {
-        "value": "Mawsona"
+        value: 'Mawsona',
       },
       {
-        "value": "Riiser-Larsena"
+        value: 'Riiser-Larsena',
       },
       {
-        "value": "Rossa"
+        value: 'Rossa',
       },
       {
-        "value": "Scotia"
+        value: 'Scotia',
       },
       {
-        "value": "Somowa"
+        value: 'Somowa',
       },
       {
-        "value": "Weddella"
+        value: 'Weddella',
       },
       {
-        "value": "Wspólnoty"
-      }
+        value: 'Wspólnoty',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 71,
-    "question": "43 najdłuższe rzeki świata",
-    "answers": [
+    id: 71,
+    question: '43 najdłuższe rzeki świata',
+    answers: [
       {
-        "value": "Nil"
+        value: 'Nil',
       },
       {
-        "value": "Amazonka"
+        value: 'Amazonka',
       },
       {
-        "value": "Jangcy"
+        value: 'Jangcy',
       },
       {
-        "value": "Missisipi-Missouri"
+        value: 'Missisipi-Missouri',
       },
       {
-        "value": "Huang He"
+        value: 'Huang He',
       },
       {
-        "value": "Ob-Irtysz"
+        value: 'Ob-Irtysz',
       },
       {
-        "value": "Kongo"
+        value: 'Kongo',
       },
       {
-        "value": "Mekong"
+        value: 'Mekong',
       },
       {
-        "value": "Amur"
+        value: 'Amur',
       },
       {
-        "value": "Lena"
+        value: 'Lena',
       },
       {
-        "value": "Parana"
+        value: 'Parana',
       },
       {
-        "value": "Mackenzie"
+        value: 'Mackenzie',
       },
       {
-        "value": "Niger"
+        value: 'Niger',
       },
       {
-        "value": "Jenisej"
+        value: 'Jenisej',
       },
       {
-        "value": "Wołga"
+        value: 'Wołga',
       },
       {
-        "value": "Murray+Darling"
+        value: 'Murray+Darling',
       },
       {
-        "value": "Jukon"
+        value: 'Jukon',
       },
       {
-        "value": "Indus"
+        value: 'Indus',
       },
       {
-        "value": "Saluin"
+        value: 'Saluin',
       },
       {
-        "value": "Rio Grande"
+        value: 'Rio Grande',
       },
       {
-        "value": "Syr-daria"
+        value: 'Syr-daria',
       },
       {
-        "value": "Brahmaputra"
+        value: 'Brahmaputra',
       },
       {
-        "value": "São Francisco"
+        value: 'São Francisco',
       },
       {
-        "value": "Dunaj"
+        value: 'Dunaj',
       },
       {
-        "value": "Eufrat"
+        value: 'Eufrat',
       },
       {
-        "value": "Zambezi"
+        value: 'Zambezi',
       },
       {
-        "value": "Amu-daria"
+        value: 'Amu-daria',
       },
       {
-        "value": "Kołyma"
+        value: 'Kołyma',
       },
       {
-        "value": "Ganges"
+        value: 'Ganges',
       },
       {
-        "value": "Ural"
+        value: 'Ural',
       },
       {
-        "value": "Oleniok"
+        value: 'Oleniok',
       },
       {
-        "value": "Dniepr"
+        value: 'Dniepr',
       },
       {
-        "value": "Irawadi"
+        value: 'Irawadi',
       },
       {
-        "value": "Orinoko"
+        value: 'Orinoko',
       },
       {
-        "value": "Xi Jiang"
+        value: 'Xi Jiang',
       },
       {
-        "value": "Kolumbia"
+        value: 'Kolumbia',
       },
       {
-        "value": "Don"
+        value: 'Don',
       },
       {
-        "value": "Tygrys"
+        value: 'Tygrys',
       },
       {
-        "value": "Oranje"
+        value: 'Oranje',
       },
       {
-        "value": "Peczora"
+        value: 'Peczora',
       },
       {
-        "value": "Churchill"
+        value: 'Churchill',
       },
       {
-        "value": "Okawango"
+        value: 'Okawango',
       },
       {
-        "value": "Limpopo"
-      }
+        value: 'Limpopo',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 72,
-    "question": "Pierwiastki chemiczne",
-    "answers": [
+    id: 72,
+    question: 'Pierwiastki chemiczne',
+    answers: [
       {
-        "value": "wodór"
+        value: 'wodór',
       },
       {
-        "value": "hel"
+        value: 'hel',
       },
       {
-        "value": "lit"
+        value: 'lit',
       },
       {
-        "value": "beryl"
+        value: 'beryl',
       },
       {
-        "value": "bor"
+        value: 'bor',
       },
       {
-        "value": "węgiel"
+        value: 'węgiel',
       },
       {
-        "value": "azot"
+        value: 'azot',
       },
       {
-        "value": "tlen"
+        value: 'tlen',
       },
       {
-        "value": "fluor"
+        value: 'fluor',
       },
       {
-        "value": "neon"
+        value: 'neon',
       },
       {
-        "value": "sód"
+        value: 'sód',
       },
       {
-        "value": "magnez"
+        value: 'magnez',
       },
       {
-        "value": "glin"
+        value: 'glin',
       },
       {
-        "value": "krzem"
+        value: 'krzem',
       },
       {
-        "value": "fosfor"
+        value: 'fosfor',
       },
       {
-        "value": "siarka"
+        value: 'siarka',
       },
       {
-        "value": "chlor"
+        value: 'chlor',
       },
       {
-        "value": "argon"
+        value: 'argon',
       },
       {
-        "value": "potas"
+        value: 'potas',
       },
       {
-        "value": "wapń"
+        value: 'wapń',
       },
       {
-        "value": "skand"
+        value: 'skand',
       },
       {
-        "value": "tytan"
+        value: 'tytan',
       },
       {
-        "value": "wanad"
+        value: 'wanad',
       },
       {
-        "value": "chrom"
+        value: 'chrom',
       },
       {
-        "value": "mangan"
+        value: 'mangan',
       },
       {
-        "value": "żelazo"
+        value: 'żelazo',
       },
       {
-        "value": "kobalt"
+        value: 'kobalt',
       },
       {
-        "value": "nikiel"
+        value: 'nikiel',
       },
       {
-        "value": "miedź"
+        value: 'miedź',
       },
       {
-        "value": "cynk"
+        value: 'cynk',
       },
       {
-        "value": "gal"
+        value: 'gal',
       },
       {
-        "value": "german"
+        value: 'german',
       },
       {
-        "value": "arsen"
+        value: 'arsen',
       },
       {
-        "value": "selen"
+        value: 'selen',
       },
       {
-        "value": "brom"
+        value: 'brom',
       },
       {
-        "value": "krypton"
+        value: 'krypton',
       },
       {
-        "value": "rubid"
+        value: 'rubid',
       },
       {
-        "value": "stront"
+        value: 'stront',
       },
       {
-        "value": "itr"
+        value: 'itr',
       },
       {
-        "value": "cyrkon"
+        value: 'cyrkon',
       },
       {
-        "value": "niob"
+        value: 'niob',
       },
       {
-        "value": "molibden"
+        value: 'molibden',
       },
       {
-        "value": "technet"
+        value: 'technet',
       },
       {
-        "value": "ruten"
+        value: 'ruten',
       },
       {
-        "value": "rod"
+        value: 'rod',
       },
       {
-        "value": "pallad"
+        value: 'pallad',
       },
       {
-        "value": "srebro"
+        value: 'srebro',
       },
       {
-        "value": "kadm"
+        value: 'kadm',
       },
       {
-        "value": "ind"
+        value: 'ind',
       },
       {
-        "value": "cyna"
+        value: 'cyna',
       },
       {
-        "value": "antymon"
+        value: 'antymon',
       },
       {
-        "value": "tellur"
+        value: 'tellur',
       },
       {
-        "value": "jod"
+        value: 'jod',
       },
       {
-        "value": "ksenon"
+        value: 'ksenon',
       },
       {
-        "value": "cez"
+        value: 'cez',
       },
       {
-        "value": "bar"
+        value: 'bar',
       },
       {
-        "value": "lantan"
+        value: 'lantan',
       },
       {
-        "value": "cer"
+        value: 'cer',
       },
       {
-        "value": "prazeodym"
+        value: 'prazeodym',
       },
       {
-        "value": "neodym"
+        value: 'neodym',
       },
       {
-        "value": "promet"
+        value: 'promet',
       },
       {
-        "value": "samar"
+        value: 'samar',
       },
       {
-        "value": "europ"
+        value: 'europ',
       },
       {
-        "value": "gadolin"
+        value: 'gadolin',
       },
       {
-        "value": "terb"
+        value: 'terb',
       },
       {
-        "value": "dysproz"
+        value: 'dysproz',
       },
       {
-        "value": "holm"
+        value: 'holm',
       },
       {
-        "value": "erb"
+        value: 'erb',
       },
       {
-        "value": "tul"
+        value: 'tul',
       },
       {
-        "value": "iterb"
+        value: 'iterb',
       },
       {
-        "value": "lutet"
+        value: 'lutet',
       },
       {
-        "value": "hafn"
+        value: 'hafn',
       },
       {
-        "value": "tantal"
+        value: 'tantal',
       },
       {
-        "value": "wolfram"
+        value: 'wolfram',
       },
       {
-        "value": "ren"
+        value: 'ren',
       },
       {
-        "value": "osm"
+        value: 'osm',
       },
       {
-        "value": "iryd"
+        value: 'iryd',
       },
       {
-        "value": "platyna"
+        value: 'platyna',
       },
       {
-        "value": "złoto"
+        value: 'złoto',
       },
       {
-        "value": "rtęć"
+        value: 'rtęć',
       },
       {
-        "value": "tal"
+        value: 'tal',
       },
       {
-        "value": "ołów"
+        value: 'ołów',
       },
       {
-        "value": "bizmut"
+        value: 'bizmut',
       },
       {
-        "value": "polon"
+        value: 'polon',
       },
       {
-        "value": "astat"
+        value: 'astat',
       },
       {
-        "value": "radon"
+        value: 'radon',
       },
       {
-        "value": "frans"
+        value: 'frans',
       },
       {
-        "value": "rad"
+        value: 'rad',
       },
       {
-        "value": "aktyn"
+        value: 'aktyn',
       },
       {
-        "value": "tor"
+        value: 'tor',
       },
       {
-        "value": "protaktyn"
+        value: 'protaktyn',
       },
       {
-        "value": "uran"
+        value: 'uran',
       },
       {
-        "value": "neptun"
+        value: 'neptun',
       },
       {
-        "value": "pluton"
+        value: 'pluton',
       },
       {
-        "value": "ameryk"
+        value: 'ameryk',
       },
       {
-        "value": "kiur"
+        value: 'kiur',
       },
       {
-        "value": "berkel"
+        value: 'berkel',
       },
       {
-        "value": "kaliforn"
+        value: 'kaliforn',
       },
       {
-        "value": "einstein"
+        value: 'einstein',
       },
       {
-        "value": "ferm"
+        value: 'ferm',
       },
       {
-        "value": "mendelew"
+        value: 'mendelew',
       },
       {
-        "value": "nobel"
+        value: 'nobel',
       },
       {
-        "value": "lorens"
+        value: 'lorens',
       },
       {
-        "value": "rutherford"
+        value: 'rutherford',
       },
       {
-        "value": "dubn"
+        value: 'dubn',
       },
       {
-        "value": "seaborg"
+        value: 'seaborg',
       },
       {
-        "value": "bohr"
+        value: 'bohr',
       },
       {
-        "value": "has"
+        value: 'has',
       },
       {
-        "value": "meitner"
+        value: 'meitner',
       },
       {
-        "value": "darmsztadt"
+        value: 'darmsztadt',
       },
       {
-        "value": "roentgen"
+        value: 'roentgen',
       },
       {
-        "value": "kopernik"
+        value: 'kopernik',
       },
       {
-        "value": "nihon"
+        value: 'nihon',
       },
       {
-        "value": "flerow"
+        value: 'flerow',
       },
       {
-        "value": "moskow"
+        value: 'moskow',
       },
       {
-        "value": "liwermor"
+        value: 'liwermor',
       },
       {
-        "value": "tenes"
+        value: 'tenes',
       },
       {
-        "value": "oganeson"
-      }
+        value: 'oganeson',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 73,
-    "question": "Księgi biblijne",
-    "answers": [
+    id: 73,
+    question: 'Księgi biblijne',
+    answers: [
       {
-        "value": "Księga Rodzaju"
+        value: 'Księga Rodzaju',
       },
       {
-        "value": "Księga Wyjścia"
+        value: 'Księga Wyjścia',
       },
       {
-        "value": "Księga Kapłańska"
+        value: 'Księga Kapłańska',
       },
       {
-        "value": "Księga Liczb"
+        value: 'Księga Liczb',
       },
       {
-        "value": "Księga Powtórzonego Prawa"
+        value: 'Księga Powtórzonego Prawa',
       },
       {
-        "value": "Księga Jozuego"
+        value: 'Księga Jozuego',
       },
       {
-        "value": "Księga Sędziów"
+        value: 'Księga Sędziów',
       },
       {
-        "value": "Księga Rut"
+        value: 'Księga Rut',
       },
       {
-        "value": "Pierwsza Księga Samuela"
+        value: 'Pierwsza Księga Samuela',
       },
       {
-        "value": "Druga Księga Samuela"
+        value: 'Druga Księga Samuela',
       },
       {
-        "value": "Pierwsza Księga Królewska"
+        value: 'Pierwsza Księga Królewska',
       },
       {
-        "value": "Druga Księga Królewska"
+        value: 'Druga Księga Królewska',
       },
       {
-        "value": "Pierwsza Księga Kronik"
+        value: 'Pierwsza Księga Kronik',
       },
       {
-        "value": "Druga Księga Kronik"
+        value: 'Druga Księga Kronik',
       },
       {
-        "value": "Księga Ezdrasza"
+        value: 'Księga Ezdrasza',
       },
       {
-        "value": "Księga Nehemiasza"
+        value: 'Księga Nehemiasza',
       },
       {
-        "value": "Księga Tobiasza"
+        value: 'Księga Tobiasza',
       },
       {
-        "value": "Księga Judyty"
+        value: 'Księga Judyty',
       },
       {
-        "value": "Księga Estery"
+        value: 'Księga Estery',
       },
       {
-        "value": "Pierwsza Księga Machabejska"
+        value: 'Pierwsza Księga Machabejska',
       },
       {
-        "value": "Druga Księga Machabejska"
+        value: 'Druga Księga Machabejska',
       },
       {
-        "value": "Księga Hioba"
+        value: 'Księga Hioba',
       },
       {
-        "value": "Księga Psalmów"
+        value: 'Księga Psalmów',
       },
       {
-        "value": "Księga Przysłów"
+        value: 'Księga Przysłów',
       },
       {
-        "value": "Księga Koheleta"
+        value: 'Księga Koheleta',
       },
       {
-        "value": "Pieśń nad Pieśniami"
+        value: 'Pieśń nad Pieśniami',
       },
       {
-        "value": "Księga Mądrości"
+        value: 'Księga Mądrości',
       },
       {
-        "value": "Mądrość Syracha"
+        value: 'Mądrość Syracha',
       },
       {
-        "value": "Księga Izajasza"
+        value: 'Księga Izajasza',
       },
       {
-        "value": "Księga Jeremiasza"
+        value: 'Księga Jeremiasza',
       },
       {
-        "value": "Lamentacje"
+        value: 'Lamentacje',
       },
       {
-        "value": "Księga Barucha"
+        value: 'Księga Barucha',
       },
       {
-        "value": "Księga Ezechiela"
+        value: 'Księga Ezechiela',
       },
       {
-        "value": "Księga Daniela"
+        value: 'Księga Daniela',
       },
       {
-        "value": "Księga Ozeasza"
+        value: 'Księga Ozeasza',
       },
       {
-        "value": "Księga Joela"
+        value: 'Księga Joela',
       },
       {
-        "value": "Księga Amosa"
+        value: 'Księga Amosa',
       },
       {
-        "value": "Księga Abdiasza"
+        value: 'Księga Abdiasza',
       },
       {
-        "value": "Księga Jonasza"
+        value: 'Księga Jonasza',
       },
       {
-        "value": "Księga Micheasza"
+        value: 'Księga Micheasza',
       },
       {
-        "value": "Księga Nahuma"
+        value: 'Księga Nahuma',
       },
       {
-        "value": "Księga Habakuka"
+        value: 'Księga Habakuka',
       },
       {
-        "value": "Księga Sofoniasza"
+        value: 'Księga Sofoniasza',
       },
       {
-        "value": "Księga Aggeusza"
+        value: 'Księga Aggeusza',
       },
       {
-        "value": "Księga Zachariasza"
+        value: 'Księga Zachariasza',
       },
       {
-        "value": "Księga Malachiasza"
+        value: 'Księga Malachiasza',
       },
       {
-        "value": "Ewangelia wg św. Mateusza"
+        value: 'Ewangelia wg św. Mateusza',
       },
       {
-        "value": "Ewangelia wg św. Marka"
+        value: 'Ewangelia wg św. Marka',
       },
       {
-        "value": "Ewangelia wg św. Łukasza"
+        value: 'Ewangelia wg św. Łukasza',
       },
       {
-        "value": "Ewangelia wg św. Jana"
+        value: 'Ewangelia wg św. Jana',
       },
       {
-        "value": "Dzieje Apostolskie"
+        value: 'Dzieje Apostolskie',
       },
       {
-        "value": "List do Rzymian"
+        value: 'List do Rzymian',
       },
       {
-        "value": "Pierwszy List do Koryntian"
+        value: 'Pierwszy List do Koryntian',
       },
       {
-        "value": "Drugi List do Koryntian"
+        value: 'Drugi List do Koryntian',
       },
       {
-        "value": "List do Galatów"
+        value: 'List do Galatów',
       },
       {
-        "value": "List do Efezjan"
+        value: 'List do Efezjan',
       },
       {
-        "value": "List do Filipian"
+        value: 'List do Filipian',
       },
       {
-        "value": "List do Kolosan"
+        value: 'List do Kolosan',
       },
       {
-        "value": "Pierwszy List do Tesaloniczan"
+        value: 'Pierwszy List do Tesaloniczan',
       },
       {
-        "value": "Drugi List do Tesaloniczan"
+        value: 'Drugi List do Tesaloniczan',
       },
       {
-        "value": "Pierwszy List do Tymoteusza"
+        value: 'Pierwszy List do Tymoteusza',
       },
       {
-        "value": "Drugi List do Tymoteusza"
+        value: 'Drugi List do Tymoteusza',
       },
       {
-        "value": "List do Tytusa"
+        value: 'List do Tytusa',
       },
       {
-        "value": "List do Filemona"
+        value: 'List do Filemona',
       },
       {
-        "value": "List do Hebrajczyków"
+        value: 'List do Hebrajczyków',
       },
       {
-        "value": "List św. Jakuba"
+        value: 'List św. Jakuba',
       },
       {
-        "value": "Pierwszy List św. Piotra"
+        value: 'Pierwszy List św. Piotra',
       },
       {
-        "value": "Drugi List św. Piotra"
+        value: 'Drugi List św. Piotra',
       },
       {
-        "value": "Pierwszy List św. Jana"
+        value: 'Pierwszy List św. Jana',
       },
       {
-        "value": "Drugi List św. Jana"
+        value: 'Drugi List św. Jana',
       },
       {
-        "value": "Trzeci List św. Jana"
+        value: 'Trzeci List św. Jana',
       },
       {
-        "value": "List św. Judy"
+        value: 'List św. Judy',
       },
       {
-        "value": "Apokalipsa św. Jana"
-      }
+        value: 'Apokalipsa św. Jana',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 74,
-    "question": "7 cudów świata",
-    "answers": [
+    id: 74,
+    question: '7 cudów świata',
+    answers: [
       {
-        "value": "Piramida Cheopsa"
+        value: 'Piramida Cheopsa',
       },
       {
-        "value": "Wiszące ogrody Semiramidy"
+        value: 'Wiszące ogrody Semiramidy',
       },
       {
-        "value": "Świątynia Artemidy w Efezie"
+        value: 'Świątynia Artemidy w Efezie',
       },
       {
-        "value": "Posąg Zeusa w Olimpii"
+        value: 'Posąg Zeusa w Olimpii',
       },
       {
-        "value": "Mauzoleum w Halikarnasie"
+        value: 'Mauzoleum w Halikarnasie',
       },
       {
-        "value": "Kolos Rodyjski"
+        value: 'Kolos Rodyjski',
       },
       {
-        "value": "Latarnia morska na Faros"
-      }
+        value: 'Latarnia morska na Faros',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 75,
-    "question": "Polscy nobliści",
-    "answers": [
+    id: 75,
+    question: 'Polscy nobliści',
+    answers: [
       {
-        "value": "Maria Skłodowska-Curie"
+        value: 'Maria Skłodowska-Curie',
       },
       {
-        "value": "Henryk Sienkiewicz"
+        value: 'Henryk Sienkiewicz',
       },
       {
-        "value": "Władysław Reymont"
+        value: 'Władysław Reymont',
       },
       {
-        "value": "Czesław Miłosz"
+        value: 'Czesław Miłosz',
       },
       {
-        "value": "Lech Wałęsa"
+        value: 'Lech Wałęsa',
       },
       {
-        "value": "Józef Rotblat"
+        value: 'Józef Rotblat',
       },
       {
-        "value": "Wisława Szymborska"
-      }
+        value: 'Wisława Szymborska',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 76,
-    "question": "Reprezentanci Polski w piłce noznej - stan na Maj 2023",
-    "answers": [
+    id: 76,
+    question: 'Reprezentanci Polski w piłce noznej - stan na Maj 2023',
+    answers: [
       {
-        "value": "Stanisław Kazimierz Cikowski"
+        value: 'Stanisław Kazimierz Cikowski',
       },
       {
-        "value": "Marian Einbacher"
+        value: 'Marian Einbacher',
       },
       {
-        "value": "Ludwik Gintel"
+        value: 'Ludwik Gintel',
       },
       {
-        "value": "Józef Kałuża"
+        value: 'Józef Kałuża',
       },
       {
-        "value": "Wacław Kuchar"
+        value: 'Wacław Kuchar',
       },
       {
-        "value": "Jan Loth"
+        value: 'Jan Loth',
       },
       {
-        "value": "Artur Marczewski"
+        value: 'Artur Marczewski',
       },
       {
-        "value": "Stanisław Mielech"
+        value: 'Stanisław Mielech',
       },
       {
-        "value": "Leon Sperling"
+        value: 'Leon Sperling',
       },
       {
-        "value": "Zdzisław Styczeń"
+        value: 'Zdzisław Styczeń',
       },
       {
-        "value": "Tadeusz Synowiec"
+        value: 'Tadeusz Synowiec',
       },
       {
-        "value": "Józef Klotz"
+        value: 'Józef Klotz',
       },
       {
-        "value": "Zygmunt Krumholz"
+        value: 'Zygmunt Krumholz',
       },
       {
-        "value": "Henryk Reyman"
+        value: 'Henryk Reyman',
       },
       {
-        "value": "Stefan Śliwa"
+        value: 'Stefan Śliwa',
       },
       {
-        "value": "Stefan Fryc"
+        value: 'Stefan Fryc',
       },
       {
-        "value": "Józef Garbień"
+        value: 'Józef Garbień',
       },
       {
-        "value": "Adam Kogut"
+        value: 'Adam Kogut',
       },
       {
-        "value": "Mieczysław Wiśniewski"
+        value: 'Mieczysław Wiśniewski',
       },
       {
-        "value": "Jerzy Bułanow"
+        value: 'Jerzy Bułanow',
       },
       {
-        "value": "Leopold Duźniak"
+        value: 'Leopold Duźniak',
       },
       {
-        "value": "Zbigniew Niziński"
+        value: 'Zbigniew Niziński',
       },
       {
-        "value": "Władysław Prymka"
+        value: 'Władysław Prymka',
       },
       {
-        "value": "Andrzej Przeworski"
+        value: 'Andrzej Przeworski',
       },
       {
-        "value": "Marian Spoida"
+        value: 'Marian Spoida',
       },
       {
-        "value": "Wawrzyniec Staliński"
+        value: 'Wawrzyniec Staliński',
       },
       {
-        "value": "Stefan Popiel"
+        value: 'Stefan Popiel',
       },
       {
-        "value": "Mieczysław Zimowski"
+        value: 'Mieczysław Zimowski',
       },
       {
-        "value": "Mieczysław Batsch"
+        value: 'Mieczysław Batsch',
       },
       {
-        "value": "Juliusz Miller"
+        value: 'Juliusz Miller',
       },
       {
-        "value": "Ludwik Schneider"
+        value: 'Ludwik Schneider',
       },
       {
-        "value": "Wawrzyniec Cyl"
+        value: 'Wawrzyniec Cyl',
       },
       {
-        "value": "Witold Gieras"
+        value: 'Witold Gieras',
       },
       {
-        "value": "Władysław Kowalski"
+        value: 'Władysław Kowalski',
       },
       {
-        "value": "Władysław Olearczyk"
+        value: 'Władysław Olearczyk',
       },
       {
-        "value": "Józef Słonecki"
+        value: 'Józef Słonecki',
       },
       {
-        "value": "Kazimierz Kaczor"
+        value: 'Kazimierz Kaczor',
       },
       {
-        "value": "Władysław Krupa"
+        value: 'Władysław Krupa',
       },
       {
-        "value": "Emil Goerlitz"
+        value: 'Emil Goerlitz',
       },
       {
-        "value": "Józef Adamek"
+        value: 'Józef Adamek',
       },
       {
-        "value": "Antoni Amirowicz"
+        value: 'Antoni Amirowicz',
       },
       {
-        "value": "Mieczysław Balcer"
+        value: 'Mieczysław Balcer',
       },
       {
-        "value": "Zygmunt Chruściński"
+        value: 'Zygmunt Chruściński',
       },
       {
-        "value": "Stanisław Czulak"
+        value: 'Stanisław Czulak',
       },
       {
-        "value": "Stefan Domański"
+        value: 'Stefan Domański',
       },
       {
-        "value": "Marian Markiewicz"
+        value: 'Marian Markiewicz',
       },
       {
-        "value": "Karol Hanke"
+        value: 'Karol Hanke',
       },
       {
-        "value": "Władysław Karasiak"
+        value: 'Władysław Karasiak',
       },
       {
-        "value": "Zygmunt Otto"
+        value: 'Zygmunt Otto',
       },
       {
-        "value": "Antoni Śledź"
+        value: 'Antoni Śledź',
       },
       {
-        "value": "Marian Kiliński"
+        value: 'Marian Kiliński',
       },
       {
-        "value": "Bronisław Fichtel"
+        value: 'Bronisław Fichtel',
       },
       {
-        "value": "Ludwik Szabakiewicz"
+        value: 'Ludwik Szabakiewicz',
       },
       {
-        "value": "Józef Ciszewski"
+        value: 'Józef Ciszewski',
       },
       {
-        "value": "Filip Kmiciński"
+        value: 'Filip Kmiciński',
       },
       {
-        "value": "Kazimierz Seichter"
+        value: 'Kazimierz Seichter',
       },
       {
-        "value": "Mieczysław Czajkowski"
+        value: 'Mieczysław Czajkowski',
       },
       {
-        "value": "Aleksander Tupalski"
+        value: 'Aleksander Tupalski',
       },
       {
-        "value": "Tadeusz Zastawniak"
+        value: 'Tadeusz Zastawniak',
       },
       {
-        "value": "Antoni Malczyk"
+        value: 'Antoni Malczyk',
       },
       {
-        "value": "Aleksander Pychowski"
+        value: 'Aleksander Pychowski',
       },
       {
-        "value": "Bolesław Cichecki"
+        value: 'Bolesław Cichecki',
       },
       {
-        "value": "Stefan Loth"
+        value: 'Stefan Loth',
       },
       {
-        "value": "Paweł Lubina"
+        value: 'Paweł Lubina',
       },
       {
-        "value": "August Milde"
+        value: 'August Milde',
       },
       {
-        "value": "Józef Sobota"
+        value: 'Józef Sobota',
       },
       {
-        "value": "Teodor Wieliszek"
+        value: 'Teodor Wieliszek',
       },
       {
-        "value": "Symplicjusz Zwierzewski"
+        value: 'Symplicjusz Zwierzewski',
       },
       {
-        "value": "Michał Flieger"
+        value: 'Michał Flieger',
       },
       {
-        "value": "Józef Kubiński"
+        value: 'Józef Kubiński',
       },
       {
-        "value": "Mieczysław Szumiec"
+        value: 'Mieczysław Szumiec',
       },
       {
-        "value": "Stefan Kisieliński"
+        value: 'Stefan Kisieliński',
       },
       {
-        "value": "Jan Durka"
+        value: 'Jan Durka',
       },
       {
-        "value": "Izydor Redler"
+        value: 'Izydor Redler',
       },
       {
-        "value": "Zygmunt Steuermann"
+        value: 'Zygmunt Steuermann',
       },
       {
-        "value": "Franciszek Giebartowski"
+        value: 'Franciszek Giebartowski',
       },
       {
-        "value": "Aleksander Kahane"
+        value: 'Aleksander Kahane',
       },
       {
-        "value": "Jan Drapała"
+        value: 'Jan Drapała',
       },
       {
-        "value": "Edward Bill"
+        value: 'Edward Bill',
       },
       {
-        "value": "Edward Konietzny"
+        value: 'Edward Konietzny',
       },
       {
-        "value": "Karol Pazurek"
+        value: 'Karol Pazurek',
       },
       {
-        "value": "Stanisław Ptak"
+        value: 'Stanisław Ptak',
       },
       {
-        "value": "Stanisław Wójcik"
+        value: 'Stanisław Wójcik',
       },
       {
-        "value": "Franciszek Zastawniak"
+        value: 'Franciszek Zastawniak',
       },
       {
-        "value": "Jan Kotlarczyk"
+        value: 'Jan Kotlarczyk',
       },
       {
-        "value": "Józef Nawrot"
+        value: 'Józef Nawrot',
       },
       {
-        "value": "Bronisław Seichter"
+        value: 'Bronisław Seichter',
       },
       {
-        "value": "Jan Luxenburg"
+        value: 'Jan Luxenburg',
       },
       {
-        "value": "Karol Kossok"
+        value: 'Karol Kossok',
       },
       {
-        "value": "Władysław Przybysz"
+        value: 'Władysław Przybysz',
       },
       {
-        "value": "Stanisław Deutschmann"
+        value: 'Stanisław Deutschmann',
       },
       {
-        "value": "Antoni Gałecki"
+        value: 'Antoni Gałecki',
       },
       {
-        "value": "Włodzimierz Krygier"
+        value: 'Włodzimierz Krygier',
       },
       {
-        "value": "Jan Wojciechowski"
+        value: 'Jan Wojciechowski',
       },
       {
-        "value": "Witold Wypijewski"
+        value: 'Witold Wypijewski',
       },
       {
-        "value": "Witold Przykucki"
+        value: 'Witold Przykucki',
       },
       {
-        "value": "Marian Fontowicz"
+        value: 'Marian Fontowicz',
       },
       {
-        "value": "Henryk Martyna"
+        value: 'Henryk Martyna',
       },
       {
-        "value": "Aleksander Mysiak"
+        value: 'Aleksander Mysiak',
       },
       {
-        "value": "Józef Smoczek"
+        value: 'Józef Smoczek',
       },
       {
-        "value": "Władysław Szczepaniak"
+        value: 'Władysław Szczepaniak',
       },
       {
-        "value": "Tadeusz Konkiewicz"
+        value: 'Tadeusz Konkiewicz',
       },
       {
-        "value": "Józef Kotlarczyk"
+        value: 'Józef Kotlarczyk',
       },
       {
-        "value": "Maksymilian Koźmin"
+        value: 'Maksymilian Koźmin',
       },
       {
-        "value": "Leonard Malik"
+        value: 'Leonard Malik',
       },
       {
-        "value": "Marian Schaller"
+        value: 'Marian Schaller',
       },
       {
-        "value": "Gustaw Bator"
+        value: 'Gustaw Bator',
       },
       {
-        "value": "Spirydion Albański"
+        value: 'Spirydion Albański',
       },
       {
-        "value": "Walerian Kisieliński"
+        value: 'Walerian Kisieliński',
       },
       {
-        "value": "Bronisław Makowski"
+        value: 'Bronisław Makowski',
       },
       {
-        "value": "Emil Skrynkowicz"
+        value: 'Emil Skrynkowicz',
       },
       {
-        "value": "Jan Badura"
+        value: 'Jan Badura',
       },
       {
-        "value": "Teodor Peterek"
+        value: 'Teodor Peterek',
       },
       {
-        "value": "Franciszek Cebulak"
+        value: 'Franciszek Cebulak',
       },
       {
-        "value": "Franciszek Wilczkiewicz"
+        value: 'Franciszek Wilczkiewicz',
       },
       {
-        "value": "Otto Riesner"
+        value: 'Otto Riesner',
       },
       {
-        "value": "Adam Knioła"
+        value: 'Adam Knioła',
       },
       {
-        "value": "Jerzy Otfinowski"
+        value: 'Jerzy Otfinowski',
       },
       {
-        "value": "Michał Matyas"
+        value: 'Michał Matyas',
       },
       {
-        "value": "Roman Jańczyk"
+        value: 'Roman Jańczyk',
       },
       {
-        "value": "Stefan Lasota"
+        value: 'Stefan Lasota',
       },
       {
-        "value": "Leon Radojewski"
+        value: 'Leon Radojewski',
       },
       {
-        "value": "Fryderyk Scherfke"
+        value: 'Fryderyk Scherfke',
       },
       {
-        "value": "Ewald Urban"
+        value: 'Ewald Urban',
       },
       {
-        "value": "Gerard Wodarz"
+        value: 'Gerard Wodarz',
       },
       {
-        "value": "Stanisław Malczyk"
+        value: 'Stanisław Malczyk',
       },
       {
-        "value": "Karol Dziwisz"
+        value: 'Karol Dziwisz',
       },
       {
-        "value": "Edmund Giemsa"
+        value: 'Edmund Giemsa',
       },
       {
-        "value": "Edmund Majowski"
+        value: 'Edmund Majowski',
       },
       {
-        "value": "Jan Pająk"
+        value: 'Jan Pająk',
       },
       {
-        "value": "Artur Woźniak"
+        value: 'Artur Woźniak',
       },
       {
-        "value": "Władysław Król"
+        value: 'Władysław Król',
       },
       {
-        "value": "Ernest Wilimowski"
+        value: 'Ernest Wilimowski',
       },
       {
-        "value": "Antoni Keller"
+        value: 'Antoni Keller',
       },
       {
-        "value": "Józef Żiżka"
+        value: 'Józef Żiżka',
       },
       {
-        "value": "Henryk Frymarkiewicz"
+        value: 'Henryk Frymarkiewicz',
       },
       {
-        "value": "Adolf Zimmer"
+        value: 'Adolf Zimmer',
       },
       {
-        "value": "Konstanty Haliszka"
+        value: 'Konstanty Haliszka',
       },
       {
-        "value": "Ryszard Łysakowski"
+        value: 'Ryszard Łysakowski',
       },
       {
-        "value": "Erwin Michalski"
+        value: 'Erwin Michalski',
       },
       {
-        "value": "Ewald Dytko"
+        value: 'Ewald Dytko',
       },
       {
-        "value": "Ryszard Piec"
+        value: 'Ryszard Piec',
       },
       {
-        "value": "Antoni Komendo-Borowski"
+        value: 'Antoni Komendo-Borowski',
       },
       {
-        "value": "Stefan Fliegel"
+        value: 'Stefan Fliegel',
       },
       {
-        "value": "Wilhelm Góra"
+        value: 'Wilhelm Góra',
       },
       {
-        "value": "Antoni Piasecki"
+        value: 'Antoni Piasecki',
       },
       {
-        "value": "Zenon Sroczyński"
+        value: 'Zenon Sroczyński',
       },
       {
-        "value": "Henryk Przeździecki"
+        value: 'Henryk Przeździecki',
       },
       {
-        "value": "Stefan Doniec"
+        value: 'Stefan Doniec',
       },
       {
-        "value": "Jan Wasiewicz"
+        value: 'Jan Wasiewicz',
       },
       {
-        "value": "Hubert Gad"
+        value: 'Hubert Gad',
       },
       {
-        "value": "Juliusz Joksch"
+        value: 'Juliusz Joksch',
       },
       {
-        "value": "Jan Lesiak"
+        value: 'Jan Lesiak',
       },
       {
-        "value": "Edward Miller"
+        value: 'Edward Miller',
       },
       {
-        "value": "Leonard Piątek"
+        value: 'Leonard Piątek',
       },
       {
-        "value": "Hieronim Schwartz"
+        value: 'Hieronim Schwartz',
       },
       {
-        "value": "Eryk Tatuś"
+        value: 'Eryk Tatuś',
       },
       {
-        "value": "Jerzy Wostal"
+        value: 'Jerzy Wostal',
       },
       {
-        "value": "Lucjan Rudnicki"
+        value: 'Lucjan Rudnicki',
       },
       {
-        "value": "Edward Madejski"
+        value: 'Edward Madejski',
       },
       {
-        "value": "Stanisław Andrzejewski"
+        value: 'Stanisław Andrzejewski',
       },
       {
-        "value": "Kajetan Kryszkiewicz"
+        value: 'Kajetan Kryszkiewicz',
       },
       {
-        "value": "Adolf Krzyk"
+        value: 'Adolf Krzyk',
       },
       {
-        "value": "Erwin Nyc"
+        value: 'Erwin Nyc',
       },
       {
-        "value": "Longin Pawłowski"
+        value: 'Longin Pawłowski',
       },
       {
-        "value": "Jerzy Piec"
+        value: 'Jerzy Piec',
       },
       {
-        "value": "Antoni Böttcher"
+        value: 'Antoni Böttcher',
       },
       {
-        "value": "Józef Korbas"
+        value: 'Józef Korbas',
       },
       {
-        "value": "Władysław Pawłowski"
+        value: 'Władysław Pawłowski',
       },
       {
-        "value": "Edmund Twórz"
+        value: 'Edmund Twórz',
       },
       {
-        "value": "Bolesław Habowski"
+        value: 'Bolesław Habowski',
       },
       {
-        "value": "Antoni Łyko"
+        value: 'Antoni Łyko',
       },
       {
-        "value": "Franciszek Pytel"
+        value: 'Franciszek Pytel',
       },
       {
-        "value": "Piotr Danielak"
+        value: 'Piotr Danielak',
       },
       {
-        "value": "Bolesław Gendera"
+        value: 'Bolesław Gendera',
       },
       {
-        "value": "Roman Mrugała"
+        value: 'Roman Mrugała',
       },
       {
-        "value": "Franciszek Sobkowiak"
+        value: 'Franciszek Sobkowiak',
       },
       {
-        "value": "Stefan Sumara"
+        value: 'Stefan Sumara',
       },
       {
-        "value": "Henryk Mikunda"
+        value: 'Henryk Mikunda',
       },
       {
-        "value": "Edward Cebula"
+        value: 'Edward Cebula',
       },
       {
-        "value": "Herbert Kulawik"
+        value: 'Herbert Kulawik',
       },
       {
-        "value": "Alfred Pochopień"
+        value: 'Alfred Pochopień',
       },
       {
-        "value": "Paweł Cyganek"
+        value: 'Paweł Cyganek',
       },
       {
-        "value": "Edward Jabłoński"
+        value: 'Edward Jabłoński',
       },
       {
-        "value": "Henryk Jaźnicki"
+        value: 'Henryk Jaźnicki',
       },
       {
-        "value": "Stanisław Baran"
+        value: 'Stanisław Baran',
       },
       {
-        "value": "Walter Brom"
+        value: 'Walter Brom',
       },
       {
-        "value": "Gerard Cieślik"
+        value: 'Gerard Cieślik',
       },
       {
-        "value": "Stanisław Flanek"
+        value: 'Stanisław Flanek',
       },
       {
-        "value": "Mieczysław Gracz"
+        value: 'Mieczysław Gracz',
       },
       {
-        "value": "Stanisław Kaźmierczak"
+        value: 'Stanisław Kaźmierczak',
       },
       {
-        "value": "Tadeusz Parpan"
+        value: 'Tadeusz Parpan',
       },
       {
-        "value": "Bolesław Smólski"
+        value: 'Bolesław Smólski',
       },
       {
-        "value": "Tadeusz Świcarz"
+        value: 'Tadeusz Świcarz',
       },
       {
-        "value": "Michał Filek"
+        value: 'Michał Filek',
       },
       {
-        "value": "Antoni Barwiński"
+        value: 'Antoni Barwiński',
       },
       {
-        "value": "Marian Czachor"
+        value: 'Marian Czachor',
       },
       {
-        "value": "Władysław Giergiel"
+        value: 'Władysław Giergiel',
       },
       {
-        "value": "Marian Jabłoński"
+        value: 'Marian Jabłoński',
       },
       {
-        "value": "Werner (Antoni) Janik"
+        value: 'Werner (Antoni) Janik',
       },
       {
-        "value": "Maksymilian Barański"
+        value: 'Maksymilian Barański',
       },
       {
-        "value": "Henryk Gajdzik"
+        value: 'Henryk Gajdzik',
       },
       {
-        "value": "Tadeusz Hogendorf"
+        value: 'Tadeusz Hogendorf',
       },
       {
-        "value": "Henryk Spodzieja"
+        value: 'Henryk Spodzieja',
       },
       {
-        "value": "Jan Włodarczyk"
+        value: 'Jan Włodarczyk',
       },
       {
-        "value": "Mieczysław Szczurek"
+        value: 'Mieczysław Szczurek',
       },
       {
-        "value": "Jerzy Jurowicz"
+        value: 'Jerzy Jurowicz',
       },
       {
-        "value": "Henryk Skromny"
+        value: 'Henryk Skromny',
       },
       {
-        "value": "Edward Brzozowski"
+        value: 'Edward Brzozowski',
       },
       {
-        "value": "Edmund Białas"
+        value: 'Edmund Białas',
       },
       {
-        "value": "Henryk Bobula"
+        value: 'Henryk Bobula',
       },
       {
-        "value": "Tadeusz Waśko"
+        value: 'Tadeusz Waśko',
       },
       {
-        "value": "Henryk Janduda"
+        value: 'Henryk Janduda',
       },
       {
-        "value": "Jan Przecherka"
+        value: 'Jan Przecherka',
       },
       {
-        "value": "Kazimierz Górski"
+        value: 'Kazimierz Górski',
       },
       {
-        "value": "Józef Kohut"
+        value: 'Józef Kohut',
       },
       {
-        "value": "Henryk Alszer"
+        value: 'Henryk Alszer',
       },
       {
-        "value": "Eugeniusz Kubicki"
+        value: 'Eugeniusz Kubicki',
       },
       {
-        "value": "Zdzisław Mordarski"
+        value: 'Zdzisław Mordarski',
       },
       {
-        "value": "Józef Oprych"
+        value: 'Józef Oprych',
       },
       {
-        "value": "Wacław Sąsiadek"
+        value: 'Wacław Sąsiadek',
       },
       {
-        "value": "Mieczysław Tarka"
+        value: 'Mieczysław Tarka',
       },
       {
-        "value": "Władysław Gędłek"
+        value: 'Władysław Gędłek',
       },
       {
-        "value": "Marian Łącz"
+        value: 'Marian Łącz',
       },
       {
-        "value": "Józef Mamoń"
+        value: 'Józef Mamoń',
       },
       {
-        "value": "Czesław Suszczyk"
+        value: 'Czesław Suszczyk',
       },
       {
-        "value": "Jerzy Krasówka"
+        value: 'Jerzy Krasówka',
       },
       {
-        "value": "Alfred Kokot"
+        value: 'Alfred Kokot',
       },
       {
-        "value": "Henryk Rybicki"
+        value: 'Henryk Rybicki',
       },
       {
-        "value": "Henryk Borucz"
+        value: 'Henryk Borucz',
       },
       {
-        "value": "Zygmunt Ochmański"
+        value: 'Zygmunt Ochmański',
       },
       {
-        "value": "Rudolf Patkoló"
+        value: 'Rudolf Patkoló',
       },
       {
-        "value": "Teodor Wieczorek"
+        value: 'Teodor Wieczorek',
       },
       {
-        "value": "Jan Wiśniewski"
+        value: 'Jan Wiśniewski',
       },
       {
-        "value": "Teodor Anioła"
+        value: 'Teodor Anioła',
       },
       {
-        "value": "Zygfryd Słoma"
+        value: 'Zygfryd Słoma',
       },
       {
-        "value": "Henryk Bożek"
+        value: 'Henryk Bożek',
       },
       {
-        "value": "Ignacy Dybała"
+        value: 'Ignacy Dybała',
       },
       {
-        "value": "Oskar Brajter"
+        value: 'Oskar Brajter',
       },
       {
-        "value": "Tadeusz Glimas"
+        value: 'Tadeusz Glimas',
       },
       {
-        "value": "Kazimierz Trampisz"
+        value: 'Kazimierz Trampisz',
       },
       {
-        "value": "Edmund Zientara"
+        value: 'Edmund Zientara',
       },
       {
-        "value": "Kazimierz Kaszuba"
+        value: 'Kazimierz Kaszuba',
       },
       {
-        "value": "Zdzisław Wesołowski"
+        value: 'Zdzisław Wesołowski',
       },
       {
-        "value": "Henryk Szymborski"
+        value: 'Henryk Szymborski',
       },
       {
-        "value": "Zbigniew Jaskowski"
+        value: 'Zbigniew Jaskowski',
       },
       {
-        "value": "Klaus Jerominek"
+        value: 'Klaus Jerominek',
       },
       {
-        "value": "Paweł Sobek"
+        value: 'Paweł Sobek',
       },
       {
-        "value": "Franciszek Tim"
+        value: 'Franciszek Tim',
       },
       {
-        "value": "Tomasz Stefaniszyn"
+        value: 'Tomasz Stefaniszyn',
       },
       {
-        "value": "Hubert Banisz"
+        value: 'Hubert Banisz',
       },
       {
-        "value": "Henryk Bartyla"
+        value: 'Henryk Bartyla',
       },
       {
-        "value": "Zdzisław Bieniek"
+        value: 'Zdzisław Bieniek',
       },
       {
-        "value": "Edward Jankowski"
+        value: 'Edward Jankowski',
       },
       {
-        "value": "Roman Korynt"
+        value: 'Roman Korynt',
       },
       {
-        "value": "Czesław Rajtar"
+        value: 'Czesław Rajtar',
       },
       {
-        "value": "Edward Szymkowiak"
+        value: 'Edward Szymkowiak',
       },
       {
-        "value": "Marceli Strzykalski"
+        value: 'Marceli Strzykalski',
       },
       {
-        "value": "Roman Durniok"
+        value: 'Roman Durniok',
       },
       {
-        "value": "Jan Kłaczek"
+        value: 'Jan Kłaczek',
       },
       {
-        "value": "Edmund Kowal"
+        value: 'Edmund Kowal',
       },
       {
-        "value": "Józef Wieczorek"
+        value: 'Józef Wieczorek',
       },
       {
-        "value": "Ewald Wiśniowski"
+        value: 'Ewald Wiśniowski',
       },
       {
-        "value": "Robert Gronowski"
+        value: 'Robert Gronowski',
       },
       {
-        "value": "Jan Kauder"
+        value: 'Jan Kauder',
       },
       {
-        "value": "Helmut Cichoń"
+        value: 'Helmut Cichoń',
       },
       {
-        "value": "Robert Grzywocz"
+        value: 'Robert Grzywocz',
       },
       {
-        "value": "Leszek Jezierski"
+        value: 'Leszek Jezierski',
       },
       {
-        "value": "Józef Kokot"
+        value: 'Józef Kokot',
       },
       {
-        "value": "Jerzy Orłowski"
+        value: 'Jerzy Orłowski',
       },
       {
-        "value": "Józef Walczak"
+        value: 'Józef Walczak',
       },
       {
-        "value": "Lucjan Brychczy"
+        value: 'Lucjan Brychczy',
       },
       {
-        "value": "Ryszard Wyrobek"
+        value: 'Ryszard Wyrobek',
       },
       {
-        "value": "Wiesław Pajor"
+        value: 'Wiesław Pajor',
       },
       {
-        "value": "Krzysztof Baszkiewicz"
+        value: 'Krzysztof Baszkiewicz',
       },
       {
-        "value": "Henryk Kempny"
+        value: 'Henryk Kempny',
       },
       {
-        "value": "Horst Mahseli"
+        value: 'Horst Mahseli',
       },
       {
-        "value": "Ernest Pohl"
+        value: 'Ernest Pohl',
       },
       {
-        "value": "Jerzy Woźniak"
+        value: 'Jerzy Woźniak',
       },
       {
-        "value": "Stanisław Hachorek"
+        value: 'Stanisław Hachorek',
       },
       {
-        "value": "Marian Masłoń"
+        value: 'Marian Masłoń',
       },
       {
-        "value": "Czesław Ciupa"
+        value: 'Czesław Ciupa',
       },
       {
-        "value": "Czesław Uznański"
+        value: 'Czesław Uznański',
       },
       {
-        "value": "Marian Machowski"
+        value: 'Marian Machowski',
       },
       {
-        "value": "Helmut Nowak"
+        value: 'Helmut Nowak',
       },
       {
-        "value": "Józef Machnik"
+        value: 'Józef Machnik',
       },
       {
-        "value": "Antoni Konopelski"
+        value: 'Antoni Konopelski',
       },
       {
-        "value": "Henryk Czech"
+        value: 'Henryk Czech',
       },
       {
-        "value": "Roman Lentner"
+        value: 'Roman Lentner',
       },
       {
-        "value": "Ginter Gawlik"
+        value: 'Ginter Gawlik',
       },
       {
-        "value": "Henryk Grzybowski"
+        value: 'Henryk Grzybowski',
       },
       {
-        "value": "Bolesław Lewandowski"
+        value: 'Bolesław Lewandowski',
       },
       {
-        "value": "Zbigniew Szarzyński"
+        value: 'Zbigniew Szarzyński',
       },
       {
-        "value": "Stefan Florenski"
+        value: 'Stefan Florenski',
       },
       {
-        "value": "Jan Gawroński"
+        value: 'Jan Gawroński',
       },
       {
-        "value": "Wiesław Jańczyk"
+        value: 'Wiesław Jańczyk',
       },
       {
-        "value": "Henryk Szczepański"
+        value: 'Henryk Szczepański',
       },
       {
-        "value": "Władysław Soporek"
+        value: 'Władysław Soporek',
       },
       {
-        "value": "Henryk Gronowski"
+        value: 'Henryk Gronowski',
       },
       {
-        "value": "Witold Majewski"
+        value: 'Witold Majewski',
       },
       {
-        "value": "Marian Norkowski"
+        value: 'Marian Norkowski',
       },
       {
-        "value": "Marian Nowara"
+        value: 'Marian Nowara',
       },
       {
-        "value": "Engelbert Jarek"
+        value: 'Engelbert Jarek',
       },
       {
-        "value": "Jan Liberda"
+        value: 'Jan Liberda',
       },
       {
-        "value": "Adam Michel"
+        value: 'Adam Michel',
       },
       {
-        "value": "Fryderyk Monica"
+        value: 'Fryderyk Monica',
       },
       {
-        "value": "Antoni Nieroba"
+        value: 'Antoni Nieroba',
       },
       {
-        "value": "Bogusław Widawski"
+        value: 'Bogusław Widawski',
       },
       {
-        "value": "Eugeniusz Faber"
+        value: 'Eugeniusz Faber',
       },
       {
-        "value": "Andrzej Sykta"
+        value: 'Andrzej Sykta',
       },
       {
-        "value": "Jan Kowalski"
+        value: 'Jan Kowalski',
       },
       {
-        "value": "Zygmunt Gadecki"
+        value: 'Zygmunt Gadecki',
       },
       {
-        "value": "Hubert Pala"
+        value: 'Hubert Pala',
       },
       {
-        "value": "Stanisław Fołtyn"
+        value: 'Stanisław Fołtyn',
       },
       {
-        "value": "Ryszard Grzegorczyk"
+        value: 'Ryszard Grzegorczyk',
       },
       {
-        "value": "Władysław Kawula"
+        value: 'Władysław Kawula',
       },
       {
-        "value": "Bernard Blaut"
+        value: 'Bernard Blaut',
       },
       {
-        "value": "Stanisław Oślizło"
+        value: 'Stanisław Oślizło',
       },
       {
-        "value": "Kazimierz Polok"
+        value: 'Kazimierz Polok',
       },
       {
-        "value": "Erwin Wilczek"
+        value: 'Erwin Wilczek',
       },
       {
-        "value": "Jan Schmidt"
+        value: 'Jan Schmidt',
       },
       {
-        "value": "Jerzy Musiałek"
+        value: 'Jerzy Musiałek',
       },
       {
-        "value": "Norbert Gajda"
+        value: 'Norbert Gajda',
       },
       {
-        "value": "Piotr Suski"
+        value: 'Piotr Suski',
       },
       {
-        "value": "Konrad Kornek"
+        value: 'Konrad Kornek',
       },
       {
-        "value": "Hubert Kostka"
+        value: 'Hubert Kostka',
       },
       {
-        "value": "Józef Gałeczka"
+        value: 'Józef Gałeczka',
       },
       {
-        "value": "Ryszard Budka"
+        value: 'Ryszard Budka',
       },
       {
-        "value": "Henryk Apostel"
+        value: 'Henryk Apostel',
       },
       {
-        "value": "Jacek Gmoch"
+        value: 'Jacek Gmoch',
       },
       {
-        "value": "Jerzy Jóźwiak"
+        value: 'Jerzy Jóźwiak',
       },
       {
-        "value": "Marian Kielec"
+        value: 'Marian Kielec',
       },
       {
-        "value": "Joachim Pierzyna"
+        value: 'Joachim Pierzyna',
       },
       {
-        "value": "Władysław Gzel"
+        value: 'Władysław Gzel',
       },
       {
-        "value": "Włodzimierz Śpiewak"
+        value: 'Włodzimierz Śpiewak',
       },
       {
-        "value": "Roman Bazan"
+        value: 'Roman Bazan',
       },
       {
-        "value": "Roman Kasprzyk"
+        value: 'Roman Kasprzyk',
       },
       {
-        "value": "Włodzimierz Lubański"
+        value: 'Włodzimierz Lubański',
       },
       {
-        "value": "Zygfryd Szołtysik"
+        value: 'Zygfryd Szołtysik',
       },
       {
-        "value": "Jerzy Wilim"
+        value: 'Jerzy Wilim',
       },
       {
-        "value": "Henryk Pietrek"
+        value: 'Henryk Pietrek',
       },
       {
-        "value": "Witold Szyguła"
+        value: 'Witold Szyguła',
       },
       {
-        "value": "Waldemar Słomiany"
+        value: 'Waldemar Słomiany',
       },
       {
-        "value": "Alojzy Łysko"
+        value: 'Alojzy Łysko',
       },
       {
-        "value": "Jan Banaś"
+        value: 'Jan Banaś',
       },
       {
-        "value": "Paweł Orzechowski"
+        value: 'Paweł Orzechowski',
       },
       {
-        "value": "Janusz Kowalik"
+        value: 'Janusz Kowalik',
       },
       {
-        "value": "Andrzej Jarosik"
+        value: 'Andrzej Jarosik',
       },
       {
-        "value": "Zygmunt Anczok"
+        value: 'Zygmunt Anczok',
       },
       {
-        "value": "Jerzy Sadek"
+        value: 'Jerzy Sadek',
       },
       {
-        "value": "Marian Szeja"
+        value: 'Marian Szeja',
       },
       {
-        "value": "Henryk Stroniarz"
+        value: 'Henryk Stroniarz',
       },
       {
-        "value": "Janusz Żmijewski"
+        value: 'Janusz Żmijewski',
       },
       {
-        "value": "Henryk Brejza"
+        value: 'Henryk Brejza',
       },
       {
-        "value": "Andrzej Rewilak"
+        value: 'Andrzej Rewilak',
       },
       {
-        "value": "Zygmunt Schmidt"
+        value: 'Zygmunt Schmidt',
       },
       {
-        "value": "Jan Wilim"
+        value: 'Jan Wilim',
       },
       {
-        "value": "Roman Strzałkowski"
+        value: 'Roman Strzałkowski',
       },
       {
-        "value": "Jan Gomola"
+        value: 'Jan Gomola',
       },
       {
-        "value": "Walter Winkler"
+        value: 'Walter Winkler',
       },
       {
-        "value": "Stanisław Majcher"
+        value: 'Stanisław Majcher',
       },
       {
-        "value": "Krystian Michallik"
+        value: 'Krystian Michallik',
       },
       {
-        "value": "Zbigniew Myga"
+        value: 'Zbigniew Myga',
       },
       {
-        "value": "Stefan Szefer"
+        value: 'Stefan Szefer',
       },
       {
-        "value": "Joachim Marx"
+        value: 'Joachim Marx',
       },
       {
-        "value": "Klaus Masseli"
+        value: 'Klaus Masseli',
       },
       {
-        "value": "Hubert Skowronek"
+        value: 'Hubert Skowronek',
       },
       {
-        "value": "Krzysztof Hausner"
+        value: 'Krzysztof Hausner',
       },
       {
-        "value": "Paweł Kowalski"
+        value: 'Paweł Kowalski',
       },
       {
-        "value": "Robert Gadocha"
+        value: 'Robert Gadocha',
       },
       {
-        "value": "Piotr Brol"
+        value: 'Piotr Brol',
       },
       {
-        "value": "Jan Domarski"
+        value: 'Jan Domarski',
       },
       {
-        "value": "Antoni Piechniczek"
+        value: 'Antoni Piechniczek',
       },
       {
-        "value": "Józef Gomoluch"
+        value: 'Józef Gomoluch',
       },
       {
-        "value": "Bronisław Bula"
+        value: 'Bronisław Bula',
       },
       {
-        "value": "Kazimierz Deyna"
+        value: 'Kazimierz Deyna',
       },
       {
-        "value": "Waldemar Folbrycht"
+        value: 'Waldemar Folbrycht',
       },
       {
-        "value": "Zygmunt Maszczyk"
+        value: 'Zygmunt Maszczyk',
       },
       {
-        "value": "Henryk Latocha"
+        value: 'Henryk Latocha',
       },
       {
-        "value": "Jan Leszczyński"
+        value: 'Jan Leszczyński',
       },
       {
-        "value": "Adam Musiał"
+        value: 'Adam Musiał',
       },
       {
-        "value": "Jan Rudnow"
+        value: 'Jan Rudnow',
       },
       {
-        "value": "Bolesław Szadkowski"
+        value: 'Bolesław Szadkowski',
       },
       {
-        "value": "Jan Wraży"
+        value: 'Jan Wraży',
       },
       {
-        "value": "Marian Kozerski"
+        value: 'Marian Kozerski',
       },
       {
-        "value": "Joachim Stachuła"
+        value: 'Joachim Stachuła',
       },
       {
-        "value": "Władysław Stachurski"
+        value: 'Władysław Stachurski',
       },
       {
-        "value": "Lesław Ćmikiewicz"
+        value: 'Lesław Ćmikiewicz',
       },
       {
-        "value": "Alfred Olek"
+        value: 'Alfred Olek',
       },
       {
-        "value": "Zygfryd Blaut"
+        value: 'Zygfryd Blaut',
       },
       {
-        "value": "Piotr Czaja"
+        value: 'Piotr Czaja',
       },
       {
-        "value": "Antoni Szymanowski"
+        value: 'Antoni Szymanowski',
       },
       {
-        "value": "Ryszard Mańko"
+        value: 'Ryszard Mańko',
       },
       {
-        "value": "Władysław Szaryński"
+        value: 'Władysław Szaryński',
       },
       {
-        "value": "Jerzy Wyrobek"
+        value: 'Jerzy Wyrobek',
       },
       {
-        "value": "Jerzy Gorgoń"
+        value: 'Jerzy Gorgoń',
       },
       {
-        "value": "Władysław Grotyński"
+        value: 'Władysław Grotyński',
       },
       {
-        "value": "Paweł Janik"
+        value: 'Paweł Janik',
       },
       {
-        "value": "Bohdan Masztaler"
+        value: 'Bohdan Masztaler',
       },
       {
-        "value": "Antoni Trzaskowski"
+        value: 'Antoni Trzaskowski',
       },
       {
-        "value": "Andrzej Zygmunt"
+        value: 'Andrzej Zygmunt',
       },
       {
-        "value": "Jan Tomaszewski"
+        value: 'Jan Tomaszewski',
       },
       {
-        "value": "Antoni Kot"
+        value: 'Antoni Kot',
       },
       {
-        "value": "Grzegorz Lato"
+        value: 'Grzegorz Lato',
       },
       {
-        "value": "Marian Ostafiński"
+        value: 'Marian Ostafiński',
       },
       {
-        "value": "Jerzy Kraska"
+        value: 'Jerzy Kraska',
       },
       {
-        "value": "Tadeusz Polak"
+        value: 'Tadeusz Polak',
       },
       {
-        "value": "Stanisław Paździor"
+        value: 'Stanisław Paździor',
       },
       {
-        "value": "Tadeusz Nowak"
+        value: 'Tadeusz Nowak',
       },
       {
-        "value": "Kazimierz Kmiecik"
+        value: 'Kazimierz Kmiecik',
       },
       {
-        "value": "Zbigniew Gut"
+        value: 'Zbigniew Gut',
       },
       {
-        "value": "Ryszard Szymczak"
+        value: 'Ryszard Szymczak',
       },
       {
-        "value": "Włodzimierz Wojciechowski"
+        value: 'Włodzimierz Wojciechowski',
       },
       {
-        "value": "Henryk Kasperczak"
+        value: 'Henryk Kasperczak',
       },
       {
-        "value": "Mirosław Bulzacki"
+        value: 'Mirosław Bulzacki',
       },
       {
-        "value": "Henryk Wieczorek"
+        value: 'Henryk Wieczorek',
       },
       {
-        "value": "Zenon Kasztelan"
+        value: 'Zenon Kasztelan',
       },
       {
-        "value": "Krzysztof Rześny"
+        value: 'Krzysztof Rześny',
       },
       {
-        "value": "Andrzej Szarmach"
+        value: 'Andrzej Szarmach',
       },
       {
-        "value": "Andrzej Drozdowski"
+        value: 'Andrzej Drozdowski',
       },
       {
-        "value": "Zygmunt Kalinowski"
+        value: 'Zygmunt Kalinowski',
       },
       {
-        "value": "Zdzisław Kapka"
+        value: 'Zdzisław Kapka',
       },
       {
-        "value": "Władysław Żmuda"
+        value: 'Władysław Żmuda',
       },
       {
-        "value": "Jan Białas"
+        value: 'Jan Białas',
       },
       {
-        "value": "Andrzej Fischer"
+        value: 'Andrzej Fischer',
       },
       {
-        "value": "Jerzy Kasalik"
+        value: 'Jerzy Kasalik',
       },
       {
-        "value": "Marek Kusto"
+        value: 'Marek Kusto',
       },
       {
-        "value": "Józef Kwiatkowski"
+        value: 'Józef Kwiatkowski',
       },
       {
-        "value": "Roman Ogaza"
+        value: 'Roman Ogaza',
       },
       {
-        "value": "Stanisław Sobczyński"
+        value: 'Stanisław Sobczyński',
       },
       {
-        "value": "Witold Karaś"
+        value: 'Witold Karaś',
       },
       {
-        "value": "Andrzej Sikorski"
+        value: 'Andrzej Sikorski',
       },
       {
-        "value": "Romuald Chojnacki"
+        value: 'Romuald Chojnacki',
       },
       {
-        "value": "Zygmunt Garłowski"
+        value: 'Zygmunt Garłowski',
       },
       {
-        "value": "Roman Jakóbczak"
+        value: 'Roman Jakóbczak',
       },
       {
-        "value": "Józef Kopicera"
+        value: 'Józef Kopicera',
       },
       {
-        "value": "Piotr Drzewiecki"
+        value: 'Piotr Drzewiecki',
       },
       {
-        "value": "Henryk Maculewicz"
+        value: 'Henryk Maculewicz',
       },
       {
-        "value": "Piotr Mowlik"
+        value: 'Piotr Mowlik',
       },
       {
-        "value": "Henryk Wawrowski"
+        value: 'Henryk Wawrowski',
       },
       {
-        "value": "Jan Karwecki"
+        value: 'Jan Karwecki',
       },
       {
-        "value": "Witold Kasperski"
+        value: 'Witold Kasperski',
       },
       {
-        "value": "Ryszard Szpakowski"
+        value: 'Ryszard Szpakowski',
       },
       {
-        "value": "Wojciech Rudy"
+        value: 'Wojciech Rudy',
       },
       {
-        "value": "Zdzisław Puszkarz"
+        value: 'Zdzisław Puszkarz',
       },
       {
-        "value": "Ryszard Polak"
+        value: 'Ryszard Polak',
       },
       {
-        "value": "Zbigniew Boniek"
+        value: 'Zbigniew Boniek',
       },
       {
-        "value": "Stanisław Burzyński"
+        value: 'Stanisław Burzyński',
       },
       {
-        "value": "Jan Benigier"
+        value: 'Jan Benigier',
       },
       {
-        "value": "Janusz Kupcewicz"
+        value: 'Janusz Kupcewicz',
       },
       {
-        "value": "Paweł Janas"
+        value: 'Paweł Janas',
       },
       {
-        "value": "Lechosław Olsza"
+        value: 'Lechosław Olsza',
       },
       {
-        "value": "Zbigniew Płaszewski"
+        value: 'Zbigniew Płaszewski',
       },
       {
-        "value": "Zbigniew Hnatio"
+        value: 'Zbigniew Hnatio',
       },
       {
-        "value": "Tadeusz Pawłowski"
+        value: 'Tadeusz Pawłowski',
       },
       {
-        "value": "Czesław Boguszewicz"
+        value: 'Czesław Boguszewicz',
       },
       {
-        "value": "Zygmunt Kukla"
+        value: 'Zygmunt Kukla',
       },
       {
-        "value": "Stanisław Terlecki"
+        value: 'Stanisław Terlecki',
       },
       {
-        "value": "Janusz Sybis"
+        value: 'Janusz Sybis',
       },
       {
-        "value": "Włodzimierz Mazur"
+        value: 'Włodzimierz Mazur',
       },
       {
-        "value": "Marek Dziuba"
+        value: 'Marek Dziuba',
       },
       {
-        "value": "Adam Nawałka"
+        value: 'Adam Nawałka',
       },
       {
-        "value": "Jerzy Ludyga"
+        value: 'Jerzy Ludyga',
       },
       {
-        "value": "Krzysztof Sobieski"
+        value: 'Krzysztof Sobieski',
       },
       {
-        "value": "Jan Erlich"
+        value: 'Jan Erlich',
       },
       {
-        "value": "Tadeusz Jakubczyk"
+        value: 'Tadeusz Jakubczyk',
       },
       {
-        "value": "Mirosław Okoński"
+        value: 'Mirosław Okoński',
       },
       {
-        "value": "Jan Sobol"
+        value: 'Jan Sobol',
       },
       {
-        "value": "Wojciech Tyc"
+        value: 'Wojciech Tyc',
       },
       {
-        "value": "Mirosław Justek"
+        value: 'Mirosław Justek',
       },
       {
-        "value": "Zbigniew Kwaśniewski"
+        value: 'Zbigniew Kwaśniewski',
       },
       {
-        "value": "Zdzisław Kostrzewa"
+        value: 'Zdzisław Kostrzewa',
       },
       {
-        "value": "Józef Szewczyk"
+        value: 'Józef Szewczyk',
       },
       {
-        "value": "Stanisław Gzil"
+        value: 'Stanisław Gzil',
       },
       {
-        "value": "Roman Wójcicki"
+        value: 'Roman Wójcicki',
       },
       {
-        "value": "Rudolf Wojtowicz"
+        value: 'Rudolf Wojtowicz',
       },
       {
-        "value": "Andrzej Iwan"
+        value: 'Andrzej Iwan',
       },
       {
-        "value": "Tadeusz Błachno"
+        value: 'Tadeusz Błachno',
       },
       {
-        "value": "Stefan Majewski"
+        value: 'Stefan Majewski',
       },
       {
-        "value": "Jerzy Dworczyk"
+        value: 'Jerzy Dworczyk',
       },
       {
-        "value": "Włodzimierz Ciołek"
+        value: 'Włodzimierz Ciołek',
       },
       {
-        "value": "Tadeusz Małnowicz"
+        value: 'Tadeusz Małnowicz',
       },
       {
-        "value": "Józef Młynarczyk"
+        value: 'Józef Młynarczyk',
       },
       {
-        "value": "Roman Faber"
+        value: 'Roman Faber',
       },
       {
-        "value": "Michał Wróbel"
+        value: 'Michał Wróbel',
       },
       {
-        "value": "Tomasz Korynt"
+        value: 'Tomasz Korynt',
       },
       {
-        "value": "Leszek Lipka"
+        value: 'Leszek Lipka',
       },
       {
-        "value": "Janusz Baran"
+        value: 'Janusz Baran',
       },
       {
-        "value": "Henryk Szymanowski"
+        value: 'Henryk Szymanowski',
       },
       {
-        "value": "Andrzej Pałasz"
+        value: 'Andrzej Pałasz',
       },
       {
-        "value": "Andrzej Buncol"
+        value: 'Andrzej Buncol',
       },
       {
-        "value": "Zbigniew Mikołajów"
+        value: 'Zbigniew Mikołajów',
       },
       {
-        "value": "Marek Motyka"
+        value: 'Marek Motyka',
       },
       {
-        "value": "Henryk Miłoszewicz"
+        value: 'Henryk Miłoszewicz',
       },
       {
-        "value": "Hieronim Barczak"
+        value: 'Hieronim Barczak',
       },
       {
-        "value": "Piotr Skrobowski"
+        value: 'Piotr Skrobowski',
       },
       {
-        "value": "Edward Załężny"
+        value: 'Edward Załężny',
       },
       {
-        "value": "Włodzimierz Smolarek"
+        value: 'Włodzimierz Smolarek',
       },
       {
-        "value": "Andrzej Milczarski"
+        value: 'Andrzej Milczarski',
       },
       {
-        "value": "Adam Walczak"
+        value: 'Adam Walczak',
       },
       {
-        "value": "Krzysztof Adamczyk"
+        value: 'Krzysztof Adamczyk',
       },
       {
-        "value": "Waldemar Matysik"
+        value: 'Waldemar Matysik',
       },
       {
-        "value": "Ryszard Milewski"
+        value: 'Ryszard Milewski',
       },
       {
-        "value": "Krzysztof Baran"
+        value: 'Krzysztof Baran',
       },
       {
-        "value": "Kazimierz Buda"
+        value: 'Kazimierz Buda',
       },
       {
-        "value": "Marek Chojnacki"
+        value: 'Marek Chojnacki',
       },
       {
-        "value": "Roman Geszlecht"
+        value: 'Roman Geszlecht',
       },
       {
-        "value": "Jacek Kazimierski"
+        value: 'Jacek Kazimierski',
       },
       {
-        "value": "Jarosław Nowicki"
+        value: 'Jarosław Nowicki',
       },
       {
-        "value": "Marek Ostrowski"
+        value: 'Marek Ostrowski',
       },
       {
-        "value": "Piotr Rzepka"
+        value: 'Piotr Rzepka',
       },
       {
-        "value": "Krzysztof Frankowski"
+        value: 'Krzysztof Frankowski',
       },
       {
-        "value": "Mirosław Pękala"
+        value: 'Mirosław Pękala',
       },
       {
-        "value": "Witold Sikorski"
+        value: 'Witold Sikorski',
       },
       {
-        "value": "Henryk Janikowski"
+        value: 'Henryk Janikowski',
       },
       {
-        "value": "Krzysztof Kajrys"
+        value: 'Krzysztof Kajrys',
       },
       {
-        "value": "Paweł Król"
+        value: 'Paweł Król',
       },
       {
-        "value": "Janusz Stawarz"
+        value: 'Janusz Stawarz',
       },
       {
-        "value": "Józef Adamiec"
+        value: 'Józef Adamiec',
       },
       {
-        "value": "Mirosław Tłokiński"
+        value: 'Mirosław Tłokiński',
       },
       {
-        "value": "Jan Jałocha"
+        value: 'Jan Jałocha',
       },
       {
-        "value": "Tadeusz Dolny"
+        value: 'Tadeusz Dolny',
       },
       {
-        "value": "Krystian Walot"
+        value: 'Krystian Walot',
       },
       {
-        "value": "Dariusz Dziekanowski"
+        value: 'Dariusz Dziekanowski',
       },
       {
-        "value": "Dariusz Kubicki"
+        value: 'Dariusz Kubicki',
       },
       {
-        "value": "Adam Kensy"
+        value: 'Adam Kensy',
       },
       {
-        "value": "Jerzy Wijas"
+        value: 'Jerzy Wijas',
       },
       {
-        "value": "Mirosław Bąk"
+        value: 'Mirosław Bąk',
       },
       {
-        "value": "Waldemar Prusik"
+        value: 'Waldemar Prusik',
       },
       {
-        "value": "Krzysztof Urbanowicz"
+        value: 'Krzysztof Urbanowicz',
       },
       {
-        "value": "Krzysztof Pawlak"
+        value: 'Krzysztof Pawlak',
       },
       {
-        "value": "Czesław Jakołcewicz"
+        value: 'Czesław Jakołcewicz',
       },
       {
-        "value": "Krzysztof Warzycha"
+        value: 'Krzysztof Warzycha',
       },
       {
-        "value": "Jan Furtok"
+        value: 'Jan Furtok',
       },
       {
-        "value": "Jan Karaś"
+        value: 'Jan Karaś',
       },
       {
-        "value": "Ryszard Tarasiewicz"
+        value: 'Ryszard Tarasiewicz',
       },
       {
-        "value": "Dariusz Wdowczyk"
+        value: 'Dariusz Wdowczyk',
       },
       {
-        "value": "Ryszard Komornicki"
+        value: 'Ryszard Komornicki',
       },
       {
-        "value": "Damian Łukasik"
+        value: 'Damian Łukasik',
       },
       {
-        "value": "Eugeniusz Cebrat"
+        value: 'Eugeniusz Cebrat',
       },
       {
-        "value": "Jarosław Araszkiewicz"
+        value: 'Jarosław Araszkiewicz',
       },
       {
-        "value": "Zbigniew Kaczmarek"
+        value: 'Zbigniew Kaczmarek',
       },
       {
-        "value": "Jan Urban"
+        value: 'Jan Urban',
       },
       {
-        "value": "Kazimierz Przybyś"
+        value: 'Kazimierz Przybyś',
       },
       {
-        "value": "Józef Dankowski"
+        value: 'Józef Dankowski',
       },
       {
-        "value": "Kazimierz Sokołowski"
+        value: 'Kazimierz Sokołowski',
       },
       {
-        "value": "Marek Biegun"
+        value: 'Marek Biegun',
       },
       {
-        "value": "Józef Wandzik"
+        value: 'Józef Wandzik',
       },
       {
-        "value": "Andrzej Zgutczyński"
+        value: 'Andrzej Zgutczyński',
       },
       {
-        "value": "Waldemar Waleszczyk"
+        value: 'Waldemar Waleszczyk',
       },
       {
-        "value": "Henryk Bolesta"
+        value: 'Henryk Bolesta',
       },
       {
-        "value": "Marek Leśniak"
+        value: 'Marek Leśniak',
       },
       {
-        "value": "Tadeusz Świątek"
+        value: 'Tadeusz Świątek',
       },
       {
-        "value": "Wiesław Wraga"
+        value: 'Wiesław Wraga',
       },
       {
-        "value": "Andrzej Sikorski"
+        value: 'Andrzej Sikorski',
       },
       {
-        "value": "Juliusz Kruszankin"
+        value: 'Juliusz Kruszankin',
       },
       {
-        "value": "Marek Koniarek"
+        value: 'Marek Koniarek',
       },
       {
-        "value": "Andrzej Rudy"
+        value: 'Andrzej Rudy',
       },
       {
-        "value": "Jacek Grembocki"
+        value: 'Jacek Grembocki',
       },
       {
-        "value": "Leszek Iwanicki"
+        value: 'Leszek Iwanicki',
       },
       {
-        "value": "Janusz Jojko"
+        value: 'Janusz Jojko',
       },
       {
-        "value": "Marek Ługowski"
+        value: 'Marek Ługowski',
       },
       {
-        "value": "Jacek Bayer"
+        value: 'Jacek Bayer',
       },
       {
-        "value": "Dariusz Marciniak"
+        value: 'Dariusz Marciniak',
       },
       {
-        "value": "Modest Boguszewski"
+        value: 'Modest Boguszewski',
       },
       {
-        "value": "Wiesław Cisek"
+        value: 'Wiesław Cisek',
       },
       {
-        "value": "Adam Zejer"
+        value: 'Adam Zejer',
       },
       {
-        "value": "Marek Szczech"
+        value: 'Marek Szczech',
       },
       {
-        "value": "Mieczysław Szewczyk"
+        value: 'Mieczysław Szewczyk',
       },
       {
-        "value": "Marek Kostrzewa"
+        value: 'Marek Kostrzewa',
       },
       {
-        "value": "Ryszard Robakiewicz"
+        value: 'Ryszard Robakiewicz',
       },
       {
-        "value": "Witold Wenclewski"
+        value: 'Witold Wenclewski',
       },
       {
-        "value": "Robert Warzycha"
+        value: 'Robert Warzycha',
       },
       {
-        "value": "Ryszard Cyroń"
+        value: 'Ryszard Cyroń',
       },
       {
-        "value": "Ryszard Jankowski"
+        value: 'Ryszard Jankowski',
       },
       {
-        "value": "Roman Kosecki"
+        value: 'Roman Kosecki',
       },
       {
-        "value": "Piotr Brzoza"
+        value: 'Piotr Brzoza',
       },
       {
-        "value": "Jacek Ziober"
+        value: 'Jacek Ziober',
       },
       {
-        "value": "Witold Bendkowski"
+        value: 'Witold Bendkowski',
       },
       {
-        "value": "Grzegorz Stencel"
+        value: 'Grzegorz Stencel',
       },
       {
-        "value": "Jarosław Bako"
+        value: 'Jarosław Bako',
       },
       {
-        "value": "Piotr Jegor"
+        value: 'Piotr Jegor',
       },
       {
-        "value": "Krystian Szuster"
+        value: 'Krystian Szuster',
       },
       {
-        "value": "Piotr Soczyński"
+        value: 'Piotr Soczyński',
       },
       {
-        "value": "Dariusz Fornalak"
+        value: 'Dariusz Fornalak',
       },
       {
-        "value": "Roman Szewczyk"
+        value: 'Roman Szewczyk',
       },
       {
-        "value": "Krzysztof Budka"
+        value: 'Krzysztof Budka',
       },
       {
-        "value": "Janusz Nawrocki"
+        value: 'Janusz Nawrocki',
       },
       {
-        "value": "Piotr Czachowski"
+        value: 'Piotr Czachowski',
       },
       {
-        "value": "Marek Godlewski"
+        value: 'Marek Godlewski',
       },
       {
-        "value": "Maciej Śliwowski"
+        value: 'Maciej Śliwowski',
       },
       {
-        "value": "Mirosław Kubisztal"
+        value: 'Mirosław Kubisztal',
       },
       {
-        "value": "Janusz Góra"
+        value: 'Janusz Góra',
       },
       {
-        "value": "Adam Fedoruk"
+        value: 'Adam Fedoruk',
       },
       {
-        "value": "Piotr Nowak"
+        value: 'Piotr Nowak',
       },
       {
-        "value": "Jacek Duchowski"
+        value: 'Jacek Duchowski',
       },
       {
-        "value": "Leszek Pisz"
+        value: 'Leszek Pisz',
       },
       {
-        "value": "Kazimierz Moskal"
+        value: 'Kazimierz Moskal',
       },
       {
-        "value": "Tomasz Cebula"
+        value: 'Tomasz Cebula',
       },
       {
-        "value": "Andrzej Lesiak"
+        value: 'Andrzej Lesiak',
       },
       {
-        "value": "Kazimierz Sidorczuk"
+        value: 'Kazimierz Sidorczuk',
       },
       {
-        "value": "Dariusz Grzesik"
+        value: 'Dariusz Grzesik',
       },
       {
-        "value": "Ryszard Kraus"
+        value: 'Ryszard Kraus',
       },
       {
-        "value": "Tomasz Dziubiński"
+        value: 'Tomasz Dziubiński',
       },
       {
-        "value": "Romuald Kujawa"
+        value: 'Romuald Kujawa',
       },
       {
-        "value": "Maciej Szczęsny"
+        value: 'Maciej Szczęsny',
       },
       {
-        "value": "Michał Gębura"
+        value: 'Michał Gębura',
       },
       {
-        "value": "Marek Rzepka"
+        value: 'Marek Rzepka',
       },
       {
-        "value": "Dariusz Skrzypczak"
+        value: 'Dariusz Skrzypczak',
       },
       {
-        "value": "Wojciech Kowalczyk"
+        value: 'Wojciech Kowalczyk',
       },
       {
-        "value": "Grzegorz Mielcarski"
+        value: 'Grzegorz Mielcarski',
       },
       {
-        "value": "Tomasz Wałdoch"
+        value: 'Tomasz Wałdoch',
       },
       {
-        "value": "Mirosław Trzeciak"
+        value: 'Mirosław Trzeciak',
       },
       {
-        "value": "Kazimierz Węgrzyn"
+        value: 'Kazimierz Węgrzyn',
       },
       {
-        "value": "Jacek Bobrowicz"
+        value: 'Jacek Bobrowicz',
       },
       {
-        "value": "Zdzisław Janik"
+        value: 'Zdzisław Janik',
       },
       {
-        "value": "Krzysztof Maciejewski"
+        value: 'Krzysztof Maciejewski',
       },
       {
-        "value": "Jerzy Podbrożny"
+        value: 'Jerzy Podbrożny',
       },
       {
-        "value": "Adam Matysek"
+        value: 'Adam Matysek',
       },
       {
-        "value": "Ryszard Czerwiec"
+        value: 'Ryszard Czerwiec',
       },
       {
-        "value": "Andrzej Juskowiak"
+        value: 'Andrzej Juskowiak',
       },
       {
-        "value": "Dariusz Adamczuk"
+        value: 'Dariusz Adamczuk',
       },
       {
-        "value": "Jerzy Brzęczek"
+        value: 'Jerzy Brzęczek',
       },
       {
-        "value": "Jarosław Gierejkiewicz"
+        value: 'Jarosław Gierejkiewicz',
       },
       {
-        "value": "Arkadiusz Gmur"
+        value: 'Arkadiusz Gmur',
       },
       {
-        "value": "Jarosław Góra"
+        value: 'Jarosław Góra',
       },
       {
-        "value": "Mirosław Rzepa"
+        value: 'Mirosław Rzepa',
       },
       {
-        "value": "Marek Jóźwiak"
+        value: 'Marek Jóźwiak',
       },
       {
-        "value": "Tomasz Łapiński"
+        value: 'Tomasz Łapiński',
       },
       {
-        "value": "Marek Koźmiński"
+        value: 'Marek Koźmiński',
       },
       {
-        "value": "Marcin Jałocha"
+        value: 'Marcin Jałocha',
       },
       {
-        "value": "Andrzej Kobylański"
+        value: 'Andrzej Kobylański',
       },
       {
-        "value": "Ryszard Staniek"
+        value: 'Ryszard Staniek',
       },
       {
-        "value": "Aleksander Kłak"
+        value: 'Aleksander Kłak',
       },
       {
-        "value": "Piotr Świerczewski"
+        value: 'Piotr Świerczewski',
       },
       {
-        "value": "Dariusz Gęsior"
+        value: 'Dariusz Gęsior',
       },
       {
-        "value": "Jacek Bąk"
+        value: 'Jacek Bąk',
       },
       {
-        "value": "Jacek Bednarz"
+        value: 'Jacek Bednarz',
       },
       {
-        "value": "Adam Ledwoń"
+        value: 'Adam Ledwoń',
       },
       {
-        "value": "Grzegorz Lewandowski"
+        value: 'Grzegorz Lewandowski',
       },
       {
-        "value": "Radosław Michalski"
+        value: 'Radosław Michalski',
       },
       {
-        "value": "Waldemar Jaskulski"
+        value: 'Waldemar Jaskulski',
       },
       {
-        "value": "Andrzej Woźniak"
+        value: 'Andrzej Woźniak',
       },
       {
-        "value": "Henryk Bałuszyński"
+        value: 'Henryk Bałuszyński',
       },
       {
-        "value": "Dariusz Szubert"
+        value: 'Dariusz Szubert',
       },
       {
-        "value": "Roman Dąbrowski"
+        value: 'Roman Dąbrowski',
       },
       {
-        "value": "Tomasz Wieszczycki"
+        value: 'Tomasz Wieszczycki',
       },
       {
-        "value": "Zbigniew Robakiewicz"
+        value: 'Zbigniew Robakiewicz',
       },
       {
-        "value": "Arkadiusz Kubik"
+        value: 'Arkadiusz Kubik',
       },
       {
-        "value": "Jacek Płuciennik"
+        value: 'Jacek Płuciennik',
       },
       {
-        "value": "Krzysztof Ratajczyk"
+        value: 'Krzysztof Ratajczyk',
       },
       {
-        "value": "Sylwester Czereszewski"
+        value: 'Sylwester Czereszewski',
       },
       {
-        "value": "Marek Świerczewski"
+        value: 'Marek Świerczewski',
       },
       {
-        "value": "Jacek Dembiński"
+        value: 'Jacek Dembiński',
       },
       {
-        "value": "Tomasz Sokołowski"
+        value: 'Tomasz Sokołowski',
       },
       {
-        "value": "Paweł Wojtala"
+        value: 'Paweł Wojtala',
       },
       {
-        "value": "Tomasz Rząsa"
+        value: 'Tomasz Rząsa',
       },
       {
-        "value": "Maciej Stolarczyk"
+        value: 'Maciej Stolarczyk',
       },
       {
-        "value": "Krzysztof Bukalski"
+        value: 'Krzysztof Bukalski',
       },
       {
-        "value": "Jacek Zieliński"
+        value: 'Jacek Zieliński',
       },
       {
-        "value": "Tomasz Iwan"
+        value: 'Tomasz Iwan',
       },
       {
-        "value": "Sławomir Majak"
+        value: 'Sławomir Majak',
       },
       {
-        "value": "Rafał Siadaczka"
+        value: 'Rafał Siadaczka',
       },
       {
-        "value": "Marcin Kuźba"
+        value: 'Marcin Kuźba',
       },
       {
-        "value": "Tomasz Lenart"
+        value: 'Tomasz Lenart',
       },
       {
-        "value": "Marek Citko"
+        value: 'Marek Citko',
       },
       {
-        "value": "Grzegorz Kaliciak"
+        value: 'Grzegorz Kaliciak',
       },
       {
-        "value": "Paweł Skrzypek"
+        value: 'Paweł Skrzypek',
       },
       {
-        "value": "Zbigniew Wyciszkiewicz"
+        value: 'Zbigniew Wyciszkiewicz',
       },
       {
-        "value": "Mariusz Śrutwa"
+        value: 'Mariusz Śrutwa',
       },
       {
-        "value": "Marek Saganowski"
+        value: 'Marek Saganowski',
       },
       {
-        "value": "Jacek Berensztajn"
+        value: 'Jacek Berensztajn',
       },
       {
-        "value": "Tomasz Hajto"
+        value: 'Tomasz Hajto',
       },
       {
-        "value": "Marcin Mięciel"
+        value: 'Marcin Mięciel',
       },
       {
-        "value": "Dariusz Rzeźniczek"
+        value: 'Dariusz Rzeźniczek',
       },
       {
-        "value": "Grzegorz Szamotulski"
+        value: 'Grzegorz Szamotulski',
       },
       {
-        "value": "Rafał Kaczmarczyk"
+        value: 'Rafał Kaczmarczyk',
       },
       {
-        "value": "Cezary Kucharski"
+        value: 'Cezary Kucharski',
       },
       {
-        "value": "Waldemar Kryger"
+        value: 'Waldemar Kryger',
       },
       {
-        "value": "Sławomir Paluch"
+        value: 'Sławomir Paluch',
       },
       {
-        "value": "Sławomir Wojciechowski"
+        value: 'Sławomir Wojciechowski',
       },
       {
-        "value": "Radosław Kałużny"
+        value: 'Radosław Kałużny',
       },
       {
-        "value": "Daniel Bogusz"
+        value: 'Daniel Bogusz',
       },
       {
-        "value": "Arkadiusz Onyszko"
+        value: 'Arkadiusz Onyszko',
       },
       {
-        "value": "Mariusz Kukiełka"
+        value: 'Mariusz Kukiełka',
       },
       {
-        "value": "Radosław Gilewicz"
+        value: 'Radosław Gilewicz',
       },
       {
-        "value": "Waldemar Adamczyk"
+        value: 'Waldemar Adamczyk',
       },
       {
-        "value": "Krzysztof Nowak"
+        value: 'Krzysztof Nowak',
       },
       {
-        "value": "Mirosław Szymkowiak"
+        value: 'Mirosław Szymkowiak',
       },
       {
-        "value": "Marcin Zając"
+        value: 'Marcin Zając',
       },
       {
-        "value": "Tomasz Kłos"
+        value: 'Tomasz Kłos',
       },
       {
-        "value": "Arkadiusz Bąk"
+        value: 'Arkadiusz Bąk',
       },
       {
-        "value": "Mariusz Piekarski"
+        value: 'Mariusz Piekarski',
       },
       {
-        "value": "Jerzy Dudek"
+        value: 'Jerzy Dudek',
       },
       {
-        "value": "Tomasz Kulawik"
+        value: 'Tomasz Kulawik',
       },
       {
-        "value": "Bogusław Wyparło"
+        value: 'Bogusław Wyparło',
       },
       {
-        "value": "Andrzej Jaskot"
+        value: 'Andrzej Jaskot',
       },
       {
-        "value": "Grzegorz Wędzyński"
+        value: 'Grzegorz Wędzyński',
       },
       {
-        "value": "Maciej Murawski"
+        value: 'Maciej Murawski',
       },
       {
-        "value": "Piotr Reiss"
+        value: 'Piotr Reiss',
       },
       {
-        "value": "Bogdan Zając"
+        value: 'Bogdan Zając',
       },
       {
-        "value": "Maciej Żurawski"
+        value: 'Maciej Żurawski',
       },
       {
-        "value": "Bartosz Karwan"
+        value: 'Bartosz Karwan',
       },
       {
-        "value": "Jacek Krzynówek"
+        value: 'Jacek Krzynówek',
       },
       {
-        "value": "Artur Wichniarek"
+        value: 'Artur Wichniarek',
       },
       {
-        "value": "Tomasz Frankowski"
+        value: 'Tomasz Frankowski',
       },
       {
-        "value": "Jacek Chańko"
+        value: 'Jacek Chańko',
       },
       {
-        "value": "Mariusz Nosal"
+        value: 'Mariusz Nosal',
       },
       {
-        "value": "Krzysztof Piskuła"
+        value: 'Krzysztof Piskuła',
       },
       {
-        "value": "Maciej Terlecki"
+        value: 'Maciej Terlecki',
       },
       {
-        "value": "Grzegorz Tomala"
+        value: 'Grzegorz Tomala',
       },
       {
-        "value": "Michał Żewłakow"
+        value: 'Michał Żewłakow',
       },
       {
-        "value": "Ariel Jakubowski"
+        value: 'Ariel Jakubowski',
       },
       {
-        "value": "Igor Sypniewski"
+        value: 'Igor Sypniewski',
       },
       {
-        "value": "Rafał Szwed"
+        value: 'Rafał Szwed',
       },
       {
-        "value": "Piotr Włodarczyk"
+        value: 'Piotr Włodarczyk',
       },
       {
-        "value": "Paweł Kryszałowicz"
+        value: 'Paweł Kryszałowicz',
       },
       {
-        "value": "Radosław Majdan"
+        value: 'Radosław Majdan',
       },
       {
-        "value": "Marek Zając"
+        value: 'Marek Zając',
       },
       {
-        "value": "Arkadiusz Kaliszan"
+        value: 'Arkadiusz Kaliszan',
       },
       {
-        "value": "Paweł Kaczorowski"
+        value: 'Paweł Kaczorowski',
       },
       {
-        "value": "Krzysztof Bizacki"
+        value: 'Krzysztof Bizacki',
       },
       {
-        "value": "Marcin Baszczyński"
+        value: 'Marcin Baszczyński',
       },
       {
-        "value": "Marcin Żewłakow"
+        value: 'Marcin Żewłakow',
       },
       {
-        "value": "Tomasz Kiełbowicz"
+        value: 'Tomasz Kiełbowicz',
       },
       {
-        "value": "Tomasz Zdebel"
+        value: 'Tomasz Zdebel',
       },
       {
-        "value": "Mariusz Pawlak"
+        value: 'Mariusz Pawlak',
       },
       {
-        "value": "Emmanuel Olisadebe"
+        value: 'Emmanuel Olisadebe',
       },
       {
-        "value": "Olgierd Moskalewicz"
+        value: 'Olgierd Moskalewicz',
       },
       {
-        "value": "Tomasz Kos"
+        value: 'Tomasz Kos',
       },
       {
-        "value": "Jakub Wierzchowski"
+        value: 'Jakub Wierzchowski',
       },
       {
-        "value": "Grzegorz Pater"
+        value: 'Grzegorz Pater',
       },
       {
-        "value": "Kamil Kosowski"
+        value: 'Kamil Kosowski',
       },
       {
-        "value": "Tomasz Dawidowski"
+        value: 'Tomasz Dawidowski',
       },
       {
-        "value": "Tomasz Ciesielski"
+        value: 'Tomasz Ciesielski',
       },
       {
-        "value": "Arkadiusz Głowacki"
+        value: 'Arkadiusz Głowacki',
       },
       {
-        "value": "Mariusz Lewandowski"
+        value: 'Mariusz Lewandowski',
       },
       {
-        "value": "Tomasz Moskała"
+        value: 'Tomasz Moskała',
       },
       {
-        "value": "Bartosz Bosacki"
+        value: 'Bartosz Bosacki',
       },
       {
-        "value": "Paweł Drumlak"
+        value: 'Paweł Drumlak',
       },
       {
-        "value": "Grzegorz Rasiak"
+        value: 'Grzegorz Rasiak',
       },
       {
-        "value": "Paweł Sibik"
+        value: 'Paweł Sibik',
       },
       {
-        "value": "Wojciech Kowalewski"
+        value: 'Wojciech Kowalewski',
       },
       {
-        "value": "Euzebiusz Smolarek"
+        value: 'Euzebiusz Smolarek',
       },
       {
-        "value": "Andrzej Bledzewski"
+        value: 'Andrzej Bledzewski',
       },
       {
-        "value": "Marcin Kuś"
+        value: 'Marcin Kuś',
       },
       {
-        "value": "Łukasz Surma"
+        value: 'Łukasz Surma',
       },
       {
-        "value": "Mariusz Liberda"
+        value: 'Mariusz Liberda',
       },
       {
-        "value": "Marek Zieńczuk"
+        value: 'Marek Zieńczuk',
       },
       {
-        "value": "Andrzej Niedzielan"
+        value: 'Andrzej Niedzielan',
       },
       {
-        "value": "Marcin Wasilewski"
+        value: 'Marcin Wasilewski',
       },
       {
-        "value": "Arkadiusz Radomski"
+        value: 'Arkadiusz Radomski',
       },
       {
-        "value": "Jarosław Bieniuk"
+        value: 'Jarosław Bieniuk',
       },
       {
-        "value": "Rafał Lasocki"
+        value: 'Rafał Lasocki',
       },
       {
-        "value": "Adam Majewski"
+        value: 'Adam Majewski',
       },
       {
-        "value": "Mirosław Sznaucner"
+        value: 'Mirosław Sznaucner',
       },
       {
-        "value": "Marcin Burkhardt"
+        value: 'Marcin Burkhardt',
       },
       {
-        "value": "Jacek Kowalczyk"
+        value: 'Jacek Kowalczyk',
       },
       {
-        "value": "Sebastian Mila"
+        value: 'Sebastian Mila',
       },
       {
-        "value": "Tomasz Mazurkiewicz"
+        value: 'Tomasz Mazurkiewicz',
       },
       {
-        "value": "Łukasz Madej"
+        value: 'Łukasz Madej',
       },
       {
-        "value": "Michał Stasiak"
+        value: 'Michał Stasiak',
       },
       {
-        "value": "Mariusz Jop"
+        value: 'Mariusz Jop',
       },
       {
-        "value": "Tomasz Jarzębowski"
+        value: 'Tomasz Jarzębowski',
       },
       {
-        "value": "Maciej Nalepa"
+        value: 'Maciej Nalepa',
       },
       {
-        "value": "Radosław Sobolewski"
+        value: 'Radosław Sobolewski',
       },
       {
-        "value": "Damian Gorawski"
+        value: 'Damian Gorawski',
       },
       {
-        "value": "Marcin Adamski"
+        value: 'Marcin Adamski',
       },
       {
-        "value": "Piotr Piechniak"
+        value: 'Piotr Piechniak',
       },
       {
-        "value": "Patryk Rachwał"
+        value: 'Patryk Rachwał',
       },
       {
-        "value": "Ireneusz Jeleń"
+        value: 'Ireneusz Jeleń',
       },
       {
-        "value": "Tomasz Kuszczak"
+        value: 'Tomasz Kuszczak',
       },
       {
-        "value": "Marcin Radzewicz"
+        value: 'Marcin Radzewicz',
       },
       {
-        "value": "Adrian Sikora"
+        value: 'Adrian Sikora',
       },
       {
-        "value": "Marcin Nowacki"
+        value: 'Marcin Nowacki',
       },
       {
-        "value": "Artur Boruc"
+        value: 'Artur Boruc',
       },
       {
-        "value": "Dariusz Dudka"
+        value: 'Dariusz Dudka',
       },
       {
-        "value": "Mariusz Mowlik"
+        value: 'Mariusz Mowlik',
       },
       {
-        "value": "Michał Goliński"
+        value: 'Michał Goliński',
       },
       {
-        "value": "Maciej Scherfchen"
+        value: 'Maciej Scherfchen',
       },
       {
-        "value": "Wahan Geworgian"
+        value: 'Wahan Geworgian',
       },
       {
-        "value": "Dariusz Żuraw"
+        value: 'Dariusz Żuraw',
       },
       {
-        "value": "Paweł Brożek"
+        value: 'Paweł Brożek',
       },
       {
-        "value": "Przemysław Kaźmierczak"
+        value: 'Przemysław Kaźmierczak',
       },
       {
-        "value": "Bartosz Ślusarski"
+        value: 'Bartosz Ślusarski',
       },
       {
-        "value": "Konrad Gołoś"
+        value: 'Konrad Gołoś',
       },
       {
-        "value": "Piotr Giza"
+        value: 'Piotr Giza',
       },
       {
-        "value": "Sebastian Przyrowski"
+        value: 'Sebastian Przyrowski',
       },
       {
-        "value": "Marcin Kaczmarek"
+        value: 'Marcin Kaczmarek',
       },
       {
-        "value": "Grzegorz Piechna"
+        value: 'Grzegorz Piechna',
       },
       {
-        "value": "Jakub Błaszczykowski"
+        value: 'Jakub Błaszczykowski',
       },
       {
-        "value": "Łukasz Sosin"
+        value: 'Łukasz Sosin',
       },
       {
-        "value": "Łukasz Fabiański"
+        value: 'Łukasz Fabiański',
       },
       {
-        "value": "Grzegorz Bonin"
+        value: 'Grzegorz Bonin',
       },
       {
-        "value": "Seweryn Gancarczyk"
+        value: 'Seweryn Gancarczyk',
       },
       {
-        "value": "Paweł Golański"
+        value: 'Paweł Golański',
       },
       {
-        "value": "Łukasz Garguła"
+        value: 'Łukasz Garguła',
       },
       {
-        "value": "Radosław Matusiak"
+        value: 'Radosław Matusiak',
       },
       {
-        "value": "Grzegorz Bronowicki"
+        value: 'Grzegorz Bronowicki',
       },
       {
-        "value": "Rafał Grzelak"
+        value: 'Rafał Grzelak',
       },
       {
-        "value": "Rafał Murawski"
+        value: 'Rafał Murawski',
       },
       {
-        "value": "Adrian Budka"
+        value: 'Adrian Budka',
       },
       {
-        "value": "Bartłomiej Grzelak"
+        value: 'Bartłomiej Grzelak',
       },
       {
-        "value": "Adam Kokoszka"
+        value: 'Adam Kokoszka',
       },
       {
-        "value": "Paweł Magdoń"
+        value: 'Paweł Magdoń',
       },
       {
-        "value": "Jakub Wawrzyniak"
+        value: 'Jakub Wawrzyniak',
       },
       {
-        "value": "Maciej Iwański"
+        value: 'Maciej Iwański',
       },
       {
-        "value": "Robert Kolendowicz"
+        value: 'Robert Kolendowicz',
       },
       {
-        "value": "Wojciech Łobodziński"
+        value: 'Wojciech Łobodziński',
       },
       {
-        "value": "Mariusz Pawełek"
+        value: 'Mariusz Pawełek',
       },
       {
-        "value": "Łukasz Piszczek"
+        value: 'Łukasz Piszczek',
       },
       {
-        "value": "Tomasz Zahorski"
+        value: 'Tomasz Zahorski',
       },
       {
-        "value": "Grzegorz Bartczak"
+        value: 'Grzegorz Bartczak',
       },
       {
-        "value": "Tomasz Lisowski"
+        value: 'Tomasz Lisowski',
       },
       {
-        "value": "Szymon Pawłowski"
+        value: 'Szymon Pawłowski',
       },
       {
-        "value": "Michał Pazdan"
+        value: 'Michał Pazdan',
       },
       {
-        "value": "Rafał Boguski"
+        value: 'Rafał Boguski',
       },
       {
-        "value": "Mariusz Pawelec"
+        value: 'Mariusz Pawelec',
       },
       {
-        "value": "Piotr Kuklis"
+        value: 'Piotr Kuklis',
       },
       {
-        "value": "Radosław Majewski"
+        value: 'Radosław Majewski',
       },
       {
-        "value": "Piotr Madejski"
+        value: 'Piotr Madejski',
       },
       {
-        "value": "Piotr Brożek"
+        value: 'Piotr Brożek',
       },
       {
-        "value": "Dawid Nowak"
+        value: 'Dawid Nowak',
       },
       {
-        "value": "Kamil Grosicki"
+        value: 'Kamil Grosicki',
       },
       {
-        "value": "Roger Guerreiro"
+        value: 'Roger Guerreiro',
       },
       {
-        "value": "Marcin Kowalczyk"
+        value: 'Marcin Kowalczyk',
       },
       {
-        "value": "Piotr Polczak"
+        value: 'Piotr Polczak',
       },
       {
-        "value": "Tomasz Bandrowski"
+        value: 'Tomasz Bandrowski',
       },
       {
-        "value": "Grzegorz Wojtkowiak"
+        value: 'Grzegorz Wojtkowiak',
       },
       {
-        "value": "Robert Lewandowski"
+        value: 'Robert Lewandowski',
       },
       {
-        "value": "Tomasz Jodłowiec"
+        value: 'Tomasz Jodłowiec',
       },
       {
-        "value": "Sławomir Peszko"
+        value: 'Sławomir Peszko',
       },
       {
-        "value": "Piotr Celeban"
+        value: 'Piotr Celeban',
       },
       {
-        "value": "Dawid Janczyk"
+        value: 'Dawid Janczyk',
       },
       {
-        "value": "Marcin Komorowski"
+        value: 'Marcin Komorowski',
       },
       {
-        "value": "Antoni Łukasiewicz"
+        value: 'Antoni Łukasiewicz',
       },
       {
-        "value": "Maciej Małkowski"
+        value: 'Maciej Małkowski',
       },
       {
-        "value": "Łukasz Trałka"
+        value: 'Łukasz Trałka',
       },
       {
-        "value": "Sebastian Tyrała"
+        value: 'Sebastian Tyrała',
       },
       {
-        "value": "Grzegorz Krychowiak"
+        value: 'Grzegorz Krychowiak',
       },
       {
-        "value": "Jakub Rzeźniczak"
+        value: 'Jakub Rzeźniczak',
       },
       {
-        "value": "Adam Danch"
+        value: 'Adam Danch',
       },
       {
-        "value": "Michał Zieliński"
+        value: 'Michał Zieliński',
       },
       {
-        "value": "Radosław Cierzniak"
+        value: 'Radosław Cierzniak',
       },
       {
-        "value": "Jakub Wilk"
+        value: 'Jakub Wilk',
       },
       {
-        "value": "Łukasz Załuska"
+        value: 'Łukasz Załuska',
       },
       {
-        "value": "Ludovic Obraniak"
+        value: 'Ludovic Obraniak',
       },
       {
-        "value": "Patryk Małecki"
+        value: 'Patryk Małecki',
       },
       {
-        "value": "Maciej Rybus"
+        value: 'Maciej Rybus',
       },
       {
-        "value": "Maciej Sadlok"
+        value: 'Maciej Sadlok',
       },
       {
-        "value": "Wojciech Szczęsny"
+        value: 'Wojciech Szczęsny',
       },
       {
-        "value": "Janusz Gancarczyk"
+        value: 'Janusz Gancarczyk',
       },
       {
-        "value": "Łukasz Mierzejewski"
+        value: 'Łukasz Mierzejewski',
       },
       {
-        "value": "Jakub Tosik"
+        value: 'Jakub Tosik',
       },
       {
-        "value": "Tomasz Brzyski"
+        value: 'Tomasz Brzyski',
       },
       {
-        "value": "Marcin Robak"
+        value: 'Marcin Robak',
       },
       {
-        "value": "Jacek Kiełb"
+        value: 'Jacek Kiełb',
       },
       {
-        "value": "Tomasz Nowak"
+        value: 'Tomasz Nowak',
       },
       {
-        "value": "Kamil Glik"
+        value: 'Kamil Glik',
       },
       {
-        "value": "Janusz Gol"
+        value: 'Janusz Gol',
       },
       {
-        "value": "Przemysław Tytoń"
+        value: 'Przemysław Tytoń',
       },
       {
-        "value": "Adam Matuszczyk"
+        value: 'Adam Matuszczyk',
       },
       {
-        "value": "Adrian Mierzejewski"
+        value: 'Adrian Mierzejewski',
       },
       {
-        "value": "Artur Sobiech"
+        value: 'Artur Sobiech',
       },
       {
-        "value": "Mateusz Cetnarski"
+        value: 'Mateusz Cetnarski',
       },
       {
-        "value": "Sebastian Boenisch"
+        value: 'Sebastian Boenisch',
       },
       {
-        "value": "Dariusz Pietrasiak"
+        value: 'Dariusz Pietrasiak',
       },
       {
-        "value": "Hubert Wołąkiewicz"
+        value: 'Hubert Wołąkiewicz',
       },
       {
-        "value": "Artur Jędrzejczyk"
+        value: 'Artur Jędrzejczyk',
       },
       {
-        "value": "Ariel Borysiuk"
+        value: 'Ariel Borysiuk',
       },
       {
-        "value": "Marcin Kikut"
+        value: 'Marcin Kikut',
       },
       {
-        "value": "Grzegorz Sandomierski"
+        value: 'Grzegorz Sandomierski',
       },
       {
-        "value": "Dawid Plizga"
+        value: 'Dawid Plizga',
       },
       {
-        "value": "Cezary Wilk"
+        value: 'Cezary Wilk',
       },
       {
-        "value": "Tomasz Kupisz"
+        value: 'Tomasz Kupisz',
       },
       {
-        "value": "Michał Kucharczyk"
+        value: 'Michał Kucharczyk',
       },
       {
-        "value": "Sebastian Małkowski"
+        value: 'Sebastian Małkowski',
       },
       {
-        "value": "Mateusz Klich"
+        value: 'Mateusz Klich',
       },
       {
-        "value": "Eugen Polanski"
+        value: 'Eugen Polanski',
       },
       {
-        "value": "Damien Perquis"
+        value: 'Damien Perquis',
       },
       {
-        "value": "Michał Gliwa"
+        value: 'Michał Gliwa',
       },
       {
-        "value": "Maciej Jankowski"
+        value: 'Maciej Jankowski',
       },
       {
-        "value": "Marcin Kamiński"
+        value: 'Marcin Kamiński',
       },
       {
-        "value": "Waldemar Sobota"
+        value: 'Waldemar Sobota',
       },
       {
-        "value": "Arkadiusz Piech"
+        value: 'Arkadiusz Piech',
       },
       {
-        "value": "Arkadiusz Woźniak"
+        value: 'Arkadiusz Woźniak',
       },
       {
-        "value": "Filip Modelski"
+        value: 'Filip Modelski',
       },
       {
-        "value": "Rafał Wolski"
+        value: 'Rafał Wolski',
       },
       {
-        "value": "Paweł Wszołek"
+        value: 'Paweł Wszołek',
       },
       {
-        "value": "Arkadiusz Milik"
+        value: 'Arkadiusz Milik',
       },
       {
-        "value": "Łukasz Broź"
+        value: 'Łukasz Broź',
       },
       {
-        "value": "Łukasz Skorupski"
+        value: 'Łukasz Skorupski',
       },
       {
-        "value": "Jakub Kosecki"
+        value: 'Jakub Kosecki',
       },
       {
-        "value": "Dominik Furman"
+        value: 'Dominik Furman',
       },
       {
-        "value": "Daniel Łukasik"
+        value: 'Daniel Łukasik',
       },
       {
-        "value": "Bartosz Rymaniak"
+        value: 'Bartosz Rymaniak',
       },
       {
-        "value": "Jakub Słowik"
+        value: 'Jakub Słowik',
       },
       {
-        "value": "Łukasz Teodorczyk"
+        value: 'Łukasz Teodorczyk',
       },
       {
-        "value": "Mariusz Stępiński"
+        value: 'Mariusz Stępiński',
       },
       {
-        "value": "Bartosz Salamon"
+        value: 'Bartosz Salamon',
       },
       {
-        "value": "Bartosz Bereszyński"
+        value: 'Bartosz Bereszyński',
       },
       {
-        "value": "Piotr Zieliński"
+        value: 'Piotr Zieliński',
       },
       {
-        "value": "Łukasz Szukała"
+        value: 'Łukasz Szukała',
       },
       {
-        "value": "Rafał Kosznik"
+        value: 'Rafał Kosznik',
       },
       {
-        "value": "Paweł Olkowski"
+        value: 'Paweł Olkowski',
       },
       {
-        "value": "Krzysztof Mączyński"
+        value: 'Krzysztof Mączyński',
       },
       {
-        "value": "Adam Marciniak"
+        value: 'Adam Marciniak',
       },
       {
-        "value": "Piotr Ćwielong"
+        value: 'Piotr Ćwielong',
       },
       {
-        "value": "Rafał Leszczyński"
+        value: 'Rafał Leszczyński',
       },
       {
-        "value": "Karol Linetty"
+        value: 'Karol Linetty',
       },
       {
-        "value": "Michał Masłowski"
+        value: 'Michał Masłowski',
       },
       {
-        "value": "Maciej Wilusz"
+        value: 'Maciej Wilusz',
       },
       {
-        "value": "Mateusz Zachara"
+        value: 'Mateusz Zachara',
       },
       {
-        "value": "Igor Lewczuk"
+        value: 'Igor Lewczuk',
       },
       {
-        "value": "Wojciech Golla"
+        value: 'Wojciech Golla',
       },
       {
-        "value": "Michał Miśkiewicz"
+        value: 'Michał Miśkiewicz',
       },
       {
-        "value": "Thiago Cionek"
+        value: 'Thiago Cionek',
       },
       {
-        "value": "Michał Żyro"
+        value: 'Michał Żyro',
       },
       {
-        "value": "Filip Starzyński"
+        value: 'Filip Starzyński',
       },
       {
-        "value": "Bartosz Kapustka"
+        value: 'Bartosz Kapustka',
       },
       {
-        "value": "Paweł Dawidowicz"
+        value: 'Paweł Dawidowicz',
       },
       {
-        "value": "Kamil Wilczek"
+        value: 'Kamil Wilczek',
       },
       {
-        "value": "Jacek Góralski"
+        value: 'Jacek Góralski',
       },
       {
-        "value": "Damian Dąbrowski"
+        value: 'Damian Dąbrowski',
       },
       {
-        "value": "Maciej Makuszewski"
+        value: 'Maciej Makuszewski',
       },
       {
-        "value": "Jan Bednarek"
+        value: 'Jan Bednarek',
       },
       {
-        "value": "Jarosław Jach"
+        value: 'Jarosław Jach',
       },
       {
-        "value": "Jakub Świerczok"
+        value: 'Jakub Świerczok',
       },
       {
-        "value": "Tomasz Kędziora"
+        value: 'Tomasz Kędziora',
       },
       {
-        "value": "Rafał Kurzawa"
+        value: 'Rafał Kurzawa',
       },
       {
-        "value": "Przemysław Frankowski"
+        value: 'Przemysław Frankowski',
       },
       {
-        "value": "Dawid Kownacki"
+        value: 'Dawid Kownacki',
       },
       {
-        "value": "Bartosz Białkowski"
+        value: 'Bartosz Białkowski',
       },
       {
-        "value": "Taras Romanczuk"
+        value: 'Taras Romanczuk',
       },
       {
-        "value": "Arkadiusz Reca"
+        value: 'Arkadiusz Reca',
       },
       {
-        "value": "Damian Szymański"
+        value: 'Damian Szymański',
       },
       {
-        "value": "Rafał Pietrzak"
+        value: 'Rafał Pietrzak',
       },
       {
-        "value": "Krzysztof Piątek"
+        value: 'Krzysztof Piątek',
       },
       {
-        "value": "Damian Kądzior"
+        value: 'Damian Kądzior',
       },
       {
-        "value": "Krystian Bielik"
+        value: 'Krystian Bielik',
       },
       {
-        "value": "Sebastian Szymański"
+        value: 'Sebastian Szymański',
       },
       {
-        "value": "Kamil Jóźwiak"
+        value: 'Kamil Jóźwiak',
       },
       {
-        "value": "Jakub Moder"
+        value: 'Jakub Moder',
       },
       {
-        "value": "Michał Karbownik"
+        value: 'Michał Karbownik',
       },
       {
-        "value": "Bartłomiej Drągowski"
+        value: 'Bartłomiej Drągowski',
       },
       {
-        "value": "Sebastian Walukiewicz"
+        value: 'Sebastian Walukiewicz',
       },
       {
-        "value": "Paweł Bochniewicz"
+        value: 'Paweł Bochniewicz',
       },
       {
-        "value": "Alan Czerwiński"
+        value: 'Alan Czerwiński',
       },
       {
-        "value": "Przemysław Płacheta"
+        value: 'Przemysław Płacheta',
       },
       {
-        "value": "Robert Gumny"
+        value: 'Robert Gumny',
       },
       {
-        "value": "Michał Helik"
+        value: 'Michał Helik',
       },
       {
-        "value": "Kamil Piątkowski"
+        value: 'Kamil Piątkowski',
       },
       {
-        "value": "Karol Świderski"
+        value: 'Karol Świderski',
       },
       {
-        "value": "Kacper Kozłowski"
+        value: 'Kacper Kozłowski',
       },
       {
-        "value": "Rafał Augustyniak"
+        value: 'Rafał Augustyniak',
       },
       {
-        "value": "Tymoteusz Puchacz"
+        value: 'Tymoteusz Puchacz',
       },
       {
-        "value": "Adam Buksa"
+        value: 'Adam Buksa',
       },
       {
-        "value": "Jakub Kamiński"
+        value: 'Jakub Kamiński',
       },
       {
-        "value": "Bartosz Slisz"
+        value: 'Bartosz Slisz',
       },
       {
-        "value": "Nicola Zalewski"
+        value: 'Nicola Zalewski',
       },
       {
-        "value": "Radosław Majecki"
+        value: 'Radosław Majecki',
       },
       {
-        "value": "Matty Cash"
+        value: 'Matty Cash',
       },
       {
-        "value": "Szymon Żurkowski"
+        value: 'Szymon Żurkowski',
       },
       {
-        "value": "Kamil Grabara"
+        value: 'Kamil Grabara',
       },
       {
-        "value": "Jakub Kiwior"
+        value: 'Jakub Kiwior',
       },
       {
-        "value": "Mateusz Wieteska"
+        value: 'Mateusz Wieteska',
       },
       {
-        "value": "Michał Skóraś"
+        value: 'Michał Skóraś',
       },
       {
-        "value": "Mateusz Łęgowski"
-      }
+        value: 'Mateusz Łęgowski',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 77,
-    "question": "Reprezentacje na Euro 2016",
-    "answers": [
+    id: 77,
+    question: 'Reprezentacje na Euro 2016',
+    answers: [
       {
-        "value": "Francja"
+        value: 'Francja',
       },
       {
-        "value": "Hiszpania"
+        value: 'Hiszpania',
       },
       {
-        "value": "Niemcy"
+        value: 'Niemcy',
       },
       {
-        "value": "Anglia"
+        value: 'Anglia',
       },
       {
-        "value": "Portugalia"
+        value: 'Portugalia',
       },
       {
-        "value": "Belgia"
+        value: 'Belgia',
       },
       {
-        "value": "Włochy"
+        value: 'Włochy',
       },
       {
-        "value": "Rosja"
+        value: 'Rosja',
       },
       {
-        "value": "Szwajcaria"
+        value: 'Szwajcaria',
       },
       {
-        "value": "Austria"
+        value: 'Austria',
       },
       {
-        "value": "Chorwacja"
+        value: 'Chorwacja',
       },
       {
-        "value": "Ukraina"
+        value: 'Ukraina',
       },
       {
-        "value": "Czechy"
+        value: 'Czechy',
       },
       {
-        "value": "Szwecja"
+        value: 'Szwecja',
       },
       {
-        "value": "Polska"
+        value: 'Polska',
       },
       {
-        "value": "Rumunia"
+        value: 'Rumunia',
       },
       {
-        "value": "Słowacja"
+        value: 'Słowacja',
       },
       {
-        "value": "Węgry"
+        value: 'Węgry',
       },
       {
-        "value": "Turcja"
+        value: 'Turcja',
       },
       {
-        "value": "Irlandia"
+        value: 'Irlandia',
       },
       {
-        "value": "Islandia"
+        value: 'Islandia',
       },
       {
-        "value": "Walia"
+        value: 'Walia',
       },
       {
-        "value": "Albania"
+        value: 'Albania',
       },
       {
-        "value": "Irlandia Północna"
-      }
+        value: 'Irlandia Północna',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 78,
-    "question": "Reprezentacje Euro 2008",
-    "answers": [
+    id: 78,
+    question: 'Reprezentacje Euro 2008',
+    answers: [
       {
-        "value": "Szwajcaria"
+        value: 'Szwajcaria',
       },
       {
-        "value": "Austria"
+        value: 'Austria',
       },
       {
-        "value": "Grecja"
+        value: 'Grecja',
       },
       {
-        "value": "Holandia"
+        value: 'Holandia',
       },
       {
-        "value": "Chorwacja"
+        value: 'Chorwacja',
       },
       {
-        "value": "Włochy"
+        value: 'Włochy',
       },
       {
-        "value": "Czechy"
+        value: 'Czechy',
       },
       {
-        "value": "Szwecja"
+        value: 'Szwecja',
       },
       {
-        "value": "Rumunia"
+        value: 'Rumunia',
       },
       {
-        "value": "Niemcy"
+        value: 'Niemcy',
       },
       {
-        "value": "Portugalia"
+        value: 'Portugalia',
       },
       {
-        "value": "Hiszpania"
+        value: 'Hiszpania',
       },
       {
-        "value": "Polska"
+        value: 'Polska',
       },
       {
-        "value": "Francja"
+        value: 'Francja',
       },
       {
-        "value": "Turcja"
+        value: 'Turcja',
       },
       {
-        "value": "Rosja"
-      }
+        value: 'Rosja',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 79,
-    "question": "Reprezentacje Euro 2020",
-    "answers": [
+    id: 79,
+    question: 'Reprezentacje Euro 2020',
+    answers: [
       {
-        "value": "Anglia"
+        value: 'Anglia',
       },
       {
-        "value": "Ukraina"
+        value: 'Ukraina',
       },
       {
-        "value": "Niemcy"
+        value: 'Niemcy',
       },
       {
-        "value": "Szwajcaria"
+        value: 'Szwajcaria',
       },
       {
-        "value": "Chorwacja"
+        value: 'Chorwacja',
       },
       {
-        "value": "Hiszpania"
+        value: 'Hiszpania',
       },
       {
-        "value": "Polska"
+        value: 'Polska',
       },
       {
-        "value": "Francja"
+        value: 'Francja',
       },
       {
-        "value": "Belgia"
+        value: 'Belgia',
       },
       {
-        "value": "Włochy"
+        value: 'Włochy',
       },
       {
-        "value": "Czechy"
+        value: 'Czechy',
       },
       {
-        "value": "Portugalia"
+        value: 'Portugalia',
       },
       {
-        "value": "Holandia"
+        value: 'Holandia',
       },
       {
-        "value": "Dania"
+        value: 'Dania',
       },
       {
-        "value": "Walia"
+        value: 'Walia',
       },
       {
-        "value": "Szwecja"
+        value: 'Szwecja',
       },
       {
-        "value": "Austria"
+        value: 'Austria',
       },
       {
-        "value": "Turcja"
+        value: 'Turcja',
       },
       {
-        "value": "Rosja"
+        value: 'Rosja',
       },
       {
-        "value": "1996, 2004, 2008, 2012, 2016)"
+        value: '1996, 2004, 2008, 2012, 2016)',
       },
       {
-        "value": "Finlandia"
+        value: 'Finlandia',
       },
       {
-        "value": "Węgry"
+        value: 'Węgry',
       },
       {
-        "value": "Słowacja"
+        value: 'Słowacja',
       },
       {
-        "value": "Szkocja"
+        value: 'Szkocja',
       },
       {
-        "value": "Macedonia Północna"
-      }
+        value: 'Macedonia Północna',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 80,
-    "question": "Reprezentacje MŚ 2022",
-    "answers": [
+    id: 80,
+    question: 'Reprezentacje MŚ 2022',
+    answers: [
       {
-        "value": "Katar"
+        value: 'Katar',
       },
       {
-        "value": "Iran"
+        value: 'Iran',
       },
       {
-        "value": "Arabia Saudyjska"
+        value: 'Arabia Saudyjska',
       },
       {
-        "value": "Korea Południowa"
+        value: 'Korea Południowa',
       },
       {
-        "value": "Japonia"
+        value: 'Japonia',
       },
       {
-        "value": "Senegal"
+        value: 'Senegal',
       },
       {
-        "value": "Ghana"
+        value: 'Ghana',
       },
       {
-        "value": "Kamerun"
+        value: 'Kamerun',
       },
       {
-        "value": "Maroko"
+        value: 'Maroko',
       },
       {
-        "value": "Tunezja"
+        value: 'Tunezja',
       },
       {
-        "value": "Serbia"
+        value: 'Serbia',
       },
       {
-        "value": "Hiszpania"
+        value: 'Hiszpania',
       },
       {
-        "value": "Szwajcaria"
+        value: 'Szwajcaria',
       },
       {
-        "value": "Francja"
+        value: 'Francja',
       },
       {
-        "value": "Belgia"
+        value: 'Belgia',
       },
       {
-        "value": "Dania"
+        value: 'Dania',
       },
       {
-        "value": "Holandia"
+        value: 'Holandia',
       },
       {
-        "value": "Chorwacja"
+        value: 'Chorwacja',
       },
       {
-        "value": "Anglia"
+        value: 'Anglia',
       },
       {
-        "value": "Niemcy"
+        value: 'Niemcy',
       },
       {
-        "value": "Walia"
+        value: 'Walia',
       },
       {
-        "value": "Polska"
+        value: 'Polska',
       },
       {
-        "value": "Portugalia"
+        value: 'Portugalia',
       },
       {
-        "value": "Brazylia"
+        value: 'Brazylia',
       },
       {
-        "value": "Argentyna"
+        value: 'Argentyna',
       },
       {
-        "value": "Urugwaj"
+        value: 'Urugwaj',
       },
       {
-        "value": "Ekwador"
+        value: 'Ekwador',
       },
       {
-        "value": "Kanada"
+        value: 'Kanada',
       },
       {
-        "value": "Meksyk"
+        value: 'Meksyk',
       },
       {
-        "value": "Stany Zjednoczone"
+        value: 'Stany Zjednoczone',
       },
       {
-        "value": "Australia"
+        value: 'Australia',
       },
       {
-        "value": "Kostaryka"
-      }
+        value: 'Kostaryka',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 81,
-    "question": "Reprezentacje MŚ 2010",
-    "answers": [
+    id: 81,
+    question: 'Reprezentacje MŚ 2010',
+    answers: [
       {
-        "value": "RPA"
+        value: 'RPA',
       },
       {
-        "value": "Kamerun"
+        value: 'Kamerun',
       },
       {
-        "value": "Nigeria"
+        value: 'Nigeria',
       },
       {
-        "value": "Algieria"
+        value: 'Algieria',
       },
       {
-        "value": "Ghana"
+        value: 'Ghana',
       },
       {
-        "value": "Wybrzeże Kości Słoniowej"
+        value: 'Wybrzeże Kości Słoniowej',
       },
       {
-        "value": "Dania"
+        value: 'Dania',
       },
       {
-        "value": "Szwajcaria"
+        value: 'Szwajcaria',
       },
       {
-        "value": "Słowacja"
+        value: 'Słowacja',
       },
       {
-        "value": "Niemcy"
+        value: 'Niemcy',
       },
       {
-        "value": "Hiszpania"
+        value: 'Hiszpania',
       },
       {
-        "value": "Anglia"
+        value: 'Anglia',
       },
       {
-        "value": "Serbia"
+        value: 'Serbia',
       },
       {
-        "value": "Włochy"
+        value: 'Włochy',
       },
       {
-        "value": "Holandia"
+        value: 'Holandia',
       },
       {
-        "value": "Francja"
+        value: 'Francja',
       },
       {
-        "value": "Portugalia"
+        value: 'Portugalia',
       },
       {
-        "value": "Grecja"
+        value: 'Grecja',
       },
       {
-        "value": "Słowenia"
+        value: 'Słowenia',
       },
       {
-        "value": "Brazylia"
+        value: 'Brazylia',
       },
       {
-        "value": "Chile"
+        value: 'Chile',
       },
       {
-        "value": "Paragwaj"
+        value: 'Paragwaj',
       },
       {
-        "value": "Argentyna"
+        value: 'Argentyna',
       },
       {
-        "value": "Urugwaj"
+        value: 'Urugwaj',
       },
       {
-        "value": "Stany Zjednoczone"
+        value: 'Stany Zjednoczone',
       },
       {
-        "value": "Meksyk"
+        value: 'Meksyk',
       },
       {
-        "value": "Honduras"
+        value: 'Honduras',
       },
       {
-        "value": "Australia"
+        value: 'Australia',
       },
       {
-        "value": "Japonia"
+        value: 'Japonia',
       },
       {
-        "value": "Korea Południowa"
+        value: 'Korea Południowa',
       },
       {
-        "value": "Korea Północna"
+        value: 'Korea Północna',
       },
       {
-        "value": "Nowa Zelandia"
-      }
+        value: 'Nowa Zelandia',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 82,
-    "question": "Zawodnicy FAME MMA do gali numer 18",
-    "answers": [
+    id: 82,
+    question: 'Zawodnicy FAME MMA do gali numer 18',
+    answers: [
       {
-        "value": "Magical"
+        value: 'Magical',
       },
       {
-        "value": "Polak"
+        value: 'Polak',
       },
       {
-        "value": "Boxdel"
+        value: 'Boxdel',
       },
       {
-        "value": "Guzik"
+        value: 'Guzik',
       },
       {
-        "value": "Piotr Celej"
+        value: 'Piotr Celej',
       },
       {
-        "value": "Krzysztof Olczak"
+        value: 'Krzysztof Olczak',
       },
       {
-        "value": "Ambro"
+        value: 'Ambro',
       },
       {
-        "value": "Surfer"
+        value: 'Surfer',
       },
       {
-        "value": "Michał Handke"
+        value: 'Michał Handke',
       },
       {
-        "value": "Wiewiór"
+        value: 'Wiewiór',
       },
       {
-        "value": "Ken"
+        value: 'Ken',
       },
       {
-        "value": "Krycha"
+        value: 'Krycha',
       },
       {
-        "value": "Maro"
+        value: 'Maro',
       },
       {
-        "value": "Łukasz Lupa"
+        value: 'Łukasz Lupa',
       },
       {
-        "value": "Łysy Bogas"
+        value: 'Łysy Bogas',
       },
       {
-        "value": "Ztrolowany"
+        value: 'Ztrolowany',
       },
       {
-        "value": "Rafonix"
+        value: 'Rafonix',
       },
       {
-        "value": "Dawid Malczyński"
+        value: 'Dawid Malczyński',
       },
       {
-        "value": "AdBuster"
+        value: 'AdBuster',
       },
       {
-        "value": "Ferrari"
+        value: 'Ferrari',
       },
       {
-        "value": "Bystrzak"
+        value: 'Bystrzak',
       },
       {
-        "value": "Bonus BGC"
+        value: 'Bonus BGC',
       },
       {
-        "value": "Ztrolowany"
+        value: 'Ztrolowany',
       },
       {
-        "value": "Paweł Tyburski"
+        value: 'Paweł Tyburski',
       },
       {
-        "value": "Piotr Tyburski"
+        value: 'Piotr Tyburski',
       },
       {
-        "value": "Piotr Kluk"
+        value: 'Piotr Kluk',
       },
       {
-        "value": "Paweł Kluk"
+        value: 'Paweł Kluk',
       },
       {
-        "value": "Waluś"
+        value: 'Waluś',
       },
       {
-        "value": "Czapi"
+        value: 'Czapi',
       },
       {
-        "value": "Kasti"
+        value: 'Kasti',
       },
       {
-        "value": "Łukasz Lupa"
+        value: 'Łukasz Lupa',
       },
       {
-        "value": "DeeJayPallaside"
+        value: 'DeeJayPallaside',
       },
       {
-        "value": "IsAmU"
+        value: 'IsAmU',
       },
       {
-        "value": "Linkimaster"
+        value: 'Linkimaster',
       },
       {
-        "value": "Esmeralda"
+        value: 'Esmeralda',
       },
       {
-        "value": "Taxi Złotówa"
+        value: 'Taxi Złotówa',
       },
       {
-        "value": "Filipek"
+        value: 'Filipek',
       },
       {
-        "value": "Ryba"
+        value: 'Ryba',
       },
       {
-        "value": "Don Kasjo"
+        value: 'Don Kasjo',
       },
       {
-        "value": "Ruby"
+        value: 'Ruby',
       },
       {
-        "value": "Bodychrist"
+        value: 'Bodychrist',
       },
       {
-        "value": "Mnich Terminator"
+        value: 'Mnich Terminator',
       },
       {
-        "value": "Hassi"
+        value: 'Hassi',
       },
       {
-        "value": "Lil Masti"
+        value: 'Lil Masti',
       },
       {
-        "value": "Medusa"
+        value: 'Medusa',
       },
       {
-        "value": "Knaziuu"
+        value: 'Knaziuu',
       },
       {
-        "value": "Kubańczyk"
+        value: 'Kubańczyk',
       },
       {
-        "value": "Kizo"
+        value: 'Kizo',
       },
       {
-        "value": "Mielonidas"
+        value: 'Mielonidas',
       },
       {
-        "value": "Tomb"
+        value: 'Tomb',
       },
       {
-        "value": "Jongmen"
+        value: 'Jongmen',
       },
       {
-        "value": "Marcin Najman"
+        value: 'Marcin Najman',
       },
       {
-        "value": "Marcin Malczyński"
+        value: 'Marcin Malczyński',
       },
       {
-        "value": "Mini Majk"
+        value: 'Mini Majk',
       },
       {
-        "value": "Lord Kruszwil"
+        value: 'Lord Kruszwil',
       },
       {
-        "value": "Tomasz Olejnik"
+        value: 'Tomasz Olejnik',
       },
       {
-        "value": "Ewelona"
+        value: 'Ewelona',
       },
       {
-        "value": "Oleg"
+        value: 'Oleg',
       },
       {
-        "value": "Zusje"
+        value: 'Zusje',
       },
       {
-        "value": "Wojciech Gola"
+        value: 'Wojciech Gola',
       },
       {
-        "value": "Bestia"
+        value: 'Bestia',
       },
       {
-        "value": "L-Pro"
+        value: 'L-Pro',
       },
       {
-        "value": "Maciej Rataj"
+        value: 'Maciej Rataj',
       },
       {
-        "value": "Qbik"
+        value: 'Qbik',
       },
       {
-        "value": "Cypis"
+        value: 'Cypis',
       },
       {
-        "value": "Alanik"
+        value: 'Alanik',
       },
       {
-        "value": "Arkadiusz Tańcula"
+        value: 'Arkadiusz Tańcula',
       },
       {
-        "value": "Szewcu"
+        value: 'Szewcu',
       },
       {
-        "value": "Popek Monster"
+        value: 'Popek Monster',
       },
       {
-        "value": "Stifler"
+        value: 'Stifler',
       },
       {
-        "value": "Martirenti"
+        value: 'Martirenti',
       },
       {
-        "value": "Hejter"
+        value: 'Hejter',
       },
       {
-        "value": "Daro Lew"
+        value: 'Daro Lew',
       },
       {
-        "value": "Marcin Dubiel"
+        value: 'Marcin Dubiel',
       },
       {
-        "value": "Blonsky"
+        value: 'Blonsky',
       },
       {
-        "value": "Sobota"
+        value: 'Sobota',
       },
       {
-        "value": "Arab"
+        value: 'Arab',
       },
       {
-        "value": "Szeli"
+        value: 'Szeli',
       },
       {
-        "value": "Dagmara Szewczyk"
+        value: 'Dagmara Szewczyk',
       },
       {
-        "value": "Mortalcio"
+        value: 'Mortalcio',
       },
       {
-        "value": "Piotr Pająk"
+        value: 'Piotr Pająk',
       },
       {
-        "value": "Gamou Fall"
+        value: 'Gamou Fall',
       },
       {
-        "value": "Sylwester Wardęga"
+        value: 'Sylwester Wardęga',
       },
       {
-        "value": "Kamiszka"
+        value: 'Kamiszka',
       },
       {
-        "value": "paTrykos"
+        value: 'paTrykos',
       },
       {
-        "value": "Ponczek"
+        value: 'Ponczek',
       },
       {
-        "value": "Filip Zabielski"
+        value: 'Filip Zabielski',
       },
       {
-        "value": "VanDal"
+        value: 'VanDal',
       },
       {
-        "value": "Kuba Post"
+        value: 'Kuba Post',
       },
       {
-        "value": "Way of Blonde"
+        value: 'Way of Blonde',
       },
       {
-        "value": "Anna Andrzejewska"
+        value: 'Anna Andrzejewska',
       },
       {
-        "value": "Norman Parke"
+        value: 'Norman Parke',
       },
       {
-        "value": "Czaro"
+        value: 'Czaro',
       },
       {
-        "value": "Bocian"
+        value: 'Bocian',
       },
       {
-        "value": "Mateusz Murański"
+        value: 'Mateusz Murański',
       },
       {
-        "value": "Haribo"
+        value: 'Haribo',
       },
       {
-        "value": "Michał Gała"
+        value: 'Michał Gała',
       },
       {
-        "value": "Mikołaj Śmieszek"
+        value: 'Mikołaj Śmieszek',
       },
       {
-        "value": "Miejski Drwal"
+        value: 'Miejski Drwal',
       },
       {
-        "value": "Borys Mańkowski"
+        value: 'Borys Mańkowski',
       },
       {
-        "value": "OjWojtek"
+        value: 'OjWojtek',
       },
       {
-        "value": "Danny"
+        value: 'Danny',
       },
       {
-        "value": "Mixer"
+        value: 'Mixer',
       },
       {
-        "value": "Popo"
+        value: 'Popo',
       },
       {
-        "value": "Filip Zabielski"
+        value: 'Filip Zabielski',
       },
       {
-        "value": "Maksymalnie"
+        value: 'Maksymalnie',
       },
       {
-        "value": "Smolasty"
+        value: 'Smolasty',
       },
       {
-        "value": "Miły Pan"
+        value: 'Miły Pan',
       },
       {
-        "value": "Sasha"
+        value: 'Sasha',
       },
       {
-        "value": "MeLady"
+        value: 'MeLady',
       },
       {
-        "value": "Fericze"
+        value: 'Fericze',
       },
       {
-        "value": "Pitbull"
+        value: 'Pitbull',
       },
       {
-        "value": "Gracjan Miś"
+        value: 'Gracjan Miś',
       },
       {
-        "value": "Dragon"
+        value: 'Dragon',
       },
       {
-        "value": "Roger Irlik"
+        value: 'Roger Irlik',
       },
       {
-        "value": "Jacek Murański"
+        value: 'Jacek Murański',
       },
       {
-        "value": "Marcin Wrzosek"
+        value: 'Marcin Wrzosek',
       },
       {
-        "value": "Matt Fit Lovers"
+        value: 'Matt Fit Lovers',
       },
       {
-        "value": "Radzik"
+        value: 'Radzik',
       },
       {
-        "value": "Koro"
+        value: 'Koro',
       },
       {
-        "value": "Nitro"
+        value: 'Nitro',
       },
       {
-        "value": "Unboxall"
+        value: 'Unboxall',
       },
       {
-        "value": "Japczan"
+        value: 'Japczan',
       },
       {
-        "value": "Sutonator"
+        value: 'Sutonator',
       },
       {
-        "value": "Takefun"
+        value: 'Takefun',
       },
       {
-        "value": "Kuba Post"
+        value: 'Kuba Post',
       },
       {
-        "value": "Tromba"
+        value: 'Tromba',
       },
       {
-        "value": "Gimper"
+        value: 'Gimper',
       },
       {
-        "value": "Xayoo"
+        value: 'Xayoo',
       },
       {
-        "value": "Fagata"
+        value: 'Fagata',
       },
       {
-        "value": "Mona"
+        value: 'Mona',
       },
       {
-        "value": "AJ"
+        value: 'AJ',
       },
       {
-        "value": "Lala Laluna"
+        value: 'Lala Laluna',
       },
       {
-        "value": "Wiktoria Jaroniewska"
+        value: 'Wiktoria Jaroniewska',
       },
       {
-        "value": "Konopskyy"
+        value: 'Konopskyy',
       },
       {
-        "value": "Sarius"
+        value: 'Sarius',
       },
       {
-        "value": "Crusher"
+        value: 'Crusher',
       },
       {
-        "value": "Franio"
+        value: 'Franio',
       },
       {
-        "value": "Paramaxil"
+        value: 'Paramaxil',
       },
       {
-        "value": "Filip Zabielski"
+        value: 'Filip Zabielski',
       },
       {
-        "value": "Warjat Radek"
+        value: 'Warjat Radek',
       },
       {
-        "value": "Patryk Woźniak"
+        value: 'Patryk Woźniak',
       },
       {
-        "value": "Jamil Neffati"
+        value: 'Jamil Neffati',
       },
       {
-        "value": "Jamel Neffati"
+        value: 'Jamel Neffati',
       },
       {
-        "value": "Bandura"
+        value: 'Bandura',
       },
       {
-        "value": "Krystian Wilczak"
+        value: 'Krystian Wilczak',
       },
       {
-        "value": "Dzinold"
+        value: 'Dzinold',
       },
       {
-        "value": "Szymool"
+        value: 'Szymool',
       },
       {
-        "value": "Natan Marcoń"
+        value: 'Natan Marcoń',
       },
       {
-        "value": "Wiejski Koks"
+        value: 'Wiejski Koks',
       },
       {
-        "value": "Paweł Jóźwiak"
+        value: 'Paweł Jóźwiak',
       },
       {
-        "value": "Szczurek"
+        value: 'Szczurek',
       },
       {
-        "value": "Wac Toja"
+        value: 'Wac Toja',
       },
       {
-        "value": "Sebastian Fabijański"
+        value: 'Sebastian Fabijański',
       },
       {
-        "value": "Czarmageddon"
+        value: 'Czarmageddon',
       },
       {
-        "value": "Robert Karaś"
+        value: 'Robert Karaś',
       },
       {
-        "value": "Sheeya"
+        value: 'Sheeya',
       },
       {
-        "value": "Ewa Brodnicka"
+        value: 'Ewa Brodnicka',
       },
       {
-        "value": "Zadyma"
+        value: 'Zadyma',
       },
       {
-        "value": "Wampir"
+        value: 'Wampir',
       },
       {
-        "value": "Lizi"
+        value: 'Lizi',
       },
       {
-        "value": "Dominika Rybak"
+        value: 'Dominika Rybak',
       },
       {
-        "value": "Mateusz Spysiński"
-      }
+        value: 'Mateusz Spysiński',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 83,
-    "question": "Zawodnicy High league do gali numer 6",
-    "answers": [
+    id: 83,
+    question: 'Zawodnicy High league do gali numer 6',
+    answers: [
       {
-        "value": "Lexy Chaplin"
+        value: 'Lexy Chaplin',
       },
       {
-        "value": "Natsu"
+        value: 'Natsu',
       },
       {
-        "value": "Ewa Brodnicka"
+        value: 'Ewa Brodnicka',
       },
       {
-        "value": "Lil Masti"
+        value: 'Lil Masti',
       },
       {
-        "value": "Medusa"
+        value: 'Medusa',
       },
       {
-        "value": "Maciej Rataj"
+        value: 'Maciej Rataj',
       },
       {
-        "value": "Bonus BGC"
+        value: 'Bonus BGC',
       },
       {
-        "value": "Japczan"
+        value: 'Japczan',
       },
       {
-        "value": "Josef Bratan"
+        value: 'Josef Bratan',
       },
       {
-        "value": "Cesarz Narcyz"
+        value: 'Cesarz Narcyz',
       },
       {
-        "value": "Lukas TV"
+        value: 'Lukas TV',
       },
       {
-        "value": "Bunio"
+        value: 'Bunio',
       },
       {
-        "value": "Kamil Kossakowski"
+        value: 'Kamil Kossakowski',
       },
       {
-        "value": "Big Jack"
+        value: 'Big Jack',
       },
       {
-        "value": "Carlito"
+        value: 'Carlito',
       },
       {
-        "value": "Jakub Nowaczkiewicz"
+        value: 'Jakub Nowaczkiewicz',
       },
       {
-        "value": "Kolar"
+        value: 'Kolar',
       },
       {
-        "value": "pashaBiceps"
+        value: 'pashaBiceps',
       },
       {
-        "value": "Owca"
+        value: 'Owca',
       },
       {
-        "value": "Fagata"
+        value: 'Fagata',
       },
       {
-        "value": "Dis"
+        value: 'Dis',
       },
       {
-        "value": "Zony"
+        value: 'Zony',
       },
       {
-        "value": "Mini Majk"
+        value: 'Mini Majk',
       },
       {
-        "value": "Denis Załęcki"
+        value: 'Denis Załęcki',
       },
       {
-        "value": "Alanik"
+        value: 'Alanik',
       },
       {
-        "value": "Edzio"
+        value: 'Edzio',
       },
       {
-        "value": "czuuX"
+        value: 'czuuX',
       },
       {
-        "value": "Jakub Nowaczkiewicz"
+        value: 'Jakub Nowaczkiewicz',
       },
       {
-        "value": "Dredziasty"
+        value: 'Dredziasty',
       },
       {
-        "value": "Konrad Karwat"
+        value: 'Konrad Karwat',
       },
       {
-        "value": "Tarzan"
+        value: 'Tarzan',
       },
       {
-        "value": "Marcin Dubiel"
+        value: 'Marcin Dubiel',
       },
       {
-        "value": "Alberto Simao"
+        value: 'Alberto Simao',
       },
       {
-        "value": "Robur"
+        value: 'Robur',
       },
       {
-        "value": "Hardkorowy Koksu"
+        value: 'Hardkorowy Koksu',
       },
       {
-        "value": "Zusje"
+        value: 'Zusje',
       },
       {
-        "value": "Crazy"
+        value: 'Crazy',
       },
       {
-        "value": "Kamiszka"
+        value: 'Kamiszka',
       },
       {
-        "value": "Lukas TV"
+        value: 'Lukas TV',
       },
       {
-        "value": "Kamil Kossakowski"
+        value: 'Kamil Kossakowski',
       },
       {
-        "value": "Scarface"
+        value: 'Scarface',
       },
       {
-        "value": "Kolar"
+        value: 'Kolar',
       },
       {
-        "value": "Alan Człowieku"
+        value: 'Alan Człowieku',
       },
       {
-        "value": "Don Diego"
+        value: 'Don Diego',
       },
       {
-        "value": "Artur Szpilka"
+        value: 'Artur Szpilka',
       },
       {
-        "value": "Salim Chiboub"
+        value: 'Salim Chiboub',
       },
       {
-        "value": "Ferrari"
+        value: 'Ferrari',
       },
       {
-        "value": "Maja Staśko"
+        value: 'Maja Staśko',
       },
       {
-        "value": "Mrs. Honey"
+        value: 'Mrs. Honey',
       },
       {
-        "value": "Czaro"
+        value: 'Czaro',
       },
       {
-        "value": "Macias"
+        value: 'Macias',
       },
       {
-        "value": "Kubx"
+        value: 'Kubx',
       },
       {
-        "value": "Holak"
+        value: 'Holak',
       },
       {
-        "value": "Radosław Słodkiewicz"
+        value: 'Radosław Słodkiewicz',
       },
       {
-        "value": "Paweł Tyburski"
+        value: 'Paweł Tyburski',
       },
       {
-        "value": "Mateusz Murański"
+        value: 'Mateusz Murański',
       },
       {
-        "value": "Damian Janikowski"
+        value: 'Damian Janikowski',
       },
       {
-        "value": "Masza"
+        value: 'Masza',
       },
       {
-        "value": "Diables"
+        value: 'Diables',
       },
       {
-        "value": "Leh"
+        value: 'Leh',
       },
       {
-        "value": "Vaso Bakočević"
+        value: 'Vaso Bakočević',
       },
       {
-        "value": "Andrew"
+        value: 'Andrew',
       },
       {
-        "value": "Sequento"
+        value: 'Sequento',
       },
       {
-        "value": "Rekordzista"
+        value: 'Rekordzista',
       },
       {
-        "value": "Hassi"
+        value: 'Hassi',
       },
       {
-        "value": "Paulina Hornik"
+        value: 'Paulina Hornik',
       },
       {
-        "value": "Paweł Jóźwiak"
+        value: 'Paweł Jóźwiak',
       },
       {
-        "value": "Denis Labryga"
+        value: 'Denis Labryga',
       },
       {
-        "value": "Daro Lew"
+        value: 'Daro Lew',
       },
       {
-        "value": "Ludwiczek"
+        value: 'Ludwiczek',
       },
       {
-        "value": "Szalony Reporter"
+        value: 'Szalony Reporter',
       },
       {
-        "value": "Zadymiarz"
+        value: 'Zadymiarz',
       },
       {
-        "value": "Roger Salla"
+        value: 'Roger Salla',
       },
       {
-        "value": "Haribo"
-      }
+        value: 'Haribo',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
   },
   {
-    "id": 84,
-    "question": "Postacie z Gothic 1",
-    "answers": [
+    id: 84,
+    question: 'Postacie z Gothic 1',
+    answers: [
       {
-        "value": "Arto"
+        value: 'Arto',
       },
       {
-        "value": "Baal Parvez"
+        value: 'Baal Parvez',
       },
       {
-        "value": "Baal Taran"
+        value: 'Baal Taran',
       },
       {
-        "value": "Balam"
+        value: 'Balam',
       },
       {
-        "value": "Bartholo"
+        value: 'Bartholo',
       },
       {
-        "value": "Blizna"
+        value: 'Blizna',
       },
       {
-        "value": "Bloodwyn"
+        value: 'Bloodwyn',
       },
       {
-        "value": "Bullit"
+        value: 'Bullit',
       },
       {
-        "value": "Corristo"
+        value: 'Corristo',
       },
       {
-        "value": "Damarok"
+        value: 'Damarok',
       },
       {
-        "value": "Dexter"
+        value: 'Dexter',
       },
       {
-        "value": "Diego"
+        value: 'Diego',
       },
       {
-        "value": "Drago"
+        value: 'Drago',
       },
       {
-        "value": "Dusty"
+        value: 'Dusty',
       },
       {
-        "value": "Fisk"
+        value: 'Fisk',
       },
       {
-        "value": "Fletcher"
+        value: 'Fletcher',
       },
       {
-        "value": "Gomez"
+        value: 'Gomez',
       },
       {
-        "value": "Gor Hanis"
+        value: 'Gor Hanis',
       },
       {
-        "value": "Graham"
+        value: 'Graham',
       },
       {
-        "value": "Gravo"
+        value: 'Gravo',
       },
       {
-        "value": "Grim"
+        value: 'Grim',
       },
       {
-        "value": "Guy"
+        value: 'Guy',
       },
       {
-        "value": "Herek"
+        value: 'Herek',
       },
       {
-        "value": "Huno"
+        value: 'Huno',
       },
       {
-        "value": "Kirgo"
+        value: 'Kirgo',
       },
       {
-        "value": "Jesse"
+        value: 'Jesse',
       },
       {
-        "value": "Kharim"
+        value: 'Kharim',
       },
       {
-        "value": "Kruk"
+        value: 'Kruk',
       },
       {
-        "value": "Kyle"
+        value: 'Kyle',
       },
       {
-        "value": "Milten"
+        value: 'Milten',
       },
       {
-        "value": "Mordrag"
+        value: 'Mordrag',
       },
       {
-        "value": "Omid"
+        value: 'Omid',
       },
       {
-        "value": "Rączka"
+        value: 'Rączka',
       },
       {
-        "value": "Rodriguez"
+        value: 'Rodriguez',
       },
       {
-        "value": "Scatty"
+        value: 'Scatty',
       },
       {
-        "value": "Serafia"
+        value: 'Serafia',
       },
       {
-        "value": "Siekacz"
+        value: 'Siekacz',
       },
       {
-        "value": "Sira"
+        value: 'Sira',
       },
       {
-        "value": "Skip"
+        value: 'Skip',
       },
       {
-        "value": "Skorpion"
+        value: 'Skorpion',
       },
       {
-        "value": "Snaf"
+        value: 'Snaf',
       },
       {
-        "value": "Stone"
+        value: 'Stone',
       },
       {
-        "value": "Szakal"
+        value: 'Szakal',
       },
       {
-        "value": "Świstak"
+        value: 'Świstak',
       },
       {
-        "value": "Thorus"
+        value: 'Thorus',
       },
       {
-        "value": "Torrez"
+        value: 'Torrez',
       },
       {
-        "value": "Velaya"
+        value: 'Velaya',
       },
       {
-        "value": "Wrzód"
+        value: 'Wrzód',
       },
       {
-        "value": "Zły"
+        value: 'Zły',
       },
       {
-        "value": "Baal Isidro"
+        value: 'Baal Isidro',
       },
       {
-        "value": "Baal Kagan"
+        value: 'Baal Kagan',
       },
       {
-        "value": "Bruce"
+        value: 'Bruce',
       },
       {
-        "value": "Buster"
+        value: 'Buster',
       },
       {
-        "value": "Butch"
+        value: 'Butch',
       },
       {
-        "value": "Cipher"
+        value: 'Cipher',
       },
       {
-        "value": "Cord"
+        value: 'Cord',
       },
       {
-        "value": "Cronos"
+        value: 'Cronos',
       },
       {
-        "value": "Gorn"
+        value: 'Gorn',
       },
       {
-        "value": "Homer"
+        value: 'Homer',
       },
       {
-        "value": "Horacy"
+        value: 'Horacy',
       },
       {
-        "value": "Jarvis"
+        value: 'Jarvis',
       },
       {
-        "value": "Jeremiasz"
+        value: 'Jeremiasz',
       },
       {
-        "value": "Klin"
+        value: 'Klin',
       },
       {
-        "value": "Kosa"
+        value: 'Kosa',
       },
       {
-        "value": "Krzykacz"
+        value: 'Krzykacz',
       },
       {
-        "value": "Lares"
+        value: 'Lares',
       },
       {
-        "value": "Lee"
+        value: 'Lee',
       },
       {
-        "value": "Lewus"
+        value: 'Lewus',
       },
       {
-        "value": "Merdarion"
+        value: 'Merdarion',
       },
       {
-        "value": "Myxir"
+        value: 'Myxir',
       },
       {
-        "value": "Nefarius"
+        value: 'Nefarius',
       },
       {
-        "value": "Orik"
+        value: 'Orik',
       },
       {
-        "value": "Pock"
+        value: 'Pock',
       },
       {
-        "value": "Riordian"
+        value: 'Riordian',
       },
       {
-        "value": "Roscoe"
+        value: 'Roscoe',
       },
       {
-        "value": "Rufus"
+        value: 'Rufus',
       },
       {
-        "value": "Ryżowy Książę"
+        value: 'Ryżowy Książę',
       },
       {
-        "value": "Saturas"
+        value: 'Saturas',
       },
       {
-        "value": "Senyan"
+        value: 'Senyan',
       },
       {
-        "value": "Sharky"
+        value: 'Sharky',
       },
       {
-        "value": "Silas"
+        value: 'Silas',
       },
       {
-        "value": "Torlof"
+        value: 'Torlof',
       },
       {
-        "value": "Wilk"
+        value: 'Wilk',
       },
       {
-        "value": "Baal Cadar"
+        value: 'Baal Cadar',
       },
       {
-        "value": "Baal Namib"
+        value: 'Baal Namib',
       },
       {
-        "value": "Baal Netbek"
+        value: 'Baal Netbek',
       },
       {
-        "value": "Baal Orun"
+        value: 'Baal Orun',
       },
       {
-        "value": "Baal Tondral"
+        value: 'Baal Tondral',
       },
       {
-        "value": "Baal Tyon"
+        value: 'Baal Tyon',
       },
       {
-        "value": "Balor"
+        value: 'Balor',
       },
       {
-        "value": "Caine"
+        value: 'Caine',
       },
       {
-        "value": "Chani"
+        value: 'Chani',
       },
       {
-        "value": "Cor Angar"
+        value: 'Cor Angar',
       },
       {
-        "value": "Cor Kalom"
+        value: 'Cor Kalom',
       },
       {
-        "value": "Darrion"
+        value: 'Darrion',
       },
       {
-        "value": "Fortuno"
+        value: 'Fortuno',
       },
       {
-        "value": "Ghorim"
+        value: 'Ghorim',
       },
       {
-        "value": "Gor Na Drak"
+        value: 'Gor Na Drak',
       },
       {
-        "value": "Gor Na Ran"
+        value: 'Gor Na Ran',
       },
       {
-        "value": "Gor Na Toth"
+        value: 'Gor Na Toth',
       },
       {
-        "value": "Harlok"
+        value: 'Harlok',
       },
       {
-        "value": "Joru"
+        value: 'Joru',
       },
       {
-        "value": "Lester"
+        value: 'Lester',
       },
       {
-        "value": "Melvin"
+        value: 'Melvin',
       },
       {
-        "value": "Nyras"
+        value: 'Nyras',
       },
       {
-        "value": "Natalia"
+        value: 'Natalia',
       },
       {
-        "value": "Ochroniarz Kaloma"
+        value: 'Ochroniarz Kaloma',
       },
       {
-        "value": "Shrat"
+        value: 'Shrat',
       },
       {
-        "value": "Talas"
+        value: 'Talas',
       },
       {
-        "value": "Viran"
+        value: 'Viran',
       },
       {
-        "value": "Y'Berion"
+        value: "Y'Berion",
       },
       {
-        "value": "Aaron"
+        value: 'Aaron',
       },
       {
-        "value": "Alberto"
+        value: 'Alberto',
       },
       {
-        "value": "Aleph"
+        value: 'Aleph',
       },
       {
-        "value": "Asghan"
+        value: 'Asghan',
       },
       {
-        "value": "Brandick"
+        value: 'Brandick',
       },
       {
-        "value": "Drake"
+        value: 'Drake',
       },
       {
-        "value": "Garp"
+        value: 'Garp',
       },
       {
-        "value": "Glen"
+        value: 'Glen',
       },
       {
-        "value": "Gor Na Bar"
+        value: 'Gor Na Bar',
       },
       {
-        "value": "Gor Na Kosh"
+        value: 'Gor Na Kosh',
       },
       {
-        "value": "Gor Na Vid"
+        value: 'Gor Na Vid',
       },
       {
-        "value": "Grimes"
+        value: 'Grimes',
       },
       {
-        "value": "Ian"
+        value: 'Ian',
       },
       {
-        "value": "Santino"
+        value: 'Santino',
       },
       {
-        "value": "Snipes"
+        value: 'Snipes',
       },
       {
-        "value": "Strażnik świątynny"
+        value: 'Strażnik świątynny',
       },
       {
-        "value": "Ulbert"
+        value: 'Ulbert',
       },
       {
-        "value": "Wąż"
+        value: 'Wąż',
       },
       {
-        "value": "Baloro"
+        value: 'Baloro',
       },
       {
-        "value": "Okyl"
+        value: 'Okyl',
       },
       {
-        "value": "Swiney"
+        value: 'Swiney',
       },
       {
-        "value": "Tarrok"
+        value: 'Tarrok',
       },
       {
-        "value": "Gor Boba"
+        value: 'Gor Boba',
       },
       {
-        "value": "Grash-Varrag-Arushat"
+        value: 'Grash-Varrag-Arushat',
       },
       {
-        "value": "Szalony Cor Kalom"
+        value: 'Szalony Cor Kalom',
       },
       {
-        "value": "Varrag-Hashor"
+        value: 'Varrag-Hashor',
       },
       {
-        "value": "Varrag-Kasorg"
+        value: 'Varrag-Kasorg',
       },
       {
-        "value": "Varrag-Ruuushk"
+        value: 'Varrag-Ruuushk',
       },
       {
-        "value": "Varrag-Unhilqt"
+        value: 'Varrag-Unhilqt',
       },
       {
-        "value": "Aidan"
+        value: 'Aidan',
       },
       {
-        "value": "Baal Lukor"
+        value: 'Baal Lukor',
       },
       {
-        "value": "Bezimienny"
+        value: 'Bezimienny',
       },
       {
-        "value": "Cavalorn"
+        value: 'Cavalorn',
       },
       {
-        "value": "Drax"
+        value: 'Drax',
       },
       {
-        "value": "Gilbert"
+        value: 'Gilbert',
       },
       {
-        "value": "Jacko"
+        value: 'Jacko',
       },
       {
-        "value": "Nek"
+        value: 'Nek',
       },
       {
-        "value": "Nieznajomy"
+        value: 'Nieznajomy',
       },
       {
-        "value": "Orry"
+        value: 'Orry',
       },
       {
-        "value": "Pacho"
+        value: 'Pacho',
       },
       {
-        "value": "Quentin"
+        value: 'Quentin',
       },
       {
-        "value": "Ratford"
+        value: 'Ratford',
       },
       {
-        "value": "Ur-Shak"
+        value: 'Ur-Shak',
       },
       {
-        "value": "Xardas"
-      }
+        value: 'Xardas',
+      },
     ],
-    "hints": [],
-    "revealedAnswers": [],
-    "showAnswer": false
-  }
-]
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+];

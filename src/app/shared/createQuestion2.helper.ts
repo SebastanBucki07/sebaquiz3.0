@@ -28,26 +28,26 @@ interface OutputItem {
 }
 
 function transformQuizWithHints(data: InputItem[]): OutputItem[] {
-  const tmp = data.map(item => {
+  const tmp = data.map((item) => {
     const id = item.id ?? item.Id ?? 0;
 
     const answers: { label: string; value: string }[] = [];
-    if (item.title && item.title !== "-") {
-      answers.push({label: "tytul", value: item.title});
+    if (item.title && item.title !== '-') {
+      answers.push({ label: 'tytul', value: item.title });
     }
     if (item.author) {
-      answers.push({label: "autor", value: item.author});
+      answers.push({ label: 'autor', value: item.author });
     }
     if (item.Answer) {
-      answers.push({label: "tytul", value: item.Answer});
+      answers.push({ label: 'tytul', value: item.Answer });
     }
 
-    const question = item.Answer ?? item.fragment1 ?? "Brak opisu";
+    const question = item.Answer ?? item.fragment1 ?? 'Brak opisu';
 
-    const hintKeys = ["fragment1", "fragment2", "fragment3", "Tip1", "Tip2", "Tip3"];
+    const hintKeys = ['fragment1', 'fragment2', 'fragment3', 'Tip1', 'Tip2', 'Tip3'];
     const hints: Hint[] = [];
 
-    hintKeys.forEach(key => {
+    hintKeys.forEach((key) => {
       const value = (item as any)[key];
       if (value) {
         const hintIndex = hints.length; // 👈 tylko realne hinty
@@ -55,40 +55,38 @@ function transformQuizWithHints(data: InputItem[]): OutputItem[] {
           id: `${hintIndex}`,
           label: `Postać ${hintIndex + 1}`,
           content: value,
-          penaltyPercent: hintIndex * 20
+          penaltyPercent: hintIndex * 20,
         });
       }
     });
-
 
     return {
       id,
       answers,
       question,
       hints,
-      revealedAnswers: []
+      revealedAnswers: [],
     };
   });
   console.log(JSON.stringify(tmp, null, 2));
-  return tmp
+  return tmp;
 }
-
 
 const inputData: InputItem[] = [
   {
-    "Id": 1,
-    "Answer": "Christopher Nolan",
-    "Tip1": "PRESTIŻ",
-    "Tip2": "MROCZNY RYCERZ",
-    "Tip3": "-"
+    Id: 1,
+    Answer: 'Christopher Nolan',
+    Tip1: 'PRESTIŻ',
+    Tip2: 'MROCZNY RYCERZ',
+    Tip3: '-',
   },
   {
-    "Id": 2,
-    "Answer": "Justin Lin",
-    "Tip1": "SZYBCY I WŚCIEKLI 5",
-    "Tip2": "SZYBCY I WŚCIEKLI 6",
-    "Tip3": "SZYBCY I WŚCIEKLI 9"
-  }
-]
+    Id: 2,
+    Answer: 'Justin Lin',
+    Tip1: 'SZYBCY I WŚCIEKLI 5',
+    Tip2: 'SZYBCY I WŚCIEKLI 6',
+    Tip3: 'SZYBCY I WŚCIEKLI 9',
+  },
+];
 
 export const quizData = transformQuizWithHints(inputData);

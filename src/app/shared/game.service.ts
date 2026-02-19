@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GameService {
-
   private resetSubject = new Subject<void>();
   reset$ = this.resetSubject.asObservable();
 
@@ -35,14 +34,10 @@ export class GameService {
 
     const currentTeam = this.currentTeamSubject.value;
 
-    const currentIndex = teams.findIndex(
-      (t: any) => t.name === currentTeam
-    );
+    const currentIndex = teams.findIndex((t: any) => t.name === currentTeam);
 
     const nextIndex =
-      currentIndex === -1 || currentIndex === teams.length - 1
-        ? 0
-        : currentIndex + 1;
+      currentIndex === -1 || currentIndex === teams.length - 1 ? 0 : currentIndex + 1;
 
     this.currentTeamSubject.next(teams[nextIndex].name);
   }
