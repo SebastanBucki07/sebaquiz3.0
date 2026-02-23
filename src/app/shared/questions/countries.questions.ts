@@ -52,7 +52,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Aruba",
     "capital": "Oranjestad",
-    "region": "Americas",
+    "region": "Ameryka Południowa",
     "borders": [],
     "area": 180,
     "population": 107566
@@ -80,7 +80,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Dominikana",
     "capital": "Santo Domingo",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": ["Haiti"],
     "area": 48671,
     "population": 10771504
@@ -265,7 +265,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Jamajka",
     "capital": "Kingston",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 10991,
     "population": 2825544
@@ -426,7 +426,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Dominika",
     "capital": "Roseau",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 751,
     "population": 67408
@@ -671,7 +671,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Antigua i Barbuda",
     "capital": "Saint John's",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 442,
     "population": 103603
@@ -741,7 +741,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Curaçao",
     "capital": "Willemstad",
-    "region": "Americas",
+    "region": "Ameryka Południowa",
     "borders": [],
     "area": 444,
     "population": 156115
@@ -930,14 +930,14 @@ export const DANE_PANSTW =
   }, {
     "country": "Saint Lucia",
     "capital": "Castries",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 616,
     "population": 184100
   }, {
     "country": "Portoryko",
     "capital": "San Juan",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 8870,
     "population": 3203295
@@ -965,7 +965,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Grenada",
     "capital": "Saint George's",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 344,
     "population": 109021
@@ -1203,7 +1203,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Saint-Martin",
     "capital": "Marigot",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": ["Sint Maarten"],
     "area": 53,
     "population": 31496
