@@ -27,13 +27,4 @@ export class GameStateService {
       this.teamsSubject.next(teams.sort((a, b) => b.points - a.points));
     }
   }
-
-  addPoint(teamId: number, points: number = 1): void {
-    const teams = this.teamsSubject.value.map((team) =>
-      team.id === teamId ? { ...team, points: team.points + 1 } : team
-    );
-
-    localStorage.setItem('teams', JSON.stringify(teams));
-    this.teamsSubject.next(teams);
-  }
 }
