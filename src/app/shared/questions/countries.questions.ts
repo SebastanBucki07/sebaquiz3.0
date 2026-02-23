@@ -9,25 +9,11 @@ export const DANE_PANSTW =
     "population": 101343800
   }, {
     "country": "Gujana Francuska",
-    "capital": "Cayenne",
+    "capital": "Kajenna",
     "region": "Ameryka Południowa",
     "borders": ["Brazylia", "Surinam"],
     "area": 83534,
     "population": 292354
-  }, {
-    "country": "Sint Maarten",
-    "capital": "Philipsburg",
-    "region": "Americas",
-    "borders": ["Saint-Martin"],
-    "area": 34,
-    "population": 41349
-  }, {
-    "country": "Brytyjskie Wyspy Dziewicze",
-    "capital": "Road Town",
-    "region": "Americas",
-    "borders": [],
-    "area": 151,
-    "population": 39471
   }, {
     "country": "Papua-Nowa Gwinea",
     "capital": "Port Moresby",
@@ -44,7 +30,7 @@ export const DANE_PANSTW =
     "population": 20206953
   }, {
     "country": "Węgry",
-    "capital": "Budapest",
+    "capital": "Budapeszt",
     "region": "Europa",
     "borders": ["Austria", "Chorwacja", "Rumunia", "Serbia", "Słowacja", "Słowenia", "Ukraina"],
     "area": 93028,
@@ -58,7 +44,7 @@ export const DANE_PANSTW =
     "population": 53057212
   }, {
     "country": "Dżibuti",
-    "capital": "Djibouti",
+    "capital": "Dżibuti",
     "region": "Afryka",
     "borders": ["Erytrea", "Etiopia", "Somalia"],
     "area": 23200,
@@ -79,7 +65,7 @@ export const DANE_PANSTW =
     "population": 100179
   }, {
     "country": "Dania",
-    "capital": "Copenhagen",
+    "capital": "Kopenhaga",
     "region": "Europa",
     "borders": ["Niemcy"],
     "area": 43094,
@@ -106,13 +92,37 @@ export const DANE_PANSTW =
     "area": 1964375,
     "population": 130575786
   }, {
-    "country": "Zjednoczone Królestwo",
-    "capital": "London",
+    "country": "Anglia",
+    "capital": "Londyn",
     "region": "Europa",
-    "borders": ["Irlandia"],
-    "area": 244376,
-    "population": 69281437
-  }, {
+    "borders": ["Walia,Szkocja"],
+    "area": 130279,
+    "population": 56286961
+  },
+    {
+      "country": "Szkocja",
+      "capital": "Edynburg",
+      "region": "Europa",
+      "borders": ["Anglia"],
+      "area": 78782,
+      "population": 5404700
+    },
+    {
+      "country": "Walia",
+      "capital": "Cardiff",
+      "region": "Europa",
+      "borders": ["Anglia"],
+      "area": 20779,
+      "population": 3113200
+    },
+    {
+      "country": "Irlandia Północna",
+      "capital": "Belfast",
+      "region": "Europa",
+      "borders": ["Anglia"],
+      "area": 14130,
+      "population": 1881641
+    }, {
     "country": "Turcja",
     "capital": "Ankara",
     "region": "Azja",
@@ -128,7 +138,7 @@ export const DANE_PANSTW =
     "population": 1822612
   }, {
     "country": "Ukraina",
-    "capital": "Kyiv",
+    "capital": "Kijów",
     "region": "Europa",
     "borders": ["Białoruś", "Węgry", "Mołdawia", "Polska", "Rumunia", "Rosja", "Słowacja"],
     "area": 603550,
@@ -142,9 +152,9 @@ export const DANE_PANSTW =
     "population": 28517000
   }, {
     "country": "Burkina Faso",
-    "capital": "Ouagadougou",
+    "capital": "Wagadugu",
     "region": "Afryka",
-    "borders": ["Benin", "WybrzeŻe Kości Słoniowej", "Ghana", "Mali", "Niger", "Togo"],
+    "borders": ["Benin", "Wybrzeże Kości Słoniowej", "Ghana", "Mali", "Niger", "Togo"],
     "area": 272967,
     "population": 24070553
   }, {
@@ -156,7 +166,7 @@ export const DANE_PANSTW =
     "population": 3607000
   }, {
     "country": "Sahara Zachodnia",
-    "capital": "El Aaiún",
+    "capital": "Al-Ujun",
     "region": "Afryka",
     "borders": ["Algieria", "Mauretania", "Maroko"],
     "area": 266000,
@@ -169,26 +179,12 @@ export const DANE_PANSTW =
     "area": 116,
     "population": 103267
   }, {
-    "country": "Saint-Barthélemy",
-    "capital": "Gustavia",
-    "region": "Americas",
-    "borders": [],
-    "area": 21,
-    "population": 10562
-  }, {
     "country": "Luksemburg",
-    "capital": "Luxembourg",
+    "capital": "Luksemburg",
     "region": "Europa",
     "borders": ["Belgia", "Francja", "Niemcy"],
     "area": 2586,
     "population": 681973
-  }, {
-    "country": "Reunion",
-    "capital": "Saint-Denis",
-    "region": "Afryka",
-    "borders": [],
-    "area": 2511,
-    "population": 896175
   }, {
     "country": "Tuvalu",
     "capital": "Funafuti",
@@ -205,14 +201,14 @@ export const DANE_PANSTW =
     "population": 5309625
   }, {
     "country": "Rumunia",
-    "capital": "Bucharest",
+    "capital": "Bukareszt",
     "region": "Europa",
     "borders": ["Bułgaria", "Węgry", "Mołdawia", "Serbia", "Ukraina"],
     "area": 238391,
     "population": 19036031
   }, {
     "country": "Grecja",
-    "capital": "Athens",
+    "capital": "Ateny",
     "region": "Europa",
     "borders": ["Albania", "Bułgaria", "Turcja", "Macedonia Północna"],
     "area": 131990,
@@ -221,30 +217,16 @@ export const DANE_PANSTW =
     "country": "Zimbabwe",
     "capital": "Harare",
     "region": "Afryka",
-    "borders": ["Botswana", "Mozambik", "Południowa Afryka", "Zambia"],
+    "borders": ["Botswana", "Mozambik", "RPA", "Zambia"],
     "area": 390757,
     "population": 17073087
   }, {
     "country": "Monako",
-    "capital": "Monaco",
+    "capital": "Monako",
     "region": "Europa",
     "borders": ["Francja"],
     "area": 2.02,
     "population": 38423
-  }, {
-    "country": "Svalbard i Jan Mayen",
-    "capital": "Longyearbyen",
-    "region": "Europa",
-    "borders": [],
-    "area": 61399,
-    "population": 2530
-  }, {
-    "country": "Wyspy Dziewicze Stanów Zjednoczonych",
-    "capital": "Charlotte Amalie",
-    "region": "Americas",
-    "borders": [],
-    "area": 347,
-    "population": 87146
   }, {
     "country": "Kanada",
     "capital": "Ottawa",
@@ -254,14 +236,14 @@ export const DANE_PANSTW =
     "population": 41651653
   }, {
     "country": "Ghana",
-    "capital": "Accra",
+    "capital": "Akra",
     "region": "Afryka",
-    "borders": ["Burkina Faso", "WybrzeŻe Kości Słoniowej", "Togo"],
+    "borders": ["Burkina Faso", "Wybrzeże Kości Słoniowej", "Togo"],
     "area": 238533,
     "population": 33742380
   }, {
-    "country": "WybrzeŻe Kości Słoniowej",
-    "capital": "Yamoussoukro",
+    "country": "Wybrzeże Kości Słoniowej",
+    "capital": "Jamusukro",
     "region": "Afryka",
     "borders": ["Burkina Faso", "Ghana", "Gwinea", "Liberia", "Mali"],
     "area": 322463,
@@ -275,7 +257,7 @@ export const DANE_PANSTW =
     "population": 51316756
   }, {
     "country": "Mauretania",
-    "capital": "Nouakchott",
+    "capital": "Nawakszut",
     "region": "Afryka",
     "borders": ["Algieria", "Mali", "Senegal", "Sahara Zachodnia"],
     "area": 1030700,
@@ -289,7 +271,7 @@ export const DANE_PANSTW =
     "population": 2825544
   }, {
     "country": "Sudan",
-    "capital": "Juba",
+    "capital": "Chartum",
     "region": "Afryka",
     "borders": ["Republika Środkowoafrykańska", "Demokratyczna Republika Konga", "Etiopia", "Kenia", "Sudan", "Uganda"],
     "area": 619745,
@@ -303,18 +285,11 @@ export const DANE_PANSTW =
     "population": 455500
   }, {
     "country": "Singapur",
-    "capital": "Singapore",
+    "capital": "Singapur",
     "region": "Azja",
     "borders": [],
     "area": 710,
     "population": 6110200
-  }, {
-    "country": "Wyspa Bouveta",
-    "capital": null,
-    "region": "Antarctic",
-    "borders": [],
-    "area": 49,
-    "population": 0
   }, {
     "country": "Nowa Zelandia",
     "capital": "Wellington",
@@ -324,7 +299,7 @@ export const DANE_PANSTW =
     "population": 5324700
   }, {
     "country": "Hiszpania",
-    "capital": "Madrid",
+    "capital": "Madryt",
     "region": "Europa",
     "borders": ["Andora", "Francja", "Gibraltar", "Portugalia", "Maroko"],
     "area": 505992,
@@ -338,7 +313,7 @@ export const DANE_PANSTW =
     "population": 114123600
   }, {
     "country": "Polska",
-    "capital": "Warsaw",
+    "capital": "Warszawa",
     "region": "Europa",
     "borders": ["Białoruś", "Czechy", "Niemcy", "Litwa", "Rosja", "Słowacja", "Ukraina"],
     "area": 312679,
@@ -352,7 +327,7 @@ export const DANE_PANSTW =
     "population": 6142180
   }, {
     "country": "Nowa Kaledonia",
-    "capital": "Nouméa",
+    "capital": "Numea",
     "region": "Oceania",
     "borders": [],
     "area": 18575,
@@ -373,39 +348,32 @@ export const DANE_PANSTW =
     "population": 23317031
   }, {
     "country": "Włochy",
-    "capital": "Rome",
+    "capital": "Rzym",
     "region": "Europa",
     "borders": ["Austria", "Francja", "San Marino", "Słowenia", "Szwajcaria", "Watykan"],
     "area": 301336,
     "population": 58927633
   }, {
     "country": "Wyspy Alandzkie",
-    "capital": "Mariehamn",
+    "capital": "Maarianhamina",
     "region": "Europa",
     "borders": [],
     "area": 1580,
     "population": 30654
   }, {
     "country": "Algieria",
-    "capital": "Algiers",
+    "capital": "Algier",
     "region": "Afryka",
     "borders": ["Tunezja", "Libia", "Niger", "Sahara Zachodnia", "Mauretania", "Mali", "Maroko"],
     "area": 2381741,
     "population": 47400000
   }, {
     "country": "Andora",
-    "capital": "Andorra la Vella",
+    "capital": "Andora",
     "region": "Europa",
     "borders": ["Francja", "Hiszpania"],
     "area": 468,
     "population": 88406
-  }, {
-    "country": "Turks i Caicos",
-    "capital": "Cockburn Town",
-    "region": "Americas",
-    "borders": [],
-    "area": 948,
-    "population": 50828
   }, {
     "country": "Islandia",
     "capital": "Reykjavik",
@@ -415,7 +383,7 @@ export const DANE_PANSTW =
     "population": 391810
   }, {
     "country": "Czad",
-    "capital": "N'Djamena",
+    "capital": "Ndżamena",
     "region": "Afryka",
     "borders": ["Kamerun", "Republika Środkowoafrykańska", "Libia", "Niger", "Nigeria", "Sudan"],
     "area": 1284000,
@@ -423,7 +391,7 @@ export const DANE_PANSTW =
   }, {
     "country": "Bahamy",
     "capital": "Nassau",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 13943,
     "population": 398165
@@ -450,18 +418,11 @@ export const DANE_PANSTW =
     "population": 105564
   }, {
     "country": "Izrael",
-    "capital": "Jerusalem",
+    "capital": "Jerozolima",
     "region": "Azja",
     "borders": ["Egipt", "Jordania", "Liban", "Palestyna", "Syria"],
     "area": 21937,
     "population": 10134800
-  }, {
-    "country": "Anguilla",
-    "capital": "The Valley",
-    "region": "Americas",
-    "borders": [],
-    "area": 91,
-    "population": 16010
   }, {
     "country": "Dominika",
     "capital": "Roseau",
@@ -473,48 +434,41 @@ export const DANE_PANSTW =
     "country": "Mali",
     "capital": "Bamako",
     "region": "Afryka",
-    "borders": ["Algieria", "Burkina Faso", "Gwinea", "WybrzeŻe Kości Słoniowej", "Mauretania", "Niger", "Senegal"],
+    "borders": ["Algieria", "Burkina Faso", "Gwinea", "Wybrzeże Kości Słoniowej", "Mauretania", "Niger", "Senegal"],
     "area": 1240192,
     "population": 22395489
   }, {
     "country": "Mozambik",
     "capital": "Maputo",
     "region": "Afryka",
-    "borders": ["Malawi", "Południowa Afryka", "Suazi", "Tanzania", "Zambia", "Zimbabwe"],
+    "borders": ["Malawi", "RPA", "Suazi", "Tanzania", "Zambia", "Zimbabwe"],
     "area": 801590,
     "population": 34090466
   }, {
     "country": "Syria",
-    "capital": "Damascus",
+    "capital": "Damaszek",
     "region": "Azja",
     "borders": ["Irak", "Izrael", "Jordania", "Liban", "Turcja"],
     "area": 185180,
     "population": 25620000
   }, {
     "country": "Jemen",
-    "capital": "Sana'a",
+    "capital": "Sana",
     "region": "Azja",
     "borders": ["Oman", "Arabia Saudyjska"],
     "area": 527968,
     "population": 32684503
   }, {
     "country": "Słowacja",
-    "capital": "Bratislava",
+    "capital": "Bratysława",
     "region": "Europa",
     "borders": ["Austria", "Czechy", "Węgry", "Polska", "Ukraina"],
     "area": 49037,
     "population": 5413813
   }, {
-    "country": "Martynika",
-    "capital": "Fort-de-France",
-    "region": "Americas",
-    "borders": [],
-    "area": 1128,
-    "population": 349925
-  }, {
     "country": "Saint Vincent i Grenadyny",
     "capital": "Kingstown",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 389,
     "population": 110872
@@ -541,35 +495,28 @@ export const DANE_PANSTW =
     "population": 38000
   }, {
     "country": "Katar",
-    "capital": "Doha",
+    "capital": "Ad-Dauha",
     "region": "Azja",
     "borders": ["Arabia Saudyjska"],
     "area": 11586,
     "population": 3173024
   }, {
     "country": "Wyspy Świętego Tomasza i Książęca",
-    "capital": "São Tomé",
+    "capital": "Sao Tome",
     "region": "Afryka",
     "borders": [],
     "area": 964,
     "population": 209607
   }, {
     "country": "Uzbekistan",
-    "capital": "Tashkent",
+    "capital": "Taszkent",
     "region": "Azja",
     "borders": ["Afganistan", "Kazachstan", "Kirgistan", "Tadżykistan", "Turkmenistan"],
     "area": 447400,
     "population": 37859698
   }, {
-    "country": "Georgia Południowa i Sandwich Południowy",
-    "capital": "King Edward Point",
-    "region": "Antarctic",
-    "borders": [],
-    "area": 3903,
-    "population": 0
-  }, {
     "country": "Szwecja",
-    "capital": "Stockholm",
+    "capital": "Sztokholm",
     "region": "Europa",
     "borders": ["Finlandia", "Norwegia"],
     "area": 450295,
@@ -582,26 +529,12 @@ export const DANE_PANSTW =
     "area": 21,
     "population": 11680
   }, {
-    "country": "Majotta",
-    "capital": "Mamoudzou",
-    "region": "Afryka",
-    "borders": [],
-    "area": 374,
-    "population": 320901
-  }, {
     "country": "Nikaragua",
     "capital": "Managua",
     "region": "Ameryka Środkowa",
     "borders": ["Kostaryka", "Honduras"],
     "area": 130373,
     "population": 6803886
-  }, {
-    "country": "Brytyjskie Terytorium Oceanu Indyjskiego",
-    "capital": "Diego Garcia",
-    "region": "Afryka",
-    "borders": [],
-    "area": 60,
-    "population": 0
   }, {
     "country": "Vanuatu",
     "capital": "Port Vila",
@@ -625,42 +558,42 @@ export const DANE_PANSTW =
     "population": 25950000
   }, {
     "country": "Indonezja",
-    "capital": "Jakarta",
+    "capital": "Dżakarta",
     "region": "Azja",
     "borders": ["Timor Wschodni", "Malezja", "Papua-Nowa Gwinea"],
     "area": 1904569,
     "population": 284438782
   }, {
     "country": "Belgia",
-    "capital": "Brussels",
+    "capital": "Bruksela",
     "region": "Europa",
     "borders": ["Francja", "Niemcy", "Luksemburg", "Holandia"],
     "area": 30528,
     "population": 11825551
   }, {
     "country": "Czechy",
-    "capital": "Prague",
+    "capital": "Praga",
     "region": "Europa",
     "borders": ["Austria", "Niemcy", "Polska", "Słowacja"],
     "area": 78865,
     "population": 10882341
   }, {
     "country": "Republika Środkowoafrykańska",
-    "capital": "Bangui",
+    "capital": "Bangi",
     "region": "Afryka",
     "borders": ["Kamerun", "Czad", "Demokratyczna Republika Konga", "Kongo", "Sudan", "Sudan"],
     "area": 622984,
     "population": 6470307
   }, {
     "country": "Panama",
-    "capital": "Panama City",
+    "capital": "Panama",
     "region": "Ameryka Środkowa",
     "borders": ["Kolumbia", "Kostaryka"],
     "area": 75417,
     "population": 4064780
   }, {
-    "country": "Emiraty Arabskie",
-    "capital": "Abu Dhabi",
+    "country": "Zjednocozne Emiraty Arabskie",
+    "capital": "Abu Zabi",
     "region": "Azja",
     "borders": ["Oman", "Arabia Saudyjska"],
     "area": 83600,
@@ -688,7 +621,7 @@ export const DANE_PANSTW =
     "population": 2188
   }, {
     "country": "Mołdawia",
-    "capital": "Chișinău",
+    "capital": "Kiszyniów",
     "region": "Europa",
     "borders": ["Rumunia", "Ukraina"],
     "area": 33847,
@@ -752,20 +685,20 @@ export const DANE_PANSTW =
   }, {
     "country": "Gwadelupa",
     "capital": "Basse-Terre",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 1628,
     "population": 378561
   }, {
     "country": "Oman",
-    "capital": "Muscat",
+    "capital": "Maskat",
     "region": "Azja",
     "borders": ["Arabia Saudyjska", "Emiraty Arabskie", "Jemen"],
     "area": 309500,
     "population": 5343630
   }, {
     "country": "Korea Południowa",
-    "capital": "Seoul",
+    "capital": "Seul",
     "region": "Azja",
     "borders": ["Korea Północna"],
     "area": 100210,
@@ -788,7 +721,7 @@ export const DANE_PANSTW =
     "country": "Lesotho",
     "capital": "Maseru",
     "region": "Afryka",
-    "borders": ["Południowa Afryka"],
+    "borders": ["RPA"],
     "area": 30355,
     "population": 2116427
   }, {
@@ -800,7 +733,7 @@ export const DANE_PANSTW =
     "population": 123210000
   }, {
     "country": "Turkmenistan",
-    "capital": "Ashgabat",
+    "capital": "Aszchabad",
     "region": "Azja",
     "borders": ["Afganistan", "Iran", "Kazachstan", "Uzbekistan"],
     "area": 488100,
@@ -814,14 +747,14 @@ export const DANE_PANSTW =
     "population": 156115
   }, {
     "country": "Chorwacja",
-    "capital": "Zagreb",
+    "capital": "Zagrzeb",
     "region": "Europa",
     "borders": ["Bośnia i Hercegowina", "Węgry", "Czarnogóra", "Serbia", "Słowenia"],
     "area": 56594,
     "population": 3866233
   }, {
     "country": "Wyspy Owcze",
-    "capital": "Tórshavn",
+    "capital": "Thorshavn",
     "region": "Europa",
     "borders": [],
     "area": 1393,
@@ -835,28 +768,21 @@ export const DANE_PANSTW =
     "population": 784043
   }, {
     "country": "Słowenia",
-    "capital": "Ljubljana",
+    "capital": "Lublana",
     "region": "Europa",
     "borders": ["Austria", "Chorwacja", "Włochy", "Węgry"],
     "area": 20273,
     "population": 2130638
   }, {
     "country": "Laos",
-    "capital": "Vientiane",
+    "capital": "Wientian",
     "region": "Azja",
     "borders": ["Mjanma", "Kambodża", "Chiny", "Tajlandia", "Wietnam"],
     "area": 236800,
     "population": 7647000
   }, {
-    "country": "Guernsey",
-    "capital": "St. Peter Port",
-    "region": "Europa",
-    "borders": [],
-    "area": 78,
-    "population": 64781
-  }, {
     "country": "Liban",
-    "capital": "Beirut",
+    "capital": "Bejrut",
     "region": "Azja",
     "borders": ["Izrael", "Syria"],
     "area": 10452,
@@ -869,36 +795,29 @@ export const DANE_PANSTW =
     "area": 316,
     "population": 574250
   }, {
-    "country": "Kajmany",
-    "capital": "George Town",
-    "region": "Americas",
-    "borders": [],
-    "area": 264,
-    "population": 84738
-  }, {
     "country": "Serbia",
-    "capital": "Belgrade",
+    "capital": "Belgrad",
     "region": "Europa",
     "borders": ["Bośnia i Hercegowina", "Bułgaria", "Chorwacja", "Węgry", "Kosowo", "Macedonia Północna", "Czarnogóra", "Rumunia"],
     "area": 77589,
     "population": 6567783
   }, {
     "country": "Łotwa",
-    "capital": "Riga",
+    "capital": "Ryga",
     "region": "Europa",
     "borders": ["Białoruś", "Estonia", "Litwa", "Rosja"],
     "area": 64559,
     "population": 1829000
   }, {
     "country": "Demokratyczna Republika Konga",
-    "capital": "Kinshasa",
+    "capital": "Kinszasa",
     "region": "Afryka",
     "borders": ["Angola", "Burundi", "Republika Środkowoafrykańska", "Kongo", "Rwanda", "Sudan", "Tanzania", "Uganda", "Zambia"],
     "area": 2344858,
     "population": 112832000
   }, {
     "country": "Cypr",
-    "capital": "Nicosia",
+    "capital": "Nikozja",
     "region": "Europa",
     "borders": [],
     "area": 9251,
@@ -919,7 +838,7 @@ export const DANE_PANSTW =
     "population": 9077691
   }, {
     "country": "Irak",
-    "capital": "Baghdad",
+    "capital": "Bagdad",
     "region": "Azja",
     "borders": ["Iran", "Jordania", "Kuwejt", "Arabia Saudyjska", "Syria", "Turcja"],
     "area": 438317,
@@ -928,19 +847,12 @@ export const DANE_PANSTW =
     "country": "Botswana",
     "capital": "Gaborone",
     "region": "Afryka",
-    "borders": ["Namibia", "Południowa Afryka", "Zambia", "Zimbabwe"],
+    "borders": ["Namibia", "RPA", "Zambia", "Zimbabwe"],
     "area": 582000,
     "population": 2359609
   }, {
-    "country": "Antyle Holenderskie",
-    "capital": "Kralendijk",
-    "region": "Americas",
-    "borders": [],
-    "area": 328,
-    "population": 31980
-  }, {
     "country": "Somalia",
-    "capital": "Mogadishu",
+    "capital": "Mogadiszu",
     "region": "Afryka",
     "borders": ["Dżibuti", "Etiopia", "Kenia"],
     "area": 637657,
@@ -961,28 +873,21 @@ export const DANE_PANSTW =
     "population": 4000921
   }, {
     "country": "Madagaskar",
-    "capital": "Antananarivo",
+    "capital": "Antananarywa",
     "region": "Afryka",
     "borders": [],
     "area": 587041,
     "population": 31727042
   }, {
-    "country": "Dalekie Wyspy Mniejsze Stanów Zjednoczonych",
-    "capital": "Washington DC",
-    "region": "Ameryka Północna",
-    "borders": [],
-    "area": 34.2,
-    "population": 0
-  }, {
     "country": "Libia",
-    "capital": "Tripoli",
+    "capital": "Trypolis",
     "region": "Afryka",
     "borders": ["Algieria", "Czad", "Egipt", "Niger", "Sudan", "Tunezja"],
     "area": 1759540,
     "population": 7459000
   }, {
     "country": "Austria",
-    "capital": "Vienna",
+    "capital": "Wiedeń",
     "region": "Europa",
     "borders": ["Czechy", "Niemcy", "Węgry", "Włochy", "Liechtenstein", "Słowacja", "Słowenia", "Szwajcaria"],
     "area": 83871,
@@ -1003,14 +908,14 @@ export const DANE_PANSTW =
     "population": 111652998
   }, {
     "country": "Kamerun",
-    "capital": "Yaoundé",
+    "capital": "Jaunde",
     "region": "Afryka",
     "borders": ["Republika Środkowoafrykańska", "Czad", "Kongo", "Gwinea Równikowa", "Gabon", "Nigeria"],
     "area": 475442,
     "population": 29442327
   }, {
     "country": "Egipt",
-    "capital": "Cairo",
+    "capital": "Kair",
     "region": "Afryka",
     "borders": ["Izrael", "Libia", "Palestyna", "Sudan"],
     "area": 1002450,
@@ -1052,21 +957,21 @@ export const DANE_PANSTW =
     "population": 2363314
   }, {
     "country": "Rosja",
-    "capital": "Moscow",
+    "capital": "Moskwa",
     "region": "Europa",
     "borders": ["Azerbejdżan", "Białoruś", "Chiny", "Estonia", "Finlandia", "Gruzja", "Kazachstan", "Korea Północna", "Łotwa", "Litwa", "Mongolia", "Norwegia", "Polska", "Ukraina"],
     "area": 17098246,
     "population": 146028325
   }, {
     "country": "Grenada",
-    "capital": "St. George's",
+    "capital": "Saint George's",
     "region": "Americas",
     "borders": [],
     "area": 344,
     "population": 109021
   }, {
     "country": "Kosowo",
-    "capital": "Pristina",
+    "capital": "Prisztina",
     "region": "Europa",
     "borders": ["Albania", "Macedonia Północna", "Czarnogóra", "Serbia"],
     "area": 10908,
@@ -1087,18 +992,11 @@ export const DANE_PANSTW =
     "population": 919901
   }, {
     "country": "Białoruś",
-    "capital": "Minsk",
+    "capital": "Mińsk",
     "region": "Europa",
     "borders": ["Łotwa", "Litwa", "Polska", "Rosja", "Ukraina"],
     "area": 207600,
     "population": 9109280
-  }, {
-    "country": "Wyspy Heard i McDonalda",
-    "capital": null,
-    "region": "Antarctic",
-    "borders": [],
-    "area": 412,
-    "population": 0
   }, {
     "country": "Tanzania",
     "capital": "Dodoma",
@@ -1129,14 +1027,14 @@ export const DANE_PANSTW =
     "population": 18100436
   }, {
     "country": "Watykan",
-    "capital": "Vatican City",
+    "capital": "Watykan",
     "region": "Europa",
     "borders": ["Włochy"],
     "area": 0.49,
     "population": 882
   }, {
     "country": "Sri Lanka",
-    "capital": "Sri Jayawardenepura Kotte",
+    "capital": "Kolombo",
     "region": "Azja",
     "borders": [],
     "area": 65610,
@@ -1150,7 +1048,7 @@ export const DANE_PANSTW =
     "population": 5650325
   }, {
     "country": "Polinezja Francuska",
-    "capital": "Papeetē",
+    "capital": "Papeete",
     "region": "Oceania",
     "borders": [],
     "area": 4167,
@@ -1173,12 +1071,12 @@ export const DANE_PANSTW =
     "country": "Suazi",
     "capital": "Mbabane",
     "region": "Afryka",
-    "borders": ["Mozambik", "Południowa Afryka"],
+    "borders": ["Mozambik", "RPA"],
     "area": 17364,
     "population": 1235549
   }, {
     "country": "Szwajcaria",
-    "capital": "Bern",
+    "capital": "Berno",
     "region": "Europa",
     "borders": ["Austria", "Francja", "Włochy", "Liechtenstein", "Niemcy"],
     "area": 41284,
@@ -1191,7 +1089,7 @@ export const DANE_PANSTW =
     "area": 18272,
     "population": 900869
   }, {
-    "country": "Południowa Afryka",
+    "country": "RPA",
     "capital": "Pretoria",
     "region": "Afryka",
     "borders": ["Botswana", "Lesotho", "Mozambik", "Namibia", "Suazi", "Zimbabwe"],
@@ -1220,16 +1118,16 @@ export const DANE_PANSTW =
     "population": 34350244
   }, {
     "country": "Tadżykistan",
-    "capital": "Dushanbe",
+    "capital": "Duszanbe",
     "region": "Azja",
     "borders": ["Afganistan", "Chiny", "Kirgistan", "Uzbekistan"],
     "area": 143100,
     "population": 10499000
   }, {
     "country": "Gwinea",
-    "capital": "Conakry",
+    "capital": "Konakry",
     "region": "Afryka",
-    "borders": ["WybrzeŻe Kości Słoniowej", "Gwinea Bissau", "Liberia", "Mali", "Senegal", "Sierra Leone"],
+    "borders": ["Wybrzeże Kości Słoniowej", "Gwinea Bissau", "Liberia", "Mali", "Senegal", "Sierra Leone"],
     "area": 245857,
     "population": 14363931
   }, {
@@ -1254,22 +1152,15 @@ export const DANE_PANSTW =
     "area": 2166086,
     "population": 56542
   }, {
-    "country": "Wyspa Man",
-    "capital": "Douglas",
-    "region": "Europa",
-    "borders": [],
-    "area": 572,
-    "population": 84530
-  }, {
     "country": "Litwa",
-    "capital": "Vilnius",
+    "capital": "Wilno",
     "region": "Europa",
     "borders": ["Białoruś", "Łotwa", "Polska", "Rosja"],
     "area": 65300,
     "population": 2894886
   }, {
     "country": "Mongolia",
-    "capital": "Ulan Bator",
+    "capital": "Ułan Bator",
     "region": "Azja",
     "borders": ["Chiny", "Rosja"],
     "area": 1564110,
@@ -1289,22 +1180,8 @@ export const DANE_PANSTW =
     "area": 2724900,
     "population": 20426568
   }, {
-    "country": "Francuskie Terytoria Południowe i Antarktyczne",
-    "capital": "Port-aux-Français",
-    "region": "Antarctic",
-    "borders": [],
-    "area": 7747,
-    "population": 400
-  }, {
-    "country": "Hongkong",
-    "capital": "City of Victoria",
-    "region": "Azja",
-    "borders": ["Chiny"],
-    "area": 1104,
-    "population": 7527500
-  }, {
     "country": "Palestyna",
-    "capital": "Ramallah",
+    "capital": "Jerozolima",
     "region": "Azja",
     "borders": ["Izrael", "Egipt", "Jordania"],
     "area": 6220,
@@ -1332,7 +1209,7 @@ export const DANE_PANSTW =
     "population": 31496
   }, {
     "country": "Armenia",
-    "capital": "Yerevan",
+    "capital": "Erywań",
     "region": "Azja",
     "borders": ["Azerbejdżan", "Gruzja", "Iran", "Turcja"],
     "area": 29743,
@@ -1373,22 +1250,15 @@ export const DANE_PANSTW =
     "area": 45227,
     "population": 1369995
   }, {
-    "country": "Montserrat",
-    "capital": "Plymouth",
-    "region": "Americas",
-    "borders": [],
-    "area": 102,
-    "population": 4386
-  }, {
     "country": "Gwinea Równikowa",
-    "capital": "Malabo",
+    "capital": "Oyala",
     "region": "Afryka",
     "borders": ["Kamerun", "Gabon"],
     "area": 28051,
     "population": 1668768
   }, {
     "country": "Nigeria",
-    "capital": "Abuja",
+    "capital": "Abudża",
     "region": "Afryka",
     "borders": ["Benin", "Kamerun", "Czad", "Niger"],
     "area": 923768,
@@ -1409,9 +1279,9 @@ export const DANE_PANSTW =
     "population": 36828330
   }, {
     "country": "Namibia",
-    "capital": "Windhoek",
+    "capital": "Windhuk",
     "region": "Afryka",
-    "borders": ["Angola", "Botswana", "Południowa Afryka", "Zambia"],
+    "borders": ["Angola", "Botswana", "RPA", "Zambia"],
     "area": 825615,
     "population": 3022401
   }, {
@@ -1457,22 +1327,8 @@ export const DANE_PANSTW =
     "area": 796095,
     "population": 241499431
   }, {
-    "country": "Guam",
-    "capital": "Hagåtña",
-    "region": "Oceania",
-    "borders": [],
-    "area": 549,
-    "population": 153836
-  }, {
-    "country": "Makau",
-    "capital": null,
-    "region": "Azja",
-    "borders": ["Chiny"],
-    "area": 30,
-    "population": 685900
-  }, {
     "country": "Nepal",
-    "capital": "Kathmandu",
+    "capital": "Katmandu",
     "region": "Azja",
     "borders": ["Chiny", "Indie"],
     "area": 147181,
@@ -1486,7 +1342,7 @@ export const DANE_PANSTW =
     "population": 1417492000
   }, {
     "country": "Kirgistan",
-    "capital": "Bishkek",
+    "capital": "Biszkek",
     "region": "Azja",
     "borders": ["Chiny", "Kazachstan", "Tadżykistan", "Uzbekistan"],
     "area": 199951,
@@ -1513,15 +1369,8 @@ export const DANE_PANSTW =
     "area": 26338,
     "population": 14104969
   }, {
-    "country": "Wallis i Futuna",
-    "capital": "Mata-Utu",
-    "region": "Oceania",
-    "borders": [],
-    "area": 142,
-    "population": 11620
-  }, {
     "country": "Stany Zjednoczone",
-    "capital": "Washington, D.C.",
+    "capital": "Washington",
     "region": "Ameryka Północna",
     "borders": ["Kanada", "Meksyk"],
     "area": 9525067,
@@ -1535,7 +1384,7 @@ export const DANE_PANSTW =
     "population": 53330978
   }, {
     "country": "Gambia",
-    "capital": "Banjul",
+    "capital": "Bandżul",
     "region": "Afryka",
     "borders": ["Senegal"],
     "area": 10689,
@@ -1557,20 +1406,20 @@ export const DANE_PANSTW =
   }, {
     "country": "Barbados",
     "capital": "Bridgetown",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 430,
     "population": 267800
   }, {
     "country": "Saint Kitts i Nevis",
     "capital": "Basseterre",
-    "region": "Americas",
+    "region": "Ameryka Północna",
     "borders": [],
     "area": 261,
     "population": 51320
   }, {
     "country": "Kiribati",
-    "capital": "South Tarawa",
+    "capital": "Tarawa",
     "region": "Oceania",
     "borders": [],
     "area": 811,
@@ -1584,21 +1433,14 @@ export const DANE_PANSTW =
     "population": 1391221
   }, {
     "country": "Arabia Saudyjska",
-    "capital": "Riyadh",
+    "capital": "Rijad",
     "region": "Azja",
     "borders": ["Irak", "Jordania", "Kuwejt", "Oman", "Katar", "Emiraty Arabskie", "Jemen"],
     "area": 2149690,
     "population": 35300280
   }, {
-    "country": "Wyspy Kokosowe",
-    "capital": "West Island",
-    "region": "Oceania",
-    "borders": [],
-    "area": 14,
-    "population": 593
-  }, {
     "country": "San Marino",
-    "capital": "City of San Marino",
+    "capital": "San Marino",
     "region": "Europa",
     "borders": ["Włochy"],
     "area": 61,
@@ -1611,15 +1453,8 @@ export const DANE_PANSTW =
     "area": 241550,
     "population": 45905417
   }, {
-    "country": "Saint-Pierre i Miquelon",
-    "capital": "Saint-Pierre",
-    "region": "Ameryka Północna",
-    "borders": [],
-    "area": 242,
-    "population": 5819
-  }, {
     "country": "Portugalia",
-    "capital": "Lisbon",
+    "capital": "Lizbona",
     "region": "Europa",
     "borders": ["Hiszpania"],
     "area": 92090,
@@ -1667,13 +1502,6 @@ export const DANE_PANSTW =
     "area": 4033,
     "population": 491233
   }, {
-    "country": "Antarktyka",
-    "capital": null,
-    "region": "Antarctic",
-    "borders": [],
-    "area": 14000000,
-    "population": 1300
-  }, {
     "country": "Australia",
     "capital": "Canberra",
     "region": "Oceania",
@@ -1696,7 +1524,7 @@ export const DANE_PANSTW =
     "population": 51662000
   }, {
     "country": "Gwatemala",
-    "capital": "Guatemala City",
+    "capital": "Guatemala",
     "region": "Ameryka Środkowa",
     "borders": ["Belize", "Salwador", "Honduras", "Meksyk"],
     "area": 108889,
@@ -1724,7 +1552,7 @@ export const DANE_PANSTW =
     "population": 9748007
   }, {
     "country": "Francja",
-    "capital": "Paris",
+    "capital": "Paryż",
     "region": "Europa",
     "borders": ["Andora", "Belgia", "Niemcy", "Włochy", "Luksemburg", "Monako", "Hiszpania", "Szwajcaria"],
     "area": 543908,
@@ -1740,12 +1568,12 @@ export const DANE_PANSTW =
     "country": "Liberia",
     "capital": "Monrovia",
     "region": "Afryka",
-    "borders": ["Gwinea", "WybrzeŻe Kości Słoniowej", "Sierra Leone"],
+    "borders": ["Gwinea", "Wybrzeże Kości Słoniowej", "Sierra Leone"],
     "area": 111369,
     "population": 5248621
   }, {
     "country": "Kuwejt",
-    "capital": "Kuwait City",
+    "capital": "Kuwejt",
     "region": "Azja",
     "borders": ["Irak", "Arabia Saudyjska"],
     "area": 17818,
