@@ -47,6 +47,7 @@ import { LOGO_FRAGMENTY } from './questions/logoFragments.questions';
 import { HERBY_PILKARSKIE } from './questions/footballCrestsFragments.questions';
 import { FRAGMENT_FLAG } from './questions/flagFragments.questions';
 import { WYPISZ_WSPOLNE } from './questions/writtings.questions';
+import { HYMNY_PANSTWOWE } from './questions/nationalAnthems.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -234,6 +235,7 @@ export class QuestionService {
     if (type === 'music' && name === 'Jaka to Melodia?') return JAKA_TO_MELODIA;
     if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
     if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
+    if (type === 'music' && name === 'Hymny Panstwowe') return HYMNY_PANSTWOWE;
 
     if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;

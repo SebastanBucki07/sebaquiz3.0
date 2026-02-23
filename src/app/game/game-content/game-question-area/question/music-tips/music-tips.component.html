@@ -1,6 +1,9 @@
 <!-- TRYB SERIAL -->
 <div
-  *ngIf="answerLabel === 'Serial' || answerLabel === 'Impreza'; else normalMode"
+  *ngIf="
+    answerLabel === 'Serial' || answerLabel === 'Impreza' || answerLabel === 'Hymn';
+    else normalMode
+  "
   class="button-group"
 >
   <div class="button-wrapper">
@@ -16,6 +19,7 @@
     </button>
     <span *ngIf="answerLabel === 'Serial'" class="label">Jaki to Serial?</span>
     <span *ngIf="answerLabel === 'Impreza'" class="label">Jaka to Impreza?</span>
+    <span *ngIf="answerLabel === 'Hymn'" class="label">Jakiego kraju to hymn?</span>
   </div>
 </div>
 
