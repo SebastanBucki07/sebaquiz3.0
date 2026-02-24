@@ -48,6 +48,8 @@ import { HERBY_PILKARSKIE } from './questions/footballCrestsFragments.questions'
 import { FRAGMENT_FLAG } from './questions/flagFragments.questions';
 import { WYPISZ_WSPOLNE } from './questions/writtings.questions';
 import { HYMNY_PANSTWOWE } from './questions/nationalAnthems.questions';
+import {CountryQuestion} from './questionCountriesClass.helper';
+import {DANE_PANSTW} from './questions/countries.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -213,6 +215,8 @@ export class QuestionService {
     if (type === 'one-answer' && name === 'Nazwy stadionów') return STADIONY;
     if (type === 'one-answer' && name === 'Piłka nożna - wielkie imprezy') return PILKA_NOZNA;
     if (type === 'one-answer' && name === 'Przysłowia') return PRZYSLOWIA;
+    if (type === 'one-answer' && name === 'Stolice krajów')
+      return new CountryQuestion(DANE_PANSTW).getCountryCapitalQuestions()
 
     if (type === 'hints' && name === 'Lektury') return BOOKS;
     if (type === 'hints' && name === 'Fragmenty piosenek') return FRAGMENTY_PIOSENEK;
@@ -243,6 +247,18 @@ export class QuestionService {
 
     if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych')
       return WYPISZ_WSPOLNE;
+
+    if (type === 'writting-category' && name === 'Państwa z kontynentu')
+      return new CountryQuestion(DANE_PANSTW).getCountriesByAllContinents()
+
+    if (type === 'writting-category' && name === 'Stolice z kontynentu')
+      return new CountryQuestion(DANE_PANSTW).getCapitalsByAllContinents()
+
+    if (type === 'writting-category' && name === 'Państwa na literę')
+      return new CountryQuestion(DANE_PANSTW).getCountriesByAllLetters()
+
+    if (type === 'writting-category' && name === 'Stolice na literę')
+      return new CountryQuestion(DANE_PANSTW).getCapitalsByAllLetters()
 
     return [];
   }
