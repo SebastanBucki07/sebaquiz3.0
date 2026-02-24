@@ -71,12 +71,18 @@ export class GameContentComponent implements OnInit {
     this.router.navigate(['game/category', category.type, category.name, category.type]);
   }
 
-  colors: string[][] = [
-    ['#3f51b5', '#2196f3'],
-    ['#e91e63', '#f06292'],
-    ['#009688', '#26a69a'],
-    ['#ff9800', '#ffc107'],
-    ['#673ab7', '#9575cd'],
-    ['#4caf50', '#81c784'],
-  ];
+  drawRandomQuestion(): void {
+    const availableCategories = this.selectedCategories.filter(
+      category => this.getRemainingQuestions(category) > 0
+    );
+
+    if (availableCategories.length === 0) {
+      return;
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableCategories.length);
+    const randomCategory = availableCategories[randomIndex];
+
+    this.goToCategory(randomCategory);
+  }
 }

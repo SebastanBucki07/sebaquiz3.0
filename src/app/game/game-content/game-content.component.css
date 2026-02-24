@@ -50,3 +50,15 @@
   cursor: not-allowed;
   background: #b0bec5;
 }
+
+.random-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.random-button {
+  font-size: 18px;
+  padding: 12px 28px;
+  border-radius: 30px;
+}
