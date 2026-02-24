@@ -4,6 +4,17 @@
   <mat-card-title class="category-title">Wybierz kategorię</mat-card-title>
 </mat-card>
 
+<div class="random-button-wrapper">
+  <button
+    mat-raised-button
+    color="accent"
+    class="random-button"
+    (click)="drawRandomQuestion()"
+  >
+    🎲 Wylosuj pytanie
+  </button>
+</div>
+
 <div class="category-grid">
   <button
     mat-raised-button
@@ -14,6 +25,8 @@
     (click)="goToCategory(category)"
   >
     {{ category.name | titlecase }}
-    <span *ngIf="getRemainingQuestions(category) > 0">({{ getRemainingQuestions(category) }})</span>
+    <span *ngIf="getRemainingQuestions(category) > 0">
+      ({{ getRemainingQuestions(category) }})
+    </span>
   </button>
 </div>
