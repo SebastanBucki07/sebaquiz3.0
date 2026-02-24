@@ -51,8 +51,8 @@ export class WritingCategoryComponent implements OnInit {
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
 
-  private correctAudio = new Audio('assets/sounds/correct.mp3');
-  private wrongAudio = new Audio('assets/sounds/wrong.mp3');
+  private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
+  private wrongAudio = new Audio('/sounds/1z10zle.mp3');
 
   constructor(
     private questionService: QuestionService,
