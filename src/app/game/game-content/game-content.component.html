@@ -5,12 +5,7 @@
 </mat-card>
 
 <div class="random-button-wrapper">
-  <button
-    mat-raised-button
-    color="accent"
-    class="random-button"
-    (click)="drawRandomQuestion()"
-  >
+  <button mat-raised-button color="accent" class="random-button" (click)="drawRandomQuestion()">
     🎲 Wylosuj pytanie
   </button>
 </div>
@@ -25,8 +20,6 @@
     (click)="goToCategory(category)"
   >
     {{ category.name | titlecase }}
-    <span *ngIf="getRemainingQuestions(category) > 0">
-      ({{ getRemainingQuestions(category) }})
-    </span>
+    <span *ngIf="getRemainingQuestions(category) > 0">({{ getRemainingQuestions(category) }})</span>
   </button>
 </div>
