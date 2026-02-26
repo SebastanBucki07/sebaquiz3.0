@@ -73,7 +73,7 @@ export class GameContentComponent implements OnInit {
 
   drawRandomQuestion(): void {
     const availableCategories = this.selectedCategories.filter(
-      category => this.getRemainingQuestions(category) > 0
+      (category) => this.getRemainingQuestions(category) > 0
     );
 
     if (availableCategories.length === 0) {

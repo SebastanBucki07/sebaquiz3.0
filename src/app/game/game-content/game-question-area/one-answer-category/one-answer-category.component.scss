@@ -4,18 +4,18 @@
   margin: 32px auto;
   padding: 24px;
   border-radius: 20px;
-  text-align: center;       // wyśrodkowanie całego tekstu w karcie
-box-sizing: border-box;
+  text-align: center; // wyśrodkowanie całego tekstu w karcie
+  box-sizing: border-box;
 }
 
 .card-header-center {
-  justify-content: center;  // wyśrodkowanie headera
+  justify-content: center; // wyśrodkowanie headera
 }
 
 .card-content-center {
   display: flex;
   flex-direction: column;
-  align-items: center;      // wyśrodkowanie zawartości
+  align-items: center; // wyśrodkowanie zawartości
 }
 
 .card-title-large {
@@ -34,7 +34,7 @@ box-sizing: border-box;
   font-size: 18px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: rgba(0,0,0,0.75);
+  color: rgba(0, 0, 0, 0.75);
 }
 
 .hint-item-center {
@@ -64,7 +64,7 @@ box-sizing: border-box;
 
 .question-image {
   width: 100%;
-  max-width: 300px;      // desktop
+  max-width: 300px; // desktop
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease;
@@ -92,6 +92,6 @@ box-sizing: border-box;
     font-size: 28px !important;
   }
   .question-image {
-    max-width: 200px;    // mniejszy na telefonie
+    max-width: 200px; // mniejszy na telefonie
   }
 }

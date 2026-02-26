@@ -1,12 +1,9 @@
 <ng-container *ngIf="question$ | async as question">
   <mat-card class="question-card-responsive">
-
     <mat-card-header class="card-header-center">
-
       <div class="question-image-wrapper">
-        <img src="question.png" alt="Question" class="question-image">
+        <img src="question.png" alt="Question" class="question-image" />
       </div>
-
     </mat-card-header>
 
     <mat-card-content class="card-content-center">
@@ -16,15 +13,12 @@
 
       <mat-divider class="divider-large"></mat-divider>
 
-
       <mat-list>
         <mat-list-item *ngFor="let hint of question.hints" class="hint-item-center">
           <mat-icon matListItemIcon color="accent" class="icon-large">lightbulb</mat-icon>
           <div matLine class="hint-text-large">{{ hint }}</div>
         </mat-list-item>
       </mat-list>
-
     </mat-card-content>
-
   </mat-card>
 </ng-container>
