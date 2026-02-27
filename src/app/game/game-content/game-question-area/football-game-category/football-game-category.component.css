@@ -1,0 +1,475 @@
+/* ======= OGÓLNY UKŁAD ======= */
+
+.pitch-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  background: white;
+}
+
+/* ======= NAZWA MECZU ======= */
+.match-name {
+  font-size: 24px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+/* ======= BOISKO ======= */
+
+.pitch {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(#2d8f3a, #2aa84a);
+  border: 4px solid #2b6b2f;
+  border-radius: 12px;
+  padding: 14px;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Linia środkowa */
+.midline {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.75);
+  z-index: 1;
+}
+
+/* ======= ROZKŁAD DRUŻYN NA BOISKU ======= */
+.team {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  z-index: 2;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+/* ======= ELEMENT ZAWODNIKA ======= */
+
+.player {
+  width: 100px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.28);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:15px;
+}
+
+/* Flaga w tle */
+.player img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Po odgadnięciu — pokaż bardziej wyraźną ramkę */
+.player.guessed {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.player-name {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;      /* 🔥 kluczowe */
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+  z-index: 5;
+  background: rgba(255,255,255,0.9);
+}
+
+/* ======= MASKA REZERWOWYCH ======= */
+
+.player-mask {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 4;
+}
+
+/* ======= REZERWOWI ======= */
+
+.substitutes-top,
+.substitutes-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.substitutes-top h4,
+.substitutes-bottom h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #000;
+}
+
+.substitute {
+  width: 100px;
+  height: 60px;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.28);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:15px;
+}
+
+/* ======= INPUT ======= */
+
+.input-wrapper {
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.input-wrapper input {
+  padding: 6px 10px;
+  font-size: 16px;
+  width: 240px;
+}
+
+.input-wrapper button {
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+/* ===================== */
+/* LICZNIK */
+/* ===================== */
+
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.counter-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  padding: 14px 28px;
+  border-radius: 50px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.counter-number {
+  background: white;
+  color: #1976d2;
+  padding: 8px 18px;
+  border-radius: 24px;
+  font-size: 22px;
+  font-weight: bold;
+  min-width: 40px;
+  text-align: center;
+}
+
+/* ===================== */
+/* GRID ODPOWIEDZI */
+/* ===================== */
+
+.answers-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  perspective: 1000px;
+  transition: 0.2s;
+}
+
+.answers-wrapper.flash {
+  animation: flashRed 0.4s;
+}
+
+@keyframes flashRed {
+  0% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background: transparent;
+  }
+}
+
+/* ===================== */
+/* KAFELKI ODPOWIEDZI */
+/* ===================== */
+
+.answer-box {
+  width: 190px;
+  height: 95px;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .answer-box {
+    width: 150px;
+    height: 75px;
+  }
+}
+
+.flip-card {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 14px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.05rem;
+  border: 3px solid #1976d2;
+}
+
+/* przód */
+.flip-card-front {
+  background: linear-gradient(135deg, rgba(25, 118, 210, 0.15), rgba(25, 118, 210, 0.05));
+}
+
+/* tył */
+.flip-card-back {
+  background: #2e7d32;
+  color: white;
+  transform: rotateY(180deg);
+  flex-direction: column;
+  gap: 6px;
+  transition: 0.3s ease;
+}
+
+/* nieodgadnięte po zakończeniu */
+.flip-card-back.unanswered {
+  background-color: #ffebee !important;
+  color: #c62828 !important;
+}
+
+/* nazwa drużyny pod odpowiedzią */
+.answer-owner {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+/* ===================== */
+/* TABLICA WYNIKÓW */
+/* ===================== */
+
+.players-card {
+  padding: 28px;
+}
+
+.score-table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  font-size: 19px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.row {
+  display: flex;
+  transition: 0.3s ease;
+}
+
+.alt-row {
+  background: linear-gradient(90deg, #f8fbff, #eef6ff);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 14px;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.row:last-child .cell {
+  border-bottom: none;
+}
+
+.cell:last-child {
+  border-right: none;
+}
+
+/* ===== Pierwsza kolumna ===== */
+
+.header-cell {
+  flex: 0 0 170px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #f1f1f1, #e4e4e4);
+  color: #333;
+  font-size: 17px;
+}
+
+/* ===== Kolumny drużyn ===== */
+
+.team-cell {
+  flex: 1;
+  background-color: white;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+/* ===== Aktywna drużyna ===== */
+.active-column {
+  position: relative;
+  border-radius: 12px;
+  font-weight: 700;
+  transform: scale(1.03);
+  z-index: 2;
+  overflow: hidden;
+}
+
+/* efekt gradientowego obramowania */
+.active-column::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.8;
+}
+
+/* ===== Punkty ===== */
+
+.points-cell {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+/* ===== Odgadnięte odpowiedzi ===== */
+
+.answers-count-cell {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* ===================== */
+/* KULKI SZANS */
+/* ===================== */
+
+.chances-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.chance-dot,
+.lost-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.chance-dot {
+  background-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+.lost-dot {
+  background-color: #e53935;
+  opacity: 0.35;
+}
+
+/* ===================== */
+/* WYŚRODKOWANIE PYTANIA I WYNIKU */
+/* ===================== */
+
+.question-card h2,
+.result-card h2,
+.result-card h3.winner-name,
+.result-card p {
+  text-align: center;
+  margin: 0.6em 0;
+}
+
+.result-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.guessed-by {
+  font-size: 11px;
+  margin-top: 2px;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.guessed-by {
+  margin-top: 6px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: #1976d2;
+  color: white;
+  font-weight: 600;
+}

@@ -1,1 +1,195 @@
-<p>football-game-category works!</p>
+<div class="pitch-container">
+
+</div>
+<ng-container *ngIf="question as q">
+  <!-- ===================== -->
+  <!-- PYTANIE -->
+  <!-- ===================== -->
+  <mat-card class="question-card">
+    <h2>{{ q.question }}</h2>
+  </mat-card>
+
+  <!-- ===================== -->
+  <!-- GRACZE / KONIEC -->
+  <!-- ===================== -->
+  <ng-container *ngIf="!gameFinished; else gameEnd">
+    <mat-card class="players-card">
+      <div class="score-table">
+        <!-- ===== NAZWY DRUŻYN ===== -->
+        <div class="row header-row">
+          <div class="cell header-cell">Drużyna</div>
+
+          <div
+            class="cell team-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+            [class.active-column]="player.id === activePlayerId"
+          >
+            {{ player.name }}
+          </div>
+        </div>
+
+        <!-- ===== SZANSE ===== -->
+        <div class="row alt-row">
+          <div class="cell header-cell">Szanse</div>
+
+          <div
+            class="cell team-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+            [class.active-column]="player.id === activePlayerId"
+          >
+            <div class="chances-wrapper">
+              <span class="chance-dot" *ngFor="let c of [].constructor(player.chancesLeft)"></span>
+
+              <span
+                class="lost-dot"
+                *ngFor="let c of [].constructor(MAX_CHANCES - player.chancesLeft)"
+              ></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row alt-row">
+          <div class="cell header-cell">Odgadnięte odpowiedzi</div>
+          <div
+            class="cell team-cell answers-count-cell"
+            *ngFor="let player of players"
+            [class.active-column]="player.id === activePlayerId"
+            [style.background-color]="player.color"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+          >
+            {{ player.correctAnswers }}
+          </div>
+        </div>
+
+        <!-- ===== PUNKTY ===== -->
+        <div class="row">
+          <div class="cell header-cell">Punkty</div>
+
+          <div
+            class="cell team-cell points-cell"
+            *ngFor="let player of players"
+            [style.background-color]="player.color"
+            [class.active-column]="player.id === activePlayerId"
+            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+          >
+            {{ player.calculatedPoints || 0 }}
+          </div>
+        </div>
+      </div>
+    </mat-card>
+
+    <!-- ===================== -->
+    <!-- INPUT -->
+    <!-- ===================== -->
+    <mat-card class="control-card" *ngIf="!gameFinished && currentPlayer">
+      <h3>Tura: {{ currentPlayer.name }}</h3>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <input
+          matInput
+          placeholder="Wpisz odpowiedź"
+          [(ngModel)]="inputValue"
+          (keyup.enter)="submitAnswer()"
+        />
+      </mat-form-field>
+
+      <button mat-raised-button color="primary" (click)="submitAnswer()">Zatwierdź</button>
+    </mat-card>
+  </ng-container>
+
+  <!-- ===================== -->
+  <!-- KONIEC GRY -->
+  <!-- ===================== -->
+  <ng-template #gameEnd>
+    <mat-card class="result-card">
+      <div *ngIf="winner; else noWinner">
+        <h2 class="winner-name">🏆 {{ winner.name }} wygrywa!</h2>
+        <h3>Zdobyte punkty: {{ winner.calculatedPoints }}</h3>
+      </div>
+
+      <ng-template #noWinner>
+        <p>Brak zwycięzcy</p>
+      </ng-template>
+    </mat-card>
+  </ng-template>
+
+
+  <div class="pitch-wrapper">
+
+    <!-- Rezerwowi górnej drużyny – obok boiska (góra-lewa) -->
+    <div class="substitutes-top">
+      <h4>Rezerwowi</h4>
+      <div *ngFor="let p of firstSubstitutes" class="player substitute" [class.guessed]="p.guessed">
+        <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+        <div class="player-name" *ngIf="p.guessed">
+          {{ p.surname }}
+          <div class="guessed-by" *ngIf="p.guessedBy">
+            🎯 {{ p.guessedBy }}
+            </div>
+        </div>
+        <div class="player-mask" *ngIf="!p.guessed"><span></span></div>
+      </div>
+    </div>
+
+    <!-- Boisko -->
+    <div class="pitch">
+      <!-- Linia środkowa -->
+      <div class="midline"></div>
+
+      <!-- Drużyna górna -->
+      <div class="team team-top">
+        <ng-container *ngFor="let row of firstRows">
+          <div class="row">
+            <ng-container *ngFor="let p of row">
+              <div class="player" [class.goalkeeper]="p.position === 1">
+                <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+                <div class="player-name" *ngIf="p.guessed">{{ p.surname }}</div>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+
+      <!-- Drużyna dolna -->
+      <div class="team team-bottom">
+        <ng-container *ngFor="let row of secondRows">
+          <div class="row">
+            <ng-container *ngFor="let p of row">
+              <div class="player" [class.goalkeeper]="p.position === 1">
+                <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+                <div class="player-name" *ngIf="p.guessed">
+                  {{ p.surname }}
+                  <div class="guessed-by" *ngIf="p.guessedBy">
+                    🎯 {{ p.guessedBy }}
+                  </div>
+                </div>
+              </div>
+            </ng-container>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+
+
+    <!-- Rezerwowi dolnej drużyny – obok boiska (dół-prawa) -->
+    <div class="substitutes-bottom">
+      <h4>Rezerwowi</h4>
+      <div *ngFor="let p of secondSubstitutes" class="player substitute" [class.guessed]="p.guessed">
+        <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+        <div class="player-name" *ngIf="p.guessed">
+          {{ p.surname }}
+          <div class="guessed-by" *ngIf="p.guessedBy">
+            🎯 {{ p.guessedBy }}
+          </div>
+        </div>
+        <div class="player-mask" *ngIf="!p.guessed"><span></span></div>
+      </div>
+    </div>
+  </div>
+
+
+</ng-container>

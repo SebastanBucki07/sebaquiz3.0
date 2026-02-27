@@ -18,7 +18,7 @@ export class GameStateService {
     this.loadTeams();
   }
 
-  private loadTeams(): void {
+  public loadTeams(): void {
     const storedTeams = localStorage.getItem('teams');
 
     if (storedTeams) {
@@ -26,5 +26,9 @@ export class GameStateService {
 
       this.teamsSubject.next(teams.sort((a, b) => b.points - a.points));
     }
+  }
+
+  resetState(): void {
+    this.teamsSubject.next([]);
   }
 }
