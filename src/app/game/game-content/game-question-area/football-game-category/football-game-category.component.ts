@@ -1,20 +1,17 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {GameStateService, Team} from '../../../../shared/game-state.service';
-import {GameService} from '../../../../shared/game.service';
-import {PointsService} from '../../../../shared/points-service.service';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {Observable} from 'rxjs';
-import {Question} from '../../../../shared/questions/question.interface';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {footballPlayer, footballTeam} from '../../../../shared/answers/answerItem.interface';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { GameStateService, Team } from '../../../../shared/game-state.service';
+import { GameService } from '../../../../shared/game.service';
+import { PointsService } from '../../../../shared/points-service.service';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { Observable } from 'rxjs';
+import { Question } from '../../../../shared/questions/question.interface';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { footballPlayer, footballTeam } from '../../../../shared/answers/answerItem.interface';
 
 interface Player extends Team {
   mistakes: number;
@@ -68,37 +65,28 @@ export class FootballGameCategoryComponent implements OnInit {
     private pointsService: PointsService
   ) {}
 
-  get activePlayerId(): number | null {
-    return this.currentPlayer?.id ?? null;
-  }
-
   ngOnInit(): void {
-
     this.question$ = this.questionService.question$;
 
     this.gameStateService.teams$.subscribe((teams) => {
       const colors = this.generateTeamColor(teams.length);
-
-      this.players = teams.map((team, index) => ({
+      this.players = teams.map((team, i) => ({
         ...team,
         mistakes: 0,
         chancesLeft: this.MAX_CHANCES,
         correctAnswers: 0,
         calculatedPoints: 0,
-        color: colors[index],
+        color: colors[i],
       }));
     });
 
-    this.question$.subscribe((q) => {
+    this.question$.subscribe(q => {
       if (!q) return;
       this.question = q;
-
       const football = q.answers?.[0]?.football;
       if (!football) return;
 
-      // 🔥 Stwórz kopie piłkarzy, żeby nie nadpisywać oryginałów
       const clonePlayer = (p: footballPlayer) => ({ ...p, guessed: false, guessedBy: undefined });
-
       const cloneTeam = (team: footballTeam) => ({
         ...team,
         footballers: team.footballers.map(clonePlayer),
@@ -107,12 +95,15 @@ export class FootballGameCategoryComponent implements OnInit {
 
       this.firstRows = this.buildRows(cloneTeam(football.firstTeam));
       this.secondRows = this.buildRows(cloneTeam(football.secondTeam), true);
-
       this.firstSubstitutes = cloneTeam(football.firstTeam).substitutes;
       this.secondSubstitutes = cloneTeam(football.secondTeam).substitutes;
 
       this.remainingAnswers = this.getAllPlayersCount();
     });
+  }
+
+  get activePlayerId(): number | null {
+    return this.currentPlayer?.id ?? null;
   }
 
   get currentPlayer(): Player | null {
@@ -124,7 +115,6 @@ export class FootballGameCategoryComponent implements OnInit {
 
     const needle = this.normalize(this.inputValue);
 
-    // 1️⃣ wszystkie lokalne kopie graczy
     const allPlayers = [
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
@@ -132,21 +122,18 @@ export class FootballGameCategoryComponent implements OnInit {
       ...this.secondSubstitutes
     ];
 
-    // 2️⃣ szukamy gracza (najpierw dokładne dopasowanie, potem literówki)
     let player = allPlayers.find(p => !p.guessed && this.normalize(p.surname) === needle)
       || allPlayers.find(p => !p.guessed && this.areSimilar(needle, p.surname));
 
     if (player) {
       player.guessed = true;
       player.guessedBy = this.currentPlayer.name;
-
       this.currentPlayer.correctAnswers++;
+      this.updateLivePoints();
 
       this.correctAudio.currentTime = 0;
       this.correctAudio.play();
-
       this.remainingAnswers--;
-
       this.refreshView();
 
       if (this.remainingAnswers <= 0) {
@@ -157,25 +144,26 @@ export class FootballGameCategoryComponent implements OnInit {
     } else {
       this.currentPlayer.mistakes++;
       this.currentPlayer.chancesLeft--;
-
       this.wrongAudio.currentTime = 0;
       this.wrongAudio.play();
-
       this.nextPlayer();
     }
-
     this.inputValue = '';
   }
 
-  private refreshView(): void {
-    this.firstRows = [...this.firstRows];
-    this.secondRows = [...this.secondRows];
-    this.firstSubstitutes = [...this.firstSubstitutes];
-    this.secondSubstitutes = [...this.secondSubstitutes];
+  private updateLivePoints(): void {
+    const total = this.getAllPlayersCount();
+    this.players = this.players.map(p => ({
+      ...p,
+      calculatedPoints: total === 0 ? 0 :
+        p.correctAnswers === total ? this.MAX_POINTS :
+          Math.ceil((p.correctAnswers / total) * this.MAX_POINTS)
+    }));
   }
 
   private finishGame(): void {
     this.gameFinished = true;
+    const totalPlayers = this.getAllPlayersCount();
 
     const allPlayers = [
       ...this.firstRows.flat(),
@@ -187,32 +175,28 @@ export class FootballGameCategoryComponent implements OnInit {
     allPlayers.forEach(p => {
       if (!p.guessed) {
         p.guessed = true;
-        p.guessedBy = undefined; // TS-friendly
+        p.guessedBy = undefined;
       }
     });
 
     this.refreshView();
 
-    // obliczenie punktów
-    const total = this.getAllPlayersCount();
-    this.players.forEach(p => {
-      p.calculatedPoints = Math.ceil((p.correctAnswers / total) * this.MAX_POINTS);
-    });
-
     const sorted = [...this.players].sort((a, b) => b.correctAnswers - a.correctAnswers);
     this.winner = sorted[0] ?? null;
 
-    if (this.winner) {
-      this.gameService.setCurrentTeam(this.winner.name);
-      this.pointsService.setPoints(this.winner.calculatedPoints ?? 0);
-    }
+    if (!this.winner) return;
+
+    const winnerPoints =
+      this.winner.correctAnswers === totalPlayers
+        ? this.MAX_POINTS
+        : Math.ceil((this.winner.correctAnswers / totalPlayers) * this.MAX_POINTS);
+
+    this.pointsService.setPoints(winnerPoints);
+    this.gameService.setCurrentTeam(this.winner.name);
   }
 
   nextPlayer(): void {
-    const alivePlayers = this.players.filter(
-      (p) => p.mistakes < this.MAX_CHANCES
-    );
-
+    const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
     if (alivePlayers.length <= 1) {
       this.finishGame();
       return;
@@ -220,22 +204,17 @@ export class FootballGameCategoryComponent implements OnInit {
 
     let next = this.currentPlayerIndex;
     let attempts = 0;
-
     do {
       next = (next + 1) % this.players.length;
       attempts++;
-    } while (
-      this.players[next].mistakes >= this.MAX_CHANCES &&
-      attempts <= this.players.length
-      );
+    } while (this.players[next].mistakes >= this.MAX_CHANCES && attempts <= this.players.length);
 
     this.currentPlayerIndex = next;
   }
 
-  private getAllPlayersCount(): number {
+  protected getAllPlayersCount(): number {
     const football = this.question?.answers?.[0]?.football;
     if (!football) return 0;
-
     return [
       ...football.firstTeam.footballers,
       ...(football.firstTeam.substitutes ?? []),
@@ -248,47 +227,45 @@ export class FootballGameCategoryComponent implements OnInit {
     const players = [...team.footballers];
     const formation = team.formation.split('-').map(n => +n);
     const rows: footballPlayer[][] = [];
-
-    formation.forEach(count => {
-      rows.push(players.splice(0, count));
-    });
-
+    formation.forEach(count => rows.push(players.splice(0, count)));
     return reverse ? rows.reverse() : rows;
   }
 
   private normalize(value: string): string {
-    return value
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
+    return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/-/g,' ').replace(/\s+/g,' ').trim();
   }
 
   private areSimilar(input: string, answer: string): boolean {
     const normInput = this.normalize(input);
     const normAnswer = this.normalize(answer);
-
-    // dokładne dopasowanie zawsze
     if (normInput === normAnswer) return true;
 
-    // sprawdzamy zamianę kolejności słów (Robert Lewandowski ↔ Lewandowski Robert)
-    const inputWords = normInput
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
-    const answerWords = normAnswer
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
+    const inputWords = normInput.split(/\s+/).sort().join(' ');
+    const answerWords = normAnswer.split(/\s+/).sort().join(' ');
     if (inputWords === answerWords) return true;
 
-    // ustalamy maksymalną liczbę literówek
     const maxEdits = normAnswer.length >= 7 ? 3 : 1;
-
-    // dopuszczamy literówki
     return this.levenshtein(normInput, normAnswer) <= maxEdits;
+  }
+
+  private levenshtein(a: string, b: string): number {
+    const matrix: number[][] = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
+    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
+    for (let i = 1; i <= a.length; i++) {
+      for (let j = 1; j <= b.length; j++) {
+        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+        matrix[i][j] = Math.min(matrix[i-1][j]+1, matrix[i][j-1]+1, matrix[i-1][j-1]+cost);
+      }
+    }
+    return matrix[a.length][b.length];
+  }
+
+  private refreshView(): void {
+    this.firstRows = [...this.firstRows];
+    this.secondRows = [...this.secondRows];
+    this.firstSubstitutes = [...this.firstSubstitutes];
+    this.secondSubstitutes = [...this.secondSubstitutes];
   }
 
   isCountryCode(c: string | undefined): boolean {
@@ -303,7 +280,6 @@ export class FootballGameCategoryComponent implements OnInit {
   private generateTeamColor(count: number): string[] {
     const colors: string[] = [];
     const baseHue = Math.floor(Math.random() * 360);
-
     for (let i = 0; i < count; i++) {
       const hue = (baseHue + (360 / count) * i) % 360;
       colors.push(`hsl(${hue}, 75%, 45%)`);
@@ -311,50 +287,5 @@ export class FootballGameCategoryComponent implements OnInit {
     return colors;
   }
 
-  handleMistake(): void {
-    const player = this.currentPlayer!;
-    player.mistakes++;
-    player.chancesLeft--;
-
-    if (player.mistakes >= this.MAX_CHANCES) {
-      const alivePlayers = this.players.filter(
-        (p) => p.mistakes < this.MAX_CHANCES
-      );
-
-      if (alivePlayers.length <= 1) {
-        this.finishGame();
-        return;
-      }
-
-      this.nextPlayer();
-      return;
-    }
-
-    this.nextPlayer();
-  }
-
-  // 🔹 Funkcja Levenshtein (do literówek)
-  private levenshtein(a: string, b: string): number {
-    const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
-      new Array(b.length + 1).fill(0)
-    );
-
-    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
-
-    for (let i = 1; i <= a.length; i++) {
-      for (let j = 1; j <= b.length; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1, // usunięcie
-          matrix[i][j - 1] + 1, // wstawienie
-          matrix[i - 1][j - 1] + cost // zamiana
-        );
-      }
-    }
-    return matrix[a.length][b.length];
-  }
-
-
-
+  protected readonly Math = Math;
 }
