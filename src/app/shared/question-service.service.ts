@@ -50,6 +50,7 @@ import { WYPISZ_WSPOLNE } from './questions/writtings.questions';
 import { HYMNY_PANSTWOWE } from './questions/nationalAnthems.questions';
 import { CountryQuestion } from './questionCountriesClass.helper';
 import { DANE_PANSTW } from './questions/countries.questions';
+import {MECZE_PILKARSKIE} from './questions/footaballGames.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -259,6 +260,9 @@ export class QuestionService {
 
     if (type === 'writting-category' && name === 'Stolice na literę')
       return new CountryQuestion(DANE_PANSTW).getCapitalsByAllLetters();
+
+    if (type === 'footballGame' && name === 'Był taki mecz')
+      return MECZE_PILKARSKIE
 
     return [];
   }
