@@ -50,7 +50,9 @@ import { WYPISZ_WSPOLNE } from './questions/writtings.questions';
 import { HYMNY_PANSTWOWE } from './questions/nationalAnthems.questions';
 import { CountryQuestion } from './questionCountriesClass.helper';
 import { DANE_PANSTW } from './questions/countries.questions';
-import {MECZE_PILKARSKIE} from './questions/footaballGames.questions';
+import { MECZE_PILKARSKIE } from './questions/footaballGames.questions';
+import { FootballGridLogic } from './football-grid.logic';
+import { footballers } from './footballers/footballers';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -261,8 +263,32 @@ export class QuestionService {
     if (type === 'writting-category' && name === 'Stolice na literę')
       return new CountryQuestion(DANE_PANSTW).getCapitalsByAllLetters();
 
-    if (type === 'footballGame' && name === 'Był taki mecz')
-      return MECZE_PILKARSKIE
+    if (type === 'footballGame' && name === 'Był taki mecz') return MECZE_PILKARSKIE;
+
+    // if (type === '' && name === 'Piłkarskie kółko i krzyżyk') {
+    //   return this.generateFootballGrid();
+    // }
+
+    // Wewnątrz getQuestions(type, name)
+    if (type === 'ticTacToe' && name === 'Piłkarskie kółko i krzyżyk') {
+      const pool = FootballGridLogic.generatePool(footballers, 50);
+
+      return pool.map((board) => ({
+        id: board.id,
+        question: 'Football Grid',
+        answers: [
+          {
+            value: JSON.stringify({
+              rows: board.rows,
+              cols: board.cols,
+              grid: board.grid,
+            }),
+          },
+        ],
+        showAnswer: false,
+        revealedAnswers: [],
+      }));
+    }
 
     return [];
   }

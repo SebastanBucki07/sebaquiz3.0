@@ -89,8 +89,13 @@
   <mat-card class="result-card" *ngIf="gameFinished">
     <div *ngIf="winner; else noWinner">
       <h2 class="winner-name">🏆 {{ winner.name }} wygrywa!</h2>
-      <h3>Zdobyte punkty:
-        {{ winner.correctAnswers === getAllPlayersCount() ? 10 : Math.ceil((winner.correctAnswers / getAllPlayersCount()) * 10) }}
+      <h3>
+        Zdobyte punkty:
+        {{
+          winner.correctAnswers === getAllPlayersCount()
+            ? 10
+            : Math.ceil((winner.correctAnswers / getAllPlayersCount()) * 10)
+        }}
       </h3>
     </div>
     <ng-template #noWinner>
@@ -122,7 +127,11 @@
           <div class="row">
             <ng-container *ngFor="let p of row">
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+                <img
+                  *ngIf="isCountryCode(p.country)"
+                  [src]="flagPngUrl(p.country)"
+                  [alt]="p.country"
+                />
                 <div class="player-name" *ngIf="p.guessed">{{ p.surname }}</div>
               </div>
             </ng-container>
@@ -136,7 +145,11 @@
           <div class="row">
             <ng-container *ngFor="let p of row">
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
+                <img
+                  *ngIf="isCountryCode(p.country)"
+                  [src]="flagPngUrl(p.country)"
+                  [alt]="p.country"
+                />
                 <div class="player-name" *ngIf="p.guessed">
                   {{ p.surname }}
                   <div class="guessed-by" *ngIf="p.guessedBy">🎯 {{ p.guessedBy }}</div>
@@ -151,7 +164,11 @@
     <!-- REZERWOWI DÓŁ -->
     <div class="substitutes-bottom">
       <h4>Rezerwowi</h4>
-      <div *ngFor="let p of secondSubstitutes" class="player substitute" [class.guessed]="p.guessed">
+      <div
+        *ngFor="let p of secondSubstitutes"
+        class="player substitute"
+        [class.guessed]="p.guessed"
+      >
         <img *ngIf="isCountryCode(p.country)" [src]="flagPngUrl(p.country)" [alt]="p.country" />
         <div class="player-name" *ngIf="p.guessed">
           {{ p.surname }}

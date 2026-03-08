@@ -36,7 +36,6 @@ interface Player extends Team {
   styleUrls: ['./football-game-category.component.css'],
 })
 export class FootballGameCategoryComponent implements OnInit {
-
   readonly MAX_CHANCES = 3;
   readonly MAX_POINTS = 10;
 
@@ -80,7 +79,7 @@ export class FootballGameCategoryComponent implements OnInit {
       }));
     });
 
-    this.question$.subscribe(q => {
+    this.question$.subscribe((q) => {
       if (!q) return;
       this.question = q;
       const football = q.answers?.[0]?.football;
@@ -90,7 +89,7 @@ export class FootballGameCategoryComponent implements OnInit {
       const cloneTeam = (team: footballTeam) => ({
         ...team,
         footballers: team.footballers.map(clonePlayer),
-        substitutes: team.substitutes?.map(clonePlayer) ?? []
+        substitutes: team.substitutes?.map(clonePlayer) ?? [],
       });
 
       this.firstRows = this.buildRows(cloneTeam(football.firstTeam));
@@ -119,11 +118,12 @@ export class FootballGameCategoryComponent implements OnInit {
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
       ...this.firstSubstitutes,
-      ...this.secondSubstitutes
+      ...this.secondSubstitutes,
     ];
 
-    let player = allPlayers.find(p => !p.guessed && this.normalize(p.surname) === needle)
-      || allPlayers.find(p => !p.guessed && this.areSimilar(needle, p.surname));
+    let player =
+      allPlayers.find((p) => !p.guessed && this.normalize(p.surname) === needle) ||
+      allPlayers.find((p) => !p.guessed && this.areSimilar(needle, p.surname));
 
     if (player) {
       player.guessed = true;
@@ -153,11 +153,14 @@ export class FootballGameCategoryComponent implements OnInit {
 
   private updateLivePoints(): void {
     const total = this.getAllPlayersCount();
-    this.players = this.players.map(p => ({
+    this.players = this.players.map((p) => ({
       ...p,
-      calculatedPoints: total === 0 ? 0 :
-        p.correctAnswers === total ? this.MAX_POINTS :
-          Math.ceil((p.correctAnswers / total) * this.MAX_POINTS)
+      calculatedPoints:
+        total === 0
+          ? 0
+          : p.correctAnswers === total
+            ? this.MAX_POINTS
+            : Math.ceil((p.correctAnswers / total) * this.MAX_POINTS),
     }));
   }
 
@@ -169,10 +172,10 @@ export class FootballGameCategoryComponent implements OnInit {
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
       ...this.firstSubstitutes,
-      ...this.secondSubstitutes
+      ...this.secondSubstitutes,
     ];
 
-    allPlayers.forEach(p => {
+    allPlayers.forEach((p) => {
       if (!p.guessed) {
         p.guessed = true;
         p.guessedBy = undefined;
@@ -196,7 +199,7 @@ export class FootballGameCategoryComponent implements OnInit {
   }
 
   nextPlayer(): void {
-    const alivePlayers = this.players.filter(p => p.mistakes < this.MAX_CHANCES);
+    const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
     if (alivePlayers.length <= 1) {
       this.finishGame();
       return;
@@ -219,20 +222,26 @@ export class FootballGameCategoryComponent implements OnInit {
       ...football.firstTeam.footballers,
       ...(football.firstTeam.substitutes ?? []),
       ...football.secondTeam.footballers,
-      ...(football.secondTeam.substitutes ?? [])
+      ...(football.secondTeam.substitutes ?? []),
     ].length;
   }
 
   private buildRows(team: footballTeam, reverse = false): footballPlayer[][] {
     const players = [...team.footballers];
-    const formation = team.formation.split('-').map(n => +n);
+    const formation = team.formation.split('-').map((n) => +n);
     const rows: footballPlayer[][] = [];
-    formation.forEach(count => rows.push(players.splice(0, count)));
+    formation.forEach((count) => rows.push(players.splice(0, count)));
     return reverse ? rows.reverse() : rows;
   }
 
   private normalize(value: string): string {
-    return value.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/-/g,' ').replace(/\s+/g,' ').trim();
+    return value
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/-/g, ' ')
+      .replace(/\s+/g, ' ')
+      .trim();
   }
 
   private areSimilar(input: string, answer: string): boolean {
@@ -249,13 +258,19 @@ export class FootballGameCategoryComponent implements OnInit {
   }
 
   private levenshtein(a: string, b: string): number {
-    const matrix: number[][] = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+    const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
+      new Array(b.length + 1).fill(0)
+    );
     for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
     for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
     for (let i = 1; i <= a.length; i++) {
       for (let j = 1; j <= b.length; j++) {
         const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(matrix[i-1][j]+1, matrix[i][j-1]+1, matrix[i-1][j-1]+cost);
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j] + 1,
+          matrix[i][j - 1] + 1,
+          matrix[i - 1][j - 1] + cost
+        );
       }
     }
     return matrix[a.length][b.length];

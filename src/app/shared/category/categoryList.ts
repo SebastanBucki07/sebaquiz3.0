@@ -24,23 +24,23 @@ export const CATEGORY_LIST: Category[] = [
   },
   {
     id: 4,
-    type: 'wpisywanie',
-    name: 'Wypisz wspólne',
-    basePoints: 10,
-    hints: [],
-  },
-  {
-    id: 5,
     type: 'music',
     name: 'Czołówki seriali',
     basePoints: 4,
     hints: [],
   },
   {
-    id: 6,
+    id: 5,
     type: 'one-answer',
     name: 'Film',
     basePoints: 3,
+    hints: [],
+  },
+  {
+    id: 6,
+    type: 'music',
+    name: 'Hymny Panstwowe',
+    basePoints: 4,
     hints: [],
   },
   {
@@ -442,12 +442,5 @@ export const CATEGORY_LIST: Category[] = [
         content: 'Główną rolę grał Brad Pitt.',
       },
     ],
-  },
-  {
-    id: 34,
-    type: 'music',
-    name: 'Hymny Panstwowe',
-    basePoints: 4,
-    hints: [],
-  },
+  }
 ];

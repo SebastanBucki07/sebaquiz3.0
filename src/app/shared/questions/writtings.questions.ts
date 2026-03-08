@@ -7525,7 +7525,7 @@ export const WYPISZ_WSPOLNE = [
         value: 'Atalanta',
       },
       {
-        value: 'Juventus Turyn',
+        value: 'Juventus FC',
       },
       {
         value: 'Udinese',
