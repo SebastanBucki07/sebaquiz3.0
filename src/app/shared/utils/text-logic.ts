@@ -1,16 +1,16 @@
 export const normalizeText = (value: string): string => {
   if (!value) return '';
   return value
-  .toLowerCase()
-  .normalize('NFD')
-  .replace(/[\u0300-\u036f]/g, '')
-  .replace(/-/g, ' ')
-  .replace(/\s+/g, ' ')
-  .trim();
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/-/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
 };
 
 export const levenshteinDistance = (a: string, b: string): number => {
-  const matrix: number[][] = Array.from({length: a.length + 1}, () =>
+  const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
     new Array(b.length + 1).fill(0)
   );
 
@@ -50,4 +50,3 @@ export const calculateGamePoints = (correct: number, total: number, multiplier: 
   // Zmieniamy na Math.round, żeby uniknąć zawyżania punktów
   return Math.ceil((correct / total) * multiplier);
 };
-

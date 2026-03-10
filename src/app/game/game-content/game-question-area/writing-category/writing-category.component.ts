@@ -1,18 +1,23 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {Question} from '../../../../shared/questions/question.interface';
-import {Observable} from 'rxjs';
-import {GameStateService, Team} from '../../../../shared/game-state.service';
-import {PointsService} from '../../../../shared/points-service.service';
-import {GameService} from '../../../../shared/game.service';
-import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
-import {playSound} from '../../../../shared/utils/audio-helper';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { Question } from '../../../../shared/questions/question.interface';
+import { Observable } from 'rxjs';
+import { GameStateService, Team } from '../../../../shared/game-state.service';
+import { PointsService } from '../../../../shared/points-service.service';
+import { GameService } from '../../../../shared/game.service';
+import {
+  areSimilar,
+  calculateGamePoints,
+  normalizeText,
+} from '../../../../shared/utils/text-logic';
+import { playSound } from '../../../../shared/utils/audio-helper';
+import { generateTeamColors } from '../../../../shared/utils/color-helper';
 
 interface Player extends Team {
   mistakes: number;
@@ -53,22 +58,18 @@ export class WritingCategoryComponent implements OnInit {
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
 
-  // private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
-  // private wrongAudio = new Audio('/sounds/1z10zle.mp3');
-
   constructor(
     private questionService: QuestionService,
     private gameStateService: GameStateService,
     private gameService: GameService,
     private pointsService: PointsService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
     this.gameStateService.teams$.subscribe((teams) => {
-      const colors = this.generateTeamColor(teams.length);
+      const colors = generateTeamColors(teams.length);
 
       this.players = teams.map((team, index) => ({
         ...team,
@@ -149,9 +150,7 @@ export class WritingCategoryComponent implements OnInit {
 
     // 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
     if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex((a) =>
-        areSimilar(normalizedInput, a.value)
-      );
+      answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
     }
 
     if (answerIndex >= 0) {
@@ -168,14 +167,13 @@ export class WritingCategoryComponent implements OnInit {
 
         // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
-        this.currentPlayer.calculatedPoints = calculateGamePoints(this.currentPlayer.correctAnswers, totalAnswers, this.MAX_POINTS)
+        this.currentPlayer.calculatedPoints = calculateGamePoints(
+          this.currentPlayer.correctAnswers,
+          totalAnswers,
+          this.MAX_POINTS
+        );
 
-
-        // Math.ceil(
-        //   (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
-        // );
-
-        playSound('sounds/1z10dobrzee.mp3')
+        playSound('sounds/1z10dobrzee.mp3');
 
         this.remainingAnswers--;
         this.checkIfAllRevealed();
@@ -193,7 +191,7 @@ export class WritingCategoryComponent implements OnInit {
     player.mistakes++;
     player.chancesLeft--;
 
-    playSound('sounds/1z10zle.mp3')
+    playSound('sounds/1z10zle.mp3');
     this.triggerWrongFlash();
 
     if (player.mistakes >= this.MAX_CHANCES) {
@@ -288,23 +286,7 @@ export class WritingCategoryComponent implements OnInit {
     }
   }
 
-  resetGame(): void {
-    this.players.forEach((p) => {
-      p.mistakes = 0;
-      p.chancesLeft = this.MAX_CHANCES;
-      p.correctAnswers = 0;
-      p.calculatedPoints = 0;
-    });
-    this.currentPlayerIndex = 0;
-    this.gameFinished = false;
-    this.lastCorrectPlayer = null;
-  }
-
   isRevealed(index: number): boolean {
     return this.question?.revealedAnswers?.includes(index) ?? false;
-  }
-
-  awardPointsToTeam(teamName: string, points: number): void {
-    if (!teamName || points <= 0) return;
   }
 }

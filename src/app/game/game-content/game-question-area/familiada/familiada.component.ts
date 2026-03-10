@@ -1,13 +1,17 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {FormsModule} from '@angular/forms';
-import {QuestionService} from '../../../../shared/question-service.service';
-import {Question} from '../../../../shared/questions/question.interface';
-import {Observable} from 'rxjs';
-import {GameService} from '../../../../shared/game.service';
-import {PointsService} from '../../../../shared/points-service.service';
-import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
-import {playSound} from '../../../../shared/utils/audio-helper';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { QuestionService } from '../../../../shared/question-service.service';
+import { Question } from '../../../../shared/questions/question.interface';
+import { Observable } from 'rxjs';
+import { GameService } from '../../../../shared/game.service';
+import { PointsService } from '../../../../shared/points-service.service';
+import {
+  areSimilar,
+  calculateGamePoints,
+  normalizeText,
+} from '../../../../shared/utils/text-logic';
+import { playSound } from '../../../../shared/utils/audio-helper';
 
 @Component({
   selector: 'app-familiada',
@@ -34,8 +38,7 @@ export class FamiliadaComponent implements OnInit {
     private questionService: QuestionService,
     private gameService: GameService,
     private pointsService: PointsService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
@@ -72,9 +75,7 @@ export class FamiliadaComponent implements OnInit {
     );
 
     if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex((a) =>
-        areSimilar(normalizedInput, a.value)
-      );
+      answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
     }
 
     if (answerIndex >= 0) {
@@ -114,7 +115,11 @@ export class FamiliadaComponent implements OnInit {
 
       // Obliczamy punkty: (zgadnięte / wszystkie) * mnożnik (np. 10)
       // Jeśli zgadł 3 z 6 haseł, dostanie 5 pkt (przy mnożniku 10)
-      this.earnedPoints = calculateGamePoints(revealedCount, totalAnswers, this.MAX_POINTS_MULTIPLIER)
+      this.earnedPoints = calculateGamePoints(
+        revealedCount,
+        totalAnswers,
+        this.MAX_POINTS_MULTIPLIER
+      );
 
       if (this.currentTeamName && this.earnedPoints > 0) {
         // Zapis do GameService (localStorage)
@@ -134,7 +139,6 @@ export class FamiliadaComponent implements OnInit {
       }
     });
   }
-
 
   // Metoda sprawdzająca, czy dany indeks odpowiedzi został już odkryty
   isAnswerRevealed(index: number): boolean {
