@@ -6502,5 +6502,5 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     hints: [],
     revealedAnswers: [],
     showAnswer: false,
-  }
-]
+  },
+];

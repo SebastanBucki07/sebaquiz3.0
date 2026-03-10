@@ -92,12 +92,7 @@ export const footballers = [
     id: 10,
     name: 'Kristopher Vida',
     country: 'Węgry',
-    clubs: [
-      'Kisvárda FC',
-      'Piast Gliwice',
-      'DAC Dunajská Streda',
-      'De Graafschap',
-    ],
+    clubs: ['Kisvárda FC', 'Piast Gliwice', 'DAC Dunajská Streda', 'De Graafschap'],
   },
   {
     id: 11,
@@ -2214,13 +2209,7 @@ export const footballers = [
     id: 211,
     name: 'Artur Boruc',
     country: 'Polska',
-    clubs: [
-      'Celtic FC',
-      'Legia Warszawa',
-      'AFC Bournemouth',
-      'ACF Fiorentina',
-      'Southampton FC',
-    ],
+    clubs: ['Celtic FC', 'Legia Warszawa', 'AFC Bournemouth', 'ACF Fiorentina', 'Southampton FC'],
   },
   {
     id: 212,
@@ -2983,13 +2972,7 @@ export const footballers = [
     id: 276,
     name: 'Edinson Cavani',
     country: 'Urugwaj',
-    clubs: [
-      'Paris Saint-Germain',
-      'SSC Napoli',
-      'Palermo FC',
-      'Manchester United',
-      'Valencia CF',
-    ],
+    clubs: ['Paris Saint-Germain', 'SSC Napoli', 'Palermo FC', 'Manchester United', 'Valencia CF'],
   },
   {
     id: 277,
@@ -3014,13 +2997,7 @@ export const footballers = [
     id: 279,
     name: 'David Luiz',
     country: 'Brazylia',
-    clubs: [
-      'Chelsea FC',
-      'SL Benfica',
-      'Paris Saint-Germain',
-      'Flamengo',
-      'Arsenal FC',
-    ],
+    clubs: ['Chelsea FC', 'SL Benfica', 'Paris Saint-Germain', 'Flamengo', 'Arsenal FC'],
   },
   {
     id: 280,
@@ -3032,14 +3009,7 @@ export const footballers = [
     id: 281,
     name: 'Javier Pastore',
     country: 'Argentyna',
-    clubs: [
-      'Paris Saint-Germain',
-      'Palermo FC',
-      'AS Roma',
-      'CA Huracán',
-      'Elche CF',
-      'Qatar SC',
-    ],
+    clubs: ['Paris Saint-Germain', 'Palermo FC', 'AS Roma', 'CA Huracán', 'Elche CF', 'Qatar SC'],
   },
   {
     id: 282,
@@ -3063,25 +3033,13 @@ export const footballers = [
     id: 283,
     name: 'Renato Sanches',
     country: 'Portugalia',
-    clubs: [
-      'Lille OSC',
-      'Bayern Monachium',
-      'SL Benfica',
-      'Paris Saint-Germain',
-      'Swansea City',
-    ],
+    clubs: ['Lille OSC', 'Bayern Monachium', 'SL Benfica', 'Paris Saint-Germain', 'Swansea City'],
   },
   {
     id: 284,
     name: 'Fabián Ruiz',
     country: 'Hiszpania',
-    clubs: [
-      'SSC Napoli',
-      'Real Betis',
-      'Paris Saint-Germain',
-      'Real Betis',
-      'Elche CF',
-    ],
+    clubs: ['SSC Napoli', 'Real Betis', 'Paris Saint-Germain', 'Real Betis', 'Elche CF'],
   },
   {
     id: 285,
@@ -3186,14 +3144,7 @@ export const footballers = [
     id: 299,
     name: 'Miralem Pjanic',
     country: 'Bośnia i Hercegowina',
-    clubs: [
-      'AS Roma',
-      'Juventus FC',
-      'Olympique Lyon',
-      'FC Metz',
-      'FC Barcelona',
-      'Beşiktaş JK',
-    ],
+    clubs: ['AS Roma', 'Juventus FC', 'Olympique Lyon', 'FC Metz', 'FC Barcelona', 'Beşiktaş JK'],
   },
   {
     id: 300,
@@ -3760,7 +3711,13 @@ export const footballers = [
     id: 356,
     name: 'Cezary Wilk',
     country: 'Polska',
-    clubs: ['Wisła Kraków', 'Korona Kielce', 'Deportivo de La Coruña', 'ŁKS Łódź', 'Real Saragossa'],
+    clubs: [
+      'Wisła Kraków',
+      'Korona Kielce',
+      'Deportivo de La Coruña',
+      'ŁKS Łódź',
+      'Real Saragossa',
+    ],
   },
   {
     id: 357,
@@ -4645,13 +4602,7 @@ export const footballers = [
     id: 449,
     name: 'Raphinha',
     country: 'Brazylia',
-    clubs: [
-      'Vitória Guimarães',
-      'Leeds United',
-      'FC Barcelona',
-      'Sporting CP',
-      'Stade Rennais FC',
-    ],
+    clubs: ['Vitória Guimarães', 'Leeds United', 'FC Barcelona', 'Sporting CP', 'Stade Rennais FC'],
   },
   {
     id: 450,
@@ -5472,7 +5423,13 @@ export const footballers = [
     id: 540,
     name: 'Franck Ribéry',
     country: 'Francja',
-    clubs: ['Bayern Monachium', 'Olympique Marsylia', 'ACF Fiorentina', 'FC Metz', 'Galatasaray SK'],
+    clubs: [
+      'Bayern Monachium',
+      'Olympique Marsylia',
+      'ACF Fiorentina',
+      'FC Metz',
+      'Galatasaray SK',
+    ],
   },
   {
     id: 541,

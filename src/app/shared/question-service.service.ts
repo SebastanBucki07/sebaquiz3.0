@@ -53,7 +53,7 @@ import { DANE_PANSTW } from './questions/countries.questions';
 import { MECZE_PILKARSKIE } from './questions/footaballGames.questions';
 import { FootballGridLogic } from './football-grid.logic';
 import { footballers } from './footballers/footballers';
-import {WYPISZ_WSPOLNE_PILKA_NOZNA} from './questions/writtingsFootball.questions';
+import { WYPISZ_WSPOLNE_PILKA_NOZNA } from './questions/writtingsFootball.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {

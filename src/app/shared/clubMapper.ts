@@ -14,19 +14,19 @@ export const getClubInfo = (input: string) => {
   if (clubData[input]) {
     return {
       name: input,
-      logo: formatLogoPath(clubData[input])
+      logo: formatLogoPath(clubData[input]),
     };
   }
 
   if (fileToName[input]) {
     return {
       name: fileToName[input],
-      logo: formatLogoPath(input)
+      logo: formatLogoPath(input),
     };
   }
 
   return {
     name: input,
-    logo: formatLogoPath('default-logo.png')
+    logo: formatLogoPath('default-logo.png'),
   };
 };

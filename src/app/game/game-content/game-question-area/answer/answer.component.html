@@ -18,7 +18,9 @@
 
       <!-- TEKST ODPOWIEDZI – pojawia się tylko jeśli odkryta -->
       <div
-        *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')"
+        *ngIf="
+          (currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')
+        "
         class="answer-text revealed"
       >
         <div class="answer-label">

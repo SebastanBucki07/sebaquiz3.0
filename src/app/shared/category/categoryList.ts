@@ -442,5 +442,5 @@ export const CATEGORY_LIST: Category[] = [
         content: 'Główną rolę grał Brad Pitt.',
       },
     ],
-  }
+  },
 ];

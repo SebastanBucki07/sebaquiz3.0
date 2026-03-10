@@ -5,7 +5,7 @@ import { GameStateService, Team } from '../../../../shared/game-state.service';
 import { PointsService } from '../../../../shared/points-service.service';
 import { GameService } from '../../../../shared/game.service';
 import { QuestionService } from '../../../../shared/question-service.service';
-import {getClubInfo} from '../../../../shared/clubMapper';
+import { getClubInfo } from '../../../../shared/clubMapper';
 
 interface PlayerGridState extends Team {
   calculatedPoints: number;

@@ -1219,7 +1219,7 @@ export const HISTORIA_PILKARZA = [
         penaltyPercent: 0,
       },
       { id: '2', label: 'klub3', content: '/footballCrests/piastgliwice.png', penaltyPercent: 0 },
-      { id: '3', label: 'klub3', content: '/footballCrests/pogonszczecin.png', penaltyPercent: 0 }
+      { id: '3', label: 'klub3', content: '/footballCrests/pogonszczecin.png', penaltyPercent: 0 },
     ],
     revealedAnswers: [],
   },
