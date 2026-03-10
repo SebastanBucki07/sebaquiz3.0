@@ -370,7 +370,7 @@ export const CATEGORY_LIST: Category[] = [
     id: 35,
     type: 'writting-category',
     name: 'Wypisywanie róznych wspólnych - piłka nożna',
-    basePoints: 5,
+    basePoints: 10,
     hints: [],
   },
   {

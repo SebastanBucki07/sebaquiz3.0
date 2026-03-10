@@ -53,6 +53,7 @@ import { DANE_PANSTW } from './questions/countries.questions';
 import { MECZE_PILKARSKIE } from './questions/footaballGames.questions';
 import { FootballGridLogic } from './football-grid.logic';
 import { footballers } from './footballers/footballers';
+import {WYPISZ_WSPOLNE_PILKA_NOZNA} from './questions/writtingsFootball.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -250,6 +251,9 @@ export class QuestionService {
 
     if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych')
       return WYPISZ_WSPOLNE;
+
+    if (type === 'writting-category' && name === 'Wypisywanie róznych wspólnych - piłka nożna')
+      return WYPISZ_WSPOLNE_PILKA_NOZNA;
 
     if (type === 'writting-category' && name === 'Państwa z kontynentu')
       return new CountryQuestion(DANE_PANSTW).getCountriesByAllContinents();
