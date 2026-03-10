@@ -1,16 +1,17 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { QuestionService } from '../../../../shared/question-service.service';
-import { Question } from '../../../../shared/questions/question.interface';
-import { Observable } from 'rxjs';
-import { GameStateService, Team } from '../../../../shared/game-state.service';
-import { PointsService } from '../../../../shared/points-service.service';
-import { GameService } from '../../../../shared/game.service';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatInputModule} from '@angular/material/input';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {QuestionService} from '../../../../shared/question-service.service';
+import {Question} from '../../../../shared/questions/question.interface';
+import {Observable} from 'rxjs';
+import {GameStateService, Team} from '../../../../shared/game-state.service';
+import {PointsService} from '../../../../shared/points-service.service';
+import {GameService} from '../../../../shared/game.service';
+import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
 
 interface Player extends Team {
   mistakes: number;
@@ -59,7 +60,8 @@ export class WritingCategoryComponent implements OnInit {
     private gameStateService: GameStateService,
     private gameService: GameService,
     private pointsService: PointsService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
@@ -137,17 +139,17 @@ export class WritingCategoryComponent implements OnInit {
       return;
     if (!this.question.answers) return;
 
-    const normalizedInput = this.normalize(this.inputValue);
+    const normalizedInput = normalizeText(this.inputValue);
 
     // 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
     let answerIndex = this.question.answers.findIndex(
-      (a) => this.normalize(a.value) === normalizedInput
+      (a) => normalizeText(a.value) === normalizedInput
     );
 
     // 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
     if (answerIndex === -1) {
       answerIndex = this.question.answers.findIndex((a) =>
-        this.areSimilar(normalizedInput, a.value)
+        areSimilar(normalizedInput, a.value)
       );
     }
 
@@ -165,9 +167,12 @@ export class WritingCategoryComponent implements OnInit {
 
         // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
-        this.currentPlayer.calculatedPoints = Math.ceil(
-          (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
-        );
+        this.currentPlayer.calculatedPoints = calculateGamePoints(this.currentPlayer.correctAnswers, totalAnswers, this.MAX_POINTS)
+
+
+        // Math.ceil(
+        //   (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
+        // );
 
         this.correctAudio.currentTime = 0;
         this.correctAudio.play();
@@ -298,65 +303,6 @@ export class WritingCategoryComponent implements OnInit {
 
   isRevealed(index: number): boolean {
     return this.question?.revealedAnswers?.includes(index) ?? false;
-  }
-
-  // 🔹 Normalizacja: małe litery, polskie znaki, - traktujemy jak spację, redukcja spacji
-  private normalize(value: string): string {
-    return value
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
-
-  // 🔹 Sprawdzenie zgodności odpowiedzi z tolerancją literówek i zamianą słów
-  private areSimilar(input: string, answer: string): boolean {
-    const normInput = this.normalize(input);
-    const normAnswer = this.normalize(answer);
-
-    // dokładne dopasowanie zawsze
-    if (normInput === normAnswer) return true;
-
-    // sprawdzamy zamianę kolejności słów (Robert Lewandowski ↔ Lewandowski Robert)
-    const inputWords = normInput
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
-    const answerWords = normAnswer
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
-    if (inputWords === answerWords) return true;
-
-    // ustalamy maksymalną liczbę literówek
-    const maxEdits = normAnswer.length >= 7 ? 3 : 1;
-
-    // dopuszczamy literówki
-    return this.levenshtein(normInput, normAnswer) <= maxEdits;
-  }
-
-  // 🔹 Funkcja Levenshtein (do literówek)
-  private levenshtein(a: string, b: string): number {
-    const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
-      new Array(b.length + 1).fill(0)
-    );
-
-    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
-
-    for (let i = 1; i <= a.length; i++) {
-      for (let j = 1; j <= b.length; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1, // usunięcie
-          matrix[i][j - 1] + 1, // wstawienie
-          matrix[i - 1][j - 1] + cost // zamiana
-        );
-      }
-    }
-    return matrix[a.length][b.length];
   }
 
   awardPointsToTeam(teamName: string, points: number): void {

@@ -1,11 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { QuestionService } from '../../../../shared/question-service.service';
-import { Question } from '../../../../shared/questions/question.interface';
-import { Observable } from 'rxjs';
-import { GameService } from '../../../../shared/game.service';
-import { PointsService } from '../../../../shared/points-service.service';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {FormsModule} from '@angular/forms';
+import {QuestionService} from '../../../../shared/question-service.service';
+import {Question} from '../../../../shared/questions/question.interface';
+import {Observable} from 'rxjs';
+import {GameService} from '../../../../shared/game.service';
+import {PointsService} from '../../../../shared/points-service.service';
+import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
 
 @Component({
   selector: 'app-familiada',
@@ -28,14 +29,15 @@ export class FamiliadaComponent implements OnInit {
   inputValue = '';
   earnedPoints = 0;
 
-  private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
-  private wrongAudio = new Audio('/sounds/1z10zle.mp3');
+  private correctAudio = new Audio('/sounds/correct.mp3');
+  private wrongAudio = new Audio('/sounds/wrong.mp3');
 
   constructor(
     private questionService: QuestionService,
     private gameService: GameService,
     private pointsService: PointsService
-  ) {}
+  ) {
+  }
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
@@ -64,16 +66,16 @@ export class FamiliadaComponent implements OnInit {
   submitAnswer(): void {
     if (!this.question || !this.inputValue.trim() || this.gameFinished) return;
 
-    const normalizedInput = this.normalize(this.inputValue);
+    const normalizedInput = normalizeText(this.inputValue);
 
     // Szukanie odpowiedzi (dokładne lub podobne - Levenshtein)
     let answerIndex = this.question.answers.findIndex(
-      (a) => this.normalize(a.value) === normalizedInput
+      (a) => normalizeText(a.value) === normalizedInput
     );
 
     if (answerIndex === -1) {
       answerIndex = this.question.answers.findIndex((a) =>
-        this.areSimilar(normalizedInput, a.value)
+        areSimilar(normalizedInput, a.value)
       );
     }
 
@@ -116,7 +118,7 @@ export class FamiliadaComponent implements OnInit {
 
       // Obliczamy punkty: (zgadnięte / wszystkie) * mnożnik (np. 10)
       // Jeśli zgadł 3 z 6 haseł, dostanie 5 pkt (przy mnożniku 10)
-      this.earnedPoints = Math.ceil((revealedCount / totalAnswers) * this.MAX_POINTS_MULTIPLIER);
+      this.earnedPoints = calculateGamePoints(revealedCount, totalAnswers, this.MAX_POINTS_MULTIPLIER)
 
       if (this.currentTeamName && this.earnedPoints > 0) {
         // Zapis do GameService (localStorage)
@@ -137,41 +139,6 @@ export class FamiliadaComponent implements OnInit {
     });
   }
 
-  // --- METODY POMOCNICZE (Skopiowane z Twojego kodu) ---
-
-  private normalize(value: string): string {
-    return value
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
-
-  private areSimilar(input: string, answer: string): boolean {
-    const normInput = this.normalize(input);
-    const normAnswer = this.normalize(answer);
-    if (normInput === normAnswer) return true;
-    const maxEdits = normAnswer.length >= 7 ? 3 : 1;
-    return this.levenshtein(normInput, normAnswer) <= maxEdits;
-  }
-
-  private levenshtein(a: string, b: string): number {
-    const matrix = Array.from({ length: a.length + 1 }, (_, i) => [i]);
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
-    for (let i = 1; i <= a.length; i++) {
-      for (let j = 1; j <= b.length; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1,
-          matrix[i][j - 1] + 1,
-          matrix[i - 1][j - 1] + cost
-        );
-      }
-    }
-    return matrix[a.length][b.length];
-  }
 
   // Metoda sprawdzająca, czy dany indeks odpowiedzi został już odkryty
   isAnswerRevealed(index: number): boolean {
