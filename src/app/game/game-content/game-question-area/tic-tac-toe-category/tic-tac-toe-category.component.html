@@ -1,1 +1,79 @@
-<p>tic-tac-toe-category works!</p>
+<div class="grid-wrapper" *ngIf="gridData">
+  <div class="score-panel">
+    <div class="score-item">
+      <span class="label">Trafienia</span>
+      <span class="value">{{ totalCorrect }} / 9</span>
+    </div>
+    <div class="score-item highlight">
+      <span class="label">Zdobyte Punkty</span>
+      <span class="value">+{{ earnedPoints }}</span>
+    </div>
+    <div class="score-item">
+      <span class="label">Skuteczność</span>
+      <span class="value">{{ accuracyPercentage }}%</span>
+    </div>
+  </div>
+
+  <div class="progress-bar-container">
+    <div class="progress-fill" [style.width.%]="accuracyPercentage"></div>
+  </div>
+
+  <table class="football-table">
+    <thead>
+      <tr>
+        <th class="corner-cell"></th>
+        <th *ngFor="let col of gridData.cols" class="header-cell">
+          <div class="club-header">
+            <img [src]="getHeaderInfo(col).logo" class="club-logo-mini" />
+            <span class="club-name-mini">{{ getHeaderInfo(col).name }}</span>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of gridData.rows; let r = index">
+        <td class="header-cell side-header">
+          <div class="club-header side">
+            <img [src]="getHeaderInfo(row).logo" class="club-logo-mini" />
+            <span class="club-name-mini">{{ getHeaderInfo(row).name }}</span>
+          </div>
+        </td>
+
+        <td
+          *ngFor="let col of gridData.cols; let c = index"
+          (click)="toggleCell(r, c)"
+          class="data-cell"
+          [class.is-correct]="cellStatus[r][c]"
+          [class.is-wrong]="showMissing && !cellStatus[r][c]"
+        >
+          <div class="placeholder" *ngIf="!cellStatus[r][c] && !showMissing">?</div>
+
+          <div class="mark-container">
+            <div class="success-mark" *ngIf="cellStatus[r][c]">
+              <div class="checkmark-circle">
+                <div class="checkmark draw"></div>
+              </div>
+            </div>
+            <div class="error-mark" *ngIf="showMissing && !cellStatus[r][c]">
+              <div class="x-mark-simple">✕</div>
+            </div>
+          </div>
+
+          <div class="player-overlay" *ngIf="cellStatus[r][c] || showMissing">
+            <div class="player-list">
+              <div class="player-name-micro" *ngFor="let p of getMatchingPlayers(r, c).slice(0, 2)">
+                {{ p }}
+              </div>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="actions">
+    <button class="reveal-btn" (click)="revealMissing()" *ngIf="!showMissing">
+      Zakończ i odbierz {{ earnedPoints }} pkt
+    </button>
+  </div>
+</div>

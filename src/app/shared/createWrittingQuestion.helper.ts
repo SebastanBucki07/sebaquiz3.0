@@ -11834,7 +11834,7 @@ const data = [
   },
   {
     id: 2360,
-    name: 'Juventus Turyn',
+    name: 'Juventus FC',
     category: 'włoskie drużyny piłki nożnej 2ligi stan na 2022/2023',
   },
   {

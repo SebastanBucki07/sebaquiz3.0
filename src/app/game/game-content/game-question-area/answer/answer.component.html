@@ -17,7 +17,12 @@
       </button>
 
       <!-- TEKST ODPOWIEDZI – pojawia się tylko jeśli odkryta -->
-      <div *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)" class="answer-text revealed">
+      <div
+        *ngIf="
+          (currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')
+        "
+        class="answer-text revealed"
+      >
         <div class="answer-label">
           {{ answer.label || 'Odpowiedź ' + (i + 1) }}
         </div>

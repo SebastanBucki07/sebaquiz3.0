@@ -71,12 +71,12 @@
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.28);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.28);
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:15px;
+  margin: 15px;
 }
 
 /* Flaga w tle */
@@ -89,20 +89,20 @@
 /* Po odgadnięciu — pokaż bardziej wyraźną ramkę */
 .player.guessed {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
 .player-name {
   position: absolute;
   inset: 0;
   display: flex;
-  flex-direction: column;      /* 🔥 kluczowe */
+  flex-direction: column; /* 🔥 kluczowe */
   align-items: center;
   justify-content: center;
   text-align: center;
   padding: 6px;
   z-index: 5;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 /* ======= MASKA REZERWOWYCH ======= */
@@ -140,12 +140,12 @@
   border-radius: 6px;
   overflow: hidden;
   position: relative;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.28);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.28);
   background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin:15px;
+  margin: 15px;
 }
 
 /* ======= INPUT ======= */
@@ -168,7 +168,6 @@
   font-size: 16px;
   cursor: pointer;
 }
-
 
 /* ===================== */
 /* LICZNIK */
