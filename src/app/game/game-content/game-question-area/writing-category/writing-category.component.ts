@@ -12,6 +12,7 @@ import {GameStateService, Team} from '../../../../shared/game-state.service';
 import {PointsService} from '../../../../shared/points-service.service';
 import {GameService} from '../../../../shared/game.service';
 import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
+import {playSound} from '../../../../shared/utils/audio-helper';
 
 interface Player extends Team {
   mistakes: number;
@@ -52,8 +53,8 @@ export class WritingCategoryComponent implements OnInit {
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
 
-  private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
-  private wrongAudio = new Audio('/sounds/1z10zle.mp3');
+  // private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
+  // private wrongAudio = new Audio('/sounds/1z10zle.mp3');
 
   constructor(
     private questionService: QuestionService,
@@ -174,8 +175,7 @@ export class WritingCategoryComponent implements OnInit {
         //   (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
         // );
 
-        this.correctAudio.currentTime = 0;
-        this.correctAudio.play();
+        playSound('sounds/1z10dobrzee.mp3')
 
         this.remainingAnswers--;
         this.checkIfAllRevealed();
@@ -193,8 +193,7 @@ export class WritingCategoryComponent implements OnInit {
     player.mistakes++;
     player.chancesLeft--;
 
-    this.wrongAudio.currentTime = 0;
-    this.wrongAudio.play();
+    playSound('sounds/1z10zle.mp3')
     this.triggerWrongFlash();
 
     if (player.mistakes >= this.MAX_CHANCES) {

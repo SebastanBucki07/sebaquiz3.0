@@ -7,6 +7,7 @@ import {Observable} from 'rxjs';
 import {GameService} from '../../../../shared/game.service';
 import {PointsService} from '../../../../shared/points-service.service';
 import {areSimilar, calculateGamePoints, normalizeText} from '../../../../shared/utils/text-logic';
+import {playSound} from '../../../../shared/utils/audio-helper';
 
 @Component({
   selector: 'app-familiada',
@@ -28,9 +29,6 @@ export class FamiliadaComponent implements OnInit {
   gameFinished = false;
   inputValue = '';
   earnedPoints = 0;
-
-  private correctAudio = new Audio('/sounds/correct.mp3');
-  private wrongAudio = new Audio('/sounds/wrong.mp3');
 
   constructor(
     private questionService: QuestionService,
@@ -86,8 +84,7 @@ export class FamiliadaComponent implements OnInit {
         this.questionService.revealAnswer(answerIndex);
         this.correctAnswersCount++;
 
-        this.correctAudio.currentTime = 0;
-        this.correctAudio.play();
+        playSound('/sounds/correct.mp3');
 
         if (this.question.revealedAnswers?.length === this.question.answers.length) {
           this.finishGame();
@@ -99,8 +96,7 @@ export class FamiliadaComponent implements OnInit {
 
     // BŁĄD
     this.mistakes++;
-    this.wrongAudio.currentTime = 0;
-    this.wrongAudio.play();
+    playSound('/sounds/wrong.mp3');
 
     if (this.mistakes >= this.MAX_CHANCES) {
       this.finishGame();
