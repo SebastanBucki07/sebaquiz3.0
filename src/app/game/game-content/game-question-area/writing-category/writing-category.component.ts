@@ -11,6 +11,13 @@ import { Observable } from 'rxjs';
 import { GameStateService, Team } from '../../../../shared/game-state.service';
 import { PointsService } from '../../../../shared/points-service.service';
 import { GameService } from '../../../../shared/game.service';
+import {
+  areSimilar,
+  calculateGamePoints,
+  normalizeText,
+} from '../../../../shared/utils/text-logic';
+import { playSound } from '../../../../shared/utils/audio-helper';
+import { generateTeamColors } from '../../../../shared/utils/color-helper';
 
 interface Player extends Team {
   mistakes: number;
@@ -51,9 +58,6 @@ export class WritingCategoryComponent implements OnInit {
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
 
-  private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
-  private wrongAudio = new Audio('/sounds/1z10zle.mp3');
-
   constructor(
     private questionService: QuestionService,
     private gameStateService: GameStateService,
@@ -65,7 +69,7 @@ export class WritingCategoryComponent implements OnInit {
     this.question$ = this.questionService.question$;
 
     this.gameStateService.teams$.subscribe((teams) => {
-      const colors = this.generateTeamColor(teams.length);
+      const colors = generateTeamColors(teams.length);
 
       this.players = teams.map((team, index) => ({
         ...team,
@@ -137,18 +141,16 @@ export class WritingCategoryComponent implements OnInit {
       return;
     if (!this.question.answers) return;
 
-    const normalizedInput = this.normalize(this.inputValue);
+    const normalizedInput = normalizeText(this.inputValue);
 
     // 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
     let answerIndex = this.question.answers.findIndex(
-      (a) => this.normalize(a.value) === normalizedInput
+      (a) => normalizeText(a.value) === normalizedInput
     );
 
     // 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
     if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex((a) =>
-        this.areSimilar(normalizedInput, a.value)
-      );
+      answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
     }
 
     if (answerIndex >= 0) {
@@ -165,12 +167,13 @@ export class WritingCategoryComponent implements OnInit {
 
         // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
-        this.currentPlayer.calculatedPoints = Math.ceil(
-          (this.currentPlayer.correctAnswers / totalAnswers) * this.MAX_POINTS
+        this.currentPlayer.calculatedPoints = calculateGamePoints(
+          this.currentPlayer.correctAnswers,
+          totalAnswers,
+          this.MAX_POINTS
         );
 
-        this.correctAudio.currentTime = 0;
-        this.correctAudio.play();
+        playSound('sounds/1z10dobrzee.mp3');
 
         this.remainingAnswers--;
         this.checkIfAllRevealed();
@@ -188,8 +191,7 @@ export class WritingCategoryComponent implements OnInit {
     player.mistakes++;
     player.chancesLeft--;
 
-    this.wrongAudio.currentTime = 0;
-    this.wrongAudio.play();
+    playSound('sounds/1z10zle.mp3');
     this.triggerWrongFlash();
 
     if (player.mistakes >= this.MAX_CHANCES) {
@@ -284,82 +286,7 @@ export class WritingCategoryComponent implements OnInit {
     }
   }
 
-  resetGame(): void {
-    this.players.forEach((p) => {
-      p.mistakes = 0;
-      p.chancesLeft = this.MAX_CHANCES;
-      p.correctAnswers = 0;
-      p.calculatedPoints = 0;
-    });
-    this.currentPlayerIndex = 0;
-    this.gameFinished = false;
-    this.lastCorrectPlayer = null;
-  }
-
   isRevealed(index: number): boolean {
     return this.question?.revealedAnswers?.includes(index) ?? false;
-  }
-
-  // 🔹 Normalizacja: małe litery, polskie znaki, - traktujemy jak spację, redukcja spacji
-  private normalize(value: string): string {
-    return value
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/-/g, ' ')
-      .replace(/\s+/g, ' ')
-      .trim();
-  }
-
-  // 🔹 Sprawdzenie zgodności odpowiedzi z tolerancją literówek i zamianą słów
-  private areSimilar(input: string, answer: string): boolean {
-    const normInput = this.normalize(input);
-    const normAnswer = this.normalize(answer);
-
-    // dokładne dopasowanie zawsze
-    if (normInput === normAnswer) return true;
-
-    // sprawdzamy zamianę kolejności słów (Robert Lewandowski ↔ Lewandowski Robert)
-    const inputWords = normInput
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
-    const answerWords = normAnswer
-      .split(/[\s-]+/)
-      .sort()
-      .join(' ');
-    if (inputWords === answerWords) return true;
-
-    // ustalamy maksymalną liczbę literówek
-    const maxEdits = normAnswer.length >= 7 ? 3 : 1;
-
-    // dopuszczamy literówki
-    return this.levenshtein(normInput, normAnswer) <= maxEdits;
-  }
-
-  // 🔹 Funkcja Levenshtein (do literówek)
-  private levenshtein(a: string, b: string): number {
-    const matrix: number[][] = Array.from({ length: a.length + 1 }, () =>
-      new Array(b.length + 1).fill(0)
-    );
-
-    for (let i = 0; i <= a.length; i++) matrix[i][0] = i;
-    for (let j = 0; j <= b.length; j++) matrix[0][j] = j;
-
-    for (let i = 1; i <= a.length; i++) {
-      for (let j = 1; j <= b.length; j++) {
-        const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-        matrix[i][j] = Math.min(
-          matrix[i - 1][j] + 1, // usunięcie
-          matrix[i][j - 1] + 1, // wstawienie
-          matrix[i - 1][j - 1] + cost // zamiana
-        );
-      }
-    }
-    return matrix[a.length][b.length];
-  }
-
-  awardPointsToTeam(teamName: string, points: number): void {
-    if (!teamName || points <= 0) return;
   }
 }

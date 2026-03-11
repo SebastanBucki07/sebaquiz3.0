@@ -6,6 +6,7 @@ import { PointsService } from '../../../../shared/points-service.service';
 import { GameService } from '../../../../shared/game.service';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { getClubInfo } from '../../../../shared/clubMapper';
+import { calculateGamePoints } from '../../../../shared/utils/text-logic';
 
 interface PlayerGridState extends Team {
   calculatedPoints: number;
@@ -86,8 +87,7 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
     this.totalCorrect = this.cellStatus.flat().filter((v) => v).length;
     this.accuracyPercentage = Math.round((this.totalCorrect / 9) * 100);
 
-    // Obliczanie punktów (zgodnie z WritingCategory: ceil(ratio * MAX_POINTS))
-    this.earnedPoints = Math.ceil((this.totalCorrect / 9) * this.MAX_POINTS);
+    this.earnedPoints = calculateGamePoints(this.totalCorrect, 9, this.MAX_POINTS);
 
     if (this.currentTeam) {
       this.currentTeam.calculatedPoints = this.earnedPoints;

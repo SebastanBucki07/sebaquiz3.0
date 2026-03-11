@@ -27,7 +27,6 @@ export class AnswerComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.question$ = this.questionService.question$;
 
-    // Stała subskrypcja – przy każdej zmianie revealedAnswers sprawdzamy, czy wszystkie odpowiedzi ujawnione
     this.subscription = this.question$.subscribe((currentQuestion) => {
       if (!currentQuestion) {
         this.showAnswerButtons = false;

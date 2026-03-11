@@ -54,6 +54,7 @@ import { MECZE_PILKARSKIE } from './questions/footaballGames.questions';
 import { FootballGridLogic } from './football-grid.logic';
 import { footballers } from './footballers/footballers';
 import { WYPISZ_WSPOLNE_PILKA_NOZNA } from './questions/writtingsFootball.questions';
+import { FAMILIADA_RAW } from './questions/familiada.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -203,6 +204,29 @@ export class QuestionService {
     }
   }
 
+  private mapOldFamiliadaToNew(oldQuestions: any[]): Question[] {
+    return oldQuestions.map((q) => {
+      // Zbieramy wszystkie odpowiedzi od 1 do 6
+      const rawAnswers = [q.answer1, q.answer2, q.answer3, q.answer4, q.answer5, q.answer6];
+
+      return {
+        id: q.id,
+        question: q.question,
+        revealedAnswers: [],
+        showAnswer: false,
+        // Filtrujemy puste odpowiedzi i zamieniamy na format AnswerItem
+        answers: rawAnswers
+          .filter((val) => val && val !== '-' && val.trim() !== '')
+          .map((value, index) => ({
+            value: value.trim(),
+            // Przypisujemy punkty malejąco (klasyka Familiady)
+            // Możesz to zmienić, jeśli masz punkty w starym JSONie
+            points: [35, 25, 15, 10, 8, 7][index] || 5,
+          })),
+      };
+    });
+  }
+
   // =========================
   // DATA
   // =========================
@@ -269,10 +293,6 @@ export class QuestionService {
 
     if (type === 'footballGame' && name === 'Był taki mecz') return MECZE_PILKARSKIE;
 
-    // if (type === '' && name === 'Piłkarskie kółko i krzyżyk') {
-    //   return this.generateFootballGrid();
-    // }
-
     // Wewnątrz getQuestions(type, name)
     if (type === 'ticTacToe' && name === 'Piłkarskie kółko i krzyżyk') {
       const pool = FootballGridLogic.generatePool(footballers, 50);
@@ -292,6 +312,10 @@ export class QuestionService {
         showAnswer: false,
         revealedAnswers: [],
       }));
+    }
+
+    if (type === 'familiada' && name === 'Familiada') {
+      return this.mapOldFamiliadaToNew(FAMILIADA_RAW);
     }
 
     return [];
