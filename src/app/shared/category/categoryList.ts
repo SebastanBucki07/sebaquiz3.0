@@ -443,4 +443,11 @@ export const CATEGORY_LIST: Category[] = [
       },
     ],
   },
+  {
+    id: 34,
+    type: 'music',
+    name: 'Bajkowe Intro',
+    basePoints: 3,
+    hints: [],
+  },
 ];

@@ -55,6 +55,7 @@ import { FootballGridLogic } from './football-grid.logic';
 import { footballers } from './footballers/footballers';
 import { WYPISZ_WSPOLNE_PILKA_NOZNA } from './questions/writtingsFootball.questions';
 import { FAMILIADA_RAW } from './questions/familiada.questions';
+import { BAJKOWE_INTRO } from './questions/fairyTalesIntros.questions';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {
@@ -268,6 +269,7 @@ export class QuestionService {
     if (type === 'music' && name === 'Czołówki seriali') return CZOLOWKI_SERIALI;
     if (type === 'music' && name === 'Piosenki mistrzostw') return IMPREZY_SPORTOWE;
     if (type === 'music' && name === 'Hymny Panstwowe') return HYMNY_PANSTWOWE;
+    if (type === 'music' && name === 'Bajkowe Intro') return BAJKOWE_INTRO;
 
     if (type === 'photo-fragments' && name === 'Jakie to logo?') return LOGO_FRAGMENTY;
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') return HERBY_PILKARSKIE;
