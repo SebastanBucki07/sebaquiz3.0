@@ -105,21 +105,6 @@ export class WritingCategoryComponent implements OnInit {
     return this.currentPlayer?.id ?? null;
   }
 
-  private generateTeamColor(count: number): string[] {
-    const colors: string[] = [];
-
-    const baseHue = Math.floor(Math.random() * 360);
-    const saturation = 75;
-    const lightness = 45;
-
-    for (let i = 0; i < count; i++) {
-      const hue = (baseHue + (360 / count) * i) % 360;
-      colors.push(`hsl(${hue}, ${saturation}%, ${lightness}%)`);
-    }
-
-    return colors;
-  }
-
   getOwnerName(answerIndex: number): string | null {
     const ownerId = this.answerOwners[answerIndex];
     if (!ownerId) return null;

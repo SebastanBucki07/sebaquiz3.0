@@ -3,7 +3,6 @@
     <h2>Lista drużyn</h2>
   </div>
 
-  <!-- Form to add team -->
   <mat-card class="add-team-card">
     <mat-card-content class="add-team-content">
       <mat-form-field appearance="outline" class="full-width">
@@ -11,48 +10,53 @@
         <input
           matInput
           [(ngModel)]="newTeamName"
-          (keyup.enter)="addTeam()"
-          placeholder="Wpisz nazwę drużyny"
+          #teamInput="ngModel"
+          (keyup.enter)="teamInput.valid && addTeam()"
+          placeholder="Min. 4 znaki"
+          required
+          minlength="4"
         />
+        <mat-hint align="start" *ngIf="!teamInput.invalid">Wpisz co najmniej 3 znaki</mat-hint>
+        <mat-error *ngIf="teamInput.hasError('minlength')">
+          Nazwa jest za krótka (wymagane
+          <strong>4</strong>
+          znaki).
+        </mat-error>
+        <mat-error *ngIf="teamInput.hasError('required')">Nazwa drużyny jest wymagana.</mat-error>
       </mat-form-field>
-      <button mat-flat-button color="primary" (click)="addTeam()">
+
+      <button mat-flat-button color="primary" (click)="addTeam()" [disabled]="teamInput.invalid">
         <mat-icon>add</mat-icon>
         Dodaj drużynę
       </button>
     </mat-card-content>
   </mat-card>
 
-  <!-- Message when list is empty -->
   <mat-card *ngIf="teams.length === 0" class="empty-card">
     <mat-card-content class="empty-content">Brak dodanych drużyn</mat-card-content>
   </mat-card>
 
-  <!-- Team table -->
   <mat-card *ngIf="teams.length > 0" class="table-card">
     <mat-card-header class="table-header">
       <mat-card-title>Tabela wyników</mat-card-title>
     </mat-card-header>
     <mat-card-content>
       <table mat-table [dataSource]="teams" class="teams-table">
-        <!-- ID Column -->
         <ng-container matColumnDef="id">
           <th mat-header-cell *matHeaderCellDef>#</th>
           <td mat-cell *matCellDef="let team">{{ team.id }}</td>
         </ng-container>
 
-        <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Drużyna</th>
           <td mat-cell *matCellDef="let team">{{ team.name }}</td>
         </ng-container>
 
-        <!-- Points Column -->
         <ng-container matColumnDef="points">
           <th mat-header-cell *matHeaderCellDef>Punkty</th>
           <td mat-cell *matCellDef="let team">{{ team.points }}</td>
         </ng-container>
 
-        <!-- Actions Column -->
         <ng-container matColumnDef="actions">
           <th mat-header-cell *matHeaderCellDef>Akcje</th>
           <td mat-cell *matCellDef="let team">
@@ -60,14 +64,13 @@
               mat-icon-button
               color="warn"
               (click)="removeTeam(team.id)"
-              matTooltip="Remove team"
+              matTooltip="Usuń drużynę"
             >
               <mat-icon>delete</mat-icon>
             </button>
           </td>
         </ng-container>
 
-        <!-- Header and Row Definitions -->
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr
           mat-row

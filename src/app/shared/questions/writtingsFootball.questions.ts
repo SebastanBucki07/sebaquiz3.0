@@ -1280,769 +1280,1151 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
   {
     id: 11,
     question: 'Piłkarze Piasta Gliwice obecni i historyczni (imie i nazwisko)',
-    answers: [{
-      "value": "ALVES TIAGO"
-    }, {
-      "value": "AMEYAW MICHAEL"
-    }, {
-      "value": "ANDRASZAK RAFAŁ"
-    }, {
-      "value": "ANGIELSKI KAROL"
-    }, {
-      "value": "APPIAH KOFI KYERE"
-    }, {
-      "value": "AQUINO DANI"
-    }, {
-      "value": "AYONG KARSTEN"
-    }, {
-      "value": "BADIA GERARD"
-    }, {
-      "value": "BAJCER PIOTR"
-    }, {
-      "value": "BALUL TOMASZ"
-    }, {
-      "value": "BAŁUSZYŃSKI HENRYK"
-    }, {
-      "value": "BANAŚ ADAM"
-    }, {
-      "value": "BAŃKA ARTUR"
-    }, {
-      "value": "BARISIĆ JOSIP"
-    }, {
-      "value": "BARKOVSKIY GERMAN"
-    }, {
-      "value": "BEDNARZ ANDRZEJ"
-    }, {
-      "value": "BERNATEK OSKAR"
-    }, {
-      "value": "BIAŁEK MICHAŁ"
-    }, {
-      "value": "BISKUP JAKUB"
-    }, {
-      "value": "BŁACHUT MARIUSZ"
-    }, {
-      "value": "BOCHENEK DARIUSZ"
-    }, {
-      "value": "BODYS MICHAŁ"
-    }, {
-      "value": "BODZIOCH JANUSZ"
-    }, {
-      "value": "BODZIOCH MATEUSZ"
-    }, {
-      "value": "BOISGARD QUENTIN"
-    }, {
-      "value": "BOJARSKI MARCIN"
-    }, {
-      "value": "BOK ADRIAN"
-    }, {
-      "value": "BORKAŁA REMIGIUSZ"
-    }, {
-      "value": "BOROWSKI FILIP"
-    }, {
-      "value": "BRONOWICKI PIOTR"
-    }, {
-      "value": "BROŻEK PIOTR"
-    }, {
-      "value": "BUDKA MIROSŁAW"
-    }, {
-      "value": "BUDZICH DAWID"
-    }, {
-      "value": "BUDZIK DOMINIK"
-    }, {
-      "value": "BUKATA MARTIN"
-    }, {
-      "value": "BUKOWIEC MATEUSZ"
-    }, {
-      "value": "BURYAN JAN"
-    }, {
-      "value": "BYRTEK DAMIAN"
-    }, {
-      "value": "BZDĘGA TOMASZ"
-    }, {
-      "value": "CALIJURI MAYCON"
-    }, {
-      "value": "CAMARA SIDY"
-    }, {
-      "value": "CHAŁBIŃSKI MICHAŁ"
-    }, {
-      "value": "CHAMERA MICHAŁ"
-    }, {
-      "value": "CHARMUŁOWICZ SŁAWOMIR"
-    }, {
-      "value": "CHOLEWA DAWID"
-    }, {
-      "value": "CHRAPEK MICHAŁ"
-    }, {
-      "value": "CHYLASZEK DANIEL"
-    }, {
-      "value": "CHYŁA MARCIN"
-    }, {
-      "value": "CICMAN PAVOL"
-    }, {
-      "value": "CIECHAŃSKI DANIEL"
-    }, {
-      "value": "CIFUENTES ALBERTO"
-    }, {
-      "value": "CMELIK LUKAS"
-    }, {
-      "value": "CUERDA FERNANDO"
-    }, {
-      "value": "CZEKAJ SŁAWOMIR"
-    }, {
-      "value": "CZEKAŃSKI WITOLD"
-    }, {
-      "value": "CZERWIŃSKI JAKUB"
-    }, {
-      "value": "DALMAU ADRIAN"
-    }, {
-      "value": "DANIEL JUSTIN"
-    }, {
-      "value": "DĄBROWSKI MIROSŁAW"
-    }, {
-      "value": "DĄBROWSKI WOJCIECH"
-    }, {
-      "value": "DEMIANIUK CEZARY"
-    }, {
-      "value": "DŁUGOŁĘCKI MATEUSZ"
-    }, {
-      "value": "DOCEKAL TOMAS"
-    }, {
-      "value": "DRAPIŃSKI IGOR"
-    }, {
-      "value": "DUMAŁA RAFAŁ"
-    }, {
-      "value": "DUNAJCZYK WOJCIECH"
-    }, {
-      "value": "DUSZARA PRZEMYSŁAW"
-    }, {
-      "value": "DYBOWSKI KAROL"
-    }, {
-      "value": "DYMIŃSKI DARIUSZ"
-    }, {
-      "value": "DYTKO PATRICK"
-    }, {
-      "value": "DZICZEK PATRYK"
-    }, {
-      "value": "FEĆ MARCIN"
-    }, {
-      "value": "FELIX JORGE"
-    }, {
-      "value": "FIGOŁUSZKA WIKTOR"
-    }, {
-      "value": "FIKAJ ELTON"
-    }, {
-      "value": "FILIPCZYK MAREK"
-    }, {
-      "value": "FILIPOWICZ MICHAŁ"
-    }, {
-      "value": "FILIPOWICZ GRZEGORZ"
-    }, {
-      "value": "FLIS MARCIN"
-    }, {
-      "value": "FOLC MARCIN"
-    }, {
-      "value": "FREITAG JAKUB"
-    }, {
-      "value": "GAŁUSZKA RAFAŁ"
-    }, {
-      "value": "GAMLA PAWEŁ"
-    }, {
-      "value": "GAPIŃSKI SZYMON"
-    }, {
-      "value": "GARDIASZ ŁUKASZ"
-    }, {
-      "value": "GENDERA MAKSYM"
-    }, {
-      "value": "GIL GRZEGORZ"
-    }, {
-      "value": "GIRDVAINIS EDVINAS"
-    }, {
-      "value": "GLIK KAMIL"
-    }, {
-      "value": "GŁOWIENKO JAN"
-    }, {
-      "value": "GOJKO DENIS"
-    }, {
-      "value": "GONTAREWICZ WOJCIECH"
-    }, {
-      "value": "GORCZYCA JACEK"
-    }, {
-      "value": "GOTAL SANDRO"
-    }, {
-      "value": "GRAJNER TOMASZ"
-    }, {
-      "value": "GROBORZ KAMIL"
-    }, {
-      "value": "GROLIK MARCIN"
-    }, {
-      "value": "GRYMEL MARCIN"
-    }, {
-      "value": "GRZEMSKI BARTŁOMIEJ"
-    }, {
-      "value": "GWILIA WALERIAN"
-    }, {
-      "value": "HADJ SAID MOHAMED AMINE"
-    }, {
-      "value": "HAŁGAS KRZYSZTOF"
-    }, {
-      "value": "HANZEL ŁUKASZ"
-    }, {
-      "value": "HATELEY TOM"
-    }, {
-      "value": "HEBERT - HEBERT SILVA SANTOS"
-    }, {
-      "value": "HOLUBEK JAKUB"
-    }, {
-      "value": "HORVATH CSABA"
-    }, {
-      "value": "HUMERSKI MACIEJ"
-    }, {
-      "value": "HYJEK JAVIER AJENJO"
-    }, {
-      "value": "IPSA KRISTIJAN"
-    }, {
-      "value": "IWAN BARTOSZ"
-    }, {
-      "value": "IWAN DANIEL"
-    }, {
-      "value": "IWANICKI LESZEK"
-    }, {
-      "value": "IZVOLT MATEJ"
-    }, {
-      "value": "JAGIEŁŁO ALEKSANDER"
-    }, {
-      "value": "JANCZAREK ŁUKASZ"
-    }, {
-      "value": "JANCZYK DAWID"
-    }, {
-      "value": "JANKOWSKI MACIEJ"
-    }, {
-      "value": "JARKIEWICZ ANDRZEJ"
-    }, {
-      "value": "JARZYNKA OLIWIER"
-    }, {
-      "value": "JODŁOWIEC TOMASZ"
-    }, {
-      "value": "JOHN COLLINS"
-    }, {
-      "value": "JURADO ALVARO"
-    }, {
-      "value": "JURADO RUBEN"
-    }, {
-      "value": "JURCZYGA JAKUB"
-    }, {
-      "value": "KADUK JAKUB"
-    }, {
-      "value": "KAMIŃSKI WOJCIECH"
-    }, {
-      "value": "KAMIŃSKI WOJCIECH"
-    }, {
-      "value": "KAPUSTA ŁUKASZ"
-    }, {
-      "value": "KAPUT MICHAŁ"
-    }, {
-      "value": "KARASAUSKS ARTURS"
-    }, {
-      "value": "KARWAN PIOTR"
-    }, {
-      "value": "KASPRZIK TOMASZ"
-    }, {
-      "value": "KASPRZIK GRZEGORZ"
-    }, {
-      "value": "KASZOWSKI JAROSŁAW"
-    }, {
-      "value": "KATRANIS ALEXANDROS"
-    }, {
-      "value": "KATSANTONIS ANDREAS"
-    }, {
-      "value": "KĘDZIORA WOJCIECH"
-    }, {
-      "value": "KIREJCZYK GABRIEL"
-    }, {
-      "value": "KIRKESKOV MIKKEL"
-    }, {
-      "value": "KLEPCZYŃSKI ADRIAN"
-    }, {
-      "value": "KLUPŚ TYMOTEUSZ"
-    }, {
-      "value": "KMIETOWICZ KRZYSZTOF"
-    }, {
-      "value": "KNAP TOMASZ"
-    }, {
-      "value": "KOCUR MARCIN"
-    }, {
-      "value": "KOCYBA RAFAŁ"
-    }, {
-      "value": "KOCZON DANIEL"
-    }, {
-      "value": "KOLASIŃSKI KRZYSZTOF"
-    }, {
-      "value": "KOŁACKI DARIUSZ"
-    }, {
-      "value": "KOŁSUT RAFAŁ"
-    }, {
-      "value": "KOMAR MARIUSZ"
-    }, {
-      "value": "KOMPAŁA ADAM"
-    }, {
-      "value": "KONCZKOWSKI MARTIN"
-    }, {
-      "value": "KOPCZYŃSKI MATEUSZ"
-    }, {
-      "value": "KORBECKI MARCIN"
-    }, {
-      "value": "KORONA KAROL"
-    }, {
-      "value": "KORUN UROS"
-    }, {
-      "value": "KOSTEK KACPER"
-    }, {
-      "value": "KOWALIK IGOR"
-    }, {
-      "value": "KOWALSKI MATEUSZ"
-    }, {
-      "value": "KOZIK KRZYSZTOF"
-    }, {
-      "value": "KRAKOWCZYK ŁUKASZ"
-    }, {
-      "value": "KRÓL WOJCIECH"
-    }, {
-      "value": "KRÓL KRZYSZTOF"
-    }, {
-      "value": "KRÓLCZYK PATRYK"
-    }, {
-      "value": "KRÓLICKI BARTŁOMIEJ"
-    }, {
-      "value": "KRUPA PAWEŁ"
-    }, {
-      "value": "KRYGER ADAM"
-    }, {
-      "value": "KRZYCKI ŁUKASZ"
-    }, {
-      "value": "KRZYWKO RAFAŁ"
-    }, {
-      "value": "KUBÓW FILIP"
-    }, {
-      "value": "KUKIEŁKA KRZYSZTOF"
-    }, {
-      "value": "KUKULSKI KRZYSZTOF"
-    }, {
-      "value": "KUPIS JAROSŁAW"
-    }, {
-      "value": "KUREK KRZYSZTOF"
-    }, {
-      "value": "KUZDRA JAKUB"
-    }, {
-      "value": "KWAPISZ RAFAŁ"
-    }, {
-      "value": "KWAŚNIEWSKI PIOTR"
-    }, {
-      "value": "LASOTA TOMASZ"
-    }, {
-      "value": "LAZDINS ARTIS"
-    }, {
-      "value": "LECH SŁAWOMIR"
-    }, {
-      "value": "LENARCIK MAREK"
-    }, {
-      "value": "LENARTOWSKI ARTUR"
-    }, {
-      "value": "LESZCZYŃSKI RAFAŁ"
-    }, {
-      "value": "LEŚNIAK OSKAR"
-    }, {
-      "value": "LEWANDOWSKI FILIP"
-    }, {
-      "value": "LEWCZUK IGOR"
-    }, {
-      "value": "LEWICKI JAKUB"
-    }, {
-      "value": "LEŻAŁA GRZEGORZ"
-    }, {
-      "value": "LIMA IVAN"
-    }, {
-      "value": "LIPSKI PATRYK"
-    }, {
-      "value": "LISOWSKI PAWEŁ"
-    }, {
-      "value": "LISOWSKI WOJCIECH"
-    }, {
-      "value": "LISZEWSKI PIOTR"
-    }, {
-      "value": "LOKILO JASON"
-    }, {
-      "value": "LORENS MICHAŁ"
-    }, {
-      "value": "ŁABOJKO JAKUB"
-    }, {
-      "value": "ŁUCZAK BARTOSZ"
-    }, {
-      "value": "ŁUDZIŃSKI PRZEMYSŁAW"
-    }, {
-      "value": "ŁUPIEŻOWIEC TOMASZ"
-    }, {
-      "value": "MACIEJAK ROMAN"
-    }, {
-      "value": "MAK MATEUSZ"
-    }, {
-      "value": "MALARCZYK PIOTR"
-    }, {
-      "value": "MARTINEZ CARLES MARC"
-    }, {
-      "value": "MASŁOWSKI MICHAŁ"
-    }, {
-      "value": "MATRAS MATEUSZ"
-    }, {
-      "value": "MATUSIAK JAROSŁAW"
-    }, {
-      "value": "MATUSZEK SZYMON"
-    }, {
-      "value": "MAZIARZ OLIWIER"
-    }, {
-      "value": "MAZUR TOMASZ"
-    }, {
-      "value": "MAZUR KRZYSZTOF"
-    }, {
-      "value": "MICHNIEWICZ MACIEJ"
-    }, {
-      "value": "MIDO EL MEHDI SIDQY"
-    }, {
-      "value": "MILEWSKI SEBASTIAN"
-    }, {
-      "value": "MIZGAJSKI MACIEJ"
-    }, {
-      "value": "MŁOCEK KAMIL"
-    }, {
-      "value": "MODLISZEWSKI MACIEJ"
-    }, {
-      "value": "MOKWA TOMASZ"
-    }, {
-      "value": "MOSKWIK PAWEŁ"
-    }, {
-      "value": "MOSÓR ARIEL"
-    }, {
-      "value": "MÓJTA ADAM"
-    }, {
-      "value": "MRAZ PATRIK"
-    }, {
-      "value": "MUCHA DAMIAN"
-    }, {
-      "value": "MUCHA SZCZEPAN"
-    }, {
-      "value": "MURAWSKI RADOSŁAW"
-    }, {
-      "value": "MUSIOLIK SEBASTIAN"
-    }, {
-      "value": "MUSZALIK MARIUSZ"
-    }, {
-      "value": "NAKAJIMA TOYA"
-    }, {
-      "value": "NALEPA MACIEJ"
-    }, {
-      "value": "NALEPA PATRYK"
-    }, {
-      "value": "NESPOR MARTIN"
-    }, {
-      "value": "NIEBRZYDOWSKI PIOTR"
-    }, {
-      "value": "NIEDBAŁA JAKUB"
-    }, {
-      "value": "NIEVES ARMANDO"
-    }, {
-      "value": "NIKIEMA VICTOR"
-    }, {
-      "value": "NOWAK MARCIN"
-    }, {
-      "value": "OLSZAR SEBASTIAN"
-    }, {
-      "value": "OPELDUS ARTUR"
-    }, {
-      "value": "ORLIKOWSKI BARTŁOMIEJ"
-    }, {
-      "value": "OSYRA KORNEL"
-    }, {
-      "value": "PALUCHOWSKI ADRIAN"
-    }, {
-      "value": "PAŁKUS PRZEMYSŁAW"
-    }, {
-      "value": "PAPADOPULOS MICHAL"
-    }, {
-      "value": "PARADZIEJ MARIAN"
-    }, {
-      "value": "PARZYSZEK PIOTR"
-    }, {
-      "value": "PAULAUSKAS GEDIMINAS"
-    }, {
-      "value": "PETASZ PIOTR"
-    }, {
-      "value": "PIECHOCKI ADAM"
-    }, {
-      "value": "PIECHOTA PIOTR"
-    }, {
-      "value": "PIEKARSKI ROBERT"
-    }, {
-      "value": "PIETREK ROBERT"
-    }, {
-      "value": "PIETROŃ MARCIN"
-    }, {
-      "value": "PIETROWSKI MARCIN"
-    }, {
-      "value": "PIETRZAK RAFAŁ"
-    }, {
-      "value": "PIEWKO JAROSŁAW"
-    }, {
-      "value": "PIOTROWSKI DOMINIK"
-    }, {
-      "value": "PIOTROWSKI DOMINIK"
-    }, {
-      "value": "PLACH FRANTISEK"
-    }, {
-      "value": "PLEWA JANUSZ"
-    }, {
-      "value": "PŁATEK DAMIAN"
-    }, {
-      "value": "POCIECHA SEBASTIAN"
-    }, {
-      "value": "PODGÓRSKI TOMASZ"
-    }, {
-      "value": "POLAK JAN"
-    }, {
-      "value": "PONICHTERA ŁUKASZ"
-    }, {
-      "value": "PREUSS WIKTOR"
-    }, {
-      "value": "PRĘDOTA PIOTR"
-    }, {
-      "value": "PRZEWOŹNIAK CEZARY"
-    }, {
-      "value": "PRZYBYŁA MICHAŁ"
-    }, {
-      "value": "RABIN PAWEŁ"
-    }, {
-      "value": "RABIOLA TIAGO LOPES"
-    }, {
-      "value": "RADZEWICZ MARCIN"
-    }, {
-      "value": "RAKOWIECKI MICHAŁ"
-    }, {
-      "value": "RISS ANDRZEJ"
-    }, {
-      "value": "RIVAS JUANDE"
-    }, {
-      "value": "ROBAK MARCIN"
-    }, {
-      "value": "ROGALSKI MARCIN"
-    }, {
-      "value": "RUBAJ TOMASZ"
-    }, {
-      "value": "RUGASEVIĆ DARIO"
-    }, {
-      "value": "RUSOV DOBRIVOJ"
-    }, {
-      "value": "RYMANIAK BARTOSZ"
-    }, {
-      "value": "RYŃ ALEKSANDER"
-    }, {
-      "value": "SALA ANDRZEJ"
-    }, {
-      "value": "SAMAD SURAJ ABDUL"
-    }, {
-      "value": "SANCA LEANDRO"
-    }, {
-      "value": "SAPAŁA IGOR"
-    }, {
-      "value": "SAPPINEN RAUNO"
-    }, {
-      "value": "SARATOWICZ PIOTR"
-    }, {
-      "value": "SEDLACEK LUMIR"
-    }, {
-      "value": "SEDLAR ALEKSANDAR"
-    }, {
-      "value": "SEGOVIA KEITH"
-    }, {
-      "value": "SEKULSKI ŁUKASZ"
-    }, {
-      "value": "SEWERYN DAMIAN"
-    }, {
-      "value": "SIELEWSKI BARTŁOMIEJ"
-    }, {
-      "value": "SIELSKI ANDRZEJ"
-    }, {
-      "value": "SIERKA ROBERT"
-    }, {
-      "value": "SIKORA MIECZYSŁAW"
-    }, {
-      "value": "SIKORA ADRIAN"
-    }, {
-      "value": "SŁODCZYK GRZEGORZ"
-    }, {
-      "value": "SMEKTAŁA JAKUB"
-    }, {
-      "value": "SOBCZYK ALEX"
-    }, {
-      "value": "SOKOŁOWSKI PATRYK"
-    }, {
-      "value": "SOLNICA DARIUSZ"
-    }, {
-      "value": "SOPEL ALEKSANDER"
-    }, {
-      "value": "SOPEL BARTOSZ"
-    }, {
-      "value": "SOUARE MOUHAMED"
-    }, {
-      "value": "STACHERA TOMASZ"
-    }, {
-      "value": "STANEK KAROL"
-    }, {
-      "value": "STANICZEK RAFAŁ"
-    }, {
-      "value": "STANIEK RYSZARD"
-    }, {
-      "value": "STAROBRAT MATEUSZ"
-    }, {
-      "value": "STAWICKI MARIUSZ"
-    }, {
-      "value": "STECZYK DOMINIK"
-    }, {
-      "value": "STĘPIEŃ TOMASZ"
-    }, {
-      "value": "STOJILJKOVIĆ NIKOLA"
-    }, {
-      "value": "STOLARZ MICHAŁ"
-    }, {
-      "value": "SZARY SŁAWOMIR"
-    }, {
-      "value": "SZCZEPANIAK MATEUSZ"
-    }, {
-      "value": "SZCZYRBA MICHAŁ"
-    }, {
-      "value": "SZEJA TOMASZ"
-    }, {
-      "value": "SZELIGA BARTOSZ"
-    }, {
-      "value": "SZMATIUK MACIEJ"
-    }, {
-      "value": "SZMATUŁA JAKUB"
-    }, {
-      "value": "SZTORC TADEUSZ"
-    }, {
-      "value": "SZUMSKI KRZYSZTOF"
-    }, {
-      "value": "SZUMSKI JAKUB"
-    }, {
-      "value": "SZYMAŃSKI KAROL"
-    }, {
-      "value": "ŚWIĄTEK ADRIAN"
-    }, {
-      "value": "ŚWIERCZOK JAKUB"
-    }, {
-      "value": "ŚWIETLICKI DOMINIK"
-    }, {
-      "value": "TARASZKIEWICZ ARKADIUSZ"
-    }, {
-      "value": "TOMANEK DAWID"
-    }, {
-      "value": "TOMASIEWICZ GRZEGORZ"
-    }, {
-      "value": "TOMCZYK PAWEŁ"
-    }, {
-      "value": "TORIL ALBERTO"
-    }, {
-      "value": "TRELA DARIUSZ"
-    }, {
-      "value": "TUSZYŃSKI PATRYK"
-    }, {
-      "value": "TWUMASI EMA"
-    }, {
-      "value": "TYMIŃSKI ADAM"
-    }, {
-      "value": "URBAN RUDOLF"
-    }, {
-      "value": "USS PIOTR"
-    }, {
-      "value": "VACEK KAMIL"
-    }, {
-      "value": "VALENCIA JOEL"
-    }, {
-      "value": "VALLEJO HUGO"
-    }, {
-      "value": "VASSILJEV KONSTANTIN"
-    }, {
-      "value": "VIDA KRISTOPHER"
-    }, {
-      "value": "VRANA PAVEL"
-    }, {
-      "value": "VRANJES STOJAN"
-    }, {
-      "value": "WALKOWIAK ROBERT"
-    }, {
-      "value": "WARSZEWSKI ANDRZEJ"
-    }, {
-      "value": "WARZECHA PIOTR"
-    }, {
-      "value": "WASILEWSKI TOMASZ"
-    }, {
-      "value": "WESECKI ŁUKASZ"
-    }, {
-      "value": "WĘGIER PRZEMYSŁAW"
-    }, {
-      "value": "WIDUCH MIROSŁAW"
-    }, {
-      "value": "WIERZBICKI OSKAR"
-    }, {
-      "value": "WILCZEK KAMIL"
-    }, {
-      "value": "WILK BARTŁOMIEJ"
-    }, {
-      "value": "WILUK WOJCIECH"
-    }, {
-      "value": "WINCIERSZ MATEUSZ"
-    }, {
-      "value": "WINIARCZYK ŁUKASZ"
-    }, {
-      "value": "WIŚNIEWSKI DARIUSZ"
-    }, {
-      "value": "WIŚNIEWSKI ŁUKASZ"
-    }, {
-      "value": "WIŚNIOWSKI KRZYSZTOF"
-    }, {
-      "value": "WOLNY FRYDERYK"
-    }, {
-      "value": "WRÓBEL STANISŁAW"
-    }, {
-      "value": "WYSOCKI PRZEMYSŁAW"
-    }, {
-      "value": "WYSOGLĄD PIOTR"
-    }, {
-      "value": "ZACHARIASZ RAFAŁ"
-    }, {
-      "value": "ZACHCIAŁ MICHAŁ"
-    }, {
-      "value": "ZADYLAK JAROSŁAW"
-    }, {
-      "value": "ZAGÓRSKI KRZYSZTOF"
-    }, {
-      "value": "ZAJĄCZKOWSKI PAWEŁ"
-    }, {
-      "value": "ZBOZIEŃ DAMIAN"
-    }, {
-      "value": "ZGANIACZ MARIUSZ"
-    }, {
-      "value": "ZIÓŁKOWSKI JAN"
-    }, {
-      "value": "ZIVEC SASA"
-    }, {
-      "value": "ZUBEL SŁAWOMIR"
-    }, {
-      "value": "ŻAK ARTUR"
-    }, {
-      "value": "ŻBIKOWSKI ROBERT"
-    }, {
-      "value": "ŻYRKOWSKI ŁUKASZ"
-    }, {
-      "value": "ŻYRO MICHAŁ"
-    }],
+    answers: [
+      {
+        value: 'ALVES TIAGO',
+      },
+      {
+        value: 'AMEYAW MICHAEL',
+      },
+      {
+        value: 'ANDRASZAK RAFAŁ',
+      },
+      {
+        value: 'ANGIELSKI KAROL',
+      },
+      {
+        value: 'APPIAH KOFI KYERE',
+      },
+      {
+        value: 'AQUINO DANI',
+      },
+      {
+        value: 'AYONG KARSTEN',
+      },
+      {
+        value: 'BADIA GERARD',
+      },
+      {
+        value: 'BAJCER PIOTR',
+      },
+      {
+        value: 'BALUL TOMASZ',
+      },
+      {
+        value: 'BAŁUSZYŃSKI HENRYK',
+      },
+      {
+        value: 'BANAŚ ADAM',
+      },
+      {
+        value: 'BAŃKA ARTUR',
+      },
+      {
+        value: 'BARISIĆ JOSIP',
+      },
+      {
+        value: 'BARKOVSKIY GERMAN',
+      },
+      {
+        value: 'BEDNARZ ANDRZEJ',
+      },
+      {
+        value: 'BERNATEK OSKAR',
+      },
+      {
+        value: 'BIAŁEK MICHAŁ',
+      },
+      {
+        value: 'BISKUP JAKUB',
+      },
+      {
+        value: 'BŁACHUT MARIUSZ',
+      },
+      {
+        value: 'BOCHENEK DARIUSZ',
+      },
+      {
+        value: 'BODYS MICHAŁ',
+      },
+      {
+        value: 'BODZIOCH JANUSZ',
+      },
+      {
+        value: 'BODZIOCH MATEUSZ',
+      },
+      {
+        value: 'BOISGARD QUENTIN',
+      },
+      {
+        value: 'BOJARSKI MARCIN',
+      },
+      {
+        value: 'BOK ADRIAN',
+      },
+      {
+        value: 'BORKAŁA REMIGIUSZ',
+      },
+      {
+        value: 'BOROWSKI FILIP',
+      },
+      {
+        value: 'BRONOWICKI PIOTR',
+      },
+      {
+        value: 'BROŻEK PIOTR',
+      },
+      {
+        value: 'BUDKA MIROSŁAW',
+      },
+      {
+        value: 'BUDZICH DAWID',
+      },
+      {
+        value: 'BUDZIK DOMINIK',
+      },
+      {
+        value: 'BUKATA MARTIN',
+      },
+      {
+        value: 'BUKOWIEC MATEUSZ',
+      },
+      {
+        value: 'BURYAN JAN',
+      },
+      {
+        value: 'BYRTEK DAMIAN',
+      },
+      {
+        value: 'BZDĘGA TOMASZ',
+      },
+      {
+        value: 'CALIJURI MAYCON',
+      },
+      {
+        value: 'CAMARA SIDY',
+      },
+      {
+        value: 'CHAŁBIŃSKI MICHAŁ',
+      },
+      {
+        value: 'CHAMERA MICHAŁ',
+      },
+      {
+        value: 'CHARMUŁOWICZ SŁAWOMIR',
+      },
+      {
+        value: 'CHOLEWA DAWID',
+      },
+      {
+        value: 'CHRAPEK MICHAŁ',
+      },
+      {
+        value: 'CHYLASZEK DANIEL',
+      },
+      {
+        value: 'CHYŁA MARCIN',
+      },
+      {
+        value: 'CICMAN PAVOL',
+      },
+      {
+        value: 'CIECHAŃSKI DANIEL',
+      },
+      {
+        value: 'CIFUENTES ALBERTO',
+      },
+      {
+        value: 'CMELIK LUKAS',
+      },
+      {
+        value: 'CUERDA FERNANDO',
+      },
+      {
+        value: 'CZEKAJ SŁAWOMIR',
+      },
+      {
+        value: 'CZEKAŃSKI WITOLD',
+      },
+      {
+        value: 'CZERWIŃSKI JAKUB',
+      },
+      {
+        value: 'DALMAU ADRIAN',
+      },
+      {
+        value: 'DANIEL JUSTIN',
+      },
+      {
+        value: 'DĄBROWSKI MIROSŁAW',
+      },
+      {
+        value: 'DĄBROWSKI WOJCIECH',
+      },
+      {
+        value: 'DEMIANIUK CEZARY',
+      },
+      {
+        value: 'DŁUGOŁĘCKI MATEUSZ',
+      },
+      {
+        value: 'DOCEKAL TOMAS',
+      },
+      {
+        value: 'DRAPIŃSKI IGOR',
+      },
+      {
+        value: 'DUMAŁA RAFAŁ',
+      },
+      {
+        value: 'DUNAJCZYK WOJCIECH',
+      },
+      {
+        value: 'DUSZARA PRZEMYSŁAW',
+      },
+      {
+        value: 'DYBOWSKI KAROL',
+      },
+      {
+        value: 'DYMIŃSKI DARIUSZ',
+      },
+      {
+        value: 'DYTKO PATRICK',
+      },
+      {
+        value: 'DZICZEK PATRYK',
+      },
+      {
+        value: 'FEĆ MARCIN',
+      },
+      {
+        value: 'FELIX JORGE',
+      },
+      {
+        value: 'FIGOŁUSZKA WIKTOR',
+      },
+      {
+        value: 'FIKAJ ELTON',
+      },
+      {
+        value: 'FILIPCZYK MAREK',
+      },
+      {
+        value: 'FILIPOWICZ MICHAŁ',
+      },
+      {
+        value: 'FILIPOWICZ GRZEGORZ',
+      },
+      {
+        value: 'FLIS MARCIN',
+      },
+      {
+        value: 'FOLC MARCIN',
+      },
+      {
+        value: 'FREITAG JAKUB',
+      },
+      {
+        value: 'GAŁUSZKA RAFAŁ',
+      },
+      {
+        value: 'GAMLA PAWEŁ',
+      },
+      {
+        value: 'GAPIŃSKI SZYMON',
+      },
+      {
+        value: 'GARDIASZ ŁUKASZ',
+      },
+      {
+        value: 'GENDERA MAKSYM',
+      },
+      {
+        value: 'GIL GRZEGORZ',
+      },
+      {
+        value: 'GIRDVAINIS EDVINAS',
+      },
+      {
+        value: 'GLIK KAMIL',
+      },
+      {
+        value: 'GŁOWIENKO JAN',
+      },
+      {
+        value: 'GOJKO DENIS',
+      },
+      {
+        value: 'GONTAREWICZ WOJCIECH',
+      },
+      {
+        value: 'GORCZYCA JACEK',
+      },
+      {
+        value: 'GOTAL SANDRO',
+      },
+      {
+        value: 'GRAJNER TOMASZ',
+      },
+      {
+        value: 'GROBORZ KAMIL',
+      },
+      {
+        value: 'GROLIK MARCIN',
+      },
+      {
+        value: 'GRYMEL MARCIN',
+      },
+      {
+        value: 'GRZEMSKI BARTŁOMIEJ',
+      },
+      {
+        value: 'GWILIA WALERIAN',
+      },
+      {
+        value: 'HADJ SAID MOHAMED AMINE',
+      },
+      {
+        value: 'HAŁGAS KRZYSZTOF',
+      },
+      {
+        value: 'HANZEL ŁUKASZ',
+      },
+      {
+        value: 'HATELEY TOM',
+      },
+      {
+        value: 'HEBERT - HEBERT SILVA SANTOS',
+      },
+      {
+        value: 'HOLUBEK JAKUB',
+      },
+      {
+        value: 'HORVATH CSABA',
+      },
+      {
+        value: 'HUMERSKI MACIEJ',
+      },
+      {
+        value: 'HYJEK JAVIER AJENJO',
+      },
+      {
+        value: 'IPSA KRISTIJAN',
+      },
+      {
+        value: 'IWAN BARTOSZ',
+      },
+      {
+        value: 'IWAN DANIEL',
+      },
+      {
+        value: 'IWANICKI LESZEK',
+      },
+      {
+        value: 'IZVOLT MATEJ',
+      },
+      {
+        value: 'JAGIEŁŁO ALEKSANDER',
+      },
+      {
+        value: 'JANCZAREK ŁUKASZ',
+      },
+      {
+        value: 'JANCZYK DAWID',
+      },
+      {
+        value: 'JANKOWSKI MACIEJ',
+      },
+      {
+        value: 'JARKIEWICZ ANDRZEJ',
+      },
+      {
+        value: 'JARZYNKA OLIWIER',
+      },
+      {
+        value: 'JODŁOWIEC TOMASZ',
+      },
+      {
+        value: 'JOHN COLLINS',
+      },
+      {
+        value: 'JURADO ALVARO',
+      },
+      {
+        value: 'JURADO RUBEN',
+      },
+      {
+        value: 'JURCZYGA JAKUB',
+      },
+      {
+        value: 'KADUK JAKUB',
+      },
+      {
+        value: 'KAMIŃSKI WOJCIECH',
+      },
+      {
+        value: 'KAMIŃSKI WOJCIECH',
+      },
+      {
+        value: 'KAPUSTA ŁUKASZ',
+      },
+      {
+        value: 'KAPUT MICHAŁ',
+      },
+      {
+        value: 'KARASAUSKS ARTURS',
+      },
+      {
+        value: 'KARWAN PIOTR',
+      },
+      {
+        value: 'KASPRZIK TOMASZ',
+      },
+      {
+        value: 'KASPRZIK GRZEGORZ',
+      },
+      {
+        value: 'KASZOWSKI JAROSŁAW',
+      },
+      {
+        value: 'KATRANIS ALEXANDROS',
+      },
+      {
+        value: 'KATSANTONIS ANDREAS',
+      },
+      {
+        value: 'KĘDZIORA WOJCIECH',
+      },
+      {
+        value: 'KIREJCZYK GABRIEL',
+      },
+      {
+        value: 'KIRKESKOV MIKKEL',
+      },
+      {
+        value: 'KLEPCZYŃSKI ADRIAN',
+      },
+      {
+        value: 'KLUPŚ TYMOTEUSZ',
+      },
+      {
+        value: 'KMIETOWICZ KRZYSZTOF',
+      },
+      {
+        value: 'KNAP TOMASZ',
+      },
+      {
+        value: 'KOCUR MARCIN',
+      },
+      {
+        value: 'KOCYBA RAFAŁ',
+      },
+      {
+        value: 'KOCZON DANIEL',
+      },
+      {
+        value: 'KOLASIŃSKI KRZYSZTOF',
+      },
+      {
+        value: 'KOŁACKI DARIUSZ',
+      },
+      {
+        value: 'KOŁSUT RAFAŁ',
+      },
+      {
+        value: 'KOMAR MARIUSZ',
+      },
+      {
+        value: 'KOMPAŁA ADAM',
+      },
+      {
+        value: 'KONCZKOWSKI MARTIN',
+      },
+      {
+        value: 'KOPCZYŃSKI MATEUSZ',
+      },
+      {
+        value: 'KORBECKI MARCIN',
+      },
+      {
+        value: 'KORONA KAROL',
+      },
+      {
+        value: 'KORUN UROS',
+      },
+      {
+        value: 'KOSTEK KACPER',
+      },
+      {
+        value: 'KOWALIK IGOR',
+      },
+      {
+        value: 'KOWALSKI MATEUSZ',
+      },
+      {
+        value: 'KOZIK KRZYSZTOF',
+      },
+      {
+        value: 'KRAKOWCZYK ŁUKASZ',
+      },
+      {
+        value: 'KRÓL WOJCIECH',
+      },
+      {
+        value: 'KRÓL KRZYSZTOF',
+      },
+      {
+        value: 'KRÓLCZYK PATRYK',
+      },
+      {
+        value: 'KRÓLICKI BARTŁOMIEJ',
+      },
+      {
+        value: 'KRUPA PAWEŁ',
+      },
+      {
+        value: 'KRYGER ADAM',
+      },
+      {
+        value: 'KRZYCKI ŁUKASZ',
+      },
+      {
+        value: 'KRZYWKO RAFAŁ',
+      },
+      {
+        value: 'KUBÓW FILIP',
+      },
+      {
+        value: 'KUKIEŁKA KRZYSZTOF',
+      },
+      {
+        value: 'KUKULSKI KRZYSZTOF',
+      },
+      {
+        value: 'KUPIS JAROSŁAW',
+      },
+      {
+        value: 'KUREK KRZYSZTOF',
+      },
+      {
+        value: 'KUZDRA JAKUB',
+      },
+      {
+        value: 'KWAPISZ RAFAŁ',
+      },
+      {
+        value: 'KWAŚNIEWSKI PIOTR',
+      },
+      {
+        value: 'LASOTA TOMASZ',
+      },
+      {
+        value: 'LAZDINS ARTIS',
+      },
+      {
+        value: 'LECH SŁAWOMIR',
+      },
+      {
+        value: 'LENARCIK MAREK',
+      },
+      {
+        value: 'LENARTOWSKI ARTUR',
+      },
+      {
+        value: 'LESZCZYŃSKI RAFAŁ',
+      },
+      {
+        value: 'LEŚNIAK OSKAR',
+      },
+      {
+        value: 'LEWANDOWSKI FILIP',
+      },
+      {
+        value: 'LEWCZUK IGOR',
+      },
+      {
+        value: 'LEWICKI JAKUB',
+      },
+      {
+        value: 'LEŻAŁA GRZEGORZ',
+      },
+      {
+        value: 'LIMA IVAN',
+      },
+      {
+        value: 'LIPSKI PATRYK',
+      },
+      {
+        value: 'LISOWSKI PAWEŁ',
+      },
+      {
+        value: 'LISOWSKI WOJCIECH',
+      },
+      {
+        value: 'LISZEWSKI PIOTR',
+      },
+      {
+        value: 'LOKILO JASON',
+      },
+      {
+        value: 'LORENS MICHAŁ',
+      },
+      {
+        value: 'ŁABOJKO JAKUB',
+      },
+      {
+        value: 'ŁUCZAK BARTOSZ',
+      },
+      {
+        value: 'ŁUDZIŃSKI PRZEMYSŁAW',
+      },
+      {
+        value: 'ŁUPIEŻOWIEC TOMASZ',
+      },
+      {
+        value: 'MACIEJAK ROMAN',
+      },
+      {
+        value: 'MAK MATEUSZ',
+      },
+      {
+        value: 'MALARCZYK PIOTR',
+      },
+      {
+        value: 'MARTINEZ CARLES MARC',
+      },
+      {
+        value: 'MASŁOWSKI MICHAŁ',
+      },
+      {
+        value: 'MATRAS MATEUSZ',
+      },
+      {
+        value: 'MATUSIAK JAROSŁAW',
+      },
+      {
+        value: 'MATUSZEK SZYMON',
+      },
+      {
+        value: 'MAZIARZ OLIWIER',
+      },
+      {
+        value: 'MAZUR TOMASZ',
+      },
+      {
+        value: 'MAZUR KRZYSZTOF',
+      },
+      {
+        value: 'MICHNIEWICZ MACIEJ',
+      },
+      {
+        value: 'MIDO EL MEHDI SIDQY',
+      },
+      {
+        value: 'MILEWSKI SEBASTIAN',
+      },
+      {
+        value: 'MIZGAJSKI MACIEJ',
+      },
+      {
+        value: 'MŁOCEK KAMIL',
+      },
+      {
+        value: 'MODLISZEWSKI MACIEJ',
+      },
+      {
+        value: 'MOKWA TOMASZ',
+      },
+      {
+        value: 'MOSKWIK PAWEŁ',
+      },
+      {
+        value: 'MOSÓR ARIEL',
+      },
+      {
+        value: 'MÓJTA ADAM',
+      },
+      {
+        value: 'MRAZ PATRIK',
+      },
+      {
+        value: 'MUCHA DAMIAN',
+      },
+      {
+        value: 'MUCHA SZCZEPAN',
+      },
+      {
+        value: 'MURAWSKI RADOSŁAW',
+      },
+      {
+        value: 'MUSIOLIK SEBASTIAN',
+      },
+      {
+        value: 'MUSZALIK MARIUSZ',
+      },
+      {
+        value: 'NAKAJIMA TOYA',
+      },
+      {
+        value: 'NALEPA MACIEJ',
+      },
+      {
+        value: 'NALEPA PATRYK',
+      },
+      {
+        value: 'NESPOR MARTIN',
+      },
+      {
+        value: 'NIEBRZYDOWSKI PIOTR',
+      },
+      {
+        value: 'NIEDBAŁA JAKUB',
+      },
+      {
+        value: 'NIEVES ARMANDO',
+      },
+      {
+        value: 'NIKIEMA VICTOR',
+      },
+      {
+        value: 'NOWAK MARCIN',
+      },
+      {
+        value: 'OLSZAR SEBASTIAN',
+      },
+      {
+        value: 'OPELDUS ARTUR',
+      },
+      {
+        value: 'ORLIKOWSKI BARTŁOMIEJ',
+      },
+      {
+        value: 'OSYRA KORNEL',
+      },
+      {
+        value: 'PALUCHOWSKI ADRIAN',
+      },
+      {
+        value: 'PAŁKUS PRZEMYSŁAW',
+      },
+      {
+        value: 'PAPADOPULOS MICHAL',
+      },
+      {
+        value: 'PARADZIEJ MARIAN',
+      },
+      {
+        value: 'PARZYSZEK PIOTR',
+      },
+      {
+        value: 'PAULAUSKAS GEDIMINAS',
+      },
+      {
+        value: 'PETASZ PIOTR',
+      },
+      {
+        value: 'PIECHOCKI ADAM',
+      },
+      {
+        value: 'PIECHOTA PIOTR',
+      },
+      {
+        value: 'PIEKARSKI ROBERT',
+      },
+      {
+        value: 'PIETREK ROBERT',
+      },
+      {
+        value: 'PIETROŃ MARCIN',
+      },
+      {
+        value: 'PIETROWSKI MARCIN',
+      },
+      {
+        value: 'PIETRZAK RAFAŁ',
+      },
+      {
+        value: 'PIEWKO JAROSŁAW',
+      },
+      {
+        value: 'PIOTROWSKI DOMINIK',
+      },
+      {
+        value: 'PIOTROWSKI DOMINIK',
+      },
+      {
+        value: 'PLACH FRANTISEK',
+      },
+      {
+        value: 'PLEWA JANUSZ',
+      },
+      {
+        value: 'PŁATEK DAMIAN',
+      },
+      {
+        value: 'POCIECHA SEBASTIAN',
+      },
+      {
+        value: 'PODGÓRSKI TOMASZ',
+      },
+      {
+        value: 'POLAK JAN',
+      },
+      {
+        value: 'PONICHTERA ŁUKASZ',
+      },
+      {
+        value: 'PREUSS WIKTOR',
+      },
+      {
+        value: 'PRĘDOTA PIOTR',
+      },
+      {
+        value: 'PRZEWOŹNIAK CEZARY',
+      },
+      {
+        value: 'PRZYBYŁA MICHAŁ',
+      },
+      {
+        value: 'RABIN PAWEŁ',
+      },
+      {
+        value: 'RABIOLA TIAGO LOPES',
+      },
+      {
+        value: 'RADZEWICZ MARCIN',
+      },
+      {
+        value: 'RAKOWIECKI MICHAŁ',
+      },
+      {
+        value: 'RISS ANDRZEJ',
+      },
+      {
+        value: 'RIVAS JUANDE',
+      },
+      {
+        value: 'ROBAK MARCIN',
+      },
+      {
+        value: 'ROGALSKI MARCIN',
+      },
+      {
+        value: 'RUBAJ TOMASZ',
+      },
+      {
+        value: 'RUGASEVIĆ DARIO',
+      },
+      {
+        value: 'RUSOV DOBRIVOJ',
+      },
+      {
+        value: 'RYMANIAK BARTOSZ',
+      },
+      {
+        value: 'RYŃ ALEKSANDER',
+      },
+      {
+        value: 'SALA ANDRZEJ',
+      },
+      {
+        value: 'SAMAD SURAJ ABDUL',
+      },
+      {
+        value: 'SANCA LEANDRO',
+      },
+      {
+        value: 'SAPAŁA IGOR',
+      },
+      {
+        value: 'SAPPINEN RAUNO',
+      },
+      {
+        value: 'SARATOWICZ PIOTR',
+      },
+      {
+        value: 'SEDLACEK LUMIR',
+      },
+      {
+        value: 'SEDLAR ALEKSANDAR',
+      },
+      {
+        value: 'SEGOVIA KEITH',
+      },
+      {
+        value: 'SEKULSKI ŁUKASZ',
+      },
+      {
+        value: 'SEWERYN DAMIAN',
+      },
+      {
+        value: 'SIELEWSKI BARTŁOMIEJ',
+      },
+      {
+        value: 'SIELSKI ANDRZEJ',
+      },
+      {
+        value: 'SIERKA ROBERT',
+      },
+      {
+        value: 'SIKORA MIECZYSŁAW',
+      },
+      {
+        value: 'SIKORA ADRIAN',
+      },
+      {
+        value: 'SŁODCZYK GRZEGORZ',
+      },
+      {
+        value: 'SMEKTAŁA JAKUB',
+      },
+      {
+        value: 'SOBCZYK ALEX',
+      },
+      {
+        value: 'SOKOŁOWSKI PATRYK',
+      },
+      {
+        value: 'SOLNICA DARIUSZ',
+      },
+      {
+        value: 'SOPEL ALEKSANDER',
+      },
+      {
+        value: 'SOPEL BARTOSZ',
+      },
+      {
+        value: 'SOUARE MOUHAMED',
+      },
+      {
+        value: 'STACHERA TOMASZ',
+      },
+      {
+        value: 'STANEK KAROL',
+      },
+      {
+        value: 'STANICZEK RAFAŁ',
+      },
+      {
+        value: 'STANIEK RYSZARD',
+      },
+      {
+        value: 'STAROBRAT MATEUSZ',
+      },
+      {
+        value: 'STAWICKI MARIUSZ',
+      },
+      {
+        value: 'STECZYK DOMINIK',
+      },
+      {
+        value: 'STĘPIEŃ TOMASZ',
+      },
+      {
+        value: 'STOJILJKOVIĆ NIKOLA',
+      },
+      {
+        value: 'STOLARZ MICHAŁ',
+      },
+      {
+        value: 'SZARY SŁAWOMIR',
+      },
+      {
+        value: 'SZCZEPANIAK MATEUSZ',
+      },
+      {
+        value: 'SZCZYRBA MICHAŁ',
+      },
+      {
+        value: 'SZEJA TOMASZ',
+      },
+      {
+        value: 'SZELIGA BARTOSZ',
+      },
+      {
+        value: 'SZMATIUK MACIEJ',
+      },
+      {
+        value: 'SZMATUŁA JAKUB',
+      },
+      {
+        value: 'SZTORC TADEUSZ',
+      },
+      {
+        value: 'SZUMSKI KRZYSZTOF',
+      },
+      {
+        value: 'SZUMSKI JAKUB',
+      },
+      {
+        value: 'SZYMAŃSKI KAROL',
+      },
+      {
+        value: 'ŚWIĄTEK ADRIAN',
+      },
+      {
+        value: 'ŚWIERCZOK JAKUB',
+      },
+      {
+        value: 'ŚWIETLICKI DOMINIK',
+      },
+      {
+        value: 'TARASZKIEWICZ ARKADIUSZ',
+      },
+      {
+        value: 'TOMANEK DAWID',
+      },
+      {
+        value: 'TOMASIEWICZ GRZEGORZ',
+      },
+      {
+        value: 'TOMCZYK PAWEŁ',
+      },
+      {
+        value: 'TORIL ALBERTO',
+      },
+      {
+        value: 'TRELA DARIUSZ',
+      },
+      {
+        value: 'TUSZYŃSKI PATRYK',
+      },
+      {
+        value: 'TWUMASI EMA',
+      },
+      {
+        value: 'TYMIŃSKI ADAM',
+      },
+      {
+        value: 'URBAN RUDOLF',
+      },
+      {
+        value: 'USS PIOTR',
+      },
+      {
+        value: 'VACEK KAMIL',
+      },
+      {
+        value: 'VALENCIA JOEL',
+      },
+      {
+        value: 'VALLEJO HUGO',
+      },
+      {
+        value: 'VASSILJEV KONSTANTIN',
+      },
+      {
+        value: 'VIDA KRISTOPHER',
+      },
+      {
+        value: 'VRANA PAVEL',
+      },
+      {
+        value: 'VRANJES STOJAN',
+      },
+      {
+        value: 'WALKOWIAK ROBERT',
+      },
+      {
+        value: 'WARSZEWSKI ANDRZEJ',
+      },
+      {
+        value: 'WARZECHA PIOTR',
+      },
+      {
+        value: 'WASILEWSKI TOMASZ',
+      },
+      {
+        value: 'WESECKI ŁUKASZ',
+      },
+      {
+        value: 'WĘGIER PRZEMYSŁAW',
+      },
+      {
+        value: 'WIDUCH MIROSŁAW',
+      },
+      {
+        value: 'WIERZBICKI OSKAR',
+      },
+      {
+        value: 'WILCZEK KAMIL',
+      },
+      {
+        value: 'WILK BARTŁOMIEJ',
+      },
+      {
+        value: 'WILUK WOJCIECH',
+      },
+      {
+        value: 'WINCIERSZ MATEUSZ',
+      },
+      {
+        value: 'WINIARCZYK ŁUKASZ',
+      },
+      {
+        value: 'WIŚNIEWSKI DARIUSZ',
+      },
+      {
+        value: 'WIŚNIEWSKI ŁUKASZ',
+      },
+      {
+        value: 'WIŚNIOWSKI KRZYSZTOF',
+      },
+      {
+        value: 'WOLNY FRYDERYK',
+      },
+      {
+        value: 'WRÓBEL STANISŁAW',
+      },
+      {
+        value: 'WYSOCKI PRZEMYSŁAW',
+      },
+      {
+        value: 'WYSOGLĄD PIOTR',
+      },
+      {
+        value: 'ZACHARIASZ RAFAŁ',
+      },
+      {
+        value: 'ZACHCIAŁ MICHAŁ',
+      },
+      {
+        value: 'ZADYLAK JAROSŁAW',
+      },
+      {
+        value: 'ZAGÓRSKI KRZYSZTOF',
+      },
+      {
+        value: 'ZAJĄCZKOWSKI PAWEŁ',
+      },
+      {
+        value: 'ZBOZIEŃ DAMIAN',
+      },
+      {
+        value: 'ZGANIACZ MARIUSZ',
+      },
+      {
+        value: 'ZIÓŁKOWSKI JAN',
+      },
+      {
+        value: 'ZIVEC SASA',
+      },
+      {
+        value: 'ZUBEL SŁAWOMIR',
+      },
+      {
+        value: 'ŻAK ARTUR',
+      },
+      {
+        value: 'ŻBIKOWSKI ROBERT',
+      },
+      {
+        value: 'ŻYRKOWSKI ŁUKASZ',
+      },
+      {
+        value: 'ŻYRO MICHAŁ',
+      },
+    ],
     hints: [],
     revealedAnswers: [],
     showAnswer: false,
