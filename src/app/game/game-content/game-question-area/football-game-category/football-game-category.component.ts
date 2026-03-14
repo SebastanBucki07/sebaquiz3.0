@@ -167,11 +167,22 @@ export class FootballGameCategoryComponent implements OnInit {
     this.gameFinished = true;
     const totalPlayers = this.getAllPlayersCount();
 
-    // ... logika odkrywania wszystkich zawodników (bez zmian) ...
+    // 1. LOGIKA ODKRYWANIA WSZYSTKICH ZAWODNIKÓW
+    // Musimy przelecieć przez każdą strukturę i ustawić guessed = true
 
-    // SORTOWANIE:
-    // 1. Najpierw sprawdzamy kto ma więcej poprawnych odpowiedzi.
-    // 2. Jeśli jest remis, sprawdzamy kto ma WIĘCEJ pozostałych szans (chancesLeft).
+    const reveal = (p: footballPlayer) => {
+      p.guessed = true;
+    };
+
+    this.firstRows.forEach(row => row.forEach(reveal));
+    this.secondRows.forEach(row => row.forEach(reveal));
+    this.firstSubstitutes.forEach(reveal);
+    this.secondSubstitutes.forEach(reveal);
+
+    // Wymuszamy odświeżenie widoku przez zmianę referencji (immutability)
+    this.refreshView();
+
+    // 2. SORTOWANIE I WYŁONIENIE ZWYCIĘZCY
     const sorted = [...this.players].sort((a, b) => {
       if (b.correctAnswers === a.correctAnswers) {
         return b.chancesLeft - a.chancesLeft;
@@ -182,7 +193,6 @@ export class FootballGameCategoryComponent implements OnInit {
     this.winner = sorted[0] ?? null;
 
     if (this.winner) {
-      // Obliczamy punkty dla zwycięzcy (używając Twojego helpera dla spójności)
       const winnerPoints = calculateGamePoints(
         this.winner.correctAnswers,
         totalPlayers,

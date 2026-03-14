@@ -132,7 +132,10 @@
                   [src]="flagPngUrl(p.country)"
                   [alt]="p.country"
                 />
-                <div class="player-name" *ngIf="p.guessed">{{ p.surname }}</div>
+                <div class="player-name" *ngIf="p.guessed">
+                  {{ p.surname }}
+                  <div class="guessed-by" *ngIf="p.guessedBy">🎯 {{ p.guessedBy }}</div>
+                </div>
               </div>
             </ng-container>
           </div>
