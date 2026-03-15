@@ -174,8 +174,8 @@ export class FootballGameCategoryComponent implements OnInit {
       p.guessed = true;
     };
 
-    this.firstRows.forEach(row => row.forEach(reveal));
-    this.secondRows.forEach(row => row.forEach(reveal));
+    this.firstRows.forEach((row) => row.forEach(reveal));
+    this.secondRows.forEach((row) => row.forEach(reveal));
     this.firstSubstitutes.forEach(reveal);
     this.secondSubstitutes.forEach(reveal);
 

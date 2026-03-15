@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TicTacToeCategoryComponent } from './tic-tac-toe-category.component';
+import {TicTacToeCategoryComponent} from './tic-tac-toe-category.component';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {footballers} from '../../../../shared/footballers/footballers';
 import {getClubInfo} from '../../../../shared/clubMapper';
 
-fdescribe('TicTacToeCategoryComponent', () => {
+describe('TicTacToeCategoryComponent', () => {
   let component: TicTacToeCategoryComponent;
   let fixture: ComponentFixture<TicTacToeCategoryComponent>;
 
