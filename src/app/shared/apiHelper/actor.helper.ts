@@ -1,11 +1,5 @@
 import { environment } from '../../../environments/environment.prod';
-
-export interface TMDBPerson {
-  id: number;
-  name: string;
-  profile_path: string | null;
-  known_for_department: string;
-}
+import { TMDBPerson } from '../models/TMDB/tmdbPerson.interface';
 
 export function getImageUrl(filePath: string | null, size = 'w500'): string {
   if (!filePath) return 'assets/no-image.png'; // placeholder

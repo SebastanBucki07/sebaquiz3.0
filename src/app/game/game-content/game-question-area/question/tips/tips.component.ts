@@ -1,9 +1,9 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MATERIAL_IMPORTS } from '../../../../../shared/material';
-import { Hint } from '../../../../../shared/category/category.interface';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { Hint } from '../../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-tips',

@@ -1,16 +1,13 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
-import { GameStateService, Team } from '../../../../shared/game-state.service';
+import { GameStateService } from '../../../../shared/game-state.service';
 import { PointsService } from '../../../../shared/points-service.service';
 import { GameService } from '../../../../shared/game.service';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { getClubInfo } from '../../../../shared/clubMapper';
 import { calculateGamePoints } from '../../../../shared/utils/text-logic';
-
-interface PlayerGridState extends Team {
-  calculatedPoints: number;
-}
+import { TeamGridState } from '../../../../shared/models/teams/teamGridState.interface';
 
 @Component({
   selector: 'app-tic-tac-toe-category',
@@ -38,7 +35,7 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   earnedPoints = 0;
 
   // Obsługa drużyn
-  currentTeam: PlayerGridState | null = null;
+  currentTeam: TeamGridState | null = null;
 
   constructor(
     private questionService: QuestionService,
@@ -113,7 +110,7 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   }
 
   // Twoja funkcja pozostaje BEZ ZMIAN, bo w kroku 1 zachowaliśmy strukturę
-  getMatchingPlayers(r: number, c: number): string[] {
+  getMatchingFootballers(r: number, c: number): string[] {
     if (!this.gridData?.grid) return [];
     return this.gridData.grid[r][c].map((p: any) => p.name);
   }

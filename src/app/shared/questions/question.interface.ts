@@ -1,5 +1,5 @@
-import { AnswerItem } from '../answers/answerItem.interface';
-import { Hint } from '../category/category.interface';
+import { AnswerItem } from '../models/answers/answerItem.interface';
+import { Hint } from '../models/category/hint.interface';
 
 export interface Question {
   id: number;

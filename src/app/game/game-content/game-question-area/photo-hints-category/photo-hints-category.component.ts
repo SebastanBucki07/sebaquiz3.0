@@ -4,8 +4,9 @@ import { PhotoTipsComponent } from '../question/photo-tips/photo-tips.component'
 import { QuestionService } from '../../../../shared/question-service.service';
 import { firstValueFrom, Observable } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
-import { Hint } from '../../../../shared/category/category.interface';
+
 import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-photo-hints-category',

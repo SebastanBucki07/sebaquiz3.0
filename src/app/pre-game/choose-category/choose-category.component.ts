@@ -3,8 +3,8 @@ import { MATERIAL_IMPORTS } from '../../shared/material';
 import { GameService } from '../../shared/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import { CATEGORY_LIST } from '../../shared/category/categoryList';
-import { Category } from '../../shared/category/category.interface';
+import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
+import { Category } from '../../shared/models/category/category.interface';
 
 @Component({
   selector: 'app-choose-category',

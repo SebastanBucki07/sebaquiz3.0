@@ -26,8 +26,8 @@ describe('TicTacToeCategoryComponent', () => {
     const clubCounts: Record<string, number> = {};
 
     // 1. Zliczamy wszystkie wystąpienia klubów, których brakuje w mapperze
-    footballers.forEach(player => {
-      player.clubs.forEach(clubName => {
+    footballers.forEach(footballer => {
+      footballer.clubs.forEach(clubName => {
         const info = getClubInfo(clubName);
         if (info.logo.includes('default-logo.png')) {
           clubCounts[clubName] = (clubCounts[clubName] || 0) + 1;

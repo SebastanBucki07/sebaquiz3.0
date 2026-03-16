@@ -7,32 +7,32 @@
     <div class="score-table">
       <div class="row header-row">
         <div class="cell header-cell">Drużyna</div>
-        @for (player of players; track player.id) {
+        @for (team of teams; track team.id) {
           <div
             class="cell team-cell"
-            [style.background-color]="player.color"
-            [class.eliminated]="player.mistakes >= MAX_CHANCES"
-            [class.active-column]="player.id === activePlayerId"
+            [style.background-color]="team.color"
+            [class.eliminated]="team.mistakes >= MAX_CHANCES"
+            [class.active-column]="team.id === activeTeamId"
           >
-            {{ player.name }}
+            {{ team.name }}
           </div>
         }
       </div>
 
       <div class="row alt-row">
         <div class="cell header-cell">Szanse</div>
-        @for (player of players; track player.id) {
+        @for (team of teams; track team.id) {
           <div
             class="cell team-cell"
-            [style.background-color]="player.color"
-            [class.eliminated]="player.mistakes >= MAX_CHANCES"
-            [class.active-column]="player.id === activePlayerId"
+            [style.background-color]="team.color"
+            [class.eliminated]="team.mistakes >= MAX_CHANCES"
+            [class.active-column]="team.id === activeTeamId"
           >
             <div class="chances-wrapper">
-              @for (c of [].constructor(player.chancesLeft); track $index) {
+              @for (c of [].constructor(team.chancesLeft); track $index) {
                 <span class="chance-dot"></span>
               }
-              @for (c of [].constructor(MAX_CHANCES - player.chancesLeft); track $index) {
+              @for (c of [].constructor(MAX_CHANCES - team.chancesLeft); track $index) {
                 <span class="lost-dot"></span>
               }
             </div>
@@ -42,36 +42,36 @@
 
       <div class="row alt-row">
         <div class="cell header-cell">Odgadnięte odpowiedzi</div>
-        @for (player of players; track player.id) {
+        @for (team of teams; track team.id) {
           <div
             class="cell team-cell answers-count-cell"
-            [class.active-column]="player.id === activePlayerId"
-            [style.background-color]="player.color"
-            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+            [class.active-column]="team.id === activeTeamId"
+            [style.background-color]="team.color"
+            [class.eliminated]="team.mistakes >= MAX_CHANCES"
           >
-            {{ player.correctAnswers }}
+            {{ team.correctAnswers }}
           </div>
         }
       </div>
 
       <div class="row">
         <div class="cell header-cell">Punkty</div>
-        @for (player of players; track player.id) {
+        @for (team of teams; track team.id) {
           <div
             class="cell team-cell points-cell"
-            [style.background-color]="player.color"
-            [class.active-column]="player.id === activePlayerId"
-            [class.eliminated]="player.mistakes >= MAX_CHANCES"
+            [style.background-color]="team.color"
+            [class.active-column]="team.id === activeTeamId"
+            [class.eliminated]="team.mistakes >= MAX_CHANCES"
           >
-            {{ player.calculatedPoints ?? 0 }}
+            {{ team.calculatedPoints }}
           </div>
         }
       </div>
     </div>
   </mat-card>
 
-  <mat-card class="control-card" *ngIf="!gameFinished && currentPlayer">
-    <h3>Tura: {{ currentPlayer.name }}</h3>
+  <mat-card class="control-card" *ngIf="!gameFinished && currentTeam">
+    <h3>Tura: {{ currentTeam.name }}</h3>
     <mat-form-field appearance="outline" class="full-width">
       <input
         matInput
@@ -90,9 +90,9 @@
         <h3>
           Zdobyte punkty:
           {{
-            winner.correctAnswers === getAllPlayersCount()
+            winner.correctAnswers === getAllFootballersCount()
               ? 10
-              : Math.ceil((winner.correctAnswers / getAllPlayersCount()) * 10)
+              : Math.ceil((winner.correctAnswers / getAllFootballersCount()) * 10)
           }}
         </h3>
       </div>

@@ -3,11 +3,12 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { QuestionAreaHeaderComponent } from './question-area-header/question-area-header.component';
 import { GameService } from '../../../shared/game.service';
-import { CATEGORY_LIST } from '../../../shared/category/categoryList';
-import { Category, Hint } from '../../../shared/category/category.interface';
+import { CATEGORY_LIST } from '../../../shared/models/category/categoryList';
+import { Category } from '../../../shared/models/category/category.interface';
 import { QuestionService } from '../../../shared/question-service.service';
 import { AnswerComponent } from './answer/answer.component';
 import { PointsService } from '../../../shared/points-service.service';
+import { Hint } from '../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-game-question-area',

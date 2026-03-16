@@ -5,12 +5,7 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-
-export interface Team {
-  id: number;
-  name: string;
-  points: number;
-}
+import { Team } from '../../shared/models/teams/team.interface';
 
 @Component({
   selector: 'app-choose-team',
