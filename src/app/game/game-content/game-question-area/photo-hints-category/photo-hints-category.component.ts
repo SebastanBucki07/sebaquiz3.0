@@ -5,11 +5,12 @@ import { QuestionService } from '../../../../shared/question-service.service';
 import { firstValueFrom, Observable } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Hint } from '../../../../shared/category/category.interface';
+import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
 
 @Component({
   selector: 'app-photo-hints-category',
   standalone: true,
-  imports: [AsyncPipe, NgIf, PhotoTipsComponent],
+  imports: [AsyncPipe, NgIf, PhotoTipsComponent, FlagUrlPipe],
   templateUrl: './photo-hints-category.component.html',
   styleUrl: './photo-hints-category.component.css',
 })

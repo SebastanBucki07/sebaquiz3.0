@@ -1,14 +1,13 @@
 <div *ngIf="question$ | async as currentQuestion" class="question-container">
-  <ng-container *ngIf="isImage(currentQuestion.question); else textQuestion">
+  @if (currentQuestion.question | flagUrl; as flagUrl) {
+    <img [src]="flagUrl" [alt]="currentQuestion.question" class="question-image" />
+  } @else if (isImage(currentQuestion.question)) {
     <h2 class="question-title">Narodowość</h2>
-    <img [src]="currentQuestion.question" [alt]="currentQuestion.question" class="question-image" />
-  </ng-container>
-
-  <ng-template #textQuestion>
+    <img [src]="currentQuestion.question" class="question-image" alt="currentQuestion.question" />
+  } @else {
     <p class="question-text">{{ currentQuestion.question }}</p>
-  </ng-template>
+  }
 
-  <!-- Photo hints -->
   <app-photo-tips
     [hints]="currentQuestion.hints ?? []"
     (hintUsed)="onHintUsed($event)"

@@ -96,7 +96,7 @@ export const HERBY_PILKARSKIE = [
         value: 'acmozna',
       },
     ],
-    question: 'footballCrests/acmozna.png',
+    question: 'footballCrests/acmonza.png',
     hints: [
       {
         id: '0',
