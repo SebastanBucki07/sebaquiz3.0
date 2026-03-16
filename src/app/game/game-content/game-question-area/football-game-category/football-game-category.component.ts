@@ -19,6 +19,7 @@ import {
   normalizeText,
 } from '../../../../shared/utils/text-logic';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
+import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
 
 interface Player extends Team {
   mistakes: number;
@@ -38,6 +39,7 @@ interface Player extends Team {
     MatButtonModule,
     MatInputModule,
     MatGridListModule,
+    FlagUrlPipe,
   ],
   templateUrl: './football-game-category.component.html',
   styleUrls: ['./football-game-category.component.css'],
@@ -60,9 +62,6 @@ export class FootballGameCategoryComponent implements OnInit {
   inputValue = '';
   gameFinished = false;
   remainingAnswers = 0;
-
-  // private correctAudio = new Audio('/sounds/1z10dobrzee.mp3');
-  // private wrongAudio = new Audio('/sounds/1z10zle.mp3');
 
   constructor(
     private questionService: QuestionService,
@@ -245,15 +244,6 @@ export class FootballGameCategoryComponent implements OnInit {
     this.secondRows = [...this.secondRows];
     this.firstSubstitutes = [...this.firstSubstitutes];
     this.secondSubstitutes = [...this.secondSubstitutes];
-  }
-
-  isCountryCode(c: string | undefined): boolean {
-    return !!c && /^[A-Za-z]{2}$/.test(c.trim());
-  }
-
-  flagPngUrl(code: string): string {
-    if (!code) return '';
-    return `https://flagcdn.com/w80/${code.trim().toLowerCase()}.png`;
   }
 
   protected readonly Math = Math;
