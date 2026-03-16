@@ -1,7 +1,6 @@
 import { Observable, Subscription, filter } from 'rxjs';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { MusicTipsComponent } from '../question/music-tips/music-tips.component';
-import { Hint } from '../../../../shared/category/category.interface';
 import {
   ChangeDetectorRef,
   Component,
@@ -12,6 +11,7 @@ import {
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-music-category',

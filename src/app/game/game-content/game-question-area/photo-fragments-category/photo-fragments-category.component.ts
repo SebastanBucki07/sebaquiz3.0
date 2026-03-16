@@ -3,10 +3,10 @@ import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
-import { Hint } from '../../../../shared/category/category.interface';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { TipsComponent } from '../question/tips/tips.component';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-photo-fragments-category',

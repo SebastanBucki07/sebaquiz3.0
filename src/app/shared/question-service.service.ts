@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 import { Question } from './questions/question.interface';
-import { Hint } from './category/category.interface';
 
 import { FILMY } from './questions/movies.questions';
 import { BOOKS } from './questions/books.questions';
@@ -56,6 +55,7 @@ import { footballers } from './footballers/footballers';
 import { WYPISZ_WSPOLNE_PILKA_NOZNA } from './questions/writtingsFootball.questions';
 import { FAMILIADA_RAW } from './questions/familiada.questions';
 import { BAJKOWE_INTRO } from './questions/fairyTalesIntros.questions';
+import { Hint } from './models/category/hint.interface';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionService {

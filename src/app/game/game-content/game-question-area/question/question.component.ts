@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { Hint } from '../../../../shared/category/category.interface';
 import { CommonModule } from '@angular/common';
 import { TipsComponent } from './tips/tips.component';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-question',
@@ -13,10 +13,6 @@ import { TipsComponent } from './tips/tips.component';
 export class QuestionComponent {
   @Input() hints: Hint[] = [];
   @Output() hintUsed = new EventEmitter<Hint>();
-
-  useHint(hint: Hint) {
-    this.hintUsed.emit(hint);
-  }
 
   onHintUsedFromTips(hint: Hint) {
     this.hintUsed.emit(hint); // we forward the event to GameQuestionArea

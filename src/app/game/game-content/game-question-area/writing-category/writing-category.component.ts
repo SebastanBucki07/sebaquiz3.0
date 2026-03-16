@@ -8,7 +8,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Observable } from 'rxjs';
-import { GameStateService, Team } from '../../../../shared/game-state.service';
+import { GameStateService } from '../../../../shared/game-state.service';
 import { PointsService } from '../../../../shared/points-service.service';
 import { GameService } from '../../../../shared/game.service';
 import {
@@ -18,14 +18,8 @@ import {
 } from '../../../../shared/utils/text-logic';
 import { playSound } from '../../../../shared/utils/audio-helper';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
-
-interface Player extends Team {
-  mistakes: number;
-  chancesLeft: number;
-  correctAnswers: number; // ile odpowiedzi odgadli
-  calculatedPoints?: number;
-  color: string;
-}
+import { Team } from '../../../../shared/models/teams/team.interface';
+import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
 
 @Component({
   selector: 'app-writing-category',
@@ -48,12 +42,12 @@ export class WritingCategoryComponent implements OnInit {
   question$!: Observable<Question | null>;
   question!: Question | null;
 
-  players: Player[] = [];
-  currentPlayerIndex = 0;
-  winner: Player | null = null;
+  teams: TeamInWritingCategory[] = [];
+  currentTeamIndex = 0;
+  winner: TeamInWritingCategory | null = null;
   inputValue = '';
   gameFinished = false;
-  lastCorrectPlayer: Team | null = null;
+  lastCorrectTeam: Team | null = null;
   remainingAnswers = 0;
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
@@ -71,7 +65,7 @@ export class WritingCategoryComponent implements OnInit {
     this.gameStateService.teams$.subscribe((teams) => {
       const colors = generateTeamColors(teams.length);
 
-      this.players = teams.map((team, index) => ({
+      this.teams = teams.map((team, index) => ({
         ...team,
         mistakes: 0,
         chancesLeft: this.MAX_CHANCES,
@@ -80,7 +74,7 @@ export class WritingCategoryComponent implements OnInit {
         color: colors[index],
       }));
 
-      this.currentPlayerIndex = 0;
+      this.currentTeamIndex = 0;
     });
 
     // Subskrypcja pytania
@@ -97,33 +91,32 @@ export class WritingCategoryComponent implements OnInit {
     });
   }
 
-  get currentPlayer(): Player | null {
-    return this.players.length > 0 ? this.players[this.currentPlayerIndex] : null;
+  get currentTeam(): TeamInWritingCategory | null {
+    return this.teams.length > 0 ? this.teams[this.currentTeamIndex] : null;
   }
 
-  get activePlayerId(): number | null {
-    return this.currentPlayer?.id ?? null;
+  get activeTeamId(): number | null {
+    return this.currentTeam?.id ?? null;
   }
 
   getOwnerName(answerIndex: number): string | null {
     const ownerId = this.answerOwners[answerIndex];
     if (!ownerId) return null;
 
-    const player = this.players.find((player) => player.id === ownerId);
-    return player ? player.name : null;
+    const foundTeam = this.teams.find((team) => team.id === ownerId);
+    return foundTeam ? foundTeam.name : null;
   }
 
   getAnswerColor(index: number): string {
     const ownerId = this.answerOwners[index];
     if (!ownerId) return '';
 
-    const player = this.players.find((p) => p.id === ownerId);
-    return player ? player.color : '';
+    const team = this.teams.find((p) => p.id === ownerId);
+    return team ? team.color : '';
   }
 
   submitAnswer(): void {
-    if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentPlayer)
-      return;
+    if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentTeam) return;
     if (!this.question.answers) return;
 
     const normalizedInput = normalizeText(this.inputValue);
@@ -145,15 +138,15 @@ export class WritingCategoryComponent implements OnInit {
         this.questionService.revealAnswer(answerIndex);
 
         // 🔥 zapamiętujemy kto odgadł
-        this.answerOwners[answerIndex] = this.currentPlayer.id;
+        this.answerOwners[answerIndex] = this.currentTeam.id;
 
-        this.lastCorrectPlayer = this.currentPlayer;
-        this.currentPlayer.correctAnswers++;
+        this.lastCorrectTeam = this.currentTeam;
+        this.currentTeam.correctAnswers++;
 
         // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
         const totalAnswers = this.question?.answers.length ?? 1;
-        this.currentPlayer.calculatedPoints = calculateGamePoints(
-          this.currentPlayer.correctAnswers,
+        this.currentTeam.calculatedPoints = calculateGamePoints(
+          this.currentTeam.correctAnswers,
           totalAnswers,
           this.MAX_POINTS
         );
@@ -172,27 +165,27 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   handleMistake(): void {
-    const player = this.currentPlayer!;
-    player.mistakes++;
-    player.chancesLeft--;
+    const team = this.currentTeam!;
+    team.mistakes++;
+    team.chancesLeft--;
 
     playSound('sounds/1z10zle.mp3');
     this.triggerWrongFlash();
 
-    if (player.mistakes >= this.MAX_CHANCES) {
-      const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
+    if (team.mistakes >= this.MAX_CHANCES) {
+      const aliveTeams = this.teams.filter((p) => p.mistakes < this.MAX_CHANCES);
 
-      if (alivePlayers.length <= 1) {
+      if (aliveTeams.length <= 1) {
         this.revealAllAnswers();
         this.finishGame();
         return;
       }
 
-      this.nextPlayer();
+      this.nextTeam();
       return;
     }
 
-    this.nextPlayer();
+    this.nextTeam();
   }
 
   triggerWrongFlash(): void {
@@ -204,22 +197,22 @@ export class WritingCategoryComponent implements OnInit {
     return (this.question?.answers?.length ?? 0) - (this.question?.revealedAnswers?.length ?? 0);
   }
 
-  nextPlayer(): void {
-    const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
-    if (alivePlayers.length <= 1) {
+  nextTeam(): void {
+    const aliveTeams = this.teams.filter((p) => p.mistakes < this.MAX_CHANCES);
+    if (aliveTeams.length <= 1) {
       this.finishGame();
       return;
     }
 
-    let next = this.currentPlayerIndex;
+    let next = this.currentTeamIndex;
     let attempts = 0;
 
     do {
-      next = (next + 1) % this.players.length;
+      next = (next + 1) % this.teams.length;
       attempts++;
-    } while (this.players[next].mistakes >= this.MAX_CHANCES && attempts <= this.players.length);
+    } while (this.teams[next].mistakes >= this.MAX_CHANCES && attempts <= this.teams.length);
 
-    this.currentPlayerIndex = next;
+    this.currentTeamIndex = next;
   }
 
   revealAllAnswers(): void {
@@ -233,7 +226,7 @@ export class WritingCategoryComponent implements OnInit {
     if (this.question.revealedAnswers?.length === this.question.answers?.length) {
       this.finishGame();
     } else {
-      this.nextPlayer();
+      this.nextTeam();
     }
   }
 
@@ -245,15 +238,15 @@ export class WritingCategoryComponent implements OnInit {
     if (totalAnswers === 0) return;
 
     // Obliczamy punkty dla każdej drużyny/gracza
-    this.players.forEach((player) => {
-      const ratio = player.correctAnswers / totalAnswers;
-      player.calculatedPoints = Math.ceil(ratio * this.MAX_POINTS);
+    this.teams.forEach((team) => {
+      const ratio = team.correctAnswers / totalAnswers;
+      team.calculatedPoints = Math.ceil(ratio * this.MAX_POINTS);
     });
 
-    this.players = [...this.players];
+    this.teams = [...this.teams];
 
     // Wyłonienie zwycięzcy
-    const sorted = [...this.players].sort((a, b) => {
+    const sorted = [...this.teams].sort((a, b) => {
       if (b.correctAnswers === a.correctAnswers) {
         return b.chancesLeft - a.chancesLeft;
       }

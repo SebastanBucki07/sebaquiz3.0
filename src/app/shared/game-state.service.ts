@@ -1,11 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-
-export interface Team {
-  id: number;
-  name: string;
-  points: number;
-}
+import { Team } from './models/teams/team.interface';
 
 @Injectable({
   providedIn: 'root',

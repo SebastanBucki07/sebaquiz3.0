@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { GameService } from './game.service';
-import { Hint } from './category/category.interface';
+import { Hint } from './models/category/hint.interface';
 
 @Injectable({
   providedIn: 'root',

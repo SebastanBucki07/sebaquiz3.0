@@ -4,7 +4,7 @@ import { QuestionService } from '../../../../shared/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { TipsComponent } from '../question/tips/tips.component';
-import { Hint } from '../../../../shared/category/category.interface';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-photos-category',

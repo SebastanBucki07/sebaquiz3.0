@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { CATEGORY_LIST } from '../../../../shared/category/categoryList';
-import { Category, Hint } from '../../../../shared/category/category.interface';
+import { CATEGORY_LIST } from '../../../../shared/models/category/categoryList';
+import { Category } from '../../../../shared/models/category/category.interface';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-question-area-header',

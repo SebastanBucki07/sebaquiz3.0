@@ -1,8 +1,8 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
-import { Hint } from '../../../../shared/category/category.interface';
 import { TipsComponent } from '../question/tips/tips.component';
 import { QuestionService } from '../../../../shared/question-service.service';
 import { Subscription } from 'rxjs';
+import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-hints-category',

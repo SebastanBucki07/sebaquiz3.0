@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { GameStateService, Team } from '../../../../shared/game-state.service';
+import { GameStateService } from '../../../../shared/game-state.service';
 import { GameService } from '../../../../shared/game.service';
 import { PointsService } from '../../../../shared/points-service.service';
 import { QuestionService } from '../../../../shared/question-service.service';
@@ -11,7 +11,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { footballPlayer, footballTeam } from '../../../../shared/answers/answerItem.interface';
+import { Footballer, FootballTeam } from '../../../../shared/models/answers/answerItem.interface';
 import { playSound } from '../../../../shared/utils/audio-helper';
 import {
   areSimilar,
@@ -20,14 +20,7 @@ import {
 } from '../../../../shared/utils/text-logic';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
 import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
-
-interface Player extends Team {
-  mistakes: number;
-  chancesLeft: number;
-  correctAnswers: number;
-  calculatedPoints?: number;
-  color: string;
-}
+import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
 
 @Component({
   selector: 'app-football-game-category',
@@ -48,17 +41,17 @@ export class FootballGameCategoryComponent implements OnInit {
   readonly MAX_CHANCES = 3;
   readonly MAX_POINTS = 10;
 
-  firstRows: footballPlayer[][] = [];
-  secondRows: footballPlayer[][] = [];
-  firstSubstitutes: footballPlayer[] = [];
-  secondSubstitutes: footballPlayer[] = [];
+  firstRows: Footballer[][] = [];
+  secondRows: Footballer[][] = [];
+  firstSubstitutes: Footballer[] = [];
+  secondSubstitutes: Footballer[] = [];
 
   question$!: Observable<Question | null>;
   question!: Question | null;
 
-  players: Player[] = [];
-  currentPlayerIndex = 0;
-  winner: Player | null = null;
+  teams: TeamInWritingCategory[] = [];
+  currentTeamIndex = 0;
+  winner: TeamInWritingCategory | null = null;
   inputValue = '';
   gameFinished = false;
   remainingAnswers = 0;
@@ -75,7 +68,7 @@ export class FootballGameCategoryComponent implements OnInit {
 
     this.gameStateService.teams$.subscribe((teams) => {
       const colors = generateTeamColors(teams.length);
-      this.players = teams.map((team, i) => ({
+      this.teams = teams.map((team, i) => ({
         ...team,
         mistakes: 0,
         chancesLeft: this.MAX_CHANCES,
@@ -91,11 +84,11 @@ export class FootballGameCategoryComponent implements OnInit {
       const football = q.answers?.[0]?.football;
       if (!football) return;
 
-      const clonePlayer = (p: footballPlayer) => ({ ...p, guessed: false, guessedBy: undefined });
-      const cloneTeam = (team: footballTeam) => ({
+      const cloneFootballer = (p: Footballer) => ({ ...p, guessed: false, guessedBy: undefined });
+      const cloneTeam = (team: FootballTeam) => ({
         ...team,
-        footballers: team.footballers.map(clonePlayer),
-        substitutes: team.substitutes?.map(clonePlayer) ?? [],
+        footballers: team.footballers.map(cloneFootballer),
+        substitutes: team.substitutes?.map(cloneFootballer) ?? [],
       });
 
       this.firstRows = this.buildRows(cloneTeam(football.firstTeam));
@@ -103,38 +96,38 @@ export class FootballGameCategoryComponent implements OnInit {
       this.firstSubstitutes = cloneTeam(football.firstTeam).substitutes;
       this.secondSubstitutes = cloneTeam(football.secondTeam).substitutes;
 
-      this.remainingAnswers = this.getAllPlayersCount();
+      this.remainingAnswers = this.getAllFootballersCount();
     });
   }
 
-  get activePlayerId(): number | null {
-    return this.currentPlayer?.id ?? null;
+  get activeTeamId(): number | null {
+    return this.currentTeam?.id ?? null;
   }
 
-  get currentPlayer(): Player | null {
-    return this.players.length > 0 ? this.players[this.currentPlayerIndex] : null;
+  get currentTeam(): TeamInWritingCategory | null {
+    return this.teams.length > 0 ? this.teams[this.currentTeamIndex] : null;
   }
 
   submitAnswer(): void {
-    if (!this.currentPlayer || !this.inputValue.trim() || this.gameFinished) return;
+    if (!this.currentTeam || !this.inputValue.trim() || this.gameFinished) return;
 
     const needle = normalizeText(this.inputValue);
 
-    const allPlayers = [
+    const allFootballers = [
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
       ...this.firstSubstitutes,
       ...this.secondSubstitutes,
     ];
 
-    let player =
-      allPlayers.find((p) => !p.guessed && normalizeText(p.surname) === needle) ||
-      allPlayers.find((p) => !p.guessed && areSimilar(needle, p.surname));
+    let footballer =
+      allFootballers.find((p) => !p.guessed && normalizeText(p.surname) === needle) ||
+      allFootballers.find((p) => !p.guessed && areSimilar(needle, p.surname));
 
-    if (player) {
-      player.guessed = true;
-      player.guessedBy = this.currentPlayer.name;
-      this.currentPlayer.correctAnswers++;
+    if (footballer) {
+      footballer.guessed = true;
+      footballer.guessedBy = this.currentTeam.name;
+      this.currentTeam.correctAnswers++;
       this.updateLivePoints();
 
       playSound('sounds/1z10dobrzee.mp3');
@@ -144,32 +137,32 @@ export class FootballGameCategoryComponent implements OnInit {
       if (this.remainingAnswers <= 0) {
         this.finishGame();
       } else {
-        this.nextPlayer();
+        this.nextTeam();
       }
     } else {
-      this.currentPlayer.mistakes++;
-      this.currentPlayer.chancesLeft--;
+      this.currentTeam.mistakes++;
+      this.currentTeam.chancesLeft--;
       playSound('sounds/1z10zle.mp3');
-      this.nextPlayer();
+      this.nextTeam();
     }
     this.inputValue = '';
   }
 
   private updateLivePoints(): void {
-    const total = this.getAllPlayersCount();
-    this.players.forEach((p) => {
+    const total = this.getAllFootballersCount();
+    this.teams.forEach((p) => {
       p.calculatedPoints = calculateGamePoints(p.correctAnswers, total, this.MAX_POINTS);
     });
   }
 
   private finishGame(): void {
     this.gameFinished = true;
-    const totalPlayers = this.getAllPlayersCount();
+    const totalFootballers = this.getAllFootballersCount();
 
     // 1. LOGIKA ODKRYWANIA WSZYSTKICH ZAWODNIKÓW
     // Musimy przelecieć przez każdą strukturę i ustawić guessed = true
 
-    const reveal = (p: footballPlayer) => {
+    const reveal = (p: Footballer) => {
       p.guessed = true;
     };
 
@@ -182,7 +175,7 @@ export class FootballGameCategoryComponent implements OnInit {
     this.refreshView();
 
     // 2. SORTOWANIE I WYŁONIENIE ZWYCIĘZCY
-    const sorted = [...this.players].sort((a, b) => {
+    const sorted = [...this.teams].sort((a, b) => {
       if (b.correctAnswers === a.correctAnswers) {
         return b.chancesLeft - a.chancesLeft;
       }
@@ -194,7 +187,7 @@ export class FootballGameCategoryComponent implements OnInit {
     if (this.winner) {
       const winnerPoints = calculateGamePoints(
         this.winner.correctAnswers,
-        totalPlayers,
+        totalFootballers,
         this.MAX_POINTS
       );
 
@@ -203,24 +196,24 @@ export class FootballGameCategoryComponent implements OnInit {
     }
   }
 
-  nextPlayer(): void {
-    const alivePlayers = this.players.filter((p) => p.mistakes < this.MAX_CHANCES);
-    if (alivePlayers.length <= 1) {
+  nextTeam(): void {
+    const aliveTeams = this.teams.filter((p) => p.mistakes < this.MAX_CHANCES);
+    if (aliveTeams.length <= 1) {
       this.finishGame();
       return;
     }
 
-    let next = this.currentPlayerIndex;
+    let next = this.currentTeamIndex;
     let attempts = 0;
     do {
-      next = (next + 1) % this.players.length;
+      next = (next + 1) % this.teams.length;
       attempts++;
-    } while (this.players[next].mistakes >= this.MAX_CHANCES && attempts <= this.players.length);
+    } while (this.teams[next].mistakes >= this.MAX_CHANCES && attempts <= this.teams.length);
 
-    this.currentPlayerIndex = next;
+    this.currentTeamIndex = next;
   }
 
-  protected getAllPlayersCount(): number {
+  protected getAllFootballersCount(): number {
     const football = this.question?.answers?.[0]?.football;
     if (!football) return 0;
     return [
@@ -231,11 +224,11 @@ export class FootballGameCategoryComponent implements OnInit {
     ].length;
   }
 
-  private buildRows(team: footballTeam, reverse = false): footballPlayer[][] {
-    const players = [...team.footballers];
+  private buildRows(team: FootballTeam, reverse = false): Footballer[][] {
+    const footballers = [...team.footballers];
     const formation = team.formation.split('-').map((n) => +n);
-    const rows: footballPlayer[][] = [];
-    formation.forEach((count) => rows.push(players.splice(0, count)));
+    const rows: Footballer[][] = [];
+    formation.forEach((count) => rows.push(footballers.splice(0, count)));
     return reverse ? rows.reverse() : rows;
   }
 

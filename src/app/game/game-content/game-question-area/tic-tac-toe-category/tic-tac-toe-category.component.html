@@ -24,7 +24,7 @@
         <th class="corner-cell"></th>
         <th *ngFor="let col of gridData.cols" class="header-cell">
           <div class="club-header">
-            <img [src]="getHeaderInfo(col).logo" class="club-logo-mini" />
+            <img [src]="getHeaderInfo(col).logo" class="club-logo-mini" alt="getHeaderInfo(col).logo"/>
             <span class="club-name-mini">{{ getHeaderInfo(col).name }}</span>
           </div>
         </th>
@@ -34,7 +34,7 @@
       <tr *ngFor="let row of gridData.rows; let r = index">
         <td class="header-cell side-header">
           <div class="club-header side">
-            <img [src]="getHeaderInfo(row).logo" class="club-logo-mini" />
+            <img [src]="getHeaderInfo(row).logo" class="club-logo-mini" alt="getHeaderInfo(col).logo"/>
             <span class="club-name-mini">{{ getHeaderInfo(row).name }}</span>
           </div>
         </td>
@@ -61,7 +61,10 @@
 
           <div class="player-overlay" *ngIf="cellStatus[r][c] || showMissing">
             <div class="player-list">
-              <div class="player-name-micro" *ngFor="let p of getMatchingPlayers(r, c).slice(0, 2)">
+              <div
+                class="player-name-micro"
+                *ngFor="let p of getMatchingFootballers(r, c).slice(0, 2)"
+              >
                 {{ p }}
               </div>
             </div>
