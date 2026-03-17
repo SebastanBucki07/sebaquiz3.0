@@ -5,12 +5,17 @@ import { Pipe, PipeTransform } from '@angular/core';
   standalone: true,
 })
 export class FlagUrlPipe implements PipeTransform {
-  transform(code: string | undefined | null): string | null {
-    if (!code) return null;
+  transform(value: string | undefined | null): string | null {
+    if (!value) return null;
+    const clean = value.trim().toLowerCase();
 
-    const clean = code.trim();
-    if (!/^[a-z]{2}$/i.test(clean)) return null;
+    if (clean.startsWith('http')) return clean;
 
-    return `https://flagcdn.com/w80/${clean.toLowerCase()}.png`;
+    // Specyficzny fix dla Bośni, jeśli przychodzi jako BIH
+    const countryCode = clean === 'bih' ? 'ba' : clean;
+
+    if (!/^[a-z0-9-]{2,10}$/i.test(countryCode)) return null;
+
+    return `https://flagcdn.com/w320/${countryCode}.png`;
   }
 }
