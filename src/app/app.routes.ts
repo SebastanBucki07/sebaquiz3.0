@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { MainComponent } from './main/main.component';
+import { HomeComponent } from './home/home.component';
 import { GameComponent } from './game/game.component';
 import { ChooseTeamComponent } from './pre-game/choose-team/choose-team.component';
 import { ChooseCategoryComponent } from './pre-game/choose-category/choose-category.component';
@@ -24,19 +25,23 @@ export const routes: Routes = [
     path: '',
     component: MainComponent,
     children: [
-      { path: '', redirectTo: 'game', pathMatch: 'full' },
+      // 1. STRONA STARTOWA (Lądujesz tutaj po wejściu na adres /)
+      {
+        path: '',
+        component: HomeComponent,
+      },
+
+      // 2. MODUŁ GRY (Dostępny pod /game)
       {
         path: 'game',
         component: GameComponent,
         children: [
           { path: '', component: GameContentComponent },
-
-          // Tutaj GameQuestionAreaComponent z child routes
           {
             path: 'category/:type/:name',
             component: GameQuestionAreaComponent,
             children: [
-              { path: '', redirectTo: 'default', pathMatch: 'full' }, // opcjonalnie
+              { path: '', redirectTo: 'default', pathMatch: 'full' },
               {
                 path: 'hints',
                 component: HintsCategoryComponent,
@@ -78,6 +83,8 @@ export const routes: Routes = [
           },
         ],
       },
+
+      // 3. KONFIGURACJA (Dostępna pod /pregame)
       {
         path: 'pregame',
         component: PreGameComponent,
@@ -89,4 +96,6 @@ export const routes: Routes = [
       },
     ],
   },
+  // Catch-all: jeśli ktoś wpisze bzdury w URL, wróć do strony startowej
+  { path: '**', redirectTo: '' },
 ];
