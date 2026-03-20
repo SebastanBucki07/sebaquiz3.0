@@ -17,6 +17,7 @@ import { PhotoHintsCategoryComponent } from './game/game-content/game-question-a
 import { FamiliadaComponent } from './game/game-content/game-question-area/familiada/familiada.component';
 import { FootballGameCategoryComponent } from './game/game-content/game-question-area/football-game-category/football-game-category.component';
 import { TicTacToeCategoryComponent } from './game/game-content/game-question-area/tic-tac-toe-category/tic-tac-toe-category.component';
+import { CountryGuessCategoryComponent } from './game/game-content/game-question-area/country-guess-category/country-guess-category.component';
 
 export const routes: Routes = [
   {
@@ -72,6 +73,7 @@ export const routes: Routes = [
               { path: 'familiada', component: FamiliadaComponent },
               { path: 'footballGame', component: FootballGameCategoryComponent },
               { path: 'ticTacToe', component: TicTacToeCategoryComponent },
+              { path: 'country', component: CountryGuessCategoryComponent },
             ],
           },
         ],
