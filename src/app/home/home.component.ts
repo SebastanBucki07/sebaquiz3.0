@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
-import { GameService } from '../shared/game.service';
-import { QuestionService } from '../shared/question-service.service';
+import {Router} from '@angular/router';
+import {GameService} from '../shared/game.service';
+import {QuestionService} from '../shared/question-service.service';
 
 @Component({
-  selector: 'app-header',
-  standalone: true,
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  selector: 'app-home',
+  imports: [],
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css'
 })
-export class HeaderComponent {
+export class HomeComponent {
   constructor(
     private router: Router,
     private gameService: GameService,
@@ -26,6 +26,6 @@ export class HeaderComponent {
       this.gameService.setCurrentTeam(teams[0].name);
     }
 
-    this.router.navigate(['/home']);
+    this.router.navigate(['/pregame']);
   }
 }

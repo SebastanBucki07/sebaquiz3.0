@@ -1,0 +1,25 @@
+<div class="menu-screen-wrapper">
+  <div class="bg-overlay"></div>
+
+  <div class="menu-container">
+    <div class="logo-section">
+      <img src="/1.png" alt="Game Logo" class="game-logo" />
+      <h1 class="game-title">SEBA QUIZ  3.0 GAME</h1>
+    </div>
+
+    <div class="menu-actions">
+      <button (click)="newGame()"  class="menu-btn btn-new-game">
+        <span class="btn-text">Nowa Gra</span>
+        <span class="btn-glitch-effect"></span>
+      </button>
+
+      <button [disabled]="true" class="menu-btn btn-config">
+        <span class="btn-text">Konfiguruj</span>
+      </button>
+
+      <button [disabled]="true" class="menu-btn btn-scores">
+        <span class="btn-text">Wyniki</span>
+      </button>
+    </div>
+  </div>
+</div>
