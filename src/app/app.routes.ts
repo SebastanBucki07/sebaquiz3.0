@@ -28,7 +28,7 @@ export const routes: Routes = [
       // 1. STRONA STARTOWA (Lądujesz tutaj po wejściu na adres /)
       {
         path: '',
-        component: HomeComponent
+        component: HomeComponent,
       },
 
       // 2. MODUŁ GRY (Dostępny pod /game)
@@ -47,9 +47,24 @@ export const routes: Routes = [
                 component: HintsCategoryComponent,
                 data: {
                   hints: [
-                    { id: 'first', label: 'Pierwszy fragment', penaltyPercent: 0, content: 'Śród takich pól przed laty...' },
-                    { id: 'second', label: 'Drugi fragment', penaltyPercent: 30, content: 'Film został wydany w 1999 roku.' },
-                    { id: 'third', label: 'Trzeci fragment', penaltyPercent: 30, content: 'Główną rolę grał Brad Pitt.' },
+                    {
+                      id: 'first',
+                      label: 'Pierwszy fragment',
+                      penaltyPercent: 0,
+                      content: 'Śród takich pól przed laty...',
+                    },
+                    {
+                      id: 'second',
+                      label: 'Drugi fragment',
+                      penaltyPercent: 30,
+                      content: 'Film został wydany w 1999 roku.',
+                    },
+                    {
+                      id: 'third',
+                      label: 'Trzeci fragment',
+                      penaltyPercent: 30,
+                      content: 'Główną rolę grał Brad Pitt.',
+                    },
                   ],
                 },
               },
@@ -82,5 +97,5 @@ export const routes: Routes = [
     ],
   },
   // Catch-all: jeśli ktoś wpisze bzdury w URL, wróć do strony startowej
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];

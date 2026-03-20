@@ -4,6 +4,8 @@ import { QuestionService } from '../../../../shared/question-service.service';
 import { Observable, Subscription } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { AnswerButtonsComponent } from './answer-buttons/answer-buttons.component';
+import { AnswerItem } from '../../../../shared/models/answers/answerItem.interface';
+import { getClubNameByFile } from '../../../../shared/clubMapper';
 
 @Component({
   selector: 'app-answer',
@@ -33,6 +35,12 @@ export class AnswerComponent implements OnInit, OnDestroy {
         return;
       }
 
+      currentQuestion.answers.forEach((answer: AnswerItem) => {
+        if (answer.value.includes('.png')) {
+          answer.value = getClubNameByFile(answer.value);
+          console.log(`answer: ${answer}`);
+        }
+      });
       const revealed = currentQuestion.revealedAnswers ?? [];
       const total = currentQuestion.answers?.length ?? 0;
 

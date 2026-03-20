@@ -3,28 +3,28 @@ export const HERBY_PILKARSKIE = [
     id: 1,
     answers: [
       {
-        value: 'aalesund',
+        value: 'AEKlarnaca.png',
       },
     ],
-    question: 'footballCrests/aalesund.png',
+    question: 'footballCrests/AEKlarnaca.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -33,28 +33,28 @@ export const HERBY_PILKARSKIE = [
     id: 2,
     answers: [
       {
-        value: 'aarhusgf',
+        value: 'ASSaintEtienne.png',
       },
     ],
-    question: 'footballCrests/aarhusgf.png',
+    question: 'footballCrests/ASSaintEtienne.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -63,28 +63,28 @@ export const HERBY_PILKARSKIE = [
     id: 3,
     answers: [
       {
-        value: 'acmilan',
+        value: 'AngersSCO.png',
       },
     ],
-    question: 'footballCrests/acmilan.png',
+    question: 'footballCrests/AngersSCO.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -93,28 +93,28 @@ export const HERBY_PILKARSKIE = [
     id: 4,
     answers: [
       {
-        value: 'acmozna',
+        value: 'ApollonLimassol.png',
       },
     ],
-    question: 'footballCrests/acmonza.png',
+    question: 'footballCrests/ApollonLimassol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -123,28 +123,28 @@ export const HERBY_PILKARSKIE = [
     id: 5,
     answers: [
       {
-        value: 'adodenhaag',
+        value: 'ArminiaBielefeld.png',
       },
     ],
-    question: 'footballCrests/adodenhaag.png',
+    question: 'footballCrests/ArminiaBielefeld.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -153,28 +153,28 @@ export const HERBY_PILKARSKIE = [
     id: 6,
     answers: [
       {
-        value: 'aekateny',
+        value: 'BSCyoungboys.png',
       },
     ],
-    question: 'footballCrests/aekateny.png',
+    question: 'footballCrests/BSCyoungboys.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -183,28 +183,28 @@ export const HERBY_PILKARSKIE = [
     id: 7,
     answers: [
       {
-        value: 'aelarisa',
+        value: 'BlackburnRovers.png',
       },
     ],
-    question: 'footballCrests/aelarisa.png',
+    question: 'footballCrests/BlackburnRovers.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -213,28 +213,28 @@ export const HERBY_PILKARSKIE = [
     id: 8,
     answers: [
       {
-        value: 'aellimassol',
+        value: 'CARiverPlate.png',
       },
     ],
-    question: 'footballCrests/aellimassol.png',
+    question: 'footballCrests/CARiverPlate.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -243,28 +243,28 @@ export const HERBY_PILKARSKIE = [
     id: 9,
     answers: [
       {
-        value: 'agovv',
+        value: 'Chojniczankachojnice.png',
       },
     ],
-    question: 'footballCrests/agovv.png',
+    question: 'footballCrests/Chojniczankachojnice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -273,28 +273,28 @@ export const HERBY_PILKARSKIE = [
     id: 10,
     answers: [
       {
-        value: 'ajaccio',
+        value: 'EfB.png',
       },
     ],
-    question: 'footballCrests/ajaccio.png',
+    question: 'footballCrests/EfB.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -303,28 +303,28 @@ export const HERBY_PILKARSKIE = [
     id: 11,
     answers: [
       {
-        value: 'ajauxerre',
+        value: 'EintrachtFrankfurt.png',
       },
     ],
-    question: 'footballCrests/ajauxerre.png',
+    question: 'footballCrests/EintrachtFrankfurt.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -333,28 +333,28 @@ export const HERBY_PILKARSKIE = [
     id: 12,
     answers: [
       {
-        value: 'ajax',
+        value: 'FCSheriffTyraspol.png',
       },
     ],
-    question: 'footballCrests/ajax.png',
+    question: 'footballCrests/FCSheriffTyraspol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -363,28 +363,28 @@ export const HERBY_PILKARSKIE = [
     id: 13,
     answers: [
       {
-        value: 'al-wahdaabuzabi',
+        value: 'Flamengorj.png',
       },
     ],
-    question: 'footballCrests/al-wahdaabuzabi.png',
+    question: 'footballCrests/Flamengorj.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -393,28 +393,28 @@ export const HERBY_PILKARSKIE = [
     id: 14,
     answers: [
       {
-        value: 'alanyaspor',
+        value: 'Fortunadusseldorf.png',
       },
     ],
-    question: 'footballCrests/alanyaspor.png',
+    question: 'footballCrests/Fortunadusseldorf.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -423,28 +423,28 @@ export const HERBY_PILKARSKIE = [
     id: 15,
     answers: [
       {
-        value: 'alduhailsc',
+        value: 'Frosinonestemma.png',
       },
     ],
-    question: 'footballCrests/alduhailsc.png',
+    question: 'footballCrests/Frosinonestemma.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -453,28 +453,28 @@ export const HERBY_PILKARSKIE = [
     id: 16,
     answers: [
       {
-        value: 'alteticomadryt',
+        value: 'IpswichTown.png',
       },
     ],
-    question: 'footballCrests/alteticomadryt.png',
+    question: 'footballCrests/IpswichTown.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -483,28 +483,28 @@ export const HERBY_PILKARSKIE = [
     id: 17,
     answers: [
       {
-        value: 'america',
+        value: 'Kks1925Kalisz.png',
       },
     ],
-    question: 'footballCrests/america.png',
+    question: 'footballCrests/Kks1925Kalisz.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -513,28 +513,28 @@ export const HERBY_PILKARSKIE = [
     id: 18,
     answers: [
       {
-        value: 'amicawronki',
+        value: 'OlimpiaGrudziadz.png',
       },
     ],
-    question: 'footballCrests/amicawronki.png',
+    question: 'footballCrests/OlimpiaGrudziadz.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -543,28 +543,28 @@ export const HERBY_PILKARSKIE = [
     id: 19,
     answers: [
       {
-        value: 'amienssc',
+        value: 'RCDEspanyol.png',
       },
     ],
-    question: 'footballCrests/amienssc.png',
+    question: 'footballCrests/RCDEspanyol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -573,28 +573,28 @@ export const HERBY_PILKARSKIE = [
     id: 20,
     answers: [
       {
-        value: 'amkarperm',
+        value: 'SVDarmstadt98.png',
       },
     ],
-    question: 'footballCrests/amkarperm.png',
+    question: 'footballCrests/SVDarmstadt98.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -603,28 +603,28 @@ export const HERBY_PILKARSKIE = [
     id: 21,
     answers: [
       {
-        value: 'ankaragucu',
+        value: 'Sunderland.png',
       },
     ],
-    question: 'footballCrests/ankaragucu.png',
+    question: 'footballCrests/Sunderland.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -633,28 +633,28 @@ export const HERBY_PILKARSKIE = [
     id: 22,
     answers: [
       {
-        value: 'antalyaspor',
+        value: 'TSGHoffenheim.png',
       },
     ],
-    question: 'footballCrests/antalyaspor.png',
+    question: 'footballCrests/TSGHoffenheim.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -663,28 +663,28 @@ export const HERBY_PILKARSKIE = [
     id: 23,
     answers: [
       {
-        value: 'anzymachaczkala',
+        value: 'aalesund.png',
       },
     ],
-    question: 'footballCrests/anzymachaczkala.png',
+    question: 'footballCrests/aalesund.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -693,28 +693,28 @@ export const HERBY_PILKARSKIE = [
     id: 24,
     answers: [
       {
-        value: 'apollonsmyrnis',
+        value: 'aarhusgf.png',
       },
     ],
-    question: 'footballCrests/apollonsmyrnis.png',
+    question: 'footballCrests/aarhusgf.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -723,28 +723,28 @@ export const HERBY_PILKARSKIE = [
     id: 25,
     answers: [
       {
-        value: 'arkagdynia',
+        value: 'acmilan.png',
       },
     ],
-    question: 'footballCrests/arkagdynia.png',
+    question: 'footballCrests/acmilan.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -753,28 +753,28 @@ export const HERBY_PILKARSKIE = [
     id: 26,
     answers: [
       {
-        value: 'arrajjan',
+        value: 'acmonza.png',
       },
     ],
-    question: 'footballCrests/arrajjan.png',
+    question: 'footballCrests/acmonza.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -783,28 +783,28 @@ export const HERBY_PILKARSKIE = [
     id: 27,
     answers: [
       {
-        value: 'arsenal',
+        value: 'adodenhaag.png',
       },
     ],
-    question: 'footballCrests/arsenal.png',
+    question: 'footballCrests/adodenhaag.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -813,28 +813,28 @@ export const HERBY_PILKARSKIE = [
     id: 28,
     answers: [
       {
-        value: 'asmonaco',
+        value: 'aekateny.png',
       },
     ],
-    question: 'footballCrests/asmonaco.png',
+    question: 'footballCrests/aekateny.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -843,28 +843,28 @@ export const HERBY_PILKARSKIE = [
     id: 29,
     answers: [
       {
-        value: 'asroma',
+        value: 'aelarisa.png',
       },
     ],
-    question: 'footballCrests/asroma.png',
+    question: 'footballCrests/aelarisa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -873,28 +873,28 @@ export const HERBY_PILKARSKIE = [
     id: 30,
     answers: [
       {
-        value: 'astonvilla',
+        value: 'aellimassol.png',
       },
     ],
-    question: 'footballCrests/astonvilla.png',
+    question: 'footballCrests/aellimassol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -903,28 +903,28 @@ export const HERBY_PILKARSKIE = [
     id: 31,
     answers: [
       {
-        value: 'astrencin',
+        value: 'agovv.png',
       },
     ],
-    question: 'footballCrests/astrencin.png',
+    question: 'footballCrests/agovv.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -933,28 +933,28 @@ export const HERBY_PILKARSKIE = [
     id: 32,
     answers: [
       {
-        value: 'atalanta',
+        value: 'ajaccio.png',
       },
     ],
-    question: 'footballCrests/atalanta.png',
+    question: 'footballCrests/ajaccio.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -963,28 +963,28 @@ export const HERBY_PILKARSKIE = [
     id: 33,
     answers: [
       {
-        value: 'atlantefc',
+        value: 'ajauxerre.png',
       },
     ],
-    question: 'footballCrests/atlantefc.png',
+    question: 'footballCrests/ajauxerre.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -993,28 +993,28 @@ export const HERBY_PILKARSKIE = [
     id: 34,
     answers: [
       {
-        value: 'atleticomineiro',
+        value: 'ajax.png',
       },
     ],
-    question: 'footballCrests/atleticomineiro.png',
+    question: 'footballCrests/ajax.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1023,28 +1023,28 @@ export const HERBY_PILKARSKIE = [
     id: 35,
     answers: [
       {
-        value: 'atleticonacional',
+        value: 'al-wahdaabuzabi.png',
       },
     ],
-    question: 'footballCrests/atleticonacional.png',
+    question: 'footballCrests/al-wahdaabuzabi.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1053,28 +1053,28 @@ export const HERBY_PILKARSKIE = [
     id: 36,
     answers: [
       {
-        value: 'austriawieden',
+        value: 'alanyaspor.png',
       },
     ],
-    question: 'footballCrests/austriawieden.png',
+    question: 'footballCrests/alanyaspor.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1083,28 +1083,28 @@ export const HERBY_PILKARSKIE = [
     id: 37,
     answers: [
       {
-        value: 'barcelona',
+        value: 'alduhailsc.png',
       },
     ],
-    question: 'footballCrests/barcelona.png',
+    question: 'footballCrests/alduhailsc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1113,28 +1113,28 @@ export const HERBY_PILKARSKIE = [
     id: 38,
     answers: [
       {
-        value: 'barnsley',
+        value: 'all-nassr.png',
       },
     ],
-    question: 'footballCrests/barnsley.png',
+    question: 'footballCrests/all-nassr.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1143,28 +1143,28 @@ export const HERBY_PILKARSKIE = [
     id: 39,
     answers: [
       {
-        value: 'bateborysow',
+        value: 'alteticomadryt.png',
       },
     ],
-    question: 'footballCrests/bateborysow.png',
+    question: 'footballCrests/alteticomadryt.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1173,28 +1173,28 @@ export const HERBY_PILKARSKIE = [
     id: 40,
     answers: [
       {
-        value: 'bayer04leverkusen',
+        value: 'america.png',
       },
     ],
-    question: 'footballCrests/bayer04leverkusen.png',
+    question: 'footballCrests/america.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1203,28 +1203,28 @@ export const HERBY_PILKARSKIE = [
     id: 41,
     answers: [
       {
-        value: 'bayernmonachium',
+        value: 'amicawronki.png',
       },
     ],
-    question: 'footballCrests/bayernmonachium.png',
+    question: 'footballCrests/amicawronki.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1233,28 +1233,28 @@ export const HERBY_PILKARSKIE = [
     id: 42,
     answers: [
       {
-        value: 'bberzurumspor',
+        value: 'amienssc.png',
       },
     ],
-    question: 'footballCrests/bberzurumspor.png',
+    question: 'footballCrests/amienssc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1263,28 +1263,28 @@ export const HERBY_PILKARSKIE = [
     id: 43,
     answers: [
       {
-        value: 'benevento',
+        value: 'amkarperm.png',
       },
     ],
-    question: 'footballCrests/benevento.png',
+    question: 'footballCrests/amkarperm.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1293,28 +1293,28 @@ export const HERBY_PILKARSKIE = [
     id: 44,
     answers: [
       {
-        value: 'benidormcf',
+        value: 'ankaragucu.png',
       },
     ],
-    question: 'footballCrests/benidormcf.png',
+    question: 'footballCrests/ankaragucu.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1323,28 +1323,28 @@ export const HERBY_PILKARSKIE = [
     id: 45,
     answers: [
       {
-        value: 'besiktasjk',
+        value: 'antalyaspor.png',
       },
     ],
-    question: 'footballCrests/besiktasjk.png',
+    question: 'footballCrests/antalyaspor.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1353,28 +1353,28 @@ export const HERBY_PILKARSKIE = [
     id: 46,
     answers: [
       {
-        value: 'birminghamcity',
+        value: 'anzymachaczkala.png',
       },
     ],
-    question: 'footballCrests/birminghamcity.png',
+    question: 'footballCrests/anzymachaczkala.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1383,28 +1383,28 @@ export const HERBY_PILKARSKIE = [
     id: 47,
     answers: [
       {
-        value: 'bocajuniors',
+        value: 'apoelNikosia.png',
       },
     ],
-    question: 'footballCrests/bocajuniors.png',
+    question: 'footballCrests/apoelNikosia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1413,28 +1413,28 @@ export const HERBY_PILKARSKIE = [
     id: 48,
     answers: [
       {
-        value: 'bologna',
+        value: 'apollonsmyrnis.png',
       },
     ],
-    question: 'footballCrests/bologna.png',
+    question: 'footballCrests/apollonsmyrnis.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1443,28 +1443,28 @@ export const HERBY_PILKARSKIE = [
     id: 49,
     answers: [
       {
-        value: 'boracnovysad',
+        value: 'arisLimassol.png',
       },
     ],
-    question: 'footballCrests/boracnovysad.png',
+    question: 'footballCrests/arisLimassol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1473,28 +1473,28 @@ export const HERBY_PILKARSKIE = [
     id: 50,
     answers: [
       {
-        value: 'borussiadortmund',
+        value: 'arkagdynia.png',
       },
     ],
-    question: 'footballCrests/borussiadortmund.png',
+    question: 'footballCrests/arkagdynia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1503,28 +1503,28 @@ export const HERBY_PILKARSKIE = [
     id: 51,
     answers: [
       {
-        value: 'borussiamonchengladbach',
+        value: 'arrajjan.png',
       },
     ],
-    question: 'footballCrests/borussiamonchengladbach.png',
+    question: 'footballCrests/arrajjan.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1533,28 +1533,28 @@ export const HERBY_PILKARSKIE = [
     id: 52,
     answers: [
       {
-        value: 'bournemouth',
+        value: 'arsenal.png',
       },
     ],
-    question: 'footballCrests/bournemouth.png',
+    question: 'footballCrests/arsenal.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1563,28 +1563,28 @@ export const HERBY_PILKARSKIE = [
     id: 53,
     answers: [
       {
-        value: 'brentford',
+        value: 'asmonaco.png',
       },
     ],
-    question: 'footballCrests/brentford.png',
+    question: 'footballCrests/asmonaco.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1593,28 +1593,28 @@ export const HERBY_PILKARSKIE = [
     id: 54,
     answers: [
       {
-        value: 'brondbyif',
+        value: 'asroma.png',
       },
     ],
-    question: 'footballCrests/brondbyif.png',
+    question: 'footballCrests/asroma.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1623,28 +1623,28 @@ export const HERBY_PILKARSKIE = [
     id: 55,
     answers: [
       {
-        value: 'burnley',
+        value: 'astonvilla.png',
       },
     ],
-    question: 'footballCrests/burnley.png',
+    question: 'footballCrests/astonvilla.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1653,28 +1653,28 @@ export const HERBY_PILKARSKIE = [
     id: 56,
     answers: [
       {
-        value: 'bytoviabytow',
+        value: 'astrencin.png',
       },
     ],
-    question: 'footballCrests/bytoviabytow.png',
+    question: 'footballCrests/astrencin.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1683,28 +1683,28 @@ export const HERBY_PILKARSKIE = [
     id: 57,
     answers: [
       {
-        value: 'cabanfield',
+        value: 'atalanta.png',
       },
     ],
-    question: 'footballCrests/cabanfield.png',
+    question: 'footballCrests/atalanta.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1713,28 +1713,28 @@ export const HERBY_PILKARSKIE = [
     id: 58,
     answers: [
       {
-        value: 'cadizcf',
+        value: 'atlantefc.png',
       },
     ],
-    question: 'footballCrests/cadizcf.png',
+    question: 'footballCrests/atlantefc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1743,28 +1743,28 @@ export const HERBY_PILKARSKIE = [
     id: 59,
     answers: [
       {
-        value: 'cagliari',
+        value: 'atleticomineiro.png',
       },
     ],
-    question: 'footballCrests/cagliari.png',
+    question: 'footballCrests/atleticomineiro.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1773,28 +1773,28 @@ export const HERBY_PILKARSKIE = [
     id: 60,
     answers: [
       {
-        value: 'cardiffcity',
+        value: 'atleticonacional.png',
       },
     ],
-    question: 'footballCrests/cardiffcity.png',
+    question: 'footballCrests/atleticonacional.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1803,28 +1803,28 @@ export const HERBY_PILKARSKIE = [
     id: 61,
     answers: [
       {
-        value: 'carpi',
+        value: 'austriawieden.png',
       },
     ],
-    question: 'footballCrests/carpi.png',
+    question: 'footballCrests/austriawieden.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1833,28 +1833,28 @@ export const HERBY_PILKARSKIE = [
     id: 62,
     answers: [
       {
-        value: 'cataniacalcio',
+        value: 'barcelona.png',
       },
     ],
-    question: 'footballCrests/cataniacalcio.png',
+    question: 'footballCrests/barcelona.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1863,28 +1863,28 @@ export const HERBY_PILKARSKIE = [
     id: 63,
     answers: [
       {
-        value: 'cdaves',
+        value: 'barnsley.png',
       },
     ],
-    question: 'footballCrests/cdaves.png',
+    question: 'footballCrests/barnsley.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1893,28 +1893,28 @@ export const HERBY_PILKARSKIE = [
     id: 64,
     answers: [
       {
-        value: 'celticfc',
+        value: 'bateborysow.png',
       },
     ],
-    question: 'footballCrests/celticfc.png',
+    question: 'footballCrests/bateborysow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1923,28 +1923,28 @@ export const HERBY_PILKARSKIE = [
     id: 65,
     answers: [
       {
-        value: 'cerezoosaka',
+        value: 'bayer04leverkusen.png',
       },
     ],
-    question: 'footballCrests/cerezoosaka.png',
+    question: 'footballCrests/bayer04leverkusen.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1953,28 +1953,28 @@ export const HERBY_PILKARSKIE = [
     id: 66,
     answers: [
       {
-        value: 'charlottefc',
+        value: 'bayernmonachium.png',
       },
     ],
-    question: 'footballCrests/charlottefc.png',
+    question: 'footballCrests/bayernmonachium.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -1983,28 +1983,28 @@ export const HERBY_PILKARSKIE = [
     id: 67,
     answers: [
       {
-        value: 'chelsea',
+        value: 'bberzurumspor.png',
       },
     ],
-    question: 'footballCrests/chelsea.png',
+    question: 'footballCrests/bberzurumspor.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2013,28 +2013,28 @@ export const HERBY_PILKARSKIE = [
     id: 68,
     answers: [
       {
-        value: 'chicagofire',
+        value: 'benevento.png',
       },
     ],
-    question: 'footballCrests/chicagofire.png',
+    question: 'footballCrests/benevento.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2043,28 +2043,28 @@ export const HERBY_PILKARSKIE = [
     id: 69,
     answers: [
       {
-        value: 'chrobryglogow',
+        value: 'benidormcf.png',
       },
     ],
-    question: 'footballCrests/chrobryglogow.png',
+    question: 'footballCrests/benidormcf.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2073,28 +2073,28 @@ export const HERBY_PILKARSKIE = [
     id: 70,
     answers: [
       {
-        value: 'clermontfoot63',
+        value: 'besiktasjk.png',
       },
     ],
-    question: 'footballCrests/clermontfoot63.png',
+    question: 'footballCrests/besiktasjk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2103,28 +2103,28 @@ export const HERBY_PILKARSKIE = [
     id: 71,
     answers: [
       {
-        value: 'clubbrugge',
+        value: 'birminghamcity.png',
       },
     ],
-    question: 'footballCrests/clubbrugge.png',
+    question: 'footballCrests/birminghamcity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2133,28 +2133,28 @@ export const HERBY_PILKARSKIE = [
     id: 72,
     answers: [
       {
-        value: 'concordiaknurow',
+        value: 'bocajuniors.png',
       },
     ],
-    question: 'footballCrests/concordiaknurow.png',
+    question: 'footballCrests/bocajuniors.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2163,28 +2163,28 @@ export const HERBY_PILKARSKIE = [
     id: 73,
     answers: [
       {
-        value: 'corinthiaspaulista',
+        value: 'bologna.png',
       },
     ],
-    question: 'footballCrests/corinthiaspaulista.png',
+    question: 'footballCrests/bologna.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2193,28 +2193,28 @@ export const HERBY_PILKARSKIE = [
     id: 74,
     answers: [
       {
-        value: 'coventrycity',
+        value: 'boltonwanderers.png',
       },
     ],
-    question: 'footballCrests/coventrycity.png',
+    question: 'footballCrests/boltonwanderers.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2223,28 +2223,28 @@ export const HERBY_PILKARSKIE = [
     id: 75,
     answers: [
       {
-        value: 'cracovia',
+        value: 'boracnovysad.png',
       },
     ],
-    question: 'footballCrests/cracovia.png',
+    question: 'footballCrests/boracnovysad.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2253,28 +2253,28 @@ export const HERBY_PILKARSKIE = [
     id: 76,
     answers: [
       {
-        value: 'cskasofia',
+        value: 'borussiadortmund.png',
       },
     ],
-    question: 'footballCrests/cskasofia.png',
+    question: 'footballCrests/borussiadortmund.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2283,28 +2283,28 @@ export const HERBY_PILKARSKIE = [
     id: 77,
     answers: [
       {
-        value: 'dcunited',
+        value: 'borussiamonchengladbach.png',
       },
     ],
-    question: 'footballCrests/dcunited.png',
+    question: 'footballCrests/borussiamonchengladbach.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2313,28 +2313,28 @@ export const HERBY_PILKARSKIE = [
     id: 78,
     answers: [
       {
-        value: 'degraafschap',
+        value: 'bournemouth.png',
       },
     ],
-    question: 'footballCrests/degraafschap.png',
+    question: 'footballCrests/bournemouth.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2343,28 +2343,28 @@ export const HERBY_PILKARSKIE = [
     id: 79,
     answers: [
       {
-        value: 'delhidynamos',
+        value: 'brentford.png',
       },
     ],
-    question: 'footballCrests/delhidynamos.png',
+    question: 'footballCrests/brentford.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2373,28 +2373,28 @@ export const HERBY_PILKARSKIE = [
     id: 80,
     answers: [
       {
-        value: 'derbycounty',
+        value: 'bresciacalcio.png',
       },
     ],
-    question: 'footballCrests/derbycounty.png',
+    question: 'footballCrests/bresciacalcio.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2403,28 +2403,28 @@ export const HERBY_PILKARSKIE = [
     id: 81,
     answers: [
       {
-        value: 'dinamomoskwa',
+        value: 'brondbyif.png',
       },
     ],
-    question: 'footballCrests/dinamomoskwa.png',
+    question: 'footballCrests/brondbyif.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2433,28 +2433,28 @@ export const HERBY_PILKARSKIE = [
     id: 82,
     answers: [
       {
-        value: 'dinamozagrzeb',
+        value: 'burnley.png',
       },
     ],
-    question: 'footballCrests/dinamozagrzeb.png',
+    question: 'footballCrests/burnley.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2463,28 +2463,28 @@ export const HERBY_PILKARSKIE = [
     id: 83,
     answers: [
       {
-        value: 'dolcanzabki',
+        value: 'bytoviabytow.png',
       },
     ],
-    question: 'footballCrests/dolcanzabki.png',
+    question: 'footballCrests/bytoviabytow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2493,28 +2493,28 @@ export const HERBY_PILKARSKIE = [
     id: 84,
     answers: [
       {
-        value: 'dunajskastreda',
+        value: 'cabanfield.png',
       },
     ],
-    question: 'footballCrests/dunajskastreda.png',
+    question: 'footballCrests/cabanfield.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2523,28 +2523,28 @@ export const HERBY_PILKARSKIE = [
     id: 85,
     answers: [
       {
-        value: 'dundeeunited',
+        value: 'cadizcf.png',
       },
     ],
-    question: 'footballCrests/dundeeunited.png',
+    question: 'footballCrests/cadizcf.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2553,28 +2553,28 @@ export const HERBY_PILKARSKIE = [
     id: 86,
     answers: [
       {
-        value: 'ecjuventude',
+        value: 'cagliari.png',
       },
     ],
-    question: 'footballCrests/ecjuventude.png',
+    question: 'footballCrests/cagliari.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2583,28 +2583,28 @@ export const HERBY_PILKARSKIE = [
     id: 87,
     answers: [
       {
-        value: 'elche',
+        value: 'cardiffcity.png',
       },
     ],
-    question: 'footballCrests/elche.png',
+    question: 'footballCrests/cardiffcity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2613,28 +2613,28 @@ export const HERBY_PILKARSKIE = [
     id: 88,
     answers: [
       {
-        value: 'empoli',
+        value: 'carpi.png',
       },
     ],
-    question: 'footballCrests/empoli.png',
+    question: 'footballCrests/carpi.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2643,28 +2643,28 @@ export const HERBY_PILKARSKIE = [
     id: 89,
     answers: [
       {
-        value: 'estudianteslaplata',
+        value: 'cataniacalcio.png',
       },
     ],
-    question: 'footballCrests/estudianteslaplata.png',
+    question: 'footballCrests/cataniacalcio.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2673,28 +2673,28 @@ export const HERBY_PILKARSKIE = [
     id: 90,
     answers: [
       {
-        value: 'ethnikosachna',
+        value: 'caykurrivespor.png',
       },
     ],
-    question: 'footballCrests/ethnikosachna.png',
+    question: 'footballCrests/caykurrivespor.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2703,28 +2703,28 @@ export const HERBY_PILKARSKIE = [
     id: 91,
     answers: [
       {
-        value: 'everton',
+        value: 'cdaves.png',
       },
     ],
-    question: 'footballCrests/everton.png',
+    question: 'footballCrests/cdaves.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2733,28 +2733,28 @@ export const HERBY_PILKARSKIE = [
     id: 92,
     answers: [
       {
-        value: 'fcaugsburg',
+        value: 'celtaDeVigo.png',
       },
     ],
-    question: 'footballCrests/fcaugsburg.png',
+    question: 'footballCrests/celtaDeVigo.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2763,28 +2763,28 @@ export const HERBY_PILKARSKIE = [
     id: 93,
     answers: [
       {
-        value: 'fcbasel',
+        value: 'celticfc.png',
       },
     ],
-    question: 'footballCrests/fcbasel.png',
+    question: 'footballCrests/celticfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2793,28 +2793,28 @@ export const HERBY_PILKARSKIE = [
     id: 94,
     answers: [
       {
-        value: 'fccrotone',
+        value: 'cerezoosaka.png',
       },
     ],
-    question: 'footballCrests/fccrotone.png',
+    question: 'footballCrests/cerezoosaka.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2823,28 +2823,28 @@ export const HERBY_PILKARSKIE = [
     id: 95,
     answers: [
       {
-        value: 'fcgirondinsdebordeaux',
+        value: 'charlottefc.png',
       },
     ],
-    question: 'footballCrests/fcgirondinsdebordeaux.png',
+    question: 'footballCrests/charlottefc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2853,28 +2853,28 @@ export const HERBY_PILKARSKIE = [
     id: 96,
     answers: [
       {
-        value: 'fcgoa',
+        value: 'charltonathletic.png',
       },
     ],
-    question: 'footballCrests/fcgoa.png',
+    question: 'footballCrests/charltonathletic.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2883,28 +2883,28 @@ export const HERBY_PILKARSKIE = [
     id: 97,
     answers: [
       {
-        value: 'fckaiserslautern',
+        value: 'chelsea.png',
       },
     ],
-    question: 'footballCrests/fckaiserslautern.png',
+    question: 'footballCrests/chelsea.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2913,28 +2913,28 @@ export const HERBY_PILKARSKIE = [
     id: 98,
     answers: [
       {
-        value: 'fckoln',
+        value: 'chicagofire.png',
       },
     ],
-    question: 'footballCrests/fckoln.png',
+    question: 'footballCrests/chicagofire.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2943,28 +2943,28 @@ export const HERBY_PILKARSKIE = [
     id: 99,
     answers: [
       {
-        value: 'fckopenhaga',
+        value: 'chievo.png',
       },
     ],
-    question: 'footballCrests/fckopenhaga.png',
+    question: 'footballCrests/chievo.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -2973,28 +2973,28 @@ export const HERBY_PILKARSKIE = [
     id: 100,
     answers: [
       {
-        value: 'fckoper',
+        value: 'chrobryglogow.png',
       },
     ],
-    question: 'footballCrests/fckoper.png',
+    question: 'footballCrests/chrobryglogow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3003,28 +3003,28 @@ export const HERBY_PILKARSKIE = [
     id: 101,
     answers: [
       {
-        value: 'fcmetz',
+        value: 'clermontfoot63.png',
       },
     ],
-    question: 'footballCrests/fcmetz.png',
+    question: 'footballCrests/clermontfoot63.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3033,28 +3033,28 @@ export const HERBY_PILKARSKIE = [
     id: 102,
     answers: [
       {
-        value: 'fcmidtjylland',
+        value: 'clubbrugge.png',
       },
     ],
-    question: 'footballCrests/fcmidtjylland.png',
+    question: 'footballCrests/clubbrugge.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3063,28 +3063,28 @@ export const HERBY_PILKARSKIE = [
     id: 103,
     answers: [
       {
-        value: 'fcnurnberg',
+        value: 'concordiaknurow.png',
       },
     ],
-    question: 'footballCrests/fcnurnberg.png',
+    question: 'footballCrests/concordiaknurow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3093,28 +3093,28 @@ export const HERBY_PILKARSKIE = [
     id: 104,
     answers: [
       {
-        value: 'fcporto',
+        value: 'corinthiaspaulista.png',
       },
     ],
-    question: 'footballCrests/fcporto.png',
+    question: 'footballCrests/corinthiaspaulista.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3123,28 +3123,28 @@ export const HERBY_PILKARSKIE = [
     id: 105,
     answers: [
       {
-        value: 'fcschalke04',
+        value: 'coventrycity.png',
       },
     ],
-    question: 'footballCrests/fcschalke04.png',
+    question: 'footballCrests/coventrycity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3153,28 +3153,28 @@ export const HERBY_PILKARSKIE = [
     id: 106,
     answers: [
       {
-        value: 'fctwente',
+        value: 'cracovia.png',
       },
     ],
-    question: 'footballCrests/fctwente.png',
+    question: 'footballCrests/cracovia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3183,28 +3183,28 @@ export const HERBY_PILKARSKIE = [
     id: 107,
     answers: [
       {
-        value: 'fcutrecht',
+        value: 'crvenaZvezdaBelgrad.png',
       },
     ],
-    question: 'footballCrests/fcutrecht.png',
+    question: 'footballCrests/crvenaZvezdaBelgrad.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3213,28 +3213,28 @@ export const HERBY_PILKARSKIE = [
     id: 108,
     answers: [
       {
-        value: 'fehervarfc',
+        value: 'crystalpalace.png',
       },
     ],
-    question: 'footballCrests/fehervarfc.png',
+    question: 'footballCrests/crystalpalace.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3243,28 +3243,28 @@ export const HERBY_PILKARSKIE = [
     id: 109,
     answers: [
       {
-        value: 'fenerbahce',
+        value: 'cskasofia.png',
       },
     ],
-    question: 'footballCrests/fenerbahce.png',
+    question: 'footballCrests/cskasofia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3273,28 +3273,28 @@ export const HERBY_PILKARSKIE = [
     id: 110,
     answers: [
       {
-        value: 'feyenoord',
+        value: 'dcunited.png',
       },
     ],
-    question: 'footballCrests/feyenoord.png',
+    question: 'footballCrests/dcunited.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3303,28 +3303,28 @@ export const HERBY_PILKARSKIE = [
     id: 111,
     answers: [
       {
-        value: 'fiorentina',
+        value: 'degraafschap.png',
       },
     ],
-    question: 'footballCrests/fiorentina.png',
+    question: 'footballCrests/degraafschap.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3333,28 +3333,28 @@ export const HERBY_PILKARSKIE = [
     id: 112,
     answers: [
       {
-        value: 'fkkrasnodar',
+        value: 'delhidynamos.png',
       },
     ],
-    question: 'footballCrests/fkkrasnodar.png',
+    question: 'footballCrests/delhidynamos.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3363,28 +3363,28 @@ export const HERBY_PILKARSKIE = [
     id: 113,
     answers: [
       {
-        value: 'fkmetalac',
+        value: 'deportivoalaves.png',
       },
     ],
-    question: 'footballCrests/fkmetalac.png',
+    question: 'footballCrests/deportivoalaves.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3393,28 +3393,28 @@ export const HERBY_PILKARSKIE = [
     id: 114,
     answers: [
       {
-        value: 'fkpartizan',
+        value: 'derbycounty.png',
       },
     ],
-    question: 'footballCrests/fkpartizan.png',
+    question: 'footballCrests/derbycounty.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3423,28 +3423,28 @@ export const HERBY_PILKARSKIE = [
     id: 115,
     answers: [
       {
-        value: 'fkpohronie',
+        value: 'dinamomoskwa.png',
       },
     ],
-    question: 'footballCrests/fkpohronie.png',
+    question: 'footballCrests/dinamomoskwa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3453,28 +3453,28 @@ export const HERBY_PILKARSKIE = [
     id: 116,
     answers: [
       {
-        value: 'fksarajewo',
+        value: 'dinamozagrzeb.png',
       },
     ],
-    question: 'footballCrests/fksarajewo.png',
+    question: 'footballCrests/dinamozagrzeb.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3483,28 +3483,28 @@ export const HERBY_PILKARSKIE = [
     id: 117,
     answers: [
       {
-        value: 'fksenica',
+        value: 'dolcanzabki.png',
       },
     ],
-    question: 'footballCrests/fksenica.png',
+    question: 'footballCrests/dolcanzabki.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3513,28 +3513,28 @@ export const HERBY_PILKARSKIE = [
     id: 118,
     answers: [
       {
-        value: 'floratalin',
+        value: 'dunajskastreda.png',
       },
     ],
-    question: 'footballCrests/floratalin.png',
+    question: 'footballCrests/dunajskastreda.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3543,28 +3543,28 @@ export const HERBY_PILKARSKIE = [
     id: 119,
     answers: [
       {
-        value: 'fluminense',
+        value: 'dundeeunited.png',
       },
     ],
-    question: 'footballCrests/fluminense.png',
+    question: 'footballCrests/dundeeunited.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3573,28 +3573,28 @@ export const HERBY_PILKARSKIE = [
     id: 120,
     answers: [
       {
-        value: 'galatasaray',
+        value: 'dyskobolia.png',
       },
     ],
-    question: 'footballCrests/galatasaray.png',
+    question: 'footballCrests/dyskobolia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3603,28 +3603,28 @@ export const HERBY_PILKARSKIE = [
     id: 121,
     answers: [
       {
-        value: 'gaziantepfk',
+        value: 'ecjuventude.png',
       },
     ],
-    question: 'footballCrests/gaziantepfk.png',
+    question: 'footballCrests/ecjuventude.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3633,28 +3633,28 @@ export const HERBY_PILKARSKIE = [
     id: 122,
     answers: [
       {
-        value: 'genk',
+        value: 'elche.png',
       },
     ],
-    question: 'footballCrests/genk.png',
+    question: 'footballCrests/elche.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3663,28 +3663,28 @@ export const HERBY_PILKARSKIE = [
     id: 123,
     answers: [
       {
-        value: 'genoa',
+        value: 'empoli.png',
       },
     ],
-    question: 'footballCrests/genoa.png',
+    question: 'footballCrests/empoli.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3693,28 +3693,28 @@ export const HERBY_PILKARSKIE = [
     id: 124,
     answers: [
       {
-        value: 'getafe',
+        value: 'estroyesac.png',
       },
     ],
-    question: 'footballCrests/getafe.png',
+    question: 'footballCrests/estroyesac.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3723,28 +3723,28 @@ export const HERBY_PILKARSKIE = [
     id: 125,
     answers: [
       {
-        value: 'gksbelchatow',
+        value: 'estudianteslaplata.png',
       },
     ],
-    question: 'footballCrests/gksbelchatow.png',
+    question: 'footballCrests/estudianteslaplata.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3753,28 +3753,28 @@ export const HERBY_PILKARSKIE = [
     id: 126,
     answers: [
       {
-        value: 'gksjastrzebie',
+        value: 'ethnikosachna.png',
       },
     ],
-    question: 'footballCrests/gksjastrzebie.png',
+    question: 'footballCrests/ethnikosachna.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3783,28 +3783,28 @@ export const HERBY_PILKARSKIE = [
     id: 127,
     answers: [
       {
-        value: 'gkskatowice',
+        value: 'everton.png',
       },
     ],
-    question: 'footballCrests/gkskatowice.png',
+    question: 'footballCrests/everton.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3813,28 +3813,28 @@ export const HERBY_PILKARSKIE = [
     id: 128,
     answers: [
       {
-        value: 'goczlkowice',
+        value: 'fcSheriffTiraspol.png',
       },
     ],
-    question: 'footballCrests/goczlkowice.png',
+    question: 'footballCrests/fcSheriffTiraspol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3843,28 +3843,28 @@ export const HERBY_PILKARSKIE = [
     id: 129,
     answers: [
       {
-        value: 'gornikleczna',
+        value: 'fcakhmatgrozny.png',
       },
     ],
-    question: 'footballCrests/gornikleczna.png',
+    question: 'footballCrests/fcakhmatgrozny.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3873,28 +3873,28 @@ export const HERBY_PILKARSKIE = [
     id: 130,
     answers: [
       {
-        value: 'gornikpolkowice',
+        value: 'fcaugsburg.png',
       },
     ],
-    question: 'footballCrests/gornikpolkowice.png',
+    question: 'footballCrests/fcaugsburg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3903,28 +3903,28 @@ export const HERBY_PILKARSKIE = [
     id: 131,
     answers: [
       {
-        value: 'gornikzabrze',
+        value: 'fcbasel.png',
       },
     ],
-    question: 'footballCrests/gornikzabrze.png',
+    question: 'footballCrests/fcbasel.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3933,28 +3933,28 @@ export const HERBY_PILKARSKIE = [
     id: 132,
     answers: [
       {
-        value: 'goztepe',
+        value: 'fccrotone.png',
       },
     ],
-    question: 'footballCrests/goztepe.png',
+    question: 'footballCrests/fccrotone.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3963,28 +3963,28 @@ export const HERBY_PILKARSKIE = [
     id: 133,
     answers: [
       {
-        value: 'guangzhouevergrande',
+        value: 'fcdynamokyiv.png',
       },
     ],
-    question: 'footballCrests/guangzhouevergrande.png',
+    question: 'footballCrests/fcdynamokyiv.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -3993,28 +3993,28 @@ export const HERBY_PILKARSKIE = [
     id: 134,
     answers: [
       {
-        value: 'hajduksplit',
+        value: 'fcgirondinsdebordeaux.png',
       },
     ],
-    question: 'footballCrests/hajduksplit.png',
+    question: 'footballCrests/fcgirondinsdebordeaux.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4023,28 +4023,28 @@ export const HERBY_PILKARSKIE = [
     id: 135,
     answers: [
       {
-        value: 'hamiltonacademical',
+        value: 'fcgoa.png',
       },
     ],
-    question: 'footballCrests/hamiltonacademical.png',
+    question: 'footballCrests/fcgoa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4053,28 +4053,28 @@ export const HERBY_PILKARSKIE = [
     id: 136,
     answers: [
       {
-        value: 'hangzhougreentown',
+        value: 'fckairat.png',
       },
     ],
-    question: 'footballCrests/hangzhougreentown.png',
+    question: 'footballCrests/fckairat.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4083,28 +4083,28 @@ export const HERBY_PILKARSKIE = [
     id: 137,
     answers: [
       {
-        value: 'hanover96',
+        value: 'fckaiserslautern.png',
       },
     ],
-    question: 'footballCrests/hanover96.png',
+    question: 'footballCrests/fckaiserslautern.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4113,28 +4113,28 @@ export const HERBY_PILKARSKIE = [
     id: 138,
     answers: [
       {
-        value: 'hapoelbeerszewa',
+        value: 'fckoln.png',
       },
     ],
-    question: 'footballCrests/hapoelbeerszewa.png',
+    question: 'footballCrests/fckoln.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4143,28 +4143,28 @@ export const HERBY_PILKARSKIE = [
     id: 139,
     answers: [
       {
-        value: 'hebeichinafortune',
+        value: 'fckopenhaga.png',
       },
     ],
-    question: 'footballCrests/hebeichinafortune.png',
+    question: 'footballCrests/fckopenhaga.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4173,28 +4173,28 @@ export const HERBY_PILKARSKIE = [
     id: 140,
     answers: [
       {
-        value: 'herthabsc',
+        value: 'fckoper.png',
       },
     ],
-    question: 'footballCrests/herthabsc.png',
+    question: 'footballCrests/fckoper.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4203,28 +4203,28 @@ export const HERBY_PILKARSKIE = [
     id: 141,
     answers: [
       {
-        value: 'hnkgorica',
+        value: 'fclorient.png',
       },
     ],
-    question: 'footballCrests/hnkgorica.png',
+    question: 'footballCrests/fclorient.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4233,28 +4233,28 @@ export const HERBY_PILKARSKIE = [
     id: 142,
     answers: [
       {
-        value: 'holsteinkiel',
+        value: 'fcmetz.png',
       },
     ],
-    question: 'footballCrests/holsteinkiel.png',
+    question: 'footballCrests/fcmetz.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4263,28 +4263,28 @@ export const HERBY_PILKARSKIE = [
     id: 143,
     answers: [
       {
-        value: 'huddersfieldtown',
+        value: 'fcmidtjylland.png',
       },
     ],
-    question: 'footballCrests/huddersfieldtown.png',
+    question: 'footballCrests/fcmidtjylland.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4293,28 +4293,28 @@ export const HERBY_PILKARSKIE = [
     id: 144,
     answers: [
       {
-        value: 'hullcity',
+        value: 'fcnantes.png',
       },
     ],
-    question: 'footballCrests/hullcity.png',
+    question: 'footballCrests/fcnantes.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4323,28 +4323,28 @@ export const HERBY_PILKARSKIE = [
     id: 145,
     answers: [
       {
-        value: 'independiente',
+        value: 'fcnurnberg.png',
       },
     ],
-    question: 'footballCrests/independiente.png',
+    question: 'footballCrests/fcnurnberg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4353,28 +4353,28 @@ export const HERBY_PILKARSKIE = [
     id: 146,
     answers: [
       {
-        value: 'inter',
+        value: 'fcporto.png',
       },
     ],
-    question: 'footballCrests/inter.png',
+    question: 'footballCrests/fcporto.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4383,28 +4383,28 @@ export const HERBY_PILKARSKIE = [
     id: 147,
     answers: [
       {
-        value: 'interzapresic',
+        value: 'fcredbullsalzburg.png',
       },
     ],
-    question: 'footballCrests/interzapresic.png',
+    question: 'footballCrests/fcredbullsalzburg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4413,28 +4413,28 @@ export const HERBY_PILKARSKIE = [
     id: 148,
     answers: [
       {
-        value: 'istanbulbasaksehir',
+        value: 'fcschalke04.png',
       },
     ],
-    question: 'footballCrests/istanbulbasaksehir.png',
+    question: 'footballCrests/fcschalke04.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4443,28 +4443,28 @@ export const HERBY_PILKARSKIE = [
     id: 149,
     answers: [
       {
-        value: 'jagiellonia',
+        value: 'fcsion.png',
       },
     ],
-    question: 'footballCrests/jagiellonia.png',
+    question: 'footballCrests/fcsion.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4473,28 +4473,28 @@ export const HERBY_PILKARSKIE = [
     id: 150,
     answers: [
       {
-        value: 'juventus',
+        value: 'fctoulouse.png',
       },
     ],
-    question: 'footballCrests/juventus.png',
+    question: 'footballCrests/fctoulouse.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4503,28 +4503,28 @@ export const HERBY_PILKARSKIE = [
     id: 151,
     answers: [
       {
-        value: 'kaagent',
+        value: 'fctwente.png',
       },
     ],
-    question: 'footballCrests/kaagent.png',
+    question: 'footballCrests/fctwente.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4533,28 +4533,28 @@ export const HERBY_PILKARSKIE = [
     id: 152,
     answers: [
       {
-        value: 'kitcheesc',
+        value: 'fcutrecht.png',
       },
     ],
-    question: 'footballCrests/kitcheesc.png',
+    question: 'footballCrests/fcutrecht.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4563,28 +4563,28 @@ export const HERBY_PILKARSKIE = [
     id: 153,
     answers: [
       {
-        value: 'koronakielce',
+        value: 'fehervarfc.png',
       },
     ],
-    question: 'footballCrests/koronakielce.png',
+    question: 'footballCrests/fehervarfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4593,28 +4593,28 @@ export const HERBY_PILKARSKIE = [
     id: 154,
     answers: [
       {
-        value: 'krcmechelen',
+        value: 'fenerbahce.png',
       },
     ],
-    question: 'footballCrests/krcmechelen.png',
+    question: 'footballCrests/fenerbahce.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4623,28 +4623,28 @@ export const HERBY_PILKARSKIE = [
     id: 155,
     answers: [
       {
-        value: 'ksclokeren',
+        value: 'feyenoord.png',
       },
     ],
-    question: 'footballCrests/ksclokeren.png',
+    question: 'footballCrests/feyenoord.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4653,28 +4653,28 @@ export const HERBY_PILKARSKIE = [
     id: 156,
     answers: [
       {
-        value: 'lagalaxy',
+        value: 'fiorentina.png',
       },
     ],
-    question: 'footballCrests/lagalaxy.png',
+    question: 'footballCrests/fiorentina.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4683,28 +4683,28 @@ export const HERBY_PILKARSKIE = [
     id: 157,
     answers: [
       {
-        value: 'laspalmas',
+        value: 'fkkrasnodar.png',
       },
     ],
-    question: 'footballCrests/laspalmas.png',
+    question: 'footballCrests/fkkrasnodar.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4713,28 +4713,28 @@ export const HERBY_PILKARSKIE = [
     id: 158,
     answers: [
       {
-        value: 'laziorzym',
+        value: 'fkmetalac.png',
       },
     ],
-    question: 'footballCrests/laziorzym.png',
+    question: 'footballCrests/fkmetalac.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4743,28 +4743,28 @@ export const HERBY_PILKARSKIE = [
     id: 159,
     answers: [
       {
-        value: 'lechiagdansk',
+        value: 'fkpartizan.png',
       },
     ],
-    question: 'footballCrests/lechiagdansk.png',
+    question: 'footballCrests/fkpartizan.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4773,28 +4773,28 @@ export const HERBY_PILKARSKIE = [
     id: 160,
     answers: [
       {
-        value: 'lechpoznan',
+        value: 'fkpohronie.png',
       },
     ],
-    question: 'footballCrests/lechpoznan.png',
+    question: 'footballCrests/fkpohronie.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4803,28 +4803,28 @@ export const HERBY_PILKARSKIE = [
     id: 161,
     answers: [
       {
-        value: 'leedsunited',
+        value: 'fksarajewo.png',
       },
     ],
-    question: 'footballCrests/leedsunited.png',
+    question: 'footballCrests/fksarajewo.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4833,28 +4833,28 @@ export const HERBY_PILKARSKIE = [
     id: 162,
     answers: [
       {
-        value: 'legiawarszawa',
+        value: 'fksenica.png',
       },
     ],
-    question: 'footballCrests/legiawarszawa.png',
+    question: 'footballCrests/fksenica.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4863,28 +4863,28 @@ export const HERBY_PILKARSKIE = [
     id: 163,
     answers: [
       {
-        value: 'lehavreac',
+        value: 'floratalin.png',
       },
     ],
-    question: 'footballCrests/lehavreac.png',
+    question: 'footballCrests/floratalin.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4893,28 +4893,28 @@ export const HERBY_PILKARSKIE = [
     id: 164,
     answers: [
       {
-        value: 'leicester',
+        value: 'flotaswinoujscie.png',
       },
     ],
-    question: 'footballCrests/leicester.png',
+    question: 'footballCrests/flotaswinoujscie.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4923,28 +4923,28 @@ export const HERBY_PILKARSKIE = [
     id: 165,
     answers: [
       {
-        value: 'levante',
+        value: 'fluminense.png',
       },
     ],
-    question: 'footballCrests/levante.png',
+    question: 'footballCrests/fluminense.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4953,28 +4953,28 @@ export const HERBY_PILKARSKIE = [
     id: 166,
     answers: [
       {
-        value: 'leytonorient',
+        value: 'fulham.png',
       },
     ],
-    question: 'footballCrests/leytonorient.png',
+    question: 'footballCrests/fulham.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -4983,28 +4983,28 @@ export const HERBY_PILKARSKIE = [
     id: 167,
     answers: [
       {
-        value: 'lille',
+        value: 'galatasaray.png',
       },
     ],
-    question: 'footballCrests/lille.png',
+    question: 'footballCrests/galatasaray.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5013,28 +5013,28 @@ export const HERBY_PILKARSKIE = [
     id: 168,
     answers: [
       {
-        value: 'liverpool',
+        value: 'gaziantepfk.png',
       },
     ],
-    question: 'footballCrests/liverpool.png',
+    question: 'footballCrests/gaziantepfk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5043,28 +5043,28 @@ export const HERBY_PILKARSKIE = [
     id: 169,
     answers: [
       {
-        value: 'lkslodz',
+        value: 'genk.png',
       },
     ],
-    question: 'footballCrests/lkslodz.png',
+    question: 'footballCrests/genk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5073,28 +5073,28 @@ export const HERBY_PILKARSKIE = [
     id: 170,
     answers: [
       {
-        value: 'lleidaesportiu',
+        value: 'genoa.png',
       },
     ],
-    question: 'footballCrests/lleidaesportiu.png',
+    question: 'footballCrests/genoa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5103,28 +5103,28 @@ export const HERBY_PILKARSKIE = [
     id: 171,
     answers: [
       {
-        value: 'lokomotiwmoskwa',
+        value: 'getafe.png',
       },
     ],
-    question: 'footballCrests/lokomotiwmoskwa.png',
+    question: 'footballCrests/getafe.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5133,28 +5133,28 @@ export const HERBY_PILKARSKIE = [
     id: 172,
     answers: [
       {
-        value: 'losangelesfc',
+        value: 'gksbelchatow.png',
       },
     ],
-    question: 'footballCrests/losangelesfc.png',
+    question: 'footballCrests/gksbelchatow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5163,28 +5163,28 @@ export const HERBY_PILKARSKIE = [
     id: 173,
     answers: [
       {
-        value: 'malaga',
+        value: 'gksjastrzebie.png',
       },
     ],
-    question: 'footballCrests/malaga.png',
+    question: 'footballCrests/gksjastrzebie.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5193,28 +5193,28 @@ export const HERBY_PILKARSKIE = [
     id: 174,
     answers: [
       {
-        value: 'mallorca',
+        value: 'gkskatowice.png',
       },
     ],
-    question: 'footballCrests/mallorca.png',
+    question: 'footballCrests/gkskatowice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5223,28 +5223,28 @@ export const HERBY_PILKARSKIE = [
     id: 175,
     answers: [
       {
-        value: 'manchasterunited',
+        value: 'gkstychy.png',
       },
     ],
-    question: 'footballCrests/manchasterunited.png',
+    question: 'footballCrests/gkstychy.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5253,28 +5253,28 @@ export const HERBY_PILKARSKIE = [
     id: 176,
     answers: [
       {
-        value: 'mancity',
+        value: 'goczlkowice.png',
       },
     ],
-    question: 'footballCrests/mancity.png',
+    question: 'footballCrests/goczlkowice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5283,28 +5283,28 @@ export const HERBY_PILKARSKIE = [
     id: 177,
     answers: [
       {
-        value: 'melbournecityfc',
+        value: 'gornikleczna.png',
       },
     ],
-    question: 'footballCrests/melbournecityfc.png',
+    question: 'footballCrests/gornikleczna.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5313,28 +5313,28 @@ export const HERBY_PILKARSKIE = [
     id: 178,
     answers: [
       {
-        value: 'mfkkarvina',
+        value: 'gornikpolkowice.png',
       },
     ],
-    question: 'footballCrests/mfkkarvina.png',
+    question: 'footballCrests/gornikpolkowice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5343,28 +5343,28 @@ export const HERBY_PILKARSKIE = [
     id: 179,
     answers: [
       {
-        value: 'miedzlegnica',
+        value: 'gornikzabrze.png',
       },
     ],
-    question: 'footballCrests/miedzlegnica.png',
+    question: 'footballCrests/gornikzabrze.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5373,28 +5373,28 @@ export const HERBY_PILKARSKIE = [
     id: 180,
     answers: [
       {
-        value: 'millwall',
+        value: 'goztepe.png',
       },
     ],
-    question: 'footballCrests/millwall.png',
+    question: 'footballCrests/goztepe.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5403,28 +5403,28 @@ export const HERBY_PILKARSKIE = [
     id: 181,
     answers: [
       {
-        value: 'mkszilina',
+        value: 'granadacf.png',
       },
     ],
-    question: 'footballCrests/mkszilina.png',
+    question: 'footballCrests/granadacf.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5433,28 +5433,28 @@ export const HERBY_PILKARSKIE = [
     id: 182,
     answers: [
       {
-        value: 'montpellierhsc',
+        value: 'grasshopperclubzurych.png',
       },
     ],
-    question: 'footballCrests/montpellierhsc.png',
+    question: 'footballCrests/grasshopperclubzurych.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5463,28 +5463,28 @@ export const HERBY_PILKARSKIE = [
     id: 183,
     answers: [
       {
-        value: 'mumbaicityfc',
+        value: 'grenoblefoot38.png',
       },
     ],
-    question: 'footballCrests/mumbaicityfc.png',
+    question: 'footballCrests/grenoblefoot38.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5493,28 +5493,28 @@ export const HERBY_PILKARSKIE = [
     id: 184,
     answers: [
       {
-        value: 'nacional',
+        value: 'guangzhouevergrande.png',
       },
     ],
-    question: 'footballCrests/nacional.png',
+    question: 'footballCrests/guangzhouevergrande.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5523,28 +5523,28 @@ export const HERBY_PILKARSKIE = [
     id: 185,
     answers: [
       {
-        value: 'napoli',
+        value: 'hajduksplit.png',
       },
     ],
-    question: 'footballCrests/napoli.png',
+    question: 'footballCrests/hajduksplit.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5553,28 +5553,28 @@ export const HERBY_PILKARSKIE = [
     id: 186,
     answers: [
       {
-        value: 'ndgorica',
+        value: 'hamburgersv.png',
       },
     ],
-    question: 'footballCrests/ndgorica.png',
+    question: 'footballCrests/hamburgersv.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5583,28 +5583,28 @@ export const HERBY_PILKARSKIE = [
     id: 187,
     answers: [
       {
-        value: 'newcastle',
+        value: 'hamiltonacademical.png',
       },
     ],
-    question: 'footballCrests/newcastle.png',
+    question: 'footballCrests/hamiltonacademical.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5613,28 +5613,28 @@ export const HERBY_PILKARSKIE = [
     id: 188,
     answers: [
       {
-        value: 'newellsoldboys',
+        value: 'hangzhougreentown.png',
       },
     ],
-    question: 'footballCrests/newellsoldboys.png',
+    question: 'footballCrests/hangzhougreentown.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5643,28 +5643,28 @@ export const HERBY_PILKARSKIE = [
     id: 189,
     answers: [
       {
-        value: 'newenglandrevolution',
+        value: 'hanover96.png',
       },
     ],
-    question: 'footballCrests/newenglandrevolution.png',
+    question: 'footballCrests/hanover96.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5673,28 +5673,28 @@ export const HERBY_PILKARSKIE = [
     id: 190,
     answers: [
       {
-        value: 'newyorkcity',
+        value: 'hapoelbeerszewa.png',
       },
     ],
-    question: 'footballCrests/newyorkcity.png',
+    question: 'footballCrests/hapoelbeerszewa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5703,28 +5703,28 @@ export const HERBY_PILKARSKIE = [
     id: 191,
     answers: [
       {
-        value: 'newyorkredbulls',
+        value: 'hebeichinafortune.png',
       },
     ],
-    question: 'footballCrests/newyorkredbulls.png',
+    question: 'footballCrests/hebeichinafortune.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5733,28 +5733,28 @@ export const HERBY_PILKARSKIE = [
     id: 192,
     answers: [
       {
-        value: 'nkdomzale',
+        value: 'hellasverona.png',
       },
     ],
-    question: 'footballCrests/nkdomzale.png',
+    question: 'footballCrests/hellasverona.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5763,28 +5763,28 @@ export const HERBY_PILKARSKIE = [
     id: 193,
     answers: [
       {
-        value: 'norwichcity',
+        value: 'herthabsc.png',
       },
     ],
-    question: 'footballCrests/norwichcity.png',
+    question: 'footballCrests/herthabsc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5793,28 +5793,28 @@ export const HERBY_PILKARSKIE = [
     id: 194,
     answers: [
       {
-        value: 'nottscounty',
+        value: 'hnkgorica.png',
       },
     ],
-    question: 'footballCrests/nottscounty.png',
+    question: 'footballCrests/hnkgorica.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5823,28 +5823,28 @@ export const HERBY_PILKARSKIE = [
     id: 195,
     answers: [
       {
-        value: 'odensebk',
+        value: 'holsteinkiel.png',
       },
     ],
-    question: 'footballCrests/odensebk.png',
+    question: 'footballCrests/holsteinkiel.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5853,28 +5853,28 @@ export const HERBY_PILKARSKIE = [
     id: 196,
     answers: [
       {
-        value: 'ogcnice',
+        value: 'huddersfieldtown.png',
       },
     ],
-    question: 'footballCrests/ogcnice.png',
+    question: 'footballCrests/huddersfieldtown.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5883,28 +5883,28 @@ export const HERBY_PILKARSKIE = [
     id: 197,
     answers: [
       {
-        value: 'okocimski',
+        value: 'hullcity.png',
       },
     ],
-    question: 'footballCrests/okocimski.png',
+    question: 'footballCrests/hullcity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5913,28 +5913,28 @@ export const HERBY_PILKARSKIE = [
     id: 198,
     answers: [
       {
-        value: 'olimpiaelblag',
+        value: 'independiente.png',
       },
     ],
-    question: 'footballCrests/olimpiaelblag.png',
+    question: 'footballCrests/independiente.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5943,28 +5943,28 @@ export const HERBY_PILKARSKIE = [
     id: 199,
     answers: [
       {
-        value: 'olimpijalublana',
+        value: 'inter.png',
       },
     ],
-    question: 'footballCrests/olimpijalublana.png',
+    question: 'footballCrests/inter.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -5973,28 +5973,28 @@ export const HERBY_PILKARSKIE = [
     id: 200,
     answers: [
       {
-        value: 'olympiakospireus',
+        value: 'interzapresic.png',
       },
     ],
-    question: 'footballCrests/olympiakospireus.png',
+    question: 'footballCrests/interzapresic.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6003,28 +6003,28 @@ export const HERBY_PILKARSKIE = [
     id: 201,
     answers: [
       {
-        value: 'olympiquelyon',
+        value: 'istanbulbasaksehir.png',
       },
     ],
-    question: 'footballCrests/olympiquelyon.png',
+    question: 'footballCrests/istanbulbasaksehir.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6033,28 +6033,28 @@ export const HERBY_PILKARSKIE = [
     id: 202,
     answers: [
       {
-        value: 'olympiquemarsylia',
+        value: 'jagiellonia.png',
       },
     ],
-    question: 'footballCrests/olympiquemarsylia.png',
+    question: 'footballCrests/jagiellonia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6063,28 +6063,28 @@ export const HERBY_PILKARSKIE = [
     id: 203,
     answers: [
       {
-        value: 'omonianikozja',
+        value: 'juventus.png',
       },
     ],
-    question: 'footballCrests/omonianikozja.png',
+    question: 'footballCrests/juventus.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6093,28 +6093,28 @@ export const HERBY_PILKARSKIE = [
     id: 204,
     answers: [
       {
-        value: 'orlandocity',
+        value: 'kaagent.png',
       },
     ],
-    question: 'footballCrests/orlandocity.png',
+    question: 'footballCrests/kaagent.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6123,28 +6123,28 @@ export const HERBY_PILKARSKIE = [
     id: 205,
     answers: [
       {
-        value: 'palermo',
+        value: 'kitcheesc.png',
       },
     ],
-    question: 'footballCrests/palermo.png',
+    question: 'footballCrests/kitcheesc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6153,28 +6153,28 @@ export const HERBY_PILKARSKIE = [
     id: 206,
     answers: [
       {
-        value: 'panathinaikosao',
+        value: 'konyaspor.png',
       },
     ],
-    question: 'footballCrests/panathinaikosao.png',
+    question: 'footballCrests/konyaspor.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6183,28 +6183,28 @@ export const HERBY_PILKARSKIE = [
     id: 207,
     answers: [
       {
-        value: 'paoksaloniki',
+        value: 'koronakielce.png',
       },
     ],
-    question: 'footballCrests/paoksaloniki.png',
+    question: 'footballCrests/koronakielce.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6213,28 +6213,28 @@ export const HERBY_PILKARSKIE = [
     id: 208,
     answers: [
       {
-        value: 'parma',
+        value: 'kotwica.png',
       },
     ],
-    question: 'footballCrests/parma.png',
+    question: 'footballCrests/kotwica.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6243,28 +6243,28 @@ export const HERBY_PILKARSKIE = [
     id: 209,
     answers: [
       {
-        value: 'penarol',
+        value: 'krcmechelen.png',
       },
     ],
-    question: 'footballCrests/penarol.png',
+    question: 'footballCrests/krcmechelen.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6273,28 +6273,28 @@ export const HERBY_PILKARSKIE = [
     id: 210,
     answers: [
       {
-        value: 'piastgliwice',
+        value: 'ksclokeren.png',
       },
     ],
-    question: 'footballCrests/piastgliwice.png',
+    question: 'footballCrests/ksclokeren.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6303,28 +6303,28 @@ export const HERBY_PILKARSKIE = [
     id: 211,
     answers: [
       {
-        value: 'plataniachanion',
+        value: 'ksgarbarniakrakow.png',
       },
     ],
-    question: 'footballCrests/plataniachanion.png',
+    question: 'footballCrests/ksgarbarniakrakow.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6333,28 +6333,28 @@ export const HERBY_PILKARSKIE = [
     id: 212,
     answers: [
       {
-        value: 'podbeskidziebielskobiala',
+        value: 'kskbeveren.png',
       },
     ],
-    question: 'footballCrests/podbeskidziebielskobiala.png',
+    question: 'footballCrests/kskbeveren.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6363,28 +6363,28 @@ export const HERBY_PILKARSKIE = [
     id: 213,
     answers: [
       {
-        value: 'pogonsiedlce',
+        value: 'kslegionovialegionowo.png',
       },
     ],
-    question: 'footballCrests/pogonsiedlce.png',
+    question: 'footballCrests/kslegionovialegionowo.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6393,28 +6393,28 @@ export const HERBY_PILKARSKIE = [
     id: 214,
     answers: [
       {
-        value: 'pogonszczecin',
+        value: 'lagalaxy.png',
       },
     ],
-    question: 'footballCrests/pogonszczecin.png',
+    question: 'footballCrests/lagalaxy.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6423,28 +6423,28 @@ export const HERBY_PILKARSKIE = [
     id: 215,
     answers: [
       {
-        value: 'poloniawarszawa',
+        value: 'laspalmas.png',
       },
     ],
-    question: 'footballCrests/poloniawarszawa.png',
+    question: 'footballCrests/laspalmas.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6453,28 +6453,28 @@ export const HERBY_PILKARSKIE = [
     id: 216,
     answers: [
       {
-        value: 'portlandtimbers',
+        value: 'laziorzym.png',
       },
     ],
-    question: 'footballCrests/portlandtimbers.png',
+    question: 'footballCrests/laziorzym.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6483,28 +6483,28 @@ export const HERBY_PILKARSKIE = [
     id: 217,
     answers: [
       {
-        value: 'pseindhoven',
+        value: 'lbchateauroux.png',
       },
     ],
-    question: 'footballCrests/pseindhoven.png',
+    question: 'footballCrests/lbchateauroux.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6513,28 +6513,28 @@ export const HERBY_PILKARSKIE = [
     id: 218,
     answers: [
       {
-        value: 'psg',
+        value: 'lechiagdansk.png',
       },
     ],
-    question: 'footballCrests/psg.png',
+    question: 'footballCrests/lechiagdansk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6543,28 +6543,28 @@ export const HERBY_PILKARSKIE = [
     id: 219,
     answers: [
       {
-        value: 'pumasunam',
+        value: 'lechpoznan.png',
       },
     ],
-    question: 'footballCrests/pumasunam.png',
+    question: 'footballCrests/lechpoznan.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6573,28 +6573,28 @@ export const HERBY_PILKARSKIE = [
     id: 220,
     answers: [
       {
-        value: 'qarabagfk',
+        value: 'leedsunited.png',
       },
     ],
-    question: 'footballCrests/qarabagfk.png',
+    question: 'footballCrests/leedsunited.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6603,28 +6603,28 @@ export const HERBY_PILKARSKIE = [
     id: 221,
     answers: [
       {
-        value: 'queensparkrangers',
+        value: 'legiawarszawa.png',
       },
     ],
-    question: 'footballCrests/queensparkrangers.png',
+    question: 'footballCrests/legiawarszawa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6633,28 +6633,28 @@ export const HERBY_PILKARSKIE = [
     id: 222,
     answers: [
       {
-        value: 'queretato',
+        value: 'lehavreac.png',
       },
     ],
-    question: 'footballCrests/queretato.png',
+    question: 'footballCrests/lehavreac.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6663,28 +6663,28 @@ export const HERBY_PILKARSKIE = [
     id: 223,
     answers: [
       {
-        value: 'rakowczestochowa',
+        value: 'leicester.png',
       },
     ],
-    question: 'footballCrests/rakowczestochowa.png',
+    question: 'footballCrests/leicester.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6693,28 +6693,28 @@ export const HERBY_PILKARSKIE = [
     id: 224,
     answers: [
       {
-        value: 'randersfc',
+        value: 'levante.png',
       },
     ],
-    question: 'footballCrests/randersfc.png',
+    question: 'footballCrests/levante.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6723,28 +6723,28 @@ export const HERBY_PILKARSKIE = [
     id: 225,
     answers: [
       {
-        value: 'rangersfc',
+        value: 'leytonorient.png',
       },
     ],
-    question: 'footballCrests/rangersfc.png',
+    question: 'footballCrests/leytonorient.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6753,28 +6753,28 @@ export const HERBY_PILKARSKIE = [
     id: 226,
     answers: [
       {
-        value: 'rayovallecano',
+        value: 'lille.png',
       },
     ],
-    question: 'footballCrests/rayovallecano.png',
+    question: 'footballCrests/lille.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6783,28 +6783,28 @@ export const HERBY_PILKARSKIE = [
     id: 227,
     answers: [
       {
-        value: 'rbleipzig',
+        value: 'liverpool.png',
       },
     ],
-    question: 'footballCrests/rbleipzig.png',
+    question: 'footballCrests/liverpool.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6813,28 +6813,28 @@ export const HERBY_PILKARSKIE = [
     id: 228,
     answers: [
       {
-        value: 'rclens',
+        value: 'lkslodz.png',
       },
     ],
-    question: 'footballCrests/rclens.png',
+    question: 'footballCrests/lkslodz.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6843,28 +6843,28 @@ export const HERBY_PILKARSKIE = [
     id: 229,
     answers: [
       {
-        value: 'realmadryt',
+        value: 'lkslomza.png',
       },
     ],
-    question: 'footballCrests/realmadryt.png',
+    question: 'footballCrests/lkslomza.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6873,28 +6873,28 @@ export const HERBY_PILKARSKIE = [
     id: 230,
     answers: [
       {
-        value: 'realsaragossa',
+        value: 'lleidaesportiu.png',
       },
     ],
-    question: 'footballCrests/realsaragossa.png',
+    question: 'footballCrests/lleidaesportiu.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6903,28 +6903,28 @@ export const HERBY_PILKARSKIE = [
     id: 231,
     answers: [
       {
-        value: 'realsociedad',
+        value: 'lokomotiwmoskwa.png',
       },
     ],
-    question: 'footballCrests/realsociedad.png',
+    question: 'footballCrests/lokomotiwmoskwa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6933,28 +6933,28 @@ export const HERBY_PILKARSKIE = [
     id: 232,
     answers: [
       {
-        value: 'redbullsalzburg',
+        value: 'losangelesfc.png',
       },
     ],
-    question: 'footballCrests/redbullsalzburg.png',
+    question: 'footballCrests/losangelesfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6963,28 +6963,28 @@ export const HERBY_PILKARSKIE = [
     id: 233,
     answers: [
       {
-        value: 'rennes',
+        value: 'maccabihaifa.png',
       },
     ],
-    question: 'footballCrests/rennes.png',
+    question: 'footballCrests/maccabihaifa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -6993,28 +6993,28 @@ export const HERBY_PILKARSKIE = [
     id: 234,
     answers: [
       {
-        value: 'rmajadahonda',
+        value: 'malaga.png',
       },
     ],
-    question: 'footballCrests/rmajadahonda.png',
+    question: 'footballCrests/malaga.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7023,28 +7023,28 @@ export const HERBY_PILKARSKIE = [
     id: 235,
     answers: [
       {
-        value: 'rosenborgbk',
+        value: 'mallorca.png',
       },
     ],
-    question: 'footballCrests/rosenborgbk.png',
+    question: 'footballCrests/mallorca.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7053,28 +7053,28 @@ export const HERBY_PILKARSKIE = [
     id: 236,
     answers: [
       {
-        value: 'rscanderlecht',
+        value: 'manchasterunited.png',
       },
     ],
-    question: 'footballCrests/rscanderlecht.png',
+    question: 'footballCrests/manchasterunited.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7083,28 +7083,28 @@ export const HERBY_PILKARSKIE = [
     id: 237,
     answers: [
       {
-        value: 'rubinkazan',
+        value: 'mancity.png',
       },
     ],
-    question: 'footballCrests/rubinkazan.png',
+    question: 'footballCrests/mancity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7113,28 +7113,28 @@ export const HERBY_PILKARSKIE = [
     id: 238,
     answers: [
       {
-        value: 'ruchchorzow',
+        value: 'mappedClubs.json',
       },
     ],
-    question: 'footballCrests/ruchchorzow.png',
+    question: 'footballCrests/mappedClubs.json',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7143,28 +7143,28 @@ export const HERBY_PILKARSKIE = [
     id: 239,
     answers: [
       {
-        value: 'salernitana',
+        value: 'melbournecityfc.png',
       },
     ],
-    question: 'footballCrests/salernitana.png',
+    question: 'footballCrests/melbournecityfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7173,28 +7173,28 @@ export const HERBY_PILKARSKIE = [
     id: 240,
     answers: [
       {
-        value: 'samsunspor',
+        value: 'mfkkarvina.png',
       },
     ],
-    question: 'footballCrests/samsunspor.png',
+    question: 'footballCrests/mfkkarvina.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7203,28 +7203,28 @@ export const HERBY_PILKARSKIE = [
     id: 241,
     answers: [
       {
-        value: 'sandecjanowysacz',
+        value: 'middlesbroughfc.png',
       },
     ],
-    question: 'footballCrests/sandecjanowysacz.png',
+    question: 'footballCrests/middlesbroughfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7233,28 +7233,28 @@ export const HERBY_PILKARSKIE = [
     id: 242,
     answers: [
       {
-        value: 'santosfc',
+        value: 'miedzlegnica.png',
       },
     ],
-    question: 'footballCrests/santosfc.png',
+    question: 'footballCrests/miedzlegnica.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7263,28 +7263,28 @@ export const HERBY_PILKARSKIE = [
     id: 243,
     answers: [
       {
-        value: 'saopaulofc',
+        value: 'millwall.png',
       },
     ],
-    question: 'footballCrests/saopaulofc.png',
+    question: 'footballCrests/millwall.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7293,28 +7293,28 @@ export const HERBY_PILKARSKIE = [
     id: 244,
     answers: [
       {
-        value: 'scfreiburg',
+        value: 'mkskluczbork.png',
       },
     ],
-    question: 'footballCrests/scfreiburg.png',
+    question: 'footballCrests/mkskluczbork.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7323,28 +7323,28 @@ export const HERBY_PILKARSKIE = [
     id: 245,
     answers: [
       {
-        value: 'scinternacional',
+        value: 'mksodra.png',
       },
     ],
-    question: 'footballCrests/scinternacional.png',
+    question: 'footballCrests/mksodra.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7353,28 +7353,28 @@ export const HERBY_PILKARSKIE = [
     id: 246,
     answers: [
       {
-        value: 'sdeibar',
+        value: 'mkszilina.png',
       },
     ],
-    question: 'footballCrests/sdeibar.png',
+    question: 'footballCrests/mkszilina.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7383,28 +7383,28 @@ export const HERBY_PILKARSKIE = [
     id: 247,
     answers: [
       {
-        value: 'sepalmeiras',
+        value: 'montpellierhsc.png',
       },
     ],
-    question: 'footballCrests/sepalmeiras.png',
+    question: 'footballCrests/montpellierhsc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7413,28 +7413,28 @@ export const HERBY_PILKARSKIE = [
     id: 248,
     answers: [
       {
-        value: 'sevilaatletico',
+        value: 'motorLublin.png',
       },
     ],
-    question: 'footballCrests/sevilaatletico.png',
+    question: 'footballCrests/motorLublin.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7443,28 +7443,28 @@ export const HERBY_PILKARSKIE = [
     id: 249,
     answers: [
       {
-        value: 'sevillafc',
+        value: 'mumbaicityfc.png',
       },
     ],
-    question: 'footballCrests/sevillafc.png',
+    question: 'footballCrests/mumbaicityfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7473,28 +7473,28 @@ export const HERBY_PILKARSKIE = [
     id: 250,
     answers: [
       {
-        value: 'shanghaishenhua',
+        value: 'nacional.png',
       },
     ],
-    question: 'footballCrests/shanghaishenhua.png',
+    question: 'footballCrests/nacional.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7503,28 +7503,28 @@ export const HERBY_PILKARSKIE = [
     id: 251,
     answers: [
       {
-        value: 'sheffieldunited',
+        value: 'napoli.png',
       },
     ],
-    question: 'footballCrests/sheffieldunited.png',
+    question: 'footballCrests/napoli.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7533,28 +7533,28 @@ export const HERBY_PILKARSKIE = [
     id: 252,
     answers: [
       {
-        value: 'sinttruidensevv',
+        value: 'ndgorica.png',
       },
     ],
-    question: 'footballCrests/sinttruidensevv.png',
+    question: 'footballCrests/ndgorica.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7563,28 +7563,28 @@ export const HERBY_PILKARSKIE = [
     id: 253,
     answers: [
       {
-        value: 'sivasspor',
+        value: 'necnijmegen.png',
       },
     ],
-    question: 'footballCrests/sivasspor.png',
+    question: 'footballCrests/necnijmegen.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7593,28 +7593,28 @@ export const HERBY_PILKARSKIE = [
     id: 254,
     answers: [
       {
-        value: 'skraczestochowa',
+        value: 'newcastle.png',
       },
     ],
-    question: 'footballCrests/skraczestochowa.png',
+    question: 'footballCrests/newcastle.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7623,28 +7623,28 @@ export const HERBY_PILKARSKIE = [
     id: 255,
     answers: [
       {
-        value: 'sksvaty',
+        value: 'newellsoldboys.png',
       },
     ],
-    question: 'footballCrests/sksvaty.png',
+    question: 'footballCrests/newellsoldboys.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7653,28 +7653,28 @@ export const HERBY_PILKARSKIE = [
     id: 256,
     answers: [
       {
-        value: 'slaskwroclaw',
+        value: 'newenglandrevolution.png',
       },
     ],
-    question: 'footballCrests/slaskwroclaw.png',
+    question: 'footballCrests/newenglandrevolution.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7683,28 +7683,28 @@ export const HERBY_PILKARSKIE = [
     id: 257,
     answers: [
       {
-        value: 'slbenfica',
+        value: 'newyorkcity.png',
       },
     ],
-    question: 'footballCrests/slbenfica.png',
+    question: 'footballCrests/newyorkcity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7713,28 +7713,28 @@ export const HERBY_PILKARSKIE = [
     id: 258,
     answers: [
       {
-        value: 'slovanbratyslawa',
+        value: 'newyorkredbulls.png',
       },
     ],
-    question: 'footballCrests/slovanbratyslawa.png',
+    question: 'footballCrests/newyorkredbulls.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7743,28 +7743,28 @@ export const HERBY_PILKARSKIE = [
     id: 259,
     answers: [
       {
-        value: 'smcaen',
+        value: 'nkdomzale.png',
       },
     ],
-    question: 'footballCrests/smcaen.png',
+    question: 'footballCrests/nkdomzale.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7773,28 +7773,28 @@ export const HERBY_PILKARSKIE = [
     id: 260,
     answers: [
       {
-        value: 'sokoltychy',
+        value: 'norwichcity.png',
       },
     ],
-    question: 'footballCrests/sokoltychy.png',
+    question: 'footballCrests/norwichcity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7803,28 +7803,28 @@ export const HERBY_PILKARSKIE = [
     id: 261,
     answers: [
       {
-        value: 'southampton',
+        value: 'nottinghamforestfc.png',
       },
     ],
-    question: 'footballCrests/southampton.png',
+    question: 'footballCrests/nottinghamforestfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7833,28 +7833,28 @@ export const HERBY_PILKARSKIE = [
     id: 262,
     answers: [
       {
-        value: 'spal2013',
+        value: 'nottscounty.png',
       },
     ],
-    question: 'footballCrests/spal2013.png',
+    question: 'footballCrests/nottscounty.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7863,28 +7863,28 @@ export const HERBY_PILKARSKIE = [
     id: 263,
     answers: [
       {
-        value: 'spartakmoskwa',
+        value: 'odensebk.png',
       },
     ],
-    question: 'footballCrests/spartakmoskwa.png',
+    question: 'footballCrests/odensebk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7893,28 +7893,28 @@ export const HERBY_PILKARSKIE = [
     id: 264,
     answers: [
       {
-        value: 'spartaktrnava',
+        value: 'odraopole.png',
       },
     ],
-    question: 'footballCrests/spartaktrnava.png',
+    question: 'footballCrests/odraopole.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7923,28 +7923,28 @@ export const HERBY_PILKARSKIE = [
     id: 265,
     answers: [
       {
-        value: 'speziacalcio',
+        value: 'ogcnice.png',
       },
     ],
-    question: 'footballCrests/speziacalcio.png',
+    question: 'footballCrests/ogcnice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7953,28 +7953,28 @@ export const HERBY_PILKARSKIE = [
     id: 266,
     answers: [
       {
-        value: 'sportinglisbona',
+        value: 'okocimski.png',
       },
     ],
-    question: 'footballCrests/sportinglisbona.png',
+    question: 'footballCrests/okocimski.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -7983,28 +7983,28 @@ export const HERBY_PILKARSKIE = [
     id: 267,
     answers: [
       {
-        value: 'sShanghaisipg',
+        value: 'oldhamathleticafc.png',
       },
     ],
-    question: 'footballCrests/sShanghaisipg.png',
+    question: 'footballCrests/oldhamathleticafc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8013,28 +8013,28 @@ export const HERBY_PILKARSKIE = [
     id: 268,
     answers: [
       {
-        value: 'staderennais',
+        value: 'olimpiaelblag.png',
       },
     ],
-    question: 'footballCrests/staderennais.png',
+    question: 'footballCrests/olimpiaelblag.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8043,28 +8043,28 @@ export const HERBY_PILKARSKIE = [
     id: 269,
     answers: [
       {
-        value: 'stalmielec',
+        value: 'olimpijalublana.png',
       },
     ],
-    question: 'footballCrests/stalmielec.png',
+    question: 'footballCrests/olimpijalublana.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8073,28 +8073,28 @@ export const HERBY_PILKARSKIE = [
     id: 270,
     answers: [
       {
-        value: 'stalrzeszow',
+        value: 'olympiakospireus.png',
       },
     ],
-    question: 'footballCrests/stalrzeszow.png',
+    question: 'footballCrests/olympiakospireus.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8103,28 +8103,28 @@ export const HERBY_PILKARSKIE = [
     id: 271,
     answers: [
       {
-        value: 'standardliege',
+        value: 'olympiquelyon.png',
       },
     ],
-    question: 'footballCrests/standardliege.png',
+    question: 'footballCrests/olympiquelyon.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8133,28 +8133,28 @@ export const HERBY_PILKARSKIE = [
     id: 272,
     answers: [
       {
-        value: 'stokecity',
+        value: 'olympiquemarsylia.png',
       },
     ],
-    question: 'footballCrests/stokecity.png',
+    question: 'footballCrests/olympiquemarsylia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8163,28 +8163,28 @@ export const HERBY_PILKARSKIE = [
     id: 273,
     answers: [
       {
-        value: 'swanseacity',
+        value: 'omonianikozja.png',
       },
     ],
-    question: 'footballCrests/swanseacity.png',
+    question: 'footballCrests/omonianikozja.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8193,28 +8193,28 @@ export const HERBY_PILKARSKIE = [
     id: 274,
     answers: [
       {
-        value: 'swidontown',
+        value: 'orlandocity.png',
       },
     ],
-    question: 'footballCrests/swidontown.png',
+    question: 'footballCrests/orlandocity.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8223,28 +8223,28 @@ export const HERBY_PILKARSKIE = [
     id: 275,
     answers: [
       {
-        value: 'talleresremediosdeescalada',
+        value: 'osasuna.png',
       },
     ],
-    question: 'footballCrests/talleresremediosdeescalada.png',
+    question: 'footballCrests/osasuna.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8253,28 +8253,28 @@ export const HERBY_PILKARSKIE = [
     id: 276,
     answers: [
       {
-        value: 'teraktorsazitebriz',
+        value: 'palermo.png',
       },
     ],
-    question: 'footballCrests/teraktorsazitebriz.png',
+    question: 'footballCrests/palermo.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8283,28 +8283,28 @@ export const HERBY_PILKARSKIE = [
     id: 277,
     answers: [
       {
-        value: 'terekgrozny',
+        value: 'panathinaikosao.png',
       },
     ],
-    question: 'footballCrests/terekgrozny.png',
+    question: 'footballCrests/panathinaikosao.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8313,28 +8313,28 @@ export const HERBY_PILKARSKIE = [
     id: 278,
     answers: [
       {
-        value: 'termalica',
+        value: 'paoksaloniki.png',
       },
     ],
-    question: 'footballCrests/termalica.png',
+    question: 'footballCrests/paoksaloniki.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8343,28 +8343,28 @@ export const HERBY_PILKARSKIE = [
     id: 279,
     answers: [
       {
-        value: 'tianjinquanjian',
+        value: 'parma.png',
       },
     ],
-    question: 'footballCrests/tianjinquanjian.png',
+    question: 'footballCrests/parma.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8373,28 +8373,28 @@ export const HERBY_PILKARSKIE = [
     id: 280,
     answers: [
       {
-        value: 'tigresuanl',
+        value: 'penarol.png',
       },
     ],
-    question: 'footballCrests/tigresuanl.png',
+    question: 'footballCrests/penarol.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8403,28 +8403,28 @@ export const HERBY_PILKARSKIE = [
     id: 281,
     answers: [
       {
-        value: 'torcy',
+        value: 'pfcludogoretsrrazgrad.png',
       },
     ],
-    question: 'footballCrests/torcy.png',
+    question: 'footballCrests/pfcludogoretsrrazgrad.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8433,28 +8433,28 @@ export const HERBY_PILKARSKIE = [
     id: 282,
     answers: [
       {
-        value: 'torino',
+        value: 'piastgliwice.png',
       },
     ],
-    question: 'footballCrests/torino.png',
+    question: 'footballCrests/piastgliwice.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8463,28 +8463,28 @@ export const HERBY_PILKARSKIE = [
     id: 283,
     answers: [
       {
-        value: 'tottenhamhotspur',
+        value: 'plataniachanion.png',
       },
     ],
-    question: 'footballCrests/tottenhamhotspur.png',
+    question: 'footballCrests/plataniachanion.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8493,28 +8493,28 @@ export const HERBY_PILKARSKIE = [
     id: 284,
     answers: [
       {
-        value: 'trabzonspor',
+        value: 'podbeskidziebielskobiala.png',
       },
     ],
-    question: 'footballCrests/trabzonspor.png',
+    question: 'footballCrests/podbeskidziebielskobiala.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8523,28 +8523,28 @@ export const HERBY_PILKARSKIE = [
     id: 285,
     answers: [
       {
-        value: 'trivalvalderas',
+        value: 'pogonsiedlce.png',
       },
     ],
-    question: 'footballCrests/trivalvalderas.png',
+    question: 'footballCrests/pogonsiedlce.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8553,28 +8553,28 @@ export const HERBY_PILKARSKIE = [
     id: 286,
     answers: [
       {
-        value: 'tsv1860munchen',
+        value: 'pogonszczecin.png',
       },
     ],
-    question: 'footballCrests/tsv1860munchen.png',
+    question: 'footballCrests/pogonszczecin.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8583,28 +8583,28 @@ export const HERBY_PILKARSKIE = [
     id: 287,
     answers: [
       {
-        value: 'ucsampdoria',
+        value: 'poloniaBytom.png',
       },
     ],
-    question: 'footballCrests/ucsampdoria.png',
+    question: 'footballCrests/poloniaBytom.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8613,28 +8613,28 @@ export const HERBY_PILKARSKIE = [
     id: 288,
     answers: [
       {
-        value: 'udinesecalcio',
+        value: 'poloniawarszawa.png',
       },
     ],
-    question: 'footballCrests/udinesecalcio.png',
+    question: 'footballCrests/poloniawarszawa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8643,28 +8643,28 @@ export const HERBY_PILKARSKIE = [
     id: 289,
     answers: [
       {
-        value: 'usboulogne',
+        value: 'portlandtimbers.png',
       },
     ],
-    question: 'footballCrests/usboulogne.png',
+    question: 'footballCrests/portlandtimbers.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8673,28 +8673,28 @@ export const HERBY_PILKARSKIE = [
     id: 290,
     answers: [
       {
-        value: 'valenciacf',
+        value: 'portsmouthfc.png',
       },
     ],
-    question: 'footballCrests/valenciacf.png',
+    question: 'footballCrests/portsmouthfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8703,28 +8703,28 @@ export const HERBY_PILKARSKIE = [
     id: 291,
     answers: [
       {
-        value: 'valenciennesfc',
+        value: 'pseindhoven.png',
       },
     ],
-    question: 'footballCrests/valenciennesfc.png',
+    question: 'footballCrests/pseindhoven.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8733,28 +8733,28 @@ export const HERBY_PILKARSKIE = [
     id: 292,
     answers: [
       {
-        value: 'venezia',
+        value: 'psg.png',
       },
     ],
-    question: 'footballCrests/venezia.png',
+    question: 'footballCrests/psg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8763,28 +8763,28 @@ export const HERBY_PILKARSKIE = [
     id: 293,
     answers: [
       {
-        value: 'vfbstuttgart',
+        value: 'pumasunam.png',
       },
     ],
-    question: 'footballCrests/vfbstuttgart.png',
+    question: 'footballCrests/pumasunam.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8793,28 +8793,28 @@ export const HERBY_PILKARSKIE = [
     id: 294,
     answers: [
       {
-        value: 'visselkobe',
+        value: 'puszcza.png',
       },
     ],
-    question: 'footballCrests/visselkobe.png',
+    question: 'footballCrests/puszcza.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8823,28 +8823,28 @@ export const HERBY_PILKARSKIE = [
     id: 295,
     answers: [
       {
-        value: 'volosnps',
+        value: 'qarabagfk.png',
       },
     ],
-    question: 'footballCrests/volosnps.png',
+    question: 'footballCrests/qarabagfk.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8853,28 +8853,28 @@ export const HERBY_PILKARSKIE = [
     id: 296,
     answers: [
       {
-        value: 'vsskosice',
+        value: 'qpr.png',
       },
     ],
-    question: 'footballCrests/vsskosice.png',
+    question: 'footballCrests/qpr.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8883,28 +8883,28 @@ export const HERBY_PILKARSKIE = [
     id: 297,
     answers: [
       {
-        value: 'wartapoznan',
+        value: 'queensparkrangers.png',
       },
     ],
-    question: 'footballCrests/wartapoznan.png',
+    question: 'footballCrests/queensparkrangers.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8913,28 +8913,28 @@ export const HERBY_PILKARSKIE = [
     id: 298,
     answers: [
       {
-        value: 'werderbrema',
+        value: 'queretato.png',
       },
     ],
-    question: 'footballCrests/werderbrema.png',
+    question: 'footballCrests/queretato.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8943,28 +8943,28 @@ export const HERBY_PILKARSKIE = [
     id: 299,
     answers: [
       {
-        value: 'westbromwichalbion',
+        value: 'racingclubdestrasbourg.png',
       },
     ],
-    question: 'footballCrests/westbromwichalbion.png',
+    question: 'footballCrests/racingclubdestrasbourg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -8973,28 +8973,28 @@ export const HERBY_PILKARSKIE = [
     id: 300,
     answers: [
       {
-        value: 'westhamunited',
+        value: 'radomiak.png',
       },
     ],
-    question: 'footballCrests/westhamunited.png',
+    question: 'footballCrests/radomiak.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9003,28 +9003,28 @@ export const HERBY_PILKARSKIE = [
     id: 301,
     answers: [
       {
-        value: 'widzewlodz',
+        value: 'rakowczestochowa.png',
       },
     ],
-    question: 'footballCrests/widzewlodz.png',
+    question: 'footballCrests/rakowczestochowa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9033,28 +9033,28 @@ export const HERBY_PILKARSKIE = [
     id: 302,
     answers: [
       {
-        value: 'wigrysuwalki',
+        value: 'randersfc.png',
       },
     ],
-    question: 'footballCrests/wigrysuwalki.png',
+    question: 'footballCrests/randersfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9063,28 +9063,28 @@ export const HERBY_PILKARSKIE = [
     id: 303,
     answers: [
       {
-        value: 'wilkiwilcza',
+        value: 'rangersfc.png',
       },
     ],
-    question: 'footballCrests/wilkiwilcza.png',
+    question: 'footballCrests/rangersfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9093,28 +9093,28 @@ export const HERBY_PILKARSKIE = [
     id: 304,
     answers: [
       {
-        value: 'wislakrakow',
+        value: 'rayovallecano.png',
       },
     ],
-    question: 'footballCrests/wislakrakow.png',
+    question: 'footballCrests/rayovallecano.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9123,28 +9123,28 @@ export const HERBY_PILKARSKIE = [
     id: 305,
     answers: [
       {
-        value: 'wislaplock',
+        value: 'rbleipzig.png',
       },
     ],
-    question: 'footballCrests/wislaplock.png',
+    question: 'footballCrests/rbleipzig.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9153,28 +9153,28 @@ export const HERBY_PILKARSKIE = [
     id: 306,
     answers: [
       {
-        value: 'wolfsburg',
+        value: 'rclens.png',
       },
     ],
-    question: 'footballCrests/wolfsburg.png',
+    question: 'footballCrests/rclens.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9183,28 +9183,28 @@ export const HERBY_PILKARSKIE = [
     id: 307,
     answers: [
       {
-        value: 'wolverhampton',
+        value: 'readingfc.png',
       },
     ],
-    question: 'footballCrests/wolverhampton.png',
+    question: 'footballCrests/readingfc.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9213,28 +9213,28 @@ export const HERBY_PILKARSKIE = [
     id: 308,
     answers: [
       {
-        value: 'zaglebielubin',
+        value: 'realbetis.png',
       },
     ],
-    question: 'footballCrests/zaglebielubin.png',
+    question: 'footballCrests/realbetis.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9243,28 +9243,28 @@ export const HERBY_PILKARSKIE = [
     id: 309,
     answers: [
       {
-        value: 'zaglebiesosnowiec',
+        value: 'realmadryt.png',
       },
     ],
-    question: 'footballCrests/zaglebiesosnowiec.png',
+    question: 'footballCrests/realmadryt.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9273,28 +9273,28 @@ export const HERBY_PILKARSKIE = [
     id: 310,
     answers: [
       {
-        value: 'zawiszabydgoszcz',
+        value: 'realmurcia.png',
       },
     ],
-    question: 'footballCrests/zawiszabydgoszcz.png',
+    question: 'footballCrests/realmurcia.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9303,28 +9303,28 @@ export const HERBY_PILKARSKIE = [
     id: 311,
     answers: [
       {
-        value: 'zeleziarnepodbrezova',
+        value: 'realsaragossa.png',
       },
     ],
-    question: 'footballCrests/zeleziarnepodbrezova.png',
+    question: 'footballCrests/realsaragossa.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9333,28 +9333,28 @@ export const HERBY_PILKARSKIE = [
     id: 312,
     answers: [
       {
-        value: 'zenitpetersburg',
+        value: 'realsociedad.png',
       },
     ],
-    question: 'footballCrests/zenitpetersburg.png',
+    question: 'footballCrests/realsociedad.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9363,28 +9363,28 @@ export const HERBY_PILKARSKIE = [
     id: 313,
     answers: [
       {
-        value: 'zniczpruszkow',
+        value: 'redbullsalzburg.png',
       },
     ],
-    question: 'footballCrests/zniczpruszkow.png',
+    question: 'footballCrests/redbullsalzburg.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
@@ -9393,28 +9393,3238 @@ export const HERBY_PILKARSKIE = [
     id: 314,
     answers: [
       {
-        value: 'zrinjskimostar',
+        value: 'reggina1914.png',
+      },
+    ],
+    question: 'footballCrests/reggina1914.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 315,
+    answers: [
+      {
+        value: 'rennes.png',
+      },
+    ],
+    question: 'footballCrests/rennes.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 316,
+    answers: [
+      {
+        value: 'resovia.png',
+      },
+    ],
+    question: 'footballCrests/resovia.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 317,
+    answers: [
+      {
+        value: 'rmajadahonda.png',
+      },
+    ],
+    question: 'footballCrests/rmajadahonda.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 318,
+    answers: [
+      {
+        value: 'rosenborgbk.png',
+      },
+    ],
+    question: 'footballCrests/rosenborgbk.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 319,
+    answers: [
+      {
+        value: 'rowrybnik.png',
+      },
+    ],
+    question: 'footballCrests/rowrybnik.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 320,
+    answers: [
+      {
+        value: 'rscanderlecht.png',
+      },
+    ],
+    question: 'footballCrests/rscanderlecht.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 321,
+    answers: [
+      {
+        value: 'rubinkazan.png',
+      },
+    ],
+    question: 'footballCrests/rubinkazan.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 322,
+    answers: [
+      {
+        value: 'ruchchorzow.png',
+      },
+    ],
+    question: 'footballCrests/ruchchorzow.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 323,
+    answers: [
+      {
+        value: 'ruchradzionkow.png',
+      },
+    ],
+    question: 'footballCrests/ruchradzionkow.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 324,
+    answers: [
+      {
+        value: 'sShanghaisipg.png',
+      },
+    ],
+    question: 'footballCrests/sShanghaisipg.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 325,
+    answers: [
+      {
+        value: 'salernitana.png',
+      },
+    ],
+    question: 'footballCrests/salernitana.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 326,
+    answers: [
+      {
+        value: 'samsunspor.png',
+      },
+    ],
+    question: 'footballCrests/samsunspor.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 327,
+    answers: [
+      {
+        value: 'sandecjanowysacz.png',
+      },
+    ],
+    question: 'footballCrests/sandecjanowysacz.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 328,
+    answers: [
+      {
+        value: 'santosfc.png',
+      },
+    ],
+    question: 'footballCrests/santosfc.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 329,
+    answers: [
+      {
+        value: 'saopaulofc.png',
+      },
+    ],
+    question: 'footballCrests/saopaulofc.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 330,
+    answers: [
+      {
+        value: 'scbastia.png',
+      },
+    ],
+    question: 'footballCrests/scbastia.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 331,
+    answers: [
+      {
+        value: 'scfreiburg.png',
+      },
+    ],
+    question: 'footballCrests/scfreiburg.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 332,
+    answers: [
+      {
+        value: 'scheerenveen.png',
+      },
+    ],
+    question: 'footballCrests/scheerenveen.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 333,
+    answers: [
+      {
+        value: 'scinternacional.png',
+      },
+    ],
+    question: 'footballCrests/scinternacional.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 334,
+    answers: [
+      {
+        value: 'sdeibar.png',
+      },
+    ],
+    question: 'footballCrests/sdeibar.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 335,
+    answers: [
+      {
+        value: 'sepalmeiras.png',
+      },
+    ],
+    question: 'footballCrests/sepalmeiras.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 336,
+    answers: [
+      {
+        value: 'sevilaatletico.png',
+      },
+    ],
+    question: 'footballCrests/sevilaatletico.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 337,
+    answers: [
+      {
+        value: 'sevillafc.png',
+      },
+    ],
+    question: 'footballCrests/sevillafc.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 338,
+    answers: [
+      {
+        value: 'shanghaishenhua.png',
+      },
+    ],
+    question: 'footballCrests/shanghaishenhua.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 339,
+    answers: [
+      {
+        value: 'sheffieldunited.png',
+      },
+    ],
+    question: 'footballCrests/sheffieldunited.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 340,
+    answers: [
+      {
+        value: 'siarkatarnobrzeg.png',
+      },
+    ],
+    question: 'footballCrests/siarkatarnobrzeg.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 341,
+    answers: [
+      {
+        value: 'sinttruidensevv.png',
+      },
+    ],
+    question: 'footballCrests/sinttruidensevv.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 342,
+    answers: [
+      {
+        value: 'sivasspor.png',
+      },
+    ],
+    question: 'footballCrests/sivasspor.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 343,
+    answers: [
+      {
+        value: 'skraczestochowa.png',
+      },
+    ],
+    question: 'footballCrests/skraczestochowa.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 344,
+    answers: [
+      {
+        value: 'sksvaty.png',
+      },
+    ],
+    question: 'footballCrests/sksvaty.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 345,
+    answers: [
+      {
+        value: 'slaskwroclaw.png',
+      },
+    ],
+    question: 'footballCrests/slaskwroclaw.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 346,
+    answers: [
+      {
+        value: 'slbenfica.png',
+      },
+    ],
+    question: 'footballCrests/slbenfica.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 347,
+    answers: [
+      {
+        value: 'slovanbratyslawa.png',
+      },
+    ],
+    question: 'footballCrests/slovanbratyslawa.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 348,
+    answers: [
+      {
+        value: 'smcaen.png',
+      },
+    ],
+    question: 'footballCrests/smcaen.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 349,
+    answers: [
+      {
+        value: 'sokoltychy.png',
+      },
+    ],
+    question: 'footballCrests/sokoltychy.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 350,
+    answers: [
+      {
+        value: 'southampton.png',
+      },
+    ],
+    question: 'footballCrests/southampton.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 351,
+    answers: [
+      {
+        value: 'spal2013.png',
+      },
+    ],
+    question: 'footballCrests/spal2013.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 352,
+    answers: [
+      {
+        value: 'sparta_praga.png',
+      },
+    ],
+    question: 'footballCrests/sparta_praga.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 353,
+    answers: [
+      {
+        value: 'spartakmoskwa.png',
+      },
+    ],
+    question: 'footballCrests/spartakmoskwa.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 354,
+    answers: [
+      {
+        value: 'spartaktrnava.png',
+      },
+    ],
+    question: 'footballCrests/spartaktrnava.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 355,
+    answers: [
+      {
+        value: 'speziacalcio.png',
+      },
+    ],
+    question: 'footballCrests/speziacalcio.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 356,
+    answers: [
+      {
+        value: 'sportingclubedebraga.png',
+      },
+    ],
+    question: 'footballCrests/sportingclubedebraga.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 357,
+    answers: [
+      {
+        value: 'sportinglisbona.png',
+      },
+    ],
+    question: 'footballCrests/sportinglisbona.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 358,
+    answers: [
+      {
+        value: 'sscbari.png',
+      },
+    ],
+    question: 'footballCrests/sscbari.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 359,
+    answers: [
+      {
+        value: 'stadereims.png',
+      },
+    ],
+    question: 'footballCrests/stadereims.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 360,
+    answers: [
+      {
+        value: 'staderennais.png',
+      },
+    ],
+    question: 'footballCrests/staderennais.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 361,
+    answers: [
+      {
+        value: 'stalmielec.png',
+      },
+    ],
+    question: 'footballCrests/stalmielec.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 362,
+    answers: [
+      {
+        value: 'stalrzeszow.png',
+      },
+    ],
+    question: 'footballCrests/stalrzeszow.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 363,
+    answers: [
+      {
+        value: 'standardliege.png',
+      },
+    ],
+    question: 'footballCrests/standardliege.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 364,
+    answers: [
+      {
+        value: 'stokecity.png',
+      },
+    ],
+    question: 'footballCrests/stokecity.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 365,
+    answers: [
+      {
+        value: 'stomil.png',
+      },
+    ],
+    question: 'footballCrests/stomil.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 366,
+    answers: [
+      {
+        value: 'swanseacity.png',
+      },
+    ],
+    question: 'footballCrests/swanseacity.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 367,
+    answers: [
+      {
+        value: 'swidontown.png',
+      },
+    ],
+    question: 'footballCrests/swidontown.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 368,
+    answers: [
+      {
+        value: 'switNowyDworMazowiecki.png',
+      },
+    ],
+    question: 'footballCrests/switNowyDworMazowiecki.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 369,
+    answers: [
+      {
+        value: 'szachtardonieck.png',
+      },
+    ],
+    question: 'footballCrests/szachtardonieck.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 370,
+    answers: [
+      {
+        value: 'szczakowiankaJaworzno.png',
+      },
+    ],
+    question: 'footballCrests/szczakowiankaJaworzno.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 371,
+    answers: [
+      {
+        value: 'talleresremediosdeescalada.png',
+      },
+    ],
+    question: 'footballCrests/talleresremediosdeescalada.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 372,
+    answers: [
+      {
+        value: 'teraktorsazitebriz.png',
+      },
+    ],
+    question: 'footballCrests/teraktorsazitebriz.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 373,
+    answers: [
+      {
+        value: 'terekgrozny.png',
+      },
+    ],
+    question: 'footballCrests/terekgrozny.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 374,
+    answers: [
+      {
+        value: 'termalica.png',
+      },
+    ],
+    question: 'footballCrests/termalica.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 375,
+    answers: [
+      {
+        value: 'tianjinquanjian.png',
+      },
+    ],
+    question: 'footballCrests/tianjinquanjian.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 376,
+    answers: [
+      {
+        value: 'tigresuanl.png',
+      },
+    ],
+    question: 'footballCrests/tigresuanl.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 377,
+    answers: [
+      {
+        value: 'torcy.png',
+      },
+    ],
+    question: 'footballCrests/torcy.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 378,
+    answers: [
+      {
+        value: 'torino.png',
+      },
+    ],
+    question: 'footballCrests/torino.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 379,
+    answers: [
+      {
+        value: 'tottenhamhotspur.png',
+      },
+    ],
+    question: 'footballCrests/tottenhamhotspur.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 380,
+    answers: [
+      {
+        value: 'toursfc.png',
+      },
+    ],
+    question: 'footballCrests/toursfc.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 381,
+    answers: [
+      {
+        value: 'trabzonspor.png',
+      },
+    ],
+    question: 'footballCrests/trabzonspor.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 382,
+    answers: [
+      {
+        value: 'trivalvalderas.png',
+      },
+    ],
+    question: 'footballCrests/trivalvalderas.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 383,
+    answers: [
+      {
+        value: 'tsv1860munchen.png',
+      },
+    ],
+    question: 'footballCrests/tsv1860munchen.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 384,
+    answers: [
+      {
+        value: 'ucsampdoria.png',
+      },
+    ],
+    question: 'footballCrests/ucsampdoria.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 385,
+    answers: [
+      {
+        value: 'udinesecalcio.png',
+      },
+    ],
+    question: 'footballCrests/udinesecalcio.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 386,
+    answers: [
+      {
+        value: 'udlogrones.png',
+      },
+    ],
+    question: 'footballCrests/udlogrones.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 387,
+    answers: [
+      {
+        value: 'unionberlin.png',
+      },
+    ],
+    question: 'footballCrests/unionberlin.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 388,
+    answers: [
+      {
+        value: 'usboulogne.png',
+      },
+    ],
+    question: 'footballCrests/usboulogne.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 389,
+    answers: [
+      {
+        value: 'valenciacf.png',
+      },
+    ],
+    question: 'footballCrests/valenciacf.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 390,
+    answers: [
+      {
+        value: 'valenciennesfc.png',
+      },
+    ],
+    question: 'footballCrests/valenciennesfc.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 391,
+    answers: [
+      {
+        value: 'venezia.png',
+      },
+    ],
+    question: 'footballCrests/venezia.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 392,
+    answers: [
+      {
+        value: 'vfLbochum.png',
+      },
+    ],
+    question: 'footballCrests/vfLbochum.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 393,
+    answers: [
+      {
+        value: 'vfbstuttgart.png',
+      },
+    ],
+    question: 'footballCrests/vfbstuttgart.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 394,
+    answers: [
+      {
+        value: 'villarrealcf.png',
+      },
+    ],
+    question: 'footballCrests/villarrealcf.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 395,
+    answers: [
+      {
+        value: 'visselkobe.png',
+      },
+    ],
+    question: 'footballCrests/visselkobe.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 396,
+    answers: [
+      {
+        value: 'vitoriaguimaraes.png',
+      },
+    ],
+    question: 'footballCrests/vitoriaguimaraes.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 397,
+    answers: [
+      {
+        value: 'volosnps.png',
+      },
+    ],
+    question: 'footballCrests/volosnps.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 398,
+    answers: [
+      {
+        value: 'vsskosice.png',
+      },
+    ],
+    question: 'footballCrests/vsskosice.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 399,
+    answers: [
+      {
+        value: 'wartapoznan.png',
+      },
+    ],
+    question: 'footballCrests/wartapoznan.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 400,
+    answers: [
+      {
+        value: 'watford.png',
+      },
+    ],
+    question: 'footballCrests/watford.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 401,
+    answers: [
+      {
+        value: 'werderbrema.png',
+      },
+    ],
+    question: 'footballCrests/werderbrema.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 402,
+    answers: [
+      {
+        value: 'westbromwichalbion.png',
+      },
+    ],
+    question: 'footballCrests/westbromwichalbion.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 403,
+    answers: [
+      {
+        value: 'westhamunited.png',
+      },
+    ],
+    question: 'footballCrests/westhamunited.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 404,
+    answers: [
+      {
+        value: 'widzewlodz.png',
+      },
+    ],
+    question: 'footballCrests/widzewlodz.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 405,
+    answers: [
+      {
+        value: 'wieczysta.png',
+      },
+    ],
+    question: 'footballCrests/wieczysta.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 406,
+    answers: [
+      {
+        value: 'wiganathletic.png',
+      },
+    ],
+    question: 'footballCrests/wiganathletic.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 407,
+    answers: [
+      {
+        value: 'wigrysuwalki.png',
+      },
+    ],
+    question: 'footballCrests/wigrysuwalki.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 408,
+    answers: [
+      {
+        value: 'wilkiwilcza.png',
+      },
+    ],
+    question: 'footballCrests/wilkiwilcza.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 409,
+    answers: [
+      {
+        value: 'wislakrakow.png',
+      },
+    ],
+    question: 'footballCrests/wislakrakow.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 410,
+    answers: [
+      {
+        value: 'wislaplock.png',
+      },
+    ],
+    question: 'footballCrests/wislaplock.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 411,
+    answers: [
+      {
+        value: 'wisłapulawy.png',
+      },
+    ],
+    question: 'footballCrests/wisłapulawy.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 412,
+    answers: [
+      {
+        value: 'wolfsburg.png',
+      },
+    ],
+    question: 'footballCrests/wolfsburg.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 413,
+    answers: [
+      {
+        value: 'wolverhampton.png',
+      },
+    ],
+    question: 'footballCrests/wolverhampton.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 414,
+    answers: [
+      {
+        value: 'zaglebielubin.png',
+      },
+    ],
+    question: 'footballCrests/zaglebielubin.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 415,
+    answers: [
+      {
+        value: 'zaglebiesosnowiec.png',
+      },
+    ],
+    question: 'footballCrests/zaglebiesosnowiec.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 416,
+    answers: [
+      {
+        value: 'zawiszabydgoszcz.png',
+      },
+    ],
+    question: 'footballCrests/zawiszabydgoszcz.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 417,
+    answers: [
+      {
+        value: 'zeleziarnepodbrezova.png',
+      },
+    ],
+    question: 'footballCrests/zeleziarnepodbrezova.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 418,
+    answers: [
+      {
+        value: 'zenitpetersburg.png',
+      },
+    ],
+    question: 'footballCrests/zenitpetersburg.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 419,
+    answers: [
+      {
+        value: 'zksstalstalowawola.png',
+      },
+    ],
+    question: 'footballCrests/zksstalstalowawola.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 420,
+    answers: [
+      {
+        value: 'zniczpruszkow.png',
+      },
+    ],
+    question: 'footballCrests/zniczpruszkow.png',
+    hints: [
+      {
+        id: '0',
+        label: 'Odsłoń pierwsze fragmenty logo',
+        content: '3',
+        penaltyPercent: 0,
+      },
+      {
+        id: '1',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '5',
+        penaltyPercent: 20,
+      },
+      {
+        id: '2',
+        label: 'Odsłoń kolejne fragmenty logo',
+        content: '10',
+        penaltyPercent: 20,
+      },
+    ],
+    revealedAnswers: [],
+  },
+  {
+    id: 421,
+    answers: [
+      {
+        value: 'zrinjskimostar.png',
       },
     ],
     question: 'footballCrests/zrinjskimostar.png',
     hints: [
       {
         id: '0',
-        label: 'Odsłoń pierwsze fragmenty herbu piłkarskiego',
+        label: 'Odsłoń pierwsze fragmenty logo',
         content: '3',
         penaltyPercent: 0,
       },
       {
         id: '1',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '5',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
       {
         id: '2',
-        label: 'Odsłoń kolejne fragmenty herbu piłkarskiego',
+        label: 'Odsłoń kolejne fragmenty logo',
         content: '10',
-        penaltyPercent: 30,
+        penaltyPercent: 20,
       },
     ],
     revealedAnswers: [],
