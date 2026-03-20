@@ -320,6 +320,10 @@ export class QuestionService {
       return this.mapOldFamiliadaToNew(FAMILIADA_RAW);
     }
 
+    if (type === 'country' && name === 'Jaki to kraj?') {
+      return this.mapCountriesToQuestions(DANE_PANSTW);
+    }
+
     return [];
   }
 
@@ -345,5 +349,60 @@ export class QuestionService {
       content: actor.profile_path ? getImageUrl(actor.profile_path) : 'assets/no-image.png',
       penaltyPercent: 0,
     }));
+  }
+
+  mapCountriesToQuestions(rawCountries: any[]): Question[] {
+    return rawCountries.map((c, index) => {
+      return {
+        id: index + 1,
+        question: 'Co to za kraj?',
+        answers: [
+          {
+            label: 'Kraj',
+            value: c.country,
+          },
+        ],
+        hints: [
+          {
+            id: '0',
+            label: 'Powierzchnia',
+            // Formatowanie: 9984670 -> 9 984 670 km²
+            content: `${c.area.toLocaleString('pl-PL').replace(/,/g, ' ')} km²`,
+            penaltyPercent: 0,
+          },
+          {
+            id: '1',
+            label: 'Populacja',
+            // Formatowanie: 41651653 -> 41 651 653
+            content: c.population.toLocaleString('pl-PL').replace(/,/g, ' '),
+            penaltyPercent: 0,
+          },
+          {
+            id: '2',
+            label: 'Granice',
+            // Łączenie tablicy w string: ['A', 'B'] -> "A, B" lub "Brak"
+            content:
+              c.borders && c.borders.length > 0
+                ? c.borders.join(', ')
+                : 'Brak (państwo wyspiarskie)',
+            penaltyPercent: 0,
+          },
+          {
+            id: '3',
+            label: 'Region',
+            content: c.region,
+            penaltyPercent: 0,
+          },
+          {
+            id: 'capital_hint',
+            label: 'Stolica',
+            content: c.capital,
+            penaltyPercent: 80,
+          },
+        ],
+        showAnswer: false,
+        revealedAnswers: [],
+      };
+    });
   }
 }

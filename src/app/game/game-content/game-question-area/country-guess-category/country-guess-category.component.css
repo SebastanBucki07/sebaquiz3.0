@@ -1,0 +1,193 @@
+.country-wrapper {
+  padding: 20px;
+  background: #0f172a; /* Bardzo ciemny granat */
+  border-radius: 20px;
+  color: #f8fafc;
+}
+
+.category-title {
+  text-align: center;
+  color: #fbbf24; /* Złoty/Żółty */
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: #1e293b; /* Ciemny szary/niebieski - tło kafelka */
+  border: 1px solid #334155;
+  padding: 15px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+.card-icon {
+  background: #334155;
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.card-info label {
+  display: block;
+  font-size: 0.7rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card-info p {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e2e8f0;
+}
+
+/* Sekcja przycisku */
+.capital-section {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/* --- Przycisk reveal Z PULSOWANIEM --- */
+.btn-reveal {
+  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
+  color: white;
+  border: none;
+  padding: 18px 36px;
+  border-radius: 50px;
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* DODANE PULSOWANIE: */
+  /* pulseGlow to nazwa animacji, 2s to czas trwania, infinite to powtarzanie */
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+.btn-reveal:hover {
+  transform: scale(1.08); /* Nieco mocniejsze powiększenie na hover */
+  background: linear-gradient(135deg, #ff5f5f 0%, #dc2626 100%);
+
+  /* Wyłączamy animację na hover, żeby gracz miał stabilny cel do kliknięcia */
+  animation-play-state: paused;
+}
+
+.btn-reveal:active {
+  transform: scale(0.98);
+}
+
+.lock-icon {
+  font-size: 1.4rem;
+}
+
+/* Kafelek odkrytej stolicy */
+.capital-revealed {
+  background: linear-gradient(135deg, #065f46 0%, #064e3b 100%);
+  padding: 25px 60px;
+  border-radius: 22px;
+  text-align: center;
+  border: 3px solid #10b981;
+  box-shadow: 0 0 40px rgba(16, 185, 129, 0.3);
+  animation: popIn 0.5s cubic-bezier(0.26, 1.36, 0.74, 1.05);
+}
+
+.revealed-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.revealed-header label {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #a7f3d0;
+  letter-spacing: 4px;
+}
+
+.capital-name {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin: 0;
+  color: #ffffff;
+  font-weight: 900;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mapowanie ikon przez CSS */
+.icon-area::before {
+  content: '📐';
+}
+.icon-people::before {
+  content: '👥';
+}
+.icon-borders::before {
+  content: '🗺️';
+}
+.icon-globe::before {
+  content: '🌍';
+}
+
+/* --- DEFINICJE ANIMACJI --- */
+
+/* Animacja pulsowania poświaty i cienia */
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.5);
+  }
+  50% {
+    /* W połowie animacji przycisk lekko rośnie i mocniej świeci */
+    transform: scale(1.03);
+    box-shadow:
+      0 10px 30px rgba(239, 68, 68, 0.8),
+      0 0 15px rgba(239, 68, 68, 0.4);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 8px 20px rgba(239, 68, 68, 0.5);
+  }
+}
+
+/* Animacja wejścia stolicy */
+@keyframes popIn {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

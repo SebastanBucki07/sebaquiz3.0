@@ -450,4 +450,11 @@ export const CATEGORY_LIST: Category[] = [
     basePoints: 3,
     hints: [],
   },
+  {
+    id: 35,
+    type: 'country',
+    name: 'Jaki to kraj?',
+    basePoints: 5,
+    hints: [],
+  },
 ];

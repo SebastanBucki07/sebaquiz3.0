@@ -1,0 +1,33 @@
+<div class="country-wrapper" *ngIf="question$ | async as q">
+  <h2 class="category-title">{{ q.question }}</h2>
+
+  <div class="stats-grid">
+    <!-- Stałe kafelki danych -->
+    <ng-container *ngFor="let hint of hints">
+      <div class="stat-card" *ngIf="hint.label !== 'Stolica'">
+        <div class="card-icon">
+          <span [ngClass]="getIconClass(hint.label)"></span>
+        </div>
+        <div class="card-info">
+          <label>{{ hint.label }}</label>
+          <p>{{ hint.content }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Sekcja Stolicy (Ostatnia deska ratunku) -->
+  <div class="capital-section" *ngFor="let hint of hints">
+    <div *ngIf="hint.label === 'Stolica'">
+      <button *ngIf="!openedHintIds.has(hint.id)" (click)="showCapital(hint)" class="btn-reveal">
+        <span class="icon-lock">🔒</span>
+        POKAŻ STOLICĘ (Kara: -90%)
+      </button>
+
+      <div *ngIf="openedHintIds.has(hint.id)" class="capital-revealed">
+        <label>STOLICA</label>
+        <p>{{ hint.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
