@@ -1,5 +1,5 @@
 import { Observable, Subscription, filter } from 'rxjs';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { MusicTipsComponent } from '../question/music-tips/music-tips.component';
 import {
   ChangeDetectorRef,

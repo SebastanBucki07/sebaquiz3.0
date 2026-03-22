@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Observable } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { CommonModule } from '@angular/common';

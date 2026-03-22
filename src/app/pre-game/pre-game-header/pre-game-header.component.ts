@@ -4,7 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardActions } from '@angular/material/card';
-import { GameService } from '../../shared/game.service';
+import { GameService } from '../../services/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

@@ -1,7 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CATEGORY_LIST } from '../../../../shared/models/category/categoryList';
 import { Category } from '../../../../shared/models/category/category.interface';
-import { Hint } from '../../../../shared/models/category/hint.interface';
 
 @Component({
   selector: 'app-question-area-header',
@@ -9,24 +8,15 @@ import { Hint } from '../../../../shared/models/category/hint.interface';
   imports: [],
   styleUrl: './question-area-header.component.css',
 })
-export class QuestionAreaHeaderComponent {
+export class QuestionAreaHeaderComponent implements OnInit {
   @Input() category!: Category;
-  @Input() usedHints: Hint[] = [];
-  @Input() points!: number;
+  @Input() points!: number; // To powinno być jedyne źródło wyświetlanych punktów
 
   ngOnInit() {
-    this.category = CATEGORY_LIST.find((cat) => cat.name === this.category.name)!;
-
-    if (this.category) {
-      this.points = this.category.basePoints;
-    } else {
-      this.points = 0;
+    // Pobieramy dane kategorii z listy, jeśli trzeba
+    const foundCategory = CATEGORY_LIST.find((cat) => cat.name === this.category.name);
+    if (foundCategory) {
+      this.category = foundCategory;
     }
-  }
-
-  get currentPoints(): number {
-    if (!this.category) return 0;
-    const totalPenalty = this.usedHints.reduce((sum, h) => sum + h.penaltyPercent, 0);
-    return Math.round(this.category.basePoints * Math.max(0, 1 - totalPenalty / 100));
   }
 }

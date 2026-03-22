@@ -1,11 +1,11 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject, takeUntil } from 'rxjs';
-import { GameStateService } from '../../../../shared/game-state.service';
-import { PointsService } from '../../../../shared/points-service.service';
-import { GameService } from '../../../../shared/game.service';
-import { QuestionService } from '../../../../shared/question-service.service';
-import { getClubInfo } from '../../../../shared/clubMapper';
+import { GameStateService } from '../../../../services/game-state.service';
+import { PointsService } from '../../../../services/points-service.service';
+import { GameService } from '../../../../services/game.service';
+import { QuestionService } from '../../../../services/question-service.service';
+import { getClubInfo } from '../../../../shared/mappers/clubMapper';
 import { calculateGamePoints } from '../../../../shared/utils/text-logic';
 import { TeamGridState } from '../../../../shared/models/teams/teamGridState.interface';
 

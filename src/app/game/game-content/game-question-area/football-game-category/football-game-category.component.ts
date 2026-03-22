@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { GameStateService } from '../../../../shared/game-state.service';
-import { GameService } from '../../../../shared/game.service';
-import { PointsService } from '../../../../shared/points-service.service';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { GameStateService } from '../../../../services/game-state.service';
+import { GameService } from '../../../../services/game.service';
+import { PointsService } from '../../../../services/points-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Observable } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { MatCardModule } from '@angular/material/card';

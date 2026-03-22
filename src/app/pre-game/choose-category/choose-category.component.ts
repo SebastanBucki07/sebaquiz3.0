@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MATERIAL_IMPORTS } from '../../shared/material';
-import { GameService } from '../../shared/game.service';
+import { GameService } from '../../services/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
@@ -23,8 +23,9 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.loadCategories();
 
-    // Listen for game reset
     this.gameService.reset$.pipe(takeUntil(this.destroy$)).subscribe(() => {
+      // KLUCZOWE: Czyścimy zapisane kategorie przy resecie
+      localStorage.removeItem('selectedCategories');
       this.selectedCategories = [];
       this.loadCategories();
     });

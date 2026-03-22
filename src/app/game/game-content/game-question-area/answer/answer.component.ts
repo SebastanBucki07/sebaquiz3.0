@@ -1,11 +1,11 @@
 import { Component, EventEmitter, OnInit, OnDestroy, Output } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Observable, Subscription } from 'rxjs';
 import { Question } from '../../../../shared/questions/question.interface';
 import { AnswerButtonsComponent } from './answer-buttons/answer-buttons.component';
 import { AnswerItem } from '../../../../shared/models/answers/answerItem.interface';
-import { getClubNameByFile } from '../../../../shared/clubMapper';
+import { getClubNameByFile } from '../../../../shared/mappers/clubMapper';
 
 @Component({
   selector: 'app-answer',

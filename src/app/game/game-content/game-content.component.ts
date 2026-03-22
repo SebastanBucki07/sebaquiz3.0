@@ -3,7 +3,7 @@ import { Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Category } from '../../shared/models/category/category.interface';
-import { QuestionService } from '../../shared/question-service.service';
+import { QuestionService } from '../../services/question-service.service';
 import { MATERIAL_IMPORTS } from '../../shared/material';
 
 @Component({

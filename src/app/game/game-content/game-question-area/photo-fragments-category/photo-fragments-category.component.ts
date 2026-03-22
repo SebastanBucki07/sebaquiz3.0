@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Observable, Subscription } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { TipsComponent } from '../question/tips/tips.component';
 import { Hint } from '../../../../shared/models/category/hint.interface';

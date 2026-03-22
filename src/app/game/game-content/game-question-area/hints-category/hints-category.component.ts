@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnDestroy, Output } from '@angular/core';
 import { TipsComponent } from '../question/tips/tips.component';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Subscription } from 'rxjs';
 import { Hint } from '../../../../shared/models/category/hint.interface';
 

@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { AsyncPipe, NgIf } from '@angular/common';
 import { TipsComponent } from '../question/tips/tips.component';

@@ -5,12 +5,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Observable } from 'rxjs';
-import { GameStateService } from '../../../../shared/game-state.service';
-import { PointsService } from '../../../../shared/points-service.service';
-import { GameService } from '../../../../shared/game.service';
+import { GameStateService } from '../../../../services/game-state.service';
+import { PointsService } from '../../../../services/points-service.service';
+import { GameService } from '../../../../services/game.service';
 import {
   areSimilar,
   calculateGamePoints,

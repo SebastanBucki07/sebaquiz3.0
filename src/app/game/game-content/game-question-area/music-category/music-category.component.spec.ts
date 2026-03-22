@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MusicCategoryComponent } from './music-category.component';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { of } from 'rxjs';
 
 describe('MusicCategoryComponent - YouTube Availability', () => {

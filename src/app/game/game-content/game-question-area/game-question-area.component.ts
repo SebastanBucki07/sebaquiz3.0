@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { QuestionAreaHeaderComponent } from './question-area-header/question-area-header.component';
-import { GameService } from '../../../shared/game.service';
+import { GameService } from '../../../services/game.service';
 import { CATEGORY_LIST } from '../../../shared/models/category/categoryList';
 import { Category } from '../../../shared/models/category/category.interface';
-import { QuestionService } from '../../../shared/question-service.service';
+import { QuestionService } from '../../../services/question-service.service';
 import { AnswerComponent } from './answer/answer.component';
-import { PointsService } from '../../../shared/points-service.service';
+import { PointsService } from '../../../services/points-service.service';
 import { Hint } from '../../../shared/models/category/hint.interface';
 
 @Component({
@@ -27,7 +27,7 @@ export class GameQuestionAreaComponent implements OnInit {
     private router: Router,
     private gameService: GameService,
     private questionService: QuestionService,
-    private pointsService: PointsService
+    protected pointsService: PointsService
   ) {}
 
   ngOnInit(): void {
@@ -66,7 +66,7 @@ export class GameQuestionAreaComponent implements OnInit {
 
   correct(): void {
     const points = this.currentPoints; // bierze pod uwagę hinty i dostępne punkty
-    this.pointsService.awardPointsToCurrentTeam(points); // przyznaje dokładnie tyle punktów
+    this.pointsService.awardPointsToCurrentTeam(); // przyznaje dokładnie tyle punktów
     this.usedHints = [];
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
@@ -107,7 +107,7 @@ export class GameQuestionAreaComponent implements OnInit {
 
   half(): void {
     const points = Math.ceil(this.currentPoints / 2);
-    this.pointsService.awardPointsToCurrentTeam(points);
+    this.pointsService.awardPointsToCurrentTeam();
     this.usedHints = [];
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
