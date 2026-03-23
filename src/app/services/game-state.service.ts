@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { Team } from './models/teams/team.interface';
+import { Team } from '../shared/models/teams/team.interface';
 
 @Injectable({
   providedIn: 'root',

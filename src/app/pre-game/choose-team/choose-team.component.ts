@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MATERIAL_IMPORTS } from '../../shared/material';
-import { GameService } from '../../shared/game.service';
+import { GameService } from '../../services/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';

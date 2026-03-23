@@ -4,7 +4,7 @@ import { Observable, Subscription } from 'rxjs';
 import { distinctUntilChanged, map } from 'rxjs/operators';
 
 // Dostosuj te ścieżki do swojego projektu
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Hint } from '../../../../shared/models/category/hint.interface';
 

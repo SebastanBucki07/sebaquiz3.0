@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { QuestionService } from '../../../../shared/question-service.service';
+import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
 import { Observable } from 'rxjs';
-import { GameService } from '../../../../shared/game.service';
-import { PointsService } from '../../../../shared/points-service.service';
+import { GameService } from '../../../../services/game.service';
+import { PointsService } from '../../../../services/points-service.service';
 import {
   areSimilar,
   calculateGamePoints,

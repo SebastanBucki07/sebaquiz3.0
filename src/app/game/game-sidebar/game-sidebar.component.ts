@@ -2,7 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { GameActualTeamComponent } from './game-actual-team/game-actual-team.component';
-import { GameService } from '../../shared/game.service';
+import { GameService } from '../../services/game.service';
 import { Subject, interval } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 

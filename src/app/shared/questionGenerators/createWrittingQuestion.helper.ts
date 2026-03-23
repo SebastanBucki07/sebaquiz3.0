@@ -1,4 +1,4 @@
-import { Question } from './questions/question.interface';
+import { Question } from '../questions/question.interface';
 
 interface RawItem {
   id: number;

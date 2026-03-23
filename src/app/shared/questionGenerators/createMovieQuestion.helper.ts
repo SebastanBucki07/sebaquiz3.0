@@ -1,4 +1,4 @@
-import { Question } from './questions/question.interface';
+import { Question } from '../questions/question.interface';
 type InputMovie = {
   id: number;
   title: string;

@@ -1,13 +1,15 @@
 <div *ngIf="question$ | async as currentQuestion" class="question-container">
+  <!-- Użycie pipe'a flagUrl - to usunie ostrzeżenie z poprzedniej wiadomości -->
   @if (currentQuestion.question | flagUrl; as flagUrl) {
     <img [src]="flagUrl" [alt]="currentQuestion.question" class="question-image" />
   } @else if (isImage(currentQuestion.question)) {
     <h2 class="question-title">Narodowość</h2>
-    <img [src]="currentQuestion.question" class="question-image" alt="currentQuestion.question" />
+    <img [src]="currentQuestion.question" class="question-image" [alt]="currentQuestion.question" />
   } @else {
     <p class="question-text">{{ currentQuestion.question }}</p>
   }
 
+  <!-- Wyświetlanie podpowiedzi (np. obsady filmu) -->
   <app-photo-tips
     [hints]="currentQuestion.hints ?? []"
     (hintUsed)="onHintUsed($event)"

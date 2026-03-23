@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { GameService } from '../shared/game.service';
-import { QuestionService } from '../shared/question-service.service';
+import { GameService } from '../services/game.service';
+import { QuestionService } from '../services/question-service.service';
 
 @Component({
   selector: 'app-header',

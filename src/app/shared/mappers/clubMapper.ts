@@ -1,4 +1,4 @@
-import clubDataRaw from '../../../public/footballCrests/mappedClubs.json';
+import clubDataRaw from '../../../../public/footballCrests/mappedClubs.json';
 
 const ASSETS_PATH = 'footballCrests/';
 

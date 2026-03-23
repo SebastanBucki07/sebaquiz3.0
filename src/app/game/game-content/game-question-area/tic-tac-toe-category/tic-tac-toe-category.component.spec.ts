@@ -1,7 +1,7 @@
 import {TicTacToeCategoryComponent} from './tic-tac-toe-category.component';
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 import {footballers} from '../../../../shared/footballers/footballers';
-import {getClubInfo} from '../../../../shared/clubMapper';
+import {getClubInfo} from '../../../../shared/mappers/clubMapper';
 
 describe('TicTacToeCategoryComponent', () => {
   let component: TicTacToeCategoryComponent;
