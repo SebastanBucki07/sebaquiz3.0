@@ -21,6 +21,7 @@ import {
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
 import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
 import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
+import {WritingScoreBoardComponent} from '../writing-category/writing-score-board/writing-score-board.component';
 
 @Component({
   selector: 'app-football-game-category',
@@ -33,6 +34,7 @@ import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWr
     MatInputModule,
     MatGridListModule,
     FlagUrlPipe,
+    WritingScoreBoardComponent,
   ],
   templateUrl: './football-game-category.component.html',
   styleUrls: ['./football-game-category.component.css'],

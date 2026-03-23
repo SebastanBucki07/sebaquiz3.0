@@ -1,0 +1,72 @@
+<mat-card class="players-card">
+  <div class="score-table">
+
+    <div class="row header-row">
+      <div class="cell header-cell">Drużyna</div>
+
+      @for (team of teams; track team.id) {
+        <div
+          class="cell team-cell"
+          [class.active-column]="team.id === activeTeamId"
+          [class.eliminated]="isEliminated(team)"
+        >
+          <div class="team-header-content">
+            @if (team.avatarUrl) {
+              <img [src]="team.avatarUrl" class="mini-avatar" [alt]="team.name">
+            }
+            <span class="team-name-text">{{ team.name }}</span>
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="row alt-row">
+      <div class="cell header-cell">Szanse</div>
+
+      @for (team of teams; track team.id) {
+        <div
+          class="cell team-cell"
+          [class.active-column]="team.id === activeTeamId"
+        >
+          <div class="chances-wrapper">
+            @for (c of getArray(maxChances - (team.mistakes || 0)); track $index) {
+              <span class="chance-dot"></span>
+            }
+            @for (c of getArray(team.mistakes || 0); track $index) {
+              <span class="lost-dot"></span>
+            }
+          </div>
+        </div>
+      }
+    </div>
+
+    <div class="row">
+      <div class="cell header-cell">Odgadnięte Odpowiedzi</div>
+
+      @for (team of teams; track team.id) {
+        <div
+          class="cell team-cell answers-count-cell"
+          [class.active-column]="team.id === activeTeamId"
+          [class.eliminated]="isEliminated(team)"
+        >
+          {{ team.correctAnswers || 0 }}
+        </div>
+      }
+    </div>
+
+    <div class="row alt-row">
+      <div class="cell header-cell">Punkty</div>
+
+      @for (team of teams; track team.id) {
+        <div
+          class="cell team-cell points-cell"
+          [class.active-column]="team.id === activeTeamId"
+          [class.eliminated]="isEliminated(team)"
+        >
+          {{ team.calculatedPoints || 0 }}
+        </div>
+      }
+    </div>
+
+  </div>
+</mat-card>

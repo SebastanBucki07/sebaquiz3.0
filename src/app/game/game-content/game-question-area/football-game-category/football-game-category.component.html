@@ -3,72 +3,11 @@
     <h2>{{ q.question }}</h2>
   </mat-card>
 
-  <mat-card class="players-card">
-    <div class="score-table">
-      <div class="row header-row">
-        <div class="cell header-cell">Drużyna</div>
-        @for (team of teams; track team.id) {
-          <div
-            class="cell team-cell"
-            [style.background-color]="team.color"
-            [class.eliminated]="team.mistakes >= MAX_CHANCES"
-            [class.active-column]="team.id === activeTeamId"
-          >
-            {{ team.name }}
-          </div>
-        }
-      </div>
-
-      <div class="row alt-row">
-        <div class="cell header-cell">Szanse</div>
-        @for (team of teams; track team.id) {
-          <div
-            class="cell team-cell"
-            [style.background-color]="team.color"
-            [class.eliminated]="team.mistakes >= MAX_CHANCES"
-            [class.active-column]="team.id === activeTeamId"
-          >
-            <div class="chances-wrapper">
-              @for (c of [].constructor(team.chancesLeft); track $index) {
-                <span class="chance-dot"></span>
-              }
-              @for (c of [].constructor(MAX_CHANCES - team.chancesLeft); track $index) {
-                <span class="lost-dot"></span>
-              }
-            </div>
-          </div>
-        }
-      </div>
-
-      <div class="row alt-row">
-        <div class="cell header-cell">Odgadnięte odpowiedzi</div>
-        @for (team of teams; track team.id) {
-          <div
-            class="cell team-cell answers-count-cell"
-            [class.active-column]="team.id === activeTeamId"
-            [style.background-color]="team.color"
-            [class.eliminated]="team.mistakes >= MAX_CHANCES"
-          >
-            {{ team.correctAnswers }}
-          </div>
-        }
-      </div>
-
-      <div class="row">
-        <div class="cell header-cell">Punkty</div>
-        @for (team of teams; track team.id) {
-          <div
-            class="cell team-cell points-cell"
-            [style.background-color]="team.color"
-            [class.active-column]="team.id === activeTeamId"
-            [class.eliminated]="team.mistakes >= MAX_CHANCES"
-          >
-            {{ team.calculatedPoints }}
-          </div>
-        }
-      </div>
-    </div>
-  </mat-card>
+  <app-writing-score-board
+    [teams]="teams"
+    [activeTeamId]="activeTeamId"
+    [maxChances]="MAX_CHANCES">
+  </app-writing-score-board>
 
   <mat-card class="control-card" *ngIf="!gameFinished && currentTeam">
     <h3>Tura: {{ currentTeam.name }}</h3>
@@ -106,24 +45,19 @@
       <h4>Rezerwowi</h4>
       @for (p of firstSubstitutes; track p.surname) {
         <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container
-            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-          ></ng-container>
+          <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
         </div>
       }
     </div>
 
     <div class="pitch">
       <div class="midline"></div>
-
       <div class="team team-top">
         @for (row of firstRows; track $index) {
           <div class="row">
             @for (p of row; track p.surname) {
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container
-                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-                ></ng-container>
+                <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
               </div>
             }
           </div>
@@ -135,9 +69,7 @@
           <div class="row">
             @for (p of row; track p.surname) {
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container
-                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-                ></ng-container>
+                <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
               </div>
             }
           </div>
@@ -149,9 +81,7 @@
       <h4>Rezerwowi</h4>
       @for (p of secondSubstitutes; track p.surname) {
         <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container
-            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-          ></ng-container>
+          <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
         </div>
       }
     </div>

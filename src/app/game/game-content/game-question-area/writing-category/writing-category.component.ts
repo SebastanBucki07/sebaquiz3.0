@@ -20,6 +20,7 @@ import { generateTeamColors } from '../../../../shared/utils/color-helper';
 import { Team } from '../../../../shared/models/teams/team.interface';
 import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
 import {MATERIAL_IMPORTS} from '../../../../shared/material';
+import {WritingScoreBoardComponent} from './writing-score-board/writing-score-board.component';
 
 @Component({
   selector: 'app-writing-category',
@@ -32,6 +33,7 @@ import {MATERIAL_IMPORTS} from '../../../../shared/material';
     MatInputModule,
     MatGridListModule,
     MATERIAL_IMPORTS,
+    WritingScoreBoardComponent,
   ],
   templateUrl: './writing-category.component.html',
   styleUrls: ['./writing-category.component.css'],
