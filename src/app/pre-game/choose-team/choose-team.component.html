@@ -1,82 +1,72 @@
 <div class="team-container">
   <div class="header">
-    <h2>Lista drużyn</h2>
+    <h2>Zarządzanie Drużynami</h2>
   </div>
 
   <mat-card class="add-team-card">
     <mat-card-content class="add-team-content">
       <mat-form-field appearance="outline" class="full-width">
-        <mat-label>Nazwa drużyny</mat-label>
+        <mat-label>Nazwa nowej drużyny</mat-label>
         <input
           matInput
           [(ngModel)]="newTeamName"
           #teamInput="ngModel"
           (keyup.enter)="teamInput.valid && addTeam()"
-          placeholder="Min. 4 znaki"
+          placeholder="Np. Smocze Kły"
           required
           minlength="4"
         />
-        <mat-hint align="start" *ngIf="!teamInput.invalid">Wpisz co najmniej 3 znaki</mat-hint>
-        <mat-error *ngIf="teamInput.hasError('minlength')">
-          Nazwa jest za krótka (wymagane
-          <strong>4</strong>
-          znaki).
-        </mat-error>
-        <mat-error *ngIf="teamInput.hasError('required')">Nazwa drużyny jest wymagana.</mat-error>
+        <mat-error *ngIf="teamInput.hasError('minlength')">Minimum 4 znaki!</mat-error>
       </mat-form-field>
 
       <button mat-flat-button color="primary" (click)="addTeam()" [disabled]="teamInput.invalid">
-        <mat-icon>add</mat-icon>
-        Dodaj drużynę
+        <mat-icon>group_add</mat-icon>
+        Dodaj
       </button>
     </mat-card-content>
   </mat-card>
 
-  <mat-card *ngIf="teams.length === 0" class="empty-card">
-    <mat-card-content class="empty-content">Brak dodanych drużyn</mat-card-content>
-  </mat-card>
-
   <mat-card *ngIf="teams.length > 0" class="table-card">
-    <mat-card-header class="table-header">
-      <mat-card-title>Tabela wyników</mat-card-title>
-    </mat-card-header>
     <mat-card-content>
       <table mat-table [dataSource]="teams" class="teams-table">
+
+        <ng-container matColumnDef="avatar">
+          <th mat-header-cell *matHeaderCellDef> Bohater </th>
+          <td mat-cell *matCellDef="let team">
+            <div class="avatar-container">
+              <img [src]="team.avatarUrl" [alt]="team.name" class="team-avatar">
+            </div>
+          </td>
+        </ng-container>
+
         <ng-container matColumnDef="id">
-          <th mat-header-cell *matHeaderCellDef>#</th>
+          <th mat-header-cell *matHeaderCellDef> # </th>
           <td mat-cell *matCellDef="let team">{{ team.id }}</td>
         </ng-container>
 
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef>Drużyna</th>
-          <td mat-cell *matCellDef="let team">{{ team.name }}</td>
+          <th mat-header-cell *matHeaderCellDef> Drużyna </th>
+          <td mat-cell *matCellDef="let team"><strong>{{ team.name }}</strong></td>
         </ng-container>
 
         <ng-container matColumnDef="points">
-          <th mat-header-cell *matHeaderCellDef>Punkty</th>
-          <td mat-cell *matCellDef="let team">{{ team.points }}</td>
+          <th mat-header-cell *matHeaderCellDef> Punkty </th>
+          <td mat-cell *matCellDef="let team">
+            <span class="points-badge">{{ team.points }}</span>
+          </td>
         </ng-container>
 
         <ng-container matColumnDef="actions">
-          <th mat-header-cell *matHeaderCellDef>Akcje</th>
+          <th mat-header-cell *matHeaderCellDef> Akcje </th>
           <td mat-cell *matCellDef="let team">
-            <button
-              mat-icon-button
-              color="warn"
-              (click)="removeTeam(team.id)"
-              matTooltip="Usuń drużynę"
-            >
-              <mat-icon>delete</mat-icon>
+            <button mat-icon-button color="warn" (click)="removeTeam(team.id)">
+              <mat-icon>delete_outline</mat-icon>
             </button>
           </td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr
-          mat-row
-          *matRowDef="let row; columns: displayedColumns; let i = index"
-          [ngClass]="{ 'striped-row-odd': i % 2 === 0, 'striped-row-even': i % 2 === 1 }"
-        ></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
       </table>
     </mat-card-content>
   </mat-card>

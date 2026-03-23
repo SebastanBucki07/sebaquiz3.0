@@ -7,19 +7,19 @@ import { MatInputModule } from '@angular/material/input';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { QuestionService } from '../../../../services/question-service.service';
 import { Question } from '../../../../shared/questions/question.interface';
-import { Observable } from 'rxjs';
+import {Observable, take} from 'rxjs';
 import { GameStateService } from '../../../../services/game-state.service';
 import { PointsService } from '../../../../services/points-service.service';
 import { GameService } from '../../../../services/game.service';
 import {
   areSimilar,
-  calculateGamePoints,
   normalizeText,
 } from '../../../../shared/utils/text-logic';
 import { playSound } from '../../../../shared/utils/audio-helper';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
 import { Team } from '../../../../shared/models/teams/team.interface';
 import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
+import {MATERIAL_IMPORTS} from '../../../../shared/material';
 
 @Component({
   selector: 'app-writing-category',
@@ -31,6 +31,7 @@ import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWr
     MatButtonModule,
     MatInputModule,
     MatGridListModule,
+    MATERIAL_IMPORTS,
   ],
   templateUrl: './writing-category.component.html',
   styleUrls: ['./writing-category.component.css'],
@@ -62,9 +63,8 @@ export class WritingCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
 
-    this.gameStateService.teams$.subscribe((teams) => {
+    this.gameStateService.teams$.pipe(take(1)).subscribe((teams) => {
       const colors = generateTeamColors(teams.length);
-
       this.teams = teams.map((team, index) => ({
         ...team,
         mistakes: 0,
@@ -73,7 +73,6 @@ export class WritingCategoryComponent implements OnInit {
         calculatedPoints: 0,
         color: colors[index],
       }));
-
       this.currentTeamIndex = 0;
     });
 
@@ -116,50 +115,54 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   submitAnswer(): void {
+    // Dodaj sprawdzenie, czy odpowiedź nie została już odkryta przez kogoś innego wcześniej
     if (!this.question || !this.inputValue.trim() || this.gameFinished || !this.currentTeam) return;
-    if (!this.question.answers) return;
 
     const normalizedInput = normalizeText(this.inputValue);
 
-    // 1️⃣ Najpierw sprawdzamy dokładne dopasowanie
+    // Szukamy indeksu odpowiedzi
     let answerIndex = this.question.answers.findIndex(
       (a) => normalizeText(a.value) === normalizedInput
     );
 
-    // 2️⃣ Jeśli nie znaleziono dokładnego — dopiero wtedy fuzzy
     if (answerIndex === -1) {
       answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
     }
 
+    // Sprawdzamy czy odpowiedź istnieje i czy NIE została jeszcze odkryta
     if (answerIndex >= 0) {
-      const alreadyRevealed = this.question.revealedAnswers?.includes(answerIndex) ?? false;
+      const alreadyRevealed = this.isRevealed(answerIndex);
 
       if (!alreadyRevealed) {
+        // 1. Odkrywamy w serwisie
         this.questionService.revealAnswer(answerIndex);
 
-        // 🔥 zapamiętujemy kto odgadł
+        // 2. Przypisujemy właściciela (UŻYWAMY ID DRUŻYNY)
         this.answerOwners[answerIndex] = this.currentTeam.id;
 
-        this.lastCorrectTeam = this.currentTeam;
+        // 3. Dodajemy punkty i statystyki do AKTUALNEJ DRUŻYNY
         this.currentTeam.correctAnswers++;
 
-        // 🔹 OBLICZENIE PUNKTÓW DYNAMICZNIE (always ceil)
-        const totalAnswers = this.question?.answers.length ?? 1;
-        this.currentTeam.calculatedPoints = calculateGamePoints(
-          this.currentTeam.correctAnswers,
-          totalAnswers,
-          this.MAX_POINTS
+        const totalAnswers = this.question.answers.length || 1;
+        this.currentTeam.calculatedPoints = Math.ceil(
+          (this.currentTeam.correctAnswers / totalAnswers) * this.MAX_POINTS
         );
 
         playSound('sounds/1z10dobrzee.mp3');
 
-        this.remainingAnswers--;
-        this.checkIfAllRevealed();
         this.inputValue = '';
+
+        // 4. Sprawdzamy czy to koniec pytania, jeśli nie - następny gracz
+        if (this.getRemaining() === 0) {
+          this.finishGame();
+        } else {
+          this.nextTeam();
+        }
         return;
       }
     }
 
+    // Jeśli tu dotarliśmy, to znaczy że odpowiedź była błędna lub już odkryta
     this.handleMistake();
     this.inputValue = '';
   }
@@ -194,7 +197,9 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   getRemaining(): number {
-    return (this.question?.answers?.length ?? 0) - (this.question?.revealedAnswers?.length ?? 0);
+    const revealedCount = this.question?.revealedAnswers?.length ?? 0;
+    const totalCount = this.question?.answers?.length ?? 0;
+    return totalCount - revealedCount;
   }
 
   nextTeam(): void {

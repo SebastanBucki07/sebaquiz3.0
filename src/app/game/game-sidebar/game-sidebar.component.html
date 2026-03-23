@@ -1,20 +1,35 @@
 <div class="sidebar-container">
-  <app-game-actual-team></app-game-actual-team>
-  <h2>Punktacja</h2>
-  <table mat-table [dataSource]="teams" class="teams-table">
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>Drużyna</th>
-      <td mat-cell *matCellDef="let team">{{ team.name }}</td>
-    </ng-container>
+  <h2 class="ranking-title">Ranking Drużyn</h2>
 
-    <!-- Points Column -->
-    <ng-container matColumnDef="points">
-      <th mat-header-cell *matHeaderCellDef>Punkty</th>
-      <td mat-cell *matCellDef="let team">{{ team.points }}</td>
-    </ng-container>
+  <div class="teams-ranking-grid" *ngIf="currentTeamName$ | async as activeName; else loading">
+    <div *ngFor="let team of sortedTeams; let i = index"
+         class="team-leaderboard-card"
+         [class.is-active]="activeName === team.name"> <div class="active-turn-indicator" *ngIf="activeName === team.name">
+      <mat-icon>play_arrow</mat-icon>
+      TWOJA TURA
+    </div>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-  </table>
+      <div class="rank-badge" [ngClass]="'rank-' + (i + 1)">
+        {{ i + 1 }}
+      </div>
+
+      <div class="avatar-section">
+        <img [src]="team.avatarUrl" [alt]="team.name" class="large-team-avatar">
+      </div>
+
+      <div class="team-details">
+        <span class="team-name">{{ team.name }}</span>
+        <div class="team-points-row">
+          <span class="points-label">PUNKTY</span>
+          <span class="points-value">{{ team.points }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #loading>
+    <div class="no-teams-message">
+      Oczekiwanie na start gry...
+    </div>
+  </ng-template>
 </div>
