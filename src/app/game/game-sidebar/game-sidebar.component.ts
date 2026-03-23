@@ -1,20 +1,16 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
-import { GameActualTeamComponent } from './game-actual-team/game-actual-team.component';
 import { GameService } from '../../services/game.service';
-import { Subject, interval } from 'rxjs';
+import {Subject, interval, Observable} from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import {Team} from '../../shared/models/teams/team.interface';
+import {MATERIAL_IMPORTS} from '../../shared/material';
 
-interface Team {
-  id: number;
-  name: string;
-  points: number;
-}
 
 @Component({
   selector: 'app-game-sidebar',
-  imports: [CommonModule, MatTableModule, GameActualTeamComponent],
+  imports: [CommonModule, MatTableModule,MATERIAL_IMPORTS],
   templateUrl: './game-sidebar.component.html',
   styleUrl: './game-sidebar.component.css',
 })
@@ -53,5 +49,13 @@ export class GameSidebarComponent implements OnInit, OnDestroy {
       // Sort descending by points
       this.teams = teams.sort((a, b) => b.points - a.points);
     }
+  }
+
+  get currentTeamName$(): Observable<string | null> {
+    return this.gameService.currentTeam$;
+  }
+
+  get sortedTeams(): Team[] {
+    return [...this.teams].sort((a, b) => b.points - a.points);
   }
 }
