@@ -1,0 +1,89 @@
+/* SEKCE LICZNIKA */
+.counter-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.counter-badge {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  padding: 12px 28px;
+  border-radius: 50px;
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.3);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.counter-number {
+  background: white;
+  color: #1976d2;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  font-weight: 800;
+  min-width: 30px;
+  text-align: center;
+}
+
+/* SEKCE WYNIKU (FINAŁ) */
+.result-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.winner-title {
+  color: #fbc02d;
+  font-size: 2.2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.winner-avatar-wrapper {
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.winner-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #fbc02d;
+  object-fit: contain;
+  background: #f9f9f9;
+  padding: 10px;
+}
+
+.winner-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 10px 0;
+}
+
+.winner-score h3 {
+  font-size: 1.5rem;
+  color: #666;
+
+  span {
+    color: #1976d2;
+    font-weight: 800;
+  }
+}
+
+.no-winner {
+  padding: 20px;
+  color: #999;
+  font-style: italic;
+}

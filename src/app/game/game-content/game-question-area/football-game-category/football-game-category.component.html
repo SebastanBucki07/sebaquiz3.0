@@ -6,58 +6,44 @@
   <app-writing-score-board
     [teams]="teams"
     [activeTeamId]="activeTeamId"
-    [maxChances]="MAX_CHANCES">
-  </app-writing-score-board>
+    [maxChances]="MAX_CHANCES"
+  ></app-writing-score-board>
 
-  <mat-card class="control-card" *ngIf="!gameFinished && currentTeam">
-    <h3>Tura: {{ currentTeam.name }}</h3>
-    <mat-form-field appearance="outline" class="full-width">
-      <input
-        matInput
-        placeholder="Wpisz odpowiedź"
-        [(ngModel)]="inputValue"
-        (keyup.enter)="submitAnswer()"
-      />
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="submitAnswer()">Zatwierdź</button>
-  </mat-card>
+  <app-game-status
+    [gameFinished]="gameFinished"
+    [winner]="winner"
+    [remainingAnswers]="remainingAnswers"
+  ></app-game-status>
 
-  <mat-card class="result-card" *ngIf="gameFinished">
-    @if (winner) {
-      <div class="winner-container">
-        <h2 class="winner-name">🏆 {{ winner.name }} wygrywa!</h2>
-        <h3>
-          Zdobyte punkty:
-          {{
-            winner.correctAnswers === getAllFootballersCount()
-              ? 10
-              : Math.ceil((winner.correctAnswers / getAllFootballersCount()) * 10)
-          }}
-        </h3>
-      </div>
-    } @else {
-      <p>Brak zwycięzcy</p>
-    }
-  </mat-card>
+  <app-writing-controls
+    *ngIf="!gameFinished && currentTeam"
+    [currentTeam]="currentTeam"
+    (answerSubmitted)="submitAnswer($event)"
+  ></app-writing-controls>
 
   <div class="pitch-wrapper">
     <div class="substitutes-top">
       <h4>Rezerwowi</h4>
       @for (p of firstSubstitutes; track p.surname) {
         <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
+          <ng-container
+            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+          ></ng-container>
         </div>
       }
     </div>
 
     <div class="pitch">
       <div class="midline"></div>
+
       <div class="team team-top">
         @for (row of firstRows; track $index) {
           <div class="row">
             @for (p of row; track p.surname) {
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
+                <ng-container
+                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+                ></ng-container>
               </div>
             }
           </div>
@@ -69,7 +55,9 @@
           <div class="row">
             @for (p of row; track p.surname) {
               <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
+                <ng-container
+                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+                ></ng-container>
               </div>
             }
           </div>
@@ -81,7 +69,9 @@
       <h4>Rezerwowi</h4>
       @for (p of secondSubstitutes; track p.surname) {
         <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"></ng-container>
+          <ng-container
+            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+          ></ng-container>
         </div>
       }
     </div>

@@ -1,4 +1,4 @@
-/* ======= OGÓLNY UKŁAD I KARTY ======= */
+/* ======= UKŁAD OGÓLNY ======= */
 .pitch-wrapper {
   display: flex;
   justify-content: center;
@@ -7,24 +7,9 @@
   width: 100%;
   padding: 1rem;
   box-sizing: border-box;
-  background: white;
 }
 
-.question-card h2,
-.result-card h2,
-.result-card h3.winner-name,
-.result-card p {
-  text-align: center;
-  margin: 0.6em 0;
-}
-
-.result-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
-}
+/* Uwaga: style .result-card i .counter-badge zostały przeniesione do GameStatusComponent */
 
 /* ======= BOISKO ======= */
 .pitch {
@@ -66,8 +51,9 @@
   gap: 0.5rem;
 }
 
-/* ======= ZAWODNICY NA BOISKU ======= */
-.player, .substitute {
+/* ======= ZAWODNICY I REZERWOWI ======= */
+.player,
+.substitute {
   width: 100px;
   height: 60px;
   border-radius: 6px;
@@ -78,7 +64,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 15px;
+  margin: 10px;
 }
 
 .player img {
@@ -103,69 +89,33 @@
   padding: 6px;
   z-index: 5;
   background: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
 }
 
 .guessed-by {
-  margin-top: 6px;
-  font-size: 11px;
+  margin-top: 4px;
+  font-size: 10px;
   padding: 2px 8px;
   border-radius: 12px;
   background: #1976d2;
   color: white;
-  font-weight: 600;
 }
 
 .player-mask {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 4;
 }
 
-/* ======= REZERWOWI ======= */
-.substitutes-top, .substitutes-bottom {
+.substitutes-top,
+.substitutes-bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
 }
 
-/* ======= LICZNIK I INPUT ======= */
-.counter-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.counter-badge {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: linear-gradient(135deg, #42a5f5, #1976d2);
-  padding: 14px 28px;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-weight: 600;
-}
-
-.counter-number {
-  background: white;
-  color: #1976d2;
-  padding: 8px 18px;
-  border-radius: 24px;
-  font-size: 22px;
-  font-weight: bold;
-}
-
-.control-card {
-  margin-bottom: 20px;
-  padding: 20px;
-}
-
-/* ======= KAFELKI ODPOWIEDZI (DLA WIDOKU LISTY) ======= */
+/* ======= KAFELKI ODPOWIEDZI (DLA LISTY) ======= */
 .answers-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -179,8 +129,12 @@
 }
 
 @keyframes flashRed {
-  0% { background: rgba(255, 0, 0, 0.3); }
-  100% { background: transparent; }
+  0% {
+    background: rgba(255, 0, 0, 0.2);
+  }
+  100% {
+    background: transparent;
+  }
 }
 
 .answer-box {
@@ -196,9 +150,12 @@
   transform-style: preserve-3d;
 }
 
-.flip-card-inner.flipped { transform: rotateY(180deg); }
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -208,6 +165,7 @@
   align-items: center;
   justify-content: center;
   border: 3px solid #1976d2;
+  box-sizing: border-box;
 }
 
 .flip-card-back {
@@ -215,9 +173,18 @@
   color: white;
   transform: rotateY(180deg);
   flex-direction: column;
+  text-align: center;
+  padding: 8px;
 }
 
 .flip-card-back.unanswered {
   background-color: #ffebee !important;
   color: #c62828 !important;
+  border-color: #c62828;
+}
+
+.answer-owner {
+  font-size: 12px;
+  margin-top: 4px;
+  opacity: 0.9;
 }

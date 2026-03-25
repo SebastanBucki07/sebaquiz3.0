@@ -7,7 +7,7 @@ import { MatCardModule } from '@angular/material/card';
   standalone: true,
   imports: [CommonModule, MatCardModule],
   templateUrl: './writing-score-board.component.html',
-  styleUrls: ['./writing-score-board.component.scss']
+  styleUrls: ['./writing-score-board.component.scss'],
 })
 export class WritingScoreBoardComponent {
   // Dane wejściowe z komponentu nadrzędnego

@@ -2,19 +2,22 @@
   <h2 class="ranking-title">Ranking Drużyn</h2>
 
   <div class="teams-ranking-grid" *ngIf="currentTeamName$ | async as activeName; else loading">
-    <div *ngFor="let team of sortedTeams; let i = index"
-         class="team-leaderboard-card"
-         [class.is-active]="activeName === team.name"> <div class="active-turn-indicator" *ngIf="activeName === team.name">
-      <mat-icon>play_arrow</mat-icon>
-      TWOJA TURA
-    </div>
+    <div
+      *ngFor="let team of sortedTeams; let i = index"
+      class="team-leaderboard-card"
+      [class.is-active]="activeName === team.name"
+    >
+      <div class="active-turn-indicator" *ngIf="activeName === team.name">
+        <mat-icon>play_arrow</mat-icon>
+        TWOJA TURA
+      </div>
 
       <div class="rank-badge" [ngClass]="'rank-' + (i + 1)">
         {{ i + 1 }}
       </div>
 
       <div class="avatar-section">
-        <img [src]="team.avatarUrl" [alt]="team.name" class="large-team-avatar">
+        <img [src]="team.avatarUrl" [alt]="team.name" class="large-team-avatar" />
       </div>
 
       <div class="team-details">
@@ -28,8 +31,6 @@
   </div>
 
   <ng-template #loading>
-    <div class="no-teams-message">
-      Oczekiwanie na start gry...
-    </div>
+    <div class="no-teams-message">Oczekiwanie na start gry...</div>
   </ng-template>
 </div>

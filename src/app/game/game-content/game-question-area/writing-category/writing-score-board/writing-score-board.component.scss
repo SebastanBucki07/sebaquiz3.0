@@ -42,8 +42,12 @@
   transition: 0.25s ease;
 }
 
-.row:last-child .cell { border-bottom: none; }
-.cell:last-child { border-right: none; }
+.row:last-child .cell {
+  border-bottom: none;
+}
+.cell:last-child {
+  border-right: none;
+}
 
 .header-cell {
   flex: 0 0 170px;
@@ -90,7 +94,10 @@
 .active-column::before {
   content: '';
   position: absolute;
-  top: -3px; left: -3px; right: -3px; bottom: -3px;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
   border-radius: 14px;
   padding: 2px;
   background: linear-gradient(135deg, #42a5f5, #1976d2);
@@ -99,8 +106,14 @@
   opacity: 0.8;
 }
 
-.points-cell { font-size: 30px; font-weight: 800; }
-.answers-count-cell { font-size: 24px; font-weight: 700; }
+.points-cell {
+  font-size: 30px;
+  font-weight: 800;
+}
+.answers-count-cell {
+  font-size: 24px;
+  font-weight: 700;
+}
 
 .eliminated {
   opacity: 0.4;
@@ -116,7 +129,8 @@
   gap: 10px;
 }
 
-.chance-dot, .lost-dot {
+.chance-dot,
+.lost-dot {
   width: 18px;
   height: 18px;
   border-radius: 50%;

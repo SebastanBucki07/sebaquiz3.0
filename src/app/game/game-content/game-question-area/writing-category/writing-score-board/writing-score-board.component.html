@@ -1,6 +1,5 @@
 <mat-card class="players-card">
   <div class="score-table">
-
     <div class="row header-row">
       <div class="cell header-cell">Drużyna</div>
 
@@ -12,7 +11,7 @@
         >
           <div class="team-header-content">
             @if (team.avatarUrl) {
-              <img [src]="team.avatarUrl" class="mini-avatar" [alt]="team.name">
+              <img [src]="team.avatarUrl" class="mini-avatar" [alt]="team.name" />
             }
             <span class="team-name-text">{{ team.name }}</span>
           </div>
@@ -24,10 +23,7 @@
       <div class="cell header-cell">Szanse</div>
 
       @for (team of teams; track team.id) {
-        <div
-          class="cell team-cell"
-          [class.active-column]="team.id === activeTeamId"
-        >
+        <div class="cell team-cell" [class.active-column]="team.id === activeTeamId">
           <div class="chances-wrapper">
             @for (c of getArray(maxChances - (team.mistakes || 0)); track $index) {
               <span class="chance-dot"></span>
@@ -67,6 +63,5 @@
         </div>
       }
     </div>
-
   </div>
 </mat-card>

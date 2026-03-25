@@ -5,53 +5,21 @@
 
   <app-writing-score-board
     [teams]="teams"
-    [activeTeamId]="activeTeamId"
-    [maxChances]="MAX_CHANCES">
-  </app-writing-score-board>
+    [activeTeamId]="currentTeam?.id ?? null"
+    [maxChances]="MAX_CHANCES"
+  ></app-writing-score-board>
 
-  <div class="counter-wrapper" *ngIf="!gameFinished">
-    <div class="counter-badge">
-      <span class="counter-label">Pozostało</span>
-      <span class="counter-number">{{ getRemaining() }}</span>
-    </div>
-  </div>
+  <app-game-status
+    [gameFinished]="gameFinished"
+    [winner]="winner"
+    [remainingAnswers]="getRemaining()"
+  ></app-game-status>
 
-  <ng-container *ngIf="!gameFinished; else gameEnd">
-
-    <mat-card class="control-card" *ngIf="currentTeam">
-      <div class="turn-info">
-        <img [src]="currentTeam.avatarUrl" class="current-turn-avatar pulse" alt="current">
-        <h3 class="turn-team-name">Tura: {{ currentTeam.name }}</h3>
-      </div>
-
-      <mat-form-field appearance="outline" class="full-width">
-        <input
-          matInput
-          placeholder="Wpisz odpowiedź"
-          [(ngModel)]="inputValue"
-          (keyup.enter)="submitAnswer()"
-          autocomplete="off"
-        />
-      </mat-form-field>
-
-      <button mat-raised-button color="primary" (click)="submitAnswer()">Zatwierdź</button>
-    </mat-card>
-  </ng-container>
-
-  <ng-template #gameEnd>
-    <mat-card class="result-card">
-      <div *ngIf="winner; else noWinner" class="winner-container">
-        <h2 class="winner-title">🏆 KONIEC GRY 🏆</h2>
-        <img [src]="winner.avatarUrl" class="winner-avatar" alt="winner">
-        <h2 class="winner-name">{{ winner.name }} wygrywa!</h2>
-        <h3>Zdobyte punkty: {{ winner.calculatedPoints }}</h3>
-      </div>
-
-      <ng-template #noWinner>
-        <p>Brak zwycięzcy</p>
-      </ng-template>
-    </mat-card>
-  </ng-template>
+  <app-writing-controls
+    *ngIf="!gameFinished && currentTeam"
+    [currentTeam]="currentTeam"
+    (answerSubmitted)="submitAnswer($event)"
+  ></app-writing-controls>
 
   <div class="answers-wrapper" [class.flash]="wrongFlash">
     <div class="answer-box" *ngFor="let answer of q.answers; let i = index">

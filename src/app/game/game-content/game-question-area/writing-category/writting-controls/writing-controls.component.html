@@ -1,0 +1,29 @@
+<mat-card class="control-card" *ngIf="currentTeam">
+  <div class="turn-info">
+    <img [src]="currentTeam.avatarUrl" class="current-turn-avatar pulse" [alt]="currentTeam.name" />
+    <h3 class="turn-team-name">Tura: {{ currentTeam.name }}</h3>
+  </div>
+
+  <div class="input-section">
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Twoja odpowiedź</mat-label>
+      <input
+        matInput
+        placeholder="Wpisz odpowiedź..."
+        [(ngModel)]="inputValue"
+        (keyup.enter)="submit()"
+        autocomplete="off"
+      />
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      color="primary"
+      class="submit-btn"
+      (click)="submit()"
+      [disabled]="!inputValue.trim()"
+    >
+      Zatwierdź
+    </button>
+  </div>
+</mat-card>
