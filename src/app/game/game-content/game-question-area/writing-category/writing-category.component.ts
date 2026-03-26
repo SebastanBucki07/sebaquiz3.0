@@ -113,7 +113,7 @@ export class WritingCategoryComponent implements OnInit {
     team.correctAnswers++;
 
     this.updatePoints();
-    playSound('sounds/1z10dobrzee.mp3');
+    playSound('1z10dobrzee');
 
     this.getRemaining() === 0 ? this.finishGame() : this.nextTeam();
   }
@@ -123,7 +123,7 @@ export class WritingCategoryComponent implements OnInit {
     team.mistakes++;
     team.chancesLeft--;
 
-    playSound('sounds/1z10zle.mp3');
+    playSound('1z10zle');
     this.triggerWrongFlash();
 
     const alive = this.teams.filter((t) => t.mistakes < this.MAX_CHANCES);

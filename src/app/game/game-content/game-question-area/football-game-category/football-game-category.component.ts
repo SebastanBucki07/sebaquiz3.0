@@ -135,7 +135,7 @@ export class FootballGameCategoryComponent implements OnInit {
       footballer.guessedBy = this.currentTeam.name;
       this.currentTeam.correctAnswers++;
       this.updateLivePoints();
-      playSound('sounds/1z10dobrzee.mp3');
+      playSound('1z10dobrzee');
       this.remainingAnswers--;
       this.refreshView();
 
@@ -143,7 +143,7 @@ export class FootballGameCategoryComponent implements OnInit {
     } else {
       this.currentTeam.mistakes++;
       this.currentTeam.chancesLeft--;
-      playSound('sounds/1z10zle.mp3');
+      playSound('1z10zle');
       this.nextTeam();
     }
   }

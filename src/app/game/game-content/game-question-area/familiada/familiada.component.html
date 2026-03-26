@@ -1,4 +1,5 @@
-<div class="familiada-layout">
+<div class="familiada-layout" *ngIf="question$ | async as question">
+
   <div class="game-header">
     <div class="player-info">
       AKTUALNY GRACZ:
@@ -7,7 +8,11 @@
 
     <div class="status-display-area">
       <div class="mistakes-row" *ngIf="!gameFinished; else finalScoreView">
-        <div *ngFor="let m of [1, 2, 3]" class="x-mark" [class.active]="mistakes >= m">X</div>
+        <div *ngFor="let m of [1, 2, 3]"
+             class="x-mark"
+             [class.active]="mistakes >= m">
+          X
+        </div>
       </div>
 
       <ng-template #finalScoreView>
@@ -20,27 +25,30 @@
   </div>
 
   <div class="board-frame">
-    <div class="question-text">{{ question?.question }}</div>
+    <div class="question-text">{{ question.question }}</div>
+
     <div class="answers-grid">
-      <div *ngFor="let ans of question?.answers; let i = index" class="answer-slot">
-        <div class="slot-inner" [class.revealed]="isAnswerRevealed(i)">
+      <div *ngFor="let ans of question.answers; let i = index" class="answer-slot">
+        <div class="slot-inner" [class.revealed]="(question.revealedAnswers || []).includes(i)">
           <span class="slot-number">{{ i + 1 }}</span>
-          <span class="slot-text">{{ isAnswerRevealed(i) ? ans.value : '' }}</span>
+          <span class="slot-text">
+    {{ (question.revealedAnswers || []).includes(i) ? ans.value : '' }}
+  </span>
         </div>
       </div>
     </div>
   </div>
 
   <div class="game-footer">
-    <div class="input-container" *ngIf="!gameFinished">
+    <div class="input-container">
       <input
         [(ngModel)]="inputValue"
         (keyup.enter)="submitAnswer()"
-        placeholder="Wpisz odpowiedź..."
+        [disabled]="gameFinished || mistakes >= MAX_CHANCES"
+        [placeholder]="gameFinished ? 'Runda zakończona' : 'Wpisz odpowiedź...'"
         class="fam-input"
-        autofocus
       />
-      <button (click)="submitAnswer()" class="fam-btn">ZATWIERDŹ</button>
     </div>
   </div>
+
 </div>

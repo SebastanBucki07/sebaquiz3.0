@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { Observable, tap } from 'rxjs';
+
+// Services
 import { QuestionService } from '../../../../services/question-service.service';
-import { Question } from '../../../../shared/questions/question.interface';
-import { Observable } from 'rxjs';
 import { GameService } from '../../../../services/game.service';
 import { PointsService } from '../../../../services/points-service.service';
-import {
-  areSimilar,
-  calculateGamePoints,
-  normalizeText,
-} from '../../../../shared/utils/text-logic';
+
+// Models & Utils
+import { Question } from '../../../../shared/questions/question.interface';
+import { areSimilar, calculateGamePoints, normalizeText } from '../../../../shared/utils/text-logic';
 import { playSound } from '../../../../shared/utils/audio-helper';
 
 @Component({
@@ -22,14 +22,13 @@ import { playSound } from '../../../../shared/utils/audio-helper';
 })
 export class FamiliadaComponent implements OnInit {
   readonly MAX_CHANCES = 3;
-  MAX_POINTS_MULTIPLIER = 5;
+  readonly MAX_POINTS_MULTIPLIER = 5;
 
   question$!: Observable<Question | null>;
-  question: Question | null = null;
+  currentQuestion: Question | null = null;
 
   currentTeamName: string | null = null;
   mistakes = 0;
-  correctAnswersCount = 0;
   gameFinished = false;
   inputValue = '';
   earnedPoints = 0;
@@ -41,107 +40,98 @@ export class FamiliadaComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.question$ = this.questionService.question$;
+    this.question$ = this.questionService.question$.pipe(
+      tap(q => {
+        if (q && this.currentQuestion && q.id !== this.currentQuestion.id) {
+          this.resetRound();
+        }
 
-    // Pobieramy nazwę aktualnej drużyny ze wspólnego GameService
-    this.gameService.currentTeam$.subscribe((name) => {
-      this.currentTeamName = name;
-    });
+        this.currentQuestion = q;
+      })
+    );
 
-    this.question$.subscribe((q) => {
-      if (q && this.question?.id !== q.id) {
-        this.question = q;
-        this.resetRound();
-      }
-    });
+    this.gameService.currentTeam$.subscribe(name => this.currentTeamName = name);
   }
 
   private resetRound(): void {
     this.mistakes = 0;
-    this.correctAnswersCount = 0;
     this.gameFinished = false;
     this.earnedPoints = 0;
     this.inputValue = '';
   }
 
   submitAnswer(): void {
-    if (!this.question || !this.inputValue.trim() || this.gameFinished) return;
+    if (this.gameFinished || this.mistakes >= this.MAX_CHANCES) return;
+
+    const q = this.currentQuestion;
+    if (!q || !this.inputValue.trim()) return;
 
     const normalizedInput = normalizeText(this.inputValue);
 
-    // Szukanie odpowiedzi (dokładne lub podobne - Levenshtein)
-    let answerIndex = this.question.answers.findIndex(
-      (a) => normalizeText(a.value) === normalizedInput
-    );
+    const answerIndex = q.answers.findIndex((a, index) => {
+      const isMatch = normalizeText(a.value) === normalizedInput || areSimilar(normalizedInput, a.value);
+      const isAlreadyRevealed = q.revealedAnswers?.includes(index) ?? false;
 
-    if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
-    }
+      return isMatch && !isAlreadyRevealed;
+    });
 
     if (answerIndex >= 0) {
-      const alreadyRevealed = this.question.revealedAnswers?.includes(answerIndex) ?? false;
+      this.questionService.revealAnswer(answerIndex);
+      playSound('correct');
+      this.inputValue = '';
 
-      if (!alreadyRevealed) {
-        this.questionService.revealAnswer(answerIndex);
-        this.correctAnswersCount++;
-
-        playSound('/sounds/correct.mp3');
-
-        if (this.question.revealedAnswers?.length === this.question.answers.length) {
-          this.finishGame();
-        }
-        this.inputValue = '';
-        return;
+      if ((q.revealedAnswers?.length || 0) + 1 === q.answers.length) {
+        this.finishGame();
       }
+    } else {
+      this.handleMistake();
     }
+  }
 
-    // BŁĄD
+  private handleMistake(): void {
     this.mistakes++;
-    playSound('/sounds/wrong.mp3');
+    playSound('wrong');
+    this.inputValue = '';
 
     if (this.mistakes >= this.MAX_CHANCES) {
       this.finishGame();
     }
-    this.inputValue = '';
   }
 
   finishGame(): void {
     if (this.gameFinished) return;
+
     this.gameFinished = true;
+    this.inputValue = '';
 
-    if (this.question) {
-      const totalAnswers = this.question.answers.length;
-      const revealedCount = this.question.revealedAnswers?.length || 0;
+    const q = this.currentQuestion;
+    if (!q) return;
 
-      // Obliczamy punkty: (zgadnięte / wszystkie) * mnożnik (np. 10)
-      // Jeśli zgadł 3 z 6 haseł, dostanie 5 pkt (przy mnożniku 10)
-      this.earnedPoints = calculateGamePoints(
-        revealedCount,
-        totalAnswers,
-        this.MAX_POINTS_MULTIPLIER
-      );
+    const revealedBeforeEnd = q.revealedAnswers?.length || 0;
+    this.earnedPoints = calculateGamePoints(
+      revealedBeforeEnd,
+      q.answers.length,
+      this.MAX_POINTS_MULTIPLIER
+    );
 
-      if (this.currentTeamName && this.earnedPoints > 0) {
-        // Zapis do GameService (localStorage)
-        //this.gameService.updateTeamPoints(this.currentTeamName, this.earnedPoints);
-        // Powiadomienie PointsService
-        this.pointsService.setPoints(this.earnedPoints);
-      }
+    if (this.currentTeamName && this.earnedPoints > 0) {
+      this.pointsService.setPoints(this.earnedPoints);
     }
+
 
     this.revealAll();
   }
 
   private revealAll(): void {
-    this.question?.answers.forEach((_, i) => {
-      if (!this.question?.revealedAnswers?.includes(i)) {
+    if (!this.currentQuestion) return;
+    this.currentQuestion.answers.forEach((_, i) => {
+      if (!this.currentQuestion?.revealedAnswers?.includes(i)) {
         this.questionService.revealAnswer(i);
       }
     });
   }
 
-  // Metoda sprawdzająca, czy dany indeks odpowiedzi został już odkryty
   isAnswerRevealed(index: number): boolean {
-    return this.question?.revealedAnswers?.includes(index) ?? false;
+    return this.currentQuestion?.revealedAnswers?.includes(index) ?? false;
   }
 }
