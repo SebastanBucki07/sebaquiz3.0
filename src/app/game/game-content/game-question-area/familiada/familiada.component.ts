@@ -1,22 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { Observable, tap } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Observable, tap} from 'rxjs';
 
-// Services
-import { QuestionService } from '../../../../services/question-service.service';
-import { GameService } from '../../../../services/game.service';
-import { PointsService } from '../../../../services/points-service.service';
+import {QuestionService} from '../../../../services/question-service.service';
+import {GameService} from '../../../../services/game.service';
+import {PointsService} from '../../../../services/points-service.service';
+import {Question} from '../../../../shared/questions/question.interface';
 
-// Models & Utils
-import { Question } from '../../../../shared/questions/question.interface';
-import { areSimilar, calculateGamePoints, normalizeText } from '../../../../shared/utils/text-logic';
-import { playSound } from '../../../../shared/utils/audio-helper';
+import {WritingControlsComponent} from '../writing-category/writting-controls/writing-controls.component';
+import {WritingGameStatusComponent} from '../writing-category/writing-game-status/writing-game-status.component';
+import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-familiada',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, WritingControlsComponent, WritingGameStatusComponent],
   templateUrl: './familiada.component.html',
   styleUrls: ['./familiada.component.css'],
 })
@@ -30,14 +28,16 @@ export class FamiliadaComponent implements OnInit {
   currentTeamName: string | null = null;
   mistakes = 0;
   gameFinished = false;
-  inputValue = '';
   earnedPoints = 0;
+  correctHitsInRound = 0; //
 
   constructor(
     private questionService: QuestionService,
     private gameService: GameService,
-    private pointsService: PointsService
-  ) {}
+    private pointsService: PointsService,
+    public gameCore: WritingGameCoreService
+  ) {
+  }
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$.pipe(
@@ -45,7 +45,6 @@ export class FamiliadaComponent implements OnInit {
         if (q && this.currentQuestion && q.id !== this.currentQuestion.id) {
           this.resetRound();
         }
-
         this.currentQuestion = q;
       })
     );
@@ -57,30 +56,47 @@ export class FamiliadaComponent implements OnInit {
     this.mistakes = 0;
     this.gameFinished = false;
     this.earnedPoints = 0;
-    this.inputValue = '';
+    this.correctHitsInRound = 0; // <--- RESETUJ TUTAJ
   }
 
-  submitAnswer(): void {
-    if (this.gameFinished || this.mistakes >= this.MAX_CHANCES) return;
+  // KLUCZOWY GETTER: Pobiera PEŁNE dane (w tym zdjęcie) z serwisu
+  get currentTeamData(): any {
+    const fullData = this.gameService.getFullTeamData(this.currentTeamName);
+    if (!fullData) return null;
+
+    // Mapujemy to na format, którego oczekuje WritingControls
+    return {
+      ...fullData,
+      mistakes: this.mistakes,
+      chancesLeft: this.MAX_CHANCES - this.mistakes
+    };
+  }
+
+  get winnerForStatus(): any {
+    const data = this.gameService.getFullTeamData(this.currentTeamName);
+    return {
+      ...data,
+      calculatedPoints: this.earnedPoints
+    };
+  }
+
+  submitAnswer(value: string): void {
+    if (this.gameFinished || this.mistakes >= this.MAX_CHANCES || !value.trim()) return;
 
     const q = this.currentQuestion;
-    if (!q || !this.inputValue.trim()) return;
+    if (!q) return;
 
-    const normalizedInput = normalizeText(this.inputValue);
+    const allValues = q.answers.map(a => a.value);
+    const idx = this.gameCore.validateAnswer(value, allValues, q.revealedAnswers || []);
 
-    const answerIndex = q.answers.findIndex((a, index) => {
-      const isMatch = normalizeText(a.value) === normalizedInput || areSimilar(normalizedInput, a.value);
-      const isAlreadyRevealed = q.revealedAnswers?.includes(index) ?? false;
+    if (idx >= 0) {
+      // --- TRAFIENIE ---
+      this.correctHitsInRound++; // <--- ZWIĘKSZAJ LICZNIK TRAFIEŃ
+      this.gameCore.triggerCorrectEffects();
+      this.questionService.revealAnswer(idx);
 
-      return isMatch && !isAlreadyRevealed;
-    });
-
-    if (answerIndex >= 0) {
-      this.questionService.revealAnswer(answerIndex);
-      playSound('correct');
-      this.inputValue = '';
-
-      if ((q.revealedAnswers?.length || 0) + 1 === q.answers.length) {
+      const currentRevealedCount = (q.revealedAnswers?.length || 0) + 1;
+      if (currentRevealedCount === q.answers.length) {
         this.finishGame();
       }
     } else {
@@ -88,50 +104,60 @@ export class FamiliadaComponent implements OnInit {
     }
   }
 
+  finishGame(): void {
+    // 1. Natychmiastowa blokada, aby uniknąć podwójnego wywołania
+    if (this.gameFinished) return;
+    this.gameFinished = true;
+
+    const questionSnapshot = this.currentQuestion;
+    if (!questionSnapshot) return;
+
+    // 2. Kopiujemy wartości do stałych (zamrażamy stan)
+    const hits = this.correctHitsInRound;
+    const currentMistakes = this.mistakes;
+
+    console.log(`[DEBUG FAMILIADA] Trafienia: ${hits}, Błędy: ${currentMistakes}`);
+
+    // 3. LOGIKA ZERO-TOLERANCJI
+    if (hits <= 0) {
+      console.log('[DEBUG FAMILIADA] Wymuszam 0 punktów - brak trafień.');
+      this.earnedPoints = 0;
+    } else {
+      // Obliczamy punkty tylko gdy hits > 0
+      this.earnedPoints = this.gameCore.calculateFinalScore(
+        hits,
+        questionSnapshot.answers.length,
+        currentMistakes,
+        this.MAX_CHANCES,
+        5
+      );
+    }
+
+    // 4. Zapis do serwisu
+    if (this.currentTeamName) {
+      console.log(`[DEBUG FAMILIADA] Wysyłam do serwisu: ${this.earnedPoints}`);
+      this.pointsService.setPoints(this.earnedPoints);
+    }
+
+    // 5. Odsłaniamy resztę tablicy
+    setTimeout(() => this.revealAll(), 400);
+  }
+
   private handleMistake(): void {
     this.mistakes++;
-    playSound('wrong');
-    this.inputValue = '';
+    this.gameCore.triggerWrongEffects();
 
+    // Sprawdzamy limit szans
     if (this.mistakes >= this.MAX_CHANCES) {
       this.finishGame();
     }
   }
 
-  finishGame(): void {
-    if (this.gameFinished) return;
-
-    this.gameFinished = true;
-    this.inputValue = '';
-
-    const q = this.currentQuestion;
-    if (!q) return;
-
-    const revealedBeforeEnd = q.revealedAnswers?.length || 0;
-    this.earnedPoints = calculateGamePoints(
-      revealedBeforeEnd,
-      q.answers.length,
-      this.MAX_POINTS_MULTIPLIER
-    );
-
-    if (this.currentTeamName && this.earnedPoints > 0) {
-      this.pointsService.setPoints(this.earnedPoints);
-    }
-
-
-    this.revealAll();
-  }
-
   private revealAll(): void {
-    if (!this.currentQuestion) return;
-    this.currentQuestion.answers.forEach((_, i) => {
+    this.currentQuestion?.answers.forEach((_, i) => {
       if (!this.currentQuestion?.revealedAnswers?.includes(i)) {
         this.questionService.revealAnswer(i);
       }
     });
-  }
-
-  isAnswerRevealed(index: number): boolean {
-    return this.currentQuestion?.revealedAnswers?.includes(index) ?? false;
   }
 }

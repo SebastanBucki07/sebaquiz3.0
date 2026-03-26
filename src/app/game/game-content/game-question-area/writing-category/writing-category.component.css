@@ -125,3 +125,14 @@
   text-align: center;
   margin: 0.6em 0;
 }
+
+
+.wrong-answer-flash {
+  animation: flash-red 0.4s;
+}
+
+@keyframes flash-red {
+  0% { background-color: transparent; }
+  50% { background-color: rgba(255, 0, 0, 0.4); }
+  100% { background-color: transparent; }
+}

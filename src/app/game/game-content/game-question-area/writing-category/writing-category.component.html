@@ -1,44 +1,47 @@
-<ng-container *ngIf="question as q">
-  <mat-card class="question-card">
-    <h2>{{ q.question }}</h2>
-  </mat-card>
+<div [class.wrong-answer-flash]="wrongFlash">
 
-  <app-writing-score-board
-    [teams]="teams"
-    [activeTeamId]="currentTeam?.id ?? null"
-    [maxChances]="MAX_CHANCES"
-  ></app-writing-score-board>
+  <div class="writing-layout" [class.wrong-flash]="(gameCore.wrongFlash$ | async)">
+    <ng-container *ngIf="question as q">
 
-  <app-game-status
-    [gameFinished]="gameFinished"
-    [winner]="winner"
-    [remainingAnswers]="getRemaining()"
-  ></app-game-status>
+      <app-writing-game-status
+        [question]="question"
+        [gameFinished]="gameFinished"
+        [winner]="winner"
+        [remainingAnswers]="getRemaining()"
+      ></app-writing-game-status>
 
-  <app-writing-controls
-    *ngIf="!gameFinished && currentTeam"
-    [currentTeam]="currentTeam"
-    (answerSubmitted)="submitAnswer($event)"
-  ></app-writing-controls>
+      <app-writing-score-board
+        [teams]="teams"
+        [activeTeamId]="currentTeam?.id ?? null"
+        [maxChances]="MAX_CHANCES"
+      ></app-writing-score-board>
 
-  <div class="answers-wrapper" [class.flash]="wrongFlash">
-    <div class="answer-box" *ngFor="let answer of q.answers; let i = index">
-      <div class="flip-card">
-        <div class="flip-card-inner" [class.flipped]="isRevealed(i)">
-          <div class="flip-card-front"></div>
+      <app-writing-controls
+        *ngIf="!gameFinished && currentTeam"
+        [currentTeam]="currentTeam"
+        (answerSubmitted)="submitAnswer($event)"
+      ></app-writing-controls>
 
-          <div
-            class="flip-card-back"
-            [style.background-color]="getAnswerColor(i)"
-            [class.unanswered]="gameFinished && !answerOwners[i]"
-          >
-            <div class="answer-text">{{ answer.value }}</div>
-            <div class="answer-owner" *ngIf="getOwnerName(i) as ownerName">
-              {{ ownerName }}
+      <div class="answers-wrapper" [class.flash]="wrongFlash">
+        <div class="answer-box" *ngFor="let answer of q.answers; let i = index">
+          <div class="flip-card">
+            <div class="flip-card-inner" [class.flipped]="isRevealed(i)">
+              <div class="flip-card-front"></div>
+
+              <div
+                class="flip-card-back"
+                [style.background-color]="getAnswerColor(i)"
+                [class.unanswered]="gameFinished && !answerOwners[i]"
+              >
+                <div class="answer-text">{{ answer.value }}</div>
+                <div class="answer-owner" *ngIf="getOwnerName(i) as ownerName">
+                  {{ ownerName }}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </ng-container>
   </div>
-</ng-container>
+</div>

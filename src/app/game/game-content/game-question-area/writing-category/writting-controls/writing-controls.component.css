@@ -1,73 +1,90 @@
+/* Główna karta kontrolna */
 .control-card {
-  padding: 24px;
-  margin: 20px 0;
-  background: white;
+  margin-top: 20px;
+  padding: 15px 25px !important;
+  background: #ffffff;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #1e3a8a; /* Akcent koloru drużyny */
 }
 
+/* Kontener ustawiający wszystko w jednym rzędzie */
+.control-card mat-card-content,
+.control-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Sekcja informacji o turze (Avatar + Nazwa) */
 .turn-info {
   display: flex;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 24px;
-  justify-content: center;
+  gap: 12px;
+  flex-shrink: 0; /* Nie pozwalamy tej sekcji się zwężać */
+  padding-right: 20px;
+  border-right: 1px solid #eee;
 }
 
 .current-turn-avatar {
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  border: 3px solid #1976d2;
-  padding: 3px;
-  background: white;
-  object-fit: contain;
+  object-fit: cover;
+  border: 2px solid #1e3a8a;
 }
 
 .turn-team-name {
-  margin: 0 !important;
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #1976d2;
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
 }
 
-/* Sekcja formularza */
+/* Sekcja Inputu i Przycisku */
 .input-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 12px;
-  max-width: 500px;
-  margin: 0 auto;
+  gap: 10px;
+  flex-grow: 1; /* Ta sekcja zajmie resztę wolnego miejsca */
 }
 
+/* Stylizacja pola Angular Material */
 .full-width {
-  width: 100%;
+  flex-grow: 1;
 }
 
+/* Usuwamy domyślne marginesy Materialowe, które psują wyrównanie w pionie */
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none; /* Ukrywa miejsce na błędy/hinty, by zaoszczędzić pionowe miejsce */
+}
+
+/* Przycisk */
 .submit-btn {
-  width: 100%;
-  padding: 12px;
-  font-size: 1.1rem;
-  height: 48px;
+  height: 52px; /* Dopasowanie do wysokości inputa outline */
+  padding: 0 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.2s;
 }
 
-/* TWOJA ANIMACJA PULSE */
+.submit-btn:not([disabled]):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+/* Animacja pulsu dla avatara aktualnej tury */
 .pulse {
-  animation: pulse-border 2s infinite;
+  animation: pulse-animation 2s infinite;
 }
 
-@keyframes pulse-border {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.4);
-  }
-  70% {
-    transform: scale(1.05);
-    box-shadow: 0 0 0 15px rgba(25, 118, 210, 0);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 0 0 rgba(25, 118, 210, 0);
-  }
+@keyframes pulse-animation {
+  0% { box-shadow: 0 0 0 0px rgba(30, 58, 138, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(30, 58, 138, 0); }
+  100% { box-shadow: 0 0 0 0px rgba(30, 58, 138, 0); }
 }

@@ -1,98 +1,98 @@
-<ng-container *ngIf="question as q">
-  <mat-card class="question-card">
-    <h2>{{ q.question }}</h2>
-  </mat-card>
+<div class="football-layout" [class.wrong-flash]="(gameCore.wrongFlash$ | async)">
+  <ng-container *ngIf="question as q">
 
-  <app-writing-score-board
-    [teams]="teams"
-    [activeTeamId]="activeTeamId"
-    [maxChances]="MAX_CHANCES"
-  ></app-writing-score-board>
+    <app-writing-game-status
+      [question]="question"
+      [gameFinished]="gameFinished"
+      [winner]="winner"
+      [remainingAnswers]="remainingAnswers"
+    ></app-writing-game-status>
 
-  <app-game-status
-    [gameFinished]="gameFinished"
-    [winner]="winner"
-    [remainingAnswers]="remainingAnswers"
-  ></app-game-status>
+    <app-writing-score-board
+      [teams]="teams"
+      [activeTeamId]="activeTeamId"
+      [maxChances]="MAX_CHANCES"
+    ></app-writing-score-board>
 
-  <app-writing-controls
-    *ngIf="!gameFinished && currentTeam"
-    [currentTeam]="currentTeam"
-    (answerSubmitted)="submitAnswer($event)"
-  ></app-writing-controls>
+    <app-writing-controls
+      *ngIf="!gameFinished && currentTeam"
+      [currentTeam]="currentTeam"
+      (answerSubmitted)="submitAnswer($event)"
+    ></app-writing-controls>
 
-  <div class="pitch-wrapper">
-    <div class="substitutes-top">
-      <h4>Rezerwowi</h4>
-      @for (p of firstSubstitutes; track p.surname) {
-        <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container
-            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-          ></ng-container>
-        </div>
-      }
-    </div>
-
-    <div class="pitch">
-      <div class="midline"></div>
-
-      <div class="team team-top">
-        @for (row of firstRows; track $index) {
-          <div class="row">
-            @for (p of row; track p.surname) {
-              <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container
-                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-                ></ng-container>
-              </div>
-            }
+    <div class="pitch-wrapper">
+      <div class="substitutes-top">
+        <h4>Rezerwowi</h4>
+        @for (p of firstSubstitutes; track p.surname) {
+          <div class="player substitute" [class.guessed]="p.guessed">
+            <ng-container
+              *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+            ></ng-container>
           </div>
         }
       </div>
 
-      <div class="team team-bottom">
-        @for (row of secondRows; track $index) {
-          <div class="row">
-            @for (p of row; track p.surname) {
-              <div class="player" [class.goalkeeper]="p.position === 1">
-                <ng-container
-                  *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-                ></ng-container>
-              </div>
-            }
+      <div class="pitch">
+        <div class="midline"></div>
+
+        <div class="team team-top">
+          @for (row of firstRows; track $index) {
+            <div class="row">
+              @for (p of row; track p.surname) {
+                <div class="player" [class.goalkeeper]="p.position === 1">
+                  <ng-container
+                    *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+                  ></ng-container>
+                </div>
+              }
+            </div>
+          }
+        </div>
+
+        <div class="team team-bottom">
+          @for (row of secondRows; track $index) {
+            <div class="row">
+              @for (p of row; track p.surname) {
+                <div class="player" [class.goalkeeper]="p.position === 1">
+                  <ng-container
+                    *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+                  ></ng-container>
+                </div>
+              }
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="substitutes-bottom">
+        <h4>Rezerwowi</h4>
+        @for (p of secondSubstitutes; track p.surname) {
+          <div class="player substitute" [class.guessed]="p.guessed">
+            <ng-container
+              *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
+            ></ng-container>
           </div>
         }
       </div>
     </div>
+  </ng-container>
 
-    <div class="substitutes-bottom">
-      <h4>Rezerwowi</h4>
-      @for (p of secondSubstitutes; track p.surname) {
-        <div class="player substitute" [class.guessed]="p.guessed">
-          <ng-container
-            *ngTemplateOutlet="playerTemplate; context: { $implicit: p }"
-          ></ng-container>
-        </div>
-      }
-    </div>
-  </div>
-</ng-container>
+  <ng-template #playerTemplate let-p>
+    @if (p.country | flagUrl; as url) {
+      <img [src]="url" [alt]="p.country" class="flag-icon"/>
+    } @else {
+      <span class="country-fallback">{{ p.country || '??' }}</span>
+    }
 
-<ng-template #playerTemplate let-p>
-  @if (p.country | flagUrl; as url) {
-    <img [src]="url" [alt]="p.country" class="flag-icon" />
-  } @else {
-    <span class="country-fallback">{{ p.country || '??' }}</span>
-  }
-
-  @if (p.guessed) {
-    <div class="player-name">
-      {{ p.surname }}
-      @if (p.guessedBy) {
-        <div class="guessed-by">🎯 {{ p.guessedBy }}</div>
-      }
-    </div>
-  } @else {
-    <div class="player-mask"><span></span></div>
-  }
-</ng-template>
+    @if (p.guessed) {
+      <div class="player-name">
+        {{ p.surname }}
+        @if (p.guessedBy) {
+          <div class="guessed-by">🎯 {{ p.guessedBy }}</div>
+        }
+      </div>
+    } @else {
+      <div class="player-mask"><span></span></div>
+    }
+  </ng-template>
+</div>

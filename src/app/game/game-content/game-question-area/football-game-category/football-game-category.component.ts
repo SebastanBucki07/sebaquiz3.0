@@ -17,7 +17,6 @@ import { Footballer, FootballTeam } from '../../../../shared/models/answers/answ
 import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
 
 // Utils & Helpers
-import { playSound } from '../../../../shared/utils/audio-helper';
 import {
   areSimilar,
   calculateGamePoints,
@@ -30,6 +29,7 @@ import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
 import { WritingScoreBoardComponent } from '../writing-category/writing-score-board/writing-score-board.component';
 import { WritingControlsComponent } from '../writing-category/writting-controls/writing-controls.component';
 import { WritingGameStatusComponent } from '../writing-category/writing-game-status/writing-game-status.component';
+import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-football-game-category',
@@ -66,7 +66,8 @@ export class FootballGameCategoryComponent implements OnInit {
     private questionService: QuestionService,
     private gameStateService: GameStateService,
     private gameService: GameService,
-    private pointsService: PointsService
+    private pointsService: PointsService,
+    public gameCore: WritingGameCoreService
   ) {}
 
   ngOnInit(): void {
@@ -116,34 +117,51 @@ export class FootballGameCategoryComponent implements OnInit {
   }
 
   submitAnswer(value: string): void {
+    // 1. Guardy
     if (!this.currentTeam || !value.trim() || this.gameFinished) return;
 
-    const needle = normalizeText(value);
-    const all = [
+    const needle = value.trim();
+
+    // 2. Tworzymy płaską listę wszystkich piłkarzy, którzy NIE zostali jeszcze odgadnięci
+    const allFootballers = [
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
       ...this.firstSubstitutes,
       ...this.secondSubstitutes,
     ];
 
-    const footballer = all.find(
-      (p) => !p.guessed && (normalizeText(p.surname) === needle || areSimilar(needle, p.surname))
+    // 3. Szukamy piłkarza używając logiki z GameCore (normalizacja + podobieństwo)
+    const footballer = allFootballers.find(p =>
+        !p.guessed && (
+          normalizeText(p.surname) === normalizeText(needle) ||
+          areSimilar(needle, p.surname)
+        )
     );
 
     if (footballer) {
+      // --- TRAFIENIE ---
+      this.gameCore.triggerCorrectEffects();
+
       footballer.guessed = true;
       footballer.guessedBy = this.currentTeam.name;
       this.currentTeam.correctAnswers++;
+
       this.updateLivePoints();
-      playSound('1z10dobrzee');
       this.remainingAnswers--;
       this.refreshView();
 
-      this.remainingAnswers <= 0 ? this.finishGame() : this.nextTeam();
+      // Sprawdzamy czy koniec meczu
+      if (this.remainingAnswers <= 0) {
+        this.finishGame();
+      } else {
+        this.nextTeam();
+      }
     } else {
+      // --- BŁĄD ---
       this.currentTeam.mistakes++;
       this.currentTeam.chancesLeft--;
-      playSound('1z10zle');
+
+      this.gameCore.triggerWrongEffects(); // To wywoła pulsowanie ekranu i dźwięk X
       this.nextTeam();
     }
   }
@@ -173,7 +191,6 @@ export class FootballGameCategoryComponent implements OnInit {
       )[0] || null;
 
     if (this.winner) {
-      // NAPRAWA BŁĘDU TYPOWANIA:
       const points = this.winner.calculatedPoints ?? 0;
       this.pointsService.setPoints(points);
       this.gameService.setCurrentTeam(this.winner.name);

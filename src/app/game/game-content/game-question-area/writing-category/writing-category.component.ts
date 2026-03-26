@@ -1,25 +1,24 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Observable, take } from 'rxjs';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Observable, take} from 'rxjs';
 
 // Services
-import { QuestionService } from '../../../../services/question-service.service';
-import { GameStateService } from '../../../../services/game-state.service';
-import { PointsService } from '../../../../services/points-service.service';
-import { GameService } from '../../../../services/game.service';
+import {QuestionService} from '../../../../services/question-service.service';
+import {GameStateService} from '../../../../services/game-state.service';
+import {PointsService} from '../../../../services/points-service.service';
+import {GameService} from '../../../../services/game.service';
 
 // Models & Utils
-import { Question } from '../../../../shared/questions/question.interface';
-import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
-import { areSimilar, normalizeText } from '../../../../shared/utils/text-logic';
-import { playSound } from '../../../../shared/utils/audio-helper';
-import { generateTeamColors } from '../../../../shared/utils/color-helper';
+import {Question} from '../../../../shared/questions/question.interface';
+import {TeamInWritingCategory} from '../../../../shared/models/teams/teamForWrittingCategory.interface';
+import {generateTeamColors} from '../../../../shared/utils/color-helper';
 
 // Components
-import { WritingScoreBoardComponent } from './writing-score-board/writing-score-board.component';
-import { WritingControlsComponent } from './writting-controls/writing-controls.component';
-import { WritingGameStatusComponent } from './writing-game-status/writing-game-status.component';
-import { MATERIAL_IMPORTS } from '../../../../shared/material';
+import {WritingScoreBoardComponent} from './writing-score-board/writing-score-board.component';
+import {WritingControlsComponent} from './writting-controls/writing-controls.component';
+import {WritingGameStatusComponent} from './writing-game-status/writing-game-status.component';
+import {MATERIAL_IMPORTS} from '../../../../shared/material';
+import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-writing-category',
@@ -52,8 +51,10 @@ export class WritingCategoryComponent implements OnInit {
     private questionService: QuestionService,
     private gameStateService: GameStateService,
     private gameService: GameService,
-    private pointsService: PointsService
-  ) {}
+    private pointsService: PointsService,
+    public gameCore: WritingGameCoreService
+  ) {
+  }
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
@@ -68,6 +69,10 @@ export class WritingCategoryComponent implements OnInit {
         calculatedPoints: 0,
         color: colors[index],
       }));
+    });
+
+    this.gameCore.wrongFlash$.subscribe(isFlashing => {
+      this.wrongFlash = isFlashing;
     });
 
     this.question$.subscribe((q) => {
@@ -92,14 +97,21 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   submitAnswer(value: string): void {
+    // 1. Guardy (czy gra trwa i czy jest input)
     if (!this.question || this.gameFinished || !this.currentTeam || !value.trim()) return;
 
-    const input = normalizeText(value);
-    const ansIdx = this.question.answers.findIndex(
-      (a) => normalizeText(a.value) === input || areSimilar(input, a.value)
+    const input = value.trim();
+
+    // 2. Szukamy indeksu odpowiedzi (używamy map, aby wyciągnąć same teksty)
+    const allValues = this.question.answers.map(a => a.value);
+    const ansIdx = this.gameCore.validateAnswer(
+      input,
+      allValues,
+      this.question.revealedAnswers || []
     );
 
-    if (ansIdx >= 0 && !this.isRevealed(ansIdx)) {
+    // 3. Logika trafienia lub błędu
+    if (ansIdx >= 0) {
       this.handleCorrectAnswer(ansIdx);
     } else {
       this.handleMistake();
@@ -108,13 +120,18 @@ export class WritingCategoryComponent implements OnInit {
 
   private handleCorrectAnswer(index: number): void {
     const team = this.currentTeam!;
+
+    // Efekty i ujawnienie
+    this.gameCore.triggerCorrectEffects();
     this.questionService.revealAnswer(index);
+
+    // Rejestracja właściciela (kto zgadł, ten ma kolor na tablicy)
     this.answerOwners[index] = team.id;
     team.correctAnswers++;
 
     this.updatePoints();
-    playSound('1z10dobrzee');
 
+    // Sprawdzenie czy runda trwa dalej
     this.getRemaining() === 0 ? this.finishGame() : this.nextTeam();
   }
 
@@ -123,11 +140,12 @@ export class WritingCategoryComponent implements OnInit {
     team.mistakes++;
     team.chancesLeft--;
 
-    playSound('1z10zle');
-    this.triggerWrongFlash();
+    // Wizualny błysk i dźwięk X
+    this.gameCore.triggerWrongEffects();
 
-    const alive = this.teams.filter((t) => t.mistakes < this.MAX_CHANCES);
-    if (alive.length <= 1) {
+    // Sprawdzamy czy został ktoś żywy
+    const aliveTeams = this.teams.filter((t) => t.mistakes < this.MAX_CHANCES);
+    if (aliveTeams.length <= 1) {
       this.finishGame();
     } else {
       this.nextTeam();
@@ -159,19 +177,35 @@ export class WritingCategoryComponent implements OnInit {
     this.gameFinished = true;
 
     if (this.getRemaining() > 0) {
-      this.question?.answers.forEach((_, i) => this.questionService.revealAnswer(i));
+      this.question?.answers.forEach((_, i) => {
+        if (!this.isRevealed(i)) {
+          this.questionService.revealAnswer(i);
+        }
+      });
     }
 
-    this.updatePoints();
-    this.winner =
-      [...this.teams].sort(
-        (a, b) => b.correctAnswers - a.correctAnswers || b.chancesLeft - a.chancesLeft
-      )[0] || null;
+    const totalAnswers = this.question?.answers.length || 1;
+
+    this.teams.forEach(team => {
+      team.calculatedPoints = this.gameCore.calculateFinalScore(
+        team.correctAnswers,
+        totalAnswers,
+        team.mistakes,
+        this.MAX_CHANCES,
+        this.MAX_POINTS
+      );
+    });
+
+    this.winner = [...this.teams].sort((a, b) =>
+      (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) ||
+      b.chancesLeft - a.chancesLeft
+    )[0] || null;
 
     if (this.winner) {
       this.gameService.setCurrentTeam(this.winner.name);
-      // Naprawione przekazanie punktów:
-      this.pointsService.setPoints(this.winner.calculatedPoints ?? 0);
+
+      const pointsToSet = this.winner.calculatedPoints ?? 0;
+      this.pointsService.setPoints(pointsToSet);
     }
   }
 
@@ -179,8 +213,4 @@ export class WritingCategoryComponent implements OnInit {
     return this.question?.revealedAnswers?.includes(index) ?? false;
   }
 
-  private triggerWrongFlash(): void {
-    this.wrongFlash = true;
-    setTimeout(() => (this.wrongFlash = false), 400);
-  }
 }

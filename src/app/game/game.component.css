@@ -5,14 +5,13 @@
 }
 
 app-game-sidebar {
-  width: 30%;
+  width: 10%;
   flex-shrink: 0;
   border-right: 1px solid #ddd;
-  overflow-y: auto;
 }
 
 app-game-content {
-  width: 70%;
+  width: 90%;
   flex: 1;
   overflow-y: auto;
 }

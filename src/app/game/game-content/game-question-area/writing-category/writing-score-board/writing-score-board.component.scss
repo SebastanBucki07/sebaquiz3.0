@@ -36,7 +36,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px 14px;
+  padding: 8px 12px; /* Zredukowane z 20px 14px */
   border-right: 1px solid rgba(0, 0, 0, 0.08);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   transition: 0.25s ease;
@@ -50,12 +50,9 @@
 }
 
 .header-cell {
-  flex: 0 0 170px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #f1f1f1, #e4e4e4);
-  color: #333;
-  font-size: 17px;
-  justify-content: flex-start; // Nagłówek wyrównany do lewej
+  flex: 0 0 120px; /* Szerokość bocznej kolumny (zmniejszona ze 170px) */
+  padding: 8px 12px;
+  font-size: 14px; /* Zmniejszony font */
 }
 
 .team-cell {
@@ -70,12 +67,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
 .mini-avatar {
-  width: 50px;
-  height: 50px;
+  width: 35px;  /* Zmniejszone z 50px */
+  height: 35px; /* Zmniejszone z 50px */
   border-radius: 50%;
   border: 2px solid #ddd;
   background: #fff;
