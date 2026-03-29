@@ -19,7 +19,6 @@ import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWr
 // Utils & Helpers
 import {
   areSimilar,
-  calculateGamePoints,
   normalizeText,
 } from '../../../../shared/utils/text-logic';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
@@ -169,31 +168,71 @@ export class FootballGameCategoryComponent implements OnInit {
   private updateLivePoints(): void {
     const total = this.getAllFootballersCount();
     this.teams.forEach((t) => {
-      t.calculatedPoints = calculateGamePoints(t.correctAnswers, total, this.MAX_POINTS);
+      t.calculatedPoints = this.gameCore.calculateFinalScore(
+        t.correctAnswers,
+        total,
+        t.mistakes,
+        this.MAX_CHANCES,
+        this.MAX_POINTS
+      );
     });
   }
 
-  private finishGame(): void {
+  finishGame(): void {
+    // 1. Guard przed podwójnym wywołaniem
     if (this.gameFinished) return;
     this.gameFinished = true;
 
-    const reveal = (p: Footballer) => (p.guessed = true);
-    this.firstRows.forEach((row) => row.forEach(reveal));
-    this.secondRows.forEach((row) => row.forEach(reveal));
+    console.log('[FOOTBALL] Zakończenie meczu. Przeliczam punkty...');
+
+    // 2. Odkrywamy wszystkich pozostałych piłkarzy (tych nieodgadniętych)
+    const reveal = (p: Footballer) => {
+      if (!p.guessed) {
+        p.guessed = true;
+        // Opcjonalnie: p.guessedBy = 'Nikt'; // Możesz oznaczyć, że nikt nie zgadł
+      }
+    };
+
+    this.firstRows.forEach(row => row.forEach(reveal));
+    this.secondRows.forEach(row => row.forEach(reveal));
     this.firstSubstitutes.forEach(reveal);
     this.secondSubstitutes.forEach(reveal);
 
+    // Odświeżamy widok po masowym odkryciu
     this.refreshView();
 
-    this.winner =
-      [...this.teams].sort(
-        (a, b) => b.correctAnswers - a.correctAnswers || b.chancesLeft - a.chancesLeft
-      )[0] || null;
+    // 3. Przeliczamy punkty dla WSZYSTKICH drużyn używając ustandaryzowanego CoreService
+    const totalAnswers = this.getAllFootballersCount();
 
+    this.teams.forEach(team => {
+      // Wykorzystujemy nową logikę: 0 trafień = 0 punktów
+      team.calculatedPoints = this.gameCore.calculateFinalScore(
+        team.correctAnswers,
+        totalAnswers,
+        team.mistakes,
+        this.MAX_CHANCES,
+        this.MAX_POINTS
+      );
+
+      console.log(`[FOOTBALL] Drużyna ${team.name}: ${team.correctAnswers} trafień -> ${team.calculatedPoints} pkt`);
+    });
+
+    // 4. Wyłaniamy zwycięzcę (najwięcej punktów, potem najwięcej szans)
+    this.winner = [...this.teams].sort((a, b) =>
+      (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) ||
+      (b.chancesLeft - a.chancesLeft)
+    )[0] || null;
+
+    // 5. Aktualizacja stanu globalnego
     if (this.winner) {
-      const points = this.winner.calculatedPoints ?? 0;
-      this.pointsService.setPoints(points);
+      // Ustawiamy zwycięzcę w GameService (ważne dla kolejnych rund)
       this.gameService.setCurrentTeam(this.winner.name);
+
+      // Przekazujemy punkty do PointsService
+      const finalPoints = this.winner.calculatedPoints ?? 0;
+      this.pointsService.setPoints(finalPoints);
+
+      console.log(`[FOOTBALL] Zwycięzca: ${this.winner.name} z dorobkiem ${finalPoints} pkt`);
     }
   }
 
