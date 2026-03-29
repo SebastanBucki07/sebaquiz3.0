@@ -2,15 +2,14 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { GameService } from '../../services/game.service';
-import {Subject, interval, Observable} from 'rxjs';
+import { Subject, interval, Observable } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-import {Team} from '../../shared/models/teams/team.interface';
-import {MATERIAL_IMPORTS} from '../../shared/material';
-
+import { Team } from '../../shared/models/teams/team.interface';
+import { MATERIAL_IMPORTS } from '../../shared/material';
 
 @Component({
   selector: 'app-game-sidebar',
-  imports: [CommonModule, MatTableModule,MATERIAL_IMPORTS],
+  imports: [CommonModule, MatTableModule, MATERIAL_IMPORTS],
   templateUrl: './game-sidebar.component.html',
   styleUrl: './game-sidebar.component.css',
 })

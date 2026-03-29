@@ -1,5 +1,5 @@
-export const playSound = (path: string) => {
-  const audio = new Audio(path);
-  audio.currentTime = 0;
-  audio.play().catch(() => {});
+import { audioService } from '../../services/audio.service';
+
+export const playSound = (soundKey: string) => {
+  audioService.play(soundKey);
 };

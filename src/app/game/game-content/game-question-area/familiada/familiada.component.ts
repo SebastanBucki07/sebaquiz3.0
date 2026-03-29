@@ -1,147 +1,163 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { QuestionService } from '../../../../services/question-service.service';
-import { Question } from '../../../../shared/questions/question.interface';
-import { Observable } from 'rxjs';
-import { GameService } from '../../../../services/game.service';
-import { PointsService } from '../../../../services/points-service.service';
-import {
-  areSimilar,
-  calculateGamePoints,
-  normalizeText,
-} from '../../../../shared/utils/text-logic';
-import { playSound } from '../../../../shared/utils/audio-helper';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Observable, tap} from 'rxjs';
+
+import {QuestionService} from '../../../../services/question-service.service';
+import {GameService} from '../../../../services/game.service';
+import {PointsService} from '../../../../services/points-service.service';
+import {Question} from '../../../../shared/questions/question.interface';
+
+import {WritingControlsComponent} from '../writing-category/writting-controls/writing-controls.component';
+import {WritingGameStatusComponent} from '../writing-category/writing-game-status/writing-game-status.component';
+import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-familiada',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, WritingControlsComponent, WritingGameStatusComponent],
   templateUrl: './familiada.component.html',
   styleUrls: ['./familiada.component.css'],
 })
 export class FamiliadaComponent implements OnInit {
   readonly MAX_CHANCES = 3;
-  MAX_POINTS_MULTIPLIER = 5;
+  readonly MAX_POINTS_MULTIPLIER = 5;
 
   question$!: Observable<Question | null>;
-  question: Question | null = null;
+  currentQuestion: Question | null = null;
 
   currentTeamName: string | null = null;
   mistakes = 0;
-  correctAnswersCount = 0;
   gameFinished = false;
-  inputValue = '';
   earnedPoints = 0;
+  correctHitsInRound = 0; //
 
   constructor(
     private questionService: QuestionService,
     private gameService: GameService,
-    private pointsService: PointsService
-  ) {}
+    private pointsService: PointsService,
+    public gameCore: WritingGameCoreService
+  ) {
+  }
 
   ngOnInit(): void {
-    this.question$ = this.questionService.question$;
+    this.question$ = this.questionService.question$.pipe(
+      tap(q => {
+        if (q && this.currentQuestion && q.id !== this.currentQuestion.id) {
+          this.resetRound();
+        }
+        this.currentQuestion = q;
+      })
+    );
 
-    // Pobieramy nazwę aktualnej drużyny ze wspólnego GameService
-    this.gameService.currentTeam$.subscribe((name) => {
-      this.currentTeamName = name;
-    });
-
-    this.question$.subscribe((q) => {
-      if (q && this.question?.id !== q.id) {
-        this.question = q;
-        this.resetRound();
-      }
-    });
+    this.gameService.currentTeam$.subscribe(name => this.currentTeamName = name);
   }
 
   private resetRound(): void {
     this.mistakes = 0;
-    this.correctAnswersCount = 0;
     this.gameFinished = false;
     this.earnedPoints = 0;
-    this.inputValue = '';
+    this.correctHitsInRound = 0; // <--- RESETUJ TUTAJ
   }
 
-  submitAnswer(): void {
-    if (!this.question || !this.inputValue.trim() || this.gameFinished) return;
+  // KLUCZOWY GETTER: Pobiera PEŁNE dane (w tym zdjęcie) z serwisu
+  get currentTeamData(): any {
+    const fullData = this.gameService.getFullTeamData(this.currentTeamName);
+    if (!fullData) return null;
 
-    const normalizedInput = normalizeText(this.inputValue);
+    // Mapujemy to na format, którego oczekuje WritingControls
+    return {
+      ...fullData,
+      mistakes: this.mistakes,
+      chancesLeft: this.MAX_CHANCES - this.mistakes
+    };
+  }
 
-    // Szukanie odpowiedzi (dokładne lub podobne - Levenshtein)
-    let answerIndex = this.question.answers.findIndex(
-      (a) => normalizeText(a.value) === normalizedInput
-    );
+  get winnerForStatus(): any {
+    const data = this.gameService.getFullTeamData(this.currentTeamName);
+    return {
+      ...data,
+      calculatedPoints: this.earnedPoints
+    };
+  }
 
-    if (answerIndex === -1) {
-      answerIndex = this.question.answers.findIndex((a) => areSimilar(normalizedInput, a.value));
-    }
+  submitAnswer(value: string): void {
+    if (this.gameFinished || this.mistakes >= this.MAX_CHANCES || !value.trim()) return;
 
-    if (answerIndex >= 0) {
-      const alreadyRevealed = this.question.revealedAnswers?.includes(answerIndex) ?? false;
+    const q = this.currentQuestion;
+    if (!q) return;
 
-      if (!alreadyRevealed) {
-        this.questionService.revealAnswer(answerIndex);
-        this.correctAnswersCount++;
+    const allValues = q.answers.map(a => a.value);
+    const idx = this.gameCore.validateAnswer(value, allValues, q.revealedAnswers || []);
 
-        playSound('/sounds/correct.mp3');
+    if (idx >= 0) {
+      // --- TRAFIENIE ---
+      this.correctHitsInRound++; // <--- ZWIĘKSZAJ LICZNIK TRAFIEŃ
+      this.gameCore.triggerCorrectEffects();
+      this.questionService.revealAnswer(idx);
 
-        if (this.question.revealedAnswers?.length === this.question.answers.length) {
-          this.finishGame();
-        }
-        this.inputValue = '';
-        return;
+      const currentRevealedCount = (q.revealedAnswers?.length || 0) + 1;
+      if (currentRevealedCount === q.answers.length) {
+        this.finishGame();
       }
+    } else {
+      this.handleMistake();
     }
-
-    // BŁĄD
-    this.mistakes++;
-    playSound('/sounds/wrong.mp3');
-
-    if (this.mistakes >= this.MAX_CHANCES) {
-      this.finishGame();
-    }
-    this.inputValue = '';
   }
 
   finishGame(): void {
+    // 1. Natychmiastowa blokada, aby uniknąć podwójnego wywołania
     if (this.gameFinished) return;
     this.gameFinished = true;
 
-    if (this.question) {
-      const totalAnswers = this.question.answers.length;
-      const revealedCount = this.question.revealedAnswers?.length || 0;
+    const questionSnapshot = this.currentQuestion;
+    if (!questionSnapshot) return;
 
-      // Obliczamy punkty: (zgadnięte / wszystkie) * mnożnik (np. 10)
-      // Jeśli zgadł 3 z 6 haseł, dostanie 5 pkt (przy mnożniku 10)
-      this.earnedPoints = calculateGamePoints(
-        revealedCount,
-        totalAnswers,
-        this.MAX_POINTS_MULTIPLIER
+    // 2. Kopiujemy wartości do stałych (zamrażamy stan)
+    const hits = this.correctHitsInRound;
+    const currentMistakes = this.mistakes;
+
+    console.log(`[DEBUG FAMILIADA] Trafienia: ${hits}, Błędy: ${currentMistakes}`);
+
+    // 3. LOGIKA ZERO-TOLERANCJI
+    if (hits <= 0) {
+      console.log('[DEBUG FAMILIADA] Wymuszam 0 punktów - brak trafień.');
+      this.earnedPoints = 0;
+    } else {
+      // Obliczamy punkty tylko gdy hits > 0
+      this.earnedPoints = this.gameCore.calculateFinalScore(
+        hits,
+        questionSnapshot.answers.length,
+        currentMistakes,
+        this.MAX_CHANCES,
+        5
       );
-
-      if (this.currentTeamName && this.earnedPoints > 0) {
-        // Zapis do GameService (localStorage)
-        //this.gameService.updateTeamPoints(this.currentTeamName, this.earnedPoints);
-        // Powiadomienie PointsService
-        this.pointsService.setPoints(this.earnedPoints);
-      }
     }
 
-    this.revealAll();
+    // 4. Zapis do serwisu
+    if (this.currentTeamName) {
+      console.log(`[DEBUG FAMILIADA] Wysyłam do serwisu: ${this.earnedPoints}`);
+      this.pointsService.setPoints(this.earnedPoints);
+    }
+
+    // 5. Odsłaniamy resztę tablicy
+    setTimeout(() => this.revealAll(), 400);
+  }
+
+  private handleMistake(): void {
+    this.mistakes++;
+    this.gameCore.triggerWrongEffects();
+
+    // Sprawdzamy limit szans
+    if (this.mistakes >= this.MAX_CHANCES) {
+      this.finishGame();
+    }
   }
 
   private revealAll(): void {
-    this.question?.answers.forEach((_, i) => {
-      if (!this.question?.revealedAnswers?.includes(i)) {
+    this.currentQuestion?.answers.forEach((_, i) => {
+      if (!this.currentQuestion?.revealedAnswers?.includes(i)) {
         this.questionService.revealAnswer(i);
       }
     });
-  }
-
-  // Metoda sprawdzająca, czy dany indeks odpowiedzi został już odkryty
-  isAnswerRevealed(index: number): boolean {
-    return this.question?.revealedAnswers?.includes(index) ?? false;
   }
 }

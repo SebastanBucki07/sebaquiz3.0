@@ -42,13 +42,13 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
     const allIds = Array.from({ length: 15 }, (_, i) => i + 1);
 
     // Filtrujemy te, które są już zajęte przez wczytane drużyny
-    const usedIds = this.teams.map(t => {
+    const usedIds = this.teams.map((t) => {
       // Wyciągamy numer z URL (np. "assets/avatars/5.png" -> 5)
       const match = t.avatarUrl.match(/(\d+)\.png$/);
       return match ? parseInt(match[1]) : null;
     });
 
-    this.availableAvatarIds = allIds.filter(id => !usedIds.includes(id));
+    this.availableAvatarIds = allIds.filter((id) => !usedIds.includes(id));
   }
 
   loadTeams() {
@@ -86,7 +86,7 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
         id: nextId,
         name: trimmedName,
         points: 0,
-        avatarUrl: `/avatars/${chosenAvatarId}.png`
+        avatarUrl: `/avatars/${chosenAvatarId}.png`,
       };
 
       this.teams = [...this.teams, newTeam];
@@ -96,7 +96,7 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
   }
 
   removeTeam(id: number) {
-    const teamToRemove = this.teams.find(t => t.id === id);
+    const teamToRemove = this.teams.find((t) => t.id === id);
     if (teamToRemove) {
       // Wyciągamy numer awatara i dodajemy go z powrotem do puli
       const match = teamToRemove.avatarUrl.match(/(\d+)\.png$/);

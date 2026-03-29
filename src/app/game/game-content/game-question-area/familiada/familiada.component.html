@@ -1,46 +1,38 @@
-<div class="familiada-layout">
-  <div class="game-header">
-    <div class="player-info">
-      AKTUALNY GRACZ:
-      <span class="name-highlight">{{ currentTeamName || '---' }}</span>
-    </div>
+<div class="familiada-layout"
+     [class.wrong-flash]="(gameCore.wrongFlash$ | async)"
+     *ngIf="question$ | async as question">
 
-    <div class="status-display-area">
-      <div class="mistakes-row" *ngIf="!gameFinished; else finalScoreView">
-        <div *ngFor="let m of [1, 2, 3]" class="x-mark" [class.active]="mistakes >= m">X</div>
-      </div>
+  <div class="top-controls" *ngIf="!gameFinished">
+    <app-writing-controls
+      [currentTeam]="currentTeamData"
+      (answerSubmitted)="submitAnswer($event)">
+    </app-writing-controls>
+  </div>
 
-      <ng-template #finalScoreView>
-        <div class="final-result-overlay">
-          <div class="finish-label">RUNDA ZAKOŃCZONA</div>
-          <div class="score-badge">+{{ earnedPoints }} pkt</div>
-        </div>
-      </ng-template>
+  <div class="simple-status-bar">
+    <div class="team-name">{{ currentTeamName }}</div>
+    <div class="mistakes-display">
+      <span *ngFor="let m of [1, 2, 3]" class="simple-x" [class.active]="mistakes >= m">X</span>
     </div>
+    <div class="current-points" *ngIf="gameFinished">WYNIK: {{ earnedPoints }} PKT</div>
   </div>
 
   <div class="board-frame">
-    <div class="question-text">{{ question?.question }}</div>
+    <div class="question-text">{{ question.question }}</div>
     <div class="answers-grid">
-      <div *ngFor="let ans of question?.answers; let i = index" class="answer-slot">
-        <div class="slot-inner" [class.revealed]="isAnswerRevealed(i)">
+      <div *ngFor="let ans of question.answers; let i = index" class="answer-slot">
+        <div class="slot-inner" [class.revealed]="(question.revealedAnswers || []).includes(i)">
           <span class="slot-number">{{ i + 1 }}</span>
-          <span class="slot-text">{{ isAnswerRevealed(i) ? ans.value : '' }}</span>
+          <span class="slot-text">{{ (question.revealedAnswers || []).includes(i) ? ans.value : '' }}</span>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="game-footer">
-    <div class="input-container" *ngIf="!gameFinished">
-      <input
-        [(ngModel)]="inputValue"
-        (keyup.enter)="submitAnswer()"
-        placeholder="Wpisz odpowiedź..."
-        class="fam-input"
-        autofocus
-      />
-      <button (click)="submitAnswer()" class="fam-btn">ZATWIERDŹ</button>
-    </div>
-  </div>
+  <app-writing-game-status
+    *ngIf="gameFinished"
+    [winner]="winnerForStatus"
+    [gameFinished]="gameFinished">
+  </app-writing-game-status>
+
 </div>

@@ -20,6 +20,13 @@ export class GameService {
   // TEAM MANAGEMENT
   // =========================
 
+  // Wewnątrz GameService
+  getFullTeamData(name: string | null): any {
+    if (!name) return null;
+    const teams = JSON.parse(localStorage.getItem('teams') || '[]');
+    return teams.find((t: any) => t.name === name) || null;
+  }
+
   setCurrentTeam(team: string): void {
     this.currentTeamSubject.next(team);
   }

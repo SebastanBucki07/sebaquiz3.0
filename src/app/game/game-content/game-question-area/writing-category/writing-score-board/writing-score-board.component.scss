@@ -1,0 +1,144 @@
+/* ===================== */
+/* TABLICA WYNIKÓW */
+/* ===================== */
+
+:host {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.players-card {
+  padding: 28px;
+  background: white;
+  border-radius: 12px;
+}
+
+.score-table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  font-size: 19px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+}
+
+.row {
+  display: flex;
+  transition: 0.3s ease;
+}
+
+.alt-row {
+  background: linear-gradient(90deg, #f8fbff, #eef6ff);
+}
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px; /* Zredukowane z 20px 14px */
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.row:last-child .cell {
+  border-bottom: none;
+}
+.cell:last-child {
+  border-right: none;
+}
+
+.header-cell {
+  flex: 0 0 120px; /* Szerokość bocznej kolumny (zmniejszona ze 170px) */
+  padding: 8px 12px;
+  font-size: 14px; /* Zmniejszony font */
+}
+
+.team-cell {
+  flex: 1;
+  background-color: white;
+  font-weight: 600;
+  font-size: 21px;
+}
+
+/* Stylizacja awatara w tabeli */
+.team-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.mini-avatar {
+  width: 35px;  /* Zmniejszone z 50px */
+  height: 35px; /* Zmniejszone z 50px */
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  background: #fff;
+  object-fit: contain;
+}
+
+/* Aktywna drużyna - TWOJE ORYGINALNE EFEKTY */
+.active-column {
+  position: relative;
+  font-weight: 700;
+  transform: scale(1.03);
+  z-index: 2;
+  background-color: #fff; // Upewnienie się, że tło nie znika
+}
+
+.active-column::before {
+  content: '';
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  right: -3px;
+  bottom: -3px;
+  border-radius: 14px;
+  padding: 2px;
+  background: linear-gradient(135deg, #42a5f5, #1976d2);
+  z-index: -1;
+  filter: blur(6px);
+  opacity: 0.8;
+}
+
+.points-cell {
+  font-size: 30px;
+  font-weight: 800;
+}
+.answers-count-cell {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.eliminated {
+  opacity: 0.4;
+  filter: grayscale(1);
+}
+
+/* ===================== */
+/* KULKI SZANS */
+/* ===================== */
+
+.chances-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.chance-dot,
+.lost-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.chance-dot {
+  background-color: #4caf50;
+  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+}
+
+.lost-dot {
+  background-color: #e53935;
+  opacity: 0.35;
+}

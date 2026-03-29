@@ -1,38 +1,4 @@
 /* ===================== */
-/* LICZNIK */
-/* ===================== */
-
-.counter-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 24px;
-}
-
-.counter-badge {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  background: linear-gradient(135deg, #42a5f5, #1976d2);
-  padding: 14px 28px;
-  border-radius: 50px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  color: white;
-  font-weight: 600;
-  font-size: 16px;
-}
-
-.counter-number {
-  background: white;
-  color: #1976d2;
-  padding: 8px 18px;
-  border-radius: 24px;
-  font-size: 22px;
-  font-weight: bold;
-  min-width: 40px;
-  text-align: center;
-}
-
-/* ===================== */
 /* GRID ODPOWIEDZI */
 /* ===================== */
 
@@ -43,6 +9,7 @@
   gap: 18px;
   perspective: 1000px;
   transition: 0.2s;
+  padding: 20px;
 }
 
 .answers-wrapper.flash {
@@ -50,12 +17,16 @@
 }
 
 @keyframes flashRed {
-  0% { background: rgba(255, 0, 0, 0.3); }
-  100% { background: transparent; }
+  0% {
+    background: rgba(255, 0, 0, 0.3);
+  }
+  100% {
+    background: transparent;
+  }
 }
 
 /* ===================== */
-/* KAFELKI ODPOWIEDZI */
+/* KAFELKI ODPOWIEDZI (FLIP CARDS) */
 /* ===================== */
 
 .answer-box {
@@ -84,6 +55,7 @@
   transition: transform 0.6s ease-in-out;
   transform-style: preserve-3d;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
 }
 
 .flip-card-inner.flipped {
@@ -103,6 +75,7 @@
   font-weight: bold;
   font-size: 1.05rem;
   border: 3px solid #1976d2;
+  box-sizing: border-box; /* Ważne, by border nie powiększał karty */
 }
 
 .flip-card-front {
@@ -122,215 +95,44 @@
   transform: rotateY(180deg);
   flex-direction: column;
   gap: 6px;
-  transition: 0.3s ease;
   padding: 10px;
   text-align: center;
 }
 
+/* Styl dla nieodgadniętych odpowiedzi po zakończeniu gry */
 .flip-card-back.unanswered {
   background-color: #ffebee !important;
   color: #c62828 !important;
+  border-color: #c62828;
 }
 
 .answer-owner {
   font-size: 13px;
   opacity: 0.9;
+  font-weight: normal;
 }
 
 /* ===================== */
-/* TABLICA WYNIKÓW */
+/* PYTANIE I OGÓLNE */
 /* ===================== */
 
-.players-card {
-  padding: 28px;
-}
-
-.score-table {
-  display: flex;
-  flex-direction: column;
-  border-radius: 18px;
-  overflow: hidden;
-  font-size: 19px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  border: 2px solid rgba(0, 0, 0, 0.06);
-}
-
-.row {
-  display: flex;
-  transition: 0.3s ease;
-}
-
-.alt-row {
-  background: linear-gradient(90deg, #f8fbff, #eef6ff);
-}
-
-.cell {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px 14px;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  transition: 0.25s ease;
-}
-
-.row:last-child .cell { border-bottom: none; }
-.cell:last-child { border-right: none; }
-
-.header-cell {
-  flex: 0 0 170px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #f1f1f1, #e4e4e4);
-  color: #333;
-  font-size: 17px;
-}
-
-.team-cell {
-  flex: 1;
-  background-color: white;
-  font-weight: 600;
-  font-size: 21px;
-}
-
-/* Stylizacja awatara w tabeli */
-.team-header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.mini-avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 2px solid #ddd;
-  background: #fff;
-  object-fit: contain;
-}
-
-/* Aktywna drużyna - TWOJE ORYGINALNE EFEKTY */
-.active-column {
-  position: relative;
-  font-weight: 700;
-  transform: scale(1.03);
-  z-index: 2;
-}
-
-.active-column::before {
-  content: '';
-  position: absolute;
-  top: -3px; left: -3px; right: -3px; bottom: -3px;
-  border-radius: 14px;
-  padding: 2px;
-  background: linear-gradient(135deg, #42a5f5, #1976d2);
-  z-index: -1;
-  filter: blur(6px);
-  opacity: 0.8;
-}
-
-.points-cell { font-size: 30px; font-weight: 800; }
-.answers-count-cell { font-size: 24px; font-weight: 700; }
-
-/* ===================== */
-/* KULKI SZANS */
-/* ===================== */
-
-.chances-wrapper {
-  display: flex;
-  gap: 10px;
-}
-
-.chance-dot, .lost-dot {
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-}
-
-.chance-dot {
-  background-color: #4caf50;
-  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
-}
-
-.lost-dot {
-  background-color: #e53935;
-  opacity: 0.35;
-}
-
-/* ===================== */
-/* NOWE: KARTA TURY (CONTROL CARD) */
-/* ===================== */
-
-.control-card {
-  padding: 20px;
-  margin-top: 20px;
-}
-
-.turn-info {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+.question-card {
   margin-bottom: 20px;
-  justify-content: center;
+  padding: 10px;
 }
 
-.current-turn-avatar {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
-  border: 3px solid #1976d2;
-  padding: 3px;
-  background: white;
-  object-fit: contain;
-}
-
-.turn-team-name {
-  margin: 0 !important;
-  font-size: 1.5rem;
-  color: #1976d2;
-}
-
-.pulse {
-  animation: pulse-border 2s infinite;
-}
-
-@keyframes pulse-border {
-  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(25, 118, 210, 0.4); }
-  70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(25, 118, 210, 0); }
-  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(25, 118, 210, 0); }
-}
-
-/* ===================== */
-/* NOWE: ZWYCIĘZCA */
-/* ===================== */
-
-.winner-container {
-  text-align: center;
-}
-
-.winner-avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 5px solid #ffd700;
-  margin: 15px 0;
-  object-fit: contain;
-  background: white;
-}
-
-/* ===================== */
-/* WYŚRODKOWANIE */
-/* ===================== */
-
-.question-card h2, .result-card h2, .result-card h3.winner-name, .result-card p {
+.question-card h2 {
   text-align: center;
   margin: 0.6em 0;
 }
 
-.result-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 24px;
+
+.wrong-answer-flash {
+  animation: flash-red 0.4s;
+}
+
+@keyframes flash-red {
+  0% { background-color: transparent; }
+  50% { background-color: rgba(255, 0, 0, 0.4); }
+  100% { background-color: transparent; }
 }

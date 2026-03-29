@@ -1,0 +1,90 @@
+/* Główna karta kontrolna */
+.control-card {
+  margin-top: 20px;
+  padding: 15px 25px !important;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 6px solid #1e3a8a; /* Akcent koloru drużyny */
+}
+
+/* Kontener ustawiający wszystko w jednym rzędzie */
+.control-card mat-card-content,
+.control-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Sekcja informacji o turze (Avatar + Nazwa) */
+.turn-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0; /* Nie pozwalamy tej sekcji się zwężać */
+  padding-right: 20px;
+  border-right: 1px solid #eee;
+}
+
+.current-turn-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #1e3a8a;
+}
+
+.turn-team-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #374151;
+  white-space: nowrap;
+}
+
+/* Sekcja Inputu i Przycisku */
+.input-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1; /* Ta sekcja zajmie resztę wolnego miejsca */
+}
+
+/* Stylizacja pola Angular Material */
+.full-width {
+  flex-grow: 1;
+}
+
+/* Usuwamy domyślne marginesy Materialowe, które psują wyrównanie w pionie */
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none; /* Ukrywa miejsce na błędy/hinty, by zaoszczędzić pionowe miejsce */
+}
+
+/* Przycisk */
+.submit-btn {
+  height: 52px; /* Dopasowanie do wysokości inputa outline */
+  padding: 0 25px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.submit-btn:not([disabled]):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+}
+
+/* Animacja pulsu dla avatara aktualnej tury */
+.pulse {
+  animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+  0% { box-shadow: 0 0 0 0px rgba(30, 58, 138, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(30, 58, 138, 0); }
+  100% { box-shadow: 0 0 0 0px rgba(30, 58, 138, 0); }
+}
