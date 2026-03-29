@@ -1,6 +1,5 @@
-<div class="football-layout" [class.wrong-flash]="(gameCore.wrongFlash$ | async)">
+<div class="football-layout" [class.wrong-flash]="gameCore.wrongFlash$ | async">
   <ng-container *ngIf="question as q">
-
     <app-writing-game-status
       [question]="question"
       [gameFinished]="gameFinished"
@@ -79,7 +78,7 @@
 
   <ng-template #playerTemplate let-p>
     @if (p.country | flagUrl; as url) {
-      <img [src]="url" [alt]="p.country" class="flag-icon"/>
+      <img [src]="url" [alt]="p.country" class="flag-icon" />
     } @else {
       <span class="country-fallback">{{ p.country || '??' }}</span>
     }

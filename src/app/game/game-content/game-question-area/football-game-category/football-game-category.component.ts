@@ -17,10 +17,7 @@ import { Footballer, FootballTeam } from '../../../../shared/models/answers/answ
 import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
 
 // Utils & Helpers
-import {
-  areSimilar,
-  normalizeText,
-} from '../../../../shared/utils/text-logic';
+import { areSimilar, normalizeText } from '../../../../shared/utils/text-logic';
 import { generateTeamColors } from '../../../../shared/utils/color-helper';
 
 // Pipes & Components
@@ -28,7 +25,7 @@ import { FlagUrlPipe } from '../../../../shared/pipes/flag-url.pipe';
 import { WritingScoreBoardComponent } from '../writing-category/writing-score-board/writing-score-board.component';
 import { WritingControlsComponent } from '../writing-category/writting-controls/writing-controls.component';
 import { WritingGameStatusComponent } from '../writing-category/writing-game-status/writing-game-status.component';
-import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
+import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-football-game-category',
@@ -130,11 +127,10 @@ export class FootballGameCategoryComponent implements OnInit {
     ];
 
     // 3. Szukamy piłkarza używając logiki z GameCore (normalizacja + podobieństwo)
-    const footballer = allFootballers.find(p =>
-        !p.guessed && (
-          normalizeText(p.surname) === normalizeText(needle) ||
-          areSimilar(needle, p.surname)
-        )
+    const footballer = allFootballers.find(
+      (p) =>
+        !p.guessed &&
+        (normalizeText(p.surname) === normalizeText(needle) || areSimilar(needle, p.surname))
     );
 
     if (footballer) {
@@ -193,8 +189,8 @@ export class FootballGameCategoryComponent implements OnInit {
       }
     };
 
-    this.firstRows.forEach(row => row.forEach(reveal));
-    this.secondRows.forEach(row => row.forEach(reveal));
+    this.firstRows.forEach((row) => row.forEach(reveal));
+    this.secondRows.forEach((row) => row.forEach(reveal));
     this.firstSubstitutes.forEach(reveal);
     this.secondSubstitutes.forEach(reveal);
 
@@ -204,7 +200,7 @@ export class FootballGameCategoryComponent implements OnInit {
     // 3. Przeliczamy punkty dla WSZYSTKICH drużyn używając ustandaryzowanego CoreService
     const totalAnswers = this.getAllFootballersCount();
 
-    this.teams.forEach(team => {
+    this.teams.forEach((team) => {
       // Wykorzystujemy nową logikę: 0 trafień = 0 punktów
       team.calculatedPoints = this.gameCore.calculateFinalScore(
         team.correctAnswers,
@@ -214,14 +210,17 @@ export class FootballGameCategoryComponent implements OnInit {
         this.MAX_POINTS
       );
 
-      console.log(`[FOOTBALL] Drużyna ${team.name}: ${team.correctAnswers} trafień -> ${team.calculatedPoints} pkt`);
+      console.log(
+        `[FOOTBALL] Drużyna ${team.name}: ${team.correctAnswers} trafień -> ${team.calculatedPoints} pkt`
+      );
     });
 
     // 4. Wyłaniamy zwycięzcę (najwięcej punktów, potem najwięcej szans)
-    this.winner = [...this.teams].sort((a, b) =>
-      (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) ||
-      (b.chancesLeft - a.chancesLeft)
-    )[0] || null;
+    this.winner =
+      [...this.teams].sort(
+        (a, b) =>
+          (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) || b.chancesLeft - a.chancesLeft
+      )[0] || null;
 
     // 5. Aktualizacja stanu globalnego
     if (this.winner) {

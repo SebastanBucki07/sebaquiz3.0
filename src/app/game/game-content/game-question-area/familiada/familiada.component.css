@@ -122,9 +122,15 @@
 }
 
 @keyframes flash-red {
-  0% { opacity: 1; }
-  50% { background-color: rgba(255, 0, 0, 0.4); }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+  50% {
+    background-color: rgba(255, 0, 0, 0.4);
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 /* Opcjonalnie: potrząsanie tablicą przy błędzie */
@@ -133,9 +139,19 @@
 }
 
 @keyframes shake {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-10px); }
-  50% { transform: translateX(10px); }
-  75% { transform: translateX(-10px); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }

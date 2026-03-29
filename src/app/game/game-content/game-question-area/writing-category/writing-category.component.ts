@@ -1,24 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Observable, take} from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Observable, take } from 'rxjs';
 
 // Services
-import {QuestionService} from '../../../../services/question-service.service';
-import {GameStateService} from '../../../../services/game-state.service';
-import {PointsService} from '../../../../services/points-service.service';
-import {GameService} from '../../../../services/game.service';
+import { QuestionService } from '../../../../services/question-service.service';
+import { GameStateService } from '../../../../services/game-state.service';
+import { PointsService } from '../../../../services/points-service.service';
+import { GameService } from '../../../../services/game.service';
 
 // Models & Utils
-import {Question} from '../../../../shared/questions/question.interface';
-import {TeamInWritingCategory} from '../../../../shared/models/teams/teamForWrittingCategory.interface';
-import {generateTeamColors} from '../../../../shared/utils/color-helper';
+import { Question } from '../../../../shared/questions/question.interface';
+import { TeamInWritingCategory } from '../../../../shared/models/teams/teamForWrittingCategory.interface';
+import { generateTeamColors } from '../../../../shared/utils/color-helper';
 
 // Components
-import {WritingScoreBoardComponent} from './writing-score-board/writing-score-board.component';
-import {WritingControlsComponent} from './writting-controls/writing-controls.component';
-import {WritingGameStatusComponent} from './writing-game-status/writing-game-status.component';
-import {MATERIAL_IMPORTS} from '../../../../shared/material';
-import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
+import { WritingScoreBoardComponent } from './writing-score-board/writing-score-board.component';
+import { WritingControlsComponent } from './writting-controls/writing-controls.component';
+import { WritingGameStatusComponent } from './writing-game-status/writing-game-status.component';
+import { MATERIAL_IMPORTS } from '../../../../shared/material';
+import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-writing-category',
@@ -53,8 +53,7 @@ export class WritingCategoryComponent implements OnInit {
     private gameService: GameService,
     private pointsService: PointsService,
     public gameCore: WritingGameCoreService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
@@ -71,7 +70,7 @@ export class WritingCategoryComponent implements OnInit {
       }));
     });
 
-    this.gameCore.wrongFlash$.subscribe(isFlashing => {
+    this.gameCore.wrongFlash$.subscribe((isFlashing) => {
       this.wrongFlash = isFlashing;
     });
 
@@ -103,7 +102,7 @@ export class WritingCategoryComponent implements OnInit {
     const input = value.trim();
 
     // 2. Szukamy indeksu odpowiedzi (używamy map, aby wyciągnąć same teksty)
-    const allValues = this.question.answers.map(a => a.value);
+    const allValues = this.question.answers.map((a) => a.value);
     const ansIdx = this.gameCore.validateAnswer(
       input,
       allValues,
@@ -186,7 +185,7 @@ export class WritingCategoryComponent implements OnInit {
 
     const totalAnswers = this.question?.answers.length || 1;
 
-    this.teams.forEach(team => {
+    this.teams.forEach((team) => {
       team.calculatedPoints = this.gameCore.calculateFinalScore(
         team.correctAnswers,
         totalAnswers,
@@ -196,10 +195,11 @@ export class WritingCategoryComponent implements OnInit {
       );
     });
 
-    this.winner = [...this.teams].sort((a, b) =>
-      (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) ||
-      b.chancesLeft - a.chancesLeft
-    )[0] || null;
+    this.winner =
+      [...this.teams].sort(
+        (a, b) =>
+          (b.calculatedPoints ?? 0) - (a.calculatedPoints ?? 0) || b.chancesLeft - a.chancesLeft
+      )[0] || null;
 
     if (this.winner) {
       this.gameService.setCurrentTeam(this.winner.name);
@@ -212,5 +212,4 @@ export class WritingCategoryComponent implements OnInit {
   isRevealed(index: number): boolean {
     return this.question?.revealedAnswers?.includes(index) ?? false;
   }
-
 }

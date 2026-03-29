@@ -1,9 +1,9 @@
-import {Injectable} from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
-import {normalizeText, areSimilar} from '../shared/utils/text-logic';
-import {playSound} from '../shared/utils/audio-helper';
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+import { normalizeText, areSimilar } from '../shared/utils/text-logic';
+import { playSound } from '../shared/utils/audio-helper';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class WritingGameCoreService {
   private wrongFlashSubject = new BehaviorSubject<boolean>(false);
   wrongFlash$ = this.wrongFlashSubject.asObservable();
