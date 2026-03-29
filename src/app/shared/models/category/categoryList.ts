@@ -457,4 +457,18 @@ export const CATEGORY_LIST: Category[] = [
     basePoints: 5,
     hints: [],
   },
+  {
+    id: 36,
+    type: 'hints',
+    name: 'Łaicnskie sentencje',
+    basePoints: 5,
+    hints: [],
+  },
+  {
+    id: 37,
+    type: 'one-answer',
+    name: 'Klubowe przydomki',
+    basePoints: 2,
+    hints: [],
+  },
 ];

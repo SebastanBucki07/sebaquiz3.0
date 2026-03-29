@@ -1,6 +1,6 @@
-import {TeamInWritingCategory} from './teams/teamForWrittingCategory.interface';
+import { TeamInWritingCategory } from './teams/teamForWrittingCategory.interface';
 
 export interface GameParticipant extends TeamInWritingCategory {
-    isEliminated: boolean; // mistakes >= MAX_CHANCES
+  isEliminated: boolean; // mistakes >= MAX_CHANCES
   hasFinishedTurn: boolean;
 }

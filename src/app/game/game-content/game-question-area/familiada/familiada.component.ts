@@ -1,15 +1,15 @@
-import {Component, OnInit} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Observable, tap} from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Observable, tap } from 'rxjs';
 
-import {QuestionService} from '../../../../services/question-service.service';
-import {GameService} from '../../../../services/game.service';
-import {PointsService} from '../../../../services/points-service.service';
-import {Question} from '../../../../shared/questions/question.interface';
+import { QuestionService } from '../../../../services/question-service.service';
+import { GameService } from '../../../../services/game.service';
+import { PointsService } from '../../../../services/points-service.service';
+import { Question } from '../../../../shared/questions/question.interface';
 
-import {WritingControlsComponent} from '../writing-category/writting-controls/writing-controls.component';
-import {WritingGameStatusComponent} from '../writing-category/writing-game-status/writing-game-status.component';
-import {WritingGameCoreService} from '../../../../services/writting-game-core.service';
+import { WritingControlsComponent } from '../writing-category/writting-controls/writing-controls.component';
+import { WritingGameStatusComponent } from '../writing-category/writing-game-status/writing-game-status.component';
+import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-familiada',
@@ -36,12 +36,11 @@ export class FamiliadaComponent implements OnInit {
     private gameService: GameService,
     private pointsService: PointsService,
     public gameCore: WritingGameCoreService
-  ) {
-  }
+  ) {}
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$.pipe(
-      tap(q => {
+      tap((q) => {
         if (q && this.currentQuestion && q.id !== this.currentQuestion.id) {
           this.resetRound();
         }
@@ -49,7 +48,7 @@ export class FamiliadaComponent implements OnInit {
       })
     );
 
-    this.gameService.currentTeam$.subscribe(name => this.currentTeamName = name);
+    this.gameService.currentTeam$.subscribe((name) => (this.currentTeamName = name));
   }
 
   private resetRound(): void {
@@ -68,7 +67,7 @@ export class FamiliadaComponent implements OnInit {
     return {
       ...fullData,
       mistakes: this.mistakes,
-      chancesLeft: this.MAX_CHANCES - this.mistakes
+      chancesLeft: this.MAX_CHANCES - this.mistakes,
     };
   }
 
@@ -76,7 +75,7 @@ export class FamiliadaComponent implements OnInit {
     const data = this.gameService.getFullTeamData(this.currentTeamName);
     return {
       ...data,
-      calculatedPoints: this.earnedPoints
+      calculatedPoints: this.earnedPoints,
     };
   }
 
@@ -86,7 +85,7 @@ export class FamiliadaComponent implements OnInit {
     const q = this.currentQuestion;
     if (!q) return;
 
-    const allValues = q.answers.map(a => a.value);
+    const allValues = q.answers.map((a) => a.value);
     const idx = this.gameCore.validateAnswer(value, allValues, q.revealedAnswers || []);
 
     if (idx >= 0) {

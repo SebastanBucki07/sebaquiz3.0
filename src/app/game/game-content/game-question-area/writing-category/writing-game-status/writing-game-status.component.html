@@ -1,17 +1,18 @@
 <div class="counter-wrapper" *ngIf="!gameFinished">
-
   <div *ngIf="question">
-    <h2 class="question-text">{{ question.question }} - <span class="counter-label">Pozostało: </span>
-      <span style="color: #fbbf24; font-size: 2.2rem;">{{ remainingAnswers }}</span></h2>
+    <h2 class="question-text">
+      {{ question.question }} -
+      <span class="counter-label">Pozostało:</span>
+      <span style="color: #fbbf24; font-size: 2.2rem">{{ remainingAnswers }}</span>
+    </h2>
   </div>
-
 </div>
 
 <mat-card class="result-card" *ngIf="gameFinished">
   <div *ngIf="winner; else noWinner" class="winner-container">
     <h2 class="winner-title">🏆 KONIEC RUNDY 🏆</h2>
     <div class="winner-avatar-wrapper">
-      <img [src]="winner.avatarUrl" class="winner-avatar" [alt]="winner.name"/>
+      <img [src]="winner.avatarUrl" class="winner-avatar" [alt]="winner.name" />
     </div>
     <h2 class="winner-name">{{ winner.name }} wygrywa!</h2>
     <div class="winner-score">

@@ -1,12 +1,13 @@
-<div class="familiada-layout"
-     [class.wrong-flash]="(gameCore.wrongFlash$ | async)"
-     *ngIf="question$ | async as question">
-
+<div
+  class="familiada-layout"
+  [class.wrong-flash]="gameCore.wrongFlash$ | async"
+  *ngIf="question$ | async as question"
+>
   <div class="top-controls" *ngIf="!gameFinished">
     <app-writing-controls
       [currentTeam]="currentTeamData"
-      (answerSubmitted)="submitAnswer($event)">
-    </app-writing-controls>
+      (answerSubmitted)="submitAnswer($event)"
+    ></app-writing-controls>
   </div>
 
   <div class="simple-status-bar">
@@ -23,7 +24,9 @@
       <div *ngFor="let ans of question.answers; let i = index" class="answer-slot">
         <div class="slot-inner" [class.revealed]="(question.revealedAnswers || []).includes(i)">
           <span class="slot-number">{{ i + 1 }}</span>
-          <span class="slot-text">{{ (question.revealedAnswers || []).includes(i) ? ans.value : '' }}</span>
+          <span class="slot-text">
+            {{ (question.revealedAnswers || []).includes(i) ? ans.value : '' }}
+          </span>
         </div>
       </div>
     </div>
@@ -32,7 +35,6 @@
   <app-writing-game-status
     *ngIf="gameFinished"
     [winner]="winnerForStatus"
-    [gameFinished]="gameFinished">
-  </app-writing-game-status>
-
+    [gameFinished]="gameFinished"
+  ></app-writing-game-status>
 </div>

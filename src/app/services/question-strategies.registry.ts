@@ -41,6 +41,8 @@ import { CountryProvider } from '../shared/providers/country.provider';
 import { FootballGridProvider } from '../shared/providers/football-grid.provider';
 import { mapOldFamiliadaToNew } from '../shared/mappers/familiada.mapper';
 import { mapCountriesToQuestions } from '../shared/mappers/countries.mapper';
+import { ZNANE_CYTATY } from '../shared/questions/latinMaxims.questions';
+import { KLUBOWE_PRZYDOMKI } from '../shared/questions/footballClubsNames.questions';
 
 // ==========================================
 // REJESTR STRATEGII
@@ -59,6 +61,7 @@ export const QUESTION_STRATEGIES: Record<string, QuestionLoader> = {
   'one-answer:Nazwy stadionów': () => STADIONY,
   'one-answer:Piłka nożna - wielkie imprezy': () => PILKA_NOZNA,
   'one-answer:Przysłowia': () => PRZYSLOWIA,
+  'one-answer:Klubowe przydomki': () => KLUBOWE_PRZYDOMKI,
   'one-answer:Stolice krajów': () => CountryProvider.getCapitals(),
 
   // Hints
@@ -68,6 +71,7 @@ export const QUESTION_STRATEGIES: Record<string, QuestionLoader> = {
   'hints:Film po bohaterach': () => BOHATEROWIE_FILMOWI,
   'hints:Serial po bohaterach': () => BOHATEROWIE_SERIALOWI,
   'hints:Miasta świata': () => MIASTA_SWIATA,
+  'hints:Łaicnskie sentencje': () => ZNANE_CYTATY,
   'hints:Reżyser po filmach': () => REZYSEROWIE,
 
   // Photos

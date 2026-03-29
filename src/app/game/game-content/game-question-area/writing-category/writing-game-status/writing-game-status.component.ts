@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Keep CommonModule for ngIf, ngFor etc.
 import { MatCardModule } from '@angular/material/card';
-import {Question} from '../../../../../shared/questions/question.interface';
+import { Question } from '../../../../../shared/questions/question.interface';
 
 @Component({
   selector: 'app-writing-game-status',
