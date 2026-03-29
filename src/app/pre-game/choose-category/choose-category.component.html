@@ -1,68 +1,78 @@
-<div class="modern-wrapper">
-  <div class="main-grid">
-    <section class="content-area">
-      <div class="global-actions" *ngIf="hasAvailableCategories()">
-        <button class="add-all-btn" (click)="addAllCategories()">
-          <mat-icon>library_add</mat-icon>
-          Dodaj wszystkie dostępne kategorie
-        </button>
-      </div>
+<div class="app-layout">
+  <header class="app-header">
+    <div class="logo">SEBAQUIZ <span>3.0</span></div>
+    <div class="header-right">
+      <button class="add-all-btn" (click)="addAllCategories()">
+        <mat-icon>auto_awesome</mat-icon> DODAJ WSZYSTKO (47)
+      </button>
+    </div>
+  </header>
 
-      <div class="group-container" *ngFor="let group of groupedCategories | keyvalue">
-        <ng-container *ngIf="getAvailableInGroup(group.value).length > 0">
-          <div class="group-header">
-            <span class="group-dot" [ngStyle]="{'background-color': 'hsl(' + (typeHues[group.key.toLowerCase()] || 250) + ', 70%, 50%)'}"></span>
-            <h3>{{ group.key }}</h3>
+  <main class="main-container">
+    <section class="horizontal-viewport">
+      <div class="main-column" *ngFor="let col of columns">
+        <div class="group-box" *ngFor="let group of col">
+          <div class="group-title">
+            <span class="dot" [ngStyle]="{'background': 'hsl(' + (typeHues[group.typeName] || 250) + ', 70%, 50%)'}"></span>
+            <h4>{{ group.typeName }}</h4>
+            <span class="count">{{ group.categories.length }}</span>
           </div>
-
-          <div class="bento-items">
-            <div
-              *ngFor="let cat of getAvailableInGroup(group.value); let i = index"
-              class="category-card"
-              [ngStyle]="getCategoryStyle(cat, i, group.value.length)"
-              (click)="addCategory(cat)"
-            >
-              <span class="name">{{ cat.name }}</span>
-              <div class="card-footer">
-                <span class="points">{{ cat.basePoints }} pkt</span>
-                <mat-icon>add</mat-icon>
+          <div class="cards-list">
+            <div *ngFor="let cat of group.categories" class="cat-card"
+                 [class.is-selected]="isCategorySelected(cat)"
+                 [ngStyle]="getCategoryStyle(cat)"
+                 (click)="addCategory(cat)">
+              <span class="cat-name">{{ cat.name }}</span>
+              <div class="cat-info">
+                <span class="pts">{{ cat.basePoints }} PKT</span>
+                <mat-icon>{{ isCategorySelected(cat) ? 'check_circle' : 'add' }}</mat-icon>
               </div>
             </div>
           </div>
-        </ng-container>
+        </div>
       </div>
     </section>
 
-    <aside class="sidebar-area">
-      <div class="floating-panel">
-        <div class="panel-header">
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-title-row">
           <h2>Wybrane <span>({{ selectedCategories.length }})</span></h2>
-          <button class="clear-btn" (click)="removeAllCategories()" *ngIf="selectedCategories.length > 0">
-            Reset
+          <button class="reset-btn" (click)="removeAllCategories()" *ngIf="selectedCategories.length > 0">
+            <mat-icon>delete_sweep</mat-icon> WYCZYŚĆ
           </button>
         </div>
+      </div>
 
-        <div class="selected-list-scroll">
-          <div class="empty-state" *ngIf="selectedCategories.length === 0">
-            <mat-icon>ads_click</mat-icon>
-            <p>Kliknij kategorie po lewej,<br>aby przygotować zestaw.</p>
-          </div>
-
-          <div class="selected-items-grid">
-            <div
-              *ngFor="let cat of selectedCategories; let i = index"
-              class="mini-card"
-              [ngStyle]="getCategoryStyle(cat, i, selectedCategories.length, true)"
-            >
-              <span class="cat-name">{{ cat.name }}</span>
-              <button (click)="removeCategory(cat)" class="remove-btn">
-                <mat-icon>close</mat-icon>
-              </button>
-            </div>
-          </div>
+      <div class="sidebar-scroll">
+        <div class="empty-state" *ngIf="selectedCategories.length === 0">
+          <mat-icon>collections_bookmark</mat-icon>
+          <p>Wybierz kategorie z listy,<br>aby stworzyć zestaw.</p>
         </div>
 
+        <div *ngFor="let cat of selectedCategories"
+             class="mini-card"
+             [ngStyle]="getCategoryStyle(cat, true)">
+          <div class="mini-card-content">
+            <span class="mini-name">{{ cat.name }}</span>
+            <span class="mini-type">{{ cat.type }}</span>
+          </div>
+          <button class="mini-remove" (click)="removeCategory(cat)">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+
+      <div class="sidebar-footer" *ngIf="selectedCategories.length > 0">
+        <button class="start-game-btn">
+          <span>ROZPOCZNIJ GRĘ</span>
+          <mat-icon>rocket_launch</mat-icon>
+        </button>
       </div>
     </aside>
-  </div>
+  </main>
+
+  <footer class="app-footer">
+    <span>Ready to Play | Załadowano 47 kategorii</span>
+    <span class="footer-stats">Suma punktów: <strong>{{ getTotalPoints() }}</strong></span>
+  </footer>
 </div>
