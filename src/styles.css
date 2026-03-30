@@ -1,26 +1,167 @@
-html,
-body {
+/* 1. IMPORT CZCIONKI */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap');
+
+/* 2. ZMIENNE GLOBALNE (Twój nowy "Theme") */
+:root {
+  --bg-main: #0f172a;
+  --bg-surface: #1e293b;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --accent: #8b5cf6; /* fioletowy zamiast różu */
+  --warn: #ef4444;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --glass: rgba(255, 255, 255, 0.03);
+}
+
+/* 3. RESET I BAZA */
+html, body {
   height: 100%;
   margin: 0;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  overflow: hidden; /* Zapobiega podwójnemu scrollowi */
 }
 
 app-root {
   display: flex;
   flex-direction: column;
-  min-height: 100vh; /* IMPORTANT - full viewport height */
+  height: 100vh;
+  width: 100vw;
+}
+
+/* 4. NADPISANIE PRZYCISKÓW MATERIAL (Twoje klasy .mat-) */
+.mat-raised-button, .mat-flat-button {
+  border-radius: 8px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: transform 0.2s, box-shadow 0.2s !important;
 }
 
 .mat-raised-button.mat-primary {
-  background-color: #1976d2 !important; /* strong blue */
+  background-color: var(--primary) !important;
   color: white !important;
+  box-shadow: 0 4px 14px 0 rgba(59, 130, 246, 0.39) !important;
 }
 
 .mat-raised-button.mat-warn {
-  background-color: #d32f2f !important; /* strong red */
+  background-color: var(--warn) !important;
   color: white !important;
+  box-shadow: 0 4px 14px 0 rgba(239, 68, 68, 0.39) !important;
 }
 
 .mat-raised-button.mat-accent {
-  background-color: #e91e63 !important; /* strong pink */
+  background-color: var(--accent) !important;
   color: white !important;
+}
+
+.mat-raised-button:hover {
+  transform: translateY(-1px);
+}
+
+/* 5. GLOBALNY SCROLLBAR */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 6. POMOCNICZE KLASY (Używaj ich w komponentach) */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+
+.center-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Nieco większy odstęp dla lepszego oddechu */
+  width: 100%;
+  padding: 30px 0;
+  background: rgba(15, 23, 42, 0.4); /* Subtelne tło pod przyciskami */
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+.center-buttons button {
+  min-width: 160px;
+  padding: 14px 28px;
+  font-size: 0.9rem; /* Nieco mniejszy, ale grubszy font pasuje do 'Inter' */
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 10px; /* Bardziej zaokrąglone rogi */
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Przycisk START (Główna akcja) */
+.start-button {
+  background: var(--primary) !important;
+  color: white !important;
+  box-shadow: 0 10px 20px -5px rgba(59, 130, 246, 0.4);
+}
+
+.start-button:hover {
+  transform: translateY(-3px);
+  background: var(--primary-hover) !important;
+  box-shadow: 0 15px 25px -5px rgba(59, 130, 246, 0.6);
+}
+
+.start-button:active {
+  transform: translateY(-1px);
+}
+
+/* Przycisk pomocniczy (np. Reset lub Powrót) */
+.secondary-button {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: var(--text-main) !important;
+  border: 1px solid var(--border) !important;
+  backdrop-filter: blur(5px);
+}
+
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border-color: rgba(255, 255, 255, 0.2) !important;
+  transform: translateY(-2px);
+}
+
+/* Ikony wewnątrz przycisków */
+.center-buttons mat-icon {
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
+  margin: 0; /* Resetujemy margines, bo gap w flexboxie załatwia sprawę */
+}
+
+/* GLOBALNE WYMUSZENIE BIAŁEGO TEKSTU DLA WSZYSTKICH INPUTÓW MATERIAL */
+.mat-mdc-form-field input,
+.mat-mdc-form-field textarea,
+.mat-input-element {
+  color: #f8fafc !important;
+  -webkit-text-fill-color: #f8fafc !important;
+}
+
+/* GLOBALNE WYMUSZENIE BIAŁEGO TEKSTU DLA PLACEHOLDERÓW */
+.mat-mdc-form-field-label,
+.mdc-floating-label {
+  color: #94a3b8 !important;
 }

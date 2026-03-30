@@ -3,53 +3,87 @@
   justify-content: center;
   align-items: center;
   gap: 24px;
-
   margin-top: 32px;
-  padding: 16px 0;
+  padding: 20px 0;
 }
 
-/* some features */
 .answer-btn {
-  min-width: 160px;
-  height: 48px;
-
-  font-size: 16px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-
-  border-radius: 12px; /* Material 3 vibe */
-  transition:
-    transform 120ms ease,
-    box-shadow 120ms ease;
+  min-width: 180px;
+  height: 56px !important; /* Wyższe dla lepszego kliku */
+  font-size: 1.1rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 14px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  background: rgba(15, 23, 42, 0.6) !important; /* Ciemne tło przycisku */
+  border: 2px solid transparent !important;
 }
 
-/* hover (when active) */
-.answer-btn:not(:disabled):hover {
-  transform: translateY(-1px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+/* --- PRZYCISK: ŹLE (RED NEON) --- */
+.btn-wrong {
+  color: #ef4444 !important;
+  border-color: rgba(239, 68, 68, 0.3) !important;
 }
 
-/* click */
+.btn-wrong:not(:disabled):hover {
+  background: rgba(239, 68, 68, 0.1) !important;
+  border-color: #ef4444 !important;
+  box-shadow: 0 0 20px rgba(239, 68, 68, 0.4);
+  transform: translateY(-3px);
+}
+
+/* --- PRZYCISK: DOBRZE (GREEN NEON) --- */
+.btn-correct {
+  color: #22c55e !important;
+  border-color: rgba(34, 197, 94, 0.3) !important;
+}
+
+.btn-correct:not(:disabled):hover {
+  background: rgba(34, 197, 94, 0.1) !important;
+  border-color: #22c55e !important;
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+  transform: translateY(-3px);
+}
+
+/* --- PRZYCISK: PÓŁ (AMBER NEON) --- */
+.btn-half {
+  color: #f59e0b !important;
+  border-color: rgba(245, 158, 11, 0.3) !important;
+}
+
+.btn-half:not(:disabled):hover {
+  background: rgba(245, 158, 11, 0.1) !important;
+  border-color: #f59e0b !important;
+  box-shadow: 0 0 20px rgba(245, 158, 11, 0.4);
+  transform: translateY(-3px);
+}
+
+/* --- STANY --- */
 .answer-btn:not(:disabled):active {
-  transform: translateY(0);
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(0) scale(0.95);
 }
 
-/* disabled */
 .answer-btn:disabled {
-  opacity: 0.6;
+  opacity: 0.2;
+  filter: grayscale(1);
   cursor: not-allowed;
 }
 
-/* mobile */
+/* --- MOBILE --- */
 @media (max-width: 600px) {
   .answer-buttons-container {
     flex-direction: column;
     gap: 16px;
+    width: 100%;
   }
 
   .answer-btn {
     width: 100%;
-    max-width: 280px;
+    max-width: 320px;
   }
 }

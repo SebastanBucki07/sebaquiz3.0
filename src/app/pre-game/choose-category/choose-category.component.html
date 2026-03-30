@@ -1,6 +1,5 @@
 <div class="app-layout">
   <header class="app-header">
-    <div class="logo">SEBAQUIZ <span>3.0</span></div>
     <div class="header-right">
       <button class="add-all-btn" (click)="addAllCategories()">
         <mat-icon>auto_awesome</mat-icon> DODAJ WSZYSTKO (47)
@@ -38,7 +37,7 @@
         <div class="sidebar-title-row">
           <h2>Wybrane <span>({{ selectedCategories.length }})</span></h2>
           <button class="reset-btn" (click)="removeAllCategories()" *ngIf="selectedCategories.length > 0">
-            <mat-icon>delete_sweep</mat-icon> WYCZYŚĆ
+            <mat-icon>delete_sweep</mat-icon> RESET
           </button>
         </div>
       </div>
@@ -46,11 +45,11 @@
       <div class="sidebar-scroll">
         <div class="empty-state" *ngIf="selectedCategories.length === 0">
           <mat-icon>collections_bookmark</mat-icon>
-          <p>Wybierz kategorie z listy,<br>aby stworzyć zestaw.</p>
+          <p>Wybierz kategorie,<br>aby stworzyć zestaw.</p>
         </div>
 
-        <div *ngFor="let cat of selectedCategories"
-             class="mini-card"
+        <div *ngFor="let cat of selectedCategories; trackBy: trackByCategoryId"
+             class="mini-card animated-item"
              [ngStyle]="getCategoryStyle(cat, true)">
           <div class="mini-card-content">
             <span class="mini-name">{{ cat.name }}</span>
@@ -62,17 +61,6 @@
         </div>
       </div>
 
-      <div class="sidebar-footer" *ngIf="selectedCategories.length > 0">
-        <button class="start-game-btn">
-          <span>ROZPOCZNIJ GRĘ</span>
-          <mat-icon>rocket_launch</mat-icon>
-        </button>
-      </div>
     </aside>
   </main>
-
-  <footer class="app-footer">
-    <span>Ready to Play | Załadowano 47 kategorii</span>
-    <span class="footer-stats">Suma punktów: <strong>{{ getTotalPoints() }}</strong></span>
-  </footer>
 </div>

@@ -6,11 +6,12 @@ import { Question } from '../../../../shared/questions/question.interface';
 import { AnswerButtonsComponent } from './answer-buttons/answer-buttons.component';
 import { AnswerItem } from '../../../../shared/models/answers/answerItem.interface';
 import { getClubNameByFile } from '../../../../shared/mappers/clubMapper';
+import {MATERIAL_IMPORTS} from '../../../../shared/material';
 
 @Component({
   selector: 'app-answer',
   standalone: true,
-  imports: [AsyncPipe, CommonModule, AnswerButtonsComponent],
+  imports: [AsyncPipe, CommonModule, AnswerButtonsComponent, MATERIAL_IMPORTS],
   templateUrl: './answer.component.html',
   styleUrls: ['./answer.component.css'],
 })

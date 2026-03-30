@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
+import {Component, OnInit, OnDestroy} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {Subject} from 'rxjs';
+import {takeUntil} from 'rxjs/operators';
 
-import { MATERIAL_IMPORTS } from '../../shared/material';
-import { GameService } from '../../services/game.service';
-import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
-import { Category } from '../../shared/models/category/category.interface';
+import {MATERIAL_IMPORTS} from '../../shared/material';
+import {GameService} from '../../services/game.service';
+import {CATEGORY_LIST} from '../../shared/models/category/categoryList';
+import {Category} from '../../shared/models/category/category.interface';
 
 interface CategoryGroup {
   typeName: string;
@@ -32,7 +32,8 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     'tictactoe': 5, 'country': 100, 'inne': 250
   };
 
-  constructor(private gameService: GameService) {}
+  constructor(private gameService: GameService) {
+  }
 
   ngOnInit() {
     this.loadSelectedFromStorage();
@@ -47,24 +48,56 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  // FUNKCJA DLA ANIMACJI (TrackBy)
+  // Pomaga Angularowi wiedzieć, który element jest nowy i zasługuje na animację
+  trackByCategoryId(index: number, category: Category): number {
+    return category.id;
+  }
+
   private prepareMultiColumnLayout() {
     const groupsMap: { [key: string]: Category[] } = {};
+
+    // 1. Grupowanie danych wejściowych
     CATEGORY_LIST.forEach(cat => {
       const type = (cat.type || 'inne').toLowerCase();
       if (!groupsMap[type]) groupsMap[type] = [];
       groupsMap[type].push(cat);
     });
 
-    const allGroups: CategoryGroup[] = Object.keys(groupsMap).map(key => ({
+    const allGroups = Object.keys(groupsMap).map(key => ({
       typeName: key,
-      categories: groupsMap[key]
+      categories: groupsMap[key],
+      size: groupsMap[key].length
     }));
 
-    const numberOfColumns = 4;
-    this.columns = Array.from({ length: numberOfColumns }, () => []);
-    allGroups.forEach((group, index) => {
-      this.columns[index % numberOfColumns].push(group);
+    // 2. Inicjalizacja 5 kolumn
+    const cols: { groups: any[], totalSize: number }[] = Array.from({ length: 5 }, () => ({
+      groups: [],
+      totalSize: 0
+    }));
+
+    // 3. Kolumna 1: Jedynki i Dwójki (zgodnie z Twoim pomysłem)
+    const smallGroups = allGroups.filter(g => g.size <= 2);
+    cols[0].groups = smallGroups;
+    cols[0].totalSize = smallGroups.reduce((sum, g) => sum + g.size, 0);
+
+    // 4. Reszta grup: Sortujemy malejąco (strategia LPT - Longest Processing Time)
+    const remainingGroups = allGroups.filter(g => g.size > 2)
+    .sort((a, b) => b.size - a.size);
+
+    // 5. Rozdzielanie do kolumn 2-5 (indeksy 1-4) algorytmem zachłannym
+    remainingGroups.forEach(group => {
+      // Znajdź kolumnę wśród 2-5, która ma obecnie najmniej elementów (totalSize)
+      const targetCol = cols
+      .slice(1) // bierzemy pod uwagę tylko kolumny od drugiej wzwyż
+      .reduce((prev, curr) => (prev.totalSize < curr.totalSize ? prev : curr));
+
+      targetCol.groups.push(group);
+      targetCol.totalSize += group.size;
     });
+
+    // Przepisanie wyników do zmiennej wyświetlanej w HTML
+    this.columns = cols.map(c => c.groups);
   }
 
   isCategorySelected(category: Category): boolean {
@@ -82,7 +115,7 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
         'color': '#f8fafc'
       };
     }
-    return { 'border-top': `3px solid ${color}` };
+    return {'border-top': `3px solid ${color}`};
   }
 
   getTotalPoints(): number {

@@ -1,25 +1,47 @@
+/* Usuwamy domyślne ograniczenia materiala dla akcji */
+mat-card-actions {
+  padding: 0 !important;
+  display: block !important;
+}
+
 .center-buttons {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
   width: 100%;
-  padding: 20px 0;
+  padding: 24px;
 }
 
-.center-buttons button {
-  min-width: 150px;
-  padding: 12px 24px;
-  font-size: 16px;
-  font-weight: bold;
+/* Styl dla przycisków funkcyjnych (Wybierz...) */
+.secondary-button {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: #94a3b8 !important; /* var(--text-muted) */
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  font-weight: 600 !important;
+  transition: 0.2s all ease !important;
 }
 
-.start-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.secondary-button:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+  color: white !important;
+  border-color: #3b82f6 !important;
 }
 
-.start-button mat-icon {
-  margin-right: 4px;
+/* Obsługa wyłączonego przycisku START */
+.start-button:disabled {
+  background: rgba(255, 255, 255, 0.05) !important;
+  color: rgba(255, 255, 255, 0.2) !important;
+  box-shadow: none !important;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Ikony wewnątrz przycisków */
+mat-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  width: 20px;
+  height: 20px;
 }

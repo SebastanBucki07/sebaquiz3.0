@@ -1,144 +1,130 @@
-/* ===================== */
-/* TABLICA WYNIKÓW */
-/* ===================== */
-
 :host {
   display: block;
   margin-bottom: 24px;
 }
 
-.players-card {
-  padding: 28px;
-  background: white;
-  border-radius: 12px;
+/* KARTA - Glassmorphism */
+.players-card-dark {
+  padding: 20px;
+  background: rgba(30, 41, 59, 0.4) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
 }
 
-.score-table {
+.score-table-modern {
   display: flex;
   flex-direction: column;
-  border-radius: 18px;
+  border-radius: 14px;
   overflow: hidden;
-  font-size: 19px;
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
-  border: 2px solid rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .row {
   display: flex;
-  transition: 0.3s ease;
+  background: rgba(15, 23, 42, 0.3);
 }
 
-.alt-row {
-  background: linear-gradient(90deg, #f8fbff, #eef6ff);
+.alt-row-dark {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .cell {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 12px; /* Zredukowane z 20px 14px */
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
-  transition: 0.25s ease;
+  padding: 12px;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.row:last-child .cell {
-  border-bottom: none;
-}
-.cell:last-child {
-  border-right: none;
-}
-
-.header-cell {
-  flex: 0 0 120px; /* Szerokość bocznej kolumny (zmniejszona ze 170px) */
-  padding: 8px 12px;
-  font-size: 14px; /* Zmniejszony font */
+/* BOCZNA ETYKIETA (Drużyna, Szanse, itp) */
+.side-label {
+  flex: 0 0 120px;
+  background: rgba(0, 0, 0, 0.2);
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 1px;
 }
 
 .team-cell {
   flex: 1;
-  background-color: white;
-  font-weight: 600;
-  font-size: 21px;
+  transition: 0.3s ease;
 }
 
-/* Stylizacja awatara w tabeli */
-.team-header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4px;
+.team-name-text-dark {
+  color: #f8fafc;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
-.mini-avatar {
-  width: 35px; /* Zmniejszone z 50px */
-  height: 35px; /* Zmniejszone z 50px */
+/* AVATAR W TABELI */
+.mini-avatar-glow {
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  border: 2px solid #ddd;
-  background: #fff;
+  border: 2px solid rgba(59, 130, 246, 0.3);
+  background: #0f172a;
+  padding: 2px;
   object-fit: contain;
 }
 
-/* Aktywna drużyna - TWOJE ORYGINALNE EFEKTY */
+/* AKTYWNA KOLUMNA (Twoja tura) */
 .active-column {
-  position: relative;
-  font-weight: 700;
-  transform: scale(1.03);
-  z-index: 2;
-  background-color: #fff; // Upewnienie się, że tło nie znika
+  background: rgba(59, 130, 246, 0.1) !important;
+  box-shadow: inset 0 0 15px rgba(59, 130, 246, 0.1);
 }
 
-.active-column::before {
-  content: '';
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
-  border-radius: 14px;
-  padding: 2px;
-  background: linear-gradient(135deg, #42a5f5, #1976d2);
-  z-index: -1;
-  filter: blur(6px);
-  opacity: 0.8;
+.active-column .mini-avatar-glow {
+  border-color: #3b82f6;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
 
-.points-cell {
-  font-size: 30px;
-  font-weight: 800;
+/* PUNKTY I WYNIKI */
+.points-cell-neon {
+  font-size: 28px !important;
+  font-weight: 900 !important;
+  color: #3b82f6 !important; /* Twój niebieski */
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
 }
+
 .answers-count-cell {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
 }
 
-.eliminated {
-  opacity: 0.4;
-  filter: grayscale(1);
-}
-
-/* ===================== */
 /* KULKI SZANS */
-/* ===================== */
-
 .chances-wrapper {
   display: flex;
-  gap: 10px;
+  gap: 6px;
 }
 
-.chance-dot,
-.lost-dot {
-  width: 18px;
-  height: 18px;
+.chance-dot-neon {
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
+  background: #22c55e;
+  box-shadow: 0 0 8px rgba(34, 197, 94, 0.5);
 }
 
-.chance-dot {
-  background-color: #4caf50;
-  box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
+.lost-dot-dark {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(239, 68, 68, 0.2);
 }
 
-.lost-dot {
-  background-color: #e53935;
-  opacity: 0.35;
+/* WYELIMINOWANI */
+.eliminated {
+  opacity: 0.2 !important;
+  filter: grayscale(1) blur(1px);
+}
+
+.eliminated .team-name-text-dark {
+  text-decoration: line-through;
 }

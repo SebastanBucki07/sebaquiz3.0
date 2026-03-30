@@ -1,96 +1,126 @@
-/* Główna karta kontrolna */
+/* GŁÓWNA KARTA - Teraz jako dolny pasek/panel */
 .control-card {
-  margin-top: 20px;
-  padding: 15px 25px !important;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  border-left: 6px solid #1e3a8a; /* Akcent koloru drużyny */
+  margin-top: 30px;
+  padding: 15px 30px !important;
+  background: rgba(15, 23, 42, 0.9) !important; /* Ciemne tło */
+  border-radius: 20px !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.3) !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 25px;
+  backdrop-filter: blur(10px);
 }
 
-/* Kontener ustawiający wszystko w jednym rzędzie */
-.control-card mat-card-content,
-.control-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-}
-
-/* Sekcja informacji o turze (Avatar + Nazwa) */
+/* SEKCJA TURY */
 .turn-info {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-shrink: 0; /* Nie pozwalamy tej sekcji się zwężać */
-  padding-right: 20px;
-  border-right: 1px solid #eee;
+  gap: 15px;
+  padding-right: 25px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar-wrapper {
+  position: relative;
 }
 
 .current-turn-avatar {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #1e3a8a;
+  border: 3px solid #3b82f6; /* Twój niebieski */
+  background: #1e293b;
+}
+
+.team-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.turn-label {
+  font-size: 0.6rem;
+  color: #64748b;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 .turn-team-name {
   margin: 0;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #374151;
+  font-size: 1.2rem;
+  font-weight: 800;
   white-space: nowrap;
 }
 
-/* Sekcja Inputu i Przycisku */
+/* SEKCJA INPUTU */
 .input-section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 10px;
-  flex-grow: 1; /* Ta sekcja zajmie resztę wolnego miejsca */
+  gap: 15px;
+  flex-grow: 1;
 }
 
-/* Stylizacja pola Angular Material */
 .full-width {
   flex-grow: 1;
 }
 
-/* Usuwamy domyślne marginesy Materialowe, które psują wyrównanie w pionie */
-::ng-deep .mat-mdc-form-field-subscript-wrapper {
-  display: none; /* Ukrywa miejsce na błędy/hinty, by zaoszczędzić pionowe miejsce */
+/* NAPRAWA KOLORÓW INPUTA MATERIAL */
+::ng-deep .custom-dark-input .mat-mdc-text-field-wrapper {
+  background-color: rgba(255, 255, 255, 0.03) !important;
 }
 
-/* Przycisk */
+::ng-deep .custom-dark-input .mdc-notched-outline__leading,
+::ng-deep .custom-dark-input .mdc-notched-outline__notch,
+::ng-deep .custom-dark-input .mdc-notched-outline__trailing {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+::ng-deep .custom-dark-input .mat-mdc-form-field-label {
+  color: #94a3b8 !important;
+}
+
+/* PRZYCISK ZATWIERDŹ */
 .submit-btn {
-  height: 52px; /* Dopasowanie do wysokości inputa outline */
-  padding: 0 25px;
-  font-weight: 600;
+  height: 56px !important;
+  background-color: #3b82f6 !important;
+  color: white !important;
+  padding: 0 30px !important;
+  border-radius: 12px !important;
+  font-weight: 800 !important;
   text-transform: uppercase;
   letter-spacing: 1px;
-  border-radius: 8px;
-  transition: all 0.2s;
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px;
+  transition: all 0.3s ease !important;
 }
 
-.submit-btn:not([disabled]):hover {
+.submit-btn:hover:not(:disabled) {
+  background-color: #2563eb !important;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5) !important;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
 }
 
-/* Animacja pulsu dla avatara aktualnej tury */
+.submit-btn:disabled {
+  opacity: 0.3;
+  background-color: #475569 !important;
+}
+
+/* ANIMACJA PULSU (Dostosowana do niebieskiego) */
 .pulse {
-  animation: pulse-animation 2s infinite;
+  animation: pulse-blue 2s infinite;
 }
 
-@keyframes pulse-animation {
-  0% {
-    box-shadow: 0 0 0 0px rgba(30, 58, 138, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(30, 58, 138, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0px rgba(30, 58, 138, 0);
-  }
+@keyframes pulse-blue {
+  0% { box-shadow: 0 0 0 0px rgba(59, 130, 246, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
+  100% { box-shadow: 0 0 0 0px rgba(59, 130, 246, 0); }
+}
+
+/* Ukrycie hintów pod inputem */
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
 }

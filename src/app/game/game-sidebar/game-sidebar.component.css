@@ -1,168 +1,141 @@
+/* KONTENER SIDEBARU */
 .sidebar-container {
   padding: 20px;
-  background-color: #f8f9fa;
+  background-color: #0f172a; /* Twoje główne tło */
   height: 100%;
   overflow-y: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* NAGŁÓWEK (Styl .group-title) */
+.header-box {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 12px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 12px 12px 0 0;
+  margin-bottom: 20px;
 }
 
 .ranking-title {
-  text-align: center;
-  margin: 10px 0 30px;
-  font-weight: 900;
+  font-size: 0.7rem !important;
   text-transform: uppercase;
-  color: #3f51b5;
+  margin: 0 !important;
+  color: #94a3b8 !important;
   letter-spacing: 2px;
-  font-size: 1.4rem;
+  font-weight: 900;
+  text-align: left !important;
 }
+
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; }
 
 .teams-ranking-grid {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
-/* KARTA DRUŻYNY */
+/* KARTA DRUŻYNY (Styl .group-box / .cat-card) */
 .team-leaderboard-card {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 25px 15px 15px;
-  background: white;
-  border-radius: 24px;
-  border: 1px solid #eee;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  padding: 30px 15px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* --- STYL DLA AKTYWNEJ DRUŻYNY (PODŚWIETLENIE) --- */
+/* --- DRUŻYNA AKTYWNA (Glow i obramowanie) --- */
 .team-leaderboard-card.is-active {
-  border: 3px solid #00d2ff;
-  background: linear-gradient(180deg, #ffffff 0%, #f0fbff 100%);
-  transform: scale(1.06);
-  z-index: 5;
-  box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
-  animation: active-glow 2s infinite ease-in-out;
+  background: rgba(59, 130, 246, 0.05);
+  border: 2px solid #3b82f6;
+  transform: scale(1.02);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);
 }
 
 .active-turn-indicator {
   position: absolute;
-  top: -12px;
-  background: #ff4081;
+  top: -10px;
+  background: #3b82f6; /* Zmieniono z różu na Twój niebieski */
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 900;
   display: flex;
   align-items: center;
   gap: 5px;
-  box-shadow: 0 4px 10px rgba(255, 64, 129, 0.4);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.4);
+  letter-spacing: 1px;
 }
 
-.active-turn-indicator mat-icon {
-  font-size: 16px;
-  width: 16px;
-  height: 16px;
-}
-
-/* AVATAR */
-.avatar-section {
-  margin-bottom: 15px;
-}
-
+/* AVATAR RANKINGOWY */
 .large-team-avatar {
-  width: 100px;
-  height: 100px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   object-fit: contain;
-  background-color: white;
-  border: 4px solid #f0f0f0;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  background: #1e293b;
+  border: 3px solid rgba(255, 255, 255, 0.05);
+  padding: 5px;
+  transition: 0.3s ease;
 }
 
 .is-active .large-team-avatar {
-  border-color: #00d2ff;
-  transform: scale(1.05);
+  border-color: #3b82f6;
+  transform: translateY(-5px);
 }
 
 /* TEKSTY */
-.team-details {
-  text-align: center;
-}
-
 .team-name {
   display: block;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-weight: 800;
-  color: #2c3e50;
+  margin-top: 10px;
   margin-bottom: 5px;
 }
 
-.team-points-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .points-label {
-  font-size: 0.7rem;
-  color: #95a5a6;
-  font-weight: 600;
+  font-size: 0.6rem;
+  color: #475569;
+  font-weight: 800;
   letter-spacing: 1px;
 }
 
 .points-value {
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 900;
-  color: #3f51b5;
 }
 
-/* ODZNAKA RANKINGU */
+/* RANK BADGES (Utrzymujemy kolory medali, ale z przezroczystością) */
 .rank-badge {
   position: absolute;
-  top: 15px;
-  left: 15px;
-  width: 30px;
-  height: 30px;
+  top: 10px;
+  left: 10px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 900;
-  font-size: 0.9rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.rank-1 {
-  background: linear-gradient(135deg, #ffd700, #ffa500);
-}
-.rank-2 {
-  background: linear-gradient(135deg, #c0c0c0, #8e8e8e);
-}
-.rank-3 {
-  background: linear-gradient(135deg, #cd7f32, #8b4513);
-}
-.rank-default {
-  background: #bdc3c7;
-}
-
-/* ANIMACJA */
-@keyframes active-glow {
-  0%,
-  100% {
-    box-shadow: 0 10px 25px rgba(0, 210, 255, 0.3);
-  }
-  50% {
-    box-shadow: 0 10px 40px rgba(0, 210, 255, 0.6);
-  }
-}
+.rank-1 { background: linear-gradient(135deg, #ffd700, #b8860b); color: #000; }
+.rank-2 { background: linear-gradient(135deg, #c0c0c0, #708090); }
+.rank-3 { background: linear-gradient(135deg, #cd7f32, #8b4513); }
+.rank-default { background: rgba(255, 255, 255, 0.05); color: #94a3b8; }
 
 .no-teams-message {
   text-align: center;
   padding: 40px;
-  color: #bdc3c7;
-  font-style: italic;
+  color: #475569;
 }

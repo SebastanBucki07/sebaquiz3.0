@@ -1,64 +1,68 @@
-/* Kontener główny licznika i pytania */
+/* --- LICZNIK I PYTANIE --- */
 .counter-wrapper {
   margin-bottom: 30px;
-  perspective: 1000px;
 }
 
-/* Styl pytania i licznika w jednym rzędzie */
 .question-text {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
-  color: white;
-  padding: 20px 30px;
+  /* Zmieniamy gradient na głęboki granat/czerń */
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: #f8fafc !important;
+  padding: 25px 35px;
   border-radius: 15px;
-  box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.2),
-    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   font-size: 1.8rem;
-  font-weight: 700;
+  font-weight: 800;
   text-align: center;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(59, 130, 246, 0.3) !important; /* Niebieski akcent na ramce */
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 15px;
   text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .counter-label {
-  color: #fbbf24; /* Złoty kolor dla etykiety "Pozostało" */
-  font-size: 1.2rem;
-  font-weight: 400;
+  color: #94a3b8 !important; /* Przygaszony szary dla etykiety */
+  font-size: 1.1rem;
+  font-weight: 500;
   margin-left: 10px;
 }
 
-/* Karta wyniku końcowego */
+.counter-number-value {
+  color: #fbbf24 !important; /* Złoty kolor dla liczby */
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+}
+
+/* --- KARTA WYNIKU --- */
 .result-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 40px;
+  background: rgba(30, 41, 59, 0.9) !important; /* Ciemne tło Slate */
+  backdrop-filter: blur(10px);
+  border-radius: 24px !important;
+  padding: 50px 40px !important;
   text-align: center;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  border: none;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5) !important;
+  border: 2px solid #fbbf24 !important; /* Złota ramka dla zwycięzcy */
   animation: slideInUp 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .winner-title {
-  color: #1e3a8a;
-  font-size: 1.5rem;
-  letter-spacing: 4px;
-  margin-bottom: 25px;
+  color: #fbbf24 !important; /* Złoty tytuł */
+  font-size: 1.4rem !important;
+  font-weight: 900 !important;
+  letter-spacing: 5px;
+  margin-bottom: 30px;
 }
 
-/* Avatar zwycięzcy */
 .winner-avatar-wrapper {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 20px;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 25px;
   border-radius: 50%;
-  padding: 5px;
+  padding: 6px;
   background: linear-gradient(45deg, #fbbf24, #f59e0b);
-  box-shadow: 0 10px 20px rgba(245, 158, 11, 0.3);
+  box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
 }
 
 .winner-avatar {
@@ -66,47 +70,48 @@
   height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid white;
+  border: 4px solid #1e293b; /* Kontrastowa obwódka wewnątrz złota */
 }
 
 .winner-name {
-  font-size: 2.2rem;
-  color: #111827;
-  margin-bottom: 10px;
-  font-weight: 800;
+  font-size: 2.5rem !important;
+  font-weight: 900 !important;
+  margin-bottom: 15px;
 }
 
 .winner-score {
   display: inline-block;
-  background: #f3f4f6;
-  padding: 10px 25px;
+  background: rgba(34, 197, 94, 0.1) !important; /* Delikatne zielone tło */
+  padding: 12px 30px;
   border-radius: 50px;
-  color: #059669; /* Zielony kolor punktów */
+  color: #4ade80 !important; /* Neonowy zielony punktów */
+  border: 1px solid rgba(74, 222, 128, 0.3);
 }
 
 .winner-score h3 {
   margin: 0;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1rem;
 }
 
 .winner-score span {
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-size: 2.2rem !important;
+  font-weight: 950 !important;
+  margin-left: 5px;
 }
 
 /* Styl dla braku zwycięzcy */
 .no-winner {
   padding: 40px;
-  color: #6b7280;
+  color: #64748b;
   font-style: italic;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
-/* Animacja wejścia karty wyników */
 @keyframes slideInUp {
   from {
     opacity: 0;
-    transform: translateY(30px) scale(0.95);
+    transform: translateY(40px) scale(0.9);
   }
   to {
     opacity: 1;

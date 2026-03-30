@@ -1,24 +1,31 @@
 <ng-container *ngIf="question$ | async as question">
-  <mat-card class="question-card-responsive">
-    <mat-card-header class="card-header-center">
-      <div class="question-image-wrapper">
-        <img src="question.png" alt="Question" class="question-image" />
-      </div>
-    </mat-card-header>
+  <div class="question-container-dark">
+    <mat-card class="question-card-responsive">
+      <mat-card-header class="card-header-center">
+        <div class="question-image-wrapper">
+          <img src="/question.png" alt="Question" class="question-image" />
+        </div>
+      </mat-card-header>
 
-    <mat-card-content class="card-content-center">
-      <p class="question-text-large">
-        {{ question.question }}
-      </p>
+      <mat-card-content class="card-content-center">
+        <p class="question-text-large" style="color: #f8fafc !important;">
+          {{ question.question }}
+        </p>
 
-      <mat-divider class="divider-large"></mat-divider>
+        <mat-divider class="divider-large"></mat-divider>
 
-      <mat-list>
-        <mat-list-item *ngFor="let hint of question.hints" class="hint-item-center">
-          <mat-icon matListItemIcon color="accent" class="icon-large">lightbulb</mat-icon>
-          <div matLine class="hint-text-large">{{ hint }}</div>
-        </mat-list-item>
-      </mat-list>
-    </mat-card-content>
-  </mat-card>
+        <div class="hints-section">
+          <h3 class="hints-title-custom">Dostępne wskazówki</h3>
+          <mat-list>
+            <mat-list-item *ngFor="let hint of question.hints" class="hint-item-center">
+              <mat-icon matListItemIcon class="icon-glow">lightbulb</mat-icon>
+              <div matLine class="hint-text-large" style="color: #cbd5e1 !important;">
+                {{ hint }}
+              </div>
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 </ng-container>

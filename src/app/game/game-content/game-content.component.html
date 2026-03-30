@@ -1,25 +1,27 @@
-<router-outlet></router-outlet>
+<div class="category-selection-wrapper">
+  <router-outlet></router-outlet>
 
-<mat-card class="category-header-card">
-  <mat-card-title class="category-title">Wybierz kategorię</mat-card-title>
-</mat-card>
+  <mat-card class="category-header-card">
+    <mat-card-title class="category-title" style="color: #f8fafc !important;">Wybierz kategorię</mat-card-title>
+  </mat-card>
 
-<div class="random-button-wrapper">
-  <button mat-raised-button color="accent" class="random-button" (click)="drawRandomQuestion()">
-    🎲 Wylosuj pytanie
-  </button>
-</div>
+  <div class="random-button-wrapper">
+    <button mat-raised-button color="accent" class="random-button" (click)="drawRandomQuestion()">
+      🎲 Wylosuj pytanie
+    </button>
+  </div>
 
-<div class="category-grid">
-  <button
-    mat-raised-button
-    *ngFor="let category of selectedCategories; let i = index"
-    class="category-button"
-    [style.background]="getCategoryColor(category, i)"
-    [class.disabled-category]="getRemainingQuestions(category) === 0"
-    (click)="goToCategory(category)"
-  >
-    {{ category.name | titlecase }}
-    <span *ngIf="getRemainingQuestions(category) > 0">({{ getRemainingQuestions(category) }})</span>
-  </button>
+  <div class="category-grid">
+    <button
+      mat-raised-button
+      *ngFor="let category of selectedCategories; let i = index"
+      class="category-button"
+      [style.background]="getCategoryColor(category, i)"
+      [class.disabled-category]="getRemainingQuestions(category) === 0"
+      (click)="goToCategory(category)"
+    >
+      {{ category.name | titlecase }}
+      <span *ngIf="getRemainingQuestions(category) > 0">({{ getRemainingQuestions(category) }})</span>
+    </button>
+  </div>
 </div>

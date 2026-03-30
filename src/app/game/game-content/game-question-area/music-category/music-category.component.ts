@@ -30,7 +30,7 @@ export class MusicCategoryComponent implements OnInit, OnDestroy {
   iframeSrc: SafeResourceUrl;
 
   private currentTimeout: any;
-  private readonly FRAGMENT_DURATION = 15;
+  private readonly FRAGMENT_DURATION = 30;
 
   constructor(
     private questionService: QuestionService,
