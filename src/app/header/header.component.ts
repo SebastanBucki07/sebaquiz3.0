@@ -2,16 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GameService } from '../services/game.service';
 import { QuestionService } from '../services/question-service.service';
-import {MATERIAL_IMPORTS} from '../shared/material';
+import { MATERIAL_IMPORTS } from '../shared/material';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  imports: [
-    MATERIAL_IMPORTS
-  ]
+  imports: [MATERIAL_IMPORTS],
 })
 export class HeaderComponent {
   constructor(

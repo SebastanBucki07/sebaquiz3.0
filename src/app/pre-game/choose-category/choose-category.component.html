@@ -2,7 +2,8 @@
   <header class="app-header">
     <div class="header-right">
       <button class="add-all-btn" (click)="addAllCategories()">
-        <mat-icon>auto_awesome</mat-icon> DODAJ WSZYSTKO (47)
+        <mat-icon>auto_awesome</mat-icon>
+        DODAJ WSZYSTKO (47)
       </button>
     </div>
   </header>
@@ -12,15 +13,21 @@
       <div class="main-column" *ngFor="let col of columns">
         <div class="group-box" *ngFor="let group of col">
           <div class="group-title">
-            <span class="dot" [ngStyle]="{'background': 'hsl(' + (typeHues[group.typeName] || 250) + ', 70%, 50%)'}"></span>
+            <span
+              class="dot"
+              [ngStyle]="{ background: 'hsl(' + (typeHues[group.typeName] || 250) + ', 70%, 50%)' }"
+            ></span>
             <h4>{{ group.typeName }}</h4>
             <span class="count">{{ group.categories.length }}</span>
           </div>
           <div class="cards-list">
-            <div *ngFor="let cat of group.categories" class="cat-card"
-                 [class.is-selected]="isCategorySelected(cat)"
-                 [ngStyle]="getCategoryStyle(cat)"
-                 (click)="addCategory(cat)">
+            <div
+              *ngFor="let cat of group.categories"
+              class="cat-card"
+              [class.is-selected]="isCategorySelected(cat)"
+              [ngStyle]="getCategoryStyle(cat)"
+              (click)="addCategory(cat)"
+            >
               <span class="cat-name">{{ cat.name }}</span>
               <div class="cat-info">
                 <span class="pts">{{ cat.basePoints }} PKT</span>
@@ -35,9 +42,17 @@
     <aside class="sidebar">
       <div class="sidebar-header">
         <div class="sidebar-title-row">
-          <h2>Wybrane <span>({{ selectedCategories.length }})</span></h2>
-          <button class="reset-btn" (click)="removeAllCategories()" *ngIf="selectedCategories.length > 0">
-            <mat-icon>delete_sweep</mat-icon> RESET
+          <h2>
+            Wybrane
+            <span>({{ selectedCategories.length }})</span>
+          </h2>
+          <button
+            class="reset-btn"
+            (click)="removeAllCategories()"
+            *ngIf="selectedCategories.length > 0"
+          >
+            <mat-icon>delete_sweep</mat-icon>
+            RESET
           </button>
         </div>
       </div>
@@ -45,12 +60,18 @@
       <div class="sidebar-scroll">
         <div class="empty-state" *ngIf="selectedCategories.length === 0">
           <mat-icon>collections_bookmark</mat-icon>
-          <p>Wybierz kategorie,<br>aby stworzyć zestaw.</p>
+          <p>
+            Wybierz kategorie,
+            <br />
+            aby stworzyć zestaw.
+          </p>
         </div>
 
-        <div *ngFor="let cat of selectedCategories; trackBy: trackByCategoryId"
-             class="mini-card animated-item"
-             [ngStyle]="getCategoryStyle(cat, true)">
+        <div
+          *ngFor="let cat of selectedCategories; trackBy: trackByCategoryId"
+          class="mini-card animated-item"
+          [ngStyle]="getCategoryStyle(cat, true)"
+        >
           <div class="mini-card-content">
             <span class="mini-name">{{ cat.name }}</span>
             <span class="mini-type">{{ cat.type }}</span>
@@ -60,7 +81,6 @@
           </button>
         </div>
       </div>
-
     </aside>
   </main>
 </div>

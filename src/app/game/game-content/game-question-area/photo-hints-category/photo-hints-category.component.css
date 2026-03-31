@@ -49,7 +49,7 @@
   font-weight: 700;
   color: #f8fafc;
   margin: 0;
-  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 /* --- STYL DLA ZWYKŁYCH ZDJĘĆ --- */
@@ -111,6 +111,12 @@
 
 /* ANIMACJA */
 @keyframes fadeInDown {
-  from { opacity: 0; transform: translateY(-20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

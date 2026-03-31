@@ -1,12 +1,12 @@
-import {Component, OnInit, OnDestroy} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {Subject} from 'rxjs';
-import {takeUntil} from 'rxjs/operators';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
-import {MATERIAL_IMPORTS} from '../../shared/material';
-import {GameService} from '../../services/game.service';
-import {CATEGORY_LIST} from '../../shared/models/category/categoryList';
-import {Category} from '../../shared/models/category/category.interface';
+import { MATERIAL_IMPORTS } from '../../shared/material';
+import { GameService } from '../../services/game.service';
+import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
+import { Category } from '../../shared/models/category/category.interface';
 
 interface CategoryGroup {
   typeName: string;
@@ -26,21 +26,29 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
   public readonly typeHues: { [key: string]: number } = {
-    'music': 285, 'one-answer': 140, 'abcd': 195, 'photos': 35,
-    'hints': 48, 'writting-category': 215, 'photo-fragments': 15,
-    'photo-hints': 175, 'familiada': 325, 'footballgame': 125,
-    'tictactoe': 5, 'country': 100, 'inne': 250
+    music: 285,
+    'one-answer': 140,
+    abcd: 195,
+    photos: 35,
+    hints: 48,
+    'writting-category': 215,
+    'photo-fragments': 15,
+    'photo-hints': 175,
+    familiada: 325,
+    footballgame: 125,
+    tictactoe: 5,
+    country: 100,
+    inne: 250,
   };
 
-  constructor(private gameService: GameService) {
-  }
+  constructor(private gameService: GameService) {}
 
   ngOnInit() {
     this.loadSelectedFromStorage();
     this.prepareMultiColumnLayout();
     this.gameService.reset$
-    .pipe(takeUntil(this.destroy$))
-    .subscribe(() => this.removeAllCategories());
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => this.removeAllCategories());
   }
 
   ngOnDestroy() {
@@ -58,50 +66,49 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     const groupsMap: { [key: string]: Category[] } = {};
 
     // 1. Grupowanie danych wejściowych
-    CATEGORY_LIST.forEach(cat => {
+    CATEGORY_LIST.forEach((cat) => {
       const type = (cat.type || 'inne').toLowerCase();
       if (!groupsMap[type]) groupsMap[type] = [];
       groupsMap[type].push(cat);
     });
 
-    const allGroups = Object.keys(groupsMap).map(key => ({
+    const allGroups = Object.keys(groupsMap).map((key) => ({
       typeName: key,
       categories: groupsMap[key],
-      size: groupsMap[key].length
+      size: groupsMap[key].length,
     }));
 
     // 2. Inicjalizacja 5 kolumn
-    const cols: { groups: any[], totalSize: number }[] = Array.from({ length: 5 }, () => ({
+    const cols: { groups: any[]; totalSize: number }[] = Array.from({ length: 5 }, () => ({
       groups: [],
-      totalSize: 0
+      totalSize: 0,
     }));
 
     // 3. Kolumna 1: Jedynki i Dwójki (zgodnie z Twoim pomysłem)
-    const smallGroups = allGroups.filter(g => g.size <= 2);
+    const smallGroups = allGroups.filter((g) => g.size <= 2);
     cols[0].groups = smallGroups;
     cols[0].totalSize = smallGroups.reduce((sum, g) => sum + g.size, 0);
 
     // 4. Reszta grup: Sortujemy malejąco (strategia LPT - Longest Processing Time)
-    const remainingGroups = allGroups.filter(g => g.size > 2)
-    .sort((a, b) => b.size - a.size);
+    const remainingGroups = allGroups.filter((g) => g.size > 2).sort((a, b) => b.size - a.size);
 
     // 5. Rozdzielanie do kolumn 2-5 (indeksy 1-4) algorytmem zachłannym
-    remainingGroups.forEach(group => {
+    remainingGroups.forEach((group) => {
       // Znajdź kolumnę wśród 2-5, która ma obecnie najmniej elementów (totalSize)
       const targetCol = cols
-      .slice(1) // bierzemy pod uwagę tylko kolumny od drugiej wzwyż
-      .reduce((prev, curr) => (prev.totalSize < curr.totalSize ? prev : curr));
+        .slice(1) // bierzemy pod uwagę tylko kolumny od drugiej wzwyż
+        .reduce((prev, curr) => (prev.totalSize < curr.totalSize ? prev : curr));
 
       targetCol.groups.push(group);
       targetCol.totalSize += group.size;
     });
 
     // Przepisanie wyników do zmiennej wyświetlanej w HTML
-    this.columns = cols.map(c => c.groups);
+    this.columns = cols.map((c) => c.groups);
   }
 
   isCategorySelected(category: Category): boolean {
-    return this.selectedCategories.some(c => c.id === category.id);
+    return this.selectedCategories.some((c) => c.id === category.id);
   }
 
   getCategoryStyle(cat: Category, isSidebar: boolean = false) {
@@ -111,11 +118,11 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     if (isSidebar) {
       return {
         'border-left': `4px solid ${color}`,
-        'background': `rgba(255, 255, 255, 0.05)`,
-        'color': '#f8fafc'
+        background: `rgba(255, 255, 255, 0.05)`,
+        color: '#f8fafc',
       };
     }
-    return {'border-top': `3px solid ${color}`};
+    return { 'border-top': `3px solid ${color}` };
   }
 
   getTotalPoints(): number {
@@ -135,7 +142,7 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   }
 
   removeCategory(cat: Category) {
-    this.selectedCategories = this.selectedCategories.filter(c => c.id !== cat.id);
+    this.selectedCategories = this.selectedCategories.filter((c) => c.id !== cat.id);
     this.save();
   }
 

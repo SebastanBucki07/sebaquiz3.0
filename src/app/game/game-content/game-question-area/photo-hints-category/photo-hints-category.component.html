@@ -1,5 +1,4 @@
 <div *ngIf="question$ | async as currentQuestion" class="question-container-dark">
-
   @if (currentQuestion.question | flagUrl; as flagUrl) {
     <div class="flag-question-wrapper">
       <span class="category-micro-label">Narodowość</span>
@@ -8,18 +7,20 @@
       </div>
       <h2 class="question-sub-title">Oto moja historia klubowa</h2>
     </div>
-  }
 
-  @else if (isImage(currentQuestion.question)) {
+  } @else if (isImage(currentQuestion.question)) {
     <div class="image-question-wrapper">
       <h2 class="question-title-glow">Zidentyfikuj na zdjęciu:</h2>
       <div class="main-photo-frame">
-        <img [src]="currentQuestion.question" class="question-photo-img" [alt]="currentQuestion.question" />
+        <img
+          [src]="currentQuestion.question"
+          class="question-photo-img"
+          [alt]="currentQuestion.question"
+        />
       </div>
     </div>
-  }
 
-  @else {
+  } @else {
     <div class="text-question-box">
       <p class="question-text-big">{{ currentQuestion.question }}</p>
     </div>

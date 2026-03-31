@@ -115,9 +115,15 @@
 }
 
 @keyframes pulse-blue {
-  0% { box-shadow: 0 0 0 0px rgba(59, 130, 246, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(59, 130, 246, 0); }
-  100% { box-shadow: 0 0 0 0px rgba(59, 130, 246, 0); }
+  0% {
+    box-shadow: 0 0 0 0px rgba(59, 130, 246, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(59, 130, 246, 0);
+  }
 }
 
 /* Ukrycie hintów pod inputem */

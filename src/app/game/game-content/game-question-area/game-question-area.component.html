@@ -1,20 +1,14 @@
 <div class="question-view-wrapper">
   <div class="question-card">
-
-
-
     <app-question-area-header
       [category]="currentCategory"
       [points]="pointsService.getAvailablePoints()"
-    >
-    </app-question-area-header>
+    ></app-question-area-header>
 
     <app-answer (correct)="correct()" (wrong)="wrong()" (half)="half()"></app-answer>
 
     <div class="question-content-area">
       <router-outlet (activate)="onActivate($event)"></router-outlet>
     </div>
-
-
   </div>
 </div>

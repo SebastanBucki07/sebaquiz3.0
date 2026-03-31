@@ -1,11 +1,15 @@
 <mat-card class="control-card" *ngIf="currentTeam">
   <div class="turn-info">
     <div class="avatar-wrapper">
-      <img [src]="currentTeam.avatarUrl" class="current-turn-avatar pulse" [alt]="currentTeam.name" />
+      <img
+        [src]="currentTeam.avatarUrl"
+        class="current-turn-avatar pulse"
+        [alt]="currentTeam.name"
+      />
     </div>
     <div class="team-text">
       <span class="turn-label">AKTUALNA TURA</span>
-      <h3 class="turn-team-name" style="color: #f8fafc !important;">{{ currentTeam.name }}</h3>
+      <h3 class="turn-team-name" style="color: #f8fafc !important">{{ currentTeam.name }}</h3>
     </div>
   </div>
 
@@ -18,16 +22,11 @@
         [(ngModel)]="inputValue"
         (keyup.enter)="submit()"
         autocomplete="off"
-        style="color: #f8fafc !important; caret-color: #3b82f6 !important;"
+        style="color: #f8fafc !important; caret-color: #3b82f6 !important"
       />
     </mat-form-field>
 
-    <button
-      mat-flat-button
-      class="submit-btn"
-      (click)="submit()"
-      [disabled]="!inputValue.trim()"
-    >
+    <button mat-flat-button class="submit-btn" (click)="submit()" [disabled]="!inputValue.trim()">
       <mat-icon>send</mat-icon>
       Zatwierdź
     </button>

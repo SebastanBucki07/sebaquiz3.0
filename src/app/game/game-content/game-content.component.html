@@ -2,7 +2,9 @@
   <router-outlet></router-outlet>
 
   <mat-card class="category-header-card">
-    <mat-card-title class="category-title" style="color: #f8fafc !important;">Wybierz kategorię</mat-card-title>
+    <mat-card-title class="category-title" style="color: #f8fafc !important">
+      Wybierz kategorię
+    </mat-card-title>
   </mat-card>
 
   <div class="random-button-wrapper">
@@ -21,7 +23,9 @@
       (click)="goToCategory(category)"
     >
       {{ category.name | titlecase }}
-      <span *ngIf="getRemainingQuestions(category) > 0">({{ getRemainingQuestions(category) }})</span>
+      <span *ngIf="getRemainingQuestions(category) > 0">
+        ({{ getRemainingQuestions(category) }})
+      </span>
     </button>
   </div>
 </div>

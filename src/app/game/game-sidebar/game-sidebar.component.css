@@ -29,7 +29,12 @@
   text-align: left !important;
 }
 
-.dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; }
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
 
 .teams-ranking-grid {
   display: flex;
@@ -129,10 +134,20 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.rank-1 { background: linear-gradient(135deg, #ffd700, #b8860b); color: #000; }
-.rank-2 { background: linear-gradient(135deg, #c0c0c0, #708090); }
-.rank-3 { background: linear-gradient(135deg, #cd7f32, #8b4513); }
-.rank-default { background: rgba(255, 255, 255, 0.05); color: #94a3b8; }
+.rank-1 {
+  background: linear-gradient(135deg, #ffd700, #b8860b);
+  color: #000;
+}
+.rank-2 {
+  background: linear-gradient(135deg, #c0c0c0, #708090);
+}
+.rank-3 {
+  background: linear-gradient(135deg, #cd7f32, #8b4513);
+}
+.rank-default {
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+}
 
 .no-teams-message {
   text-align: center;

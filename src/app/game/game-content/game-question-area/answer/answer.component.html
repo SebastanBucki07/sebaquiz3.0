@@ -1,7 +1,6 @@
 <div *ngIf="question$ | async as currentQuestion" class="answers-reveal-container">
   <ng-container *ngIf="currentQuestion.answers.length <= 2">
     <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
-
       <button
         mat-button
         class="answer-reveal-btn"
@@ -9,12 +8,16 @@
         [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)"
       >
         <mat-icon *ngIf="!(currentQuestion.revealedAnswers ?? []).includes(i)">visibility</mat-icon>
-        <mat-icon *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)">visibility_off</mat-icon>
+        <mat-icon *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)">
+          visibility_off
+        </mat-icon>
         Pokaż {{ answer.label || 'odpowiedź ' + (i + 1) }}
       </button>
 
       <div
-        *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')"
+        *ngIf="
+          (currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')
+        "
         class="answer-text-box revealed"
       >
         <div class="answer-label-dark">

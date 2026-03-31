@@ -24,7 +24,12 @@
   letter-spacing: 1px;
 }
 
-.dot { width: 8px; height: 8px; border-radius: 50%; background: #3b82f6; }
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3b82f6;
+}
 
 .add-team-card {
   background: rgba(255, 255, 255, 0.02);
@@ -111,8 +116,16 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.team-name-text { color: #f1f5f9; font-weight: 600; font-size: 0.85rem; }
-.pts-display { color: #3b82f6; font-weight: 900; font-size: 0.8rem; }
+.team-name-text {
+  color: #f1f5f9;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.pts-display {
+  color: #3b82f6;
+  font-weight: 900;
+  font-size: 0.8rem;
+}
 
 /* PRZYCISK DLA CIEBIE */
 .add-btn {
@@ -126,8 +139,21 @@
   cursor: pointer;
 }
 
-.add-btn:hover:not(:disabled) { background: #3b82f6; color: white; }
-.add-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+.add-btn:hover:not(:disabled) {
+  background: #3b82f6;
+  color: white;
+}
+.add-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
 
-.mini-remove { background: none; border: none; color: #64748b; cursor: pointer; }
-.mini-remove:hover { color: #ef4444; }
+.mini-remove {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+}
+.mini-remove:hover {
+  color: #ef4444;
+}

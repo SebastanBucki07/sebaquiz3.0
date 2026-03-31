@@ -22,10 +22,7 @@
         <mat-error *ngIf="teamInput.hasError('required')">Nazwa jest wymagana</mat-error>
       </mat-form-field>
 
-      <button
-        class="add-btn"
-        [disabled]="teamInput.invalid"
-        (click)="addTeam()">
+      <button class="add-btn" [disabled]="teamInput.invalid" (click)="addTeam()">
         <mat-icon>group_add</mat-icon>
         DODAJ
       </button>

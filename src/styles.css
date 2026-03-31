@@ -16,7 +16,8 @@
 }
 
 /* 3. RESET I BAZA */
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   background-color: var(--bg-main);
@@ -33,12 +34,15 @@ app-root {
 }
 
 /* 4. NADPISANIE PRZYCISKÓW MATERIAL (Twoje klasy .mat-) */
-.mat-raised-button, .mat-flat-button {
+.mat-raised-button,
+.mat-flat-button {
   border-radius: 8px !important;
   font-weight: 700 !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  transition: transform 0.2s, box-shadow 0.2s !important;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s !important;
 }
 
 .mat-raised-button.mat-primary {
@@ -82,7 +86,6 @@ app-root {
   border: 1px solid var(--border);
   border-radius: 12px;
 }
-
 
 .center-buttons {
   display: flex;
