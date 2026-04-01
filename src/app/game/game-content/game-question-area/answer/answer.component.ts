@@ -53,9 +53,7 @@ export class AnswerComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
 
-  // Opcjonalnie – metoda do ręcznego ujawniania odpowiedzi
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
-    // Nie trzeba nic ustawiać showAnswerButtons – zrobi to subskrypcja
   }
 }
