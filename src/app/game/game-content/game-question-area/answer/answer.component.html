@@ -1,39 +1,35 @@
-<div *ngIf="question$ | async as currentQuestion">
-  <!-- ===================== -->
-  <!-- ANSWERS / REVEAL BUTTONS -->
-  <!-- ===================== -->
-
-  <!-- Renderujemy tylko jeśli liczba odpowiedzi ≤ 2 -->
+<div *ngIf="question$ | async as currentQuestion" class="answers-reveal-container">
   <ng-container *ngIf="currentQuestion.answers.length <= 2">
     <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
-      <!-- PRZYCISK "POKAŻ ODPOWIEDŹ" -->
       <button
-        mat-raised-button
-        class="answer-button"
+        mat-button
+        class="answer-reveal-btn"
         (click)="revealAnswer(i)"
         [disabled]="(currentQuestion.revealedAnswers ?? []).includes(i)"
       >
+        <mat-icon *ngIf="!(currentQuestion.revealedAnswers ?? []).includes(i)">visibility</mat-icon>
+        <mat-icon *ngIf="(currentQuestion.revealedAnswers ?? []).includes(i)">
+          visibility_off
+        </mat-icon>
         Pokaż {{ answer.label || 'odpowiedź ' + (i + 1) }}
       </button>
 
-      <!-- TEKST ODPOWIEDZI – pojawia się tylko jeśli odkryta -->
       <div
         *ngIf="
           (currentQuestion.revealedAnswers ?? []).includes(i) && !answer.value.includes('rows')
         "
-        class="answer-text revealed"
+        class="answer-text-box revealed"
       >
-        <div class="answer-label">
+        <div class="answer-label-dark">
           {{ answer.label || 'Odpowiedź ' + (i + 1) }}
         </div>
-        {{ answer.value }}
+        <div class="answer-value-text">
+          {{ answer.value }}
+        </div>
       </div>
     </div>
   </ng-container>
 
-  <!-- ===================== -->
-  <!-- Answer Buttons Component -->
-  <!-- ===================== -->
   <app-answer-buttons
     *ngIf="showAnswerButtons"
     (correct)="correct.emit()"

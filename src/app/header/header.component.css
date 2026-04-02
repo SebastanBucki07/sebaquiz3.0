@@ -1,61 +1,84 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   position: sticky;
   top: 0;
-  height: 100px;
-  background: linear-gradient(90deg, #4a90e2, #50e3c2);
-  color: white;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 0 20px;
+  /* Zwiększamy wysokość headera, aby pomieścić duże logo */
+  height: 160px;
+  /* Ciemne, półprzezroczyste tło z efektem rozmycia */
+  background: rgba(15, 23, 42, 0.75) !important;
+  backdrop-filter: blur(15px) saturate(180%);
+  -webkit-backdrop-filter: blur(15px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0 40px; /* Więcej oddechu po bokach */
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* Logo container - centered */
+/* Trik na idealne wycentrowanie logo przycisku */
+.header::before {
+  content: '';
+  flex: 1;
+}
+
 .logo-container {
+  flex: 2; /* Logo dostaje najwięcej przestrzeni */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-image {
+  /* Powrót do dużej wysokości z Twojego oryginału */
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+  /* Niebieska poświata pasująca do nowego stylu */
+  filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.3));
+}
+
+.logo-image:hover {
+  transform: scale(1.03) translateY(-2px);
+  filter: drop-shadow(0 0 20px rgba(59, 130, 246, 0.5));
+}
+
+.new-game-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /* Centrowanie przycisku w pionie */
+  height: 100%;
+}
+
+.new-game {
+  background: rgba(59, 130, 246, 0.1);
+  color: #3b82f6;
+  border: 1px solid rgba(59, 130, 246, 0.4);
+  padding: 12px 24px; /* Nieco większy przycisk pasujący do dużego headera */
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex: 1;
-}
-
-/* Logo image - larger size */
-.logo-image {
-  width: auto;
-  max-height: 150px;
-  object-fit: contain;
-  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-}
-
-/* New Game button on the right */
-.new-game {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid white;
-  padding: 8px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s;
+  gap: 10px;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   white-space: nowrap;
-  position: absolute;
-  right: 20px;
 }
 
 .new-game:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: scale(1.05);
+  background: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transform: translateY(-2px);
 }
 
-.new-game:hover {
-  background: white;
-  color: #4a90e2;
-  border-color: #4a90e2;
-}
-
-/* logo w centrum */
-.logo {
-  text-align: center;
-  flex: 1;
+.new-game:active {
+  transform: translateY(0);
 }

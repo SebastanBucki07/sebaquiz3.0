@@ -1,17 +1,35 @@
-<div *ngIf="question$ | async as currentQuestion" class="question-container">
-  <!-- Użycie pipe'a flagUrl - to usunie ostrzeżenie z poprzedniej wiadomości -->
+<div *ngIf="question$ | async as currentQuestion" class="question-container-dark">
   @if (currentQuestion.question | flagUrl; as flagUrl) {
-    <img [src]="flagUrl" [alt]="currentQuestion.question" class="question-image" />
+    <div class="flag-question-wrapper">
+      <span class="category-micro-label">Narodowość</span>
+      <div class="main-flag-frame">
+        <img [src]="flagUrl" [alt]="currentQuestion.question" class="question-flag-img" />
+      </div>
+      <h2 class="question-sub-title">Oto moja historia klubowa</h2>
+    </div>
+
   } @else if (isImage(currentQuestion.question)) {
-    <h2 class="question-title">Narodowość</h2>
-    <img [src]="currentQuestion.question" class="question-image" [alt]="currentQuestion.question" />
+    <div class="image-question-wrapper">
+      <h2 class="question-title-glow">Zidentyfikuj na zdjęciu:</h2>
+      <div class="main-photo-frame">
+        <img
+          [src]="currentQuestion.question"
+          class="question-photo-img"
+          [alt]="currentQuestion.question"
+        />
+      </div>
+    </div>
+
   } @else {
-    <p class="question-text">{{ currentQuestion.question }}</p>
+    <div class="text-question-box">
+      <p class="question-text-big">{{ currentQuestion.question }}</p>
+    </div>
   }
 
-  <!-- Wyświetlanie podpowiedzi (np. obsady filmu) -->
-  <app-photo-tips
-    [hints]="currentQuestion.hints ?? []"
-    (hintUsed)="onHintUsed($event)"
-  ></app-photo-tips>
+  <div class="hints-section">
+    <app-photo-tips
+      [hints]="currentQuestion.hints ?? []"
+      (hintUsed)="onHintUsed($event)"
+    ></app-photo-tips>
+  </div>
 </div>

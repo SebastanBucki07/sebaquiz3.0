@@ -1,31 +1,16 @@
 <div class="answer-buttons-container">
-  <button
-    mat-raised-button
-    color="warn"
-    class="answer-btn wrong"
-    [disabled]="disabled"
-    (click)="wrong.emit()"
-  >
-    ❌ Źle
+  <button mat-button class="answer-btn btn-wrong" [disabled]="disabled" (click)="wrong.emit()">
+    <mat-icon>close</mat-icon>
+    Źle
   </button>
 
-  <button
-    mat-raised-button
-    color="primary"
-    class="answer-btn correct"
-    [disabled]="disabled"
-    (click)="correct.emit()"
-  >
-    ✅ Dobrze
+  <button mat-button class="answer-btn btn-correct" [disabled]="disabled" (click)="correct.emit()">
+    <mat-icon>check</mat-icon>
+    Dobrze
   </button>
 
-  <button
-    mat-raised-button
-    color="accent"
-    class="answer-btn half"
-    [disabled]="disabled"
-    (click)="half.emit()"
-  >
-    ✅ Pół punktu
+  <button mat-button class="answer-btn btn-half" [disabled]="disabled" (click)="half.emit()">
+    <mat-icon>star_half</mat-icon>
+    Pół punktu
   </button>
 </div>

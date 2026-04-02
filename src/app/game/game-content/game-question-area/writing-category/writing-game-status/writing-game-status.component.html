@@ -3,7 +3,7 @@
     <h2 class="question-text">
       {{ question.question }} -
       <span class="counter-label">Pozostało:</span>
-      <span style="color: #fbbf24; font-size: 2.2rem">{{ remainingAnswers }}</span>
+      <span class="counter-number-value">{{ remainingAnswers }}</span>
     </h2>
   </div>
 </div>
@@ -14,7 +14,7 @@
     <div class="winner-avatar-wrapper">
       <img [src]="winner.avatarUrl" class="winner-avatar" [alt]="winner.name" />
     </div>
-    <h2 class="winner-name">{{ winner.name }} wygrywa!</h2>
+    <h2 class="winner-name" style="color: #f8fafc !important">{{ winner.name }} wygrywa!</h2>
     <div class="winner-score">
       <h3>
         Zdobyte punkty:

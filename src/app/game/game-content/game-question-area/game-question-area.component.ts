@@ -57,7 +57,6 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   wrong() {
-    // also reset hints if you want the next question to be "clean"
     this.usedHints = [];
 
     this.gameService.nextTeam();
@@ -65,8 +64,8 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   correct(): void {
-    const points = this.currentPoints; // bierze pod uwagę hinty i dostępne punkty
-    this.pointsService.awardPointsToCurrentTeam(); // przyznaje dokładnie tyle punktów
+    const points = this.currentPoints;
+    this.pointsService.awardPointsToCurrentTeam();
     this.usedHints = [];
     this.gameService.nextTeam();
     this.router.navigate(['/game']);
@@ -107,7 +106,8 @@ export class GameQuestionAreaComponent implements OnInit {
 
   half(): void {
     const points = Math.ceil(this.currentPoints / 2);
-    this.pointsService.awardPointsToCurrentTeam();
+
+    this.pointsService.awardPointsToCurrentTeam(points);
     this.usedHints = [];
     this.gameService.nextTeam();
     this.router.navigate(['/game']);

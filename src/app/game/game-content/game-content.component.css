@@ -1,64 +1,106 @@
+/* Tło dla całej sekcji kategorii */
+.category-selection-wrapper {
+  background-color: #0f172a;
+  padding: 30px;
+  min-height: 100vh;
+}
+
+/* NAGŁÓWEK - Twoja koncepcja, ale w Dark Mode */
 .category-header-card {
-  margin-bottom: 24px;
+  margin-bottom: 30px;
   text-align: center;
-  background-color: #e3f2fd;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
   border-radius: 12px;
-  padding: 16px;
+  padding: 20px;
 }
 
 .category-title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #3f51b5;
-  text-transform: capitalize;
+  font-size: 1.8rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
   margin: 0;
 }
 
-.category-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-}
-
-.category-button {
-  flex: 1 1 200px;
-  min-height: 56px;
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  text-transform: capitalize;
-  color: #fff !important;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background 0.3s ease;
-
-  background: linear-gradient(45deg, #3f51b5, #2196f3);
-}
-
-.category-button:hover:not(:disabled) {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-}
-
-.category-button:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
-  background: #b0bec5;
-}
-
+/* PRZYCISK LOSOWANIA */
 .random-button-wrapper {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin: 30px 0;
 }
 
 .random-button {
-  font-size: 18px;
-  padding: 12px 28px;
-  border-radius: 30px;
+  background-color: #3b82f6 !important; /* Twój niebieski zamiast accent */
+  color: white !important;
+  font-size: 1.1rem !important;
+  padding: 12px 35px !important;
+  border-radius: 50px !important;
+  font-weight: 900 !important;
+  text-transform: uppercase;
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4) !important;
+}
+
+/* GRID PRZYCISKÓW - Twój oryginalny układ */
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+.category-button:hover:not(:disabled) {
+  transform: translateY(-4px) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4) !important;
+  filter: brightness(1.1);
+}
+
+/* Stan wyłączony - zachowujemy Twoją logikę */
+.disabled-category {
+  opacity: 0.15 !important;
+  cursor: not-allowed !important;
+  filter: grayscale(1);
+  background: #1e293b !important;
+}
+
+.category-button {
+  /* Zwiększamy bazową wielkość kafelka */
+  flex: 1 1 280px; /* Zwiększono z 250px, żeby kafelki były szersze */
+  min-height: 100px !important; /* Zwiększono z 70px - więcej miejsca w pionie */
+
+  /* Paddingi dla tekstu, żeby nie dotykał krawędzi */
+  padding: 15px 20px !important;
+  border-radius: 16px !important; /* Lekko większe zaokrąglenie */
+
+  /* Tekst */
+  font-size: 1.2rem !important; /* Nieco większy font */
+  font-weight: 800 !important;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff !important;
+
+  /* Lepsze trzymanie długiego tekstu */
+  white-space: normal; /* Pozwala na zawijanie tekstu */
+  line-height: 1.3 !important; /* Lepszy odstęp między liniami */
+  word-break: break-word; /* Dzieli bardzo długie słowa, żeby nie rozpychały przycisku */
+
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Dostosowanie licznika pytań, żeby nie był za duży */
+.category-button span {
+  display: block;
+  font-size: 0.8rem !important;
+  opacity: 0.85;
+  margin-top: 8px; /* Większy odstęp od głównej nazwy */
+  font-weight: 500 !important;
+}
+
+/* Opcjonalnie: jeśli chcesz, żeby przyciski zajmowały więcej miejsca na szerokość */
+.category-grid {
+  gap: 25px !important; /* Większe odstępy między kafelkami */
 }

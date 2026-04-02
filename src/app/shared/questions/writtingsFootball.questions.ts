@@ -6181,19 +6181,16 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     question: 'Reprezentacje na Euro 2016',
     answers: [
       {
-        value: 'Francja',
+        value: 'Portugalia',
       },
       {
-        value: 'Hiszpania',
+        value: 'Francja',
       },
       {
         value: 'Niemcy',
       },
       {
-        value: 'Anglia',
-      },
-      {
-        value: 'Portugalia',
+        value: 'Walia',
       },
       {
         value: 'Belgia',
@@ -6202,55 +6199,58 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
         value: 'Włochy',
       },
       {
-        value: 'Rosja',
-      },
-      {
-        value: 'Szwajcaria',
-      },
-      {
-        value: 'Austria',
-      },
-      {
-        value: 'Chorwacja',
-      },
-      {
-        value: 'Ukraina',
-      },
-      {
-        value: 'Czechy',
-      },
-      {
-        value: 'Szwecja',
-      },
-      {
         value: 'Polska',
-      },
-      {
-        value: 'Rumunia',
-      },
-      {
-        value: 'Słowacja',
-      },
-      {
-        value: 'Węgry',
-      },
-      {
-        value: 'Turcja',
-      },
-      {
-        value: 'Irlandia',
       },
       {
         value: 'Islandia',
       },
       {
-        value: 'Walia',
+        value: 'Chorwacja',
+      },
+      {
+        value: 'Hiszpania',
+      },
+      {
+        value: 'Szwajcaria',
+      },
+      {
+        value: 'Anglia',
+      },
+      {
+        value: 'Węgry',
+      },
+      {
+        value: 'Słowacja',
+      },
+      {
+        value: 'Irlandia',
+      },
+      {
+        value: 'Irlandia Północna',
+      },
+      {
+        value: 'Turcja',
       },
       {
         value: 'Albania',
       },
       {
-        value: 'Irlandia Północna',
+        value: 'Rumunia',
+      },
+      {
+        value: 'Szwecja',
+      },
+      {
+        value: 'Czechy',
+      },
+      {
+        value: 'Austria',
+      },
+      {
+        value: 'Rosja',
+      },
+      {
+        value: 'Ukraina',
       },
     ],
     hints: [],
@@ -6262,19 +6262,25 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     question: 'Reprezentacje Euro 2008',
     answers: [
       {
-        value: 'Szwajcaria',
+        value: 'Hiszpania',
       },
       {
-        value: 'Austria',
+        value: 'Niemcy',
       },
       {
-        value: 'Grecja',
+        value: 'Rosja',
+      },
+      {
+        value: 'Turcja',
+      },
+      {
+        value: 'Chorwacja',
       },
       {
         value: 'Holandia',
       },
       {
-        value: 'Chorwacja',
+        value: 'Portugalia',
       },
       {
         value: 'Włochy',
@@ -6289,13 +6295,7 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
         value: 'Rumunia',
       },
       {
-        value: 'Niemcy',
-      },
-      {
-        value: 'Portugalia',
-      },
-      {
-        value: 'Hiszpania',
+        value: 'Austria',
       },
       {
         value: 'Polska',
@@ -6304,10 +6304,10 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
         value: 'Francja',
       },
       {
-        value: 'Turcja',
+        value: 'Szwajcaria',
       },
       {
-        value: 'Rosja',
+        value: 'Grecja',
       },
     ],
     hints: [],
@@ -6318,81 +6318,30 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     id: 30,
     question: 'Reprezentacje Euro 2020',
     answers: [
-      {
-        value: 'Anglia',
-      },
-      {
-        value: 'Ukraina',
-      },
-      {
-        value: 'Niemcy',
-      },
-      {
-        value: 'Szwajcaria',
-      },
-      {
-        value: 'Chorwacja',
-      },
-      {
-        value: 'Hiszpania',
-      },
-      {
-        value: 'Polska',
-      },
-      {
-        value: 'Francja',
-      },
-      {
-        value: 'Belgia',
-      },
-      {
-        value: 'Włochy',
-      },
-      {
-        value: 'Czechy',
-      },
-      {
-        value: 'Portugalia',
-      },
-      {
-        value: 'Holandia',
-      },
-      {
-        value: 'Dania',
-      },
-      {
-        value: 'Walia',
-      },
-      {
-        value: 'Szwecja',
-      },
-      {
-        value: 'Austria',
-      },
-      {
-        value: 'Turcja',
-      },
-      {
-        value: 'Rosja',
-      },
-      {
-        value: '1996, 2004, 2008, 2012, 2016)',
-      },
-      {
-        value: 'Finlandia',
-      },
-      {
-        value: 'Węgry',
-      },
-      {
-        value: 'Słowacja',
-      },
-      {
-        value: 'Szkocja',
-      },
-      {
-        value: 'Macedonia Północna',
-      },
+      { value: 'Włochy' },
+      { value: 'Anglia' },
+      { value: 'Dania' },
+      { value: 'Hiszpania' },
+      { value: 'Belgia' },
+      { value: 'Czechy' },
+      { value: 'Szwajcaria' },
+      { value: 'Ukraina' },
+      { value: 'Holandia' },
+      { value: 'Szwecja' },
+      { value: 'Francja' },
+      { value: 'Austria' },
+      { value: 'Portugalia' },
+      { value: 'Chorwacja' },
+      { value: 'Niemcy' },
+      { value: 'Walia' },
+      { value: 'Finlandia' },
+      { value: 'Słowacja' },
+      { value: 'Rosja' },
+      { value: 'Węgry' },
+      { value: 'Polska' },
+      { value: 'Szkocja' },
+      { value: 'Macedonia Północna' },
+      { value: 'Turcja' },
     ],
     hints: [],
     revealedAnswers: [],
@@ -6402,102 +6351,38 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     id: 31,
     question: 'Reprezentacje MŚ 2022',
     answers: [
-      {
-        value: 'Katar',
-      },
-      {
-        value: 'Iran',
-      },
-      {
-        value: 'Arabia Saudyjska',
-      },
-      {
-        value: 'Korea Południowa',
-      },
-      {
-        value: 'Japonia',
-      },
-      {
-        value: 'Senegal',
-      },
-      {
-        value: 'Ghana',
-      },
-      {
-        value: 'Kamerun',
-      },
-      {
-        value: 'Maroko',
-      },
-      {
-        value: 'Tunezja',
-      },
-      {
-        value: 'Serbia',
-      },
-      {
-        value: 'Hiszpania',
-      },
-      {
-        value: 'Szwajcaria',
-      },
-      {
-        value: 'Francja',
-      },
-      {
-        value: 'Belgia',
-      },
-      {
-        value: 'Dania',
-      },
-      {
-        value: 'Holandia',
-      },
-      {
-        value: 'Chorwacja',
-      },
-      {
-        value: 'Anglia',
-      },
-      {
-        value: 'Niemcy',
-      },
-      {
-        value: 'Walia',
-      },
-      {
-        value: 'Polska',
-      },
-      {
-        value: 'Portugalia',
-      },
-      {
-        value: 'Brazylia',
-      },
-      {
-        value: 'Argentyna',
-      },
-      {
-        value: 'Urugwaj',
-      },
-      {
-        value: 'Ekwador',
-      },
-      {
-        value: 'Kanada',
-      },
-      {
-        value: 'Meksyk',
-      },
-      {
-        value: 'Stany Zjednoczone',
-      },
-      {
-        value: 'Australia',
-      },
-      {
-        value: 'Kostaryka',
-      },
+      { value: 'Argentyna' },
+      { value: 'Francja' },
+      { value: 'Chorwacja' },
+      { value: 'Maroko' },
+      { value: 'Holandia' },
+      { value: 'Anglia' },
+      { value: 'Brazylia' },
+      { value: 'Portugalia' },
+      { value: 'Japonia' },
+      { value: 'Senegal' },
+      { value: 'Australia' },
+      { value: 'Szwajcaria' },
+      { value: 'Hiszpania' },
+      { value: 'USA' },
+      { value: 'Polska' },
+      { value: 'Korea Południowa' },
+      { value: 'Niemcy' },
+      { value: 'Ekwador' },
+      { value: 'Kamerun' },
+      { value: 'Urugwaj' },
+      { value: 'Tunezja' },
+      { value: 'Meksyk' },
+      { value: 'Belgia' },
+      { value: 'Ghana' },
+      { value: 'Arabia Saudyjska' },
+      { value: 'Iran' },
+      { value: 'Kostaryka' },
+      { value: 'Dania' },
+      { value: 'Serbia' },
+      { value: 'Walia' },
+      { value: 'Kanada' },
+      { value: 'Katar' },
     ],
     hints: [],
     revealedAnswers: [],
@@ -6507,102 +6392,285 @@ export const WYPISZ_WSPOLNE_PILKA_NOZNA = [
     id: 32,
     question: 'Reprezentacje MŚ 2010',
     answers: [
-      {
-        value: 'RPA',
-      },
-      {
-        value: 'Kamerun',
-      },
-      {
-        value: 'Nigeria',
-      },
-      {
-        value: 'Algieria',
-      },
-      {
-        value: 'Ghana',
-      },
-      {
-        value: 'Wybrzeże Kości Słoniowej',
-      },
-      {
-        value: 'Dania',
-      },
-      {
-        value: 'Szwajcaria',
-      },
-      {
-        value: 'Słowacja',
-      },
-      {
-        value: 'Niemcy',
-      },
-      {
-        value: 'Hiszpania',
-      },
-      {
-        value: 'Anglia',
-      },
-      {
-        value: 'Serbia',
-      },
-      {
-        value: 'Włochy',
-      },
-      {
-        value: 'Holandia',
-      },
-      {
-        value: 'Francja',
-      },
-      {
-        value: 'Portugalia',
-      },
-      {
-        value: 'Grecja',
-      },
-      {
-        value: 'Słowenia',
-      },
-      {
-        value: 'Brazylia',
-      },
-      {
-        value: 'Chile',
-      },
-      {
-        value: 'Paragwaj',
-      },
-      {
-        value: 'Argentyna',
-      },
-      {
-        value: 'Urugwaj',
-      },
-      {
-        value: 'Stany Zjednoczone',
-      },
-      {
-        value: 'Meksyk',
-      },
-      {
-        value: 'Honduras',
-      },
-      {
-        value: 'Australia',
-      },
-      {
-        value: 'Japonia',
-      },
-      {
-        value: 'Korea Południowa',
-      },
-      {
-        value: 'Korea Północna',
-      },
-      {
-        value: 'Nowa Zelandia',
-      },
+      { value: 'Hiszpania' },
+      { value: 'Holandia' },
+      { value: 'Niemcy' },
+      { value: 'Urugwaj' },
+      { value: 'Argentyna' },
+      { value: 'Brazylia' },
+      { value: 'Paragwaj' },
+      { value: 'Ghana' },
+      { value: 'Japonia' },
+      { value: 'Chile' },
+      { value: 'Portugalia' },
+      { value: 'USA' },
+      { value: 'Anglia' },
+      { value: 'Meksyk' },
+      { value: 'Korea Południowa' },
+      { value: 'Słowacja' },
+      { value: 'Wybrzeże Kości Słoniowej' },
+      { value: 'Słowenia' },
+      { value: 'Szwajcaria' },
+      { value: 'RPA' },
+      { value: 'Australia' },
+      { value: 'Nowa Zelandia' },
+      { value: 'Serbia' },
+      { value: 'Dania' },
+      { value: 'Grecja' },
+      { value: 'Włochy' },
+      { value: 'Nigeria' },
+      { value: 'Algieria' },
+      { value: 'Francja' },
+      { value: 'Honduras' },
+      { value: 'Kamerun' },
+      { value: 'Korea Północna' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 33,
+    question: 'Reprezentacje na Euro 2012',
+    answers: [
+      { value: 'Hiszpania' },
+      { value: 'Włochy' },
+      { value: 'Niemcy' },
+      { value: 'Portugalia' },
+      { value: 'Anglia' },
+      { value: 'Czechy' },
+      { value: 'Grecja' },
+      { value: 'Francja' },
+      { value: 'Rosja' },
+      { value: 'Chorwacja' },
+      { value: 'Dania' },
+      { value: 'Ukraina' },
+      { value: 'Szwecja' },
+      { value: 'Polska' },
+      { value: 'Holandia' },
+      { value: 'Irlandia' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 34,
+    question: 'Reprezentacje na Euro 2024',
+    answers: [
+      { value: 'Hiszpania' },
+      { value: 'Anglia' },
+      { value: 'Francja' },
+      { value: 'Holandia' },
+      { value: 'Niemcy' },
+      { value: 'Szwajcaria' },
+      { value: 'Turcja' },
+      { value: 'Portugalia' },
+      { value: 'Austria' },
+      { value: 'Słowenia' },
+      { value: 'Belgia' },
+      { value: 'Rumunia' },
+      { value: 'Słowacja' },
+      { value: 'Włochy' },
+      { value: 'Czechy' },
+      { value: 'Dania' },
+      { value: 'Gruzja' },
+      { value: 'Ukraina' },
+      { value: 'Węgry' },
+      { value: 'Serbia' },
+      { value: 'Chorwacja' },
+      { value: 'Albania' },
+      { value: 'Polska' },
+      { value: 'Szkocja' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 35,
+    question: 'Reprezentacje na Euro 2004',
+    answers: [
+      { value: 'Grecja' },
+      { value: 'Portugalia' },
+      { value: 'Czechy' },
+      { value: 'Holandia' },
+      { value: 'Anglia' },
+      { value: 'Francja' },
+      { value: 'Szwecja' },
+      { value: 'Dania' },
+      { value: 'Włochy' },
+      { value: 'Hiszpania' },
+      { value: 'Rosja' },
+      { value: 'Niemcy' },
+      { value: 'Chorwacja' },
+      { value: 'Łotwa' },
+      { value: 'Szwajcaria' },
+      { value: 'Bułgaria' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 36,
+    question: 'Reprezentacje MŚ 2018',
+    answers: [
+      { value: 'Francja' },
+      { value: 'Chorwacja' },
+      { value: 'Belgia' },
+      { value: 'Anglia' },
+      { value: 'Urugwaj' },
+      { value: 'Brazylia' },
+      { value: 'Szwecja' },
+      { value: 'Rosja' },
+      { value: 'Kolumbia' },
+      { value: 'Hiszpania' },
+      { value: 'Dania' },
+      { value: 'Meksyk' },
+      { value: 'Portugalia' },
+      { value: 'Szwajcaria' },
+      { value: 'Japonia' },
+      { value: 'Argentyna' },
+      { value: 'Senegal' },
+      { value: 'Iran' },
+      { value: 'Korea Południowa' },
+      { value: 'Peru' },
+      { value: 'Nigeria' },
+      { value: 'Serbia' },
+      { value: 'Tunezja' },
+      { value: 'Australia' },
+      { value: 'Kostaryka' },
+      { value: 'Islandia' },
+      { value: 'Niemcy' },
+      { value: 'Nigeria' },
+      { value: 'Polska' },
+      { value: 'Arabia Saudyjska' },
+      { value: 'Egipt' },
+      { value: 'Panama' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 37,
+    question: 'Reprezentacje MŚ 2014',
+    answers: [
+      { value: 'Niemcy' },
+      { value: 'Argentyna' },
+      { value: 'Holandia' },
+      { value: 'Brazylia' },
+      { value: 'Kolumbia' },
+      { value: 'Belgia' },
+      { value: 'Francja' },
+      { value: 'Kostaryka' },
+      { value: 'Chile' },
+      { value: 'Meksyk' },
+      { value: 'Szwajcaria' },
+      { value: 'Urugwaj' },
+      { value: 'Grecja' },
+      { value: 'Algieria' },
+      { value: 'USA' },
+      { value: 'Nigeria' },
+      { value: 'Ekwador' },
+      { value: 'Portugalia' },
+      { value: 'Chorwacja' },
+      { value: 'Bośnia i Hercegowina' },
+      { value: 'WKS' },
+      { value: 'Włochy' },
+      { value: 'Hiszpania' },
+      { value: 'Ekwador' },
+      { value: 'Rosja' },
+      { value: 'Ghana' },
+      { value: 'Anglia' },
+      { value: 'Korea Południowa' },
+      { value: 'Iran' },
+      { value: 'Japonia' },
+      { value: 'Australia' },
+      { value: 'Kamerun' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 38,
+    question: 'Reprezentacje MŚ 2006',
+    answers: [
+      { value: 'Włochy' },
+      { value: 'Francja' },
+      { value: 'Niemcy' },
+      { value: 'Portugalia' },
+      { value: 'Argentyna' },
+      { value: 'Brazylia' },
+      { value: 'Anglia' },
+      { value: 'Ukraina' },
+      { value: 'Hiszpania' },
+      { value: 'Szwajcaria' },
+      { value: 'Holandia' },
+      { value: 'Ekwador' },
+      { value: 'Ghana' },
+      { value: 'Szwecja' },
+      { value: 'Meksyk' },
+      { value: 'Australia' },
+      { value: 'Korea Południowa' },
+      { value: 'Paragwaj' },
+      { value: 'Wybrzeże Kości Słoniowej' },
+      { value: 'Czechy' },
+      { value: 'Polska' },
+      { value: 'Chorwacja' },
+      { value: 'Angola' },
+      { value: 'Tunezja' },
+      { value: 'Iran' },
+      { value: 'USA' },
+      { value: 'Trinidad i Tobago' },
+      { value: 'Japonia' },
+      { value: 'Arabia Saudyjska' },
+      { value: 'Togo' },
+      { value: 'Kostaryka' },
+      { value: 'Serbia i Czarnogóra' },
+    ],
+    hints: [],
+    revealedAnswers: [],
+    showAnswer: false,
+  },
+  {
+    id: 39,
+    question: 'Reprezentacje MŚ 2002',
+    answers: [
+      { value: 'Brazylia' },
+      { value: 'Niemcy' },
+      { value: 'Turcja' },
+      { value: 'Korea Południowa' },
+      { value: 'Hiszpania' },
+      { value: 'Anglia' },
+      { value: 'Senegal' },
+      { value: 'USA' },
+      { value: 'Japonia' },
+      { value: 'Dania' },
+      { value: 'Meksyk' },
+      { value: 'Irlandia' },
+      { value: 'Szwecja' },
+      { value: 'Belgia' },
+      { value: 'Włochy' },
+      { value: 'Paragwaj' },
+      { value: 'RPA' },
+      { value: 'Argentyna' },
+      { value: 'Kostaryka' },
+      { value: 'Kamerun' },
+      { value: 'Portugalia' },
+      { value: 'Rosja' },
+      { value: 'Chorwacja' },
+      { value: 'Ekwador' },
+      { value: 'Polska' },
+      { value: 'Urugwaj' },
+      { value: 'Nigeria' },
+      { value: 'Francja' },
+      { value: 'Tunezja' },
+      { value: 'Słowenia' },
+      { value: 'Chiny' },
+      { value: 'Arabia Saudyjska' },
     ],
     hints: [],
     revealedAnswers: [],
