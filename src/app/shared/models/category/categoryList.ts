@@ -471,4 +471,11 @@ export const CATEGORY_LIST: Category[] = [
     basePoints: 2,
     hints: [],
   },
+  {
+    id: 48,
+    type: 'one-answer',
+    name: 'Fizyka',
+    basePoints: 3,
+    hints: [],
+  },
 ];
