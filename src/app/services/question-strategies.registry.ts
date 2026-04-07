@@ -43,6 +43,7 @@ import { mapOldFamiliadaToNew } from '../shared/mappers/familiada.mapper';
 import { mapCountriesToQuestions } from '../shared/mappers/countries.mapper';
 import { ZNANE_CYTATY } from '../shared/questions/latinMaxims.questions';
 import { KLUBOWE_PRZYDOMKI } from '../shared/questions/footballClubsNames.questions';
+import {FIZYKA} from '../shared/questions/physics.questions';
 
 // ==========================================
 // REJESTR STRATEGII
@@ -57,6 +58,7 @@ export const QUESTION_STRATEGIES: Record<string, QuestionLoader> = {
   'one-answer:Biologia': () => BIOLOGIA,
   'one-answer:Bogowie': () => BOGOWIE,
   'one-answer:Historia': () => HISTORIA,
+  'one-answer:Fizyka': () => FIZYKA,
   'one-answer:Miasto - Województwo': () => MIASTO_WOJEWODZTWO,
   'one-answer:Nazwy stadionów': () => STADIONY,
   'one-answer:Piłka nożna - wielkie imprezy': () => PILKA_NOZNA,
