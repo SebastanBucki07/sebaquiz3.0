@@ -44,6 +44,7 @@ import { mapCountriesToQuestions } from '../shared/mappers/countries.mapper';
 import { ZNANE_CYTATY } from '../shared/questions/latinMaxims.questions';
 import { KLUBOWE_PRZYDOMKI } from '../shared/questions/footballClubsNames.questions';
 import {FIZYKA} from '../shared/questions/physics.questions';
+import {ODLEGLOSCI_MIASTOWE} from '../shared/questions/citiesDistance.questions';
 
 // ==========================================
 // REJESTR STRATEGII
@@ -75,6 +76,7 @@ export const QUESTION_STRATEGIES: Record<string, QuestionLoader> = {
   'hints:Miasta świata': () => MIASTA_SWIATA,
   'hints:Łaicnskie sentencje': () => ZNANE_CYTATY,
   'hints:Reżyser po filmach': () => REZYSEROWIE,
+  'hints:Odległosci miedzymiastowe': () => ODLEGLOSCI_MIASTOWE,
 
   // Photos
   'photos:Znane postacie': () => ZNANE_POSTACIE,
