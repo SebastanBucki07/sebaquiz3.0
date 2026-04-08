@@ -478,4 +478,11 @@ export const CATEGORY_LIST: Category[] = [
     basePoints: 3,
     hints: [],
   },
+  {
+    id: 49,
+    type: 'hints',
+    name: 'Odległosci miedzymiastowe',
+    basePoints: 5,
+    hints: [],
+  },
 ];
