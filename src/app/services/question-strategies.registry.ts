@@ -43,8 +43,8 @@ import { mapOldFamiliadaToNew } from '../shared/mappers/familiada.mapper';
 import { mapCountriesToQuestions } from '../shared/mappers/countries.mapper';
 import { ZNANE_CYTATY } from '../shared/questions/latinMaxims.questions';
 import { KLUBOWE_PRZYDOMKI } from '../shared/questions/footballClubsNames.questions';
-import {FIZYKA} from '../shared/questions/physics.questions';
-import {ODLEGLOSCI_MIASTOWE} from '../shared/questions/citiesDistance.questions';
+import { FIZYKA } from '../shared/questions/physics.questions';
+import { ODLEGLOSCI_MIASTOWE } from '../shared/questions/citiesDistance.questions';
 
 // ==========================================
 // REJESTR STRATEGII
