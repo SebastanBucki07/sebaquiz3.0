@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 import { GameService } from '../../../services/game.service';
-import { MATERIAL_IMPORTS } from '../../../shared/material';
+import {AsyncPipe, NgIf} from '@angular/common';
 
 @Component({
   selector: 'app-game-actual-team',
   standalone: true,
-  imports: [MATERIAL_IMPORTS],
+  imports: [
+    NgIf,
+    AsyncPipe
+  ],
   templateUrl: './game-actual-team.component.html',
   styleUrl: './game-actual-team.component.css',
 })

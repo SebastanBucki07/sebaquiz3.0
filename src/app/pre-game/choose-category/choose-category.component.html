@@ -9,7 +9,7 @@
       <div class="masonry-wrapper">
         <div class="group-card" *ngFor="let group of categoryGroups">
           <div class="group-header">
-            <span class="dot" [style.background-color]="group.categories[0]?.color"></span>
+            <span class="dot" [style.background-color]="group.categories[0].color"></span>
             <h4>{{ group.typeName }}</h4>
             <span class="count">{{ group.categories.length }}</span>
           </div>

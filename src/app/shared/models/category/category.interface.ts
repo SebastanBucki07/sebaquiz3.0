@@ -6,6 +6,6 @@ export interface Category {
   name: string;
   basePoints: number;
   hints: Hint[];
-  icon?: string;
-  color?: string;
+  icon: string;
+  color: string;
 }

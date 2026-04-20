@@ -1,16 +1,19 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { MATERIAL_IMPORTS } from '../../shared/material';
 import { GameService } from '../../services/game.service';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Team } from '../../shared/models/teams/team.interface';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {MatError, MatInput} from '@angular/material/input';
+import {MatIcon} from '@angular/material/icon';
+
 
 @Component({
   selector: 'app-choose-team',
   standalone: true,
-  imports: [CommonModule, FormsModule, ...MATERIAL_IMPORTS],
+  imports: [CommonModule, FormsModule, MatFormField, MatLabel, MatError, MatIcon, MatInput],
   templateUrl: './choose-team.component.html',
   styleUrl: './choose-team.component.css',
 })

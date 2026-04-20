@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
-import { MATERIAL_IMPORTS } from '../../../../../shared/material';
 import { Hint } from '../../../../../shared/models/category/hint.interface';
+import {MatCard} from '@angular/material/card';
 
 @Component({
   selector: 'app-photo-tips',
   standalone: true,
-  imports: [NgIf, NgFor, MATERIAL_IMPORTS],
+  imports: [NgIf, NgFor, MatCard],
   templateUrl: './photo-tips.component.html',
   styleUrl: './photo-tips.component.css',
 })

@@ -2,12 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-
-import { MATERIAL_IMPORTS } from '../../shared/material';
 import { GameService } from '../../services/game.service';
 import { SupabaseService } from '../../services/supabase.service';
 import { Category } from '../../shared/models/category/category.interface';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import {MatIcon} from '@angular/material/icon';
 
 interface CategoryGroup {
   typeName: string;
@@ -17,7 +16,7 @@ interface CategoryGroup {
 @Component({
   selector: 'app-choose-category',
   standalone: true,
-  imports: [CommonModule, ...MATERIAL_IMPORTS, MatProgressSpinner],
+  imports: [CommonModule, MatProgressSpinner, MatIcon],
   templateUrl: './choose-category.component.html',
   styleUrl: './choose-category.component.css',
 })

@@ -1,54 +1,46 @@
-import { Injectable } from '@angular/core';
-import { Question } from '../../shared/questions/question.interface';
-import { SupabaseService } from '../supabase.service';
-import { BOGOWIE } from '../../shared/questions/gods.questions';
-import { HISTORIA } from '../../shared/questions/history.questions';
-import { FIZYKA } from '../../shared/questions/physics.questions';
-import { MIASTO_WOJEWODZTWO } from '../../shared/questions/polishDistricts.questions';
-import { STADIONY } from '../../shared/questions/stadiums.questions';
-import { PILKA_NOZNA } from '../../shared/questions/football.questions';
-import { PRZYSLOWIA } from '../../shared/questions/proverbs.questions';
-import { KLUBOWE_PRZYDOMKI } from '../../shared/questions/footballClubsNames.questions';
-import { CountryProvider } from '../../shared/providers/country.provider';
-import { BOOKS } from '../../shared/questions/books.questions';
-import { FRAGMENTY_PIOSENEK } from '../../shared/questions/songs.questions';
-import { ARTYSTA_PO_UTWORACH } from '../../shared/questions/musicArtists.questions';
-import { BOHATEROWIE_FILMOWI } from '../../shared/questions/movieHeroes.questions';
-import { BOHATEROWIE_SERIALOWI } from '../../shared/questions/tvSeriesHeroes.question';
-import { MIASTA_SWIATA } from '../../shared/questions/worldCities.questions';
-import { ZNANE_CYTATY } from '../../shared/questions/latinMaxims.questions';
-import { REZYSEROWIE } from '../../shared/questions/directors.questions';
-import { ODLEGLOSCI_MIASTOWE } from '../../shared/questions/citiesDistance.questions';
-import { ZNANE_POSTACIE } from '../../shared/questions/famousPeople.questions';
-import { BUDOWLE } from '../../shared/questions/buildings.questions';
-import { FLAGI } from '../../shared/questions/flag.questions';
-import { HISTORIA_PILKARZA } from '../../shared/questions/footballHistory.questions';
-import { FILM_PO_AKTORACH } from '../../shared/questions/moviesActors.questions';
-import { SERIAL_PO_AKTORACH } from '../../shared/questions/tvSeriesActors.questions';
-import { JAKA_TO_MELODIA } from '../../shared/questions/music.questions';
-import { CZOLOWKI_SERIALI } from '../../shared/questions/tvSeriesIntro.questions';
-import { IMPREZY_SPORTOWE } from '../../shared/questions/footballChampionsMusic.questions';
-import { HYMNY_PANSTWOWE } from '../../shared/questions/nationalAnthems.questions';
-import { BAJKOWE_INTRO } from '../../shared/questions/fairyTalesIntros.questions';
-import { LOGO_FRAGMENTY } from '../../shared/questions/logoFragments.questions';
-import { HERBY_PILKARSKIE } from '../../shared/questions/footballCrestsFragments.questions';
-import { FRAGMENT_FLAG } from '../../shared/questions/flagFragments.questions';
-import { WYPISZ_WSPOLNE } from '../../shared/questions/writtings.questions';
-import { WYPISZ_WSPOLNE_PILKA_NOZNA } from '../../shared/questions/writtingsFootball.questions';
-import { MECZE_PILKARSKIE } from '../../shared/questions/footaballGames.questions';
-import { FootballGridProvider } from '../../shared/providers/football-grid.provider';
-import { mapOldFamiliadaToNew } from '../../shared/mappers/familiada.mapper';
-import { FAMILIADA_RAW } from '../../shared/questions/familiada.questions';
-import { mapCountriesToQuestions } from '../../shared/mappers/countries.mapper';
-import { DANE_PANSTW } from '../../shared/questions/countries.questions';
-import { FILMY } from '../../shared/questions/movies.questions';
-import { TV_SERIES } from '../../shared/questions/tvSeries.questions';
-import { GRY } from '../../shared/questions/games.questions';
-import { CHEMIST } from '../../shared/questions/chemists.questions'; // Twoje stałe
+import {Injectable} from '@angular/core';
+import {Question} from '../../shared/questions/question.interface';
+import {SupabaseService} from '../supabase.service';
+import {BOGOWIE} from '../../shared/questions/gods.questions';
+import {HISTORIA} from '../../shared/questions/history.questions';
+import {FIZYKA} from '../../shared/questions/physics.questions';
+import {STADIONY} from '../../shared/questions/stadiums.questions';
+import {PILKA_NOZNA} from '../../shared/questions/football.questions';
+import {PRZYSLOWIA} from '../../shared/questions/proverbs.questions';
+import {KLUBOWE_PRZYDOMKI} from '../../shared/questions/footballClubsNames.questions';
+import {CountryProvider} from '../../shared/providers/country.provider';
+import {FRAGMENTY_PIOSENEK} from '../../shared/questions/songs.questions';
+import {ARTYSTA_PO_UTWORACH} from '../../shared/questions/musicArtists.questions';
+import {BOHATEROWIE_FILMOWI} from '../../shared/questions/movieHeroes.questions';
+import {BOHATEROWIE_SERIALOWI} from '../../shared/questions/tvSeriesHeroes.question';
+import {MIASTA_SWIATA} from '../../shared/questions/worldCities.questions';
+import {ZNANE_CYTATY} from '../../shared/questions/latinMaxims.questions';
+import {REZYSEROWIE} from '../../shared/questions/directors.questions';
+import {BUDOWLE} from '../../shared/questions/buildings.questions';
+import {FLAGI} from '../../shared/questions/flag.questions';
+import {SERIAL_PO_AKTORACH} from '../../shared/questions/tvSeriesActors.questions';
+import {JAKA_TO_MELODIA} from '../../shared/questions/music.questions';
+import {CZOLOWKI_SERIALI} from '../../shared/questions/tvSeriesIntro.questions';
+import {IMPREZY_SPORTOWE} from '../../shared/questions/footballChampionsMusic.questions';
+import {HYMNY_PANSTWOWE} from '../../shared/questions/nationalAnthems.questions';
+import {BAJKOWE_INTRO} from '../../shared/questions/fairyTalesIntros.questions';
+import {LOGO_FRAGMENTY} from '../../shared/questions/logoFragments.questions';
+import {FRAGMENT_FLAG} from '../../shared/questions/flagFragments.questions';
+import {MECZE_PILKARSKIE} from '../../shared/questions/footaballGames.questions';
+import {FootballGridProvider} from '../../shared/providers/football-grid.provider';
+import {mapOldFamiliadaToNew} from '../../shared/mappers/familiada.mapper';
+import {FAMILIADA_RAW} from '../../shared/questions/familiada.questions';
+import {mapCountriesToQuestions} from '../../shared/mappers/countries.mapper';
+import {DANE_PANSTW} from '../../shared/questions/countries.questions';
+import {GRY} from '../../shared/questions/games.questions';
+import {firstValueFrom} from 'rxjs';
+import {HttpClient} from '@angular/common/http'; // Twoje stałe
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class QuestionLoaderService {
-  constructor(private supabaseService: SupabaseService) {}
+  constructor(private supabaseService: SupabaseService, private http: HttpClient) {
+  }
+
 
   async load(type: string, name: string): Promise<Question[]> {
     const key = `${type}:${name}`;
@@ -67,15 +59,15 @@ export class QuestionLoaderService {
   }
 
   private readonly OLD_STRATEGIES: Record<string, () => any> = {
-    'one-answer:Film': () => FILMY,
-    'one-answer:Seriale': () => TV_SERIES,
-    'one-answer:Symbole Chemiczne': () => CHEMIST,
+    'one-answer:Film': () => firstValueFrom(this.http.get('/questions/movies.questions.json')),
+    'one-answer:Seriale': () => firstValueFrom(this.http.get('/questions/tvSeries.questions.json')),
+    'one-answer:Symbole Chemiczne': () => firstValueFrom(this.http.get('/questions/chemists.questions.json')),
     'one-answer:Gry': () => GRY,
     'one-answer:Biologia': () => this.supabaseService.getQuestions('BIOLOGIA'),
     'one-answer:Bogowie': () => BOGOWIE,
     'one-answer:Historia': () => HISTORIA,
     'one-answer:Fizyka': () => FIZYKA,
-    'one-answer:Miasto - Województwo': () => MIASTO_WOJEWODZTWO,
+    'one-answer:Miasto - Województwo': () => firstValueFrom(this.http.get('/questions/polishDistricts.questions.json')),
     'one-answer:Nazwy stadionów': () => STADIONY,
     'one-answer:Piłka nożna - wielkie imprezy': () => PILKA_NOZNA,
     'one-answer:Przysłowia': () => PRZYSLOWIA,
@@ -92,16 +84,16 @@ export class QuestionLoaderService {
     'hints:Miasta świata': () => MIASTA_SWIATA,
     'hints:Łaicnskie sentencje': () => ZNANE_CYTATY,
     'hints:Reżyser po filmach': () => REZYSEROWIE,
-    'hints:Odległosci miedzymiastowe': () => ODLEGLOSCI_MIASTOWE,
+    'hints:Odległosci miedzymiastowe': () => firstValueFrom(this.http.get('/questions/citiesDistance.questions.json')),
 
     // Photos
-    'photos:Znane postacie': () => ZNANE_POSTACIE,
+    'photos:Znane postacie': () => firstValueFrom(this.http.get('/questions/famousPeople.questions.json')),
     'photos:Budowle': () => BUDOWLE,
     'photos:Flagi': () => FLAGI,
 
     // Photo Hints
-    'photo-hints:Klubowa Historia piłkarza': () => HISTORIA_PILKARZA,
-    'photo-hints:W jakim filmie zagrała taka obsada?': () => FILM_PO_AKTORACH,
+    'photo-hints:Klubowa Historia piłkarza': () => firstValueFrom(this.http.get('/questions/footballHistory.questions.json')),
+    'photo-hints:W jakim filmie zagrała taka obsada?': () => firstValueFrom(this.http.get('/questions/moviesActors.questions.json')),
     'photo-hints:W jakim serialu zagrała taka obsada?': () => SERIAL_PO_AKTORACH,
 
     // Music
@@ -113,13 +105,13 @@ export class QuestionLoaderService {
 
     // Photo Fragments
     'photo-fragments:Jakie to logo?': () => LOGO_FRAGMENTY,
-    'photo-fragments:Jaki to herb piłkarski?': () => HERBY_PILKARSKIE,
+    'photo-fragments:Jaki to herb piłkarski?': () => firstValueFrom(this.http.get('/questions/footballCrests.questions.json')),
     'photo-fragments:Fragmenty Flag': () => FRAGMENT_FLAG,
 
     // Writing Category
-    'writting-category:Wypisywanie róznych wspólnych': () => WYPISZ_WSPOLNE,
+    'writting-category:Wypisywanie róznych wspólnych': () => firstValueFrom(this.http.get('/questions/writings.questions.json')),
     'writting-category:Wypisywanie róznych wspólnych - piłka nożna': () =>
-      WYPISZ_WSPOLNE_PILKA_NOZNA,
+      firstValueFrom(this.http.get('/questions/writingsFootball.questions.json')),
     'writting-category:Państwa z kontynentu': () => CountryProvider.getCountriesByContinent(),
     'writting-category:Stolice z kontynentu': () => CountryProvider.getCapitalsByContinent(),
     'writting-category:Państwa na literę': () => CountryProvider.getCountriesByLetter(),

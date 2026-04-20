@@ -1,12 +1,12 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MATERIAL_IMPORTS } from '../../../../../shared/material';
 import { Hint } from '../../../../../shared/models/category/hint.interface';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-music-tips',
   standalone: true,
-  imports: [CommonModule, MATERIAL_IMPORTS],
+  imports: [CommonModule, MatIcon],
   templateUrl: './music-tips.component.html',
   styleUrl: 'music-tips.component.scss',
 })

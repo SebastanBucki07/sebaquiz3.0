@@ -1,14 +1,14 @@
 import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MATERIAL_IMPORTS } from '../../../../../shared/material';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { Hint } from '../../../../../shared/models/category/hint.interface';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-tips',
   standalone: true,
-  imports: [CommonModule, MATERIAL_IMPORTS, MatExpansionModule, MatButtonModule],
+  imports: [CommonModule, MatExpansionModule, MatButtonModule, MatIcon],
   templateUrl: './tips.component.html',
   styleUrls: ['./tips.component.css'],
   encapsulation: ViewEncapsulation.None,

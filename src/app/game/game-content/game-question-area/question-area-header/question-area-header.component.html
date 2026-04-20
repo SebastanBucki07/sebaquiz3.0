@@ -1,3 +1,17 @@
-<h2>{{ category.name }}</h2>
+<div class="q-header" [style.border-bottom-color]="category.color">
+  <div class="cat-info">
+    <div class="icon-wrapper" [style.background-color]="category.color + '20'">
+      <mat-icon [style.color]="category.color">{{ category.icon || 'quiz' }}</mat-icon>
+    </div>
+    <div class="text-group">
+      <span class="cat-type">{{ category.type }}</span>
+      <h2 class="cat-name">{{ category.name }}</h2>
+    </div>
+  </div>
 
-<p>Punkty do zdobycia: {{ points }}</p>
+  <div class="points-badge" [style.background-color]="category.color">
+    <span class="label">WARTOŚĆ</span>
+    <span class="value">{{ points }}</span>
+    <span class="unit">PKT</span>
+  </div>
+</div>

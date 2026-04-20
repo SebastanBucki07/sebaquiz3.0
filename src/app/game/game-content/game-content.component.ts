@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Category } from '../../shared/models/category/category.interface';
 import { QuestionService } from '../../services/question-service.service';
-import { MATERIAL_IMPORTS } from '../../shared/material';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-game-content',
   templateUrl: './game-content.component.html',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, RouterOutlet, MATERIAL_IMPORTS],
+  imports: [CommonModule, MatButtonModule, RouterOutlet, MatIcon],
   styleUrl: './game-content.component.css',
 })
 export class GameContentComponent implements OnInit {

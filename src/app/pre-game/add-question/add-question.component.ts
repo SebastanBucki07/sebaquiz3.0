@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormArray, ReactiveFormsModule } from '@angular/forms';
 import { SupabaseService } from '../../services/supabase.service';
-import { MATERIAL_IMPORTS } from '../../shared/material';
 
 @Component({
   selector: 'app-add-question',
   templateUrl: './add-question.component.html',
-  imports: [ReactiveFormsModule, MATERIAL_IMPORTS],
+  imports: [ReactiveFormsModule],
   styleUrls: ['./add-question.component.scss'],
 })
 export class AddQuestionComponent {
