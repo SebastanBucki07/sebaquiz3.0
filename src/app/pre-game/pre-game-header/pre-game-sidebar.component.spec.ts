@@ -1,17 +1,17 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PreGameHeaderComponent } from './pre-game-header.component';
+import { PreGameSidebarComponent } from './pre-game-sidebar.component';
 
 describe('PreGameHeaderComponent', () => {
-  let component: PreGameHeaderComponent;
-  let fixture: ComponentFixture<PreGameHeaderComponent>;
+  let component: PreGameSidebarComponent;
+  let fixture: ComponentFixture<PreGameSidebarComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [PreGameHeaderComponent],
+      imports: [PreGameSidebarComponent],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(PreGameHeaderComponent);
+    fixture = TestBed.createComponent(PreGameSidebarComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

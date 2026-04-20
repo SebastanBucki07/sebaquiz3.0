@@ -1,38 +1,30 @@
 <div class="app-layout">
-  <header class="app-header">
-    <div class="header-right">
-      <button class="add-all-btn" (click)="addAllCategories()">
-        <mat-icon>auto_awesome</mat-icon>
-        DODAJ WSZYSTKO (47)
-      </button>
-    </div>
-  </header>
+  <div class="loading-overlay" *ngIf="isLoading">
+    <mat-spinner diameter="50"></mat-spinner>
+    <p>Synchronizacja z bazą...</p>
+  </div>
 
-  <main class="main-container">
-    <section class="horizontal-viewport">
-      <div class="main-column" *ngFor="let col of columns">
-        <div class="group-box" *ngFor="let group of col">
-          <div class="group-title">
-            <span
-              class="dot"
-              [ngStyle]="{ background: 'hsl(' + (typeHues[group.typeName] || 250) + ', 70%, 50%)' }"
-            ></span>
+  <main class="main-container" *ngIf="!isLoading">
+    <section class="scroll-viewport">
+      <div class="masonry-wrapper">
+        <div class="group-card" *ngFor="let group of categoryGroups">
+          <div class="group-header">
+            <span class="dot" [style.background-color]="group.categories[0]?.color"></span>
             <h4>{{ group.typeName }}</h4>
             <span class="count">{{ group.categories.length }}</span>
           </div>
-          <div class="cards-list">
+
+          <div class="tiles-grid">
             <div
-              *ngFor="let cat of group.categories"
-              class="cat-card"
+              *ngFor="let cat of group.categories; trackBy: trackByCategoryId"
+              class="cat-tile"
               [class.is-selected]="isCategorySelected(cat)"
               [ngStyle]="getCategoryStyle(cat)"
               (click)="addCategory(cat)"
             >
-              <span class="cat-name">{{ cat.name }}</span>
-              <div class="cat-info">
-                <span class="pts">{{ cat.basePoints }} PKT</span>
-                <mat-icon>{{ isCategorySelected(cat) ? 'check_circle' : 'add' }}</mat-icon>
-              </div>
+              <mat-icon [style.color]="cat.color">{{ cat.icon || 'category' }}</mat-icon>
+              <span class="name">{{ cat.name }}</span>
+              <span class="pts">{{ cat.basePoints }} PKT</span>
             </div>
           </div>
         </div>
@@ -41,45 +33,53 @@
 
     <aside class="sidebar">
       <div class="sidebar-header">
-        <div class="sidebar-title-row">
+        <div class="sidebar-top">
           <h2>
             Wybrane
             <span>({{ selectedCategories.length }})</span>
           </h2>
-          <button
-            class="reset-btn"
-            (click)="removeAllCategories()"
-            *ngIf="selectedCategories.length > 0"
-          >
-            <mat-icon>delete_sweep</mat-icon>
-            RESET
-          </button>
+          <div class="header-actions">
+            <button class="icon-btn add-all" (click)="addAllCategories()" title="Dodaj wszystkie">
+              <mat-icon>library_add</mat-icon>
+            </button>
+            <button
+              class="icon-btn reset"
+              (click)="removeAllCategories()"
+              *ngIf="selectedCategories.length > 0"
+            >
+              <mat-icon>delete_sweep</mat-icon>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="sidebar-scroll">
+      <div class="sidebar-list">
         <div class="empty-state" *ngIf="selectedCategories.length === 0">
-          <mat-icon>collections_bookmark</mat-icon>
-          <p>
-            Wybierz kategorie,
-            <br />
-            aby stworzyć zestaw.
-          </p>
+          <mat-icon>auto_awesome_motion</mat-icon>
+          <p>Wybierz wyzwania z listy.</p>
         </div>
 
         <div
           *ngFor="let cat of selectedCategories; trackBy: trackByCategoryId"
-          class="mini-card animated-item"
+          class="mini-item"
           [ngStyle]="getCategoryStyle(cat, true)"
         >
-          <div class="mini-card-content">
-            <span class="mini-name">{{ cat.name }}</span>
-            <span class="mini-type">{{ cat.type }}</span>
+          <mat-icon class="mini-icon" [style.color]="cat.color">{{ cat.icon }}</mat-icon>
+          <div class="mini-info">
+            <span class="m-name">{{ cat.name }}</span>
+            <span class="m-type">{{ cat.type }}</span>
           </div>
-          <button class="mini-remove" (click)="removeCategory(cat)">
+          <button class="m-remove" (click)="removeCategory(cat)">
             <mat-icon>close</mat-icon>
           </button>
         </div>
+      </div>
+
+      <div class="sidebar-footer" *ngIf="selectedCategories.length > 0">
+        <button class="btn-primary">
+          GENERUJ QUIZ
+          <mat-icon>bolt</mat-icon>
+        </button>
       </div>
     </aside>
   </main>

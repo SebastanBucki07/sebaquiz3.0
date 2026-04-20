@@ -40,19 +40,18 @@ export class GameContentComponent implements OnInit {
     }
   }
 
-  // Change getCategoryColor to gray for exhausted categories
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
 
     if (remaining === 0) {
-      return '#9e9e9e';
+      return '#475569'; // Ciemniejszy szary dla wyczerpanych
     }
 
-    const hue = (index * 360) / this.selectedCategories.length;
-    const colorStart = `hsl(${hue}, 70%, 50%)`;
-    const colorEnd = `hsl(${(hue + 30) % 360}, 70%, 60%)`;
+    // Jeśli kategoria ma swój kolor z bazy, użyj go. Jeśli nie, generuj gradient.
+    if (category.color) return category.color;
 
-    return `linear-gradient(45deg, ${colorStart}, ${colorEnd})`;
+    const hue = (index * 360) / (this.selectedCategories.length || 1);
+    return `hsl(${hue}, 70%, 50%)`;
   }
 
   // Number of available questions in a given category

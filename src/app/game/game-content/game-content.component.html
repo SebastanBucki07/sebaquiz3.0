@@ -1,31 +1,64 @@
-<div class="category-selection-wrapper">
-  <router-outlet></router-outlet>
+<div class="game-dashboard full-width">
+  <header class="game-header">
+    <div class="header-info">
+      <h1>Panel Rozgrywki</h1>
+      <p>Wybierz kategorię, aby zobaczyć pytanie (Aktywne: {{ selectedCategories.length }})</p>
+    </div>
 
-  <mat-card class="category-header-card">
-    <mat-card-title class="category-title" style="color: #f8fafc !important">
-      Wybierz kategorię
-    </mat-card-title>
-  </mat-card>
-
-  <div class="random-button-wrapper">
-    <button mat-raised-button color="accent" class="random-button" (click)="drawRandomQuestion()">
-      🎲 Wylosuj pytanie
+    <button mat-flat-button class="random-btn" (click)="drawRandomQuestion()">
+      <mat-icon>casino</mat-icon>
+      LOSUJ PYTANIE
     </button>
+  </header>
+
+  <div class="categories-grid">
+    <div
+      *ngFor="let cat of selectedCategories; let i = index"
+      class="game-cat-card"
+      [class.exhausted]="getRemainingQuestions(cat) === 0"
+      (click)="goToCategory(cat)"
+    >
+      <div class="card-glow" [style.background-color]="cat.color || '#3b82f6'"></div>
+
+      <div class="card-main">
+        <mat-icon class="cat-icon" [style.color]="cat.color || '#3b82f6'">
+          {{ cat.icon || 'quiz' }}
+        </mat-icon>
+        <div class="cat-info">
+          <h3 class="cat-name" [title]="cat.name">{{ cat.name }}</h3>
+          <span class="cat-type">{{ cat.type }}</span>
+        </div>
+      </div>
+
+      <div class="card-footer">
+        <div class="stats-line">
+          <div class="q-info">
+            <span class="q-count">
+              Dostępne:
+              <strong>{{ getRemainingQuestions(cat) }}</strong>
+            </span>
+            <span
+              class="q-points"
+              [style.background-color]="(cat.color || '#3b82f6') + '20'"
+              [style.color]="cat.color || '#3b82f6'"
+            >
+              {{ cat.basePoints }} PKT
+            </span>
+          </div>
+          <mat-icon class="arrow-icon">chevron_right</mat-icon>
+        </div>
+        <div class="mini-progress-bg">
+          <div
+            class="mini-progress-fill"
+            [style.width.%]="100"
+            [style.background-color]="cat.color || '#3b82f6'"
+          ></div>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <div class="category-grid">
-    <button
-      mat-raised-button
-      *ngFor="let category of selectedCategories; let i = index"
-      class="category-button"
-      [style.background]="getCategoryColor(category, i)"
-      [class.disabled-category]="getRemainingQuestions(category) === 0"
-      (click)="goToCategory(category)"
-    >
-      {{ category.name | titlecase }}
-      <span *ngIf="getRemainingQuestions(category) > 0">
-        ({{ getRemainingQuestions(category) }})
-      </span>
-    </button>
+  <div class="question-view">
+    <router-outlet></router-outlet>
   </div>
 </div>
