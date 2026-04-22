@@ -17,8 +17,8 @@ import { generateTeamColors } from '../../../../shared/utils/color-helper';
 import { WritingScoreBoardComponent } from './writing-score-board/writing-score-board.component';
 import { WritingControlsComponent } from './writting-controls/writing-controls.component';
 import { WritingGameStatusComponent } from './writing-game-status/writing-game-status.component';
-import { MATERIAL_IMPORTS } from '../../../../shared/material';
 import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
+
 
 @Component({
   selector: 'app-writing-category',
@@ -28,7 +28,6 @@ import { WritingGameCoreService } from '../../../../services/writting-game-core.
     WritingScoreBoardComponent,
     WritingControlsComponent,
     WritingGameStatusComponent,
-    MATERIAL_IMPORTS,
   ],
   templateUrl: './writing-category.component.html',
   styleUrls: ['./writing-category.component.css'],

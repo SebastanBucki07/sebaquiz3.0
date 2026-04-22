@@ -11,11 +11,11 @@ import { takeUntil } from 'rxjs/operators';
 @Component({
   selector: 'app-pre-game-header',
   standalone: true,
-  templateUrl: './pre-game-header.component.html',
-  styleUrl: './pre-game-header.component.css',
+  templateUrl: './pre-game-sidebar.component.html',
+  styleUrl: './pre-game-sidebar.component.css',
   imports: [MatButtonModule, MatDividerModule, MatIconModule, MatCardActions],
 })
-export class PreGameHeaderComponent implements OnInit, OnDestroy {
+export class PreGameSidebarComponent implements OnInit, OnDestroy {
   teamsCount = 0;
   categoriesCount = 0;
   canStartGame = false;

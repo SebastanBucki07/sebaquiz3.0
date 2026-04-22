@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   /* Zwiększamy wysokość headera, aby pomieścić duże logo */
-  height: 160px;
+  height: 100px;
   /* Ciemne, półprzezroczyste tło z efektem rozmycia */
   background: rgba(15, 23, 42, 0.75) !important;
   backdrop-filter: blur(15px) saturate(180%);
@@ -32,7 +32,7 @@
 
 .logo-image {
   /* Powrót do dużej wysokości z Twojego oryginału */
-  height: 140px;
+  height: 100px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;

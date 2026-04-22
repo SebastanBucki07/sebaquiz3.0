@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Category } from '../../shared/models/category/category.interface';
 import { QuestionService } from '../../services/question-service.service';
-import { MATERIAL_IMPORTS } from '../../shared/material';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-game-content',
   templateUrl: './game-content.component.html',
   standalone: true,
-  imports: [CommonModule, MatButtonModule, RouterOutlet, MATERIAL_IMPORTS],
+  imports: [CommonModule, MatButtonModule, RouterOutlet, MatIcon],
   styleUrl: './game-content.component.css',
 })
 export class GameContentComponent implements OnInit {
@@ -40,19 +40,18 @@ export class GameContentComponent implements OnInit {
     }
   }
 
-  // Change getCategoryColor to gray for exhausted categories
   getCategoryColor(category: Category, index: number): string {
     const remaining = this.getRemainingQuestions(category);
 
     if (remaining === 0) {
-      return '#9e9e9e';
+      return '#475569'; // Ciemniejszy szary dla wyczerpanych
     }
 
-    const hue = (index * 360) / this.selectedCategories.length;
-    const colorStart = `hsl(${hue}, 70%, 50%)`;
-    const colorEnd = `hsl(${(hue + 30) % 360}, 70%, 60%)`;
+    // Jeśli kategoria ma swój kolor z bazy, użyj go. Jeśli nie, generuj gradient.
+    if (category.color) return category.color;
 
-    return `linear-gradient(45deg, ${colorStart}, ${colorEnd})`;
+    const hue = (index * 360) / (this.selectedCategories.length || 1);
+    return `hsl(${hue}, 70%, 50%)`;
   }
 
   // Number of available questions in a given category

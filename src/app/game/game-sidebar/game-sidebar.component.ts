@@ -5,11 +5,11 @@ import { GameService } from '../../services/game.service';
 import { Subject, interval, Observable } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 import { Team } from '../../shared/models/teams/team.interface';
-import { MATERIAL_IMPORTS } from '../../shared/material';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-game-sidebar',
-  imports: [CommonModule, MatTableModule, MATERIAL_IMPORTS],
+  imports: [CommonModule, MatTableModule, MatIcon],
   templateUrl: './game-sidebar.component.html',
   styleUrl: './game-sidebar.component.css',
 })

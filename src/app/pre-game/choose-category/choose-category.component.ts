@@ -2,11 +2,11 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-
-import { MATERIAL_IMPORTS } from '../../shared/material';
 import { GameService } from '../../services/game.service';
-import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
+import { SupabaseService } from '../../services/supabase.service';
 import { Category } from '../../shared/models/category/category.interface';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import {MatIcon} from '@angular/material/icon';
 
 interface CategoryGroup {
   typeName: string;
@@ -16,36 +16,27 @@ interface CategoryGroup {
 @Component({
   selector: 'app-choose-category',
   standalone: true,
-  imports: [CommonModule, ...MATERIAL_IMPORTS],
+  imports: [CommonModule, MatProgressSpinner, MatIcon],
   templateUrl: './choose-category.component.html',
   styleUrl: './choose-category.component.css',
 })
 export class ChooseCategoryComponent implements OnInit, OnDestroy {
-  columns: CategoryGroup[][] = [];
+  allCategories: Category[] = [];
+  categoryGroups: CategoryGroup[] = []; // Nowa struktura dla widoku gazetowego
   selectedCategories: Category[] = [];
+  isLoading = true;
+
   private destroy$ = new Subject<void>();
 
-  public readonly typeHues: { [key: string]: number } = {
-    music: 285,
-    'one-answer': 140,
-    abcd: 195,
-    photos: 35,
-    hints: 48,
-    'writting-category': 215,
-    'photo-fragments': 15,
-    'photo-hints': 175,
-    familiada: 325,
-    footballgame: 125,
-    tictactoe: 5,
-    country: 100,
-    inne: 250,
-  };
+  constructor(
+    private gameService: GameService,
+    private supabaseService: SupabaseService
+  ) {}
 
-  constructor(private gameService: GameService) {}
-
-  ngOnInit() {
+  async ngOnInit() {
     this.loadSelectedFromStorage();
-    this.prepareMultiColumnLayout();
+    await this.initData();
+
     this.gameService.reset$
       .pipe(takeUntil(this.destroy$))
       .subscribe(() => this.removeAllCategories());
@@ -56,55 +47,69 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
-  // FUNKCJA DLA ANIMACJI (TrackBy)
-  // Pomaga Angularowi wiedzieć, który element jest nowy i zasługuje na animację
-  trackByCategoryId(index: number, category: Category): number {
-    return category.id;
+  private async initData() {
+    this.isLoading = true;
+    try {
+      const data = await this.supabaseService.getCategories();
+
+      this.allCategories = data.map((cat: any) => ({
+        id: cat.id,
+        name: cat.name,
+        type: cat.category_types?.name || 'inne',
+        basePoints: cat.base_points,
+        icon: cat.icon,
+        color: cat.color,
+        hints: [],
+      }));
+
+      this.prepareDynamicLayout();
+    } catch (error) {
+      console.error('Błąd ładowania danych:', error);
+    } finally {
+      this.isLoading = false;
+    }
   }
 
-  private prepareMultiColumnLayout() {
+  private prepareDynamicLayout() {
     const groupsMap: { [key: string]: Category[] } = {};
 
-    // 1. Grupowanie danych wejściowych
-    CATEGORY_LIST.forEach((cat) => {
+    // 1. Wstępne grupowanie
+    this.allCategories.forEach((cat) => {
       const type = (cat.type || 'inne').toLowerCase();
       if (!groupsMap[type]) groupsMap[type] = [];
       groupsMap[type].push(cat);
     });
 
-    const allGroups = Object.keys(groupsMap).map((key) => ({
-      typeName: key,
-      categories: groupsMap[key],
-      size: groupsMap[key].length,
-    }));
+    // 2. Optymalizacja: Przenoszenie "pustelników" do grupy 'inne'
+    const finalGroups: { [key: string]: Category[] } = {};
+    const othersKey = 'inne';
 
-    // 2. Inicjalizacja 5 kolumn
-    const cols: { groups: any[]; totalSize: number }[] = Array.from({ length: 5 }, () => ({
-      groups: [],
-      totalSize: 0,
-    }));
+    if (!finalGroups[othersKey]) finalGroups[othersKey] = [];
 
-    // 3. Kolumna 1: Jedynki i Dwójki (zgodnie z Twoim pomysłem)
-    const smallGroups = allGroups.filter((g) => g.size <= 2);
-    cols[0].groups = smallGroups;
-    cols[0].totalSize = smallGroups.reduce((sum, g) => sum + g.size, 0);
-
-    // 4. Reszta grup: Sortujemy malejąco (strategia LPT - Longest Processing Time)
-    const remainingGroups = allGroups.filter((g) => g.size > 2).sort((a, b) => b.size - a.size);
-
-    // 5. Rozdzielanie do kolumn 2-5 (indeksy 1-4) algorytmem zachłannym
-    remainingGroups.forEach((group) => {
-      // Znajdź kolumnę wśród 2-5, która ma obecnie najmniej elementów (totalSize)
-      const targetCol = cols
-        .slice(1) // bierzemy pod uwagę tylko kolumny od drugiej wzwyż
-        .reduce((prev, curr) => (prev.totalSize < curr.totalSize ? prev : curr));
-
-      targetCol.groups.push(group);
-      targetCol.totalSize += group.size;
+    Object.keys(groupsMap).forEach((key) => {
+      // Jeśli grupa ma tylko 1 kategorię i to nie jest już grupa 'inne'
+      if (groupsMap[key].length === 1 && key !== othersKey) {
+        finalGroups[othersKey].push(...groupsMap[key]);
+      } else {
+        // Jeśli grupa ma więcej niż 1 lub jest to grupa 'inne'
+        if (!finalGroups[key]) finalGroups[key] = [];
+        finalGroups[key].push(...groupsMap[key]);
+      }
     });
 
-    // Przepisanie wyników do zmiennej wyświetlanej w HTML
-    this.columns = cols.map((c) => c.groups);
+    // 3. Mapowanie na strukturę CategoryGroup i czyszczenie pustych grup
+    this.categoryGroups = Object.keys(finalGroups)
+      .filter((key) => finalGroups[key].length > 0) // Usuwamy ewentualne puste klucze
+      .map((key) => ({
+        typeName: key,
+        categories: finalGroups[key],
+      }))
+      // Sortowanie: grupy z największą ilością kategorii na górę
+      .sort((a, b) => b.categories.length - a.categories.length);
+  }
+
+  trackByCategoryId(index: number, category: Category): number {
+    return category.id;
   }
 
   isCategorySelected(category: Category): boolean {
@@ -112,14 +117,11 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
   }
 
   getCategoryStyle(cat: Category, isSidebar: boolean = false) {
-    const hue = this.typeHues[cat.type.toLowerCase()] ?? 250;
-    const color = `hsl(${hue}, 70%, 50%)`;
-
+    const color = cat.color || '#3b82f6';
     if (isSidebar) {
       return {
         'border-left': `4px solid ${color}`,
         background: `rgba(255, 255, 255, 0.05)`,
-        color: '#f8fafc',
       };
     }
     return { 'border-top': `3px solid ${color}` };
@@ -136,13 +138,13 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     }
   }
 
-  addAllCategories() {
-    this.selectedCategories = [...CATEGORY_LIST];
+  removeCategory(cat: Category) {
+    this.selectedCategories = this.selectedCategories.filter((c) => c.id !== cat.id);
     this.save();
   }
 
-  removeCategory(cat: Category) {
-    this.selectedCategories = this.selectedCategories.filter((c) => c.id !== cat.id);
+  addAllCategories() {
+    this.selectedCategories = [...this.allCategories];
     this.save();
   }
 
@@ -161,7 +163,7 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
     if (saved) {
       try {
         this.selectedCategories = JSON.parse(saved);
-      } catch (e) {
+      } catch {
         this.selectedCategories = [];
       }
     }

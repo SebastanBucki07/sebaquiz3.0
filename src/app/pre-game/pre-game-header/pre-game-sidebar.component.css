@@ -6,17 +6,28 @@ mat-card-actions {
 
 .center-buttons {
   display: flex;
+  flex-direction: column; /* KLUCZOWA ZMIANA: przyciski w pionie */
   justify-content: center;
-  align-items: center;
-  gap: 16px;
+  align-items: stretch; /* Rozciąga przyciski do pełnej szerokości kontenera */
+  gap: 12px; /* Nieco mniejszy odstęp lepiej wygląda w kolumnie */
   width: 100%;
   padding: 24px;
+  box-sizing: border-box; /* Upewnia się, że padding nie rozpycha szerokości */
 }
 
 /* Styl dla przycisków funkcyjnych (Wybierz...) */
+.secondary-button,
+.start-button {
+  width: 100%; /* Przyciski zajmują całą dostępną szerokość */
+  height: 50px; /* Stała wysokość dla lepszego balansu wizualnego */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
 .secondary-button {
   background: rgba(255, 255, 255, 0.05) !important;
-  color: #94a3b8 !important; /* var(--text-muted) */
+  color: #94a3b8 !important;
   border: 1px solid rgba(255, 255, 255, 0.1) !important;
   border-radius: 10px !important;
   font-weight: 600 !important;
@@ -29,6 +40,16 @@ mat-card-actions {
   border-color: #3b82f6 !important;
 }
 
+/* Przycisk START (zakładając, że ma klasę .start-button) */
+.start-button {
+  background: #3b82f6 !important; /* Przykładowy kolor aktywny */
+  color: white !important;
+  border-radius: 10px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 /* Obsługa wyłączonego przycisku START */
 .start-button:disabled {
   background: rgba(255, 255, 255, 0.05) !important;
@@ -36,6 +57,7 @@ mat-card-actions {
   box-shadow: none !important;
   cursor: not-allowed;
   transform: none !important;
+  border: 1px solid transparent !important;
 }
 
 /* Ikony wewnątrz przycisków */

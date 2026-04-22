@@ -3,7 +3,6 @@ import { ActivatedRoute, Router, RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { QuestionAreaHeaderComponent } from './question-area-header/question-area-header.component';
 import { GameService } from '../../../services/game.service';
-import { CATEGORY_LIST } from '../../../shared/models/category/categoryList';
 import { Category } from '../../../shared/models/category/category.interface';
 import { QuestionService } from '../../../services/question-service.service';
 import { AnswerComponent } from './answer/answer.component';
@@ -36,22 +35,25 @@ export class GameQuestionAreaComponent implements OnInit {
       const name = params.get('name');
 
       if (!type || !name) {
-        throw new Error('Brak parametrów kategorii w URL');
+        this.router.navigate(['/game']); // Zamiast błędu, lepiej wrócić do menu
+        return;
       }
 
-      const category = CATEGORY_LIST.find((c) => c.type === type && c.name === name);
+      // 1. POBIERAMY Z LOCALSTORAGE LUB SERWISU (Zamiast CATEGORY_LIST)
+      const savedCategories = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
+      const category = savedCategories.find((c: Category) => c.type === type && c.name === name);
+
+      // 2. ALTERNATYWA (Jeśli masz to w GameService):
+      // const category = this.gameService.getSelectedCategories().find(...)
 
       if (!category) {
-        throw new Error('Nie znaleziono kategorii');
+        console.error('Nie znaleziono kategorii w wybranych');
+        this.router.navigate(['/game']);
+        return;
       }
 
       this.currentCategory = category;
-
       this.pointsService.setPoints(this.currentCategory.basePoints);
-
-      //this.currentPoints = category.basePoints;
-
-      // 🔥 HERE WE DRAW A QUESTION
       this.questionService.loadRandomQuestion(type, name);
     });
   }

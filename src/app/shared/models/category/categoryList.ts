@@ -1,6 +1,4 @@
-import { Category } from './category.interface';
-
-export const CATEGORY_LIST: Category[] = [
+export const CATEGORY_LIST = [
   {
     id: 1,
     type: 'music',
@@ -482,6 +480,13 @@ export const CATEGORY_LIST: Category[] = [
     id: 49,
     type: 'hints',
     name: 'Odległosci miedzymiastowe',
+    basePoints: 5,
+    hints: [],
+  },
+  {
+    id: 50,
+    type: 'one-answer',
+    name: 'Test',
     basePoints: 5,
     hints: [],
   },

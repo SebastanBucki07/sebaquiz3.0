@@ -1,12 +1,12 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
-import { MATERIAL_IMPORTS } from '../../../../../shared/material';
+import {MatIcon} from '@angular/material/icon';
 
 @Component({
   selector: 'app-answer-buttons',
   standalone: true,
-  imports: [CommonModule, MATERIAL_IMPORTS],
+  imports: [CommonModule, MatIcon],
   templateUrl: './answer-buttons.component.html',
   styleUrl: './answer-buttons.component.css',
 })

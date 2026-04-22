@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {CommonQuestionComponent} from '../common-question/common-question.component';
+import { CommonQuestionComponent } from '../common-question/common-question.component';
 
 @Component({
   selector: 'app-multiple-choice-category',
@@ -9,6 +9,4 @@ import {CommonQuestionComponent} from '../common-question/common-question.compon
   templateUrl: './multiple-choice-category.component.html',
   styleUrl: './multiple-choice-category.component.css',
 })
-export class MultipleChoiceCategoryComponent extends CommonQuestionComponent {
-
-}
+export class MultipleChoiceCategoryComponent extends CommonQuestionComponent {}

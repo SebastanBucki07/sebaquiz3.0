@@ -96,7 +96,6 @@ app-root {
   padding: 30px 0;
   background: rgba(15, 23, 42, 0.4); /* Subtelne tło pod przyciskami */
   border-radius: 16px;
-  margin-top: 20px;
 }
 
 .center-buttons button {

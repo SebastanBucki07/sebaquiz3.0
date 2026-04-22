@@ -1,9 +1,24 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { MATERIAL_IMPORTS } from '../../../../../shared/material';
+import {MatCard} from '@angular/material/card';
+import {MatFormField, MatLabel} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {MatIcon} from '@angular/material/icon';
+import {MatInput} from '@angular/material/input';
+import {NgIf} from '@angular/common';
+import {MatButton} from '@angular/material/button';
 
 @Component({
   selector: 'app-writing-controls',
-  imports: [MATERIAL_IMPORTS],
+  imports: [
+    MatCard,
+    MatFormField,
+    FormsModule,
+    MatIcon,
+    MatInput,
+    MatLabel,
+    NgIf,
+    MatButton
+  ],
   templateUrl: './writing-controls.component.html',
   styleUrl: './writing-controls.component.css',
 })

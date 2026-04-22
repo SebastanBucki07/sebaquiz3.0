@@ -1,123 +1,146 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
 import { ChooseCategoryComponent } from './choose-category.component';
 import { GameService } from '../../services/game.service';
-import { Subject } from 'rxjs';
-import { CATEGORY_LIST } from '../../shared/models/category/categoryList';
+import { SupabaseService } from '../../services/supabase.service';
+import { Subject} from 'rxjs';
 
 describe('ChooseCategoryComponent', () => {
   let component: ChooseCategoryComponent;
   let fixture: ComponentFixture<ChooseCategoryComponent>;
-  let gameServiceSpy: any; // Używamy any dla ułatwienia konfiguracji property
+  let gameServiceSpy: jasmine.SpyObj<GameService>;
+  let supabaseServiceSpy: jasmine.SpyObj<SupabaseService>;
   let resetSubject: Subject<void>;
+
+  const mockCategoriesFromDb = [
+    { id: 1, name: 'Kategoria 1', category_types: { name: 'Typ A' }, base_points: 100, icon: 'star', color: '#ff0000' },
+    { id: 2, name: 'Kategoria 2', category_types: { name: 'Typ A' }, base_points: 200, icon: 'heart', color: '#00ff00' },
+    { id: 3, name: 'Samotna', category_types: { name: 'Typ B' }, base_points: 300, icon: 'help', color: '#0000ff' }
+  ];
 
   beforeEach(async () => {
     resetSubject = new Subject<void>();
-
-    // Tworzymy mocka z poprawnym przypisaniem Observable
-    gameServiceSpy = {
-      notifyDataChanged: jasmine.createSpy('notifyDataChanged'),
+    gameServiceSpy = jasmine.createSpyObj('GameService', ['notifyDataChanged'], {
       reset$: resetSubject.asObservable()
-    };
+    });
+
+    // Mockujemy getCategories tak, aby zwracał Promise (async/await w komponencie)
+    supabaseServiceSpy = jasmine.createSpyObj('SupabaseService', ['getCategories']);
+    supabaseServiceSpy.getCategories.and.returnValue(Promise.resolve(mockCategoriesFromDb));
 
     await TestBed.configureTestingModule({
       imports: [ChooseCategoryComponent],
       providers: [
-        { provide: GameService, useValue: gameServiceSpy }
+        { provide: GameService, useValue: gameServiceSpy },
+        { provide: SupabaseService, useValue: supabaseServiceSpy }
       ]
     }).compileComponents();
 
     localStorage.clear();
     fixture = TestBed.createComponent(ChooseCategoryComponent);
     component = fixture.componentInstance;
-    // fixture.detectChanges(); // Nie wywołuj tego tutaj, wywołamy w konkretnych testach
   });
 
-  it('should create', () => {
+  it('should load categories from Supabase on init', fakeAsync(() => {
+    fixture.detectChanges(); // ngOnInit
+    tick(); // Czekamy na rozwiązanie Promise z Supabase
+
+    expect(supabaseServiceSpy.getCategories).toHaveBeenCalled();
+    expect(component.allCategories.length).toBe(3);
+    expect(component.isLoading).toBeFalse();
+  }));
+
+  it('should group single categories into "inne"', fakeAsync(() => {
     fixture.detectChanges();
-    expect(component).toBeTruthy();
-  });
+    tick();
 
-  it('should load all categories from CATEGORY_LIST on init if localStorage is empty', () => {
+    // Typ A ma 2 kategorie -> zostaje jako "typ a"
+    // Typ B ma 1 kategorię -> powinien trafić do "inne" (zgodnie z Twoją nową logiką)
+    const inneGroup = component.categoryGroups.find(g => g.typeName === 'inne');
+    const typAGroup = component.categoryGroups.find(g => g.typeName === 'typ a');
+
+    expect(typAGroup).toBeTruthy();
+    expect(typAGroup?.categories.length).toBe(2);
+    expect(inneGroup).toBeTruthy();
+    expect(inneGroup?.categories.some(c => c.name === 'Samotna')).toBeTrue();
+  }));
+
+  it('should add category to selectedCategories and save to localStorage', fakeAsync(() => {
     fixture.detectChanges();
-    expect(component.availableCategories.length).toBe(CATEGORY_LIST.length);
-    expect(component.selectedCategories.length).toBe(0);
-  });
+    tick();
 
-  it('should move category from available to selected when addCategory is called', () => {
-    fixture.detectChanges();
-    const categoryToAdd = CATEGORY_LIST[0];
+    const cat = component.allCategories[0];
+    component.addCategory(cat);
 
-    component.addCategory(categoryToAdd);
-
-    expect(component.selectedCategories).toContain(categoryToAdd);
-    expect(component.availableCategories).not.toContain(categoryToAdd);
+    expect(component.selectedCategories).toContain(cat);
     expect(gameServiceSpy.notifyDataChanged).toHaveBeenCalled();
-  });
-
-  it('should move category back to available when removeCategory is called', () => {
-    fixture.detectChanges();
-    const category = CATEGORY_LIST[0];
-
-    component.addCategory(category); // Najpierw dodajemy
-    component.removeCategory(category); // Potem usuwamy
-
-    expect(component.selectedCategories).not.toContain(category);
-    expect(component.availableCategories).toContain(category);
-  });
-
-  it('should save to localStorage when categories change', () => {
-    fixture.detectChanges();
-    const category = CATEGORY_LIST[0];
-
-    component.addCategory(category);
 
     const saved = JSON.parse(localStorage.getItem('selectedCategories') || '[]');
-    expect(saved.length).toBe(1);
-    expect(saved[0].id).toBe(category.id);
-  });
+    expect(saved[0].id).toBe(cat.id);
+  }));
 
-  it('should add all categories when addAllCategories is called', () => {
+  it('should not add the same category twice', fakeAsync(() => {
     fixture.detectChanges();
-    component.addAllCategories();
+    tick();
 
-    expect(component.selectedCategories.length).toBe(CATEGORY_LIST.length);
-    expect(component.availableCategories.length).toBe(0);
-  });
-
-  it('should remove all categories when removeAllCategories is called', () => {
-    fixture.detectChanges();
-    component.addAllCategories(); // Najpierw dodaj wszystkie
-    component.removeAllCategories(); // Potem usuń wszystkie
-
-    expect(component.selectedCategories.length).toBe(0);
-    expect(component.availableCategories.length).toBe(CATEGORY_LIST.length);
-  });
-
-  it('should reset state when gameService.reset$ emits', () => {
-    fixture.detectChanges(); // Odpala ngOnInit i subskrypcję
-
-    // 1. Ustawiamy stan początkowy (dodajemy kategorię)
-    const testCategory = CATEGORY_LIST[0];
-    component.addCategory(testCategory);
-
-    expect(component.selectedCategories.length).toBe(1); // Sprawdzenie czy dodano
-
-    // 2. Emitujemy sygnał resetu
-    resetSubject.next();
-
-    // 3. Weryfikujemy czy stan wrócił do zera
-    expect(component.selectedCategories.length).withContext('Selected categories should be cleared').toBe(0);
-    expect(component.availableCategories.length).withContext('All categories should be available again').toBe(CATEGORY_LIST.length);
-  });
-
-  it('should load categories from localStorage on init', () => {
-    const mockSelected = [CATEGORY_LIST[0]];
-    localStorage.setItem('selectedCategories', JSON.stringify(mockSelected));
-
-    fixture.detectChanges(); // Wywoła ngOnInit i loadCategories
+    const cat = component.allCategories[0];
+    component.addCategory(cat);
+    component.addCategory(cat);
 
     expect(component.selectedCategories.length).toBe(1);
-    expect(component.selectedCategories[0].id).toBe(CATEGORY_LIST[0].id);
-    expect(component.availableCategories.length).toBe(CATEGORY_LIST.length - 1);
-  });
+  }));
+
+  it('should remove category when removeCategory is called', fakeAsync(() => {
+    fixture.detectChanges();
+    tick();
+
+    const cat = component.allCategories[0];
+    component.addCategory(cat);
+    component.removeCategory(cat);
+
+    expect(component.selectedCategories).not.toContain(cat);
+    expect(component.selectedCategories.length).toBe(0);
+  }));
+
+  it('should add all categories when addAllCategories is called', fakeAsync(() => {
+    fixture.detectChanges();
+    tick();
+
+    component.addAllCategories();
+
+    expect(component.selectedCategories.length).toBe(component.allCategories.length);
+  }));
+
+  it('should reset selected categories when gameService.reset$ emits', fakeAsync(() => {
+    fixture.detectChanges();
+    tick();
+
+    component.addAllCategories();
+    expect(component.selectedCategories.length).toBe(3);
+
+    resetSubject.next(); // Emitujemy reset
+
+    expect(component.selectedCategories.length).toBe(0);
+  }));
+
+  it('should load selected categories from storage on init', fakeAsync(() => {
+    // Symulujemy dane w storage przed startem
+    const mockSelected = [{ id: 1, name: 'Kategoria 1', basePoints: 100 }];
+    localStorage.setItem('selectedCategories', JSON.stringify(mockSelected));
+
+    fixture.detectChanges(); // ngOnInit wywołuje loadSelectedFromStorage
+    tick();
+
+    expect(component.selectedCategories.length).toBe(1);
+    expect(component.selectedCategories[0].id).toBe(1);
+  }));
+
+  it('should calculate total points correctly', fakeAsync(() => {
+    fixture.detectChanges();
+    tick();
+
+    component.addCategory(component.allCategories[0]); // 100 pkt
+    component.addCategory(component.allCategories[1]); // 200 pkt
+
+    expect(component.getTotalPoints()).toBe(300);
+  }));
 });
