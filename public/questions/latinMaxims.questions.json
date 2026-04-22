@@ -1,0 +1,2602 @@
+[
+  {
+    "id": 0,
+    "question": "Juliusz Cezar",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Przybyłem, zobaczyłem, zwyciężyłem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h0-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Veni, vidi, vici."
+      },
+      {
+        "id": "h0-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Juliusz Cezar"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 1,
+    "question": "Juliusz Cezar",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Kości zostały rzucone."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h1-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Alea iacta est."
+      },
+      {
+        "id": "h1-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Juliusz Cezar"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 2,
+    "question": "Sokrates",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Wiem, że nic nie wiem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h2-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Scio me nihil scire."
+      },
+      {
+        "id": "h2-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sokrates"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 3,
+    "question": "Kartezjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Myślę, więc jestem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h3-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Cogito, ergo sum."
+      },
+      {
+        "id": "h3-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Kartezjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 4,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Chwytaj dzień."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h4-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Carpe diem."
+      },
+      {
+        "id": "h4-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 5,
+    "question": "Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "O czasy, o obyczaje!"
+      }
+    ],
+    "hints": [
+      {
+        "id": "h5-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "O tempora, o mores!"
+      },
+      {
+        "id": "h5-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 6,
+    "question": "Wespazjan",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Pieniądze nie śmierdzą."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h6-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Pecunia non olet."
+      },
+      {
+        "id": "h6-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wespazjan"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 7,
+    "question": "Seneka Starszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Błądzić jest rzeczą ludzką."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h7-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Errare humanum est."
+      },
+      {
+        "id": "h7-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Starszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 8,
+    "question": "Sentencja chrześcijańska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Pamiętaj o śmierci."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h8-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Memento mori."
+      },
+      {
+        "id": "h8-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja chrześcijańska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 9,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Przez trudy do gwiazd."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h9-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Per aspera ad astra."
+      },
+      {
+        "id": "h9-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 10,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Twarde prawo, ale prawo."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h10-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Dura lex, sed lex."
+      },
+      {
+        "id": "h10-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 11,
+    "question": "Wergiliusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Miłość zwycięża wszystko."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h11-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Amor vincit omnia."
+      },
+      {
+        "id": "h11-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wergiliusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 12,
+    "question": "Przysłowie rzymskie",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W winie prawda."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h12-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "In vino veritas."
+      },
+      {
+        "id": "h12-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Przysłowie rzymskie"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 13,
+    "question": "Oktawian August",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Śpiesz się powoli."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h13-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Festina lente."
+      },
+      {
+        "id": "h13-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Oktawian August"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 14,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nie wszystek umrę."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h14-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Non omnis moriar."
+      },
+      {
+        "id": "h14-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 15,
+    "question": "Terencjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Człowiekiem jestem i nic co ludzkie nie jest mi obce."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h15-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Homo sum, humani nihil a me alienum puto."
+      },
+      {
+        "id": "h15-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Terencjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 16,
+    "question": "Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Historia jest nauczycielką życia."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h16-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Historia est magistra vitae."
+      },
+      {
+        "id": "h16-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 17,
+    "question": "Wegecjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Jeśli chcesz pokoju, przygotuj się do wojny."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h17-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Si vis pacem, para bellum."
+      },
+      {
+        "id": "h17-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wegecjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 18,
+    "question": "Pytanie biblijne",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dokąd idziesz, Panie?"
+      }
+    ],
+    "hints": [
+      {
+        "id": "h18-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Quo vadis, Domine?"
+      },
+      {
+        "id": "h18-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Tradycja biblijna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 19,
+    "question": "Katon Starszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Kartaginę należy zniszczyć."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h19-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Carthago delenda est."
+      },
+      {
+        "id": "h19-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Katon Starszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 20,
+    "question": "Owidiusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Kropla drąży skałę."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h20-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Gutta cavat lapidem."
+      },
+      {
+        "id": "h20-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Owidiusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 21,
+    "question": "Wergiliusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Śmiałym szczęście sprzyja."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h21-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Audaces fortuna iuvat."
+      },
+      {
+        "id": "h21-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wergiliusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 22,
+    "question": "Juliusz Cezar",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "I ty, Brutusie, przeciwko mnie?"
+      }
+    ],
+    "hints": [
+      {
+        "id": "h22-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Et tu, Brute, contra me?"
+      },
+      {
+        "id": "h22-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Juliusz Cezar"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 23,
+    "question": "Plutarch",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Broda nie czyni filozofem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h23-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Barba non facit philosophum."
+      },
+      {
+        "id": "h23-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Plutarch"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 24,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Gniew jest krótkotrwałym szaleństwem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h24-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ira furor brevis est."
+      },
+      {
+        "id": "h24-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 25,
+    "question": "Juwenalis",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W zdrowym ciele zdrowy duch."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h25-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Mens sana in corpore sano."
+      },
+      {
+        "id": "h25-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Juwenalis"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 26,
+    "question": "Alkuin",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Głos ludu to głos Boga."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h26-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Vox populi, vox Dei."
+      },
+      {
+        "id": "h26-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Alkuin"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 27,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Życie jest walką."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h27-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Vivere est militare."
+      },
+      {
+        "id": "h27-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 28,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Ręka rękę myje."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h28-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Manus manum lavat."
+      },
+      {
+        "id": "h28-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 29,
+    "question": "Liwiusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Hannibal u bram."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h29-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Hannibal ad portas."
+      },
+      {
+        "id": "h29-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Liwiusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 30,
+    "question": "Katullus",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nienawidzę i kocham."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h30-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Odi et amo."
+      },
+      {
+        "id": "h30-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Katullus"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 31,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Złoty środek."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h31-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Aurea mediocritas."
+      },
+      {
+        "id": "h31-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 32,
+    "question": "Kohelet (Biblia)",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nic nowego pod słońcem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h32-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Nihil novi sub sole."
+      },
+      {
+        "id": "h32-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Kohelet"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 33,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Uczymy się nie dla szkoły, lecz dla życia."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h33-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Non scholae, sed vitae discimus."
+      },
+      {
+        "id": "h33-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 34,
+    "question": "Filip II Macedoński",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dziel i rządź."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h34-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Divide et impera."
+      },
+      {
+        "id": "h34-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Filip II Macedoński"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 35,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Od jajka aż do jabłek (od początku do końca)."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h35-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ab ovo usque ad mala."
+      },
+      {
+        "id": "h35-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 36,
+    "question": "Terencjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Mądrej głowie dość dwie słowie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h36-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Dictum sapienti sat est."
+      },
+      {
+        "id": "h36-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Terencjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 37,
+    "question": "Konstantyn Wielki",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Pod tym znakiem zwyciężysz."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h37-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "In hoc signo vinces."
+      },
+      {
+        "id": "h37-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Konstantyn Wielki"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 38,
+    "question": "Ewangelia wg św. Łukasza",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Lekarzu, ulecz się sam."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h38-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Medice, cura te ipsum."
+      },
+      {
+        "id": "h38-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Biblia"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 39,
+    "question": "Juwenalis",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Chleba i igrzysk."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h39-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Panem et circenses."
+      },
+      {
+        "id": "h39-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Juwenalis"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 40,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Umów należy dotrzymywać."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h40-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Pacta sunt servanda."
+      },
+      {
+        "id": "h40-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 41,
+    "question": "Neron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Jakiż artysta ginie we mnie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h41-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Qualis artifex pereo."
+      },
+      {
+        "id": "h41-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Neron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 42,
+    "question": "Terencjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Ilu ludzi, tyle opinii."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h42-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Quot homines, tot sententiae."
+      },
+      {
+        "id": "h42-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Terencjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 43,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Czyny, nie słowa."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h43-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Res, non verba."
+      },
+      {
+        "id": "h43-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 44,
+    "question": "Wergiliusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Obawiam się Greków, nawet gdy niosą dary."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h44-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Timeo Danaos et dona ferentes."
+      },
+      {
+        "id": "h44-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wergiliusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 45,
+    "question": "Kohelet (Biblia)",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Marność nad marnościami i wszystko marność."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h45-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Vanitas vanitatum et omnia vanitas."
+      },
+      {
+        "id": "h45-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Biblia"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 46,
+    "question": "Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Prawdziwego przyjaciela poznaje się w biedzie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h46-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Amicus certus in re incerta cernitur."
+      },
+      {
+        "id": "h46-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 47,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "O gustach się nie dyskutuje."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h47-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "De gustibus non est disputandum."
+      },
+      {
+        "id": "h47-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 48,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Doświadczenie uczy."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h48-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Experientia docet."
+      },
+      {
+        "id": "h48-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 49,
+    "question": "Appiusz Klaudiusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Każdy jest kowalem własnego losu."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h49-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Faber est suae quisque fortunae."
+      },
+      {
+        "id": "h49-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Appiusz Klaudiusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 50,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Podbita Grecja podbiła dzikiego zwycięzcę."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h50-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Graecia capta ferum victorem cepit."
+      },
+      {
+        "id": "h50-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 51,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W razie wątpliwości na korzyść oskarżonego."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h51-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "In dubio pro reo."
+      },
+      {
+        "id": "h51-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 52,
+    "question": "Arystoteles",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Cnota stoi pośrodku."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h52-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "In medio stat virtus."
+      },
+      {
+        "id": "h52-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Arystoteles"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 53,
+    "question": "Pliniusz Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Praca sama w sobie jest przyjemnością."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h53-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Labor est etiam ipse voluptas."
+      },
+      {
+        "id": "h53-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Pliniusz Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 54,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nikt nie jest bez wad."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h54-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Nemo sine vitiis est."
+      },
+      {
+        "id": "h54-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 55,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nie wszystko, co lśni, jest złotem."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h55-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Non omne quod nitet aurum est."
+      },
+      {
+        "id": "h55-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 56,
+    "question": "Apelles",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Ani dnia bez kreski."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h56-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Nulla dies sine linea."
+      },
+      {
+        "id": "h56-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Apelles"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 57,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nie było wielkiego geniuszu bez domieszki szaleństwa."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h57-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Nullum magnum ingenium sine mixtura dementiae fuit."
+      },
+      {
+        "id": "h57-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 58,
+    "question": "Bias z Prieny",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Wszystko, co moje, noszę ze sobą."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h58-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Omnia mea mecum porto."
+      },
+      {
+        "id": "h58-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Bias z Prieny"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 59,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Odpoczynek po pracy."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h59-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Otium post negotium."
+      },
+      {
+        "id": "h59-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 60,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Pełny brzuch niechętnie się uczy."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h60-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Plenus venter non studet libenter."
+      },
+      {
+        "id": "h60-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 61,
+    "question": "Hipokrates",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Po pierwsze nie szkodzić."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h61-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Primum non nocere."
+      },
+      {
+        "id": "h61-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Hipokrates"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 62,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Czegokolwiek się uczysz, uczysz się dla siebie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h62-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Quidquid discis, tibi discis."
+      },
+      {
+        "id": "h62-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 63,
+    "question": "Św. Augustyn",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Rzym przemówił, sprawa zakończona."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h63-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Roma locuta, causa finita."
+      },
+      {
+        "id": "h63-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Św. Augustyn"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 64,
+    "question": "Horacy / Kant",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Odważ się być mądrym."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h64-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Sapere aude."
+      },
+      {
+        "id": "h64-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 65,
+    "question": "Liturgia łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W górę serca."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h65-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Sursum corda."
+      },
+      {
+        "id": "h65-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Liturgia"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 66,
+    "question": "Pacyfiusz / Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Gdzie dobrze, tam ojczyzna."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h66-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ubi bene, ibi patria."
+      },
+      {
+        "id": "h66-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 67,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nieznajomość prawa szkodzi."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h67-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ignorantia iuris nocet."
+      },
+      {
+        "id": "h67-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 68,
+    "question": "Wergiliusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Znikająca nadzieja jest jedynym ratunkiem dla pokonanych."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h68-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Una salus victis nullam sperare salutem."
+      },
+      {
+        "id": "h68-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Wergiliusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 69,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Złoto próbuje się ogniem, dzielnego męża przeciwnościami."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h69-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ignis aurum probat, miseria fortes viros."
+      },
+      {
+        "id": "h69-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 70,
+    "question": "Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dopóki oddycham, mam nadzieję."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h70-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Dum spiro, spero."
+      },
+      {
+        "id": "h70-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 71,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zmień miejsce, a nie ducha."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h71-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Caelum non animum mutant, qui trans mare currunt."
+      },
+      {
+        "id": "h71-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 72,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Nikt nie może być sędzią we własnej sprawie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h72-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Nemo iudex in causa sua."
+      },
+      {
+        "id": "h72-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 73,
+    "question": "Owidiusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Miłość nie zna praw."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h73-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Amor non est medicabilis herbis."
+      },
+      {
+        "id": "h73-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Owidiusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 74,
+    "question": "Cyceron",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zgoda buduje, niezgoda rujnuje."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h74-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Concordia res parvae crescunt, discordia maximae dilabuntur."
+      },
+      {
+        "id": "h74-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Cyceron"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 75,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Czas ucieka."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h75-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Tempus fugit."
+      },
+      {
+        "id": "h75-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 76,
+    "question": "Zasada prawna",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Prawo nie działa wstecz."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h76-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Lex retro non agit."
+      },
+      {
+        "id": "h76-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Zasada prawna"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 77,
+    "question": "Terencjusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zbyt wielka surowość jest niesprawiedliwością."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h77-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Summum ius, summa iniuria."
+      },
+      {
+        "id": "h77-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Terencjusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 78,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W zdrowym ciele, zdrowy duch."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h78-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Mens sana in corpore sano."
+      },
+      {
+        "id": "h78-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 79,
+    "question": "Pliniusz Starszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Błądzić jest rzeczą ludzką."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h79-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Errare humanum est."
+      },
+      {
+        "id": "h79-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Pliniusz Starszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 80,
+    "question": "Publiusz Syrus",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zgoda czyni życie słodkim."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h80-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Concordia res parvae crescunt."
+      },
+      {
+        "id": "h80-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Publiusz Syrus"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 81,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Słowa uczą, przykłady pociągają."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h81-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Verba docent, exempla trahunt."
+      },
+      {
+        "id": "h81-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 82,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Większość ludzi tak myśli."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h82-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ut sementem feceris, ita metes."
+      },
+      {
+        "id": "h82-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 83,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dzielność jest drogą do gwiazd."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h83-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Virtus est via ad astra."
+      },
+      {
+        "id": "h83-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 84,
+    "question": "Arystoteles",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Przyjaciel jest drugim ja."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h84-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Amicus alter ego."
+      },
+      {
+        "id": "h84-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Arystoteles"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 85,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Głupota nie ma granic."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h85-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Stultitia non habet modum."
+      },
+      {
+        "id": "h85-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 86,
+    "question": "Liwiusz",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dopóki oddycham, mam nadzieję."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h86-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Dum spiro, spero."
+      },
+      {
+        "id": "h86-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Liwiusz"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 87,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zwycięstwo kocha troskę."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h87-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Victoria amat curam."
+      },
+      {
+        "id": "h87-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 88,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Słowa ulatują, pismo zostaje."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h88-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Verba volant, scripta manent."
+      },
+      {
+        "id": "h88-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 89,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "W zdrowiu i chorobie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h89-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "In sanitate et in infirmitate."
+      },
+      {
+        "id": "h89-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 90,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zło czai się w szczegółach."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h90-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Diabolus in details."
+      },
+      {
+        "id": "h90-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 91,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zgoda jest matką zgody."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h91-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Concordia mater est."
+      },
+      {
+        "id": "h91-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 92,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Prawda zawsze zwycięży."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h92-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Veritas semper vincit."
+      },
+      {
+        "id": "h92-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 93,
+    "question": "Publiusz Syrus",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Pieniądz nie czyni szczęśliwym."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h93-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Pecunia non facit beatum."
+      },
+      {
+        "id": "h93-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Publiusz Syrus"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 94,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Do gwiazd przez trud."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h94-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Ad astra per aspera."
+      },
+      {
+        "id": "h94-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 95,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Dopóki istnieje życie, istnieje nadzieja."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h95-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Dum vita est, spes est."
+      },
+      {
+        "id": "h95-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 96,
+    "question": "Seneka Młodszy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Długo uczy się życie."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h96-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Longum iter est per praecepta, breve et efficax per exempla."
+      },
+      {
+        "id": "h96-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Seneka Młodszy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 97,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Najpierw żyć, potem filozofować."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h97-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Primum vivere, deinde philosophari."
+      },
+      {
+        "id": "h97-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 98,
+    "question": "Sentencja łacińska",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Zgoda buduje."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h98-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Concordia res parvae crescunt."
+      },
+      {
+        "id": "h98-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Sentencja łacińska"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  },
+  {
+    "id": 99,
+    "question": "Horacy",
+    "answers": [
+      {
+        "label": "Tłumaczenie",
+        "value": "Wszystko mija."
+      }
+    ],
+    "hints": [
+      {
+        "id": "h99-1",
+        "label": "Oryginalne tłumaczenie",
+        "penaltyPercent": 0,
+        "content": "Omnia praetereunt."
+      },
+      {
+        "id": "h99-2",
+        "label": "Autor",
+        "penaltyPercent": 50,
+        "content": "Horacy"
+      }
+    ],
+    "showAnswer": false,
+    "revealedAnswers": []
+  }
+]

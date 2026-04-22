@@ -3,36 +3,20 @@ import {Question} from '../../shared/questions/question.interface';
 import {SupabaseService} from '../supabase.service';
 import {BOGOWIE} from '../../shared/questions/gods.questions';
 import {HISTORIA} from '../../shared/questions/history.questions';
-import {FIZYKA} from '../../shared/questions/physics.questions';
 import {STADIONY} from '../../shared/questions/stadiums.questions';
-import {PILKA_NOZNA} from '../../shared/questions/football.questions';
 import {PRZYSLOWIA} from '../../shared/questions/proverbs.questions';
 import {KLUBOWE_PRZYDOMKI} from '../../shared/questions/footballClubsNames.questions';
 import {CountryProvider} from '../../shared/providers/country.provider';
-import {FRAGMENTY_PIOSENEK} from '../../shared/questions/songs.questions';
-import {ARTYSTA_PO_UTWORACH} from '../../shared/questions/musicArtists.questions';
-import {BOHATEROWIE_FILMOWI} from '../../shared/questions/movieHeroes.questions';
-import {BOHATEROWIE_SERIALOWI} from '../../shared/questions/tvSeriesHeroes.question';
-import {MIASTA_SWIATA} from '../../shared/questions/worldCities.questions';
-import {ZNANE_CYTATY} from '../../shared/questions/latinMaxims.questions';
-import {REZYSEROWIE} from '../../shared/questions/directors.questions';
 import {BUDOWLE} from '../../shared/questions/buildings.questions';
-import {FLAGI} from '../../shared/questions/flag.questions';
-import {SERIAL_PO_AKTORACH} from '../../shared/questions/tvSeriesActors.questions';
-import {JAKA_TO_MELODIA} from '../../shared/questions/music.questions';
 import {CZOLOWKI_SERIALI} from '../../shared/questions/tvSeriesIntro.questions';
 import {IMPREZY_SPORTOWE} from '../../shared/questions/footballChampionsMusic.questions';
 import {HYMNY_PANSTWOWE} from '../../shared/questions/nationalAnthems.questions';
 import {BAJKOWE_INTRO} from '../../shared/questions/fairyTalesIntros.questions';
-import {LOGO_FRAGMENTY} from '../../shared/questions/logoFragments.questions';
-import {FRAGMENT_FLAG} from '../../shared/questions/flagFragments.questions';
-import {MECZE_PILKARSKIE} from '../../shared/questions/footaballGames.questions';
 import {FootballGridProvider} from '../../shared/providers/football-grid.provider';
 import {mapOldFamiliadaToNew} from '../../shared/mappers/familiada.mapper';
 import {FAMILIADA_RAW} from '../../shared/questions/familiada.questions';
 import {mapCountriesToQuestions} from '../../shared/mappers/countries.mapper';
 import {DANE_PANSTW} from '../../shared/questions/countries.questions';
-import {GRY} from '../../shared/questions/games.questions';
 import {firstValueFrom} from 'rxjs';
 import {HttpClient} from '@angular/common/http'; // Twoje stałe
 
@@ -49,6 +33,14 @@ export class QuestionLoaderService {
       return await this.supabaseService.getQuestions('BIOLOGIA');
     }
 
+    if (key === 'one-answer:Test') {
+      return await this.supabaseService.getQuestions('TEST');
+    }
+
+    if (key === 'hints:Lektury') {
+      return await this.supabaseService.getQuestions('BOOKS');
+    }
+
     const loader = this.OLD_STRATEGIES[key];
 
     if (loader) {
@@ -62,51 +54,50 @@ export class QuestionLoaderService {
     'one-answer:Film': () => firstValueFrom(this.http.get('/questions/movies.questions.json')),
     'one-answer:Seriale': () => firstValueFrom(this.http.get('/questions/tvSeries.questions.json')),
     'one-answer:Symbole Chemiczne': () => firstValueFrom(this.http.get('/questions/chemists.questions.json')),
-    'one-answer:Gry': () => GRY,
-    'one-answer:Biologia': () => this.supabaseService.getQuestions('BIOLOGIA'),
+    'one-answer:Gry': () => firstValueFrom(this.http.get('/questions/games.questions.json')),
     'one-answer:Bogowie': () => BOGOWIE,
     'one-answer:Historia': () => HISTORIA,
-    'one-answer:Fizyka': () => FIZYKA,
+    'one-answer:Fizyka': () => firstValueFrom(this.http.get('/questions/physics.questions.json')),
     'one-answer:Miasto - Województwo': () => firstValueFrom(this.http.get('/questions/polishDistricts.questions.json')),
     'one-answer:Nazwy stadionów': () => STADIONY,
-    'one-answer:Piłka nożna - wielkie imprezy': () => PILKA_NOZNA,
+    'one-answer:Piłka nożna - wielkie imprezy': () => firstValueFrom(this.http.get('/questions/football.questions.json')),
     'one-answer:Przysłowia': () => PRZYSLOWIA,
     'one-answer:Klubowe przydomki': () => KLUBOWE_PRZYDOMKI,
     'one-answer:Stolice krajów': () => CountryProvider.getCapitals(),
-    'one-answer:Test': () => this.supabaseService.getQuestions('TEST'),
+
 
     // Hints
-    'hints:Lektury': () => this.supabaseService.getQuestions('BOOKS'),
-    'hints:Fragmenty piosenek': () => FRAGMENTY_PIOSENEK,
-    'hints:Artysta po tytułach piosenek': () => ARTYSTA_PO_UTWORACH,
-    'hints:Film po bohaterach': () => BOHATEROWIE_FILMOWI,
-    'hints:Serial po bohaterach': () => BOHATEROWIE_SERIALOWI,
-    'hints:Miasta świata': () => MIASTA_SWIATA,
-    'hints:Łaicnskie sentencje': () => ZNANE_CYTATY,
-    'hints:Reżyser po filmach': () => REZYSEROWIE,
+
+    'hints:Fragmenty piosenek': () => firstValueFrom(this.http.get('/questions/songs.questions.json')),
+    'hints:Artysta po tytułach piosenek': () => firstValueFrom(this.http.get('/questions/musicArtists.questions.json')),
+    'hints:Film po bohaterach': () => firstValueFrom(this.http.get('/questions/movieHeroes.questions.json')),
+    'hints:Serial po bohaterach': () => firstValueFrom(this.http.get('/questions/tvSeriesHeroes.questions.json')),
+    'hints:Miasta świata': () => firstValueFrom(this.http.get('/questions/worldCities.questions.json')),
+    'hints:Łaicnskie sentencje': () => firstValueFrom(this.http.get('/questions/latinMaxims.questions.json')),
+    'hints:Reżyser po filmach': () => firstValueFrom(this.http.get('/questions/directors.questions.json')),
     'hints:Odległosci miedzymiastowe': () => firstValueFrom(this.http.get('/questions/citiesDistance.questions.json')),
 
     // Photos
     'photos:Znane postacie': () => firstValueFrom(this.http.get('/questions/famousPeople.questions.json')),
     'photos:Budowle': () => BUDOWLE,
-    'photos:Flagi': () => FLAGI,
+    'photos:Flagi': () => firstValueFrom(this.http.get('/questions/flag.questions.json')),
 
     // Photo Hints
     'photo-hints:Klubowa Historia piłkarza': () => firstValueFrom(this.http.get('/questions/footballHistory.questions.json')),
     'photo-hints:W jakim filmie zagrała taka obsada?': () => firstValueFrom(this.http.get('/questions/moviesActors.questions.json')),
-    'photo-hints:W jakim serialu zagrała taka obsada?': () => SERIAL_PO_AKTORACH,
+    'photo-hints:W jakim serialu zagrała taka obsada?': () => firstValueFrom(this.http.get('/questions/tvSeriesActors.questions.json')),
 
     // Music
-    'music:Jaka to Melodia?': () => JAKA_TO_MELODIA,
+    'music:Jaka to Melodia?': () => firstValueFrom(this.http.get('/questions/music.questions.json')),
     'music:Czołówki seriali': () => CZOLOWKI_SERIALI,
     'music:Piosenki mistrzostw': () => IMPREZY_SPORTOWE,
     'music:Hymny Panstwowe': () => HYMNY_PANSTWOWE,
     'music:Bajkowe Intro': () => BAJKOWE_INTRO,
 
     // Photo Fragments
-    'photo-fragments:Jakie to logo?': () => LOGO_FRAGMENTY,
+    'photo-fragments:Jakie to logo?': () => firstValueFrom(this.http.get('/questions/logoFragments.questions.json')),
     'photo-fragments:Jaki to herb piłkarski?': () => firstValueFrom(this.http.get('/questions/footballCrests.questions.json')),
-    'photo-fragments:Fragmenty Flag': () => FRAGMENT_FLAG,
+    'photo-fragments:Fragmenty Flag': () => firstValueFrom(this.http.get('/questions/flagFragments.questions.json')),
 
     // Writing Category
     'writting-category:Wypisywanie róznych wspólnych': () => firstValueFrom(this.http.get('/questions/writings.questions.json')),
@@ -118,7 +109,7 @@ export class QuestionLoaderService {
     'writting-category:Stolice na literę': () => CountryProvider.getCapitalsByLetter(),
 
     // Football Game
-    'footballGame:Był taki mecz': () => MECZE_PILKARSKIE,
+    'footballGame:Był taki mecz': () => firstValueFrom(this.http.get('/questions/footballGames.questions.json')),
 
     // Special Logic
     'ticTacToe:Piłkarskie kółko i krzyżyk': () => FootballGridProvider.getGridQuestions(50),
