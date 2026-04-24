@@ -28,4 +28,8 @@ export class HomeComponent {
 
     this.router.navigate(['/pregame']);
   }
+
+  goToConfig() {
+    this.router.navigate(['/configure']);
+  }
 }

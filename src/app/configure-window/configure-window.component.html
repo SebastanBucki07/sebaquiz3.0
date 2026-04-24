@@ -1,0 +1,25 @@
+<div class="config-wrapper">
+  <nav class="navigation-bar">
+    <button
+      mat-flat-button
+      class="nav-button"
+      routerLink="add-category"
+      routerLinkActive="active-btn">
+      <mat-icon>category</mat-icon>
+      Dodaj kategorię
+    </button>
+
+    <button
+      mat-flat-button
+      class="nav-button"
+      routerLink="add-question"
+      routerLinkActive="active-btn">
+      <mat-icon>add_circle</mat-icon>
+      Dodaj pytanie
+    </button>
+  </nav>
+
+  <main class="content-area">
+    <router-outlet></router-outlet>
+  </main>
+</div>

@@ -1,0 +1,126 @@
+<div class="add-cat-wrapper">
+  <div class="form-card">
+    <header class="form-header">
+      <mat-icon class="header-icon">add_circle_outline</mat-icon>
+      <div class="header-text">
+        <h2>Nowa Kategoria</h2>
+        <p>Zdefiniuj parametry nowej grupy pytań w bazie danych</p>
+      </div>
+    </header>
+
+    <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" class="category-form">
+      <div class="main-layout">
+
+        <div class="inputs-grid">
+          <div class="full-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Nazwa kategorii</mat-label>
+              <input matInput formControlName="name" placeholder="np. Geografia Świata">
+              <mat-icon matSuffix>label</mat-icon>
+              <mat-error *ngIf="nameControl?.errors?.['required']">Nazwa jest wymagana</mat-error>
+              <mat-error *ngIf="nameControl?.errors?.['minlength']">Minimum 3 znaki</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="full-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Typ kategorii</mat-label>
+              <mat-select formControlName="type_id">
+                <mat-select-trigger>
+      <span style="color: #f1f5f9; font-weight: 500;">
+        {{ getSelectedTypeName() }}
+      </span>
+                </mat-select-trigger>
+
+                <mat-option *ngFor="let type of categoryTypes" [value]="type.id">
+                  {{ type.name || type.label }}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="typeControl?.errors?.['required']">Wybierz typ z listy</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="split-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Punkty bazowe</mat-label>
+              <input matInput type="number" formControlName="base_points">
+              <mat-hint>Domyślna wartość dla pytań</mat-hint>
+              <mat-error *ngIf="pointsControl?.errors?.['required']">Wymagane</mat-error>
+            </mat-form-field>
+
+            <div class="color-picker-group">
+              <label>Kolor kafelka</label>
+              <div class="color-input-wrapper">
+                <input type="color" formControlName="color" id="colorPicker">
+                <label for="colorPicker" class="color-hex-label">
+                  <span class="color-preview-circle" [style.background-color]="f['color'].value"></span>
+                  {{ f['color'].value }}
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="full-row">
+            <mat-form-field appearance="fill">
+              <mat-label>Ikona Material</mat-label>
+              <mat-select formControlName="icon">
+                <mat-select-trigger>
+                  <div class="selected-icon" *ngIf="f['icon'].value" style="display: flex; align-items: center; gap: 10px;">
+                    <mat-icon>{{ f['icon'].value }}</mat-icon>
+                    <span>{{ f['icon'].value }}</span>
+                  </div>
+                </mat-select-trigger>
+                <mat-option *ngFor="let icon of availableIcons" [value]="icon">
+                  <div class="icon-option" style="display: flex; align-items: center; gap: 10px;">
+                    <mat-icon>{{ icon }}</mat-icon>
+                    <span>{{ icon }}</span>
+                  </div>
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="iconControl?.errors?.['required']">Wybierz ikonę</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="checkbox-row">
+            <mat-checkbox formControlName="is_active" color="primary">
+              Kategoria aktywna w grze
+            </mat-checkbox>
+          </div>
+        </div>
+
+        <aside class="preview-column">
+          <div class="sticky-preview">
+            <span class="preview-label">Podgląd na żywo</span>
+
+            <div class="mock-card" [style.border-left-color]="f['color'].value">
+              <div class="card-glow" [style.background-color]="f['color'].value"></div>
+              <mat-icon class="mock-icon" [style.color]="f['color'].value">
+                {{ f['icon'].value || 'quiz' }}
+              </mat-icon>
+              <div class="mock-info">
+                <h3>{{ f['name'].value || 'Nazwa Kategorii' }}</h3>
+                <span class="mock-points">{{ f['base_points'].value || 0 }} PKT</span>
+              </div>
+            </div>
+
+            <div class="actions">
+              <button mat-flat-button color="primary" type="submit"
+                      [disabled]="categoryForm.invalid || isLoading" class="save-btn">
+                <mat-spinner diameter="24" *ngIf="isLoading" style="margin-right: 10px;"></mat-spinner>
+                <mat-icon *ngIf="!isLoading">save</mat-icon>
+                <span>{{ isLoading ? 'Zapisywanie...' : 'DODAJ KATEGORIĘ' }}</span>
+              </button>
+
+              <button mat-stroked-button type="button"
+                      (click)="categoryForm.reset({color: '#3b82f6', base_points: 10, is_active: true, icon: 'quiz'})"
+                      class="reset-btn">
+                Wyczyść formularz
+              </button>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </form>
+  </div>
+</div>

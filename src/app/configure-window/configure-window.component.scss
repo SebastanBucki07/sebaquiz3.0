@@ -1,0 +1,83 @@
+.config-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
+
+  .navigation-bar {
+    display: flex;
+    gap: 12px;
+    padding: 12px 24px;
+    background-color: #1e1e1e;
+    border-bottom: 1px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    .nav-button {
+      font-weight: 500;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #b0b0b0;
+      background-color: transparent;
+      border: 1px solid transparent;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.05);
+        color: #ffffff;
+        border-color: #444;
+      }
+
+      &.active-btn {
+        background: linear-gradient(45deg, #3f51b5, #2196f3);
+        color: #ffffff;
+        box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+        border: none;
+
+        mat-icon {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+
+  .content-area {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1e1e1e 0%, #121212 100%);
+
+    router-outlet + * {
+      display: block;
+      width: 100%;
+      max-width: 800px;
+      background-color: #1e1e1e;
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid #333;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+.content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+.content-area::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+.content-area::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+
+  &:hover {
+    background: #444;
+  }
+}

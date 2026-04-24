@@ -39,6 +39,7 @@ import {Routes} from '@angular/router';
 //   { path: '**', redirectTo: '' },
 // ];
 
+
 export const routes: Routes = [
   {
     path: '',
@@ -47,6 +48,21 @@ export const routes: Routes = [
       {
         path: '',
         loadComponent: () => import('./home/home.component').then(m => m.HomeComponent),
+      },
+      {
+        path: 'configure',
+        loadComponent: () => import('./configure-window/configure-window.component').then(m => m.ConfigureWindowComponent),
+        children: [
+          { path: '', redirectTo: 'add-category', pathMatch: 'full' },
+          {
+            path: 'add-category',
+            loadComponent: () => import('./configure-window/add-category/add-category.component').then(m => m.AddCategoryComponent)
+          },
+          {
+            path: 'add-question',
+            loadComponent: () => import('./configure-window/add-question/add-question.component').then(m => m.AddQuestionComponent)
+          }
+        ]
       },
       {
         path: 'game',
@@ -60,7 +76,7 @@ export const routes: Routes = [
             path: 'category/:type/:name',
             loadComponent: () => import('./game/game-content/game-question-area/game-question-area.component').then(m => m.GameQuestionAreaComponent),
             children: [
-              {path: '', redirectTo: 'default', pathMatch: 'full'},
+              { path: '', redirectTo: 'default', pathMatch: 'full' },
               {
                 path: 'hints',
                 loadComponent: () => import('./game/game-content/game-question-area/hints-category/hints-category.component').then(m => m.HintsCategoryComponent),
@@ -117,7 +133,7 @@ export const routes: Routes = [
         path: 'pregame',
         loadComponent: () => import('./pre-game/pre-game.component').then(m => m.PreGameComponent),
         children: [
-          {path: '', redirectTo: 'choose-team', pathMatch: 'full'},
+          { path: '', redirectTo: 'choose-team', pathMatch: 'full' },
           {
             path: 'choose-team',
             loadComponent: () => import('./pre-game/choose-team/choose-team.component').then(m => m.ChooseTeamComponent)
@@ -130,5 +146,5 @@ export const routes: Routes = [
       },
     ],
   },
-  {path: '**', redirectTo: ''},
+  { path: '**', redirectTo: '' },
 ];
