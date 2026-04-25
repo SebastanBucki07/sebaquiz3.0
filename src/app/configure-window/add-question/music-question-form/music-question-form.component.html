@@ -1,0 +1,96 @@
+<div class="music-form-container">
+  <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="music-card">
+
+    <div class="header">
+      <mat-icon>music_note</mat-icon>
+      <div class="header-text">
+        <h2>Nowy utwór muzyczny</h2>
+        <p>Dodaj link do YouTube i przypisz poprawne odpowiedzi</p>
+      </div>
+    </div>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Kategoria muzyczna</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let cat of categories" [value]="cat.id">
+          {{ cat.name }}
+        </mat-option>
+        <mat-option *ngIf="categories.length === 0" disabled>Brak dostępnych kategorii typu muzycznego</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="full-width">
+      <mat-label>Link do YouTube lub ID filmu</mat-label>
+      <mat-icon matPrefix>link</mat-icon>
+      <input
+        matInput
+        formControlName="questionText"
+        placeholder="np. https://www.youtube.com/watch?v=..."
+        (input)="onUrlChange($any($event.target).value)">
+      <mat-hint>Wklej pełny adres URL – system sam wyciągnie ID</mat-hint>
+    </mat-form-field>
+
+    <div class="video-preview-container" *ngIf="questionForm.get('questionText')?.value">
+      @let vId = extractVideoId(questionForm.get('questionText')?.value);
+
+      <div class="preview-card animate-fade" *ngIf="vId && vId.length === 11">
+        <div class="thumbnail-box">
+          <img [src]="'https://img.youtube.com/vi/' + vId + '/mqdefault.jpg'" alt="Miniaturka">
+          <div class="yt-play-icon"><mat-icon>play_circle_filled</mat-icon></div>
+        </div>
+
+        <div class="video-info">
+          <span class="info-label">ROZPOZNANO UTWÓR:</span>
+          <h4 class="video-title">{{ videoTitle || 'Pobieranie tytułu z YouTube...' }}</h4>
+          <code class="video-id">YouTube ID: {{ vId }}</code>
+        </div>
+      </div>
+    </div>
+
+    <div formArrayName="answers" class="answers-section">
+      <div class="section-header">
+        <h3><mat-icon>checklist</mat-icon> Odpowiedzi do rozpoznania</h3>
+      </div>
+
+      <div *ngFor="let answer of answers.controls; let i = index" [formGroupName]="i" class="answer-row">
+        <mat-form-field appearance="fill" class="label-field">
+          <mat-label>Etykieta</mat-label>
+          <input matInput formControlName="label" placeholder="np. Tytuł">
+        </mat-form-field>
+
+        <mat-form-field appearance="fill" class="value-field">
+          <mat-label>Prawidłowa treść</mat-label>
+          <input matInput formControlName="value" placeholder="Wpisz rozwiązanie...">
+        </mat-form-field>
+
+        <button
+          mat-icon-button
+          color="warn"
+          type="button"
+          matTooltip="Usuń pole"
+          (click)="removeAnswer(i)"
+          [disabled]="answers.length <= 1">
+          <mat-icon>delete_outline</mat-icon>
+        </button>
+      </div>
+
+      <button mat-stroked-button color="primary" type="button" (click)="addAnswer()" class="add-btn">
+        <mat-icon>add</mat-icon> Dodaj kolejne pole odpowiedzi (np. Rok, Gatunek)
+      </button>
+    </div>
+
+    <div class="actions">
+      <button
+        mat-flat-button
+        color="accent"
+        type="submit"
+        [disabled]="questionForm.invalid || isSaving || !extractVideoId(questionForm.get('questionText')?.value)">
+
+        <mat-icon *ngIf="!isSaving">save</mat-icon>
+        <mat-spinner diameter="20" *ngIf="isSaving"></mat-spinner>
+
+        <span>{{ isSaving ? 'ZAPISYWANIE W BAZIE...' : 'ZAPISZ UTWÓR' }}</span>
+      </button>
+    </div>
+  </form>
+</div>

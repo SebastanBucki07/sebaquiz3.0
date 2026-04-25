@@ -10,9 +10,22 @@
         Dodaj One-Answer
       </mat-button-toggle>
 
-      <mat-button-toggle value="hint" [checked]="activeForm === 'hint'" (change)="setForm('hint')">
+      <mat-button-toggle
+        value="hint"
+        [checked]="activeForm === 'hint'"
+        (change)="setForm('hint')"
+      >
         <mat-icon>help_outline</mat-icon>
         Dodaj Hint
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        value="music"
+        [checked]="activeForm === 'music'"
+        (change)="setForm('music')"
+      >
+        <mat-icon>music_note</mat-icon>
+        Dodaj Muzyczne
       </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
@@ -27,6 +40,10 @@
     } @else if (activeForm === 'hint') {
       <div class="fade-in">
         <app-hints-form></app-hints-form>
+      </div>
+    } @else if (activeForm === 'music') {
+      <div class="fade-in">
+        <app-music-question-form></app-music-question-form>
       </div>
     } @else {
       <div class="placeholder-content">
