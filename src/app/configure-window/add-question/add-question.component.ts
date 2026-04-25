@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import {OneAnswerFormComponent} from './one-answer-form/one-answer-form.component';
-import {HintsFormComponent} from './hints-form/hints-form.component';
-import {MatButtonToggle, MatButtonToggleGroup} from '@angular/material/button-toggle';
-import {MatIcon} from '@angular/material/icon';
-import {MatDivider} from '@angular/material/divider';
+import { OneAnswerFormComponent } from './one-answer-form/one-answer-form.component';
+import { HintsFormComponent } from './hints-form/hints-form.component';
+import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
+import { MatIcon } from '@angular/material/icon';
+import { MatDivider } from '@angular/material/divider';
 
 type FormType = 'one-answer' | 'hint' | null;
 
@@ -18,7 +18,7 @@ type FormType = 'one-answer' | 'hint' | null;
     MatDivider,
   ],
   templateUrl: './add-question.component.html',
-  styleUrl: './add-question.component.scss'
+  styleUrl: './add-question.component.scss',
 })
 export class AddQuestionComponent {
   activeForm: FormType = null;

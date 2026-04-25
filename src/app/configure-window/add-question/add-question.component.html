@@ -4,15 +4,13 @@
       <mat-button-toggle
         value="one-answer"
         [checked]="activeForm === 'one-answer'"
-        (change)="setForm('one-answer')">
+        (change)="setForm('one-answer')"
+      >
         <mat-icon>short_text</mat-icon>
         Dodaj One-Answer
       </mat-button-toggle>
 
-      <mat-button-toggle
-        value="hint"
-        [checked]="activeForm === 'hint'"
-        (change)="setForm('hint')">
+      <mat-button-toggle value="hint" [checked]="activeForm === 'hint'" (change)="setForm('hint')">
         <mat-icon>help_outline</mat-icon>
         Dodaj Hint
       </mat-button-toggle>

@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 import { Hint } from '../../../../../shared/models/category/hint.interface';
-import {MatCard} from '@angular/material/card';
+import { MatCard } from '@angular/material/card';
 
 @Component({
   selector: 'app-photo-tips',

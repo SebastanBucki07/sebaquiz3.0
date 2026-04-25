@@ -10,12 +10,11 @@
 
     <form [formGroup]="categoryForm" (ngSubmit)="onSubmit()" class="category-form">
       <div class="main-layout">
-
         <div class="inputs-grid">
           <div class="full-row">
             <mat-form-field appearance="fill">
               <mat-label>Nazwa kategorii</mat-label>
-              <input matInput formControlName="name" placeholder="np. Geografia Świata">
+              <input matInput formControlName="name" placeholder="np. Geografia Świata" />
               <mat-icon matSuffix>label</mat-icon>
               <mat-error *ngIf="nameControl?.errors?.['required']">Nazwa jest wymagana</mat-error>
               <mat-error *ngIf="nameControl?.errors?.['minlength']">Minimum 3 znaki</mat-error>
@@ -27,9 +26,9 @@
               <mat-label>Typ kategorii</mat-label>
               <mat-select formControlName="type_id">
                 <mat-select-trigger>
-      <span style="color: #f1f5f9; font-weight: 500;">
-        {{ getSelectedTypeName() }}
-      </span>
+                  <span style="color: #f1f5f9; font-weight: 500">
+                    {{ getSelectedTypeName() }}
+                  </span>
                 </mat-select-trigger>
 
                 <mat-option *ngFor="let type of categoryTypes" [value]="type.id">
@@ -43,7 +42,7 @@
           <div class="split-row">
             <mat-form-field appearance="fill">
               <mat-label>Punkty bazowe</mat-label>
-              <input matInput type="number" formControlName="base_points">
+              <input matInput type="number" formControlName="base_points" />
               <mat-hint>Domyślna wartość dla pytań</mat-hint>
               <mat-error *ngIf="pointsControl?.errors?.['required']">Wymagane</mat-error>
             </mat-form-field>
@@ -51,9 +50,12 @@
             <div class="color-picker-group">
               <label>Kolor kafelka</label>
               <div class="color-input-wrapper">
-                <input type="color" formControlName="color" id="colorPicker">
+                <input type="color" formControlName="color" id="colorPicker" />
                 <label for="colorPicker" class="color-hex-label">
-                  <span class="color-preview-circle" [style.background-color]="f['color'].value"></span>
+                  <span
+                    class="color-preview-circle"
+                    [style.background-color]="f['color'].value"
+                  ></span>
                   {{ f['color'].value }}
                 </label>
               </div>
@@ -65,13 +67,17 @@
               <mat-label>Ikona Material</mat-label>
               <mat-select formControlName="icon">
                 <mat-select-trigger>
-                  <div class="selected-icon" *ngIf="f['icon'].value" style="display: flex; align-items: center; gap: 10px;">
+                  <div
+                    class="selected-icon"
+                    *ngIf="f['icon'].value"
+                    style="display: flex; align-items: center; gap: 10px"
+                  >
                     <mat-icon>{{ f['icon'].value }}</mat-icon>
                     <span>{{ f['icon'].value }}</span>
                   </div>
                 </mat-select-trigger>
                 <mat-option *ngFor="let icon of availableIcons" [value]="icon">
-                  <div class="icon-option" style="display: flex; align-items: center; gap: 10px;">
+                  <div class="icon-option" style="display: flex; align-items: center; gap: 10px">
                     <mat-icon>{{ icon }}</mat-icon>
                     <span>{{ icon }}</span>
                   </div>
@@ -104,22 +110,40 @@
             </div>
 
             <div class="actions">
-              <button mat-flat-button color="primary" type="submit"
-                      [disabled]="categoryForm.invalid || isLoading" class="save-btn">
-                <mat-spinner diameter="24" *ngIf="isLoading" style="margin-right: 10px;"></mat-spinner>
+              <button
+                mat-flat-button
+                color="primary"
+                type="submit"
+                [disabled]="categoryForm.invalid || isLoading"
+                class="save-btn"
+              >
+                <mat-spinner
+                  diameter="24"
+                  *ngIf="isLoading"
+                  style="margin-right: 10px"
+                ></mat-spinner>
                 <mat-icon *ngIf="!isLoading">save</mat-icon>
                 <span>{{ isLoading ? 'Zapisywanie...' : 'DODAJ KATEGORIĘ' }}</span>
               </button>
 
-              <button mat-stroked-button type="button"
-                      (click)="categoryForm.reset({color: '#3b82f6', base_points: 10, is_active: true, icon: 'quiz'})"
-                      class="reset-btn">
+              <button
+                mat-stroked-button
+                type="button"
+                (click)="
+                  categoryForm.reset({
+                    color: '#3b82f6',
+                    base_points: 10,
+                    is_active: true,
+                    icon: 'quiz',
+                  })
+                "
+                class="reset-btn"
+              >
                 Wyczyść formularz
               </button>
             </div>
           </div>
         </aside>
-
       </div>
     </form>
   </div>

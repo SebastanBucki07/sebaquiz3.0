@@ -68,14 +68,19 @@
 }
 
 /* Row layouts */
-.answer-row, .hint-row-top {
+.answer-row,
+.hint-row-top {
   display: flex;
   gap: 16px;
   align-items: center;
   margin-bottom: 12px;
 
-  .flex-1 { flex: 1; }
-  .flex-2 { flex: 2; }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-2 {
+    flex: 2;
+  }
 }
 
 .hint-row-top {
@@ -178,6 +183,12 @@
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

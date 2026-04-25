@@ -71,8 +71,12 @@
   margin-bottom: 12px;
   animation: slideDown 0.3s ease-out;
 
-  .flex-1 { flex: 1; }
-  .flex-2 { flex: 2; }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-2 {
+    flex: 2;
+  }
 }
 
 /* Global Material Theme Overrides - consistent colors */
@@ -143,6 +147,12 @@
 
 /* Animations */
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

@@ -6,7 +6,7 @@ import { GameService } from '../../services/game.service';
 import { SupabaseService } from '../../services/supabase.service';
 import { Category } from '../../shared/models/category/category.interface';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
-import {MatIcon} from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 
 interface CategoryGroup {
   typeName: string;

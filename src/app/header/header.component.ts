@@ -2,16 +2,14 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { GameService } from '../services/game.service';
 import { QuestionService } from '../services/question-service.service';
-import {MatIcon} from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   templateUrl: './header.component.html',
   styleUrl: './header.component.css',
-  imports: [
-    MatIcon
-  ]
+  imports: [MatIcon],
 })
 export class HeaderComponent {
   constructor(

@@ -67,14 +67,17 @@ export class QuestionLoaderService {
         loadedQuestions = type === 'familiada' ? mapOldFamiliadaToNew(dbQuestions) : dbQuestions;
       }
     } catch (error) {
-      console.warn(`[QuestionLoader] Błąd bazy dla ${normalizedName}, sprawdzam fallback...`, error);
+      console.warn(
+        `[QuestionLoader] Błąd bazy dla ${normalizedName}, sprawdzam fallback...`,
+        error
+      );
     }
 
     // 4. FALLBACK - Jeśli baza jest pusta, szukaj w starych strategiach (pliki/stałe)
     if (loadedQuestions.length === 0) {
       const key = `${type}:${normalizedName}`;
       const strategyKey = Object.keys(this.OLD_STRATEGIES).find(
-        k => k.toLowerCase() === key.toLowerCase()
+        (k) => k.toLowerCase() === key.toLowerCase()
       );
 
       if (strategyKey) {
@@ -105,66 +108,94 @@ export class QuestionLoaderService {
    */
   private readonly OLD_STRATEGIES: Record<string, () => Promise<Question[]> | any> = {
     // One Answer
-    'one-answer:Film': () => firstValueFrom(this.http.get<Question[]>('/questions/movies.questions.json')),
-    'one-answer:Seriale': () => firstValueFrom(this.http.get<Question[]>('/questions/tvSeries.questions.json')),
-    'one-answer:Symbole Chemiczne': () => firstValueFrom(this.http.get<Question[]>('/questions/chemists.questions.json')),
-    'one-answer:Gry': () => firstValueFrom(this.http.get<Question[]>('/questions/games.questions.json')),
+    'one-answer:Film': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/movies.questions.json')),
+    'one-answer:Seriale': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/tvSeries.questions.json')),
+    'one-answer:Symbole Chemiczne': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/chemists.questions.json')),
+    'one-answer:Gry': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/games.questions.json')),
     'one-answer:Bogowie': () => BOGOWIE,
     'one-answer:Historia': () => HISTORIA,
-    'one-answer:Fizyka': () => firstValueFrom(this.http.get<Question[]>('/questions/physics.questions.json')),
-    'one-answer:Miasto - Województwo': () => firstValueFrom(this.http.get<Question[]>('/questions/polishDistricts.questions.json')),
+    'one-answer:Fizyka': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/physics.questions.json')),
+    'one-answer:Miasto - Województwo': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/polishDistricts.questions.json')),
     'one-answer:Nazwy stadionów': () => STADIONY,
-    'one-answer:Piłka nożna - wielkie imprezy': () => firstValueFrom(this.http.get<Question[]>('/questions/football.questions.json')),
+    'one-answer:Piłka nożna - wielkie imprezy': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/football.questions.json')),
     'one-answer:Przysłowia': () => PRZYSLOWIA,
     'one-answer:Klubowe przydomki': () => KLUBOWE_PRZYDOMKI,
     'one-answer:Stolice krajów': () => CountryProvider.getCapitals(),
 
     // Hints
-    'hints:Fragmenty piosenek': () => firstValueFrom(this.http.get<Question[]>('/questions/songs.questions.json')),
-    'hints:Artysta po tytułach piosenek': () => firstValueFrom(this.http.get<Question[]>('/questions/musicArtists.questions.json')),
-    'hints:Film po bohaterach': () => firstValueFrom(this.http.get<Question[]>('/questions/movieHeroes.questions.json')),
-    'hints:Serial po bohaterach': () => firstValueFrom(this.http.get<Question[]>('/questions/tvSeriesHeroes.questions.json')),
-    'hints:Miasta świata': () => firstValueFrom(this.http.get<Question[]>('/questions/worldCities.questions.json')),
-    'hints:Łaicnskie sentencje': () => firstValueFrom(this.http.get<Question[]>('/questions/latinMaxims.questions.json')),
-    'hints:Reżyser po filmach': () => firstValueFrom(this.http.get<Question[]>('/questions/directors.questions.json')),
-    'hints:Odległosci miedzymiastowe': () => firstValueFrom(this.http.get<Question[]>('/questions/citiesDistance.questions.json')),
+    'hints:Fragmenty piosenek': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/songs.questions.json')),
+    'hints:Artysta po tytułach piosenek': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/musicArtists.questions.json')),
+    'hints:Film po bohaterach': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/movieHeroes.questions.json')),
+    'hints:Serial po bohaterach': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/tvSeriesHeroes.questions.json')),
+    'hints:Miasta świata': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/worldCities.questions.json')),
+    'hints:Łaicnskie sentencje': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/latinMaxims.questions.json')),
+    'hints:Reżyser po filmach': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/directors.questions.json')),
+    'hints:Odległosci miedzymiastowe': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/citiesDistance.questions.json')),
 
     // Photos
-    'photos:Znane postacie': () => firstValueFrom(this.http.get<Question[]>('/questions/famousPeople.questions.json')),
+    'photos:Znane postacie': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/famousPeople.questions.json')),
     'photos:Budowle': () => BUDOWLE,
-    'photos:Flagi': () => firstValueFrom(this.http.get<Question[]>('/questions/flag.questions.json')),
+    'photos:Flagi': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/flag.questions.json')),
 
     // Photo Hints
-    'photo-hints:Klubowa Historia piłkarza': () => firstValueFrom(this.http.get<Question[]>('/questions/footballHistory.questions.json')),
-    'photo-hints:W jakim filmie zagrała taka obsada?': () => firstValueFrom(this.http.get<Question[]>('/questions/moviesActors.questions.json')),
-    'photo-hints:W jakim serialu zagrała taka obsada?': () => firstValueFrom(this.http.get<Question[]>('/questions/tvSeriesActors.questions.json')),
+    'photo-hints:Klubowa Historia piłkarza': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/footballHistory.questions.json')),
+    'photo-hints:W jakim filmie zagrała taka obsada?': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/moviesActors.questions.json')),
+    'photo-hints:W jakim serialu zagrała taka obsada?': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/tvSeriesActors.questions.json')),
 
     // Music
-    'music:Jaka to Melodia?': () => firstValueFrom(this.http.get<Question[]>('/questions/music.questions.json')),
+    'music:Jaka to Melodia?': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/music.questions.json')),
     'music:Czołówki seriali': () => CZOLOWKI_SERIALI,
     'music:Piosenki mistrzostw': () => IMPREZY_SPORTOWE,
     'music:Hymny Panstwowe': () => HYMNY_PANSTWOWE,
     'music:Bajkowe Intro': () => BAJKOWE_INTRO,
 
     // Photo Fragments
-    'photo-fragments:Jakie to logo?': () => firstValueFrom(this.http.get<Question[]>('/questions/logoFragments.questions.json')),
-    'photo-fragments:Jaki to herb piłkarski?': () => firstValueFrom(this.http.get<Question[]>('/questions/footballCrests.questions.json')),
-    'photo-fragments:Fragmenty Flag': () => firstValueFrom(this.http.get<Question[]>('/questions/flagFragments.questions.json')),
+    'photo-fragments:Jakie to logo?': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/logoFragments.questions.json')),
+    'photo-fragments:Jaki to herb piłkarski?': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/footballCrests.questions.json')),
+    'photo-fragments:Fragmenty Flag': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/flagFragments.questions.json')),
 
     // Writing Category
-    'writting-category:Wypisywanie róznych wspólnych': () => firstValueFrom(this.http.get<Question[]>('/questions/writings.questions.json')),
-    'writting-category:Wypisywanie róznych wspólnych - piłka nożna': () => firstValueFrom(this.http.get<Question[]>('/questions/writingsFootball.questions.json')),
+    'writting-category:Wypisywanie róznych wspólnych': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/writings.questions.json')),
+    'writting-category:Wypisywanie róznych wspólnych - piłka nożna': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/writingsFootball.questions.json')),
     'writting-category:Państwa z kontynentu': () => CountryProvider.getCountriesByContinent(),
     'writting-category:Stolice z kontynentu': () => CountryProvider.getCapitalsByContinent(),
     'writting-category:Państwa na literę': () => CountryProvider.getCountriesByLetter(),
     'writting-category:Stolice na literę': () => CountryProvider.getCapitalsByLetter(),
 
     // Football Game
-    'footballGame:Był taki mecz': () => firstValueFrom(this.http.get<Question[]>('/questions/footballGames.questions.json')),
+    'footballGame:Był taki mecz': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/footballGames.questions.json')),
 
     // Inne
     'familiada:Familiada': () => mapOldFamiliadaToNew(FAMILIADA_RAW),
     'country:Jaki to kraj?': () => mapCountriesToQuestions(DANE_PANSTW),
-    'hints:Lektury': () => firstValueFrom(this.http.get<Question[]>('/questions/books.questions.json')), // Przykład fallbacku dla Lektur
+    'hints:Lektury': () =>
+      firstValueFrom(this.http.get<Question[]>('/questions/books.questions.json')), // Przykład fallbacku dla Lektur
   };
 }
