@@ -28,7 +28,7 @@ export class SupabaseService {
     .insert([
       {
         name: categoryData.name,
-        type_id: categoryData.type_id, // upewnij się, że tak nazywa się kolumna w DB
+        type_id: categoryData.type_id,
         color: categoryData.color,
         base_points: categoryData.base_points,
         is_active: categoryData.is_active,
@@ -87,14 +87,25 @@ export class SupabaseService {
   }
 
   async addQuestion(questionData: any) {
-    const { data, error } = await this.supabase.from('questions').insert([
-      {
-        category: questionData.category,
-        question: questionData.question,
-        answers: questionData.answers,
-        hints: questionData.hints,
-      },
-    ]);
+    const { data, error } = await this.supabase
+    .from('questions')
+    .insert([questionData]);
+
     return { data, error };
+  }
+
+  async getCategoriesByType(typeId: number) {
+    const { data, error } = await this.supabase
+    .from('categories')
+    .select('*')
+    .eq('type_id', typeId)
+    .eq('is_active', true)
+    .order('name', { ascending: true });
+
+    if (error) {
+      console.error('Błąd pobierania kategorii po typie:', error);
+      throw error;
+    }
+    return data || [];
   }
 }

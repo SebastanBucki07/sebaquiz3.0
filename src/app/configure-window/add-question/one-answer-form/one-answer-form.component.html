@@ -3,8 +3,8 @@
   <mat-form-field appearance="outline">
     <mat-label>Wybierz kategorię</mat-label>
     <mat-select formControlName="category">
-      @for (cat of categories; track cat) {
-        <mat-option [value]="cat">{{ cat }}</mat-option>
+      @for (cat of categories; track cat.id) {
+        <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
       }
     </mat-select>
   </mat-form-field>
@@ -45,7 +45,10 @@
   </div>
 
   <div class="form-actions">
-    <button mat-raised-button color="primary" type="submit" [disabled]="questionForm.invalid">
+    <button mat-raised-button
+            color="primary"
+            type="submit"
+            [disabled]="questionForm.invalid">
       <mat-icon>save</mat-icon>
       Zapisz pytanie
     </button>
