@@ -27,12 +27,12 @@
       @for (answer of answers.controls; track answer; let i = $index) {
         <div [formGroupName]="i" class="answer-row">
           <mat-form-field appearance="fill" class="flex-1">
-            <mat-label>Label (np. autor)</mat-label>
+            <mat-label>Nazwa odpowiedzi</mat-label>
             <input matInput formControlName="label">
           </mat-form-field>
 
           <mat-form-field appearance="fill" class="flex-2">
-            <mat-label>Value (np. Sienkiewicz)</mat-label>
+            <mat-label>treśc odpowiedzi</mat-label>
             <input matInput formControlName="value">
           </mat-form-field>
 

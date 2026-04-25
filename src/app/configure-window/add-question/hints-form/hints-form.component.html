@@ -1,1 +1,97 @@
-<p>add-question hints works!</p>
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="form-layout">
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Kategoria (Typ: Hint)</mat-label>
+    <mat-select formControlName="category">
+      @if (isLoading) {
+        <mat-option disabled>Wczytywanie kategorii...</mat-option>
+      }
+      @for (cat of categories; track cat.id) {
+        <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline" class="full-width">
+    <mat-label>Pytanie</mat-label>
+    <textarea matInput rows="2" formControlName="questionText" placeholder="Tresc Pytania"></textarea>
+  </mat-form-field>
+
+  <div class="section-box">
+    <div class="section-header">
+      <h3>Odpowiedzi (max 5)</h3>
+      <button type="button" mat-stroked-button color="primary" (click)='addAnswer()' [disabled]="answers.length >= 5">
+        <mat-icon>add</mat-icon> Dodaj odpowiedź
+      </button>
+    </div>
+
+    <div formArrayName="answers" class="items-list">
+      @for (ans of answers.controls; track ans; let i = $index) {
+        <div [formGroupName]="i" class="answer-row">
+          <mat-form-field appearance="fill" class="flex-1">
+            <mat-label>Nazwa odpowiedzi</mat-label>
+            <input matInput formControlName="label">
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="flex-2">
+            <mat-label>Treść odpowiedzi </mat-label>
+            <input matInput formControlName="value">
+          </mat-form-field>
+
+          <button type="button" mat-icon-button color="warn" (click)="removeAnswer(i)" [disabled]="answers.length <= 1">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="section-box highlight">
+    <div class="section-header">
+      <h3>Podpowiedzi (max 5)</h3>
+      <button type="button" mat-stroked-button color="primary" (click)="addHint()" [disabled]="hints.length >= 5">
+        <mat-icon>tips_and_updates</mat-icon> Dodaj podpowiedź
+      </button>
+    </div>
+
+    <div formArrayName="hints" class="items-list">
+      @for (hint of hints.controls; track hint; let i = $index) {
+        <div [formGroupName]="i" class="hint-card">
+          <div class="hint-row-top">
+            <mat-form-field appearance="fill" class="flex-2">
+              <mat-label>Nazwa podpowiedzi</mat-label>
+              <input matInput formControlName="label">
+            </mat-form-field>
+
+            <div class="slider-container flex-2">
+              <div class="slider-info">
+                <span>Kara w procentach</span>
+                <span class="penalty-value">{{hint.get('penaltyPercent')?.value}}%</span>
+              </div>
+              <mat-slider min="0" max="100" step="5" discrete showTickMarks>
+                <input matSliderThumb formControlName="penaltyPercent">
+              </mat-slider>
+            </div>
+
+            <button type="button" mat-icon-button color="warn" (click)="removeHint(i)">
+              <mat-icon>delete_outline</mat-icon>
+            </button>
+          </div>
+
+          <mat-form-field appearance="fill" class="full-width">
+            <mat-label>Treść podpowiedzi</mat-label>
+            <textarea matInput rows="3" formControlName="content" placeholder="Wpisz treśc podpowiedzi..."></textarea>
+          </mat-form-field>
+
+          <input type="hidden" formControlName="id">
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit" [disabled]="questionForm.invalid">
+      <mat-icon>save</mat-icon> Dodaj pytanie z podpowiedziami
+    </button>
+  </div>
+</form>
