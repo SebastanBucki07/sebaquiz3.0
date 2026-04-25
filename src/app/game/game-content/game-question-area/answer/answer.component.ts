@@ -6,7 +6,7 @@ import { Question } from '../../../../shared/questions/question.interface';
 import { AnswerButtonsComponent } from './answer-buttons/answer-buttons.component';
 import { AnswerItem } from '../../../../shared/models/answers/answerItem.interface';
 import { getClubNameByFile } from '../../../../shared/mappers/clubMapper';
-import {MatIcon} from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-answer',

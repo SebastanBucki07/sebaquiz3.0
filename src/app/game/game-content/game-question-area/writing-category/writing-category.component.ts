@@ -19,7 +19,6 @@ import { WritingControlsComponent } from './writting-controls/writing-controls.c
 import { WritingGameStatusComponent } from './writing-game-status/writing-game-status.component';
 import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
 
-
 @Component({
   selector: 'app-writing-category',
   standalone: true,

@@ -1,0 +1,93 @@
+/* add-question.component.scss */
+.container {
+  width: 100%;
+}
+
+/* Target the main scrollable area in your config wrapper */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* CHANGE THESE: */
+  overflow-y: auto !important; /* Enable vertical scroll */
+  height: calc(100vh - 120px); /* Adjust based on your header height */
+  padding: 40px 20px;
+
+  /* Ensure the component inside stretches but stays centered */
+  & > * {
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+  }
+}
+
+h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  mat-button-toggle-group {
+    border: 1px solid #444 !important;
+    background-color: #252525 !important;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  mat-button-toggle {
+    color: #a0a0a0 !important;
+    border-right: 1px solid #444 !important;
+
+    &.mat-button-toggle-checked {
+      background-color: #3f51b5 !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+// To wymusi wysokość i czytelność tekstu
+::ng-deep .mat-button-toggle-label-content {
+  line-height: 50px !important; // Wyższy przycisk
+  padding: 0 32px !important; // Szerszy napis
+  font-size: 15px !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+mat-icon {
+  margin: 0; // Usuwamy domyślne przesunięcia
+}
+
+mat-divider {
+  border-top-color: rgba(255, 255, 255, 0.1) !important;
+  margin-bottom: 2.5rem !important;
+}
+
+.placeholder-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 0;
+  color: #555;
+  border: 2px dashed #333;
+  border-radius: 20px;
+
+  mat-icon {
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+  }
+}

@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { Category } from '../../shared/models/category/category.interface';
 import { QuestionService } from '../../services/question-service.service';
-import {MatIcon} from '@angular/material/icon';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-game-content',

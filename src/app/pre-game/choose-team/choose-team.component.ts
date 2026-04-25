@@ -5,10 +5,9 @@ import { takeUntil } from 'rxjs/operators';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Team } from '../../shared/models/teams/team.interface';
-import {MatFormField, MatLabel} from '@angular/material/form-field';
-import {MatError, MatInput} from '@angular/material/input';
-import {MatIcon} from '@angular/material/icon';
-
+import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatError, MatInput } from '@angular/material/input';
+import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-choose-team',

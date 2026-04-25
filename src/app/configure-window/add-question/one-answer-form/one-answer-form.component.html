@@ -1,0 +1,64 @@
+<form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="form-layout">
+  <mat-form-field appearance="outline">
+    <mat-label>Wybierz kategorię</mat-label>
+    <mat-select formControlName="category">
+      @for (cat of categories; track cat.id) {
+        <mat-option [value]="cat.id">{{ cat.name }}</mat-option>
+      }
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Treść pytania</mat-label>
+    <input matInput placeholder="Wpisz treść pytania..." formControlName="questionText" />
+  </mat-form-field>
+
+  <div class="answers-container">
+    <div class="answers-header">
+      <h3>Odpowiedzi (Struktura Label -> Value)</h3>
+      <button
+        type="button"
+        mat-button
+        color="primary"
+        (click)="addAnswer()"
+        [disabled]="answers.length >= 5"
+      >
+        <mat-icon>add</mat-icon>
+        Dodaj pole ({{ answers.length }}/5)
+      </button>
+    </div>
+
+    <div formArrayName="answers" class="answers-list">
+      @for (answer of answers.controls; track answer; let i = $index) {
+        <div [formGroupName]="i" class="answer-row">
+          <mat-form-field appearance="fill" class="flex-1">
+            <mat-label>Nazwa odpowiedzi</mat-label>
+            <input matInput formControlName="label" />
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" class="flex-2">
+            <mat-label>treśc odpowiedzi</mat-label>
+            <input matInput formControlName="value" />
+          </mat-form-field>
+
+          <button
+            type="button"
+            mat-icon-button
+            color="warn"
+            (click)="removeAnswer(i)"
+            [disabled]="answers.length <= 1"
+          >
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <button mat-raised-button color="primary" type="submit" [disabled]="questionForm.invalid">
+      <mat-icon>save</mat-icon>
+      Zapisz pytanie
+    </button>
+  </div>
+</form>

@@ -8,12 +8,11 @@ export class SupabaseService {
     'sb_publishable_W5VsEn1VJYSpMD_i9Sz8Jg_LtH-bxuC'
   );
 
-
   async getCategoryTypes() {
     const { data, error } = await this.supabase
-    .from('category_types')
-    .select('*')
-    .order('name', { ascending: true });
+      .from('category_types')
+      .select('*')
+      .order('name', { ascending: true });
 
     if (error) {
       console.error('Błąd pobierania typów kategorii:', error);
@@ -24,18 +23,18 @@ export class SupabaseService {
 
   async addCategory(categoryData: any) {
     const { data, error } = await this.supabase
-    .from('categories')
-    .insert([
-      {
-        name: categoryData.name,
-        type_id: categoryData.type_id, // upewnij się, że tak nazywa się kolumna w DB
-        color: categoryData.color,
-        base_points: categoryData.base_points,
-        is_active: categoryData.is_active,
-        icon: categoryData.icon
-      }
-    ])
-    .select();
+      .from('categories')
+      .insert([
+        {
+          name: categoryData.name,
+          type_id: categoryData.type_id,
+          color: categoryData.color,
+          base_points: categoryData.base_points,
+          is_active: categoryData.is_active,
+          icon: categoryData.icon,
+        },
+      ])
+      .select();
 
     if (error) {
       console.error('Błąd podczas dodawania kategorii:', error);
@@ -65,36 +64,63 @@ export class SupabaseService {
 
   async getQuestions(categoryName: string) {
     const { data, error } = await this.supabase
-    .from('questions')
-    .select(`
+      .from('questions')
+      .select(
+        `
       *,
       categories!inner (
         name
       )
-    `)
+    `
+      )
 
-    .ilike('categories.name', categoryName.trim());
+      .ilike('categories.name', categoryName.trim());
 
     if (error) {
       console.error('Błąd pobierania pytań z relacją:', error.message);
       throw error;
     }
 
-    return (data || []).map(q => ({
+    return (data || []).map((q) => ({
       ...q,
-      category: q.categories?.name
+      category: q.categories?.name,
     }));
   }
 
   async addQuestion(questionData: any) {
-    const { data, error } = await this.supabase.from('questions').insert([
-      {
-        category: questionData.category,
-        question: questionData.question,
-        answers: questionData.answers,
-        hints: questionData.hints,
-      },
-    ]);
+    const { data, error } = await this.supabase.from('questions').insert([questionData]);
+
     return { data, error };
+  }
+
+  async getCategoriesByType(typeId: number) {
+    const { data, error } = await this.supabase
+      .from('categories')
+      .select('*')
+      .eq('type_id', typeId)
+      .eq('is_active', true)
+      .order('name', { ascending: true });
+
+    if (error) {
+      console.error('Błąd pobierania kategorii po typie:', error);
+      throw error;
+    }
+    return data || [];
+  }
+
+  async checkDuplicate(questionText: string, categoryId: number): Promise<boolean> {
+    const { data, error } = await this.supabase
+      .from('questions')
+      .select('id')
+      .eq('category_id', categoryId)
+      .ilike('question', questionText.trim())
+      .maybeSingle();
+
+    if (error) {
+      console.error('Error checking duplicates:', error);
+      return false;
+    }
+
+    return !!data;
   }
 }
