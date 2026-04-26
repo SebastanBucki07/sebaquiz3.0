@@ -108,19 +108,30 @@ export class SupabaseService {
     return data || [];
   }
 
-  async checkDuplicate(questionText: string, categoryId: number): Promise<boolean> {
+  async checkDuplicate(
+    questionText: string,
+    categoryId: number,
+    answers?: any[]
+  ): Promise<boolean> {
     const { data, error } = await this.supabase
       .from('questions')
-      .select('id')
-      .eq('category_id', categoryId)
-      .ilike('question', questionText.trim())
-      .maybeSingle();
+      .select('question, answers')
+      .eq('category_id', categoryId);
 
-    if (error) {
-      console.error('Error checking duplicates:', error);
-      return false;
+    if (error || !data) return false;
+
+    if (answers && answers.length > 0) {
+      const createFingerprint = (ans: any[]) =>
+        ans
+          .map((a) => `${a.label.toLowerCase()}:${a.value.toLowerCase().trim()}`)
+          .sort()
+          .join('|');
+
+      const newFingerprint = createFingerprint(answers);
+      return data.some((record) => createFingerprint(record.answers || []) === newFingerprint);
     }
 
-    return !!data;
+    const normalizedNewQuestion = questionText.toLowerCase().trim();
+    return data.some((record) => record.question.toLowerCase().trim() === normalizedNewQuestion);
   }
 }

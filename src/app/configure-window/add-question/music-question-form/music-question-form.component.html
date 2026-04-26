@@ -1,6 +1,5 @@
 <div class="music-form-container">
   <form [formGroup]="questionForm" (ngSubmit)="onSubmit()" class="music-card">
-
     <div class="header">
       <mat-icon>music_note</mat-icon>
       <div class="header-text">
@@ -15,7 +14,9 @@
         <mat-option *ngFor="let cat of categories" [value]="cat.id">
           {{ cat.name }}
         </mat-option>
-        <mat-option *ngIf="categories.length === 0" disabled>Brak dostępnych kategorii typu muzycznego</mat-option>
+        <mat-option *ngIf="categories.length === 0" disabled>
+          Brak dostępnych kategorii typu muzycznego
+        </mat-option>
       </mat-select>
     </mat-form-field>
 
@@ -26,7 +27,8 @@
         matInput
         formControlName="questionText"
         placeholder="np. https://www.youtube.com/watch?v=..."
-        (input)="onUrlChange($any($event.target).value)">
+        (input)="onUrlChange($any($event.target).value)"
+      />
       <mat-hint>Wklej pełny adres URL – system sam wyciągnie ID</mat-hint>
     </mat-form-field>
 
@@ -35,7 +37,7 @@
 
       <div class="preview-card animate-fade" *ngIf="vId && vId.length === 11">
         <div class="thumbnail-box">
-          <img [src]="'https://img.youtube.com/vi/' + vId + '/mqdefault.jpg'" alt="Miniaturka">
+          <img [src]="'https://img.youtube.com/vi/' + vId + '/mqdefault.jpg'" alt="Miniaturka" />
           <div class="yt-play-icon"><mat-icon>play_circle_filled</mat-icon></div>
         </div>
 
@@ -49,18 +51,25 @@
 
     <div formArrayName="answers" class="answers-section">
       <div class="section-header">
-        <h3><mat-icon>checklist</mat-icon> Odpowiedzi do rozpoznania</h3>
+        <h3>
+          <mat-icon>checklist</mat-icon>
+          Odpowiedzi do rozpoznania
+        </h3>
       </div>
 
-      <div *ngFor="let answer of answers.controls; let i = index" [formGroupName]="i" class="answer-row">
+      <div
+        *ngFor="let answer of answers.controls; let i = index"
+        [formGroupName]="i"
+        class="answer-row"
+      >
         <mat-form-field appearance="fill" class="label-field">
           <mat-label>Etykieta</mat-label>
-          <input matInput formControlName="label" placeholder="np. Tytuł">
+          <input matInput formControlName="label" placeholder="np. Tytuł" />
         </mat-form-field>
 
         <mat-form-field appearance="fill" class="value-field">
           <mat-label>Prawidłowa treść</mat-label>
-          <input matInput formControlName="value" placeholder="Wpisz rozwiązanie...">
+          <input matInput formControlName="value" placeholder="Wpisz rozwiązanie..." />
         </mat-form-field>
 
         <button
@@ -69,13 +78,21 @@
           type="button"
           matTooltip="Usuń pole"
           (click)="removeAnswer(i)"
-          [disabled]="answers.length <= 1">
+          [disabled]="answers.length <= 1"
+        >
           <mat-icon>delete_outline</mat-icon>
         </button>
       </div>
 
-      <button mat-stroked-button color="primary" type="button" (click)="addAnswer()" class="add-btn">
-        <mat-icon>add</mat-icon> Dodaj kolejne pole odpowiedzi (np. Rok, Gatunek)
+      <button
+        mat-stroked-button
+        color="primary"
+        type="button"
+        (click)="addAnswer()"
+        class="add-btn"
+      >
+        <mat-icon>add</mat-icon>
+        Dodaj kolejne pole odpowiedzi (np. Rok, Gatunek)
       </button>
     </div>
 
@@ -84,8 +101,12 @@
         mat-flat-button
         color="accent"
         type="submit"
-        [disabled]="questionForm.invalid || isSaving || !extractVideoId(questionForm.get('questionText')?.value)">
-
+        [disabled]="
+          questionForm.invalid ||
+          isSaving ||
+          !extractVideoId(questionForm.get('questionText')?.value)
+        "
+      >
         <mat-icon *ngIf="!isSaving">save</mat-icon>
         <mat-spinner diameter="20" *ngIf="isSaving"></mat-spinner>
 

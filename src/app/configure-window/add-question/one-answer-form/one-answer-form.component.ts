@@ -84,7 +84,10 @@ export class OneAnswerFormComponent implements OnInit {
     try {
       // 1. Check for duplicates in this specific category
       // We wait for the service to tell us if it exists
-      const isDuplicate = await this.supabaseService.checkDuplicate(questionText, categoryId);
+      const isDuplicate = await this.supabaseService.checkDuplicate(
+        formValue.questionText,
+        categoryId
+      );
 
       if (isDuplicate) {
         this.snackBar.open('To pytanie już istnieje w wybranej kategorii!', 'Duplicate', {

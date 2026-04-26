@@ -8,7 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { SupabaseService } from '../../../services/supabase.service';
-import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-music-question-form',
@@ -22,7 +22,7 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
     MatButtonModule,
     MatIconModule,
     MatSnackBarModule,
-    MatProgressSpinner
+    MatProgressSpinner,
   ],
   templateUrl: './music-question-form.component.html',
   styleUrls: ['./music-question-form.component.scss'],
@@ -40,19 +40,18 @@ export class MusicQuestionFormComponent implements OnInit {
   ) {
     this.questionForm = this.fb.group({
       category: ['', Validators.required],
-      // W muzyce questionText to zazwyczaj ID filmu YouTube lub URL
       questionText: ['', [Validators.required, Validators.minLength(3)]],
       answers: this.fb.array([]),
     });
   }
 
   async ngOnInit() {
-    this.addAnswer('Tytuł'); // Domyślne pole dla muzyki
-    this.addAnswer('Autor'); // Drugie domyślne pole
+    this.addAnswer('Tytuł');
+    this.addAnswer('Autor');
 
     try {
       const allCats = await this.supabaseService.getCategories();
-      this.categories = allCats.filter(c => c.type_id === 3);
+      this.categories = allCats.filter((c) => c.type_id === 3);
     } catch (err) {
       this.snackBar.open('Błąd ładowania kategorii', 'OK');
     } finally {
@@ -60,10 +59,8 @@ export class MusicQuestionFormComponent implements OnInit {
     }
   }
 
-  // Dodaj te pola do klasy
   videoTitle: string | null = null;
 
-// Zaktualizuj metodę extractVideoId o wywołanie pobierania tytułu
   onUrlChange(url: string) {
     const videoId = this.extractVideoId(url);
     if (videoId && videoId.length === 11) {
@@ -75,8 +72,9 @@ export class MusicQuestionFormComponent implements OnInit {
 
   async fetchVideoTitle(videoId: string) {
     try {
-      // Korzystamy z publicznego punktu oEmbed YouTube (nie wymaga API KEY)
-      const response = await fetch(`https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`);
+      const response = await fetch(
+        `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`
+      );
       if (response.ok) {
         const data = await response.json();
         this.videoTitle = data.title;
@@ -105,14 +103,11 @@ export class MusicQuestionFormComponent implements OnInit {
     }
   }
 
-  // Dodaj tę metodę do klasy MusicQuestionFormComponent
   protected extractVideoId(url: string): string {
-    // Regex obsługujący: youtube.com, youtu.be, youtube.com/embed/
     const regExp = /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/;
     const match = url.match(regExp);
 
-    // Jeśli dopasowano i ID ma 11 znaków (standard YouTube)
-    return (match && match[7].length === 11) ? match[7] : url;
+    return match && match[7].length === 11 ? match[7] : url;
   }
 
   async onSubmit() {
@@ -121,24 +116,24 @@ export class MusicQuestionFormComponent implements OnInit {
     this.isSaving = true;
     const { category, questionText, answers } = this.questionForm.value;
 
-    // TUTAJ: Automatyczna konwersja linku na samo ID
     const videoId = this.extractVideoId(questionText);
 
     try {
-      // Sprawdzamy duplikat na podstawie czystego ID
-      const isDuplicate = await this.supabaseService.checkDuplicate(videoId, category);
+      const isDuplicate = await this.supabaseService.checkDuplicate(videoId, category, answers);
 
       if (isDuplicate) {
-        this.snackBar.open('Ten utwór (ID: ' + videoId + ') już jest w bazie!', 'DUBEL', { duration: 4000 });
+        this.snackBar.open('Ten utwór (ID: ' + videoId + ') już jest w bazie!', 'DUBEL', {
+          duration: 4000,
+        });
         this.isSaving = false;
         return;
       }
 
       const questionData = {
         category_id: category,
-        question: videoId, // Zapisujemy tylko czyste ID (np. E1OjQ_3kh4A)
+        question: videoId,
         answers: answers,
-        hints: []
+        hints: [],
       };
 
       const { error } = await this.supabaseService.addQuestion(questionData);
