@@ -4,8 +4,9 @@ import { HintsFormComponent } from './hints-form/hints-form.component';
 import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-toggle';
 import { MatIcon } from '@angular/material/icon';
 import { MatDivider } from '@angular/material/divider';
+import { MusicQuestionFormComponent } from './music-question-form/music-question-form.component';
 
-type FormType = 'one-answer' | 'hint' | null;
+type FormType = 'one-answer' | 'hint' | 'music' | null;
 
 @Component({
   selector: 'app-add-question',
@@ -16,6 +17,7 @@ type FormType = 'one-answer' | 'hint' | null;
     MatButtonToggleGroup,
     MatIcon,
     MatDivider,
+    MusicQuestionFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',
