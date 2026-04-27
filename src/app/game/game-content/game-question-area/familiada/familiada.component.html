@@ -23,9 +23,12 @@
     <div class="answers-grid">
       <div *ngFor="let ans of question.answers; let i = index" class="answer-slot">
         <div class="slot-inner" [class.revealed]="(question.revealedAnswers || []).includes(i)">
-          <span class="slot-number">{{ i + 1 }}</span>
-          <span class="slot-text">
-            {{ (question.revealedAnswers || []).includes(i) ? ans.value : '' }}
+          <span class="slot-number" *ngIf="!(question.revealedAnswers || []).includes(i)">
+            {{ i + 1 }}
+          </span>
+
+          <span class="slot-text" *ngIf="(question.revealedAnswers || []).includes(i)">
+            {{ ans.value }}
           </span>
         </div>
       </div>

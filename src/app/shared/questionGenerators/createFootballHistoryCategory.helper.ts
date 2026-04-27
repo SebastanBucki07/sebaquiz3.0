@@ -1,6 +1,6 @@
 import clubDataRaw from '../../../../public/footballCrests/mappedClubs.json';
+import * as FLAGI from '../../../../public/questions/flag.questions.json';
 import { footballers } from '../footballers/footballers';
-import { FLAGI } from '../questions/flag.questions';
 
 // --- KONFIGURACJA ---
 const ASSETS_PATH = '/footballCrests/'; // Dodajemy slash na początku dla ścieżek w przeglądarce

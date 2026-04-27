@@ -38,13 +38,23 @@
       <div class="preview-card animate-fade" *ngIf="vId && vId.length === 11">
         <div class="thumbnail-box">
           <img [src]="'https://img.youtube.com/vi/' + vId + '/mqdefault.jpg'" alt="Miniaturka" />
-          <div class="yt-play-icon"><mat-icon>play_circle_filled</mat-icon></div>
         </div>
 
         <div class="video-info">
           <span class="info-label">ROZPOZNANO UTWÓR:</span>
-          <h4 class="video-title">{{ videoTitle || 'Pobieranie tytułu z YouTube...' }}</h4>
-          <code class="video-id">YouTube ID: {{ vId }}</code>
+          <h4 class="video-title">{{ videoTitle || 'Pobieranie tytułu...' }}</h4>
+
+          <button
+            *ngIf="videoTitle"
+            type="button"
+            mat-stroked-button
+            color="accent"
+            class="magic-btn"
+            (click)="magicSplit()"
+          >
+            <mat-icon>auto_fix_high</mat-icon>
+            MAGIC SPLIT
+          </button>
         </div>
       </div>
     </div>

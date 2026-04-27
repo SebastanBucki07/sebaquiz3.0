@@ -1,0 +1,74 @@
+<p>familiada-form works!</p>
+<div class="generator-container fade-in">
+  <form [formGroup]="generatorForm" (ngSubmit)="onSubmit()" class="generator-card">
+    <div class="header">
+      <mat-icon class="familiada-icon">groups</mat-icon>
+      <div class="header-text">
+        <h2>Generator Familiady</h2>
+        <p>Wpisz odpowiedzi w kolejności od najwyżej punktowanej</p>
+      </div>
+    </div>
+
+    <div class="main-fields">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Kategoria</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option *ngFor="let cat of categories" [value]="cat.id">
+            {{ cat.name }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Treść pytania</mat-label>
+        <input
+          matInput
+          formControlName="questionText"
+          placeholder="np. Najwięcej razy wygrali ligę mistrzów"
+        />
+      </mat-form-field>
+    </div>
+
+    <div class="quick-paste-box fade-in">
+      <label for="quickPaste">Szybkie wklejanie odpowiedzi</label>
+      <textarea
+        id="quickPaste"
+        placeholder="Wklej tutaj odpowiedzi rozdzielone spacją, np.: Chipsy Lody Jogurt Ciastka"
+        (input)="onQuickPaste($event)"
+      ></textarea>
+      <span class="hint">
+        System automatycznie rozdzieli słowa i uzupełni pola poniżej (punkty zostaną przypisane
+        automatycznie).
+      </span>
+    </div>
+
+    <div class="main-fields"></div>
+
+    <div formArrayName="answers" class="answers-grid">
+      <div *ngFor="let control of answers.controls; let i = index" class="answer-row">
+        <mat-form-field appearance="fill" class="answer-input">
+          <mat-label>Odpowiedź {{ i + 1 }}</mat-label>
+          <input matInput [formControlName]="i" placeholder="Wpisz treść..." />
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="footer-actions">
+      <button mat-stroked-button type="button" (click)="addAnswerField()" color="primary">
+        <mat-icon>add</mat-icon>
+        Dodaj pole
+      </button>
+
+      <button
+        mat-flat-button
+        color="accent"
+        type="submit"
+        [disabled]="generatorForm.invalid || isSaving"
+      >
+        <mat-icon *ngIf="!isSaving">cloud_upload</mat-icon>
+        <span *ngIf="!isSaving">ZAPISZ DO BAZY</span>
+        <span *ngIf="isSaving">ZAPISYWANIE...</span>
+      </button>
+    </div>
+  </form>
+</div>
