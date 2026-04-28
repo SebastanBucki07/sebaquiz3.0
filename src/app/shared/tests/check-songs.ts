@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { BAJKOWE_INTRO } from '../questions/fairyTalesIntros.questions';
 import { IMPREZY_SPORTOWE } from '../questions/footballChampionsMusic.questions';
-import { JAKA_TO_MELODIA } from '../questions/music.questions';
+import * as JAKA_TO_MELODIA from '../../../../public/questions/music.questions.json';
 import { HYMNY_PANSTWOWE } from '../questions/nationalAnthems.questions';
 import { CZOLOWKI_SERIALI } from '../questions/tvSeriesIntro.questions';
 

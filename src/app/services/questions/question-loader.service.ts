@@ -17,7 +17,6 @@ import { CZOLOWKI_SERIALI } from '../../shared/questions/tvSeriesIntro.questions
 import { IMPREZY_SPORTOWE } from '../../shared/questions/footballChampionsMusic.questions';
 import { HYMNY_PANSTWOWE } from '../../shared/questions/nationalAnthems.questions';
 import { BAJKOWE_INTRO } from '../../shared/questions/fairyTalesIntros.questions';
-import { FAMILIADA_RAW } from '../../shared/questions/familiada.questions';
 import { DANE_PANSTW } from '../../shared/questions/countries.questions';
 
 // Providery i Mappery
@@ -28,7 +27,6 @@ import { mapCountriesToQuestions } from '../../shared/mappers/countries.mapper';
 
 @Injectable({ providedIn: 'root' })
 export class QuestionLoaderService {
-  // Pamięć podręczna, aby nie pobierać tych samych pytań wielokrotnie z sieci
   private cache = new Map<string, Question[]>();
 
   constructor(
@@ -62,9 +60,12 @@ export class QuestionLoaderService {
     // 3. DATABASE FIRST - Spróbuj pobrać z Supabase
     try {
       const dbQuestions = await this.supabaseService.getQuestions(normalizedName);
-      if (dbQuestions && dbQuestions.length > 0) {
-        console.log(`[QuestionLoader] Załadowano z bazy: ${normalizedName}`);
-        loadedQuestions = type === 'familiada' ? mapOldFamiliadaToNew(dbQuestions) : dbQuestions;
+      if (type === 'familiada') {
+        // dbQuestions to tablica surowych danych z bazy
+        // mapujemy każdy rekord z osobna używając Twojej funkcji
+        loadedQuestions = (dbQuestions as any[]).map((q) => mapOldFamiliadaToNew(q));
+      } else {
+        loadedQuestions = dbQuestions;
       }
     } catch (error) {
       console.warn(
@@ -193,7 +194,6 @@ export class QuestionLoaderService {
       firstValueFrom(this.http.get<Question[]>('/questions/footballGames.questions.json')),
 
     // Inne
-    'familiada:Familiada': () => mapOldFamiliadaToNew(FAMILIADA_RAW),
     'country:Jaki to kraj?': () => mapCountriesToQuestions(DANE_PANSTW),
     'hints:Lektury': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/books.questions.json')), // Przykład fallbacku dla Lektur

@@ -6,7 +6,7 @@
         [checked]="activeForm === 'one-answer'"
         (change)="setForm('one-answer')"
       >
-        <mat-icon>short_text</mat-icon>
+        <mat-icon>quiz</mat-icon>
         Dodaj One-Answer
       </mat-button-toggle>
 
@@ -22,6 +22,15 @@
       >
         <mat-icon>music_note</mat-icon>
         Dodaj Muzyczne
+      </mat-button-toggle>
+
+      <mat-button-toggle
+        value="familiada"
+        [checked]="activeForm === 'familiada'"
+        (change)="setForm('familiada')"
+      >
+        <mat-icon>subject</mat-icon>
+        Dodaj Familiade
       </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
@@ -40,6 +49,10 @@
     } @else if (activeForm === 'music') {
       <div class="fade-in">
         <app-music-question-form></app-music-question-form>
+      </div>
+    } @else if (activeForm === 'familiada') {
+      <div class="fade-in">
+        <app-familiada-form></app-familiada-form>
       </div>
     } @else {
       <div class="placeholder-content">

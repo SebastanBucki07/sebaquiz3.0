@@ -154,4 +154,50 @@ export class MusicQuestionFormComponent implements OnInit {
     this.addAnswer('Tytuł');
     this.addAnswer('Autor');
   }
+
+  // Dodaj tę metodę do klasy MusicQuestionFormComponent
+
+  magicSplit() {
+    if (!this.videoTitle) return;
+
+    // 1. Czyszczenie tytułu ze zbędnych dopisków (case-insensitive)
+    let cleanTitle = this.videoTitle
+      .replace(/\s*[\[\(].*?(official|video|audio|lyrics|hd|4k|hq|music|clip|wideo).*?[\]\)]/gi, '')
+      .trim();
+
+    // 2. Szukanie separatora (myślnik, pauza, dwukropek)
+    const separators = [' - ', ' – ', ' — ', ' : '];
+    let artist = '';
+    let song = cleanTitle;
+
+    for (const sep of separators) {
+      if (cleanTitle.includes(sep)) {
+        const parts = cleanTitle.split(sep);
+        artist = parts[0].trim();
+        song = parts[1].trim();
+        break;
+      }
+    }
+
+    // 3. Automatyczne wypełnienie FormArray
+    // Czyścimy obecne pola i dodajemy dwa nowe
+    this.answers.clear();
+
+    if (artist) {
+      this.addAnswerWithData('Autor', artist);
+    }
+    this.addAnswerWithData('Tytuł', song);
+
+    this.snackBar.open('Magic Split: Rozdzielono dane!', 'OK', { duration: 2000 });
+  }
+
+  // Pomocnicza metoda do szybkiego dodawania wypełnionych pól
+  private addAnswerWithData(label: string, value: string) {
+    this.answers.push(
+      this.fb.group({
+        label: [label, Validators.required],
+        value: [value, Validators.required],
+      })
+    );
+  }
 }
