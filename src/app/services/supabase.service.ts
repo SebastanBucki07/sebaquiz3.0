@@ -62,29 +62,42 @@ export class SupabaseService {
     return data || [];
   }
 
-  async getQuestions(categoryName: string) {
-    const { data, error } = await this.supabase
+  async getQuestions(categoryName: string, limit: number = 50) {
+    const { data: allIds } = await this.supabase
       .from('questions')
-      .select(
-        `
-      *,
-      categories!inner (
-        name
-      )
-    `
-      )
-
+      .select('id, categories!inner(name)')
       .ilike('categories.name', categoryName.trim());
 
+    if (!allIds || allIds.length === 0) return [];
+
+    const shuffledIds = allIds
+      .map((item) => item.id)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, limit);
+
+    const { data, error } = await this.supabase
+      .from('questions')
+      .select('*') // Pobieramy absolutnie wszystko
+      .in('id', shuffledIds);
+
+    console.log('--- DEBUG SUPABASE ---');
+    console.log('Surowe dane z bazy:', data); // ZOBACZ TO W KONSOLI (F12)
+
     if (error) {
-      console.error('Błąd pobierania pytań z relacją:', error.message);
-      throw error;
+      console.error('Błąd:', error);
+      return [];
     }
 
-    return (data || []).map((q) => ({
-      ...q,
-      category: q.categories?.name,
-    }));
+    return (data || []).map((q) => {
+      const finalAnswers = q.answers || q.answers_json || q.data?.answers || [];
+
+      return {
+        ...q,
+        question: q.question,
+        answers: Array.isArray(finalAnswers) ? finalAnswers : JSON.parse(finalAnswers || '[]'),
+        revealedAnswers: q.revealedAnswers || q.revealed_answers || [],
+      };
+    });
   }
 
   async addQuestion(questionData: any) {
