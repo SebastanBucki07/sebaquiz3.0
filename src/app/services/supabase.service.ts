@@ -64,21 +64,21 @@ export class SupabaseService {
 
   async getQuestions(categoryName: string, limit: number = 50) {
     const { data: allIds } = await this.supabase
-    .from('questions')
-    .select('id, categories!inner(name)')
-    .ilike('categories.name', categoryName.trim());
+      .from('questions')
+      .select('id, categories!inner(name)')
+      .ilike('categories.name', categoryName.trim());
 
     if (!allIds || allIds.length === 0) return [];
 
     const shuffledIds = allIds
-    .map((item) => item.id)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, limit);
+      .map((item) => item.id)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, limit);
 
     const { data, error } = await this.supabase
-    .from('questions')
-    .select('*') // Pobieramy absolutnie wszystko
-    .in('id', shuffledIds);
+      .from('questions')
+      .select('*') // Pobieramy absolutnie wszystko
+      .in('id', shuffledIds);
 
     console.log('--- DEBUG SUPABASE ---');
     console.log('Surowe dane z bazy:', data); // ZOBACZ TO W KONSOLI (F12)
