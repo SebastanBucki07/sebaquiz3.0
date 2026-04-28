@@ -1,19 +1,24 @@
 import { Question } from '../questions/question.interface';
 
-export function mapOldFamiliadaToNew(oldQuestions: any[]): Question[] {
-  return oldQuestions.map((q) => {
-    const rawAnswers = [q.answer1, q.answer2, q.answer3, q.answer4, q.answer5, q.answer6];
-    return {
-      id: q.id,
-      question: q.question,
-      revealedAnswers: [],
-      showAnswer: false,
-      answers: rawAnswers
-        .filter((val) => val && val !== '-' && val.trim() !== '')
-        .map((value, index) => ({
-          value: value.trim(),
-          points: [35, 25, 15, 10, 8, 7][index] || 5,
-        })),
-    };
-  });
+export function mapOldFamiliadaToNew(q: any): Question {
+  // Jeśli q.answers to już gotowa tablica (z JSONB w Supabase)
+  const finalAnswers = Array.isArray(q.answers)
+    ? q.answers
+    : [
+        { value: q.answer1, points: 35 },
+        { value: q.answer2, points: 25 },
+        { value: q.answer3, points: 15 },
+        { value: q.answer4, points: 10 },
+        { value: q.answer5, points: 8 },
+        { value: q.answer6, points: 7 },
+      ].filter((a) => a.value && a.value !== '-' && a.value !== '');
+
+  return {
+    id: q.id,
+    question: q.question,
+    answers: finalAnswers,
+    // Mapowanie nazwy z bazy (snake_case) na TS (camelCase)
+    revealedAnswers: q.revealed_answers || q.revealedAnswers || [],
+    showAnswer: false,
+  };
 }

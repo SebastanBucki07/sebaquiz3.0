@@ -5,8 +5,9 @@ import { MatButtonToggle, MatButtonToggleGroup } from '@angular/material/button-
 import { MatIcon } from '@angular/material/icon';
 import { MatDivider } from '@angular/material/divider';
 import { MusicQuestionFormComponent } from './music-question-form/music-question-form.component';
+import { FamiliadaFormComponent } from './familiada-form/familiada-form.component';
 
-type FormType = 'one-answer' | 'hint' | 'music' | null;
+type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | null;
 
 @Component({
   selector: 'app-add-question',
@@ -18,6 +19,7 @@ type FormType = 'one-answer' | 'hint' | 'music' | null;
     MatIcon,
     MatDivider,
     MusicQuestionFormComponent,
+    FamiliadaFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',

@@ -40,11 +40,37 @@ export class FamiliadaComponent implements OnInit {
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$.pipe(
-      tap((q) => {
-        if (q && this.currentQuestion && q.id !== this.currentQuestion.id) {
-          this.resetRound();
+      tap((q: any) => {
+        if (q) {
+          // 1. NAPRAWA ANSWERS (jeśli jest stringiem)
+          if (typeof q.answers === 'string') {
+            try {
+              q.answers = JSON.parse(q.answers);
+            } catch (e) {
+              console.error('Błąd parsowania answers:', e);
+              q.answers = [];
+            }
+          }
+
+          // 2. NAPRAWA REVEALED ANSWERS (mapowanie z bazy na kod)
+          // Baza ma 'revealed_answers', a kod chce 'revealedAnswers'
+          const rawRevealed = q.revealed_answers || q.revealedAnswers;
+          if (typeof rawRevealed === 'string') {
+            try {
+              q.revealedAnswers = JSON.parse(rawRevealed);
+            } catch {
+              q.revealedAnswers = [];
+            }
+          } else {
+            q.revealedAnswers = rawRevealed || [];
+          }
+
+          // 3. LOGIKA RESETU RUNDY
+          if (this.currentQuestion && q.id !== this.currentQuestion.id) {
+            this.resetRound();
+          }
+          this.currentQuestion = q;
         }
-        this.currentQuestion = q;
       })
     );
 

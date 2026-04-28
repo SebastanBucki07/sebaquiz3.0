@@ -209,3 +209,23 @@
     opacity: 1;
   }
 }
+
+.magic-btn {
+  margin-top: 8px;
+  height: 32px !important;
+  line-height: 32px !important;
+  font-size: 11px !important;
+  border-color: #ff4081 !important;
+  color: #ff4081 !important;
+
+  mat-icon {
+    font-size: 16px !important;
+    width: 16px !important;
+    height: 16px !important;
+    margin-right: 4px;
+  }
+
+  &:hover {
+    background: rgba(255, 64, 129, 0.1) !important;
+  }
+}
