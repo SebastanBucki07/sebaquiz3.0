@@ -6,8 +6,9 @@ import { MatIcon } from '@angular/material/icon';
 import { MatDivider } from '@angular/material/divider';
 import { MusicQuestionFormComponent } from './music-question-form/music-question-form.component';
 import { FamiliadaFormComponent } from './familiada-form/familiada-form.component';
+import { FootballFormComponent } from './football-form/football-form.component';
 
-type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | null;
+type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | null;
 
 @Component({
   selector: 'app-add-question',
@@ -20,6 +21,7 @@ type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | null;
     MatDivider,
     MusicQuestionFormComponent,
     FamiliadaFormComponent,
+    FootballFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',

@@ -1,0 +1,205 @@
+<div class="editor-layout">
+  <!-- LEWA STRONA: FORMULARZ -->
+  <div class="form-side">
+    <div class="football-form" [formGroup]="mainForm">
+      <div class="generator-card">
+        <div class="header">
+          <mat-icon class="football-icon">sports_soccer</mat-icon>
+          <div class="header-text">
+            <h2>Generator Składów</h2>
+            <p>Zarządzanie meczem i składami</p>
+          </div>
+        </div>
+
+        <!-- Sekcja Główna - teraz oba pola na całą szerokość -->
+        <div class="main-fields-stack">
+          <mat-form-field appearance="outline" class="full-width-field custom-mat-field">
+            <mat-label>Kategoria rozgrywek</mat-label>
+            <mat-select formControlName="categoryId">
+              <mat-option *ngFor="let cat of categories" [value]="cat.id">
+                {{ cat.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field appearance="outline" class="full-width-field custom-mat-field">
+            <mat-label>Nagłówek meczu</mat-label>
+            <input
+              matInput
+              formControlName="matchInfo"
+              placeholder="np. Piast 1-1 Jagiellonia (13.09.2025)"
+            />
+          </mat-form-field>
+        </div>
+
+        <!-- 1. SZYBKI IMPORT -->
+        <div class="accordion-item" [class.open]="activeSections.raw">
+          <div class="accordion-header" (click)="toggleSection('raw')">
+            <span>🚀 SZYBKI IMPORT</span>
+            <mat-icon>{{ activeSections.raw ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </div>
+          <div class="accordion-content">
+            <div class="side-by-side-grid">
+              <div class="import-col">
+                <label>GOSPODARZE</label>
+                <textarea
+                  [(ngModel)]="rawInput1"
+                  [ngModelOptions]="{ standalone: true }"
+                  (keyup)="onRawInputChange(1)"
+                ></textarea>
+              </div>
+              <div class="import-col">
+                <label>GOŚCIE</label>
+                <textarea
+                  [(ngModel)]="rawInput2"
+                  [ngModelOptions]="{ standalone: true }"
+                  (keyup)="onRawInputChange(2)"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. SKŁADY PODSTAWOWE -->
+        <div class="accordion-item" [class.open]="activeSections.starters">
+          <div class="accordion-header" (click)="toggleSection('starters')">
+            <span>🏟️ SKŁADY WYJŚCIOWE</span>
+            <mat-icon>{{ activeSections.starters ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </div>
+          <div class="accordion-content">
+            <div class="side-by-side-grid">
+              <div *ngFor="let t of ['team1', 'team2']" [formGroupName]="t" class="team-editor-col">
+                <div class="formation-container">
+                  <div class="formation-label">FORMACJA</div>
+                  <select formControlName="formation" class="formation-select">
+                    <option *ngFor="let f of commonFormations" [value]="f">{{ f }}</option>
+                  </select>
+                </div>
+
+                <div
+                  *ngFor="let p of getArray(t, 'footballers').controls; let i = index"
+                  [formGroup]="$any(p)"
+                  class="player-row"
+                >
+                  <input type="number" formControlName="position" class="pos-input" />
+                  <input formControlName="surname" class="name-input" placeholder="Nazwisko" />
+                  <div class="flag-input-container">
+                    <img
+                      [src]="getFlagUrl(p.get('country')?.value)"
+                      *ngIf="getFlagUrl(p.get('country')?.value)"
+                      class="mini-flag"
+                    />
+                    <input
+                      formControlName="country"
+                      list="countriesList"
+                      class="country-input"
+                      placeholder="PL"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. ŁAWKA REZERWOWYCH -->
+        <div class="accordion-item" [class.open]="activeSections.bench">
+          <div class="accordion-header" (click)="toggleSection('bench')">
+            <span>💺 ŁAWKA REZERWOWYCH</span>
+            <mat-icon>{{ activeSections.bench ? 'expand_less' : 'expand_more' }}</mat-icon>
+          </div>
+          <div class="accordion-content">
+            <div class="side-by-side-grid">
+              <div *ngFor="let t of ['team1', 'team2']" [formGroupName]="t" class="team-editor-col">
+                <div
+                  *ngFor="let p of getArray(t, 'substitutes').controls; let i = index"
+                  [formGroup]="$any(p)"
+                  class="player-row"
+                >
+                  <!-- Numer pozycji -->
+                  <input type="number" formControlName="position" class="pos-input" />
+
+                  <!-- Nazwisko -->
+                  <input formControlName="surname" class="name-input" placeholder="Nazwisko" />
+
+                  <!-- DODANA FLAGA DLA REZERWOWYCH -->
+                  <div class="flag-input-container">
+                    <img
+                      [src]="getFlagUrl(p.get('country')?.value)"
+                      *ngIf="getFlagUrl(p.get('country')?.value)"
+                      class="mini-flag"
+                    />
+                    <input
+                      formControlName="country"
+                      list="countriesList"
+                      class="country-input"
+                      placeholder="PL"
+                    />
+                  </div>
+
+                  <!-- Przycisk usuwania -->
+                  <button type="button" class="btn-remove" (click)="removeBenchPlayer(t, i)">
+                    ✕
+                  </button>
+                </div>
+
+                <button type="button" class="btn-add-player" (click)="addBenchPlayer(t)">
+                  + DODAJ REZERWOWEGO
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-actions">
+          <button
+            mat-flat-button
+            color="accent"
+            class="save-button"
+            (click)="save()"
+            [disabled]="mainForm.invalid || isSaving"
+          >
+            <mat-icon *ngIf="!isSaving">save</mat-icon>
+            <span>{{ isSaving ? 'ZAPISYWANIE...' : 'ZAPISZ SKŁADY' }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRAWA STRONA: PODGLĄD BOISKA -->
+  <div class="preview-side">
+    <!-- ... (reszta kodu boiska bez zmian) ... -->
+    <div class="pitch">
+      <div class="midline"></div>
+      <div class="team-container team-top">
+        <div class="pitch-row" *ngFor="let row of getRowsForPreview('team1')">
+          <div
+            class="player-node"
+            *ngFor="let p of row"
+            [class.is-gk]="p.position === 1"
+            [style.background-image]="p.country ? 'url(' + getFlagUrl(p.country) + ')' : ''"
+          >
+            <div class="name-label">{{ p.surname || '??' }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="team-container team-bottom">
+        <div class="pitch-row" *ngFor="let row of getRowsForPreview('team2')">
+          <div
+            class="player-node"
+            *ngFor="let p of row"
+            [class.is-gk]="p.position === 1"
+            [style.background-image]="p.country ? 'url(' + getFlagUrl(p.country) + ')' : ''"
+          >
+            <div class="name-label">{{ p.surname || '??' }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<datalist id="countriesList">
+  <option *ngFor="let c of availableCountries" [value]="c.code">{{ c.name }}</option>
+</datalist>
