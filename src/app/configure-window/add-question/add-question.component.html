@@ -41,6 +41,14 @@
         <mat-icon>subject</mat-icon>
         Dodaj Piłke nozna
       </mat-button-toggle>
+      <mat-button-toggle
+        value="writting"
+        [checked]="activeForm === 'writting'"
+        (change)="setForm('writting')"
+      >
+        <mat-icon>subject</mat-icon>
+        Dodaj Writing question
+      </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
 
@@ -66,6 +74,11 @@
     } @else if (activeForm === 'football') {
       <div class="fade-in">
         <app-football-form></app-football-form>
+      </div>
+    }
+    @else if (activeForm === 'writting') {
+      <div class="fade-in">
+        <app-writting-form></app-writting-form>
       </div>
     } @else {
       <div class="placeholder-content">

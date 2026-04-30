@@ -1,0 +1,334 @@
+/* UKŁAD GŁÓWNY */
+.editor-layout {
+  display: flex;
+  height: 100vh;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.form-side {
+  flex: 0 0 40%;
+  height: 100%;
+  overflow-y: auto;
+  padding: 15px;
+  border-right: 1px solid #333;
+  box-sizing: border-box;
+}
+
+.preview-side {
+  flex: 0 0 60%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  padding: 20px;
+}
+
+/* KARTA GENERATORA */
+.generator-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  border: 1px solid #333;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.football-icon {
+  color: #ffb300;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.header-text h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.header-text p {
+  margin: 0;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* STYLOWANIE ANGULAR MATERIAL (MDC) */
+.main-fields-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Naprawa widoczności tekstu w Mat-Select i Mat-Input */
+::ng-deep .custom-mat-field .mat-mdc-select-value-text {
+  color: #ffb300 !important; /* Wybrana kategoria na żółto */
+}
+
+::ng-deep .custom-mat-field .mat-mdc-input-element {
+  color: #ffffff !important; /* Tekst w inpucie na biało */
+}
+
+::ng-deep .custom-mat-field .mat-mdc-form-field-label {
+  color: #888 !important; /* Label na szaro */
+}
+
+::ng-deep .custom-mat-field .mat-mdc-form-field-focus-indicator {
+  background: rgba(255, 179, 0, 0.05);
+}
+
+/* Kolor obramowania Material Field */
+::ng-deep .custom-mat-field .mdc-notched-outline__border {
+  border-color: #444 !important;
+}
+
+::ng-deep .custom-mat-field.mat-focused .mdc-notched-outline__border {
+  border-color: #ffb300 !important;
+}
+
+/* AKORDEONY */
+.accordion-item {
+  border: 1px solid #333;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: #222;
+  overflow: hidden;
+}
+
+.accordion-header {
+  padding: 12px 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2a2a2a;
+  color: #ffb300;
+  font-weight: bold;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  transition: background 0.2s;
+}
+
+.accordion-header:hover {
+  background: #333;
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background: #1e1e1e;
+}
+
+.open .accordion-content {
+  display: block;
+}
+
+/* TEXTAREA IMPORT */
+.import-col label {
+  display: block;
+  color: #888;
+  font-size: 0.7rem;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+textarea {
+  width: 100%;
+  height: 120px;
+  background: #000;
+  border: 1px solid #444;
+  color: #00ff41;
+  padding: 10px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  border-radius: 4px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #00ff41;
+}
+
+/* RZĘDY ODPOWIEDZI */
+.answers-editor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.player-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #252525;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: border 0.2s;
+}
+
+.player-row:hover {
+  border-color: #444;
+}
+
+.pos-badge {
+  background: #000;
+  color: #ffb300;
+  min-width: 28px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.name-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.btn-remove {
+  background: none;
+  border: none;
+  color: #ff5252;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.btn-remove:hover {
+  opacity: 1;
+}
+
+.btn-add-player {
+  width: 100%;
+  margin-top: 10px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px dashed #444;
+  color: #888;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.btn-add-player:hover {
+  background: rgba(255, 179, 0, 0.05);
+  color: #ffb300;
+  border-color: #ffb300;
+}
+
+/* KARTA PODGLĄDU (PRAWA STRONA) */
+.writing-preview-card {
+  width: 85%;
+  max-width: 700px;
+  background: #1a1a1a;
+  border-radius: 15px;
+  border: 1px solid #333;
+  padding: 35px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+.category-tag {
+  background: #ffb300;
+  color: #000;
+  padding: 3px 10px;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.preview-header h2 {
+  color: #fff;
+  margin: 15px 0;
+  font-size: 2.2rem;
+  letter-spacing: -1px;
+}
+
+.answers-preview-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 25px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.answer-chip {
+  background: #2a2a2a;
+  color: #eee;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid #383838;
+}
+
+.stats-footer {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.stats-footer strong {
+  color: #ffb300;
+}
+
+.empty-state {
+  color: #444;
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+}
+
+/* STOPKA I ZAPIS */
+.footer-actions {
+  margin-top: 20px;
+}
+
+.save-button {
+  width: 100%;
+  height: 48px;
+  font-weight: 800 !important;
+  border-radius: 8px !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* SCROLLBARS */
+.form-side::-webkit-scrollbar,
+.answers-preview-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-side::-webkit-scrollbar-thumb,
+.answers-preview-grid::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.form-side::-webkit-scrollbar-track {
+  background: #0f0f0f;
+}
