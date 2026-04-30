@@ -32,6 +32,15 @@
         <mat-icon>subject</mat-icon>
         Dodaj Familiade
       </mat-button-toggle>
+
+      <mat-button-toggle
+        value="football"
+        [checked]="activeForm === 'football'"
+        (change)="setForm('football')"
+      >
+        <mat-icon>subject</mat-icon>
+        Dodaj Piłke nozna
+      </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
 
@@ -53,6 +62,10 @@
     } @else if (activeForm === 'familiada') {
       <div class="fade-in">
         <app-familiada-form></app-familiada-form>
+      </div>
+    } @else if (activeForm === 'football') {
+      <div class="fade-in">
+        <app-football-form></app-football-form>
       </div>
     } @else {
       <div class="placeholder-content">

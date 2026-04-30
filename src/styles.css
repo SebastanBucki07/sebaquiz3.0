@@ -23,7 +23,6 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   font-family: 'Inter', sans-serif;
-  overflow: hidden; /* Zapobiega podwójnemu scrollowi */
 }
 
 app-root {
