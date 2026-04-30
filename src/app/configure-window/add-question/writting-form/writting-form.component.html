@@ -1,16 +1,21 @@
 <div class="editor-layout">
+  <!-- LEWA STRONA: FORMULARZ -->
   <div class="form-side">
     <div class="football-form" [formGroup]="mainForm">
-      <div class="generator-card">
+      <div class="generator-card" [class.edit-mode-border]="isEditMode">
         <div class="header">
-          <mat-icon class="football-icon">edit_note</mat-icon>
+          <mat-icon class="football-icon">{{ isEditMode ? 'edit' : 'edit_note' }}</mat-icon>
           <div class="header-text">
-            <h2>Generator Writing</h2>
-            <p>Tworzenie pytań z listą odpowiedzi</p>
+            <h2>{{ isEditMode ? 'Edycja Pytania' : 'Generator Writing' }}</h2>
+            <p>{{ isEditMode ? 'Edytujesz ID: ' + editingId : 'Tworzenie nowych pytań' }}</p>
           </div>
+          <button *ngIf="isEditMode" mat-icon-button color="warn" (click)="resetForm()">
+            <mat-icon>close</mat-icon>
+          </button>
         </div>
 
         <div class="main-fields-stack">
+          <!-- WYBÓR KATEGORII -->
           <mat-form-field appearance="outline" class="full-width-field custom-mat-field">
             <mat-label>Kategoria</mat-label>
             <mat-select formControlName="categoryId">
@@ -20,35 +25,36 @@
             </mat-select>
           </mat-form-field>
 
+          <!-- TREŚĆ PYTANIA -->
           <mat-form-field appearance="outline" class="full-width-field custom-mat-field">
-            <mat-label>Tytuł pytania (Kategoria główna)</mat-label>
-            <input matInput formControlName="question" placeholder="np. Pokemon 1 seria" />
+            <mat-label>Tytuł pytania</mat-label>
+            <input matInput formControlName="question" placeholder="np. Kraje Unii Europejskiej" />
           </mat-form-field>
         </div>
 
-        <!-- 1. SZYBKI IMPORT -->
+        <!-- SEKCJA 1: SZYBKI IMPORT -->
         <div class="accordion-item" [class.open]="activeSections.raw">
           <div class="accordion-header" (click)="toggleSection('raw')">
-            <span>🚀 SZYBKI IMPORT LISTY</span>
+            <span>🚀 SZYBKI IMPORT</span>
             <mat-icon>{{ activeSections.raw ? 'expand_less' : 'expand_more' }}</mat-icon>
           </div>
           <div class="accordion-content">
             <div class="import-col">
-              <label>WKLEJ ODPOWIEDZI (PO PRZECINKU LUB W NOWYCH LINIACH)</label>
+              <label>WKLEJ LISTĘ (ODDZIELONĄ ENTEREM)</label>
               <textarea
                 [(ngModel)]="rawAnswersInput"
                 [ngModelOptions]="{ standalone: true }"
                 (keyup)="onRawAnswersChange()"
-                placeholder="Bulbasaur&#10;Ivysaur&#10;Venusaur..."
+                placeholder="Polska&#10;Niemcy&#10;Francja..."
               ></textarea>
             </div>
           </div>
         </div>
 
-        <!-- 2. LISTA ODPOWIEDZI -->
+        <!-- SEKCJA 2: LISTA ODPOWIEDZI -->
         <div class="accordion-item" [class.open]="activeSections.list">
           <div class="accordion-header" (click)="toggleSection('list')">
-            <span>📝 EDYCJA ODPOWIEDZI ({{ answers.length }})</span>
+            <span>📝 ODPOWIEDZI ({{ answers.length }})</span>
             <mat-icon>{{ activeSections.list ? 'expand_less' : 'expand_more' }}</mat-icon>
           </div>
           <div class="accordion-content">
@@ -59,50 +65,102 @@
                 class="player-row"
               >
                 <span class="pos-badge">{{ i + 1 }}</span>
-                <input formControlName="value" class="name-input" placeholder="Odpowiedź" />
+                <input formControlName="value" class="name-input" />
                 <button type="button" class="btn-remove" (click)="removeAnswer(i)">✕</button>
               </div>
-
               <button type="button" class="btn-add-player" (click)="addAnswer()">
-                + DODAJ ODPOWIEDŹ RĘCZNIE
+                + DODAJ ODPOWIEDŹ
               </button>
             </div>
           </div>
         </div>
 
+        <!-- PRZYCISKI AKCJI -->
         <div class="footer-actions">
           <button
             mat-flat-button
-            color="accent"
+            [color]="isEditMode ? 'primary' : 'accent'"
             class="save-button"
             (click)="save()"
             [disabled]="mainForm.invalid || isSaving"
           >
-            <mat-icon *ngIf="!isSaving">save</mat-icon>
-            <span>{{ isSaving ? 'ZAPISYWANIE...' : 'ZAPISZ PYTANIE' }}</span>
+            <span>
+              {{
+                isSaving ? 'PRZETWARZANIE...' : isEditMode ? 'ZAKTUALIZUJ ZMIANY' : 'ZAPISZ DO BAZY'
+              }}
+            </span>
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- PRAWA STRONA: PODGLĄD -->
+  <!-- PRAWA STRONA: PODGLĄD + HISTORIA (PIONOWO) -->
   <div class="preview-side">
+    <!-- PODGLĄD NA GÓRZE -->
     <div class="writing-preview-card">
       <div class="preview-header">
-        <span class="category-tag">PODGLĄD LIVE</span>
-        <h2>{{ mainForm.get('question')?.value || 'Tytuł pytania...' }}</h2>
+        <span class="category-tag" [class.edit-tag]="isEditMode">
+          {{ isEditMode ? 'TRYB EDYCJI' : 'PODGLĄD LIVE' }}
+        </span>
+        <h2>{{ mainForm.get('question')?.value || 'Tytuł pojawi się tutaj...' }}</h2>
       </div>
 
       <div class="answers-preview-grid">
         <div *ngFor="let ans of mainForm.get('answers')?.value" class="answer-chip">
           {{ ans.value }}
         </div>
-        <div *ngIf="answers.length === 0" class="empty-state">Brak dodanych odpowiedzi</div>
+        <div *ngIf="answers.length === 0" class="empty-state">Brak odpowiedzi do wyświetlenia.</div>
       </div>
 
       <div class="stats-footer">
-        Liczba elementów do odgadnięcia: <strong>{{ answers.length }}</strong>
+        Wszystkich elementów:
+        <strong>{{ answers.length }}</strong>
+      </div>
+    </div>
+
+    <!-- ZARZĄDZANIE POD SPODEM -->
+    <div class="history-card">
+      <div class="history-header">
+        <div class="header-with-action">
+          <h3 style="color: #ffb300; margin: 0; display: flex; align-items: center; gap: 8px">
+            <mat-icon>manage_search</mat-icon>
+            Zarządzaj pytaniami
+          </h3>
+          <button
+            mat-button
+            color="accent"
+            style="font-size: 0.7rem"
+            (click)="mainForm.get('categoryId')?.setValue('')"
+            *ngIf="mainForm.get('categoryId')?.value"
+          >
+            WSZYSTKIE KATEGORIE
+          </button>
+        </div>
+
+        <mat-form-field appearance="outline" class="search-field custom-mat-field">
+          <mat-label>Szukaj w wynikach...</mat-label>
+          <input matInput [(ngModel)]="searchQuery" placeholder="Wyszukaj po nazwie..." />
+          <mat-icon matSuffix style="color: #ffb300">search</mat-icon>
+        </mat-form-field>
+      </div>
+
+      <div class="history-list">
+        <div *ngFor="let q of filteredQuestions" class="history-item">
+          <div class="history-info">
+            <span class="history-q">{{ q.question }}</span>
+            <span class="history-date">{{ q.created_at | date: 'dd.MM.yyyy HH:mm' }}</span>
+          </div>
+          <div class="history-actions">
+            <button mat-icon-button (click)="loadQuestionToEdit(q.id)" style="color: #ffb300">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+        </div>
+
+        <div *ngIf="filteredQuestions.length === 0" class="empty-search">
+          Brak pytań pasujących do filtrów.
+        </div>
       </div>
     </div>
   </div>

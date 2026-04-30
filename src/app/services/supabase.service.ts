@@ -100,6 +100,33 @@ export class SupabaseService {
     });
   }
 
+  async getQuestionById(id: number) {
+    const { data, error } = await this.supabase
+      .from('questions')
+      .select('*')
+      .eq('id', id)
+      .maybeSingle(); // bezpieczniejsze niż .single()
+
+    return { data, error };
+  }
+
+  // I metodę do pobierania listy (do historii/edycji)
+  async getQuestionsList(limit: number = 20, categoryId?: number) {
+    let query = this.supabase
+      .from('questions')
+      .select('id, question, created_at, category_id')
+      .order('created_at', { ascending: false })
+      .limit(limit);
+
+    // Jeśli przekazano kategorię, filtrujemy wyniki już na poziomie bazy
+    if (categoryId) {
+      query = query.eq('category_id', categoryId);
+    }
+
+    const { data, error } = await query;
+    return { data, error };
+  }
+
   async addQuestion(questionData: any) {
     const { data, error } = await this.supabase.from('questions').insert([questionData]);
 
@@ -146,5 +173,21 @@ export class SupabaseService {
 
     const normalizedNewQuestion = questionText.toLowerCase().trim();
     return data.some((record) => record.question.toLowerCase().trim() === normalizedNewQuestion);
+  }
+  // supabase.service.ts
+  async updateQuestion(id: number, questionData: any) {
+    const { error } = await this.supabase
+      .from('questions')
+      .update({
+        // CZY NA PEWNO TE NAZWY SĄ TAKIE SAME W BAZIE?
+        category_id: questionData.category_id,
+        question: questionData.question,
+        answers: questionData.answers,
+        hints: [], // Upewnij się, że kolumna 'hints' istnieje
+        revealed_answers: [], // Upewnij się, że kolumna 'revealed_answers' istnieje
+      })
+      .eq('id', id);
+
+    return { error };
   }
 }
