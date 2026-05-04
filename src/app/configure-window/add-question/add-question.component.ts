@@ -7,8 +7,9 @@ import { MatDivider } from '@angular/material/divider';
 import { MusicQuestionFormComponent } from './music-question-form/music-question-form.component';
 import { FamiliadaFormComponent } from './familiada-form/familiada-form.component';
 import { FootballFormComponent } from './football-form/football-form.component';
+import { WrittingFormComponent } from './writting-form/writting-form.component';
 
-type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | null;
+type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | 'writting' | null;
 
 @Component({
   selector: 'app-add-question',
@@ -22,6 +23,7 @@ type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | nul
     MusicQuestionFormComponent,
     FamiliadaFormComponent,
     FootballFormComponent,
+    WrittingFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',
