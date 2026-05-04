@@ -32,6 +32,7 @@ export class SupabaseService {
           base_points: categoryData.base_points,
           is_active: categoryData.is_active,
           icon: categoryData.icon,
+          timer_seconds: categoryData.timer_seconds,
         },
       ])
       .select();
@@ -49,6 +50,7 @@ export class SupabaseService {
       .select(
         `
         *,
+        timer_seconds,
         category_types (
           id,
           name,
@@ -139,7 +141,7 @@ export class SupabaseService {
   async getCategoriesByType(typeId: number) {
     const { data, error } = await this.supabase
       .from('categories')
-      .select('*')
+      .select('*, timer_seconds') // Dodaj to jawnie dla pewności
       .eq('type_id', typeId)
       .eq('is_active', true)
       .order('name', { ascending: true });

@@ -9,6 +9,12 @@
     </div>
   </div>
 
+  <app-game-timer
+    *ngIf="isTimerActive"
+    [startSeconds]="startSeconds"
+    (expired)="onTimeExpired()"
+  ></app-game-timer>
+
   <div class="points-badge" [style.background-color]="category.color">
     <span class="label">WARTOŚĆ</span>
     <span class="value">{{ points }}</span>

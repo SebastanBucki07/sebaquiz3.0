@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable } from 'rxjs';
 
@@ -57,6 +57,8 @@ export class FootballGameCategoryComponent implements OnInit {
   winner: TeamInWritingCategory | null = null;
   gameFinished = false;
   remainingAnswers = 0;
+  @Output() answerSubmitted = new EventEmitter<void>(); // Emituje sygnał do restartu timera
+  public isInputDisabled = false;
 
   constructor(
     private questionService: QuestionService,
@@ -104,6 +106,39 @@ export class FootballGameCategoryComponent implements OnInit {
     });
   }
 
+  public triggerTimeoutError(): void {
+    if (this.gameFinished || !this.currentTeam) return;
+
+    // 1. Blokujemy input
+    this.isInputDisabled = true;
+
+    // 2. Wywołujemy logikę błędu (zmniejszenie szans, dźwięk, zmiana teamu)
+    // handleMistake w Twoim kodzie piłkarskim jest częścią submitAnswer,
+    // więc musimy wydzielić tę logikę lub wywołać ją bezpośrednio.
+
+    this.handleFootballMistake();
+
+    // 3. Informujemy rodzica, że tura się skończyła i trzeba zresetować timer dla następnego gracza
+    this.answerSubmitted.emit();
+
+    // 4. Odblokowujemy input po chwili
+    if (!this.gameFinished) {
+      setTimeout(() => {
+        this.isInputDisabled = false;
+      }, 1000);
+    }
+  }
+
+  private handleFootballMistake(): void {
+    if (!this.currentTeam) return;
+
+    this.currentTeam.mistakes++;
+    this.currentTeam.chancesLeft--;
+
+    this.gameCore.triggerWrongEffects();
+    this.nextTeam();
+  }
+
   get activeTeamId(): number | null {
     return this.currentTeam?.id ?? null;
   }
@@ -113,12 +148,10 @@ export class FootballGameCategoryComponent implements OnInit {
   }
 
   submitAnswer(value: string): void {
-    // 1. Guardy
-    if (!this.currentTeam || !value.trim() || this.gameFinished) return;
+    // Dodaj check isInputDisabled
+    if (!this.currentTeam || !value.trim() || this.gameFinished || this.isInputDisabled) return;
 
     const needle = value.trim();
-
-    // 2. Tworzymy płaską listę wszystkich piłkarzy, którzy NIE zostali jeszcze odgadnięci
     const allFootballers = [
       ...this.firstRows.flat(),
       ...this.secondRows.flat(),
@@ -126,7 +159,6 @@ export class FootballGameCategoryComponent implements OnInit {
       ...this.secondSubstitutes,
     ];
 
-    // 3. Szukamy piłkarza używając logiki z GameCore (normalizacja + podobieństwo)
     const footballer = allFootballers.find(
       (p) =>
         !p.guessed &&
@@ -136,7 +168,6 @@ export class FootballGameCategoryComponent implements OnInit {
     if (footballer) {
       // --- TRAFIENIE ---
       this.gameCore.triggerCorrectEffects();
-
       footballer.guessed = true;
       footballer.guessedBy = this.currentTeam.name;
       this.currentTeam.correctAnswers++;
@@ -145,7 +176,9 @@ export class FootballGameCategoryComponent implements OnInit {
       this.remainingAnswers--;
       this.refreshView();
 
-      // Sprawdzamy czy koniec meczu
+      // RESTART TIMERA
+      this.answerSubmitted.emit();
+
       if (this.remainingAnswers <= 0) {
         this.finishGame();
       } else {
@@ -153,11 +186,9 @@ export class FootballGameCategoryComponent implements OnInit {
       }
     } else {
       // --- BŁĄD ---
-      this.currentTeam.mistakes++;
-      this.currentTeam.chancesLeft--;
-
-      this.gameCore.triggerWrongEffects(); // To wywoła pulsowanie ekranu i dźwięk X
-      this.nextTeam();
+      this.handleFootballMistake();
+      // RESTART TIMERA po błędzie
+      this.answerSubmitted.emit();
     }
   }
 
