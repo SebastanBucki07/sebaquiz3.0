@@ -49,6 +49,16 @@ export class GameService {
     this.currentTeamSubject.next(teams[nextIndex].name);
   }
 
+  getCurrentTeamIndex(): number {
+    const teams = JSON.parse(localStorage.getItem('teams') || '[]');
+    const currentTeamName = this.currentTeamSubject.value;
+
+    if (!currentTeamName || !teams.length) return 0;
+
+    const index = teams.findIndex((t: any) => t.name === currentTeamName);
+    return index === -1 ? 0 : index;
+  }
+
   // =========================
   // POINTS UPDATE (wywoływane przez PointsService)
   // =========================

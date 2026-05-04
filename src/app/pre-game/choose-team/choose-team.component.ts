@@ -20,7 +20,6 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
   teams: Team[] = [];
   availableAvatarIds: number[] = [];
   newTeamName = '';
-  displayedColumns: string[] = ['avatar', 'id', 'name', 'points', 'actions'];
   private destroy$ = new Subject<void>();
 
   constructor(private gameService: GameService) {}
@@ -40,15 +39,14 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
   }
 
   prepareAvailableAvatars() {
-    // Tworzymy tablicę [1, 2, 3, ..., 15]
-    const allIds = Array.from({ length: 15 }, (_, i) => i + 1);
+    const allIds = Array.from({ length: 14 }, (_, i) => i + 1);
 
-    // Filtrujemy te, które są już zajęte przez wczytane drużyny
-    const usedIds = this.teams.map((t) => {
-      // Wyciągamy numer z URL (np. "assets/avatars/5.png" -> 5)
-      const match = t.avatarUrl.match(/(\d+)\.png$/);
-      return match ? parseInt(match[1]) : null;
-    });
+    const usedIds = this.teams
+      .map((t) => {
+        const match = t.avatarUrl.match(/(\d+)\.png$/);
+        return match ? parseInt(match[1], 10) : null;
+      })
+      .filter((id) => id !== null) as number[];
 
     this.availableAvatarIds = allIds.filter((id) => !usedIds.includes(id));
   }
@@ -66,49 +64,42 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
 
   addTeam() {
     const trimmedName = this.newTeamName.trim();
+    if (trimmedName.length < 4) return;
 
-    if (trimmedName.length >= 4) {
-      if (this.availableAvatarIds.length === 0) {
-        alert('Brak dostępnych unikalnych awatarów!');
-        return;
-      }
+    // Odśwież pulę przed losowaniem dla pewności
+    this.prepareAvailableAvatars();
 
-      const nextId = this.getNextId();
-
-      // 1. Losujemy losowy indeks z puli dostępnych ID
-      const randomIndex = Math.floor(Math.random() * this.availableAvatarIds.length);
-
-      // 2. Pobieramy unikalny numer awatara
-      const chosenAvatarId = this.availableAvatarIds[randomIndex];
-
-      // 3. USUWAMY ten numer z puli, żeby nikt go więcej nie wylosował
-      this.availableAvatarIds.splice(randomIndex, 1);
-
-      const newTeam: Team = {
-        id: nextId,
-        name: trimmedName,
-        points: 0,
-        avatarUrl: `/avatars/${chosenAvatarId}.png`,
-      };
-
-      this.teams = [...this.teams, newTeam];
-      this.saveTeams();
-      this.newTeamName = '';
+    if (this.availableAvatarIds.length === 0) {
+      alert('Brak dostępnych unikalnych awatarów!');
+      return;
     }
+
+    const randomIndex = Math.floor(Math.random() * this.availableAvatarIds.length);
+    const chosenAvatarId = this.availableAvatarIds[randomIndex];
+
+    // Sprawdź czy na pewno mamy ID
+    if (chosenAvatarId === undefined) {
+      console.error('Błąd losowania awatara!');
+      return;
+    }
+
+    const newTeam: Team = {
+      id: this.getNextId(),
+      name: trimmedName,
+      points: 0,
+      avatarUrl: `/avatars/${chosenAvatarId}.png`,
+    };
+
+    this.teams = [...this.teams, newTeam];
+    this.saveTeams();
+    this.prepareAvailableAvatars(); // Aktualizujemy pulę po dodaniu
+    this.newTeamName = '';
   }
 
   removeTeam(id: number) {
-    const teamToRemove = this.teams.find((t) => t.id === id);
-    if (teamToRemove) {
-      // Wyciągamy numer awatara i dodajemy go z powrotem do puli
-      const match = teamToRemove.avatarUrl.match(/(\d+)\.png$/);
-      if (match) {
-        this.availableAvatarIds.push(parseInt(match[1]));
-      }
-    }
-
     this.teams = this.teams.filter((t) => t.id !== id);
     this.saveTeams();
+    this.prepareAvailableAvatars(); // Automatycznie przywróci ID usuniętego awatara do puli
   }
 
   saveTeams() {

@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { Category } from '../../shared/models/category/category.interface';
 import { QuestionService } from '../../services/question-service.service';
 import { MatIcon } from '@angular/material/icon';
+import { GameService } from '../../services/game.service';
 
 @Component({
   selector: 'app-game-content',
@@ -19,7 +20,8 @@ export class GameContentComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private questionService: QuestionService
+    private questionService: QuestionService,
+    private gameService: GameService
   ) {}
 
   async ngOnInit() {
@@ -40,20 +42,6 @@ export class GameContentComponent implements OnInit {
     }
   }
 
-  getCategoryColor(category: Category, index: number): string {
-    const remaining = this.getRemainingQuestions(category);
-
-    if (remaining === 0) {
-      return '#475569'; // Ciemniejszy szary dla wyczerpanych
-    }
-
-    // Jeśli kategoria ma swój kolor z bazy, użyj go. Jeśli nie, generuj gradient.
-    if (category.color) return category.color;
-
-    const hue = (index * 360) / (this.selectedCategories.length || 1);
-    return `hsl(${hue}, 70%, 50%)`;
-  }
-
   // Number of available questions in a given category
   getRemainingQuestions(category: Category): number {
     return this.categoryState.get(`${category.type}|${category.name}`) ?? 0;
@@ -67,7 +55,12 @@ export class GameContentComponent implements OnInit {
       return;
     }
 
-    this.router.navigate(['game/category', category.type, category.name, category.type]);
+    // Pobieramy indeks z serwisu
+    const currentPlayerIndex = this.gameService.getCurrentTeamIndex();
+
+    this.router.navigate(['game/category', category.type, category.name, category.type], {
+      queryParams: { startPlayer: currentPlayerIndex },
+    });
   }
 
   drawRandomQuestion(): void {
