@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, take } from 'rxjs';
+import { ActivatedRoute} from '@angular/router';
 
 // Services
 import { QuestionService } from '../../../../services/question-service.service';
@@ -50,11 +51,32 @@ export class WritingCategoryComponent implements OnInit {
     private gameStateService: GameStateService,
     private gameService: GameService,
     private pointsService: PointsService,
-    public gameCore: WritingGameCoreService
+    public gameCore: WritingGameCoreService,
+    private route: ActivatedRoute
   ) {}
+
+  protected handleGlobalReset(): void {
+    this.teams = [];
+    this.gameFinished = true; // Zablokuj możliwość dalszego wpisywania
+    this.winner = null;
+    this.answerOwners = {};
+
+    // Opcjonalnie: przekieruj użytkownika do menu głównego
+    // this.router.navigate(['/']);
+  }
 
   ngOnInit(): void {
     this.question$ = this.questionService.question$;
+
+    // 3. OBSŁUGA STARTOWEGO GRACZA
+    const startPlayerParam = this.route.snapshot.queryParams['startPlayer'];
+    if (startPlayerParam !== undefined) {
+      this.currentTeamIndex = Number(startPlayerParam);
+    }
+
+    this.gameService.reset$.subscribe(() => {
+      this.handleGlobalReset();
+    });
 
     this.gameStateService.teams$.pipe(take(1)).subscribe((teams) => {
       const colors = generateTeamColors(teams.length);
@@ -66,6 +88,11 @@ export class WritingCategoryComponent implements OnInit {
         calculatedPoints: 0,
         color: colors[index],
       }));
+
+      // 4. ZABEZPIECZENIE: Jeśli indeks z URL jest większy niż liczba drużyn, zresetuj do 0
+      if (this.currentTeamIndex >= this.teams.length) {
+        this.currentTeamIndex = 0;
+      }
     });
 
     this.gameCore.wrongFlash$.subscribe((isFlashing) => {
@@ -200,7 +227,11 @@ export class WritingCategoryComponent implements OnInit {
       )[0] || null;
 
     if (this.winner) {
+      // To ustawia zwycięzcę jako aktualną drużynę w serwisie
       this.gameService.setCurrentTeam(this.winner.name);
+
+      // JEŚLI CHCESZ, aby po tej rundzie kolejka przeszła dalej:
+      this.gameService.nextTeam();
 
       const pointsToSet = this.winner.calculatedPoints ?? 0;
       this.pointsService.setPoints(pointsToSet);
