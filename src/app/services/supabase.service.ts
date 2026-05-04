@@ -110,17 +110,20 @@ export class SupabaseService {
     return { data, error };
   }
 
-  // I metodę do pobierania listy (do historii/edycji)
-  async getQuestionsList(limit: number = 20, categoryId?: number) {
+  async getQuestionsList(limit: number = 20, categoryId?: number, searchStr?: string) {
     let query = this.supabase
       .from('questions')
       .select('id, question, created_at, category_id')
       .order('created_at', { ascending: false })
       .limit(limit);
 
-    // Jeśli przekazano kategorię, filtrujemy wyniki już na poziomie bazy
     if (categoryId) {
       query = query.eq('category_id', categoryId);
+    }
+
+    // NOWOŚĆ: Przeszukiwanie tekstu w kolumnie 'question'
+    if (searchStr && searchStr.trim() !== '') {
+      query = query.ilike('question', `%${searchStr}%`);
     }
 
     const { data, error } = await query;

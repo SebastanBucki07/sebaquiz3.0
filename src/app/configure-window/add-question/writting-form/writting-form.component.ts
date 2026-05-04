@@ -18,6 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-writting-form',
@@ -49,6 +51,7 @@ export class WrittingFormComponent implements OnInit {
   categories: any[] = [];
   activeSections = { raw: true, list: true };
   searchQuery: string = '';
+  private searchSubject = new Subject<string>();
 
   // Dodaj tę metodę (tzw. getter), która filtruje listę na żywo
   get filteredQuestions() {
@@ -77,30 +80,34 @@ export class WrittingFormComponent implements OnInit {
   async ngOnInit() {
     this.initForm();
     await this.loadCategories();
-    await this.loadQuestions(); // Wczytaj startowe dane
+    await this.loadQuestions();
 
-    // NOWOŚĆ: Gdy użytkownik zmieni kategorię w select, pobierz nowe dane z bazy
-    this.mainForm.get('categoryId')?.valueChanges.subscribe((catId) => {
-      this.loadQuestions(catId);
-    });
+    // Konfiguracja "żywego" wyszukiwania w bazie
+    this.searchSubject
+      .pipe(
+        debounceTime(400), // czekaj 400ms aż użytkownik przestanie pisać
+        distinctUntilChanged()
+      )
+      .subscribe((query) => {
+        this.loadQuestions(this.mainForm.get('categoryId')?.value, query);
+      });
+  }
 
-    this.route.queryParams.subscribe(async (params) => {
-      if (params['id']) {
-        await this.loadQuestionToEdit(Number(params['id']));
-      }
-    });
+  // Wywołuj to w HTML przy (input)="onSearchChange()"
+  onSearchChange() {
+    this.searchSubject.next(this.searchQuery);
   }
 
   // Zmodyfikowana metoda pobierania
-  async loadQuestions(catId?: number) {
+  async loadQuestions(catId?: number, searchStr?: string) {
     try {
-      // Przekazujemy catId do serwisu
-      const { data, error } = await this.supabase.getQuestionsList(20, catId);
+      // Musisz dodać parametr searchStr do metody w serwisie Supabase
+      const { data, error } = await this.supabase.getQuestionsList(50, catId, searchStr);
       if (!error) {
         this.allQuestions = data || [];
       }
     } catch (e) {
-      console.error('Błąd ładowania listy pytań:', e);
+      console.error(e);
     }
   }
 
