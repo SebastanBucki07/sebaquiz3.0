@@ -49,7 +49,7 @@ export class QuestionLoaderService {
     }
 
     // 2. LOGIKA SPECJALNA (TicTacToe - generowane w locie)
-    if (type === 'ticTacToe') {
+    if (type === 'ticTacToe' && name === 'Piłkarskie kółko i krzyżyk') {
       const questions = FootballGridProvider.getGridQuestions(50);
       this.cache.set(cacheKey, questions);
       return questions;

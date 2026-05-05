@@ -8,4 +8,5 @@ export interface Category {
   hints: Hint[];
   icon: string;
   color: string;
+  timer_seconds?: number;
 }

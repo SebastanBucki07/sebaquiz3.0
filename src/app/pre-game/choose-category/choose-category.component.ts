@@ -59,6 +59,7 @@ export class ChooseCategoryComponent implements OnInit, OnDestroy {
         basePoints: cat.base_points,
         icon: cat.icon,
         color: cat.color,
+        timer_seconds: cat.timer_seconds,
         hints: [],
       }));
 

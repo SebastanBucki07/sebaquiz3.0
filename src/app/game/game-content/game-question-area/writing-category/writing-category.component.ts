@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, take } from 'rxjs';
-import { ActivatedRoute} from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 // Services
 import { QuestionService } from '../../../../services/question-service.service';
@@ -45,6 +45,33 @@ export class WritingCategoryComponent implements OnInit {
   gameFinished = false;
   wrongFlash = false;
   answerOwners: { [key: number]: number } = {};
+
+  @Output() answerSubmitted = new EventEmitter<void>(); // Pamiętaj o dodaniu Outputu dla resetu timera
+
+  public isInputDisabled = false;
+
+  public triggerTimeoutError(): void {
+    // 1. Jeśli gra już skończona, nic nie rób
+    if (this.gameFinished || !this.currentTeam) return;
+
+    // 2. Blokujemy możliwość pisania
+    this.isInputDisabled = true;
+
+    // 3. Wywołujemy logikę błędu (zmniejszenie szans, zmiana teamu)
+    this.handleMistake();
+
+    // --- KLUCZOWA ZMIANA ---
+    // 4. Emitujemy zdarzenie, aby zrestartować timer dla następnego gracza
+    this.answerSubmitted.emit();
+    // -----------------------
+
+    // 5. Po krótkiej chwili odblokowujemy input dla następnej drużyny
+    if (!this.gameFinished) {
+      setTimeout(() => {
+        this.isInputDisabled = false;
+      }, 1000);
+    }
+  }
 
   constructor(
     private questionService: QuestionService,
@@ -121,12 +148,17 @@ export class WritingCategoryComponent implements OnInit {
   }
 
   submitAnswer(value: string): void {
-    // 1. Guardy (czy gra trwa i czy jest input)
-    if (!this.question || this.gameFinished || !this.currentTeam || !value.trim()) return;
+    // Dodajemy sprawdzenie flagi isInputDisabled
+    if (
+      !this.question ||
+      this.gameFinished ||
+      !this.currentTeam ||
+      !value.trim() ||
+      this.isInputDisabled
+    )
+      return;
 
     const input = value.trim();
-
-    // 2. Szukamy indeksu odpowiedzi (używamy map, aby wyciągnąć same teksty)
     const allValues = this.question.answers.map((a) => a.value);
     const ansIdx = this.gameCore.validateAnswer(
       input,
@@ -134,11 +166,14 @@ export class WritingCategoryComponent implements OnInit {
       this.question.revealedAnswers || []
     );
 
-    // 3. Logika trafienia lub błędu
     if (ansIdx >= 0) {
       this.handleCorrectAnswer(ansIdx);
+      // Emitujemy zdarzenie, aby rodzic zresetował timer
+      this.answerSubmitted.emit();
     } else {
       this.handleMistake();
+      // Przy błędzie też możemy zresetować timer dla nowej drużyny
+      this.answerSubmitted.emit();
     }
   }
 

@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Observable, tap } from 'rxjs';
 
+// Services
 import { QuestionService } from '../../../../services/question-service.service';
 import { GameService } from '../../../../services/game.service';
 import { PointsService } from '../../../../services/points-service.service';
+import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
+
+// Models
 import { Question } from '../../../../shared/questions/question.interface';
 
+// Components
 import { WritingControlsComponent } from '../writing-category/writting-controls/writing-controls.component';
 import { WritingGameStatusComponent } from '../writing-category/writing-game-status/writing-game-status.component';
-import { WritingGameCoreService } from '../../../../services/writting-game-core.service';
 
 @Component({
   selector: 'app-familiada',
@@ -22,6 +26,8 @@ export class FamiliadaComponent implements OnInit {
   readonly MAX_CHANCES = 3;
   readonly MAX_POINTS_MULTIPLIER = 5;
 
+  @Output() answerSubmitted = new EventEmitter<void>();
+
   question$!: Observable<Question | null>;
   currentQuestion: Question | null = null;
 
@@ -29,7 +35,9 @@ export class FamiliadaComponent implements OnInit {
   mistakes = 0;
   gameFinished = false;
   earnedPoints = 0;
-  correctHitsInRound = 0; //
+  correctHitsInRound = 0;
+
+  public isInputDisabled = false;
 
   constructor(
     private questionService: QuestionService,
@@ -42,18 +50,16 @@ export class FamiliadaComponent implements OnInit {
     this.question$ = this.questionService.question$.pipe(
       tap((q: any) => {
         if (q) {
-          // 1. NAPRAWA ANSWERS (jeśli jest stringiem)
+          // 1. Naprawa struktury odpowiedzi
           if (typeof q.answers === 'string') {
             try {
               q.answers = JSON.parse(q.answers);
             } catch (e) {
-              console.error('Błąd parsowania answers:', e);
               q.answers = [];
             }
           }
 
-          // 2. NAPRAWA REVEALED ANSWERS (mapowanie z bazy na kod)
-          // Baza ma 'revealed_answers', a kod chce 'revealedAnswers'
+          // 2. Mapowanie revealed_answers
           const rawRevealed = q.revealed_answers || q.revealedAnswers;
           if (typeof rawRevealed === 'string') {
             try {
@@ -65,7 +71,7 @@ export class FamiliadaComponent implements OnInit {
             q.revealedAnswers = rawRevealed || [];
           }
 
-          // 3. LOGIKA RESETU RUNDY
+          // 3. Reset przy nowym pytaniu
           if (this.currentQuestion && q.id !== this.currentQuestion.id) {
             this.resetRound();
           }
@@ -81,15 +87,106 @@ export class FamiliadaComponent implements OnInit {
     this.mistakes = 0;
     this.gameFinished = false;
     this.earnedPoints = 0;
-    this.correctHitsInRound = 0; // <--- RESETUJ TUTAJ
+    this.correctHitsInRound = 0;
+    this.isInputDisabled = false;
   }
 
-  // KLUCZOWY GETTER: Pobiera PEŁNE dane (w tym zdjęcie) z serwisu
+  /**
+   * Wywoływane przez rodzica po upływie czasu.
+   * GWARANTUJE, że punkty zostaną policzone przed odsłonięciem wszystkiego.
+   */
+  public triggerTimeoutError(): void {
+    if (this.gameFinished) return;
+
+    console.log('[FAMILIADA] Czas minął. Naliczam błąd...');
+    this.isInputDisabled = true;
+
+    // Traktujemy timeout jako błąd. handleMistake samo wywoła finishGame() jeśli to był 3 błąd.
+    this.handleMistake();
+
+    // Jeśli gra jeszcze trwa, resetujemy timer dla nowej próby
+    if (!this.gameFinished) {
+      this.answerSubmitted.emit();
+      setTimeout(() => {
+        this.isInputDisabled = false;
+      }, 1000);
+    }
+  }
+
+  submitAnswer(value: string): void {
+    if (this.gameFinished || this.isInputDisabled || !value.trim()) return;
+
+    const q = this.currentQuestion;
+    if (!q) return;
+
+    const allValues = q.answers.map((a) => a.value);
+    const idx = this.gameCore.validateAnswer(value, allValues, q.revealedAnswers || []);
+
+    if (idx >= 0) {
+      // --- TRAFIENIE ---
+      this.correctHitsInRound++;
+      this.gameCore.triggerCorrectEffects();
+      this.questionService.revealAnswer(idx);
+
+      this.answerSubmitted.emit(); // Reset timera
+
+      const currentRevealedCount = (q.revealedAnswers?.length || 0) + 1;
+      if (currentRevealedCount === q.answers.length) {
+        this.finishGame();
+      }
+    } else {
+      // --- BŁĄD RĘCZNY ---
+      this.handleMistake();
+      this.answerSubmitted.emit(); // Reset timera dla nowej próby
+    }
+  }
+
+  private handleMistake(): void {
+    this.mistakes++;
+    this.gameCore.triggerWrongEffects();
+
+    if (this.mistakes >= this.MAX_CHANCES) {
+      this.finishGame();
+    }
+  }
+
+  finishGame(): void {
+    if (this.gameFinished) return;
+    this.gameFinished = true;
+    this.isInputDisabled = true;
+
+    // 1. USTALAMY PUNKTY NA SZTYWNO (Tylko za to, co zgadliśmy do tej pory)
+    const hits = this.correctHitsInRound;
+    this.earnedPoints =
+      hits > 0
+        ? this.gameCore.calculateFinalScore(
+            hits,
+            this.currentQuestion!.answers.length,
+            this.mistakes,
+            3,
+            5
+          )
+        : 0;
+
+    // 2. PRZEKAZUJEMY FINALNĄ WARTOŚĆ (Nadpisujemy ewentualne błędy)
+    this.pointsService.setPoints(this.earnedPoints);
+
+    // 3. ODSŁANIAMY RESZTĘ
+    // Po setPoints(earnedPoints), żadne revealAnswer nie powinno już zmienić wyniku w serwisie!
+    this.revealAll();
+  }
+
+  private revealAll(): void {
+    this.currentQuestion?.answers.forEach((_, i) => {
+      if (!this.currentQuestion?.revealedAnswers?.includes(i)) {
+        this.questionService.revealAnswer(i);
+      }
+    });
+  }
+
   get currentTeamData(): any {
     const fullData = this.gameService.getFullTeamData(this.currentTeamName);
     if (!fullData) return null;
-
-    // Mapujemy to na format, którego oczekuje WritingControls
     return {
       ...fullData,
       mistakes: this.mistakes,
@@ -103,86 +200,5 @@ export class FamiliadaComponent implements OnInit {
       ...data,
       calculatedPoints: this.earnedPoints,
     };
-  }
-
-  submitAnswer(value: string): void {
-    if (this.gameFinished || this.mistakes >= this.MAX_CHANCES || !value.trim()) return;
-
-    const q = this.currentQuestion;
-    if (!q) return;
-
-    const allValues = q.answers.map((a) => a.value);
-    const idx = this.gameCore.validateAnswer(value, allValues, q.revealedAnswers || []);
-
-    if (idx >= 0) {
-      // --- TRAFIENIE ---
-      this.correctHitsInRound++; // <--- ZWIĘKSZAJ LICZNIK TRAFIEŃ
-      this.gameCore.triggerCorrectEffects();
-      this.questionService.revealAnswer(idx);
-
-      const currentRevealedCount = (q.revealedAnswers?.length || 0) + 1;
-      if (currentRevealedCount === q.answers.length) {
-        this.finishGame();
-      }
-    } else {
-      this.handleMistake();
-    }
-  }
-
-  finishGame(): void {
-    // 1. Natychmiastowa blokada, aby uniknąć podwójnego wywołania
-    if (this.gameFinished) return;
-    this.gameFinished = true;
-
-    const questionSnapshot = this.currentQuestion;
-    if (!questionSnapshot) return;
-
-    // 2. Kopiujemy wartości do stałych (zamrażamy stan)
-    const hits = this.correctHitsInRound;
-    const currentMistakes = this.mistakes;
-
-    console.log(`[DEBUG FAMILIADA] Trafienia: ${hits}, Błędy: ${currentMistakes}`);
-
-    // 3. LOGIKA ZERO-TOLERANCJI
-    if (hits <= 0) {
-      console.log('[DEBUG FAMILIADA] Wymuszam 0 punktów - brak trafień.');
-      this.earnedPoints = 0;
-    } else {
-      // Obliczamy punkty tylko gdy hits > 0
-      this.earnedPoints = this.gameCore.calculateFinalScore(
-        hits,
-        questionSnapshot.answers.length,
-        currentMistakes,
-        this.MAX_CHANCES,
-        5
-      );
-    }
-
-    // 4. Zapis do serwisu
-    if (this.currentTeamName) {
-      console.log(`[DEBUG FAMILIADA] Wysyłam do serwisu: ${this.earnedPoints}`);
-      this.pointsService.setPoints(this.earnedPoints);
-    }
-
-    // 5. Odsłaniamy resztę tablicy
-    setTimeout(() => this.revealAll(), 400);
-  }
-
-  private handleMistake(): void {
-    this.mistakes++;
-    this.gameCore.triggerWrongEffects();
-
-    // Sprawdzamy limit szans
-    if (this.mistakes >= this.MAX_CHANCES) {
-      this.finishGame();
-    }
-  }
-
-  private revealAll(): void {
-    this.currentQuestion?.answers.forEach((_, i) => {
-      if (!this.currentQuestion?.revealedAnswers?.includes(i)) {
-        this.questionService.revealAnswer(i);
-      }
-    });
   }
 }

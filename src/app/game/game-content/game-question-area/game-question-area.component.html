@@ -1,8 +1,12 @@
 <div class="question-view-wrapper">
   <div class="question-card">
+    <!-- game-question-area.component.html -->
     <app-question-area-header
       [category]="currentCategory"
       [points]="pointsService.getAvailablePoints()"
+      [isTimerActive]="isTimerActive"
+      [startSeconds]="currentTimerLimit"
+      (timeExpired)="onTimeExpired()"
     ></app-question-area-header>
 
     <app-answer (correct)="correct()" (wrong)="wrong()" (half)="half()"></app-answer>
