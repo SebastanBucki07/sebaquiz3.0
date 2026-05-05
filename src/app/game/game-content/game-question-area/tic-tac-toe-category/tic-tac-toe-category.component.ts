@@ -91,17 +91,19 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
     }
   }
 
-  // Odpowiednik finishGame()
+  public triggerTimeoutError(): void {
+    // Kiedy czas minie, automatycznie kończymy i pokazujemy braki
+    this.revealMissing();
+  }
+
   revealMissing() {
     if (this.gameFinished) return;
 
     this.showMissing = true;
     this.gameFinished = true;
 
-    // Informujemy system o odkryciu odpowiedzi (wszystkich trzech)
-    // this.questionService.revealAnswer(0);
-    // this.questionService.revealAnswer(1);
-    // this.questionService.revealAnswer(2);
+    // Obliczamy punkty na koniec (żeby nie było 0 po timeout)
+    this.calculateScore();
 
     if (this.currentTeam) {
       this.pointsService.setPoints(this.earnedPoints);

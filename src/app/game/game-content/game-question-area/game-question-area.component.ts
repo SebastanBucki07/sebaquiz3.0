@@ -63,27 +63,21 @@ export class GameQuestionAreaComponent implements OnInit {
   // --- LOGIKA TIMERA ---
 
   onTimeExpired(): void {
-    this.isTimerActive = false; // Zatrzymujemy timer
+    this.isTimerActive = false;
 
-    if (
-      this.currentCategory?.type === 'writting-category' ||
-      this.currentCategory?.type === 'footballGame'
-    ) {
-      // W Writing Category zazwyczaj nie chcemy odkrywać wszystkiego od razu (zgodnie z Twoją prośbą)
-      // ale wywołujemy efekt błędu i blokujemy możliwość pisania
+    // Dodajemy 'familiada' do sprawdzanych typów
+    const manualTimeoutCategories = ['writting-category', 'footballGame', 'familiada'];
+
+    if (manualTimeoutCategories.includes(this.currentCategory?.type || '')) {
       if (this.activeChildComponent?.triggerTimeoutError) {
+        // Teraz Familiada sama naliczy błąd i JEDNORAZOWO policzy punkty
         this.activeChildComponent.triggerTimeoutError();
       }
     } else {
-      // W innych kategoriach po prostu odkrywamy wszystkie odpowiedzi na ekranie
+      // Inne kategorie (np. zwykły Quiz), gdzie po prostu pokazujemy odpowiedzi
       this.revealAllAnswers();
       this.gameCore.triggerWrongEffects();
     }
-
-    // UWAGA: Nie wywołujemy tutaj this.router.navigate!
-    // Dzięki temu pytanie NIE ZNIKA.
-    // Drużyna może teraz zobaczyć odpowiedzi, a Ty ręcznie klikasz "Błąd" lub "Dobrze",
-    // żeby przejść dalej, gdy skończycie omawiać pytanie.
   }
 
   private revealAllAnswers(): void {
