@@ -102,6 +102,11 @@ export class SupabaseService {
     });
   }
 
+  // Pobieranie wszystkich klubów do słownika
+  async getClubs() {
+    return await this.supabase.from('clubs').select('*').order('name', { ascending: true });
+  }
+
   async getQuestionById(id: number) {
     const { data, error } = await this.supabase
       .from('questions')
@@ -115,18 +120,16 @@ export class SupabaseService {
   async getQuestionsList(limit: number = 20, categoryId?: number, searchStr?: string) {
     let query = this.supabase
       .from('questions')
-      .select('id, question, created_at, category_id')
-      .order('created_at', { ascending: false })
-      .limit(limit);
+      .select('id, question, created_at, category_id, answers, hints') // pobieramy dane
+      .order('created_at', { ascending: false });
 
     if (categoryId) {
       query = query.eq('category_id', categoryId);
     }
 
-    // NOWOŚĆ: Przeszukiwanie tekstu w kolumnie 'question'
-    if (searchStr && searchStr.trim() !== '') {
-      query = query.ilike('question', `%${searchStr}%`);
-    }
+    // USUNĘLIŚMY query.ilike(...) stąd, bo blokowało wyniki!
+    // Limit ustawiamy nieco większy, żeby mieć z czego filtrować w UI
+    query = query.limit(searchStr ? 200 : limit);
 
     const { data, error } = await query;
     return { data, error };
@@ -165,31 +168,41 @@ export class SupabaseService {
 
     if (error || !data) return false;
 
-    if (answers && answers.length > 0) {
-      const createFingerprint = (ans: any[]) =>
-        ans
-          .map((a) => `${a.label.toLowerCase()}:${a.value.toLowerCase().trim()}`)
-          .sort()
-          .join('|');
+    const newName = answers && answers[0]?.value ? answers[0].value.toLowerCase().trim() : '';
+    if (!newName) return false;
 
-      const newFingerprint = createFingerprint(answers);
-      return data.some((record) => createFingerprint(record.answers || []) === newFingerprint);
-    }
+    return data.some((record) => {
+      let existingAnswers = record.answers;
 
-    const normalizedNewQuestion = questionText.toLowerCase().trim();
-    return data.some((record) => record.question.toLowerCase().trim() === normalizedNewQuestion);
+      if (typeof existingAnswers === 'string') {
+        try {
+          existingAnswers = JSON.parse(existingAnswers);
+        } catch (e) {
+          existingAnswers = [];
+        }
+      }
+
+      let existingName = '';
+      if (Array.isArray(existingAnswers) && existingAnswers.length > 0) {
+        existingName = existingAnswers[0]?.value || '';
+      } else if (existingAnswers && typeof existingAnswers === 'object') {
+        existingName = (existingAnswers as any).value || '';
+      }
+
+      return existingName.toLowerCase().trim() === newName;
+    });
   }
+
   // supabase.service.ts
   async updateQuestion(id: number, questionData: any) {
     const { error } = await this.supabase
       .from('questions')
       .update({
-        // CZY NA PEWNO TE NAZWY SĄ TAKIE SAME W BAZIE?
         category_id: questionData.category_id,
         question: questionData.question,
         answers: questionData.answers,
-        hints: [], // Upewnij się, że kolumna 'hints' istnieje
-        revealed_answers: [], // Upewnij się, że kolumna 'revealed_answers' istnieje
+        hints: questionData.hints ? questionData.hints : [],
+        revealed_answers: [],
       })
       .eq('id', id);
 

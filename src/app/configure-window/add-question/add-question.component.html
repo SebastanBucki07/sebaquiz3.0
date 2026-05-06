@@ -49,6 +49,14 @@
         <mat-icon>assignment</mat-icon>
         Dodaj Writing question
       </mat-button-toggle>
+      <mat-button-toggle
+        value="photo-hints"
+        [checked]="activeForm === 'photo-hints'"
+        (change)="setForm('photo-hints')"
+      >
+        <mat-icon>camera</mat-icon>
+        Dodaj photo question
+      </mat-button-toggle>
     </mat-button-toggle-group>
   </div>
 
@@ -78,6 +86,10 @@
     } @else if (activeForm === 'writting') {
       <div class="fade-in">
         <app-writting-form></app-writting-form>
+      </div>
+    } @else if (activeForm === 'photo-hints') {
+      <div class="fade-in">
+        <app-player-history-form></app-player-history-form>
       </div>
     } @else {
       <div class="placeholder-content">

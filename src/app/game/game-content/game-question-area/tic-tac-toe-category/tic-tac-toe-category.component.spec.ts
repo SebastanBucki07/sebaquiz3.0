@@ -29,7 +29,7 @@ describe('TicTacToeCategoryComponent', () => {
     footballers.forEach(footballer => {
       footballer.clubs.forEach(clubName => {
         const info = getClubInfo(clubName);
-        if (info.logo.includes('default-logo.png')) {
+        if (info.logo.includes('no-image.png')) {
           clubCounts[clubName] = (clubCounts[clubName] || 0) + 1;
         }
       });

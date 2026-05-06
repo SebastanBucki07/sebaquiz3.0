@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { normalizeText, areSimilar } from '../shared/utils/text-logic';
+import { normalizeText, areSimilar, validateAnswerHelper } from '../shared/utils/text-logic';
 import { playSound } from '../shared/utils/audio-helper';
 
 @Injectable({ providedIn: 'root' })
@@ -9,13 +9,7 @@ export class WritingGameCoreService {
   wrongFlash$ = this.wrongFlashSubject.asObservable();
 
   validateAnswer(input: string, possibleAnswers: string[], revealedIndexes: number[]): number {
-    const normalizedInput = normalizeText(input);
-
-    return possibleAnswers.findIndex((ans, index) => {
-      const isMatch = normalizeText(ans) === normalizedInput || areSimilar(normalizedInput, ans);
-      const isAlreadyRevealed = revealedIndexes.includes(index);
-      return isMatch && !isAlreadyRevealed;
-    });
+    return validateAnswerHelper(input, possibleAnswers, revealedIndexes);
   }
 
   getNextActiveIndex(currentIndex: number, teams: any[], maxChances: number): number {

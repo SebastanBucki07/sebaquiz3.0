@@ -50,3 +50,17 @@ export const calculateGamePoints = (correct: number, total: number, multiplier: 
   // Zmieniamy na Math.round, żeby uniknąć zawyżania punktów
   return Math.ceil((correct / total) * multiplier);
 };
+
+export function validateAnswerHelper(
+  input: string,
+  possibleAnswers: string[],
+  revealedIndexes: number[] = []
+): number {
+  const normalizedInput = normalizeText(input);
+
+  return possibleAnswers.findIndex((ans, index) => {
+    const isMatch = normalizeText(ans) === normalizedInput || areSimilar(normalizedInput, ans);
+    const isAlreadyRevealed = revealedIndexes.includes(index);
+    return isMatch && !isAlreadyRevealed;
+  });
+}
