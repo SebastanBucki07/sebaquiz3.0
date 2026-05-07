@@ -1,12 +1,42 @@
 import { Injectable } from '@angular/core';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 @Injectable({ providedIn: 'root' })
 export class SupabaseService {
-  private supabase = createClient(
+  // Zmienione na public, aby uniknąć błędu S2341 w komponentach
+  public supabase: SupabaseClient = createClient(
     'https://tvawycgprwpjgmeifltx.supabase.co',
     'sb_publishable_W5VsEn1VJYSpMD_i9Sz8Jg_LtH-bxuC'
   );
+
+  /* --- AUTH --- */
+
+  get auth() {
+    return this.supabase.auth;
+  }
+
+  async signIn(email: string, pass: string) {
+    return await this.supabase.auth.signInWithPassword({ email, password: pass });
+  }
+
+  async signOut() {
+    await this.supabase.auth.signOut();
+  }
+
+  async getCurrentUser() {
+    const {
+      data: { user },
+    } = await this.supabase.auth.getUser();
+    return user;
+  }
+
+  authChanges() {
+    return this.supabase.auth.onAuthStateChange((event, session) => {
+      return session;
+    });
+  }
+
+  /* --- KATEGORIE --- */
 
   async getCategoryTypes() {
     const { data, error } = await this.supabase
@@ -64,6 +94,23 @@ export class SupabaseService {
     return data || [];
   }
 
+  async getCategoriesByType(typeId: number) {
+    const { data, error } = await this.supabase
+      .from('categories')
+      .select('*, timer_seconds')
+      .eq('type_id', typeId)
+      .eq('is_active', true)
+      .order('name', { ascending: true });
+
+    if (error) {
+      console.error('Błąd pobierania kategorii po typie:', error);
+      throw error;
+    }
+    return data || [];
+  }
+
+  /* --- PYTANIA (LOGIKA GRY) --- */
+
   async getQuestions(categoryName: string, limit: number = 50) {
     const { data: allIds } = await this.supabase
       .from('questions')
@@ -77,34 +124,21 @@ export class SupabaseService {
       .sort(() => Math.random() - 0.5)
       .slice(0, limit);
 
-    const { data, error } = await this.supabase
-      .from('questions')
-      .select('*') // Pobieramy absolutnie wszystko
-      .in('id', shuffledIds);
-
-    console.log('--- DEBUG SUPABASE ---');
-    console.log('Surowe dane z bazy:', data); // ZOBACZ TO W KONSOLI (F12)
+    const { data, error } = await this.supabase.from('questions').select('*').in('id', shuffledIds);
 
     if (error) {
-      console.error('Błąd:', error);
+      console.error('Błąd pobierania pytań:', error);
       return [];
     }
 
     return (data || []).map((q) => {
       const finalAnswers = q.answers || q.answers_json || q.data?.answers || [];
-
       return {
         ...q,
-        question: q.question,
         answers: Array.isArray(finalAnswers) ? finalAnswers : JSON.parse(finalAnswers || '[]'),
-        revealedAnswers: q.revealedAnswers || q.revealed_answers || [],
+        revealedAnswers: q.revealed_answers || q.revealedAnswers || [],
       };
     });
-  }
-
-  // Pobieranie wszystkich klubów do słownika
-  async getClubs() {
-    return await this.supabase.from('clubs').select('*').order('name', { ascending: true });
   }
 
   async getQuestionById(id: number) {
@@ -112,48 +146,64 @@ export class SupabaseService {
       .from('questions')
       .select('*')
       .eq('id', id)
-      .maybeSingle(); // bezpieczniejsze niż .single()
-
+      .maybeSingle();
     return { data, error };
   }
 
-  async getQuestionsList(limit: number = 20, categoryId?: number, searchStr?: string) {
+  /* --- ZARZĄDZANIE PYTANIAMI (PANEL ADMINA) --- */
+
+  async getQuestionsList(limit: number = 100, categoryId?: number, search?: string) {
     let query = this.supabase
       .from('questions')
-      .select('id, question, created_at, category_id, answers, hints') // pobieramy dane
-      .order('created_at', { ascending: false });
+      .select(
+        `
+        *,
+        author:profiles!created_by(username),
+        editor:profiles!updated_by(username)
+      `
+      )
+      .order('created_at', { ascending: false })
+      .limit(limit);
 
     if (categoryId) {
       query = query.eq('category_id', categoryId);
     }
 
-    // USUNĘLIŚMY query.ilike(...) stąd, bo blokowało wyniki!
-    // Limit ustawiamy nieco większy, żeby mieć z czego filtrować w UI
-    query = query.limit(searchStr ? 200 : limit);
+    if (search && search.trim() !== '') {
+      // Szuka po treści pytania LUB pierwszej odpowiedzi (nazwisko)
+      query = query.or(`question.ilike.%${search}%, answers->0->>value.ilike.%${search}%`);
+    }
 
     const { data, error } = await query;
+    if (error) console.error('Błąd getQuestionsList:', error);
     return { data, error };
   }
 
   async addQuestion(questionData: any) {
-    const { data, error } = await this.supabase.from('questions').insert([questionData]);
-
+    // Uwaga: created_by zostanie nadane przez DEFAULT auth.uid() w bazie
+    const { data, error } = await this.supabase.from('questions').insert([questionData]).select();
     return { data, error };
   }
 
-  async getCategoriesByType(typeId: number) {
-    const { data, error } = await this.supabase
-      .from('categories')
-      .select('*, timer_seconds') // Dodaj to jawnie dla pewności
-      .eq('type_id', typeId)
-      .eq('is_active', true)
-      .order('name', { ascending: true });
+  async updateQuestion(id: number, questionData: any) {
+    // Nie przesyłamy updated_by ręcznie - zrobi to TRIGGER SQL w bazie
+    const { error } = await this.supabase
+      .from('questions')
+      .update({
+        category_id: questionData.category_id,
+        question: questionData.question,
+        answers: questionData.answers,
+        hints: questionData.hints,
+      })
+      .eq('id', id);
 
-    if (error) {
-      console.error('Błąd pobierania kategorii po typie:', error);
-      throw error;
-    }
-    return data || [];
+    return { error };
+  }
+
+  /* --- NARZĘDZIA --- */
+
+  async getClubs() {
+    return await this.supabase.from('clubs').select('*').order('name', { ascending: true });
   }
 
   async checkDuplicate(
@@ -168,44 +218,24 @@ export class SupabaseService {
 
     if (error || !data) return false;
 
-    const newName = answers && answers[0]?.value ? answers[0].value.toLowerCase().trim() : '';
+    const newName = answers?.[0]?.value?.toLowerCase().trim() || '';
     if (!newName) return false;
 
     return data.some((record) => {
       let existingAnswers = record.answers;
-
       if (typeof existingAnswers === 'string') {
         try {
           existingAnswers = JSON.parse(existingAnswers);
-        } catch (e) {
+        } catch {
           existingAnswers = [];
         }
       }
 
-      let existingName = '';
-      if (Array.isArray(existingAnswers) && existingAnswers.length > 0) {
-        existingName = existingAnswers[0]?.value || '';
-      } else if (existingAnswers && typeof existingAnswers === 'object') {
-        existingName = (existingAnswers as any).value || '';
-      }
+      const existingName = Array.isArray(existingAnswers)
+        ? existingAnswers[0]?.value
+        : (existingAnswers as any)?.value || '';
 
       return existingName.toLowerCase().trim() === newName;
     });
-  }
-
-  // supabase.service.ts
-  async updateQuestion(id: number, questionData: any) {
-    const { error } = await this.supabase
-      .from('questions')
-      .update({
-        category_id: questionData.category_id,
-        question: questionData.question,
-        answers: questionData.answers,
-        hints: questionData.hints ? questionData.hints : [],
-        revealed_answers: [],
-      })
-      .eq('id', id);
-
-    return { error };
   }
 }

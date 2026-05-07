@@ -2,9 +2,9 @@
   <div class="form-side">
     <div class="generator-card" [class.edit-mode-border]="isEditMode">
       <div class="header">
-        <mat-icon class="football-icon">history_edu</mat-icon>
+        <mat-icon class="write-icon">account_circle</mat-icon>
         <div class="header-text">
-          <h2>{{ isEditMode ? 'Edycja Piłkarza' : 'Nowy Piłkarz' }}</h2>
+          <h2>{{ isEditMode ? 'Edycja Zawodnika' : 'Nowy Zawodnik' }}</h2>
           <p>Kody krajów + Autocomplete klubów</p>
         </div>
       </div>
@@ -29,8 +29,8 @@
               />
               <mat-icon *ngIf="!getFlagUrl(mainForm.get('question')?.value)">flag</mat-icon>
             </div>
-            <mat-form-field appearance="outline" class="custom-mat-field flex-1">
-              <mat-label>Kraj lub Kod</mat-label>
+            <mat-form-field appearance="outline" class="custom-mat-field">
+              <mat-label>Szukaj Kraju...</mat-label>
               <input matInput formControlName="question" [matAutocomplete]="autoCountry" />
               <mat-autocomplete
                 #autoCountry="matAutocomplete"
@@ -51,25 +51,24 @@
             <input matInput formControlName="answer" placeholder="np. Robert Lewandowski" />
             <mat-hint *ngIf="isDuplicate" class="duplicate-hint">
               <mat-icon>warning</mat-icon>
-              Ten piłkarz prawdopodobnie już istnieje!
+              Ten piłkarz już istnieje!
             </mat-hint>
           </mat-form-field>
 
-          <div class="accordion-header">ŚCIEŻKA KARIERY ({{ hints.length }})</div>
-          <div formArrayName="hints" class="hints-container">
+          <div class="accordion-header">Kariera klubowa ({{ hints.length }})</div>
+          <div formArrayName="hints" class="hints-list">
             <div
               *ngFor="let club of hints.controls; let i = index"
               [formGroupName]="i"
               class="player-row"
             >
               <div class="pos-badge">{{ i + 1 }}</div>
-
-              <mat-form-field appearance="outline" class="custom-mat-field flex-1">
+              <mat-form-field appearance="outline" class="custom-mat-field">
                 <input
                   matInput
                   formControlName="label"
                   [matAutocomplete]="autoClub"
-                  placeholder="Szukaj klubu..."
+                  placeholder="Klub..."
                 />
                 <mat-autocomplete
                   #autoClub="matAutocomplete"
@@ -80,22 +79,11 @@
                   </mat-option>
                 </mat-autocomplete>
               </mat-form-field>
-
-              <input type="hidden" formControlName="content" />
-
               <button type="button" mat-icon-button color="warn" (click)="removeClub(i)">
-                <mat-icon>delete</mat-icon>
+                <mat-icon>delete_outline</mat-icon>
               </button>
             </div>
-
-            <button
-              type="button"
-              class="btn-add-player"
-              (click)="addClub()"
-              [disabled]="!mainForm.get('categoryId')?.value"
-            >
-              + DODAJ KLUB
-            </button>
+            <button type="button" class="btn-add-player" (click)="addClub()">+ DODAJ KLUB</button>
           </div>
         </div>
 
@@ -104,7 +92,7 @@
             mat-raised-button
             class="save-button"
             type="submit"
-            [disabled]="mainForm.invalid || isSaving || !mainForm.get('categoryId')?.value"
+            [disabled]="mainForm.invalid || isSaving"
           >
             {{ isSaving ? 'ZAPISYWANIE...' : 'ZAPISZ' }}
           </button>
@@ -117,71 +105,64 @@
   <div class="preview-side">
     <div class="writing-preview-card">
       <div class="preview-header">
-        <h2>{{ mainForm.value.answer || 'PIŁKARZ' }}</h2>
-        <div class="flag-box" *ngIf="mainForm.value.question">
-          <img [src]="getFlagUrl(mainForm.value.question)" class="flag-img" />
-          <p>KRAJ: {{ mainForm.value.question }}</p>
+        <div class="player-info-preview">
+          <h2>{{ mainForm.value.answer || 'Imię i Nazwisko' }}</h2>
+          <div class="flag-badge-preview" *ngIf="mainForm.value.question">
+            <img [src]="getFlagUrl(mainForm.value.question)" />
+            <span>{{ mainForm.value.question }}</span>
+          </div>
         </div>
       </div>
+
       <div class="career-path-preview">
-        <div *ngFor="let h of mainForm.getRawValue().hints" class="crest-wrapper">
+        <div *ngFor="let h of mainForm.getRawValue().hints" class="crest-item">
           <img [src]="h.content" onerror="this.src = 'no-image.png'" />
-          <span class="tooltip">{{ h.label }}</span>
+          <p>{{ h.label }}</p>
         </div>
-        <div *ngIf="hints.length === 0" class="empty-preview">Brak dodanych klubów</div>
+        <div *ngIf="hints.length === 0" class="empty-state">Dodaj kluby, aby zobaczyć podgląd</div>
       </div>
     </div>
 
     <div class="history-card">
       <div class="history-header">
-        <h3>Zarządzaj pytaniami</h3>
-        <span class="count-tag" *ngIf="mainForm.get('categoryId')?.value">
-          {{ allQuestions.length }}
-        </span>
+        <h3>Baza zawodników</h3>
+        <span class="count-tag">{{ allQuestions.length }}</span>
       </div>
 
-      <mat-form-field appearance="outline" class="custom-mat-field search-field">
+      <mat-form-field appearance="outline" class="custom-mat-field search-box">
         <mat-icon matPrefix>search</mat-icon>
         <input
           matInput
           [(ngModel)]="searchQuery"
           (input)="onSearchChange()"
-          [disabled]="!mainForm.get('categoryId')?.value"
-          placeholder="{{
-            mainForm.get('categoryId')?.value ? 'Szukaj zawodnika...' : 'Najpierw wybierz kategorię'
-          }}"
+          placeholder="Filtruj listę..."
         />
       </mat-form-field>
 
-      <div class="history-list" *ngIf="mainForm.get('categoryId')?.value; else noCat">
+      <div class="history-list">
         <div
           *ngFor="let q of allQuestions"
           class="history-item"
           [class.active-edit]="editingId === q.id"
           (click)="loadQuestionToEdit(q.id)"
         >
-          <div class="history-q">
-            <span class="id-badge">#{{ q.id }}</span>
-            <span class="player-name-list">{{ q.displayName }}</span>
+          <div class="q-texts">
+            <span class="player-name-list">
+              <small class="id-tag">#{{ q.id }}</small>
+              {{ q.displayName }}
+            </span>
+            <div class="author-tag">
+              Autor:
+              <b>{{ q.author?.username || 'System' }}</b>
+              <span *ngIf="q.editor">
+                | Edytował:
+                <b>{{ q.editor.username }}</b>
+              </span>
+            </div>
           </div>
-          <div class="edit-label">
-            EDYTUJ
-            <mat-icon>edit</mat-icon>
-          </div>
+          <mat-icon class="edit-btn-icon">edit</mat-icon>
         </div>
-        <div *ngIf="allQuestions.length === 0" class="empty-list">Nie znaleziono zawodników</div>
       </div>
-
-      <ng-template #noCat>
-        <div class="no-category-placeholder">
-          <mat-icon>lock</mat-icon>
-          <p>
-            Wybierz kategorię u góry,
-            <br />
-            aby wyświetlić listę zawodników.
-          </p>
-        </div>
-      </ng-template>
     </div>
   </div>
 </div>
