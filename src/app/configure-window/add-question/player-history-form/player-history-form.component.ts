@@ -21,7 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 // RxJS
-import { Observable, Subject, firstValueFrom} from 'rxjs';
+import { Observable, Subject, firstValueFrom } from 'rxjs';
 import { map, startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { normalizeText, validateAnswerHelper } from '../../../shared/utils/text-logic';
 

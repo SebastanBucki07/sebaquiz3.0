@@ -1,0 +1,104 @@
+.add-club-card {
+  background: #111418;
+  border: 1px solid #1e2227;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  background: #1c2128;
+  border-bottom: 1px solid #1e2227;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #ffb300;
+}
+
+.form-body {
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.image-preview-zone {
+  width: 100px;
+  height: 100px;
+  border: 2px dashed #30363d;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: 0.3s;
+  flex-shrink: 0;
+}
+
+.image-preview-zone:hover {
+  border-color: #ffb300;
+  background: rgba(255, 179, 0, 0.05);
+}
+
+.image-preview-zone img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #484f58;
+  font-size: 10px;
+  text-align: center;
+}
+
+.inputs-zone {
+  flex: 1;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.save-btn {
+  width: 100%;
+  height: 45px;
+  background-color: #238636 !important; /* Zielony odcień sukcesu (GitHub style) */
+  color: white !important;
+  font-weight: 800 !important;
+  margin-top: 5px;
+}
+
+.save-btn:disabled {
+  background-color: #161b22 !important;
+  color: #484f58 !important;
+}
+
+::ng-deep .mat-mdc-form-field-wrapper {
+  padding-bottom: 0 !important;
+}
+
+/* Plik: styles.css */
+.error-snackbar {
+  --mdc-snackbar-container-color: #f44336;
+  --mdc-snackbar-supporting-text-color: white;
+}
+
+.success-snackbar {
+  --mdc-snackbar-container-color: #4caf50;
+  --mdc-snackbar-supporting-text-color: white;
+}

@@ -17,6 +17,9 @@ export class PhotoFragmentsCategoryComponent extends CommonQuestionComponent {
   public tiles: boolean[] = [];
   private hintStep = 0;
 
+  private readonly SB_BASE_URL =
+    'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
+
   constructor(questionService: QuestionService) {
     super(questionService);
     this.resetGrid();
@@ -74,6 +77,27 @@ export class PhotoFragmentsCategoryComponent extends CommonQuestionComponent {
 
   public getImageSrc(question: Question | null): string {
     if (!question?.question) return '';
-    return question.question.startsWith('http') ? question.question : '/' + question.question;
+
+    const path = question.question;
+    const fileName = path.split('/').pop();
+
+    // 1. Obsługa folderu LOGOS (bardziej elastyczne sprawdzanie)
+    // Szukamy "logo" bez względu na to, czy są ukośniki / /
+    if (path.toLowerCase().includes('logo')) {
+      return `${this.SB_BASE_URL}logos/${fileName}`;
+    }
+
+    // 2. Obsługa folderu FOOTBALL CRESTES
+    if (path.toLowerCase().includes('crest')) {
+      return `${this.SB_BASE_URL}footballCrestes/${fileName}`;
+    }
+
+    // 3. Obsługa pełnych linków
+    if (path.startsWith('http')) {
+      return path;
+    }
+
+    // 4. Ostateczny fallback
+    return path.startsWith('/') ? path : '/' + path;
   }
 }

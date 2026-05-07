@@ -1,0 +1,36 @@
+<div class="add-club-card">
+  <div class="card-header">
+    <mat-icon color="primary">shield</mat-icon>
+    <h3>Nowy Herb Klubu</h3>
+  </div>
+
+  <div class="form-body">
+    <div class="image-preview-zone" (click)="fileInput.click()">
+      <img *ngIf="previewUrl" [src]="previewUrl" alt="Preview" />
+      <div *ngIf="!previewUrl" class="placeholder">
+        <mat-icon>add_a_photo</mat-icon>
+        <span>Wybierz grafikę</span>
+      </div>
+      <input type="file" #fileInput (change)="onFileSelected($event)" accept="image/*" hidden />
+    </div>
+
+    <div class="inputs-zone">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Pełna nazwa klubu</mat-label>
+        <input matInput [(ngModel)]="newClubName" placeholder="np. Real Madrid CF" />
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        class="save-btn"
+        (click)="saveNewClub()"
+        [disabled]="!newClubName || !selectedFile || isUploading"
+      >
+        <mat-icon *ngIf="!isUploading">cloud_upload</mat-icon>
+        {{ isUploading ? 'PRZESYŁANIE...' : 'ZAPISZ W BAZIE' }}
+      </button>
+    </div>
+  </div>
+
+  <mat-progress-bar *ngIf="isUploading" mode="indeterminate"></mat-progress-bar>
+</div>

@@ -8,6 +8,9 @@ export class SupabaseService {
     'https://tvawycgprwpjgmeifltx.supabase.co',
     'sb_publishable_W5VsEn1VJYSpMD_i9Sz8Jg_LtH-bxuC'
   );
+  private clubsCache: any[] = [];
+  public readonly STORAGE_URL =
+    'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
 
   /* --- AUTH --- */
 
@@ -237,5 +240,57 @@ export class SupabaseService {
 
       return existingName.toLowerCase().trim() === newName;
     });
+  }
+
+  async uploadCrest(file: File, clubName: string): Promise<string> {
+    const cleanName = clubName
+      .toLowerCase()
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-9_]/g, '');
+
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${cleanName}.${fileExt}`;
+    const filePath = `footballCrestes/${fileName}`;
+
+    const { data, error } = await this.supabase.storage
+      .from('footballCrestes')
+      .upload(fileName, file, { upsert: false });
+
+    if (error) {
+      if (error.message.includes('already exists')) {
+        throw new Error('Klub o takiej nazwie ma już swój herb w bazie!');
+      }
+      throw error;
+    }
+    return filePath;
+  }
+
+  async addNewClub(name: string, filePath: string) {
+    return await this.supabase.from('clubs').insert([{ name: name, file_name: filePath }]);
+  }
+
+  // Wywołaj to raz przy starcie aplikacji lub w ngOnInit głównego komponentu
+  async refreshClubsCache() {
+    const { data, error } = await this.supabase.from('clubs').select('*');
+    if (data) this.clubsCache = data;
+  }
+
+  getClubInfo(input: string) {
+    // Szukamy w cache po nazwie LUB po nazwie pliku (file_name zawiera 'footballCrestes/...')
+    const club = this.clubsCache.find(
+      (c) => c.name === input || c.file_name === input || c.file_name === `footballCrestes/${input}`
+    );
+
+    if (club) {
+      return {
+        name: club.name,
+        logo: `${this.STORAGE_URL}${club.file_name}`,
+      };
+    }
+
+    return {
+      name: input,
+      logo: `${this.STORAGE_URL}footballCrestes/no-image.png`,
+    };
   }
 }
