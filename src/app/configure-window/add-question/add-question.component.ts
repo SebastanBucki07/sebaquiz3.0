@@ -8,8 +8,16 @@ import { MusicQuestionFormComponent } from './music-question-form/music-question
 import { FamiliadaFormComponent } from './familiada-form/familiada-form.component';
 import { FootballFormComponent } from './football-form/football-form.component';
 import { WrittingFormComponent } from './writting-form/writting-form.component';
-
-type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | 'writting' | null;
+import { PlayerHistoryFormComponent } from './player-history-form/player-history-form.component';
+type FormType =
+  | 'one-answer'
+  | 'hint'
+  | 'music'
+  | 'familiada'
+  | 'football'
+  | 'writting'
+  | 'photo-hints'
+  | null;
 
 @Component({
   selector: 'app-add-question',
@@ -24,6 +32,7 @@ type FormType = 'one-answer' | 'hint' | 'music' | 'familiada' | 'football' | 'wr
     FamiliadaFormComponent,
     FootballFormComponent,
     WrittingFormComponent,
+    PlayerHistoryFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',

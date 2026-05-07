@@ -42,6 +42,6 @@ export const getClubInfo = (input: string) => {
   // Fallback
   return {
     name: input,
-    logo: formatLogoPath('default-logo.png'),
+    logo: formatLogoPath('no-image.png'),
   };
 };

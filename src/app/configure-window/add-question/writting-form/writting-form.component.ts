@@ -18,8 +18,6 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
-import { Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-writting-form',
@@ -51,21 +49,19 @@ export class WrittingFormComponent implements OnInit {
   categories: any[] = [];
   activeSections = { raw: true, list: true };
   searchQuery: string = '';
-  private searchSubject = new Subject<string>();
 
-  // Dodaj tę metodę (tzw. getter), która filtruje listę na żywo
+  /**
+   * Getter filtrujący listę lokalnie.
+   * Szuka frazy w pytaniu ORAZ w pierwszej odpowiedzi (displayAnswer).
+   */
   get filteredQuestions() {
-    const selectedCatId = this.mainForm.get('categoryId')?.value;
     const query = this.searchQuery.toLowerCase().trim();
+    if (!query) return this.allQuestions;
 
     return this.allQuestions.filter((q) => {
-      // Warunek 1: Kategoria (jeśli wybrana, to musi się zgadzać)
-      const matchesCategory = selectedCatId ? q.category_id === selectedCatId : true;
-
-      // Warunek 2: Wyszukiwarka tekstowa
-      const matchesQuery = q.question.toLowerCase().includes(query);
-
-      return matchesCategory && matchesQuery;
+      const questionMatch = (q.question || '').toLowerCase().includes(query);
+      const answerMatch = (q.displayAnswer || '').toLowerCase().includes(query);
+      return questionMatch || answerMatch;
     });
   }
 
@@ -80,34 +76,41 @@ export class WrittingFormComponent implements OnInit {
   async ngOnInit() {
     this.initForm();
     await this.loadCategories();
-    await this.loadQuestions();
 
-    // Konfiguracja "żywego" wyszukiwania w bazie
-    this.searchSubject
-      .pipe(
-        debounceTime(400), // czekaj 400ms aż użytkownik przestanie pisać
-        distinctUntilChanged()
-      )
-      .subscribe((query) => {
-        this.loadQuestions(this.mainForm.get('categoryId')?.value, query);
-      });
+    // Reaguj na zmianę kategorii: czyść wyszukiwarkę i ładuj nową paczkę danych
+    this.mainForm.get('categoryId')?.valueChanges.subscribe((catId) => {
+      this.searchQuery = '';
+      if (catId) {
+        this.loadQuestions(catId);
+      } else {
+        this.allQuestions = [];
+      }
+    });
   }
 
-  // Wywołuj to w HTML przy (input)="onSearchChange()"
-  onSearchChange() {
-    this.searchSubject.next(this.searchQuery);
-  }
-
-  // Zmodyfikowana metoda pobierania
-  async loadQuestions(catId?: number, searchStr?: string) {
+  /**
+   * Pobiera pytania z bazy dla danej kategorii.
+   * Mapuje odpowiedzi do formatu tekstowego dla podglądu na liście.
+   */
+  async loadQuestions(catId?: number) {
     try {
-      // Musisz dodać parametr searchStr do metody w serwisie Supabase
-      const { data, error } = await this.supabase.getQuestionsList(50, catId, searchStr);
-      if (!error) {
-        this.allQuestions = data || [];
+      const { data, error } = await this.supabase.getQuestionsList(1000, catId);
+      if (!error && data) {
+        this.allQuestions = data.map((q) => {
+          const parsedAns = typeof q.answers === 'string' ? JSON.parse(q.answers) : q.answers || [];
+          // Wyciągamy pierwszą odpowiedź jako podgląd na liście (do filtrowania i wyświetlania)
+          const display = Array.isArray(parsedAns)
+            ? parsedAns[0]?.value || ''
+            : parsedAns?.value || '';
+
+          return {
+            ...q,
+            displayAnswer: display,
+          };
+        });
       }
     } catch (e) {
-      console.error(e);
+      console.error('Błąd podczas ładowania pytań:', e);
     }
   }
 
@@ -129,7 +132,6 @@ export class WrittingFormComponent implements OnInit {
 
   async loadQuestionToEdit(id: number) {
     try {
-      console.log('Ładowanie pytania o ID:', id); // DEBUG
       const { data, error } = await this.supabase.getQuestionById(id);
 
       if (error || !data) {
@@ -137,9 +139,8 @@ export class WrittingFormComponent implements OnInit {
         return;
       }
 
-      // KLUCZOWE LINIE:
       this.isEditMode = true;
-      this.editingId = Number(data.id); // Wymuszamy format liczbowy
+      this.editingId = Number(data.id);
 
       this.answers.clear();
       this.mainForm.patchValue({
@@ -152,6 +153,9 @@ export class WrittingFormComponent implements OnInit {
       if (Array.isArray(answersData)) {
         answersData.forEach((a: any) => this.addAnswer(a.value));
       }
+
+      // Przewiń formularz na górę po kliknięciu edycji
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (e) {
       console.error(e);
     }
@@ -159,10 +163,6 @@ export class WrittingFormComponent implements OnInit {
 
   get answers(): FormArray {
     return this.mainForm.get('answers') as FormArray;
-  }
-
-  toggleSection(section: keyof typeof this.activeSections) {
-    this.activeSections[section] = !this.activeSections[section];
   }
 
   addAnswer(value: string = '') {
@@ -177,6 +177,9 @@ export class WrittingFormComponent implements OnInit {
     this.answers.removeAt(index);
   }
 
+  /**
+   * Obsługa masowego wklejania odpowiedzi
+   */
   onRawAnswersChange() {
     if (!this.rawAnswersInput.trim()) return;
 
@@ -190,10 +193,7 @@ export class WrittingFormComponent implements OnInit {
   }
 
   async save() {
-    console.log('1. Metoda save() wystartowała');
-
     if (this.mainForm.invalid) {
-      console.log('2. Formularz jest niepoprawny:', this.mainForm.errors);
       this.snackBar.open('Wypełnij wszystkie pola!', 'OK');
       return;
     }
@@ -205,42 +205,39 @@ export class WrittingFormComponent implements OnInit {
       const payload = {
         category_id: formVal.categoryId,
         question: formVal.question,
-        answers: formVal.answers,
+        answers: formVal.answers, // Array [{value: '...'}]
         hints: [],
         revealed_answers: [],
       };
 
       if (this.isEditMode && this.editingId) {
-        console.log('3. Próba wysłania UPDATE dla ID:', this.editingId);
-        const result = await this.supabase.updateQuestion(this.editingId, payload);
-        console.log('4. Odpowiedź z serwisu (update):', result);
+        await this.supabase.updateQuestion(this.editingId, payload);
       } else {
-        console.log('3. Próba wysłania INSERT (nowe pytanie)');
-        const result = await this.supabase.addQuestion(payload);
-        console.log('4. Odpowiedź z serwisu (add):', result);
+        await this.supabase.addQuestion(payload);
       }
 
-      this.snackBar.open('Zapisano pomyślnie!', 'Sukces');
+      this.snackBar.open('Zapisano pomyślnie!', 'Sukces', { duration: 2000 });
       this.resetForm();
-      await this.loadQuestions();
+      await this.loadQuestions(formVal.categoryId);
     } catch (e) {
-      console.error('BŁĄD KRYTYCZNY:', e);
+      console.error('Błąd podczas zapisu:', e);
+      this.snackBar.open('Wystąpił błąd podczas zapisu', 'OK');
     } finally {
       this.isSaving = false;
     }
   }
 
   resetForm() {
+    const currentCat = this.mainForm.get('categoryId')?.value;
     this.isEditMode = false;
     this.editingId = null;
     this.answers.clear();
     this.rawAnswersInput = '';
-    this.mainForm.patchValue({
-      question: '',
-      categoryId: this.mainForm.value.categoryId, // Opcjonalnie: zostawiamy kategorię dla wygody
-    });
+    this.mainForm.reset();
 
-    // Usuwamy ID z paska adresu, aby nie wisiało po resecie
+    // Przywracamy kategorię, aby użytkownik nie musiał jej klikać ponownie
+    this.mainForm.get('categoryId')?.setValue(currentCat);
+
     this.router.navigate([], { queryParams: { id: null }, queryParamsHandling: 'merge' });
   }
 }

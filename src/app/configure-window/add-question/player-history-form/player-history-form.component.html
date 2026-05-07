@@ -1,0 +1,187 @@
+<div class="editor-layout">
+  <div class="form-side">
+    <div class="generator-card" [class.edit-mode-border]="isEditMode">
+      <div class="header">
+        <mat-icon class="football-icon">history_edu</mat-icon>
+        <div class="header-text">
+          <h2>{{ isEditMode ? 'Edycja Piłkarza' : 'Nowy Piłkarz' }}</h2>
+          <p>Kody krajów + Autocomplete klubów</p>
+        </div>
+      </div>
+
+      <form [formGroup]="mainForm" (ngSubmit)="save()">
+        <mat-form-field appearance="outline" class="custom-mat-field">
+          <mat-label>Kategoria</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div
+          class="main-fields-stack"
+          [class.content-disabled]="!mainForm.get('categoryId')?.value"
+        >
+          <div class="flag-input-container">
+            <div class="flag-preview-circle">
+              <img
+                *ngIf="getFlagUrl(mainForm.get('question')?.value)"
+                [src]="getFlagUrl(mainForm.get('question')?.value)"
+              />
+              <mat-icon *ngIf="!getFlagUrl(mainForm.get('question')?.value)">flag</mat-icon>
+            </div>
+            <mat-form-field appearance="outline" class="custom-mat-field flex-1">
+              <mat-label>Kraj lub Kod</mat-label>
+              <input matInput formControlName="question" [matAutocomplete]="autoCountry" />
+              <mat-autocomplete
+                #autoCountry="matAutocomplete"
+                (optionSelected)="onCountrySelected($event)"
+              >
+                <mat-option
+                  *ngFor="let country of filteredCountries | async"
+                  [value]="country.name"
+                >
+                  {{ country.name }} ({{ country.code }})
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+
+          <mat-form-field appearance="outline" class="custom-mat-field">
+            <mat-label>Imię i Nazwisko</mat-label>
+            <input matInput formControlName="answer" placeholder="np. Robert Lewandowski" />
+            <mat-hint *ngIf="isDuplicate" class="duplicate-hint">
+              <mat-icon>warning</mat-icon>
+              Ten piłkarz prawdopodobnie już istnieje!
+            </mat-hint>
+          </mat-form-field>
+
+          <div class="accordion-header">ŚCIEŻKA KARIERY ({{ hints.length }})</div>
+          <div formArrayName="hints" class="hints-container">
+            <div
+              *ngFor="let club of hints.controls; let i = index"
+              [formGroupName]="i"
+              class="player-row"
+            >
+              <div class="pos-badge">{{ i + 1 }}</div>
+
+              <mat-form-field appearance="outline" class="custom-mat-field flex-1">
+                <input
+                  matInput
+                  formControlName="label"
+                  [matAutocomplete]="autoClub"
+                  placeholder="Szukaj klubu..."
+                />
+                <mat-autocomplete
+                  #autoClub="matAutocomplete"
+                  (optionSelected)="onClubOptionSelected($event, i)"
+                >
+                  <mat-option *ngFor="let c of filteredClubsSelectors[i] | async" [value]="c.name">
+                    {{ c.name }}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+
+              <input type="hidden" formControlName="content" />
+
+              <button type="button" mat-icon-button color="warn" (click)="removeClub(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+
+            <button
+              type="button"
+              class="btn-add-player"
+              (click)="addClub()"
+              [disabled]="!mainForm.get('categoryId')?.value"
+            >
+              + DODAJ KLUB
+            </button>
+          </div>
+        </div>
+
+        <div class="footer-actions">
+          <button
+            mat-raised-button
+            class="save-button"
+            type="submit"
+            [disabled]="mainForm.invalid || isSaving || !mainForm.get('categoryId')?.value"
+          >
+            {{ isSaving ? 'ZAPISYWANIE...' : 'ZAPISZ' }}
+          </button>
+          <button *ngIf="isEditMode" mat-button color="warn" (click)="resetForm()">ANULUJ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="preview-side">
+    <div class="writing-preview-card">
+      <div class="preview-header">
+        <h2>{{ mainForm.value.answer || 'PIŁKARZ' }}</h2>
+        <div class="flag-box" *ngIf="mainForm.value.question">
+          <img [src]="getFlagUrl(mainForm.value.question)" class="flag-img" />
+          <p>KRAJ: {{ mainForm.value.question }}</p>
+        </div>
+      </div>
+      <div class="career-path-preview">
+        <div *ngFor="let h of mainForm.getRawValue().hints" class="crest-wrapper">
+          <img [src]="h.content" onerror="this.src = 'no-image.png'" />
+          <span class="tooltip">{{ h.label }}</span>
+        </div>
+        <div *ngIf="hints.length === 0" class="empty-preview">Brak dodanych klubów</div>
+      </div>
+    </div>
+
+    <div class="history-card">
+      <div class="history-header">
+        <h3>Zarządzaj pytaniami</h3>
+        <span class="count-tag" *ngIf="mainForm.get('categoryId')?.value">
+          {{ allQuestions.length }}
+        </span>
+      </div>
+
+      <mat-form-field appearance="outline" class="custom-mat-field search-field">
+        <mat-icon matPrefix>search</mat-icon>
+        <input
+          matInput
+          [(ngModel)]="searchQuery"
+          (input)="onSearchChange()"
+          [disabled]="!mainForm.get('categoryId')?.value"
+          placeholder="{{
+            mainForm.get('categoryId')?.value ? 'Szukaj zawodnika...' : 'Najpierw wybierz kategorię'
+          }}"
+        />
+      </mat-form-field>
+
+      <div class="history-list" *ngIf="mainForm.get('categoryId')?.value; else noCat">
+        <div
+          *ngFor="let q of allQuestions"
+          class="history-item"
+          [class.active-edit]="editingId === q.id"
+          (click)="loadQuestionToEdit(q.id)"
+        >
+          <div class="history-q">
+            <span class="id-badge">#{{ q.id }}</span>
+            <span class="player-name-list">{{ q.displayName }}</span>
+          </div>
+          <div class="edit-label">
+            EDYTUJ
+            <mat-icon>edit</mat-icon>
+          </div>
+        </div>
+        <div *ngIf="allQuestions.length === 0" class="empty-list">Nie znaleziono zawodników</div>
+      </div>
+
+      <ng-template #noCat>
+        <div class="no-category-placeholder">
+          <mat-icon>lock</mat-icon>
+          <p>
+            Wybierz kategorię u góry,
+            <br />
+            aby wyświetlić listę zawodników.
+          </p>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

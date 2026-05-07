@@ -1,9 +1,10 @@
-/* UKŁAD GŁÓWNY */
+/* --- UKŁAD GŁÓWNY --- */
 .editor-layout {
   display: flex;
   height: 100vh;
   background: #0f0f0f;
   color: #fff;
+  font-family: 'Roboto', sans-serif;
 }
 
 .form-side {
@@ -19,23 +20,28 @@
   flex: 0 0 60%;
   height: 100%;
   display: flex;
-  flex-direction: column; /* Układ pionowy */
+  flex-direction: column;
   align-items: center;
-  justify-content: flex-start; /* Start od góry */
+  justify-content: flex-start;
   background: #000;
   padding: 20px;
-  overflow-y: auto; /* Przewijanie całego prawego panelu */
+  overflow-y: auto;
   gap: 20px;
 }
 
-/* KARTA GENERATORA */
-.generator-card {
+/* --- KARTY --- */
+.generator-card,
+.history-card,
+.writing-preview-card {
   background: #1a1a1a;
   border-radius: 12px;
   border: 1px solid #333;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
+/* --- NAGŁÓWEK --- */
 .header {
   display: flex;
   align-items: center;
@@ -43,7 +49,7 @@
   margin-bottom: 25px;
 }
 
-.football-icon {
+.write-icon {
   color: #ffb300;
   font-size: 32px;
   width: 32px;
@@ -62,15 +68,19 @@
   font-size: 0.9rem;
 }
 
-/* STYLOWANIE ANGULAR MATERIAL (MDC) */
-.main-fields-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+/* --- BLOKADA INTERFEJSU (Gdy brak kategorii) --- */
+.content-disabled {
+  opacity: 0.3;
+  pointer-events: none;
+  filter: grayscale(1);
+  transition: all 0.4s ease;
 }
 
-/* Naprawa widoczności tekstu w Mat-Select i Mat-Input */
+/* --- ANGULAR MATERIAL DARK FIXES --- */
+::ng-deep .custom-mat-field .mat-mdc-text-field-wrapper {
+  background-color: #252525 !important;
+}
+
 ::ng-deep .custom-mat-field .mat-mdc-select-value-text {
   color: #ffb300 !important;
 }
@@ -91,188 +101,189 @@
   border-color: #ffb300 !important;
 }
 
-/* AKORDEONY */
-.accordion-item {
-  border: 1px solid #333;
-  border-radius: 8px;
-  margin-bottom: 10px;
-  background: #222;
-  overflow: hidden;
+/* --- SEKCJA ODPOWIEDZI --- */
+.main-fields-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
 .accordion-header {
-  padding: 12px 15px;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #2a2a2a;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
   color: #ffb300;
+  font-weight: 800;
+  font-size: 0.75rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.answers-scroll-area {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.answer-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #222;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid #333;
+}
+
+.index-dot {
+  background: #000;
+  color: #ffb300;
+  min-width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
   font-weight: bold;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  border-radius: 50%;
 }
 
-.accordion-content {
-  display: none;
-  padding: 15px;
-  background: #1e1e1e;
-}
-
-.accordion-item.open .accordion-content {
-  display: block;
-}
-
-/* TEXTAREA IMPORT */
-textarea {
+.btn-add-simple {
   width: 100%;
-  height: 120px;
-  background: #000;
-  border: 1px solid #444;
-  color: #00ff41;
-  padding: 10px;
-  font-family: 'Consolas', monospace;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-/* RZĘDY ODPOWIEDZI */
-.player-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #252525;
-  padding: 8px 12px;
-  border-radius: 4px;
-  margin-bottom: 5px;
-}
-
-.pos-badge {
-  background: #000;
-  color: #ffb300;
-  min-width: 28px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 3px;
-}
-
-.name-input {
-  flex: 1;
   background: transparent;
-  border: none;
-  color: #fff;
-  outline: none;
-}
-
-.btn-add-player {
-  width: 100%;
-  background: rgba(255, 255, 255, 0.03);
   border: 1px dashed #444;
   color: #888;
-  padding: 10px;
-  border-radius: 4px;
+  padding: 12px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
+  transition: 0.2s;
 }
 
-/* KARTA PODGLĄDU */
-.writing-preview-card {
-  width: 95%; /* Zwiększyłem szerokość dla lepszego efektu podglądu */
-  max-width: 800px;
-  background: #1a1a1a;
-  border-radius: 15px;
-  border: 1px solid #333;
-  padding: 30px;
+.btn-add-simple:hover {
+  border-color: #ffb300;
+  color: #ffb300;
+  background: rgba(255, 179, 0, 0.05);
 }
 
-.category-tag {
-  background: #ffb300;
-  color: #000;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-size: 0.65rem;
-  font-weight: 800;
-}
-
-.preview-header h2 {
-  color: #fff;
-  margin: 15px 0;
-  font-size: 1.8rem;
-}
-
-.answers-preview-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-height: 250px;
-  overflow-y: auto;
-}
-
-.answer-chip {
-  background: #2a2a2a;
-  color: #eee;
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid #383838;
-}
-
-/* KARTA HISTORII */
-.history-card {
-  width: 95%;
-  max-width: 800px;
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid #333;
-}
-
-.header-with-action {
+/* --- LISTA HISTORII (Baza Pytań) --- */
+.history-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.count-tag {
+  background: #ffb300;
+  color: #000;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 500px;
+  overflow-y: auto;
 }
 
 .history-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #2a2a2a;
+  padding: 12px 15px;
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
 }
 
 .history-item:hover {
-  background: #222;
+  border-color: #ffb300;
+  background: #2a2a2a;
+  transform: translateX(4px);
 }
 
-.history-q {
+.active-edit {
+  border-color: #ffb300 !important;
+  background: rgba(255, 179, 0, 0.1) !important;
+}
+
+.id-badge {
+  background: #333;
+  color: #ffb300;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.q-texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.q-main {
+  font-size: 14px;
   font-weight: 500;
-  color: #e0e0e0;
+  color: #fff;
 }
 
-.history-date {
-  font-size: 0.75rem;
+.q-sub {
+  font-size: 11px;
   color: #666;
+  font-style: italic;
 }
 
-.history-list {
-  max-height: 300px;
-  overflow-y: auto;
+/* --- PLACEHOLDERY / INFO --- */
+.lock-placeholder,
+.no-category-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: #444;
+  text-align: center;
 }
 
-/* STOPKA */
+.lock-placeholder mat-icon {
+  font-size: 48px;
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+/* --- STOPKA I AKCJE --- */
 .footer-actions {
+  display: flex;
+  gap: 10px;
   margin-top: 20px;
 }
 
 .save-button {
-  width: 100%;
+  flex: 1;
   height: 48px;
   background: #ffb300 !important;
   color: #000 !important;
   font-weight: 800 !important;
 }
 
-/* SCROLLBARS */
+.save-button:disabled {
+  background: #333 !important;
+  color: #666 !important;
+}
+
+/* --- SCROLLBAR --- */
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -284,13 +295,14 @@ textarea {
   background: #0f0f0f;
 }
 
-/* TRYB EDYCJI */
-.edit-mode-border {
-  border: 1px solid #673ab7 !important;
-  box-shadow: 0 0 15px rgba(103, 58, 183, 0.2);
+/* --- POMOCNICZE --- */
+.flex-1 {
+  flex: 1;
 }
-
-.edit-tag {
-  background: #673ab7 !important;
-  color: white !important;
+.duplicate-hint {
+  color: #ff5252;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }

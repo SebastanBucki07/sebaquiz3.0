@@ -44,7 +44,7 @@ export const generateFootballHistory = () => {
       answers: [{ value: player.name }],
       question: flagUrl,
       hints: player.clubs.map((clubName, index) => {
-        const logoFile = clubData[clubName] || 'default-logo.png';
+        const logoFile = clubData[clubName] || 'no-image.png';
         return {
           id: index.toString(),
           label: clubName,
