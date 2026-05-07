@@ -102,28 +102,27 @@
         />
       </mat-form-field>
 
-      <div class="history-list" *ngIf="mainForm.get('categoryId')?.value; else noCat">
+      <div class="history-list">
         <div
           *ngFor="let q of filteredQuestions"
+          (click)="loadQuestionToEdit(q)"
           class="history-item"
           [class.active-edit]="editingId === q.id"
-          (click)="loadQuestionToEdit(q.id)"
         >
-          <div class="history-q">
-            <span class="id-badge">#{{ q.id }}</span>
-            <div class="q-texts">
-              <span class="q-main">{{ q.question }}</span>
-              <span class="q-sub">Odp: {{ q.displayAnswer }}</span>
+          <div class="q-texts">
+            <span class="q-main">{{ q.question }}</span>
+
+            <div class="author-tag">
+              Autor:
+              <b>{{ q.author?.username || 'System' }}</b>
+              <span *ngIf="q.editor" class="editor-info">
+                | Edycja:
+                <b>{{ q.editor.username }}</b>
+              </span>
             </div>
           </div>
-          <mat-icon class="edit-icon-small">edit</mat-icon>
-        </div>
 
-        <div *ngIf="filteredQuestions.length === 0 && searchQuery" class="empty-info">
-          Brak wyników dla frazy: "{{ searchQuery }}"
-        </div>
-        <div *ngIf="allQuestions.length === 0 && !searchQuery" class="empty-info">
-          Brak pytań w tej kategorii. Dodaj pierwsze!
+          <mat-icon class="edit-icon">edit_note</mat-icon>
         </div>
       </div>
 

@@ -88,26 +88,12 @@ export class WrittingFormComponent implements OnInit {
     });
   }
 
-  /**
-   * Pobiera pytania z bazy dla danej kategorii.
-   * Mapuje odpowiedzi do formatu tekstowego dla podglądu na liście.
-   */
   async loadQuestions(catId?: number) {
     try {
       const { data, error } = await this.supabase.getQuestionsList(1000, catId);
       if (!error && data) {
-        this.allQuestions = data.map((q) => {
-          const parsedAns = typeof q.answers === 'string' ? JSON.parse(q.answers) : q.answers || [];
-          // Wyciągamy pierwszą odpowiedź jako podgląd na liście (do filtrowania i wyświetlania)
-          const display = Array.isArray(parsedAns)
-            ? parsedAns[0]?.value || ''
-            : parsedAns?.value || '';
-
-          return {
-            ...q,
-            displayAnswer: display,
-          };
-        });
+        // Przypisujemy dane bezpośrednio, bez wyciągania pierwszej odpowiedzi
+        this.allQuestions = data;
       }
     } catch (e) {
       console.error('Błąd podczas ładowania pytań:', e);
@@ -130,35 +116,42 @@ export class WrittingFormComponent implements OnInit {
     }
   }
 
-  async loadQuestionToEdit(id: number) {
-    try {
-      const { data, error } = await this.supabase.getQuestionById(id);
+  // Zmieniamy argument z id: number na q: any
+  async loadQuestionToEdit(q: any) {
+    if (!q) return;
 
-      if (error || !data) {
-        this.snackBar.open('Nie znaleziono pytania', 'Błąd', { duration: 3000 });
-        return;
+    this.isEditMode = true;
+    this.editingId = q.id;
+
+    // 1. Czyścimy FormArray odpowiedzi
+    this.answers.clear();
+
+    // 2. Parsowanie odpowiedzi (answers)
+    let ans = q.answers;
+    if (typeof ans === 'string') {
+      try {
+        ans = JSON.parse(ans);
+      } catch {
+        ans = [];
       }
-
-      this.isEditMode = true;
-      this.editingId = Number(data.id);
-
-      this.answers.clear();
-      this.mainForm.patchValue({
-        categoryId: data.category_id,
-        question: data.question,
-      });
-
-      const answersData =
-        typeof data.answers === 'string' ? JSON.parse(data.answers) : data.answers;
-      if (Array.isArray(answersData)) {
-        answersData.forEach((a: any) => this.addAnswer(a.value));
-      }
-
-      // Przewiń formularz na górę po kliknięciu edycji
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } catch (e) {
-      console.error(e);
     }
+
+    // 3. Patchowanie podstawowych pól
+    this.mainForm.patchValue({
+      categoryId: q.category_id,
+      question: q.question,
+    });
+
+    // 4. Mapowanie odpowiedzi do FormArray
+    if (Array.isArray(ans)) {
+      ans.forEach((a: any) => {
+        this.addAnswer(a.value || a); // dodajemy do FormArray
+      });
+      // Opcjonalnie aktualizujemy pole tekstowe dla podglądu
+      this.rawAnswersInput = ans.map((a) => a.value || a).join('\n');
+    }
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   get answers(): FormArray {

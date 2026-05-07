@@ -1,0 +1,27 @@
+<div class="auth-container">
+  <div *ngIf="!user" class="auth-card">
+    <h2>Panel Logowania</h2>
+    <p>Zaloguj się, aby zarządzać bazą danych</p>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="loginEmail" type="email" placeholder="twoj@email.pl" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Hasło</mat-label>
+      <input matInput [(ngModel)]="loginPass" type="password" />
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" (click)="login()">ZALOGUJ SIĘ</button>
+  </div>
+
+  <div *ngIf="user" class="user-info">
+    <mat-icon color="primary">account_circle</mat-icon>
+    <span>
+      Zalogowany jako:
+      <strong>{{ user.email }}</strong>
+    </span>
+    <button mat-button color="warn" (click)="logout()">WYLOGUJ</button>
+  </div>
+</div>

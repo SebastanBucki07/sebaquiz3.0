@@ -21,7 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 
 // RxJS
-import { Observable, Subject, firstValueFrom, of } from 'rxjs';
+import { Observable, Subject, firstValueFrom} from 'rxjs';
 import { map, startWith, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { normalizeText, validateAnswerHelper } from '../../../shared/utils/text-logic';
 
@@ -129,7 +129,7 @@ export class PlayerHistoryFormComponent implements OnInit {
 
   async loadInitialData() {
     try {
-      const [clubsRes, countriesData, categoriesData] = await Promise.all([
+      const [clubsRes, categoriesData] = await Promise.all([
         this.supabase.getClubs(),
         this.loadCountries(),
         this.supabase.getCategoriesByType(7),
@@ -245,55 +245,37 @@ export class PlayerHistoryFormComponent implements OnInit {
     this.mainForm.markAsPristine();
   }
 
+  // Zmodyfikowana funkcja save() - czystszy payload
   async save() {
-    if (this.mainForm.invalid) {
-      this.mainForm.markAllAsTouched();
-      alert('Formularz zawiera błędy! Sprawdź czy wszystkie kluby mają nazwy i zdjęcia.');
-      return;
-    }
-
+    if (this.mainForm.invalid) return;
     this.isSaving = true;
 
-    // 1. Pobieramy surowe dane z FormArray za pomocą specjalnej metody
     const rawHints = this.hints.getRawValue();
-
-    console.log('DEBUG: Dane klubów przed mapowaniem:', rawHints);
-
-    const currentHints = rawHints.map((h: any) => ({
-      label: h.label || '',
-      content: h.content || '',
-      penaltyPercent: h.penaltyPercent || 0,
-    }));
-
-    // 2. Pobieramy resztę pól
     const mainVal = this.mainForm.getRawValue();
 
     const payload = {
       category_id: mainVal.categoryId,
       question: mainVal.question,
       answers: [{ value: mainVal.answer }],
-      hints: currentHints,
-      revealed_answers: [],
+      hints: rawHints.map((h: any) => ({
+        label: h.label,
+        content: h.content,
+        penaltyPercent: h.penaltyPercent || 0,
+      })),
+      // created_by i updated_by są obsługiwane przez bazę!
     };
 
-    console.log('DEBUG: Pełny payload do zapisu:', payload);
-
     try {
-      let result;
       if (this.isEditMode && this.editingId) {
-        result = await this.supabase.updateQuestion(this.editingId, payload);
+        await this.supabase.updateQuestion(this.editingId, payload);
       } else {
-        result = await this.supabase.addQuestion(payload);
+        await this.supabase.addQuestion(payload);
       }
-
-      if (result.error) throw result.error;
-
-      this.snackBar.open('Zapisano pomyślnie!', 'OK', { duration: 2000 });
+      this.snackBar.open('Sukces!', 'OK', { duration: 2000 });
       this.resetForm();
       await this.refreshQuestions();
     } catch (err) {
-      console.error('BŁĄD ZAPISU:', err);
-      this.snackBar.open('Błąd zapisu! Szczegóły w konsoli.', 'OK');
+      console.error(err);
     } finally {
       this.isSaving = false;
     }

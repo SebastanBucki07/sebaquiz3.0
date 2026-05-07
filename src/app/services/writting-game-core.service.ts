@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { normalizeText, areSimilar, validateAnswerHelper } from '../shared/utils/text-logic';
+import { validateAnswerHelper } from '../shared/utils/text-logic';
 import { playSound } from '../shared/utils/audio-helper';
 
 @Injectable({ providedIn: 'root' })

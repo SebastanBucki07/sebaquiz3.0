@@ -7,14 +7,22 @@
       <h1 class="game-title">SEBA QUIZ 3.0 GAME</h1>
     </div>
 
+    <div *ngIf="showLoginPanel" class="login-overlay">
+      <app-auth></app-auth>
+      <button (click)="toggleLogin()" class="btn-close-text">Anuluj</button>
+    </div>
+
     <div class="menu-actions">
       <button (click)="newGame()" class="menu-btn btn-new-game">
         <span class="btn-text">Nowa Gra</span>
-        <span class="btn-glitch-effect"></span>
       </button>
 
-      <button (click)="goToConfig()" class="menu-btn btn-config">
+      <button *ngIf="isLoggedIn" (click)="goToConfig()" class="menu-btn btn-config">
         <span class="btn-text">Konfiguruj</span>
+      </button>
+
+      <button *ngIf="!isLoggedIn" (click)="toggleLogin()" class="menu-btn btn-login">
+        <span class="btn-text">Zaloguj</span>
       </button>
 
       <button [disabled]="true" class="menu-btn btn-scores">
