@@ -3,12 +3,11 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 @Injectable({ providedIn: 'root' })
 export class SupabaseService {
-  // Zmienione na public, aby uniknąć błędu S2341 w komponentach
   public supabase: SupabaseClient = createClient(
     'https://tvawycgprwpjgmeifltx.supabase.co',
     'sb_publishable_W5VsEn1VJYSpMD_i9Sz8Jg_LtH-bxuC'
   );
-  private clubsCache: any[] = [];
+
   public readonly STORAGE_URL =
     'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
 
@@ -209,37 +208,14 @@ export class SupabaseService {
     return await this.supabase.from('clubs').select('*').order('name', { ascending: true });
   }
 
-  async checkDuplicate(
-    questionText: string,
-    categoryId: number,
-    answers?: any[]
-  ): Promise<boolean> {
-    const { data, error } = await this.supabase
-      .from('questions')
-      .select('question, answers')
-      .eq('category_id', categoryId);
+  getPublicUrl(path: string): string {
+    if (!path || path.includes('no-image.png')) {
+      return '/no-image.png'; // Ścieżka do lokalnego assetu w Angularze
+    }
 
-    if (error || !data) return false;
+    const fileName = path.split('/').pop();
 
-    const newName = answers?.[0]?.value?.toLowerCase().trim() || '';
-    if (!newName) return false;
-
-    return data.some((record) => {
-      let existingAnswers = record.answers;
-      if (typeof existingAnswers === 'string') {
-        try {
-          existingAnswers = JSON.parse(existingAnswers);
-        } catch {
-          existingAnswers = [];
-        }
-      }
-
-      const existingName = Array.isArray(existingAnswers)
-        ? existingAnswers[0]?.value
-        : (existingAnswers as any)?.value || '';
-
-      return existingName.toLowerCase().trim() === newName;
-    });
+    return `${this.STORAGE_URL}footballCrestes/${fileName}`.replace(/([^:]\/)\/+/g, '$1');
   }
 
   async uploadCrest(file: File, clubName: string): Promise<string> {
@@ -250,7 +226,7 @@ export class SupabaseService {
 
     const fileExt = file.name.split('.').pop();
     const fileName = `${cleanName}.${fileExt}`;
-    const filePath = `footballCrestes/${fileName}`;
+    const filePath = fileName;
 
     const { data, error } = await this.supabase.storage
       .from('footballCrestes')
@@ -265,32 +241,42 @@ export class SupabaseService {
     return filePath;
   }
 
-  async addNewClub(name: string, filePath: string) {
-    return await this.supabase.from('clubs').insert([{ name: name, file_name: filePath }]);
+  async addNewClub(name: string, fileName: string) {
+    return await this.supabase.from('clubs').insert([{ name: name, file_name: fileName }]);
   }
 
-  // Wywołaj to raz przy starcie aplikacji lub w ngOnInit głównego komponentu
-  async refreshClubsCache() {
-    const { data, error } = await this.supabase.from('clubs').select('*');
-    if (data) this.clubsCache = data;
-  }
+  async checkDuplicate(
+    questionText: string,
+    categoryId: number,
+    answers?: any[]
+  ): Promise<boolean> {
+    // Pobieramy pytania z danej kategorii, aby sprawdzić duplikaty
+    const { data, error } = await this.supabase
+      .from('questions')
+      .select('question, answers')
+      .eq('category_id', categoryId);
 
-  getClubInfo(input: string) {
-    // Szukamy w cache po nazwie LUB po nazwie pliku (file_name zawiera 'footballCrestes/...')
-    const club = this.clubsCache.find(
-      (c) => c.name === input || c.file_name === input || c.file_name === `footballCrestes/${input}`
-    );
+    if (error || !data) return false;
 
-    if (club) {
-      return {
-        name: club.name,
-        logo: `${this.STORAGE_URL}${club.file_name}`,
-      };
-    }
+    const newName = answers?.[0]?.value?.toLowerCase().trim() || '';
+    if (!newName) return false;
 
-    return {
-      name: input,
-      logo: `${this.STORAGE_URL}footballCrestes/no-image.png`,
-    };
+    return data.some((record) => {
+      let existingAnswers = record.answers;
+
+      if (typeof existingAnswers === 'string') {
+        try {
+          existingAnswers = JSON.parse(existingAnswers);
+        } catch {
+          existingAnswers = [];
+        }
+      }
+
+      const existingName = Array.isArray(existingAnswers)
+        ? existingAnswers[0]?.value
+        : (existingAnswers as any)?.value || '';
+
+      return existingName.toLowerCase().trim() === newName;
+    });
   }
 }

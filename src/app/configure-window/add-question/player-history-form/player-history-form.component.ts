@@ -64,7 +64,7 @@ export class PlayerHistoryFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private supabase: SupabaseService,
+    protected supabase: SupabaseService,
     private snackBar: MatSnackBar,
     private http: HttpClient
   ) {}
@@ -129,13 +129,18 @@ export class PlayerHistoryFormComponent implements OnInit {
 
   async loadInitialData() {
     try {
-      const [clubsRes, categoriesData] = await Promise.all([
+      // 1. Wywołujemy wszystkie źródła danych
+      const [clubsRes, countriesData, categoriesRes] = await Promise.all([
         this.supabase.getClubs(),
-        this.loadCountries(),
-        this.supabase.getCategoriesByType(7),
+        this.loadCountries(), // Pobiera kraje z JSONa
+        this.supabase.getCategoriesByType(7), // Pobiera kategorie z Supabase
       ]);
+
+      // 2. Poprawne przypisanie:
       this.allClubs = clubsRes.data || [];
-      this.categories = categoriesData || [];
+      this.availableCountries = countriesData || []; // Kraje do dostępnych krajów
+      this.categories = categoriesRes || []; // Kategorie z bazy do kategorii
+
       await this.refreshQuestions();
     } catch (e) {
       console.error('Błąd init:', e);
@@ -183,20 +188,41 @@ export class PlayerHistoryFormComponent implements OnInit {
     return this.mainForm.get('hints') as FormArray;
   }
 
-  addClub(clubData: any = { label: '', content: '', penaltyPercent: 0 }) {
+  // Zmieniamy sygnaturę funkcji
+  addClub(clubData: any = { label: '', content: '', penaltyPercent: 0 }, index?: number) {
     const group = this.fb.group({
       label: [clubData.label || '', Validators.required],
-      content: [clubData.content || '', Validators.required],
+      content: [clubData.content || ''],
       penaltyPercent: [clubData.penaltyPercent || 0],
     });
 
-    this.hints.push(group);
-    const index = this.hints.length - 1;
+    // KLUCZOWA ZMIANA:
+    // Jeśli index jest podany, używamy insert(), jeśli nie - push() na koniec
+    if (index !== undefined) {
+      this.hints.insert(index, group);
+    } else {
+      this.hints.push(group);
+    }
 
-    this.filteredClubsSelectors[index] = group.get('label')!.valueChanges.pipe(
-      startWith(group.get('label')?.value || ''),
-      map((v) => this._filterClubs(v))
-    );
+    // Logika filtrów i nasłuchiwania pozostaje taka sama,
+    // ale musimy odświeżyć tablicę filtrów (bo indeksy się przesunęły)
+    this.rebuildFilters();
+  }
+
+// Pomocnicza funkcja do odświeżenia filtrów po zmianie kolejności
+  private rebuildFilters() {
+    this.filteredClubsSelectors = this.hints.controls.map((control) => {
+      return control.get('label')!.valueChanges.pipe(
+        startWith(control.get('label')?.value || ''),
+        map((v) => this._filterClubs(v))
+      );
+    });
+  }
+
+// Pamiętaj, aby wywołać rebuildFilters również w removeClub!
+  removeClub(index: number) {
+    this.hints.removeAt(index);
+    this.rebuildFilters();
   }
 
   private _filterClubs(value: string): any[] {
@@ -210,14 +236,14 @@ export class PlayerHistoryFormComponent implements OnInit {
     if (club) {
       this.hints.at(index).patchValue({
         label: club.name,
-        content: `/footballCrests/${club.file_name}`,
+
+        content: club.file_name,
       });
     }
   }
 
-  removeClub(index: number) {
-    this.hints.removeAt(index);
-    this.filteredClubsSelectors.splice(index, 1);
+  getPublicCrest(path: string): string {
+    return this.supabase.getPublicUrl(path);
   }
 
   async loadQuestionToEdit(id: number) {
@@ -250,33 +276,45 @@ export class PlayerHistoryFormComponent implements OnInit {
     if (this.mainForm.invalid) return;
     this.isSaving = true;
 
-    const rawHints = this.hints.getRawValue();
-    const mainVal = this.mainForm.getRawValue();
-
-    const payload = {
-      category_id: mainVal.categoryId,
-      question: mainVal.question,
-      answers: [{ value: mainVal.answer }],
-      hints: rawHints.map((h: any) => ({
-        label: h.label,
-        content: h.content,
-        penaltyPercent: h.penaltyPercent || 0,
-      })),
-      // created_by i updated_by są obsługiwane przez bazę!
-    };
-
     try {
+      const rawHints = this.hints.getRawValue();
+      const mainVal = this.mainForm.getRawValue();
+
+      // Mapujemy hints tak, aby 'content' NIGDY nie był pusty
+      const processedHints = rawHints.map((h: any) => ({
+        label: h.label,
+        // Jeśli h.content jest pusty, używamy no-image.png
+        content: (h.content && h.content.trim() !== '') ? h.content : 'no-image.png',
+        penaltyPercent: h.penaltyPercent || 0,
+      }));
+
+      const payload = {
+        category_id: mainVal.categoryId,
+        question: mainVal.question,
+        answers: [{ value: mainVal.answer }],
+        hints: processedHints
+      };
+
+      let result;
       if (this.isEditMode && this.editingId) {
-        await this.supabase.updateQuestion(this.editingId, payload);
+        result = await this.supabase.updateQuestion(this.editingId, payload);
       } else {
-        await this.supabase.addQuestion(payload);
+        result = await this.supabase.addQuestion(payload);
       }
+
+      // Sprawdź czy Supabase nie zwrócił błędu w obiekcie result
+      if (result?.error) {
+        throw new Error(result.error.message);
+      }
+
       this.snackBar.open('Sukces!', 'OK', { duration: 2000 });
       this.resetForm();
       await this.refreshQuestions();
     } catch (err) {
-      console.error(err);
+      console.error('Błąd podczas zapisu:', err);
+      this.snackBar.open('Błąd zapisu: ' + (err as any).message, 'Zamknij', { duration: 5000 });
     } finally {
+      // To odblokuje przycisk niezależnie od wyniku
       this.isSaving = false;
     }
   }

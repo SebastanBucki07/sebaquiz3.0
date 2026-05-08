@@ -99,14 +99,14 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
     if (club) {
       return {
         name: club.name,
-        logo: `${this.supabase.STORAGE_URL}footballCrestes/${club.file_name}`,
+        logo: `${this.supabase.STORAGE_URL}${club.file_name}`,
       };
     }
 
     // Fallback: jeśli nie ma w bazie, zwracamy nazwę i obrazek "no-image"
     return {
       name: label,
-      logo: `${this.supabase.STORAGE_URL}footballCrestes/no-image.png`,
+      logo: `${this.supabase.STORAGE_URL}no-image.png`,
     };
   }
 
