@@ -144,9 +144,17 @@ export class GameQuestionAreaComponent implements OnInit {
   }
 
   onHintUsed(hint: Hint): void {
-    if (!this.usedHints.some((h) => h.id === hint.id)) {
+    const hintKey = hint.id || `${hint.label}-${hint.content}`;
+
+    const alreadyUsed = this.usedHints.some((h) => {
+      const currentKey = h.id || `${h.label}-${h.content}`;
+      return currentKey === hintKey;
+    });
+
+    if (!alreadyUsed) {
       this.usedHints = [...this.usedHints, hint];
       this.pointsService.applyHintPenalty(hint);
+      console.log('KARA NALICZONA:', hint.penaltyPercent);
     }
   }
 

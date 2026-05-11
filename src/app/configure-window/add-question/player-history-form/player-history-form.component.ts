@@ -209,7 +209,7 @@ export class PlayerHistoryFormComponent implements OnInit {
     this.rebuildFilters();
   }
 
-// Pomocnicza funkcja do odświeżenia filtrów po zmianie kolejności
+  // Pomocnicza funkcja do odświeżenia filtrów po zmianie kolejności
   private rebuildFilters() {
     this.filteredClubsSelectors = this.hints.controls.map((control) => {
       return control.get('label')!.valueChanges.pipe(
@@ -219,7 +219,7 @@ export class PlayerHistoryFormComponent implements OnInit {
     });
   }
 
-// Pamiętaj, aby wywołać rebuildFilters również w removeClub!
+  // Pamiętaj, aby wywołać rebuildFilters również w removeClub!
   removeClub(index: number) {
     this.hints.removeAt(index);
     this.rebuildFilters();
@@ -284,7 +284,7 @@ export class PlayerHistoryFormComponent implements OnInit {
       const processedHints = rawHints.map((h: any) => ({
         label: h.label,
         // Jeśli h.content jest pusty, używamy no-image.png
-        content: (h.content && h.content.trim() !== '') ? h.content : 'no-image.png',
+        content: h.content && h.content.trim() !== '' ? h.content : 'no-image.png',
         penaltyPercent: h.penaltyPercent || 0,
       }));
 
@@ -292,7 +292,7 @@ export class PlayerHistoryFormComponent implements OnInit {
         category_id: mainVal.categoryId,
         question: mainVal.question,
         answers: [{ value: mainVal.answer }],
-        hints: processedHints
+        hints: processedHints,
       };
 
       let result;

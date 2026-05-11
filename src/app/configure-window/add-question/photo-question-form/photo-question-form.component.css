@@ -1,0 +1,367 @@
+/* GŁÓWNY KONTENER */
+.editor-layout {
+  display: flex !important;
+  flex-direction: row;
+  width: 100%;
+  height: calc(100vh - 64px); /* Zakładając, że masz topbar */
+  background: radial-gradient(circle at top left, #0d1117, #010409);
+  color: #e6edf3;
+  overflow: hidden;
+}
+
+/* LEWY PANEL - FORMULARZ */
+.form-side {
+  flex: 0 0 420px;
+  background: rgba(13, 17, 23, 0.8);
+  backdrop-filter: blur(10px);
+  border-right: 1px solid #30363d;
+  height: 100%;
+  overflow-y: auto;
+  padding: 32px 24px;
+}
+
+/* PRAWY PANEL - PODGLĄD */
+.preview-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(#30363d 1px, transparent 1px);
+  background-size: 32px 32px; /* Subtelna siatka w tle */
+  padding: 40px;
+}
+
+/* KARTA FORMULARZA */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.write-icon {
+  color: #ffb300;
+  transform: scale(1.2);
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.header p {
+  margin: 0;
+  font-size: 12px;
+  color: #8b949e;
+}
+
+/* STREFA UPLOADU */
+.upload-zone {
+  width: 100%;
+  height: 240px;
+  background: #0d1117;
+  border: 2px dashed #30363d;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-zone:hover {
+  border-color: #ffb300;
+  background: rgba(255, 179, 0, 0.02);
+}
+
+.upload-zone img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.up-placeholder {
+  text-align: center;
+  color: #8b949e;
+}
+
+.up-placeholder mat-icon {
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 8px;
+}
+
+/* HINTY */
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #ffb300;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 24px 0 12px 4px;
+}
+
+.hint-box {
+  background: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.hint-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+/* PRZYCISKI */
+.add-hint-btn {
+  width: 100%;
+  padding: 12px;
+  background: transparent;
+  border: 1px dashed #30363d;
+  color: #8b949e;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+.add-hint-btn:hover {
+  color: #ffb300;
+  border-color: #ffb300;
+  background: rgba(255, 179, 0, 0.05);
+}
+
+.save-btn {
+  width: 100%;
+  height: 48px;
+  margin-top: 32px;
+  background: #ffb300 !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  border-radius: 8px !important;
+  text-transform: uppercase;
+}
+
+/* KARTA PODGLĄDU (Prawa strona) */
+.preview-card {
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 440px;
+  padding: 24px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  animation: slideIn 0.4s ease-out;
+}
+
+.preview-card h3 {
+  color: #ffb300;
+  margin: 0 0 20px 0;
+  font-size: 22px;
+  text-align: center;
+}
+
+.img-frame {
+  width: 100%;
+  height: 300px;
+  background: #010409;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  border: 1px solid #21262d;
+  overflow: hidden;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hint-preview {
+  background: #161b22;
+  border-left: 3px solid #ffb300;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  border-radius: 4px 8px 8px 4px;
+  font-size: 14px;
+}
+
+.hint-preview strong {
+  color: #ffb300;
+  font-size: 11px;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* ANIMACJE */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* CUSTOM SCROLLBAR */
+.form-side::-webkit-scrollbar {
+  width: 8px;
+}
+.form-side::-webkit-scrollbar-track {
+  background: transparent;
+}
+.form-side::-webkit-scrollbar-thumb {
+  background: #30363d;
+  border-radius: 10px;
+}
+.form-side::-webkit-scrollbar-thumb:hover {
+  background: #484f58;
+}
+
+/* Naprawa widoczności tekstu w Inpucie / Select */
+
+/* 1. Kolor tekstu wybranej opcji w select */
+::ng-deep .mat-mdc-select-value-text {
+  color: #e6edf3 !important;
+  font-size: 14px;
+}
+
+/* 2. Kolor Labela (Etykiety) przed kliknięciem */
+::ng-deep .mat-mdc-form-field-label mat-label {
+  color: #8b949e !important;
+}
+
+/* 3. Kolor Labela (Etykiety) po kliknięciu / gdy jest aktywny */
+::ng-deep .mat-mdc-form-field.mat-focused .mat-mdc-form-field-label {
+  color: #ffb300 !important;
+}
+
+/* 4. Kolor strzałki w select */
+::ng-deep .mat-mdc-select-arrow svg {
+  fill: #8b949e !important;
+}
+
+/* 5. Tło rozwijanej listy (popovera) */
+::ng-deep .mat-mdc-select-panel {
+  background-color: #161b22 !important;
+}
+
+/* 6. Kolor opcji na liście rozwijanej */
+::ng-deep .mat-mdc-option {
+  color: #e6edf3 !important;
+}
+
+/* 7. Kolor tekstu w zwykłych inputach (odpowiedź) */
+.full-width input {
+  color: #e6edf3 !important;
+}
+
+/* 8. Obramowanie inputa (opcjonalnie dla lepszej widoczności) */
+::ng-deep .mdc-notched-outline__leading,
+::ng-deep .mdc-notched-outline__notch,
+::ng-deep .mdc-notched-outline__trailing {
+  border-color: #30363d !important;
+}
+/* --- POPRAWKA WIDOCZNOŚCI W SEKCI PODPOWIEDZI --- */
+
+/* Kolor tekstu w polach tytułu i treści hinta */
+.hint-box input,
+.hint-box textarea {
+  color: #e6edf3 !important;
+}
+
+/* Jasny kolor labeli wewnątrz hint-box */
+.hint-box mat-label {
+  color: #8b949e !important;
+}
+
+/* Usunięcie domyślnego szarego tła Material pod tekstem w hintach */
+.hint-box ::ng-deep .mat-mdc-text-field-wrapper {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Kolor obramowania pól w podpowiedziach */
+.hint-box ::ng-deep .mdc-line-ripple::after {
+  border-bottom-color: #ffb300 !important;
+}
+
+/* Kolor ikony usuwania (kosza) */
+.hint-box button[color='warn'] mat-icon {
+  color: #f85149 !important;
+}
+
+/* Zwiększenie kontrastu aktywnego pola w hincie */
+.hint-box ::ng-deep .mat-mdc-form-field.mat-focused .mat-mdc-text-field-wrapper {
+  background-color: rgba(255, 179, 0, 0.05) !important;
+}
+
+/* Fix dla przewijania - żeby dolne podpowiedzi nie były ucinane przez przycisk zapisu */
+.form-side {
+  padding-bottom: 100px;
+}
+
+/* STYLIZACJA SEKCJI KARY */
+.penalty-section {
+  margin-top: 8px;
+  padding: 0 8px;
+}
+
+.penalty-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.penalty-info span {
+  font-size: 11px;
+  color: #8b949e;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.penalty-value {
+  color: #ffb300 !important;
+  font-size: 13px !important;
+}
+
+/* Kolorystyka suwaka Material */
+.penalty-section mat-slider {
+  width: 100%;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--inactive {
+  background-color: #30363d !important;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__track--active_fill {
+  border-color: #ffb300 !important;
+}
+
+::ng-deep .mat-mdc-slider .mdc-slider__thumb-knob {
+  background-color: #ffb300 !important;
+}

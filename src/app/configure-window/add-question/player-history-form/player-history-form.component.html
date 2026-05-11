@@ -62,11 +62,19 @@
           <!-- Lista Klubów (FormArray) -->
           <div class="accordion-header">Kariera klubowa ({{ hints.length }})</div>
           <div formArrayName="hints" class="hints-list">
-            <div *ngFor="let club of hints.controls; let i = index" [formGroupName]="i" class="player-row-wrapper">
-
+            <div
+              *ngFor="let club of hints.controls; let i = index"
+              [formGroupName]="i"
+              class="player-row-wrapper"
+            >
               <!-- Przycisk wstawiania POMIĘDZY (nad aktualnym wierszem) -->
-              <button type="button" class="btn-insert-between" (click)="addClub({label:'', content:''}, i)">
-                <mat-icon>add_circle_outline</mat-icon> Wstaw tutaj
+              <button
+                type="button"
+                class="btn-insert-between"
+                (click)="addClub({ label: '', content: '' }, i)"
+              >
+                <mat-icon>add_circle_outline</mat-icon>
+                Wstaw tutaj
               </button>
 
               <div class="player-row">
@@ -78,9 +86,20 @@
                 </div>
 
                 <mat-form-field appearance="outline" class="custom-mat-field">
-                  <input matInput formControlName="label" [matAutocomplete]="autoClub" placeholder="Klub..." />
-                  <mat-autocomplete #autoClub="matAutocomplete" (optionSelected)="onClubOptionSelected($event, i)">
-                    <mat-option *ngFor="let c of filteredClubsSelectors[i] | async" [value]="c.name">
+                  <input
+                    matInput
+                    formControlName="label"
+                    [matAutocomplete]="autoClub"
+                    placeholder="Klub..."
+                  />
+                  <mat-autocomplete
+                    #autoClub="matAutocomplete"
+                    (optionSelected)="onClubOptionSelected($event, i)"
+                  >
+                    <mat-option
+                      *ngFor="let c of filteredClubsSelectors[i] | async"
+                      [value]="c.name"
+                    >
                       {{ c.name }}
                     </mat-option>
                   </mat-autocomplete>
@@ -92,7 +111,9 @@
               </div>
             </div>
 
-            <button type="button" class="btn-add-player" (click)="addClub()">+ DODAJ NA KONIEC</button>
+            <button type="button" class="btn-add-player" (click)="addClub()">
+              + DODAJ NA KONIEC
+            </button>
           </div>
         </div>
 

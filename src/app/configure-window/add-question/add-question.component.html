@@ -55,6 +55,14 @@
         (change)="setForm('photo-hints')"
       >
         <mat-icon>camera</mat-icon>
+        Dodaj Player history question
+      </mat-button-toggle>
+      <mat-button-toggle
+        value="photo-hints"
+        [checked]="activeForm === 'photos'"
+        (change)="setForm('photos')"
+      >
+        <mat-icon>camera</mat-icon>
         Dodaj photo question
       </mat-button-toggle>
     </mat-button-toggle-group>
@@ -90,6 +98,10 @@
     } @else if (activeForm === 'photo-hints') {
       <div class="fade-in">
         <app-player-history-form></app-player-history-form>
+      </div>
+    } @else if (activeForm === 'photos') {
+      <div class="fade-in">
+        <app-photo-question-form></app-photo-question-form>
       </div>
     } @else {
       <div class="placeholder-content">

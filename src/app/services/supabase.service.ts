@@ -279,4 +279,61 @@ export class SupabaseService {
       return existingName.toLowerCase().trim() === newName;
     });
   }
+
+  //buildings
+
+  async uploadBuilding(file: File, buildingName: string): Promise<string> {
+    const fileExt = file.name.split('.').pop();
+
+    const cleanName = buildingName
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-z0-9_]/g, '');
+
+    const fileName = `${cleanName}.${fileExt}`;
+    const filePath = `${fileName}`;
+
+    const { data, error } = await this.supabase.storage
+      .from('buildings')
+      .upload(filePath, file, { upsert: true });
+
+    if (error) throw error;
+    return fileName;
+  }
+
+  async addNewBuilding(name: string, fileName: string) {
+    return await this.supabase.from('buildings').insert([{ name, file_name: fileName }]);
+  }
+
+  async getBuildings() {
+    return await this.supabase.from('buildings').select('*').order('name', { ascending: true });
+  }
+
+  async uploadPhoto(file: File, itemName: string, bucketName: string): Promise<string> {
+    const fileExt = file.name.split('.').pop();
+
+    const cleanName = itemName
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-9_]/g, '');
+
+    const fileName = `${cleanName}_${Date.now()}.${fileExt}`;
+
+    const { data, error } = await this.supabase.storage
+      .from(bucketName)
+      .upload(fileName, file, { upsert: true });
+
+    if (error) throw error;
+
+    return fileName;
+  }
+
+  getPublicUrlFromBucket(bucket: string, fileName: string): string {
+    const { data } = this.supabase.storage.from(bucket).getPublicUrl(fileName);
+    return data.publicUrl;
+  }
 }
