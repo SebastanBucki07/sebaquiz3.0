@@ -3,11 +3,13 @@ import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 @Injectable({ providedIn: 'root' })
 export class SupabaseService {
-  // Zmienione na public, aby uniknąć błędu S2341 w komponentach
   public supabase: SupabaseClient = createClient(
     'https://tvawycgprwpjgmeifltx.supabase.co',
     'sb_publishable_W5VsEn1VJYSpMD_i9Sz8Jg_LtH-bxuC'
   );
+
+  public readonly STORAGE_URL =
+    'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
 
   /* --- AUTH --- */
 
@@ -206,11 +208,49 @@ export class SupabaseService {
     return await this.supabase.from('clubs').select('*').order('name', { ascending: true });
   }
 
+  getPublicUrl(path: string): string {
+    if (!path || path.includes('no-image.png')) {
+      return '/no-image.png'; // Ścieżka do lokalnego assetu w Angularze
+    }
+
+    const fileName = path.split('/').pop();
+
+    return `${this.STORAGE_URL}footballCrestes/${fileName}`.replace(/([^:]\/)\/+/g, '$1');
+  }
+
+  async uploadCrest(file: File, clubName: string): Promise<string> {
+    const cleanName = clubName
+      .toLowerCase()
+      .replace(/\s+/g, '_')
+      .replace(/[^a-z0-9_]/g, '');
+
+    const fileExt = file.name.split('.').pop();
+    const fileName = `${cleanName}.${fileExt}`;
+    const filePath = fileName;
+
+    const { data, error } = await this.supabase.storage
+      .from('footballCrestes')
+      .upload(fileName, file, { upsert: false });
+
+    if (error) {
+      if (error.message.includes('already exists')) {
+        throw new Error('Klub o takiej nazwie ma już swój herb w bazie!');
+      }
+      throw error;
+    }
+    return filePath;
+  }
+
+  async addNewClub(name: string, fileName: string) {
+    return await this.supabase.from('clubs').insert([{ name: name, file_name: fileName }]);
+  }
+
   async checkDuplicate(
     questionText: string,
     categoryId: number,
     answers?: any[]
   ): Promise<boolean> {
+    // Pobieramy pytania z danej kategorii, aby sprawdzić duplikaty
     const { data, error } = await this.supabase
       .from('questions')
       .select('question, answers')
@@ -223,6 +263,7 @@ export class SupabaseService {
 
     return data.some((record) => {
       let existingAnswers = record.answers;
+
       if (typeof existingAnswers === 'string') {
         try {
           existingAnswers = JSON.parse(existingAnswers);

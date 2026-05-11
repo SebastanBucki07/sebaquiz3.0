@@ -70,6 +70,13 @@ export const routes: Routes = [
                 (m) => m.AddQuestionComponent
               ),
           },
+          {
+            path: 'add-club',
+            loadComponent: () =>
+              import('./configure-window/club-photo-form/club-photo-form.component').then(
+                (m) => m.ClubPhotoFormComponent
+              ),
+          },
         ],
       },
       {

@@ -5,7 +5,7 @@ import { GameStateService } from '../../../../services/game-state.service';
 import { PointsService } from '../../../../services/points-service.service';
 import { GameService } from '../../../../services/game.service';
 import { QuestionService } from '../../../../services/question-service.service';
-import { getClubInfo } from '../../../../shared/mappers/clubMapper';
+import { SupabaseService } from '../../../../services/supabase.service';
 import { calculateGamePoints } from '../../../../shared/utils/text-logic';
 import { TeamGridState } from '../../../../shared/models/teams/teamGridState.interface';
 
@@ -19,6 +19,9 @@ import { TeamGridState } from '../../../../shared/models/teams/teamGridState.int
 export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   private destroy$ = new Subject<void>();
 
+  // Cache dla klubów z Supabase
+  private clubsCache: any[] = [];
+
   gridData: any = null;
   cellStatus: boolean[][] = [
     [false, false, false],
@@ -28,7 +31,7 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   showMissing: boolean = false;
   gameFinished = false;
 
-  // Punktacja (zgodna z Twoim modelem WritingCategory)
+  // Punktacja
   readonly MAX_POINTS = 9;
   totalCorrect = 0;
   accuracyPercentage = 0;
@@ -41,14 +44,21 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
     private questionService: QuestionService,
     private gameStateService: GameStateService,
     private gameService: GameService,
-    private pointsService: PointsService
+    private pointsService: PointsService,
+    public supabase: SupabaseService // Wstrzyknięcie serwisu Supabase
   ) {}
 
-  ngOnInit() {
-    // 1. Pobieramy aktualną drużynę z GameState
+  async ngOnInit() {
+    // 1. Pobieramy listę klubów z bazy do lokalnego cache
+    try {
+      const { data } = await this.supabase.getClubs();
+      this.clubsCache = data || [];
+    } catch (err) {
+      console.error('Błąd podczas ładowania klubów z Supabase:', err);
+    }
+
+    // 2. Pobieramy aktualną drużynę z GameState
     this.gameStateService.teams$.pipe(takeUntil(this.destroy$)).subscribe((teams) => {
-      // W modelu TicTacToe zazwyczaj gra jedna drużyna na turę,
-      // pobieramy tę, która jest aktualnie "przy głosie" w GameService
       const activeTeamName = this.gameService.getCurrentTeam();
       const team = teams.find((t) => t.name === activeTeamName) || teams[0];
 
@@ -60,17 +70,44 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
       }
     });
 
-    // 2. Subskrypcja pytania (planszy)
+    // 3. Subskrypcja pytania (planszy)
     this.questionService.question$.pipe(takeUntil(this.destroy$)).subscribe((q) => {
       if (q && q.question === 'Football Grid' && q.answers?.[0]?.value) {
         try {
           this.gridData = JSON.parse(q.answers[0].value);
           this.resetGrid();
         } catch (e) {
-          console.error('Błąd planszy:', e);
+          console.error('Błąd parsowania planszy:', e);
         }
       }
     });
+  }
+
+  /**
+   * Pobiera informacje o klubie (nazwa, logo) z bazy Supabase
+   */
+  getHeaderInfo(label: string) {
+    if (!label) return { name: '', logo: '' };
+
+    // Szukamy w cache po nazwie lub fragmencie ścieżki pliku
+    const club = this.clubsCache.find(
+      (c) =>
+        c.name.toLowerCase() === label.toLowerCase() ||
+        c.file_name.toLowerCase().includes(label.toLowerCase())
+    );
+
+    if (club) {
+      return {
+        name: club.name,
+        logo: `${this.supabase.STORAGE_URL}${club.file_name}`,
+      };
+    }
+
+    // Fallback: jeśli nie ma w bazie, zwracamy nazwę i obrazek "no-image"
+    return {
+      name: label,
+      logo: `${this.supabase.STORAGE_URL}no-image.png`,
+    };
   }
 
   toggleCell(r: number, c: number) {
@@ -92,7 +129,6 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   }
 
   public triggerTimeoutError(): void {
-    // Kiedy czas minie, automatycznie kończymy i pokazujemy braki
     this.revealMissing();
   }
 
@@ -101,8 +137,6 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
 
     this.showMissing = true;
     this.gameFinished = true;
-
-    // Obliczamy punkty na koniec (żeby nie było 0 po timeout)
     this.calculateScore();
 
     if (this.currentTeam) {
@@ -111,7 +145,6 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
     }
   }
 
-  // Twoja funkcja pozostaje BEZ ZMIAN, bo w kroku 1 zachowaliśmy strukturę
   getMatchingFootballers(r: number, c: number): string[] {
     if (!this.gridData?.grid) return [];
     return this.gridData.grid[r][c].map((p: any) => p.name);
@@ -138,9 +171,5 @@ export class TicTacToeCategoryComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
-  }
-
-  getHeaderInfo(label: string) {
-    return getClubInfo(label);
   }
 }
