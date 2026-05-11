@@ -5,7 +5,10 @@ import { getActorPhotoByName } from '../../shared/apiHelper/actor.helper';
 @Injectable({ providedIn: 'root' })
 export class QuestionEnricherService {
   async enrich(question: Question, type: string, name: string): Promise<Question> {
-    if (type === 'photos' && name === 'Znane postacie') {
+    if (
+      (type === 'photos' && name === 'Znane postacie') ||
+      (type === 'photos' && name === 'Seba photos')
+    ) {
       return await this.enrichFamousPeople(question);
     }
     return question;

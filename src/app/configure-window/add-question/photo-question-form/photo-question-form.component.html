@@ -17,7 +17,19 @@
           </mat-select>
         </mat-form-field>
 
-        <div class="upload-zone" (click)="fInput.click()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Źródło zdjęcia</mat-label>
+          <mat-select formControlName="sourceType">
+            <mat-option value="file">Plik z dysku</mat-option>
+            <mat-option value="url">Link URL (Web)</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div
+          *ngIf="questionForm.get('sourceType')?.value === 'file'"
+          class="upload-zone"
+          (click)="fInput.click()"
+        >
           <img *ngIf="previewUrl" [src]="previewUrl" />
           <div *ngIf="!previewUrl" class="up-placeholder">
             <mat-icon>cloud_upload</mat-icon>
@@ -25,6 +37,16 @@
           </div>
           <input type="file" #fInput (change)="onFileSelected($event)" hidden accept="image/*" />
         </div>
+
+        <mat-form-field
+          *ngIf="questionForm.get('sourceType')?.value === 'url'"
+          appearance="outline"
+          class="full-width"
+        >
+          <mat-label>Link do zdjęcia (URL)</mat-label>
+          <input matInput formControlName="externalUrl" placeholder="https://..." />
+          <mat-icon matSuffix>link</mat-icon>
+        </mat-form-field>
 
         <mat-form-field appearance="outline" class="full-width">
           <mat-label>Prawidłowa odpowiedź (nazwa)</mat-label>
@@ -74,7 +96,13 @@
     <div class="preview-card">
       <h3>{{ questionForm.value.answerValue || 'Nazwa obiektu' }}</h3>
       <div class="img-frame">
-        <img [src]="previewUrl || 'no-image.png'" />
+        <img
+          [src]="
+            (questionForm.value.sourceType === 'file'
+              ? previewUrl
+              : questionForm.value.externalUrl) || 'no-image.png'
+          "
+        />
       </div>
       <div class="hint-preview" *ngFor="let h of questionForm.value.hints">
         <div style="display: flex; justify-content: space-between">
