@@ -93,7 +93,7 @@ export class PhotoQuestionFormComponent implements OnInit {
 
       let bucket = 'general';
       const catName = category?.name.toLowerCase() || '';
-      if (catName.includes('Budowle')) bucket = 'buildings';
+      if (catName.includes('budowle')) bucket = 'buildings';
       else if (catName.includes('klub')) bucket = 'footballCrestes';
       else if (catName.includes('seba')) bucket = 'tests';
       const fileName = await this.supabase.uploadPhoto(
