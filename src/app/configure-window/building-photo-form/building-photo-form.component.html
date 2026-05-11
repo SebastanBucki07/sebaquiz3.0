@@ -1,0 +1,34 @@
+<div class="add-club-card">
+  <div class="card-header">
+    <mat-icon>domain</mat-icon>
+    <h3>Dodaj nowy budynek do bazy</h3>
+  </div>
+
+  <div class="form-body">
+    <div class="image-preview-zone" (click)="fileIn.click()">
+      <img *ngIf="previewUrl" [src]="previewUrl" />
+      <div *ngIf="!previewUrl" class="placeholder">
+        <mat-icon>add_a_photo</mat-icon>
+        <span>FOTO</span>
+      </div>
+      <input type="file" #fileIn (change)="onFileSelected($event)" hidden accept="image/*" />
+    </div>
+
+    <div class="inputs-zone">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Nazwa obiektu</mat-label>
+        <input matInput [(ngModel)]="name" placeholder="np. Krzywa Wieża w Pizie" />
+      </mat-form-field>
+
+      <button
+        mat-raised-button
+        class="save-btn"
+        [disabled]="isUploading || !name || !selectedFile"
+        (click)="save()"
+      >
+        <mat-icon *ngIf="!isUploading">check</mat-icon>
+        {{ isUploading ? 'PRZESYŁANIE...' : 'ZAPISZ BUDYNEK' }}
+      </button>
+    </div>
+  </div>
+</div>

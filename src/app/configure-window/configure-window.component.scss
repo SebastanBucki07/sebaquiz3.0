@@ -35,3 +35,25 @@
     background: #444;
   }
 }
+
+.navigation-bar {
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  background: #111418;
+  border-bottom: 1px solid #1e2227;
+  flex-wrap: wrap; /* Pozwala przyciskom przejść do nowej linii na mniejszych ekranach */
+}
+
+.nav-button {
+  background: #1c2128 !important;
+  color: #fff !important;
+  border: 1px solid #30363d !important;
+  transition: 0.3s !important;
+}
+
+.active-btn {
+  border-color: #ffb300 !important;
+  color: #ffb300 !important;
+  background: rgba(255, 179, 0, 0.05) !important;
+}

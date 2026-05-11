@@ -77,6 +77,13 @@ export const routes: Routes = [
                 (m) => m.ClubPhotoFormComponent
               ),
           },
+          {
+            path: 'add-building',
+            loadComponent: () =>
+              import('./configure-window/building-photo-form/building-photo-form.component').then(
+                (m) => m.BuildingPhotoFormComponent
+              ),
+          },
         ],
       },
       {

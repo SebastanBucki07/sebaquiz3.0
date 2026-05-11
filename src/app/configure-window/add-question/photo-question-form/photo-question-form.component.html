@@ -1,0 +1,88 @@
+<div class="editor-layout">
+  <aside class="form-side">
+    <div class="generator-card">
+      <div class="header">
+        <mat-icon class="write-icon">quiz</mat-icon>
+        <div class="header-text">
+          <h2>Kreator Pytania Foto</h2>
+          <p>Tworzysz pełny wpis do bazy pytań</p>
+        </div>
+      </div>
+
+      <form [formGroup]="questionForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Kategoria</mat-label>
+          <mat-select formControlName="categoryId">
+            <mat-option *ngFor="let cat of categories" [value]="cat.id">{{ cat.name }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="upload-zone" (click)="fInput.click()">
+          <img *ngIf="previewUrl" [src]="previewUrl" />
+          <div *ngIf="!previewUrl" class="up-placeholder">
+            <mat-icon>cloud_upload</mat-icon>
+            <span>Wybierz zdjęcie obiektu</span>
+          </div>
+          <input type="file" #fInput (change)="onFileSelected($event)" hidden accept="image/*" />
+        </div>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Prawidłowa odpowiedź (nazwa)</mat-label>
+          <input matInput formControlName="answerValue" />
+        </mat-form-field>
+
+        <div class="section-label">PODPOWIEDZI ({{ hints.length }})</div>
+        <div formArrayName="hints">
+          <div *ngFor="let h of hints.controls; let i = index" [formGroupName]="i" class="hint-box">
+            <div class="hint-row">
+              <mat-form-field appearance="fill" class="flex-1">
+                <mat-label>Tytuł (np. Rok budowy)</mat-label>
+                <input matInput formControlName="label" />
+              </mat-form-field>
+              <button type="button" mat-icon-button color="warn" (click)="removeHint(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+
+            <mat-form-field appearance="fill" class="full-width">
+              <mat-label>Treść podpowiedzi</mat-label>
+              <textarea matInput formControlName="content" rows="2"></textarea>
+            </mat-form-field>
+
+            <div class="penalty-section">
+              <div class="penalty-info">
+                <span>Kara za odkrycie:</span>
+                <span class="penalty-value">-{{ h.get('penaltyPercent')?.value }}%</span>
+              </div>
+              <mat-slider min="0" max="50" step="5" showTickMarks discrete>
+                <input matSliderThumb formControlName="penaltyPercent" />
+              </mat-slider>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="add-hint-btn" (click)="addHint()">+ DODAJ PODPOWIEDŹ</button>
+
+        <button mat-raised-button color="primary" class="save-btn" [disabled]="isSaving">
+          {{ isSaving ? 'ZAPISYWANIE...' : 'ZAPISZ PYTANIE' }}
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <section class="preview-side">
+    <div class="preview-card">
+      <h3>{{ questionForm.value.answerValue || 'Nazwa obiektu' }}</h3>
+      <div class="img-frame">
+        <img [src]="previewUrl || 'no-image.png'" />
+      </div>
+      <div class="hint-preview" *ngFor="let h of questionForm.value.hints">
+        <div style="display: flex; justify-content: space-between">
+          <strong>{{ h.label }}:</strong>
+          <small style="color: #f85149">-{{ h.penaltyPercent }}%</small>
+        </div>
+        <span>{{ h.content }}</span>
+      </div>
+    </div>
+  </section>
+</div>

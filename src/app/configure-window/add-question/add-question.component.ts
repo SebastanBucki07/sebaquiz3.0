@@ -9,6 +9,8 @@ import { FamiliadaFormComponent } from './familiada-form/familiada-form.componen
 import { FootballFormComponent } from './football-form/football-form.component';
 import { WrittingFormComponent } from './writting-form/writting-form.component';
 import { PlayerHistoryFormComponent } from './player-history-form/player-history-form.component';
+import { PhotoQuestionFormComponent } from './photo-question-form/photo-question-form.component';
+
 type FormType =
   | 'one-answer'
   | 'hint'
@@ -17,6 +19,7 @@ type FormType =
   | 'football'
   | 'writting'
   | 'photo-hints'
+  | 'photos'
   | null;
 
 @Component({
@@ -33,6 +36,7 @@ type FormType =
     FootballFormComponent,
     WrittingFormComponent,
     PlayerHistoryFormComponent,
+    PhotoQuestionFormComponent,
   ],
   templateUrl: './add-question.component.html',
   styleUrl: './add-question.component.scss',

@@ -20,7 +20,17 @@ export abstract class CommonQuestionComponent implements OnInit, OnDestroy {
 
     this.question$.pipe(takeUntil(this.destroy$)).subscribe((q) => {
       if (q) {
-        this.hints = q.hints ?? [];
+        let rawHints = q.hints;
+
+        if (typeof rawHints === 'string') {
+          try {
+            rawHints = JSON.parse(rawHints);
+          } catch (e) {
+            rawHints = [];
+          }
+        }
+
+        this.hints = Array.isArray(rawHints) ? rawHints : [];
         this.onQuestionChange(q);
       }
     });

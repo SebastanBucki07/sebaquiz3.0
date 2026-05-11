@@ -1,4 +1,12 @@
-import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  Input,
+  OnChanges,
+  Output,
+  SimpleChanges,
+  ViewEncapsulation,
+} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
@@ -13,18 +21,20 @@ import { MatIcon } from '@angular/material/icon';
   styleUrls: ['./tips.component.css'],
   encapsulation: ViewEncapsulation.None,
 })
-export class TipsComponent {
+export class TipsComponent implements OnChanges {
   @Input() hints: Hint[] = [];
   @Output() hintUsed = new EventEmitter<Hint>();
 
-  // array of discovered hints
-
   revealedHints: Hint[] = [];
 
-  //method called when clicking the panel
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['hints']) {
+      this.revealedHints = [];
+    }
+  }
+
   showHint(hint: Hint) {
     if (!this.isRevealed(hint)) {
-      console.log('TIP CLICKED', hint); //
       this.revealedHints.push(hint);
       this.hintUsed.emit(hint);
     }
