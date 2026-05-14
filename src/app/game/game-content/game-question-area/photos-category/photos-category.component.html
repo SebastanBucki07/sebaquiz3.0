@@ -1,6 +1,11 @@
 <div *ngIf="question$ | async as question" class="photo-question-container">
   <div class="image-wrapper">
-    <img [src]="question.question" alt="question image" class="question-image" />
+    <img
+      [src]="question.question"
+      alt="question image"
+      class="question-image"
+      referrerpolicy="no-referrer"
+    />
   </div>
 
   <app-tips [hints]="question.hints ?? []" (hintUsed)="onHintUsed($event)"></app-tips>

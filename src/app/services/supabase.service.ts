@@ -181,10 +181,15 @@ export class SupabaseService {
     return { data, error };
   }
 
-  async addQuestion(questionData: any) {
-    // Uwaga: created_by zostanie nadane przez DEFAULT auth.uid() w bazie
-    const { data, error } = await this.supabase.from('questions').insert([questionData]).select();
-    return { data, error };
+  async addQuestion(payload: any) {
+    const { data, error } = await this.supabase
+      .from('questions')
+      .insert([payload])
+      .select()
+      .single();
+
+    if (error) throw error;
+    return data;
   }
 
   async updateQuestion(id: number, questionData: any) {
@@ -335,5 +340,11 @@ export class SupabaseService {
   getPublicUrlFromBucket(bucket: string, fileName: string): string {
     const { data } = this.supabase.storage.from(bucket).getPublicUrl(fileName);
     return data.publicUrl;
+  }
+
+  async insertToBuildings(data: any) {
+    const { error } = await this.supabase.from('buildings').insert([data]);
+
+    if (error) throw error;
   }
 }
