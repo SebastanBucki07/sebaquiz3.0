@@ -11,7 +11,6 @@ export class SupabaseService {
   public readonly STORAGE_URL =
     'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
 
-  /* --- AUTH --- */
 
   get auth() {
     return this.supabase.auth;
@@ -37,8 +36,6 @@ export class SupabaseService {
       return session;
     });
   }
-
-  /* --- KATEGORIE --- */
 
   async getCategoryTypes() {
     const { data, error } = await this.supabase
@@ -111,7 +108,6 @@ export class SupabaseService {
     return data || [];
   }
 
-  /* --- PYTANIA (LOGIKA GRY) --- */
 
   async getQuestions(categoryName: string, limit: number = 50) {
     const { data: allIds } = await this.supabase
@@ -152,7 +148,6 @@ export class SupabaseService {
     return { data, error };
   }
 
-  /* --- ZARZĄDZANIE PYTANIAMI (PANEL ADMINA) --- */
 
   async getQuestionsList(limit: number = 100, categoryId?: number, search?: string) {
     let query = this.supabase
@@ -172,7 +167,6 @@ export class SupabaseService {
     }
 
     if (search && search.trim() !== '') {
-      // Szuka po treści pytania LUB pierwszej odpowiedzi (nazwisko)
       query = query.or(`question.ilike.%${search}%, answers->0->>value.ilike.%${search}%`);
     }
 
@@ -193,7 +187,6 @@ export class SupabaseService {
   }
 
   async updateQuestion(id: number, questionData: any) {
-    // Nie przesyłamy updated_by ręcznie - zrobi to TRIGGER SQL w bazie
     const { error } = await this.supabase
       .from('questions')
       .update({
@@ -215,7 +208,7 @@ export class SupabaseService {
 
   getPublicUrl(path: string): string {
     if (!path || path.includes('no-image.png')) {
-      return '/no-image.png'; // Ścieżka do lokalnego assetu w Angularze
+      return '/no-image.png';
     }
 
     const fileName = path.split('/').pop();
@@ -285,6 +278,17 @@ export class SupabaseService {
     });
   }
 
+  async getRandomClubs(amount: number = 50) {
+    const { data, error } = await this.supabase
+    .rpc('get_random_clubs', { sample_size: amount });
+
+    if (error) {
+      console.error('Błąd podczas losowania klubów:', error);
+      return [];
+    }
+    return data;
+  }
+
   //buildings
 
   async uploadBuilding(file: File, buildingName: string): Promise<string> {
@@ -347,4 +351,5 @@ export class SupabaseService {
 
     if (error) throw error;
   }
+
 }

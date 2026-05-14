@@ -1,12 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-
-// Modele i Serwisy
 import { Question } from '../../shared/questions/question.interface';
 import { SupabaseService } from '../supabase.service';
-
-// Importy stałych (Fallback)
 import { BOGOWIE } from '../../shared/questions/gods.questions';
 import { HISTORIA } from '../../shared/questions/history.questions';
 import { STADIONY } from '../../shared/questions/stadiums.questions';
@@ -18,8 +14,6 @@ import { IMPREZY_SPORTOWE } from '../../shared/questions/footballChampionsMusic.
 import { HYMNY_PANSTWOWE } from '../../shared/questions/nationalAnthems.questions';
 import { BAJKOWE_INTRO } from '../../shared/questions/fairyTalesIntros.questions';
 import { DANE_PANSTW } from '../../shared/questions/countries.questions';
-
-// Providery i Mappery
 import { CountryProvider } from '../../shared/providers/country.provider';
 import { FootballGridProvider } from '../../shared/providers/football-grid.provider';
 import { mapOldFamiliadaToNew } from '../../shared/mappers/familiada.mapper';
@@ -34,35 +28,50 @@ export class QuestionLoaderService {
     private http: HttpClient
   ) {}
 
-  /**
-   * Główna metoda ładująca pytania.
-   * Najpierw sprawdza cache, potem algorytmy specjalne, potem bazę Supabase, a na końcu pliki lokalne.
-   */
   async load(type: string, name: string): Promise<Question[]> {
     const normalizedName = name.trim();
     const cacheKey = `${type}:${normalizedName.toLowerCase()}`;
 
-    // 1. Sprawdź, czy dane są już w pamięci podręcznej (błyskawiczne ładowanie)
     if (this.cache.has(cacheKey)) {
       console.log(`[QuestionLoader] Cache hit dla: ${normalizedName}`);
       return this.cache.get(cacheKey)!;
     }
 
-    // 2. LOGIKA SPECJALNA (TicTacToe - generowane w locie)
     if (type === 'ticTacToe' && name === 'Piłkarskie kółko i krzyżyk') {
       const questions = FootballGridProvider.getGridQuestions(50);
       this.cache.set(cacheKey, questions);
       return questions;
     }
 
+    if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') {
+      try {
+        console.log(`[QuestionLoader] Losuję 50 herbów z bazy danych...`);
+        const randomClubs = await this.supabaseService.getRandomClubs(50);
+
+        const mappedQuestions: Question[] = randomClubs.map((club: any) => ({
+          id: club.id,
+          question: club.file_name, // URL do herbu
+          answers: [{ label: 'odpowiedz', value: club.name }],
+          hints: [
+            { id: 'h1', label: 'Odsłoń pierwsze fragmenty logo', content: '3', penaltyPercent: 0 },
+            { id: 'h2', label: 'Odsłoń kolejne fragmenty logo', content: '5', penaltyPercent: 20 },
+            { id: 'h3', label: 'Odsłoń kolejne fragmenty logo', content: '10', penaltyPercent: 20 }
+          ],
+          revealedAnswers: []
+        }));
+
+        this.cache.set(cacheKey, mappedQuestions);
+        return mappedQuestions;
+      } catch (error) {
+        console.error('Błąd podczas ładowania herbów z RPC, używam fallbacku...', error);
+      }
+    }
+
     let loadedQuestions: Question[] = [];
 
-    // 3. DATABASE FIRST - Spróbuj pobrać z Supabase
     try {
       const dbQuestions = await this.supabaseService.getQuestions(normalizedName);
       if (type === 'familiada') {
-        // dbQuestions to tablica surowych danych z bazy
-        // mapujemy każdy rekord z osobna używając Twojej funkcji
         loadedQuestions = (dbQuestions as any[]).map((q) => mapOldFamiliadaToNew(q));
       } else {
         loadedQuestions = dbQuestions;
@@ -74,7 +83,6 @@ export class QuestionLoaderService {
       );
     }
 
-    // 4. FALLBACK - Jeśli baza jest pusta, szukaj w starych strategiach (pliki/stałe)
     if (loadedQuestions.length === 0) {
       const key = `${type}:${normalizedName}`;
       const strategyKey = Object.keys(this.OLD_STRATEGIES).find(
@@ -87,7 +95,6 @@ export class QuestionLoaderService {
       }
     }
 
-    // 5. Zapisz do cache, jeśli udało się coś pobrać
     if (loadedQuestions.length > 0) {
       this.cache.set(cacheKey, loadedQuestions);
     } else {
@@ -97,16 +104,11 @@ export class QuestionLoaderService {
     return loadedQuestions;
   }
 
-  /**
-   * Czyści pamięć podręczną (np. jeśli chcesz wymusić odświeżenie danych)
-   */
   clearCache() {
     this.cache.clear();
   }
 
-  /**
-   * Słownik starych metod ładowania (pliki JSON i stałe TS).
-   */
+
   private readonly OLD_STRATEGIES: Record<string, () => Promise<Question[]> | any> = {
     // One Answer
     'one-answer:Film': () =>
