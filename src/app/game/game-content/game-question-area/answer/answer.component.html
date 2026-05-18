@@ -1,5 +1,5 @@
 <div *ngIf="question$ | async as currentQuestion" class="answers-reveal-container">
-  <ng-container *ngIf="currentQuestion.answers.length <= 2">
+  <ng-container *ngIf="currentQuestion.answers.length <= 3">
     <div *ngFor="let answer of currentQuestion.answers; let i = index" class="answer-block">
       <button
         mat-button
