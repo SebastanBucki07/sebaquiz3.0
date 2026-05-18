@@ -12,13 +12,17 @@ interface TransformedCountry {
 export class CountryQuestion {
   constructor(private countries: TransformedCountry[]) {}
 
-  getCapitalsByContinent(continent: string, id: number): Question {
+  // Zmieniamy typ zwracany na Question | null
+  getCapitalsByContinent(continent: string, id: number): Question | null {
     const answers = this.countries
-      .filter((c) => c.region.toLowerCase() === continent.toLowerCase())
-      .map((c) => c.capital)
-      .filter((capital): capital is string => capital !== null) // tylko niepuste
-      .sort((a, b) => a.localeCompare(b))
-      .map((capital) => ({ value: capital }));
+    .filter((c) => c.region.toLowerCase() === continent.toLowerCase())
+    .map((c) => c.capital)
+    .filter((capital): capital is string => capital !== null)
+    .sort((a, b) => a.localeCompare(b))
+    .map((capital) => ({ value: capital }));
+
+    // 🔥 Warunek: minimum 4 odpowiedzi (więcej niż 3)
+    if (answers.length <= 3) return null;
 
     return {
       id,
@@ -30,15 +34,17 @@ export class CountryQuestion {
     };
   }
 
-  getCountriesByContinent(continent: string, id: number): Question {
+  getCountriesByContinent(continent: string, id: number): Question | null {
     const answers = this.countries
-      .filter((c) => c.region.toLowerCase() === continent.toLowerCase())
-      .sort((a, b) => a.country.localeCompare(b.country))
-      .map((c) => ({ value: c.country }));
+    .filter((c) => c.region.toLowerCase() === continent.toLowerCase())
+    .sort((a, b) => a.country.localeCompare(b.country))
+    .map((c) => ({ value: c.country }));
+
+    if (answers.length <= 3) return null;
 
     return {
       id,
-      question: `Państwa z ${continent}"`,
+      question: `Państwa z ${continent}`,
       answers,
       hints: [],
       revealedAnswers: [],
@@ -46,34 +52,17 @@ export class CountryQuestion {
     };
   }
 
-  getCountriesByAllContinents(startingId: number = 100): Question[] {
-    // unikalne kontynenty
-    const continents = Array.from(new Set(this.countries.map((c) => c.region)));
-
-    // generowanie quizu dla każdego kontynentu
-    return continents.map((continent, index) =>
-      this.getCountriesByContinent(continent, startingId + index)
-    );
-  }
-
-  getCapitalsByAllContinents(startingId: number = 100): Question[] {
-    // unikalne kontynenty
-    const continents = Array.from(new Set(this.countries.map((c) => c.region)));
-
-    return continents.map((continent, index) =>
-      this.getCapitalsByContinent(continent, startingId + index)
-    );
-  }
-
-  getCapitalsByLetter(letter: string, id: number): Question {
+  getCapitalsByLetter(letter: string, id: number): Question | null {
     const normalizedLetter = letter.toLowerCase();
 
     const answers = this.countries
-      .map((c) => c.capital)
-      .filter((capital): capital is string => capital !== null)
-      .filter((capital) => capital.toLowerCase().startsWith(normalizedLetter))
-      .sort((a, b) => a.localeCompare(b))
-      .map((capital) => ({ value: capital }));
+    .map((c) => c.capital)
+    .filter((capital): capital is string => capital !== null)
+    .filter((capital) => capital.toLowerCase().startsWith(normalizedLetter))
+    .sort((a, b) => a.localeCompare(b))
+    .map((capital) => ({ value: capital }));
+
+    if (answers.length <= 3) return null;
 
     return {
       id,
@@ -85,28 +74,15 @@ export class CountryQuestion {
     };
   }
 
-  // 🔥 Stolice dla wszystkich liter (automatycznie)
-  getCapitalsByAllLetters(startingId: number = 400): Question[] {
-    const letters = Array.from(
-      new Set(
-        this.countries
-          .map((c) => c.capital)
-          .filter((capital): capital is string => capital !== null)
-          .map((capital) => capital.charAt(0).toUpperCase())
-      )
-    ).sort((a, b) => a.localeCompare(b));
-
-    return letters.map((letter, index) => this.getCapitalsByLetter(letter, startingId + index));
-  }
-
-  // 🔹 Państwa na konkretną literę
-  getCountriesByLetter(letter: string, id: number): Question {
+  getCountriesByLetter(letter: string, id: number): Question | null {
     const normalizedLetter = letter.toLowerCase();
 
     const answers = this.countries
-      .filter((c) => c.country.toLowerCase().startsWith(normalizedLetter))
-      .sort((a, b) => a.country.localeCompare(b.country))
-      .map((c) => ({ value: c.country }));
+    .filter((c) => c.country.toLowerCase().startsWith(normalizedLetter))
+    .sort((a, b) => a.country.localeCompare(b.country))
+    .map((c) => ({ value: c.country }));
+
+    if (answers.length <= 3) return null;
 
     return {
       id,
@@ -118,29 +94,65 @@ export class CountryQuestion {
     };
   }
 
-  // 🔥 Państwa dla wszystkich liter (automatycznie)
+  // --- METODY GENERUJĄCE LISTY ---
+  // Muszą odfiltrować wartości null, aby zwrócić czystą tablicę Question[]
+
+  getCountriesByAllContinents(startingId: number = 100): Question[] {
+    const continents = Array.from(new Set(this.countries.map((c) => c.region)));
+
+    return continents
+    .map((continent, index) => this.getCountriesByContinent(continent, startingId + index))
+    .filter((q): q is Question => q !== null); // Usuwa te, które miały <= 3 odpowiedzi
+  }
+
+  getCapitalsByAllContinents(startingId: number = 100): Question[] {
+    const continents = Array.from(new Set(this.countries.map((c) => c.region)));
+
+    return continents
+    .map((continent, index) => this.getCapitalsByContinent(continent, startingId + index))
+    .filter((q): q is Question => q !== null);
+  }
+
+  getCapitalsByAllLetters(startingId: number = 400): Question[] {
+    const letters = Array.from(
+      new Set(
+        this.countries
+        .map((c) => c.capital)
+        .filter((capital): capital is string => capital !== null)
+        .map((capital) => capital.charAt(0).toUpperCase())
+      )
+    ).sort((a, b) => a.localeCompare(b));
+
+    return letters
+    .map((letter, index) => this.getCapitalsByLetter(letter, startingId + index))
+    .filter((q): q is Question => q !== null);
+  }
+
   getCountriesByAllLetters(startingId: number = 300): Question[] {
-    // pobieramy unikalne pierwsze litery z istniejących państw
     const letters = Array.from(
       new Set(this.countries.map((c) => c.country.charAt(0).toUpperCase()))
     ).sort((a, b) => a.localeCompare(b));
 
-    return letters.map((letter, index) => this.getCountriesByLetter(letter, startingId + index));
+    return letters
+    .map((letter, index) => this.getCountriesByLetter(letter, startingId + index))
+    .filter((q): q is Question => q !== null);
   }
 
+  // W tej metodzie zwykle jest 1 odpowiedź (kraj -> stolica),
+  // więc jeśli wymagasz > 3, ta metoda zawsze zwróci pustą tablicę.
+  // Zostawiam ją bez zmian lub z filtrem, jeśli intencja była inna.
   getCountryCapitalQuestions(startingId: number = 500): Question[] {
     return this.countries
-      .filter((c) => c.capital !== null) // tylko kraje ze stolicą
-      .sort((a, b) => a.country.localeCompare(b.country))
-      .map(
-        (country, index): Question => ({
-          id: startingId + index,
-          question: `${country.country}`,
-          answers: [{ value: country.capital as string }],
-          hints: [],
-          revealedAnswers: [],
-          showAnswer: false,
-        })
-      );
+    .filter((c) => c.capital !== null)
+    .sort((a, b) => a.country.localeCompare(b.country))
+    .map((country, index) => ({
+      id: startingId + index,
+      question: `${country.country}`,
+      answers: [{ value: country.capital as string }],
+      hints: [],
+      revealedAnswers: [],
+      showAnswer: false,
+    }))
+    .filter(q => q.answers.length > 3); // To prawdopodobnie wyczyści całą listę
   }
 }
