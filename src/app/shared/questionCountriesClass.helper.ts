@@ -138,9 +138,6 @@ export class CountryQuestion {
     .filter((q): q is Question => q !== null);
   }
 
-  // W tej metodzie zwykle jest 1 odpowiedź (kraj -> stolica),
-  // więc jeśli wymagasz > 3, ta metoda zawsze zwróci pustą tablicę.
-  // Zostawiam ją bez zmian lub z filtrem, jeśli intencja była inna.
   getCountryCapitalQuestions(startingId: number = 500): Question[] {
     return this.countries
     .filter((c) => c.capital !== null)
@@ -152,7 +149,6 @@ export class CountryQuestion {
       hints: [],
       revealedAnswers: [],
       showAnswer: false,
-    }))
-    .filter(q => q.answers.length > 3); // To prawdopodobnie wyczyści całą listę
+    }));
   }
 }
