@@ -11,7 +11,6 @@ export class SupabaseService {
   public readonly STORAGE_URL =
     'https://tvawycgprwpjgmeifltx.supabase.co/storage/v1/object/public/';
 
-
   get auth() {
     return this.supabase.auth;
   }
@@ -37,11 +36,74 @@ export class SupabaseService {
     });
   }
 
+  async getQuestionsByCategoryWithAdditional(categoryName: string, limit: number = 50): Promise<any[]> {
+    const nameLower = categoryName.toLowerCase().trim();
+    let rawQuestions: any[] = [];
+
+    // PANCERNE SPRAWDZENIE: Łapiemy kategorię po nazwie LUB bezpośrednio po ID bazy danych
+    const isMovieCast = nameLower.includes('obsada') && nameLower.includes('film') || nameLower === '37';
+    const isSeriesCast = nameLower.includes('obsada') && nameLower.includes('serial') || nameLower === '38';
+
+    // =========================================================================
+    // 1. DEDYKOWANE WYJĄTKI DLA NOWEJ TABELI DODATKOWEJ (ZAPYTANIA RPC PO ID)
+    // =========================================================================
+    if (isMovieCast) {
+      console.log('[SupabaseService] Wykryto obsadę filmu. Odpalam RPC dla ID 37...');
+      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
+        p_category_id: 37
+      });
+      if (error) throw error;
+      rawQuestions = data || [];
+    }
+    else if (isSeriesCast) {
+      console.log('[SupabaseService] Wykryto obsadę serialu. Odpalam RPC dla ID 38...');
+      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
+        p_category_id: 38
+      });
+      if (error) throw error;
+      rawQuestions = data || [];
+    }
+      // =========================================================================
+      // 2. ORYGINALNA LOGIKA DLA CAŁEJ RESZTY KATEGORII
+    // =========================================================================
+    else {
+      const { data: allIds } = await this.supabase
+      .from('questions')
+      .select('id, categories!inner(name)')
+      .ilike('categories.name', categoryName.trim());
+
+      if (!allIds || allIds.length === 0) return [];
+
+      const shuffledIds = allIds
+      .map((item) => item.id)
+      .sort(() => Math.random() - 0.5)
+      .slice(0, limit);
+
+      const { data, error } = await this.supabase.from('questions').select('*').in('id', shuffledIds);
+
+      if (error) {
+        console.error('Błąd pobierania pytań dla standardowej kategorii:', error);
+        return [];
+      }
+      rawQuestions = data || [];
+    }
+
+    // 3. Wspólne mapowanie struktury odpowiedzi...
+    return rawQuestions.map((q) => {
+      const finalAnswers = q.answers || q.answers_json || q.data?.answers || [];
+      return {
+        ...q,
+        answers: Array.isArray(finalAnswers) ? finalAnswers : JSON.parse(finalAnswers || '[]'),
+        revealedAnswers: q.revealed_answers || q.revealedAnswers || [],
+      };
+    });
+  }
+
   async getCategoryTypes() {
     const { data, error } = await this.supabase
-      .from('category_types')
-      .select('*')
-      .order('name', { ascending: true });
+    .from('category_types')
+    .select('*')
+    .order('name', { ascending: true });
 
     if (error) {
       console.error('Błąd pobierania typów kategorii:', error);
@@ -52,19 +114,19 @@ export class SupabaseService {
 
   async addCategory(categoryData: any) {
     const { data, error } = await this.supabase
-      .from('categories')
-      .insert([
-        {
-          name: categoryData.name,
-          type_id: categoryData.type_id,
-          color: categoryData.color,
-          base_points: categoryData.base_points,
-          is_active: categoryData.is_active,
-          icon: categoryData.icon,
-          timer_seconds: categoryData.timer_seconds,
-        },
-      ])
-      .select();
+    .from('categories')
+    .insert([
+      {
+        name: categoryData.name,
+        type_id: categoryData.type_id,
+        color: categoryData.color,
+        base_points: categoryData.base_points,
+        is_active: categoryData.is_active,
+        icon: categoryData.icon,
+        timer_seconds: categoryData.timer_seconds,
+      },
+    ])
+    .select();
 
     if (error) {
       console.error('Błąd podczas dodawania kategorii:', error);
@@ -75,9 +137,9 @@ export class SupabaseService {
 
   async getCategories() {
     const { data, error } = await this.supabase
-      .from('categories')
-      .select(
-        `
+    .from('categories')
+    .select(
+      `
         *,
         timer_seconds,
         category_types (
@@ -86,8 +148,8 @@ export class SupabaseService {
           label
         )
       `
-      )
-      .order('name', { ascending: true });
+    )
+    .order('name', { ascending: true });
 
     if (error) console.error('Błąd pobierania kategorii:', error);
     return data || [];
@@ -95,11 +157,11 @@ export class SupabaseService {
 
   async getCategoriesByType(typeId: number) {
     const { data, error } = await this.supabase
-      .from('categories')
-      .select('*, timer_seconds')
-      .eq('type_id', typeId)
-      .eq('is_active', true)
-      .order('name', { ascending: true });
+    .from('categories')
+    .select('*, timer_seconds')
+    .eq('type_id', typeId)
+    .eq('is_active', true)
+    .order('name', { ascending: true });
 
     if (error) {
       console.error('Błąd pobierania kategorii po typie:', error);
@@ -108,19 +170,19 @@ export class SupabaseService {
     return data || [];
   }
 
-
   async getQuestions(categoryName: string, limit: number = 50) {
+    // Zachowujemy tę metodę bez zmian, jako że kod wewnętrzny może z niej bezpośrednio korzystać w innych modułach
     const { data: allIds } = await this.supabase
-      .from('questions')
-      .select('id, categories!inner(name)')
-      .ilike('categories.name', categoryName.trim());
+    .from('questions')
+    .select('id, categories!inner(name)')
+    .ilike('categories.name', categoryName.trim());
 
     if (!allIds || allIds.length === 0) return [];
 
     const shuffledIds = allIds
-      .map((item) => item.id)
-      .sort(() => Math.random() - 0.5)
-      .slice(0, limit);
+    .map((item) => item.id)
+    .sort(() => Math.random() - 0.5)
+    .slice(0, limit);
 
     const { data, error } = await this.supabase.from('questions').select('*').in('id', shuffledIds);
 
@@ -141,26 +203,25 @@ export class SupabaseService {
 
   async getQuestionById(id: number) {
     const { data, error } = await this.supabase
-      .from('questions')
-      .select('*')
-      .eq('id', id)
-      .maybeSingle();
+    .from('questions')
+    .select('*')
+    .eq('id', id)
+    .maybeSingle();
     return { data, error };
   }
 
-
   async getQuestionsList(limit: number = 100, categoryId?: number, search?: string) {
     let query = this.supabase
-      .from('questions')
-      .select(
-        `
+    .from('questions')
+    .select(
+      `
         *,
         author:profiles!created_by(username),
         editor:profiles!updated_by(username)
       `
-      )
-      .order('created_at', { ascending: false })
-      .limit(limit);
+    )
+    .order('created_at', { ascending: false })
+    .limit(limit);
 
     if (categoryId) {
       query = query.eq('category_id', categoryId);
@@ -177,10 +238,10 @@ export class SupabaseService {
 
   async addQuestion(payload: any) {
     const { data, error } = await this.supabase
-      .from('questions')
-      .insert([payload])
-      .select()
-      .single();
+    .from('questions')
+    .insert([payload])
+    .select()
+    .single();
 
     if (error) throw error;
     return data;
@@ -188,14 +249,14 @@ export class SupabaseService {
 
   async updateQuestion(id: number, questionData: any) {
     const { error } = await this.supabase
-      .from('questions')
-      .update({
-        category_id: questionData.category_id,
-        question: questionData.question,
-        answers: questionData.answers,
-        hints: questionData.hints,
-      })
-      .eq('id', id);
+    .from('questions')
+    .update({
+      category_id: questionData.category_id,
+      question: questionData.question,
+      answers: questionData.answers,
+      hints: questionData.hints,
+    })
+    .eq('id', id);
 
     return { error };
   }
@@ -218,17 +279,17 @@ export class SupabaseService {
 
   async uploadCrest(file: File, clubName: string): Promise<string> {
     const cleanName = clubName
-      .toLowerCase()
-      .replace(/\s+/g, '_')
-      .replace(/[^a-z0-9_]/g, '');
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/[^a-z0-9_]/g, '');
 
     const fileExt = file.name.split('.').pop();
     const fileName = `${cleanName}.${fileExt}`;
     const filePath = fileName;
 
     const { data, error } = await this.supabase.storage
-      .from('footballCrestes')
-      .upload(fileName, file, { upsert: false });
+    .from('footballCrestes')
+    .upload(fileName, file, { upsert: false });
 
     if (error) {
       if (error.message.includes('already exists')) {
@@ -248,11 +309,10 @@ export class SupabaseService {
     categoryId: number,
     answers?: any[]
   ): Promise<boolean> {
-    // Pobieramy pytania z danej kategorii, aby sprawdzić duplikaty
     const { data, error } = await this.supabase
-      .from('questions')
-      .select('question, answers')
-      .eq('category_id', categoryId);
+    .from('questions')
+    .select('question, answers')
+    .eq('category_id', categoryId);
 
     if (error || !data) return false;
 
@@ -289,24 +349,22 @@ export class SupabaseService {
     return data;
   }
 
-  //buildings
-
   async uploadBuilding(file: File, buildingName: string): Promise<string> {
     const fileExt = file.name.split('.').pop();
 
     const cleanName = buildingName
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/\s+/g, '_')
-      .replace(/[^a-z0-z0-9_]/g, '');
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/[^a-z0-z0-9_]/g, '');
 
     const fileName = `${cleanName}.${fileExt}`;
     const filePath = `${fileName}`;
 
     const { data, error } = await this.supabase.storage
-      .from('buildings')
-      .upload(filePath, file, { upsert: true });
+    .from('buildings')
+    .upload(filePath, file, { upsert: true });
 
     if (error) throw error;
     return fileName;
@@ -324,17 +382,17 @@ export class SupabaseService {
     const fileExt = file.name.split('.').pop();
 
     const cleanName = itemName
-      .toLowerCase()
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .replace(/\s+/g, '_')
-      .replace(/[^a-z0-9_]/g, '');
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/\s+/g, '_')
+    .replace(/[^a-z0-9_]/g, '');
 
     const fileName = `${cleanName}_${Date.now()}.${fileExt}`;
 
     const { data, error } = await this.supabase.storage
-      .from(bucketName)
-      .upload(fileName, file, { upsert: true });
+    .from(bucketName)
+    .upload(fileName, file, { upsert: true });
 
     if (error) throw error;
 
@@ -351,5 +409,4 @@ export class SupabaseService {
 
     if (error) throw error;
   }
-
 }
