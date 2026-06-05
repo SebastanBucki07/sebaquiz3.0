@@ -32,17 +32,20 @@ export class QuestionLoaderService {
     const normalizedName = name.trim();
     const cacheKey = `${type}:${normalizedName.toLowerCase()}`;
 
+    // 1. Sprawdzenie Cache
     if (this.cache.has(cacheKey)) {
       console.log(`[QuestionLoader] Cache hit dla: ${normalizedName}`);
       return this.cache.get(cacheKey)!;
     }
 
+    // 2. Specjalny przypadek: Kółko i Krzyżyk
     if (type === 'ticTacToe' && name === 'Piłkarskie kółko i krzyżyk') {
       const questions = FootballGridProvider.getGridQuestions(50);
       this.cache.set(cacheKey, questions);
       return questions;
     }
 
+    // 3. Specjalny przypadek: Herby piłkarskie
     if (type === 'photo-fragments' && name === 'Jaki to herb piłkarski?') {
       try {
         console.log(`[QuestionLoader] Losuję 50 herbów z bazy danych...`);
@@ -50,7 +53,7 @@ export class QuestionLoaderService {
 
         const mappedQuestions: Question[] = randomClubs.map((club: any) => ({
           id: club.id,
-          question: club.file_name, // URL do herbu
+          question: club.file_name,
           answers: [{ label: 'odpowiedz', value: club.name }],
           hints: [
             { id: 'h1', label: 'Odsłoń pierwsze fragmenty logo', content: '3', penaltyPercent: 0 },
@@ -68,10 +71,36 @@ export class QuestionLoaderService {
     }
 
     let loadedQuestions: Question[] = [];
+    const lowerName = normalizedName.toLowerCase();
 
+    // 4. Pobieranie danych z Supabase (z obsługą kategorii dodatkowych)
     try {
-      const dbQuestions = await this.supabaseService.getQuestions(normalizedName);
-      if (type === 'familiada') {
+      // Pobieramy dane łączone (z questions oraz z tabeli dodatkowej) poprzez zapytanie RPC
+      const dbQuestions = await this.supabaseService.getQuestionsByCategoryWithAdditional(normalizedName);
+
+      // Elastyczne sprawdzanie kategorii o obsadzie (obsługuje "taka obsada", "ta obsada", itp.)
+      if (lowerName.includes('obsada') && lowerName.includes('film')) {
+        loadedQuestions = (dbQuestions as any[]).map((q) => ({
+          ...q,
+          // Formatujemy pytanie tak, by QuestionClassifierService wykrył słowo kluczowe
+          question: `W jakim filmie zagrała taka obsada?`,
+          hints: [
+            { id: 'h_desc', label: 'Pokaż opis fabuły (podpowiedź)', content: q.question, penaltyPercent: 20 },
+            ...(q.hints || [])
+          ],
+          revealedAnswers: []
+        }));
+      } else if (lowerName.includes('obsada') && lowerName.includes('serial')) {
+        loadedQuestions = (dbQuestions as any[]).map((q) => ({
+          ...q,
+          question: `W jakim serialu zagrała taka obsada?`,
+          hints: [
+            { id: 'h_desc', label: 'Pokaż opis fabuły (podpowiedź)', content: q.question, penaltyPercent: 20 },
+            ...(q.hints || [])
+          ],
+          revealedAnswers: []
+        }));
+      } else if (type === 'familiada') {
         loadedQuestions = (dbQuestions as any[]).map((q) => mapOldFamiliadaToNew(q));
       } else {
         loadedQuestions = dbQuestions;
@@ -83,6 +112,7 @@ export class QuestionLoaderService {
       );
     }
 
+    // 5. Fallback z plików JSON, jeśli baza nie zwróciła pytań
     if (loadedQuestions.length === 0) {
       const key = `${type}:${normalizedName}`;
       const strategyKey = Object.keys(this.OLD_STRATEGIES).find(
@@ -95,6 +125,7 @@ export class QuestionLoaderService {
       }
     }
 
+    // 6. Zapis do cache i zwrot wyników
     if (loadedQuestions.length > 0) {
       this.cache.set(cacheKey, loadedQuestions);
     } else {
@@ -107,7 +138,6 @@ export class QuestionLoaderService {
   clearCache() {
     this.cache.clear();
   }
-
 
   private readonly OLD_STRATEGIES: Record<string, () => Promise<Question[]> | any> = {
     // One Answer
@@ -158,8 +188,6 @@ export class QuestionLoaderService {
       firstValueFrom(this.http.get<Question[]>('/questions/flag.questions.json')),
 
     // Photo Hints
-    'photo-hints:Klubowa Historia piłkarza': () =>
-      firstValueFrom(this.http.get<Question[]>('/questions/footballHistory.questions.json')),
     'photo-hints:W jakim filmie zagrała taka obsada?': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/moviesActors.questions.json')),
     'photo-hints:W jakim serialu zagrała taka obsada?': () =>
@@ -198,6 +226,6 @@ export class QuestionLoaderService {
     // Inne
     'country:Jaki to kraj?': () => mapCountriesToQuestions(DANE_PANSTW),
     'hints:Lektury': () =>
-      firstValueFrom(this.http.get<Question[]>('/questions/books.questions.json')), // Przykład fallbacku dla Lektur
+      firstValueFrom(this.http.get<Question[]>('/questions/books.questions.json')),
   };
 }
