@@ -18,6 +18,9 @@ export class GameContentComponent implements OnInit {
   selectedCategories: Category[] = [];
   categoryState = new Map<string, number>();
 
+  // Opcjonalna flaga ładowania (przydatna do pokazania np. spinnera w HTML)
+  isLoading = true;
+
   constructor(
     private router: Router,
     private questionService: QuestionService,
@@ -28,21 +31,35 @@ export class GameContentComponent implements OnInit {
     const saved = localStorage.getItem('selectedCategories');
     this.selectedCategories = saved ? JSON.parse(saved) : [];
 
+    // Odpalamy asynchroniczne ładowanie stanu
     await this.preloadCategoryState();
   }
 
   private async preloadCategoryState() {
-    for (const category of this.selectedCategories) {
-      const remaining = await this.questionService.getRemainingQuestions(
-        category.type,
-        category.name
-      );
+    this.isLoading = true;
 
-      this.categoryState.set(`${category.type}|${category.name}`, remaining);
+    try {
+      // Tworzymy tablicę Promise'ów – wszystkie strzały do bazy lecą W TYM SAMYM MOMENCIE
+      const promises = this.selectedCategories.map(async (category) => {
+        const remaining = await this.questionService.getRemainingQuestions(
+          category.type,
+          category.name
+        );
+
+        // Zapisujemy od razu do Mapy, gdy dany Promise się rozwiąże
+        this.categoryState.set(`${category.type}|${category.name}`, remaining);
+      });
+
+      // Czekamy, aż najwolniejsze zapytanie dobiegnie końca
+      await Promise.all(promises);
+    } catch (error) {
+      console.error('[GameContent] Błąd podczas równoległego preloadingowania kategorii:', error);
+    } finally {
+      this.isLoading = false;
     }
   }
 
-  // Number of available questions in a given category
+  // Liczba dostępnych pytań w danej kategorii
   getRemainingQuestions(category: Category): number {
     return this.categoryState.get(`${category.type}|${category.name}`) ?? 0;
   }
@@ -55,7 +72,6 @@ export class GameContentComponent implements OnInit {
       return;
     }
 
-    // Pobieramy indeks z serwisu
     const currentPlayerIndex = this.gameService.getCurrentTeamIndex();
 
     this.router.navigate(['game/category', category.type, category.name, category.type], {
