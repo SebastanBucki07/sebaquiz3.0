@@ -4,9 +4,15 @@ const formatNumber = (num: any): string => {
   return parsed.toLocaleString('pl-PL').replace(/\s/g, ' ');
 };
 
-const getCountryName = (code: string, allCountries: any[]) => {
-  const country = allCountries.find(c => c.code === code || c.alpha3Code === code);
-  return country ? country.name : code;
+export const getCountryName = (code: string, allCountries: any[]) => {
+  const country = allCountries.find(c => {
+    // Sprawdzamy czy to obiekt z mappera (c.code) czy z TransformedCountry (c.code)
+    // ORAZ czy nazwa to 'c.name' czy 'c.country'
+    return c.code === code || c.iso_code === code;
+  });
+
+  // Jeśli znajdziemy obiekt, wybieramy nazwę z pola, które istnieje
+  return country ? (country.country || country.name) : code;
 };
 
 export function mapCountriesToQuestions(countries: any[], allCountries: any[]) {
@@ -24,7 +30,7 @@ export function mapCountriesToQuestions(countries: any[], allCountries: any[]) {
       {
         id: '1',
         label: 'Populacja',
-        content: formatNumber(c.area_sq_km),
+        content: formatNumber(c.population),
         penaltyPercent: 0,
       },
       {
@@ -41,7 +47,13 @@ export function mapCountriesToQuestions(countries: any[], allCountries: any[]) {
         content: c.continent || c.subregion || 'Brak danych',
         penaltyPercent: 0
       },
-      {id: 'capital_hint', label: 'Stolica', content: c.capital || 'Brak', penaltyPercent: 80},
+      {
+        id: 'capital_hint',
+        label: 'Stolica',
+        content: c.capital || 'Brak',
+        penaltyPercent: 80
+      },
     ],
-  }));
+  }
+  ));
 }

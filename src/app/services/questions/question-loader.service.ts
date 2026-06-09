@@ -4,12 +4,12 @@ import {firstValueFrom} from 'rxjs';
 import {Question} from '../../shared/questions/question.interface';
 import {SupabaseService} from '../supabase.service';
 
-import {BOGOWIE} from '../../shared/questions/gods.questions';
+import {BOGOWIE} from '../../../../depricatedData/gods.questions';
 import {HISTORIA} from '../../shared/questions/history.questions';
-import {STADIONY} from '../../shared/questions/stadiums.questions';
-import {PRZYSLOWIA} from '../../shared/questions/proverbs.questions';
-import {KLUBOWE_PRZYDOMKI} from '../../shared/questions/footballClubsNames.questions';
-import {BUDOWLE} from '../../shared/questions/buildings.questions';
+import {STADIONY} from '../../../../depricatedData/stadiums.questions';
+import {PRZYSLOWIA} from '../../../../depricatedData/proverbs.questions';
+import {KLUBOWE_PRZYDOMKI} from '../../../../depricatedData/footballClubsNames.questions';
+import {BUDOWLE} from '../../../../depricatedData/buildings.questions';
 import {CZOLOWKI_SERIALI} from '../../shared/questions/tvSeriesIntro.questions';
 import {IMPREZY_SPORTOWE} from '../../shared/questions/footballChampionsMusic.questions';
 import {HYMNY_PANSTWOWE} from '../../shared/questions/nationalAnthems.questions';
@@ -34,7 +34,6 @@ export class QuestionLoaderService {
   }
 
   async load(type: string, name: string): Promise<Question[]> {
-    console.log(`[DEBUG] Ładuję kategorię: type='${type}', name='${name}'`);
     const normalizedName = name.trim();
     const cacheKey = `${type}:${normalizedName.toLowerCase()}`;
 
@@ -46,11 +45,13 @@ export class QuestionLoaderService {
     const isGeography =
       (cleanType === 'country' && cleanName === 'Jaki to kraj?') ||
       (cleanType === 'one-answer' && cleanName === 'Stolice krajów') ||
-      (cleanType === 'hints' && cleanName === 'Miasta świata');
+      (cleanType === 'hints' && cleanName === 'Miasta świata') ||
       (cleanType === 'writting-category' && cleanName === 'Państwa z kontynentu') ||
       (cleanType === 'writting-category' && cleanName === 'Stolice z kontynentu') ||
       (cleanType === 'writting-category' && cleanName === 'Państwa na literę') ||
-      (cleanType === 'writting-category' && cleanName === 'Stolice na literę');
+      (cleanType === 'writting-category' && cleanName === 'Stolice na literę') ||
+      (cleanType === 'photos' && cleanName === 'Flagi') ||
+      (cleanType === 'photo-fragments' && cleanName === 'Fragmenty Flag');
 
     if (isGeography) {
       try {
@@ -62,11 +63,10 @@ export class QuestionLoaderService {
 
         let geoQuestions: Question[] = [];
         const lowerName = cleanName.toLowerCase();
-        console.log('Sprawdzam dane w providerze:', CountryProvider.countries[0]);
         switch (lowerName) {
           case 'jaki to kraj?':
             // w question-loader.service.ts
-            geoQuestions = mapCountriesToQuestions(this.geoDataRaw, this.geoDataRaw);
+            geoQuestions = this.getRandomSubset(mapCountriesToQuestions(this.geoDataRaw, this.geoDataRaw),50);
             break;
           case 'stolice krajów':
             geoQuestions = this.getRandomSubset(CountryProvider.getCapitals(), 50);
@@ -84,8 +84,14 @@ export class QuestionLoaderService {
             geoQuestions = this.getRandomSubset(CountryProvider.getCapitalsByLetter(), 50);
             break;
           case 'miasta świata':
-            console.log('[DEBUG] Wchodzę w case Miasta świata');
-            geoQuestions = this.getRandomSubset(CountryProvider.getMajorCities(),50)
+            const questions = this.getRandomSubset(CountryProvider.getMajorCities(),50);
+            geoQuestions = questions;
+            break;
+          case 'flagi':
+            geoQuestions = this.getRandomSubset(CountryProvider.getFlags(),50);
+            break;
+          case 'fragmenty flag':
+            geoQuestions = this.getRandomSubset(CountryProvider.getFlagFragments(),50);
             break;
         }
 
@@ -106,14 +112,34 @@ export class QuestionLoaderService {
     }
 
     // 3. HERBY PIŁKARSKIE
+    // 3. HERBY PIŁKARSKIE
     if (type === 'photo-fragments' && cleanName.toLowerCase() === 'jaki to herb piłkarski?') {
       try {
         const randomClubs = await this.supabaseService.getRandomClubs(50);
         const mappedQuestions: Question[] = randomClubs.map((club: any) => ({
           id: club.id,
-          question: club.file_name,
+          question: club.file_name, // To jest ścieżka do obrazka herbu
           answers: [{label: 'odpowiedz', value: club.name}],
-          hints: [{id: 'h1', label: 'Odsłoń fragmenty', content: '3', penaltyPercent: 0}],
+          hints: [
+            {
+              id: 'h1',
+              label: 'Odsłoń pierwsze fragmenty',
+              content: '10', // Pierwszy poziom odsłonięcia
+              penaltyPercent: 10
+            },
+            {
+              id: 'h2',
+              label: 'Odsłoń więcej fragmentów',
+              content: '20', // Drugi poziom
+              penaltyPercent: 20
+            },
+            {
+              id: 'h3',
+              label: 'Odsłoń resztę',
+              content: '30', // Trzeci poziom
+              penaltyPercent: 40
+            }
+          ],
           revealedAnswers: [],
         }));
         this.cache.set(cacheKey, mappedQuestions);
@@ -142,7 +168,13 @@ export class QuestionLoaderService {
       const strategyKey = Object.keys(this.OLD_STRATEGIES).find(
         (k) => k.toLowerCase() === cacheKey.toLowerCase()
       );
-      if (strategyKey) loadedQuestions = await this.OLD_STRATEGIES[strategyKey]();
+
+      if (strategyKey) {
+        console.log(`[DEBUG FALLBACK] Ładowanie strategii z pliku JSON dla klucza: ${strategyKey}`);
+        loadedQuestions = await this.OLD_STRATEGIES[strategyKey]();
+      } else {
+        console.warn(`[DEBUG FALLBACK] Brak strategii dla klucza: ${cacheKey}`);
+      }
     }
 
     if (loadedQuestions.length > 0) this.cache.set(cacheKey, loadedQuestions);

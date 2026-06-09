@@ -1,12 +1,15 @@
 import { Question } from './questions/question.interface';
+import {getCountryName} from './mappers/countries.mapper';
 
 export interface TransformedCountry {
+  code: string;
   country: string;
   capital: string | null;
   region: string; // np. "Europa", "Azja"
   borders: string[];
   area: number;
   population: number;
+  flag_url: string;
   majorCities: string[];
 }
 
@@ -161,6 +164,63 @@ export class CountryQuestion {
       question: `Jaka jest stolica kraju: ${country.country}?`,
       answers: [{ value: country.capital as string, correct: true }],
       hints: [],
+      revealedAnswers: [],
+      showAnswer: false,
+    }));
+  }
+
+  getFlagQuestions(startingId: number = 700): Question[] {
+    return this.countries
+    .filter((c) => c.flag_url)
+    .map((c, index) => {
+      // Przygotowanie granic z mapowaniem
+      const bordersDisplay = (c.borders && c.borders.length > 0)
+        ? c.borders.map(code => getCountryName(code, this.countries)).join(', ')
+        : 'Brak (państwo wyspiarskie)';
+
+      return {
+        id: startingId + index,
+        question: c.flag_url,
+        answers: [{ label: 'odpowiedz', value: c.country }],
+        hints: [
+          { id: '0', label: 'Kontynent', content: c.region, penaltyPercent: 20 },
+          { id: '1', label: 'Stolica', content: c.capital || 'Brak', penaltyPercent: 30 },
+          { id: '2', label: 'Granice', content: bordersDisplay, penaltyPercent: 20 }
+        ],
+        revealedAnswers: [],
+        showAnswer: false,
+      };
+    });
+  }
+
+  getFlagFragmentQuestions(startingId: number = 800): Question[] {
+    return this.countries
+    .filter(c => c.flag_url)
+    .map((c, index) => ({
+      id: startingId + index,
+      // URL flagi zostaje w "question" – to główny identyfikator obrazka dla komponentu
+      question: c.flag_url,
+      answers: [{ label: 'odpowiedz', value: c.country }],
+      hints: [
+        {
+          id: 'frag_1',
+          label: 'Odsłoń pierwsze fragmenty',
+          content: "10", // Zostawiamy tak, jak wymaga tego Twój komponent
+          penaltyPercent: 0
+        },
+        {
+          id: 'frag_2',
+          label: 'Odsłoń kolejne fragmenty',
+          content: "10",
+          penaltyPercent: 30
+        },
+        {
+          id: 'frag_3',
+          label: 'Odsłoń kolejne fragmenty',
+          content: "20",
+          penaltyPercent: 30
+        }
+      ],
       revealedAnswers: [],
       showAnswer: false,
     }));
