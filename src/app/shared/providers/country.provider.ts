@@ -1,27 +1,41 @@
 import { DANE_PANSTW } from '../questions/countries.questions';
-import { CountryQuestion } from '../questionCountriesClass.helper';
+import { CountryQuestion, TransformedCountry } from '../questionCountriesClass.helper';
 import { Question } from '../questions/question.interface';
 
 export class CountryProvider {
-  private static instance = new CountryQuestion(DANE_PANSTW);
+  private static _countries: any[] = DANE_PANSTW;
+  private static instance = new CountryQuestion(CountryProvider.transformData(DANE_PANSTW));
 
-  static getCapitals(): Question[] {
-    return this.instance.getCountryCapitalQuestions();
+  private static transformData(data: any[]): TransformedCountry[] {
+    return data.map(item => ({
+      country: item.name || item.country || 'Unknown',
+      capital: item.capital || 'Brak',
+      region: item.continent || 'Unknown',
+      borders: item.borders || [],
+      area: item.area_sq_km || 0,
+      population: item.population || 0,
+      majorCities: item.major_cities || []
+    }));
   }
 
-  static getCountriesByContinent(): Question[] {
-    return this.instance.getCountriesByAllContinents();
+  static set countries(newData: any[]) {
+    if (newData && newData.length > 0) {
+      this._countries = newData;
+      this.instance = new CountryQuestion(this.transformData(newData));
+      console.log('[DEBUG] CountryProvider: Dane zaktualizowane i przekształcone.');
+    }
   }
 
-  static getCapitalsByContinent(): Question[] {
-    return this.instance.getCapitalsByAllContinents();
+  static get countries(): any[] {
+    return this._countries;
   }
 
-  static getCountriesByLetter(): Question[] {
-    return this.instance.getCountriesByAllLetters();
-  }
-
-  static getCapitalsByLetter(): Question[] {
-    return this.instance.getCapitalsByAllLetters();
+  static getCapitals(): Question[] { return this.instance.getCountryCapitalQuestions(); }
+  static getCountriesByContinent(): Question[] { return this.instance.getCountriesByAllContinents(); }
+  static getCapitalsByContinent(): Question[] { return this.instance.getCapitalsByAllContinents(); }
+  static getCountriesByLetter(): Question[] { return this.instance.getCountriesByAllLetters(); }
+  static getCapitalsByLetter(): Question[] { return this.instance.getCapitalsByAllLetters(); }
+  static getMajorCities(): Question[] {
+    return this.instance.getMajorCitiesQuestions();
   }
 }
