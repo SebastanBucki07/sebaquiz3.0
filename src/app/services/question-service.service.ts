@@ -30,7 +30,7 @@ export class QuestionService {
 
       this.currentQuestionSubject.next({
         ...validQuestion,
-        type: actualType
+        type: actualType,
       } as any); // <-- rzutowanie tutaj również uciszy błąd TS2353
     } else {
       console.error('Brak dostępnych pytań');

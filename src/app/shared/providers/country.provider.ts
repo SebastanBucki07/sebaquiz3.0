@@ -1,13 +1,13 @@
-import {DANE_PANSTW} from '../questions/countries.questions';
-import {CountryQuestion, TransformedCountry} from '../questionCountriesClass.helper';
-import {Question} from '../questions/question.interface';
+import { DANE_PANSTW } from '../questions/countries.questions';
+import { CountryQuestion, TransformedCountry } from '../questionCountriesClass.helper';
+import { Question } from '../questions/question.interface';
 
 export class CountryProvider {
   private static _countries: any[] = DANE_PANSTW;
   private static instance = new CountryQuestion(CountryProvider.transformData(DANE_PANSTW));
 
   private static transformData(data: any[]): TransformedCountry[] {
-    return data.map(item => ({
+    return data.map((item) => ({
       code: item.code || '',
       country: item.name || item.country || 'Unknown',
       capital: item.capital || 'Brak',
@@ -16,7 +16,7 @@ export class CountryProvider {
       area: item.area_sq_km || 0,
       population: item.population || 0,
       majorCities: item.major_cities || [],
-      flag_url: item.flag_url || ''
+      flag_url: item.flag_url || '',
     }));
   }
 
