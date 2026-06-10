@@ -254,37 +254,30 @@ export class QuestionLoaderService {
     const lowerName = name.toLowerCase().trim();
 
     // Szukamy w rejestrze klucza, który PO DWUKROPKU zawiera naszą nazwę kategorii
-    const strategyKey = Object.keys(this.OLD_STRATEGIES).find((k) => {
+    const strategyKey = Object.keys(this.OLD_STRATEGIES).find(k => {
       const parts = k.split(':');
       const categoryPart = parts[1] ? parts[1].toLowerCase().trim() : parts[0].toLowerCase().trim();
       return categoryPart === lowerName;
     });
 
     if (!strategyKey) {
-      console.warn(
-        `[DEBUG FALLBACK] Brak zdefiniowanej strategii pliku JSON dla kategorii: "${name}"`
-      );
+      console.warn(`[DEBUG FALLBACK] Brak zdefiniowanej strategii pliku JSON dla kategorii: "${name}"`);
       return [];
     }
 
     console.log(`[DEBUG FALLBACK] Ładuję dane z pliku lokalnego dla: "${strategyKey}"`);
     const rawQuestions: Question[] = await this.OLD_STRATEGIES[strategyKey]();
 
+    // Jeśli fallback dotyczy bohaterów, to przechodzimy przez enrichment z TMDB
     if (lowerName.includes('bohater')) {
-      const processedFallback = await Promise.all(
-        rawQuestions.map(async (q) => {
-          return await this.enrichWithTmdbHeroes(q, lowerName);
-        })
-      );
+      const processedFallback = await Promise.all(rawQuestions.map(async (q) => {
+        return await this.enrichWithTmdbHeroes(q, lowerName);
+      }));
       return processedFallback.filter((item): item is Question => item !== null);
     }
 
-    // Ograniczenie do 50 dla obsady z pliku lokalnego
-    if (lowerName.includes('obsada')) {
-      console.log(`[DEBUG FALLBACK] Losuję 50 pytań z obsadą z pliku JSON.`);
-      return this.getRandomSubset(rawQuestions, 50);
-    }
-
+    // 🔥 POPRAWKA: Usunęliśmy getRandomSubset dla obsady.
+    // Teraz zwracamy całą tablicę z pliku JSON bez żadnego limitu.
     return rawQuestions;
   }
 
