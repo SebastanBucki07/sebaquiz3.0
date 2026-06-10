@@ -43,14 +43,14 @@ export class SupabaseService {
     const nameLower = categoryName.toLowerCase().trim();
     let rawQuestions: any[] = [];
 
-    const isMovieCast =
-      nameLower.includes('w jakim filmie zagrała taka obsada') || nameLower === '37';
-    const isSeriesCast =
-      nameLower.includes('w jakim serialu zagrała taka obsada') || nameLower === '38';
+    const isMovieCast = nameLower.includes('w jakim filmie zagrała taka obsada') || nameLower === '37';
+    const isSeriesCast = nameLower.includes('w jakim serialu zagrała taka obsada') || nameLower === '38';
 
+    // Te flagi zostawiamy TYLKO do późniejszego mapowania tekstu pytania
     const isMovieHeroes = nameLower.includes('film po bohaterach') || nameLower === '30';
     const isSeriesHeroes = nameLower.includes('serial po bohaterach') || nameLower === '31';
 
+    // 1. Wywołujemy RPC TYLKO dla obsady (bo tam potrzebujemy aktorów i zdjęć)
     if (isMovieCast) {
       const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
         p_category_id: 37,
@@ -63,24 +63,8 @@ export class SupabaseService {
       });
       if (error) throw error;
       rawQuestions = data || [];
-    } else if (isMovieHeroes) {
-      console.log('[SupabaseService] Pobieram pytania filmowe dla kategorii ID 30...');
-      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
-        p_category_id: 30,
-      });
-      if (error) throw error;
-      rawQuestions = data || [];
-    } else if (isSeriesHeroes) {
-      console.log('[SupabaseService] Pobieram pytania serialowe dla kategorii ID 31...');
-      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
-        p_category_id: 31,
-      });
-      if (error) throw error;
-      rawQuestions = data || [];
     }
-      // =========================================================================
-      // 2. ORYGINALNA LOGIKA DLA CAŁEJ RESZTY KATEGORII
-    // =========================================================================
+    // 2. CAŁA RESZTA (w tym kategorie 30 i 31) idzie standardową ścieżką z tabeli 'questions'
     else {
       const { data: allIds } = await this.supabase
       .from('questions')
@@ -106,11 +90,33 @@ export class SupabaseService {
       rawQuestions = data || [];
     }
 
-    // 3. Wspólne mapowanie struktury odpowiedzi...
-    return rawQuestions.map((q) => {
+    // 3. Mapowanie struktury (Tutaj dbamy o poprawne teksty pytań)
+    return rawQuestions.map((q: any) => {
       const finalAnswers = q.answers || q.answers_json || q.data?.answers || [];
+      const catId = q.category_id || q.data?.category_id;
+
+      const originalQuestion = q.question || '';
+      let questionText = originalQuestion;
+
+      if (catId === 37 || catId === '37' || isMovieCast) {
+        questionText = 'W jakim filmie zagrała taka obsada?';
+      } else if (catId === 38 || catId === '38' || isSeriesCast) {
+        questionText = 'W jakim serialu zagrała taka obsada?';
+      }
+      // Dla bohaterów pobieramy czyste imiona (z pola originalQuestion) i łączymy z nagłówkiem
+      else if (catId === 30 || catId === '30' || isMovieHeroes) {
+        questionText = originalQuestion.toLowerCase().includes('Film po bohaterach')
+          ? originalQuestion
+          : `Rozpoznaj film po bohaterach:\n${originalQuestion}`;
+      } else if (catId === 31 || catId === '31' || isSeriesHeroes) {
+        questionText = originalQuestion.toLowerCase().includes('Serial po bohaterach')
+          ? originalQuestion
+          : `Rozpoznaj serial po bohaterach:\n${originalQuestion}`;
+      }
+
       return {
         ...q,
+        question: questionText,
         answers: Array.isArray(finalAnswers) ? finalAnswers : JSON.parse(finalAnswers || '[]'),
         revealedAnswers: q.revealed_answers || q.revealedAnswers || [],
       };
@@ -189,7 +195,6 @@ export class SupabaseService {
   }
 
   async getQuestions(categoryName: string, limit: number = 50) {
-    // Zachowujemy tę metodę bez zmian, jako że kod wewnętrzny może z niej bezpośrednio korzystać w innych modułach
     const { data: allIds } = await this.supabase
     .from('questions')
     .select('id, categories!inner(name)')
@@ -403,7 +408,7 @@ export class SupabaseService {
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/\s+/g, '_')
-    .replace(/[^a-z0-9_]/g, '');
+    .replace(/[^a-z0-9_]/g, ''); // <--- POPRAWIONE na `a-z`
 
     const fileName = `${cleanName}_${Date.now()}.${fileExt}`;
 
@@ -429,9 +434,6 @@ export class SupabaseService {
 
   /* --- GEOGRAFIA (COUNTRIES) --- */
 
-  /**
-   * Pobiera wszystkie państwa posortowane alfabetycznie po nazwie.
-   */
   async getCountries() {
     const { data, error } = await this.supabase
     .from('countries')
@@ -445,9 +447,6 @@ export class SupabaseService {
     return data || [];
   }
 
-  /**
-   * Dodaje nowe państwo do tabeli.
-   */
   async addCountry(countryData: { name: string; capital: string; continent: string; file_name?: string }) {
     const { data, error } = await this.supabase
     .from('countries')
@@ -462,9 +461,6 @@ export class SupabaseService {
     return data;
   }
 
-  /**
-   * Aktualizuje dane wybranego państwa.
-   */
   async updateCountry(id: number, countryData: { name: string; capital: string; continent: string; file_name?: string }) {
     const { data, error } = await this.supabase
     .from('countries')
@@ -480,10 +476,6 @@ export class SupabaseService {
     return data;
   }
 
-  /**
-   * Pobiera losowe państwa (przydatne, jeśli przygotujesz funkcję RPC w bazie).
-   * Jako fallback losuje z puli pobranej z frontendu.
-   */
   async getRandomCountries(amount: number = 50) {
     const { data, error } = await this.supabase.rpc('get_random_countries', { sample_size: amount });
 
