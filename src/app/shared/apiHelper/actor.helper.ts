@@ -133,10 +133,13 @@ export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> 
 }
 
 /**
- * Wspólny zaawansowany filtr śmieci z API dla Filmów i Seriali
+ * 🔥 Poprawiony wspólny zaawansowany filtr śmieci z API.
+ * Dodaliśmy parametr 'title', aby usuwać bohaterów, których imiona zdradzają tytuł.
  */
-const extractValidCharacters = (castArray: any[]): string[] => {
+const extractValidCharacters = (castArray: any[], title: string = ''): string[] => {
   if (!castArray) return [];
+  const tLower = title.toLowerCase().trim();
+
   return castArray
   .map((actor: any) => ({
     char: actor.character ? actor.character.trim() : '',
@@ -151,7 +154,7 @@ const extractValidCharacters = (castArray: any[]): string[] => {
     if (cLower.includes('voice') || cLower.includes('głos')) return false;
     if (cLower.includes('extra') || cLower.includes('statysta') || cLower.includes('background')) return false;
 
-    // Usuwamy sytuacje, gdzie imię aktora pokrywa się z postacią
+    // 1. Usuwamy sytuacje, gdzie imię aktora pokrywa się z postacią
     const nameParts: string[] = nLower.split(/\s+/).filter((part: string) => part.length > 2);
     for (const part of nameParts) {
       if (cLower.includes(part)) return false;
@@ -161,25 +164,45 @@ const extractValidCharacters = (castArray: any[]): string[] => {
     if (cLower.includes('(') || cLower.includes(')')) return false;
     if (item.char.split(',').length > 2) return false;
 
+    // ========================================================
+    // 🔥 NOWA WALIDACJA: BLOKOWANIE BOHATERÓW W TYTULE
+    // ========================================================
+    if (tLower.length > 0) {
+      // A. Jeśli cały tytuł zawiera imię bohatera (np. tytuł "Shrek" zawiera "Shrek")
+      if (tLower.includes(cLower) || cLower.includes(tLower)) return false;
+
+      // B. Jeśli tytuł jest wieloczłonowy, rozbijamy go na pojedyncze słowa (dłuższe niż 2 znaki)
+      // Zapobiega to sytuacji typu: tytuł "Harry Potter i Kamień Filozoficzny" zdradza bohatera "Harry Potter"
+      const titleParts = tLower.split(/[\s:,\-]+/).filter((part: string) => part.length > 2);
+      for (const part of titleParts) {
+        if (cLower.includes(part)) {
+          console.log(`[TMDB VALIDATION] Odrzucono bohatera "${item.char}" dla tytułu "${title}" (częściowe pokrycie: "${part}")`);
+          return false;
+        }
+      }
+    }
+    // ========================================================
+
     return true;
   })
   .map((item) => item.char);
 };
 
-export async function getMovieCharacters(movieId: number, limit = 5): Promise<string> {
+export async function getMovieCharacters(movieId: number, limit = 5, title: string = ''): Promise<string> {
   try {
     let url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=pl-PL`;
     let res = await fetch(url);
     let data = await res.json();
 
-    let validCharacters = extractValidCharacters(data.cast || []);
+    // Przekazujemy title do filtra
+    let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
       console.log(`[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`);
       url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`;
       res = await fetch(url);
       data = await res.json();
-      validCharacters = extractValidCharacters(data.cast || []);
+      validCharacters = extractValidCharacters(data.cast || [], title);
     }
 
     return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';
@@ -189,20 +212,21 @@ export async function getMovieCharacters(movieId: number, limit = 5): Promise<st
   }
 }
 
-export async function getTvCharacters(tvId: number, limit = 5): Promise<string> {
+export async function getTvCharacters(tvId: number, limit = 5, title: string = ''): Promise<string> {
   try {
     let url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}&language=pl-PL`;
     let res = await fetch(url);
     let data = await res.json();
 
-    let validCharacters = extractValidCharacters(data.cast || []);
+    // Przekazujemy title do filtra
+    let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
       console.log(`[TMDB] Brak unikalnych bohaterów PL dla serialu ID ${tvId}. Próba pobrania wersji domyślnej...`);
       url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}`;
       res = await fetch(url);
       data = await res.json();
-      validCharacters = extractValidCharacters(data.cast || []);
+      validCharacters = extractValidCharacters(data.cast || [], title);
     }
 
     return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';

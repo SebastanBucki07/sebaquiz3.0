@@ -295,10 +295,10 @@ export class QuestionLoaderService {
 
       if (isTv) {
         const tvId = await getTvIdByTitle(title);
-        if (tvId) heroes = await getTvCharacters(tvId, 5);
+        if (tvId) heroes = await getTvCharacters(tvId, 5, title);
       } else {
         const movieId = await getMovieIdByTitle(title);
-        if (movieId) heroes = await getMovieCharacters(movieId, 5);
+        if (movieId) heroes = await getMovieCharacters(movieId, 5, title);
       }
 
       if (!heroes || this.isInvalidHeroesData(heroes)) return null;
