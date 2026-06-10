@@ -18,6 +18,12 @@ import {CountryProvider} from '../../shared/providers/country.provider';
 import {FootballGridProvider} from '../../shared/providers/football-grid.provider';
 import {mapOldFamiliadaToNew} from '../../shared/mappers/familiada.mapper';
 import {mapCountriesToQuestions} from '../../shared/mappers/countries.mapper';
+import {
+  getMovieCharacters,
+  getMovieIdByTitle,
+  getTvCharacters,
+  getTvIdByTitle
+} from '../../shared/apiHelper/actor.helper';
 
 
 @Injectable({providedIn: 'root'})
@@ -27,6 +33,27 @@ export class QuestionLoaderService {
   private geoDataRaw: any[] = [];
 
   constructor(private supabaseService: SupabaseService, private http: HttpClient) {
+  }
+
+  private normalizeTitle(title: string): string {
+    if (!title) return '';
+    let t = title.trim();
+    if (t.toUpperCase().endsWith(' V')) t = t.replace(/ V$/i, ' 5');
+    else if (t.toUpperCase().endsWith(' IV')) t = t.replace(/ IV$/i, ' 4');
+    else if (t.toUpperCase().endsWith(' III')) t = t.replace(/ III$/i, ' 3');
+    else if (t.toUpperCase().endsWith(' II')) t = t.replace(/ II$/, ' 2');
+    return t;
+  }
+
+  private isInvalidHeroesData(heroes: string): boolean {
+    const h = heroes.toLowerCase();
+    return heroes.trim() === '' ||
+      heroes.length < 8 ||
+      h.includes('brak danych') ||
+      h.includes('brak przypisanych') ||
+      h.includes('błąd pobierania') ||
+      h.includes('błąd ładowania') ||
+      h.includes('nie znaleziono');
   }
 
   private getRandomSubset<T>(array: T[], size: number): T[] {
@@ -65,8 +92,7 @@ export class QuestionLoaderService {
         const lowerName = cleanName.toLowerCase();
         switch (lowerName) {
           case 'jaki to kraj?':
-            // w question-loader.service.ts
-            geoQuestions = this.getRandomSubset(mapCountriesToQuestions(this.geoDataRaw, this.geoDataRaw),50);
+            geoQuestions = this.getRandomSubset(mapCountriesToQuestions(this.geoDataRaw, this.geoDataRaw), 50);
             break;
           case 'stolice krajów':
             geoQuestions = this.getRandomSubset(CountryProvider.getCapitals(), 50);
@@ -84,14 +110,13 @@ export class QuestionLoaderService {
             geoQuestions = this.getRandomSubset(CountryProvider.getCapitalsByLetter(), 50);
             break;
           case 'miasta świata':
-            const questions = this.getRandomSubset(CountryProvider.getMajorCities(),50);
-            geoQuestions = questions;
+            geoQuestions = this.getRandomSubset(CountryProvider.getMajorCities(), 50);
             break;
           case 'flagi':
-            geoQuestions = this.getRandomSubset(CountryProvider.getFlags(),50);
+            geoQuestions = this.getRandomSubset(CountryProvider.getFlags(), 50);
             break;
           case 'fragmenty flag':
-            geoQuestions = this.getRandomSubset(CountryProvider.getFlagFragments(),50);
+            geoQuestions = this.getRandomSubset(CountryProvider.getFlagFragments(), 50);
             break;
         }
 
@@ -112,33 +137,17 @@ export class QuestionLoaderService {
     }
 
     // 3. HERBY PIŁKARSKIE
-    // 3. HERBY PIŁKARSKIE
     if (type === 'photo-fragments' && cleanName.toLowerCase() === 'jaki to herb piłkarski?') {
       try {
         const randomClubs = await this.supabaseService.getRandomClubs(50);
         const mappedQuestions: Question[] = randomClubs.map((club: any) => ({
           id: club.id,
-          question: club.file_name, // To jest ścieżka do obrazka herbu
-          answers: [{label: 'odpowiedz', value: club.name}],
+          question: club.file_name,
+          answers: [{ label: 'odpowiedz', value: club.name }],
           hints: [
-            {
-              id: 'h1',
-              label: 'Odsłoń pierwsze fragmenty',
-              content: '10', // Pierwszy poziom odsłonięcia
-              penaltyPercent: 10
-            },
-            {
-              id: 'h2',
-              label: 'Odsłoń więcej fragmentów',
-              content: '20', // Drugi poziom
-              penaltyPercent: 20
-            },
-            {
-              id: 'h3',
-              label: 'Odsłoń resztę',
-              content: '30', // Trzeci poziom
-              penaltyPercent: 40
-            }
+            { id: 'h1', label: 'Odsłoń pierwsze fragmenty', content: '10', penaltyPercent: 10 },
+            { id: 'h2', label: 'Odsłoń więcej fragmentów', content: '20', penaltyPercent: 20 },
+            { id: 'h3', label: 'Odsłoń resztę', content: '30', penaltyPercent: 40 }
           ],
           revealedAnswers: [],
         }));
@@ -149,21 +158,103 @@ export class QuestionLoaderService {
       }
     }
 
-    // 4. PYTANIA Z BAZY (FILMY/SERIALE/FAMILIADA)
+    // 4. PYTANIA Z BAZY (FILMY/SERIALE/FAMILIADA + INTEGRACJA API BOHATERÓW)
     let loadedQuestions: Question[] = [];
     try {
       const dbQuestions = await this.supabaseService.getQuestionsByCategoryWithAdditional(normalizedName);
+      const lowerName = normalizedName.toLowerCase();
+
+      console.log(`[DEBUG LOADER] Pobrano z bazy dla kategorii: "${normalizedName}". Ilość pytań:`, dbQuestions?.length);
+
       if (dbQuestions && dbQuestions.length > 0) {
-        loadedQuestions = (await Promise.all((dbQuestions as any[]).map(async (q) => {
+        loadedQuestions = (await Promise.all((dbQuestions as any[]).map(async (q, index) => {
           if (type === 'familiada') return mapOldFamiliadaToNew(q);
-          return q;
+
+          // AGRESYWNY SELEKTOR DLA BOHATERÓW
+          if (lowerName.includes('bohater')) {
+            console.log(`[DEBUG LOADER] Trafiono kategorię BOHATEROWIE dla pytania [${index}]:`, q);
+
+            const rawTitle = q.answers && q.answers[0] ? q.answers[0].value : '';
+            const title = this.normalizeTitle(rawTitle);
+            let heroes: string | null = null;
+
+            if (title) {
+              try {
+                if (lowerName.includes('serial')) {
+                  const tvId = await getTvIdByTitle(title);
+                  if (tvId) heroes = await getTvCharacters(tvId, 5);
+                } else {
+                  const movieId = await getMovieIdByTitle(title);
+                  if (movieId) heroes = await getMovieCharacters(movieId, 5);
+                }
+              } catch (e) {
+                console.error(`[DEBUG LOADER] Błąd API TMDB dla tytułu: ${title}`, e);
+              }
+            }
+
+            console.log(`[DEBUG LOADER] Wynik z TMDB dla "${title}":`, heroes);
+
+            if (!heroes || this.isInvalidHeroesData(heroes)) {
+              console.warn(`[DEBUG LOADER] Odrzucono pozycję "${rawTitle}" - brak danych w TMDB.`);
+              return null;
+            }
+
+            const mappedQuestion: Question = {
+              ...q,
+              type: 'hints',
+              question: lowerName.includes('serial') ? 'Jaki to serial po bohaterach?' : 'Jaki to film po bohaterach?',
+              hints: [
+                {
+                  id: 'h_heroes',
+                  label: 'Pokaż imiona bohaterów',
+                  content: heroes,
+                  penaltyPercent: 25,
+                }
+              ],
+              revealedAnswers: q.revealedAnswers || [],
+            };
+
+            if (index === 0) {
+              console.log('[DEBUG LOADER] Pierwsze zmapowane pytanie gotowe do wysłania:', mappedQuestion);
+            }
+
+            return mappedQuestion;
+          }
+
+          // A. KATEGORIA: OBSADA FILMOWA
+          if (lowerName.includes('obsada') && lowerName.includes('film')) {
+            return {
+              ...q,
+              question: `W jakim filmie zagrała taka obsada?`,
+              hints: [
+                { id: 'h_desc', label: 'Pokaż opis fabuły / obsadę', content: q.question, penaltyPercent: 20 },
+                ...(q.hints || []),
+              ],
+              revealedAnswers: q.revealedAnswers || [],
+            } as Question;
+          }
+
+          // B. KATEGORIA: OBSADA SERIALOWA
+          if (lowerName.includes('obsada') && lowerName.includes('serial')) {
+            return {
+              ...q,
+              question: `W jakim serialu zagrała taka obsada?`,
+              hints: [
+                { id: 'h_desc', label: 'Pokaż opis fabuły / obsadę', content: q.question, penaltyPercent: 20 },
+                ...(q.hints || []),
+              ],
+              revealedAnswers: q.revealedAnswers || [],
+            } as Question;
+          }
+
+          return q as Question;
         }))).filter((q): q is Question => q !== null);
       }
     } catch (e) {
       console.warn(e);
     }
 
-    // 5. FALLBACK
+    // 5. FALLBACK (PLIKI LOKALNE JSON)
     if (loadedQuestions.length === 0) {
       const strategyKey = Object.keys(this.OLD_STRATEGIES).find(
         (k) => k.toLowerCase() === cacheKey.toLowerCase()
@@ -171,7 +262,38 @@ export class QuestionLoaderService {
 
       if (strategyKey) {
         console.log(`[DEBUG FALLBACK] Ładowanie strategii z pliku JSON dla klucza: ${strategyKey}`);
-        loadedQuestions = await this.OLD_STRATEGIES[strategyKey]();
+        const rawJsonQuestions: Question[] = await this.OLD_STRATEGIES[strategyKey]();
+
+        if (normalizedName.toLowerCase().includes('bohater')) {
+          const processedFallback = await Promise.all(rawJsonQuestions.map(async (q) => {
+            const rawTitle = q.answers && q.answers[0] ? q.answers[0].value : '';
+            const title = this.normalizeTitle(rawTitle);
+            let heroes: string | null = null;
+
+            if (title) {
+              if (normalizedName.toLowerCase().includes('film')) {
+                const movieId = await getMovieIdByTitle(title);
+                heroes = movieId ? await getMovieCharacters(movieId, 5) : null;
+              } else {
+                const tvId = await getTvIdByTitle(title);
+                heroes = tvId ? await getTvCharacters(tvId, 5) : null;
+              }
+            }
+
+            if (!heroes || this.isInvalidHeroesData(heroes)) return null;
+
+            return {
+              ...q,
+              type: 'hints',
+              hints: [{ id: 'h_heroes', label: 'Pokaż imiona bohaterów', content: heroes, penaltyPercent: 25 }],
+              revealedAnswers: q.revealedAnswers || []
+            } as Question;
+          }));
+
+          loadedQuestions = processedFallback.filter((item): item is Question => item !== null);
+        } else {
+          loadedQuestions = rawJsonQuestions;
+        }
       } else {
         console.warn(`[DEBUG FALLBACK] Brak strategii dla klucza: ${cacheKey}`);
       }

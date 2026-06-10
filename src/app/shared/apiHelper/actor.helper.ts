@@ -159,28 +159,45 @@ export async function getMovieCharacters(movieId: number, limit = 5): Promise<st
     const extractValidCharacters = (castArray: any[]): string[] => {
       if (!castArray) return [];
       return castArray
-        .map((actor: any) => ({
-          char: actor.character ? actor.character.trim() : '',
-          name: actor.name ? actor.name.trim() : '',
-        }))
-        .filter((item) => {
-          const cLower = item.char.toLowerCase();
-          // Eliminujemy puste pola i oczywiste śmieci z API
-          if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
-          if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself'))
-            return false;
-          if (cLower.includes('voice') || cLower.includes('głos')) return false;
-          // Jeśli imię bohatera jest takie samo jak nazwisko aktora, to błąd w TMDB - odrzucamy
-          if (item.char === item.name) return false;
-          return true;
-        })
-        .map((item) => item.char);
+      .map((actor: any) => ({
+        char: actor.character ? actor.character.trim() : '',
+        name: actor.name ? actor.name.trim() : '',
+      }))
+      .filter((item) => {
+        const cLower = item.char.toLowerCase();
+        const nLower = item.name.toLowerCase();
+
+        // Eliminujemy puste pola i oczywiste śmieci z API
+        if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
+        if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself')) return false;
+        if (cLower.includes('voice') || cLower.includes('głos')) return false;
+        if (cLower.includes('extra') || cLower.includes('statysta') || cLower.includes('background')) return false;
+
+        // 🔥 Poprawiona sekcja z jawnym typowaniem parametru 'part'
+        const nameParts: string[] = nLower.split(/\s+/).filter((part: string) => part.length > 2);
+
+        for (const part of nameParts) {
+          if (cLower.includes(part)) return false;
+        }
+
+        // 2. Jeśli postać zawiera popularne zwroty łączące aktora z rolą w TMDB
+        if (cLower.includes(' / ') || cLower.includes(' jako ') || cLower.includes(' as ')) return false;
+
+        // 3. Jeśli w polu roli są nawiasy, często oznaczają dopiski o aktorze - bezpieczniej odrzucić lub wyczyścić
+        if (cLower.includes('(') || cLower.includes(')')) return false;
+
+        // 4. Jeśli ról jest wymienionych za dużo po przecinku (często śmietnik w API)
+        if (item.char.split(',').length > 2) return false;
+
+        return true;
+      })
+      .map((item) => item.char);
     };
 
-    // Pobieramy szeroką pulę (20-25 osób), żeby mieć z czego filtrować prawdziwych bohaterów
+    // Pobieramy szeroką pulę, żeby mieć z czego filtrować prawdziwych bohaterów
     let validCharacters = extractValidCharacters(data.cast || []);
 
-    // 2. Fallback: Jeśli polska wersja dała pustkę, natychmiast uderzamy po wersję domyślną (EN)
+    // 2. Fallback: Jeśli polska wersja dała pustkę (lub odrzuciliśmy "skażone" postacie), uderzamy po wersję EN
     if (validCharacters.length === 0) {
       console.log(
         `[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`

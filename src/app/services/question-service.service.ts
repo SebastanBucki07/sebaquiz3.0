@@ -18,15 +18,21 @@ export class QuestionService {
 
   async loadRandomQuestion(type: string, name: string): Promise<void> {
     const allQuestions = await this.loader.load(type, name);
-    const key = `${type}-${name}`;
-
     const validQuestion = await this.selector.getNextValidQuestion(allQuestions, type, name);
 
     if (validQuestion) {
+      // 🔥 Rzutujemy na 'any', żeby TypeScript nie pluł się o brak pola 'type' w interfejsie
+      const rawQuestion = validQuestion as any;
+      const actualType = rawQuestion.type || type;
+      const key = `${actualType}-${name}`;
+
       this.history.markAsUsed(validQuestion, key);
-      this.currentQuestionSubject.next(validQuestion);
+
+      this.currentQuestionSubject.next({
+        ...validQuestion,
+        type: actualType
+      } as any); // <-- rzutowanie tutaj również uciszy błąd TS2353
     } else {
-      // Zamiast alertu możesz wyemitować błąd do UI
       console.error('Brak dostępnych pytań');
       this.currentQuestionSubject.next(null);
     }

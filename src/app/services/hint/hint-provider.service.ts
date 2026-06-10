@@ -17,6 +17,13 @@ export class HintProviderService {
       rawQuestionObject: question,
       isTvMatch: question.question === 'W jakim serialu zagrała taka obsada?'
     });
+
+    // 🔥 FIX: Przepuszczamy dalej TYLKO jeśli to są faktycznie wygenerowani bohaterowie tekstowi.
+    // Jeśli to zwykła obsada filmowa z bazy, ignorujemy ten warunek i lecimy do API TMDB poniżej.
+    if (question.hints && question.hints.some(h => h.id === 'h_heroes')) {
+      return question.hints;
+    }
+
     if (!question.answers?.length) return [];
 
     const title = question.answers[0].value;
