@@ -12,10 +12,22 @@ import { Hint } from '../../shared/models/category/hint.interface';
 @Injectable({ providedIn: 'root' })
 export class HintProviderService {
   async fetchHints(question: Question): Promise<Hint[]> {
+    console.log('DEBUG [HintProvider]:', {
+      questionText: question.question,
+      rawQuestionObject: question,
+      isTvMatch: question.question === 'W jakim serialu zagrała taka obsada?',
+    });
+
+    // 🔥 FIX: Przepuszczamy dalej TYLKO jeśli to są faktycznie wygenerowani bohaterowie tekstowi.
+    // Jeśli to zwykła obsada filmowa z bazy, ignorujemy ten warunek i lecimy do API TMDB poniżej.
+    if (question.hints && question.hints.some((h) => h.id === 'h_heroes')) {
+      return question.hints;
+    }
+
     if (!question.answers?.length) return [];
 
     const title = question.answers[0].value;
-    const isTv = question.question === 'W jakim serialu zagrała taka obsada?';
+    const isTv = question.question?.toLowerCase().trim() === 'w jakim serialu zagrała taka obsada?';
 
     const id = isTv ? await getTvIdByTitle(title) : await getMovieIdByTitle(title);
     if (!id) return [];

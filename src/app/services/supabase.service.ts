@@ -51,6 +51,7 @@ export class SupabaseService {
     const isMovieHeroes = nameLower.includes('film po bohaterach') || nameLower === '30';
     const isSeriesHeroes = nameLower.includes('serial po bohaterach') || nameLower === '31';
 
+    // 1. Wywołujemy RPC dla obsady
     if (isMovieCast) {
       const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
         p_category_id: 37,
@@ -63,54 +64,100 @@ export class SupabaseService {
       });
       if (error) throw error;
       rawQuestions = data || [];
-    } else if (isMovieHeroes) {
-      console.log('[SupabaseService] Pobieram pytania filmowe dla kategorii ID 30...');
-      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
-        p_category_id: 30,
-      });
-      if (error) throw error;
-      rawQuestions = data || [];
-    } else if (isSeriesHeroes) {
-      console.log('[SupabaseService] Pobieram pytania serialowe dla kategorii ID 31...');
-      const { data, error } = await this.supabase.rpc('get_questions_by_category_id', {
-        p_category_id: 31,
-      });
-      if (error) throw error;
-      rawQuestions = data || [];
     }
-    // =========================================================================
-    // 2. ORYGINALNA LOGIKA DLA CAŁEJ RESZTY KATEGORII
-    // =========================================================================
+    // 2. CAŁA RESZTA (w tym kategorie 30 i 31) idzie ze złączeniem tabel
     else {
-      const { data: allIds } = await this.supabase
+      // A. Wyciągamy ID kategorii po nazwie
+      const { data: foundCategory } = await this.supabase
+        .from('categories')
+        .select('id')
+        .ilike('name', categoryName.trim())
+        .single();
+
+      if (!foundCategory) {
+        console.warn(`Nie znaleziono kategorii o nazwie: ${categoryName}`);
+        return [];
+      }
+
+      const targetCategoryId = foundCategory.id;
+
+      // B. KROK 1: Pobieramy ID pytań, gdzie to jest KATEGORIA GŁÓWNA
+      const { data: mainCatIds, error: mainError } = await this.supabase
         .from('questions')
-        .select('id, categories!inner(name)')
-        .ilike('categories.name', categoryName.trim());
+        .select('id')
+        .eq('category_id', targetCategoryId);
 
-      if (!allIds || allIds.length === 0) return [];
+      if (mainError) {
+        console.error('Błąd pobierania pytań z kategorii głównej:', mainError);
+        return [];
+      }
 
-      const shuffledIds = allIds
-        .map((item) => item.id)
-        .sort(() => Math.random() - 0.5)
-        .slice(0, limit);
+      // C. KROK 2: Pobieramy ID pytań z tabeli łączącej (KATEGORIE DODATKOWE)
+      const { data: additionalCatIds, error: addError } = await this.supabase
+        .from('question_additional_categories')
+        .select('question_id')
+        .eq('category_id', targetCategoryId);
 
+      if (addError) {
+        console.error('Błąd pobierania pytań z kategorii dodatkowych:', addError);
+        return [];
+      }
+
+      // D. Łączymy obie listy ID i wyciągamy tylko unikalne wartości
+      const mainIds = mainCatIds?.map((q) => q.id) || [];
+      const addIds =
+        additionalCatIds?.map((q) => q.question_id).filter((id): id is bigint => id !== null) || [];
+
+      const allUniqueIds = Array.from(new Set([...mainIds, ...addIds]));
+
+      if (allUniqueIds.length === 0) {
+        console.log(
+          `Brak pytań przypisanych do kategorii: "${categoryName}" (ID: ${targetCategoryId})`
+        );
+        return [];
+      }
+
+      // E. Losujemy i tniemy do limitu (50)
+      const shuffledIds = allUniqueIds.sort(() => Math.random() - 0.5).slice(0, limit);
+
+      // F. Pobieramy pełne rekordy pytań dla wylosowanych ID
       const { data, error } = await this.supabase
         .from('questions')
         .select('*')
         .in('id', shuffledIds);
 
       if (error) {
-        console.error('Błąd pobierania pytań dla standardowej kategorii:', error);
+        console.error('Błąd pobierania pełnych danych pytań:', error);
         return [];
       }
       rawQuestions = data || [];
     }
 
-    // 3. Wspólne mapowanie struktury odpowiedzi...
-    return rawQuestions.map((q) => {
+    // 3. Mapowanie struktury (Zostaje bez zmian, pilnuje poprawnych tekstów pytań)
+    return rawQuestions.map((q: any) => {
       const finalAnswers = q.answers || q.answers_json || q.data?.answers || [];
+      const catId = q.category_id || q.data?.category_id;
+
+      const originalQuestion = q.question || '';
+      let questionText = originalQuestion;
+
+      if (catId === 37 || catId === '37' || isMovieCast) {
+        questionText = 'W jakim filmie zagrała taka obsada?';
+      } else if (catId === 38 || catId === '38' || isSeriesCast) {
+        questionText = 'W jakim serialu zagrała taka obsada?';
+      } else if (catId === 30 || catId === '30' || isMovieHeroes) {
+        questionText = originalQuestion.toLowerCase().includes('film po bohaterach')
+          ? originalQuestion
+          : `Rozpoznaj film po bohaterach:\n${originalQuestion}`;
+      } else if (catId === 31 || catId === '31' || isSeriesHeroes) {
+        questionText = originalQuestion.toLowerCase().includes('serial po bohaterach')
+          ? originalQuestion
+          : `Rozpoznaj serial po bohaterach:\n${originalQuestion}`;
+      }
+
       return {
         ...q,
+        question: questionText,
         answers: Array.isArray(finalAnswers) ? finalAnswers : JSON.parse(finalAnswers || '[]'),
         revealedAnswers: q.revealed_answers || q.revealedAnswers || [],
       };
@@ -189,7 +236,6 @@ export class SupabaseService {
   }
 
   async getQuestions(categoryName: string, limit: number = 50) {
-    // Zachowujemy tę metodę bez zmian, jako że kod wewnętrzny może z niej bezpośrednio korzystać w innych modułach
     const { data: allIds } = await this.supabase
       .from('questions')
       .select('id, categories!inner(name)')
@@ -403,7 +449,7 @@ export class SupabaseService {
       .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
       .replace(/\s+/g, '_')
-      .replace(/[^a-z0-9_]/g, '');
+      .replace(/[^a-z0-9_]/g, ''); // <--- POPRAWIONE na `a-z`
 
     const fileName = `${cleanName}_${Date.now()}.${fileExt}`;
 
@@ -425,5 +471,73 @@ export class SupabaseService {
     const { error } = await this.supabase.from('buildings').insert([data]);
 
     if (error) throw error;
+  }
+
+  /* --- GEOGRAFIA (COUNTRIES) --- */
+
+  async getCountries() {
+    const { data, error } = await this.supabase
+      .from('countries')
+      .select('*')
+      .order('name', { ascending: true });
+
+    if (error) {
+      console.error('Błąd pobierania państw z Supabase:', error);
+      throw error;
+    }
+    return data || [];
+  }
+
+  async addCountry(countryData: {
+    name: string;
+    capital: string;
+    continent: string;
+    file_name?: string;
+  }) {
+    const { data, error } = await this.supabase
+      .from('countries')
+      .insert([countryData])
+      .select()
+      .single();
+
+    if (error) {
+      console.error('Błąd podczas dodawania państwa:', error);
+      throw error;
+    }
+    return data;
+  }
+
+  async updateCountry(
+    id: number,
+    countryData: { name: string; capital: string; continent: string; file_name?: string }
+  ) {
+    const { data, error } = await this.supabase
+      .from('countries')
+      .update(countryData)
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error(`Błąd aktualizacji państwa o ID ${id}:`, error);
+      throw error;
+    }
+    return data;
+  }
+
+  async getRandomCountries(amount: number = 50) {
+    const { data, error } = await this.supabase.rpc('get_random_countries', {
+      sample_size: amount,
+    });
+
+    if (error) {
+      console.warn(
+        'Błąd RPC get_random_countries, pobieram standardowo i losuję na frontendzie...',
+        error
+      );
+      const allCountries = await this.getCountries();
+      return allCountries.sort(() => Math.random() - 0.5).slice(0, amount);
+    }
+    return data;
   }
 }

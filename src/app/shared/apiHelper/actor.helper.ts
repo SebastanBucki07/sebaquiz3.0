@@ -1,6 +1,9 @@
 import { environment } from '../../../environments/environment.prod';
 import { TMDBPerson } from '../models/TMDB/tmdbPerson.interface';
 
+// Wyciągamy krótki klucz z environment
+const API_KEY = environment.apiToken;
+
 export function getImageUrl(filePath: string | null, size = 'w500'): string {
   if (!filePath) return 'assets/no-image.png'; // placeholder
   const baseUrl = 'https://image.tmdb.org/t/p/';
@@ -12,37 +15,30 @@ export async function getMovieIdByTitle(title: string): Promise<number | null> {
     if (!title) return null;
     const cleanTitle = title.trim();
 
-    // Krok 1: Próba wyszukania z lokalizacją pl-PL
-    let url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(cleanTitle)}&language=pl-PL&page=1`;
-    let res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    // Krok 1: Próba wyszukania z lokalizacją pl-PL (Autoryzacja przez URL usuwa CORS)
+    let url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(cleanTitle)}&language=pl-PL&page=1`;
+    let res = await fetch(url);
     let json = await res.json();
 
     if (json.results && json.results.length > 0) {
       return json.results[0].id;
     }
 
-    // Krok 2: Fallback - jeśli nie znalazło, próbujemy ogólnie bez języka
-    url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(cleanTitle)}&page=1`;
-    res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    // Krok 2: Fallback - ogólnie bez języka
+    url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(cleanTitle)}&page=1`;
+    res = await fetch(url);
     json = await res.json();
 
     if (json.results && json.results.length > 0) {
       return json.results[0].id;
     }
 
-    // Krok 3: Ostateczny Fallback - upraszczamy tytuł (usuwamy podtytuły po dwukropkach, myślnikach)
-    // Przydatne dla tytułów typu "Matrix: Reaktywacja" -> szuka samo "Matrix"
+    // Krok 3: Ostateczny Fallback - upraszczamy tytuł
     const simplifiedTitle = cleanTitle.split(':')[0].split('-')[0].trim();
     if (simplifiedTitle !== cleanTitle) {
       console.log(`[TMDB] Upraszczam wyszukiwanie filmu do: ${simplifiedTitle}`);
-      url = `https://api.themoviedb.org/3/search/movie?query=${encodeURIComponent(simplifiedTitle)}&page=1`;
-      res = await fetch(url, {
-        headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-      });
+      url = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${encodeURIComponent(simplifiedTitle)}&page=1`;
+      res = await fetch(url);
       json = await res.json();
 
       if (json.results && json.results.length > 0) {
@@ -64,10 +60,8 @@ export async function getTvIdByTitle(title: string): Promise<number | null> {
     const cleanTitle = title.trim();
 
     // Krok 1: Próba wyszukania z lokalizacją pl-PL
-    let url = `https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(cleanTitle)}&language=pl-PL&page=1`;
-    let res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    let url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(cleanTitle)}&language=pl-PL&page=1`;
+    let res = await fetch(url);
     let json = await res.json();
 
     if (json.results && json.results.length > 0) {
@@ -75,10 +69,8 @@ export async function getTvIdByTitle(title: string): Promise<number | null> {
     }
 
     // Krok 2: Fallback - bez języka
-    url = `https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(cleanTitle)}&page=1`;
-    res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(cleanTitle)}&page=1`;
+    res = await fetch(url);
     json = await res.json();
 
     if (json.results && json.results.length > 0) {
@@ -89,10 +81,8 @@ export async function getTvIdByTitle(title: string): Promise<number | null> {
     const simplifiedTitle = cleanTitle.split(':')[0].split('-')[0].trim();
     if (simplifiedTitle !== cleanTitle) {
       console.log(`[TMDB] Upraszczam wyszukiwanie serialu do: ${simplifiedTitle}`);
-      url = `https://api.themoviedb.org/3/search/tv?query=${encodeURIComponent(simplifiedTitle)}&page=1`;
-      res = await fetch(url, {
-        headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-      });
+      url = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=${encodeURIComponent(simplifiedTitle)}&page=1`;
+      res = await fetch(url);
       json = await res.json();
 
       if (json.results && json.results.length > 0) {
@@ -110,10 +100,8 @@ export async function getTvIdByTitle(title: string): Promise<number | null> {
 
 export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBPerson[]> {
   try {
-    const url = `https://api.themoviedb.org/3/movie/${movieId}/credits`;
-    const res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    const url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`;
+    const res = await fetch(url);
     const data = await res.json();
 
     return (data.cast || []).slice(0, limit).map((actor: any) => ({
@@ -129,10 +117,8 @@ export async function getMovieCast(movieId: number, limit = 8): Promise<TMDBPers
 
 export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> {
   try {
-    const url = `https://api.themoviedb.org/3/tv/${tvId}/credits`;
-    const res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    const url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}`;
+    const res = await fetch(url);
     const data = await res.json();
 
     return (data.cast || []).slice(0, limit).map((actor: any) => ({
@@ -146,107 +132,104 @@ export async function getTvCast(tvId: number, limit = 8): Promise<TMDBPerson[]> 
   }
 }
 
-export async function getMovieCharacters(movieId: number, limit = 5): Promise<string> {
-  try {
-    // 1. Najpierw pytamy wersję polską
-    let url = `https://api.themoviedb.org/3/movie/${movieId}/credits?language=pl-PL`;
-    let res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
-    let data = await res.json();
+/**
+ * 🔥 Poprawiony wspólny zaawansowany filtr śmieci z API.
+ * Dodaliśmy parametr 'title', aby usuwać bohaterów, których imiona zdradzają tytuł.
+ */
+const extractValidCharacters = (castArray: any[], title: string = ''): string[] => {
+  if (!castArray) return [];
+  const tLower = title.toLowerCase().trim();
 
-    // Funkcja pomocnicza do czyszczenia i filtrowania obsady
-    const extractValidCharacters = (castArray: any[]): string[] => {
-      if (!castArray) return [];
-      return castArray
-        .map((actor: any) => ({
-          char: actor.character ? actor.character.trim() : '',
-          name: actor.name ? actor.name.trim() : '',
-        }))
-        .filter((item) => {
-          const cLower = item.char.toLowerCase();
-          // Eliminujemy puste pola i oczywiste śmieci z API
-          if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
-          if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself'))
-            return false;
-          if (cLower.includes('voice') || cLower.includes('głos')) return false;
-          // Jeśli imię bohatera jest takie samo jak nazwisko aktora, to błąd w TMDB - odrzucamy
-          if (item.char === item.name) return false;
-          return true;
-        })
-        .map((item) => item.char);
-    };
+  return castArray
+  .map((actor: any) => ({
+    char: actor.character ? actor.character.trim() : '',
+    name: actor.name ? actor.name.trim() : '',
+  }))
+  .filter((item) => {
+    const cLower = item.char.toLowerCase();
+    const nLower = item.name.toLowerCase();
 
-    // Pobieramy szeroką pulę (20-25 osób), żeby mieć z czego filtrować prawdziwych bohaterów
-    let validCharacters = extractValidCharacters(data.cast || []);
+    if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
+    if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself')) return false;
+    if (cLower.includes('voice') || cLower.includes('głos')) return false;
+    if (cLower.includes('extra') || cLower.includes('statysta') || cLower.includes('background')) return false;
 
-    // 2. Fallback: Jeśli polska wersja dała pustkę, natychmiast uderzamy po wersję domyślną (EN)
-    if (validCharacters.length === 0) {
-      console.log(
-        `[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`
-      );
-      url = `https://api.themoviedb.org/3/movie/${movieId}/credits`;
-      res = await fetch(url, {
-        headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-      });
-      data = await res.json();
-      validCharacters = extractValidCharacters(data.cast || []);
+    // 1. Usuwamy sytuacje, gdzie imię aktora pokrywa się z postacią
+    const nameParts: string[] = nLower.split(/\s+/).filter((part: string) => part.length > 2);
+    for (const part of nameParts) {
+      if (cLower.includes(part)) return false;
     }
 
-    // Zwracamy maksymalnie tyle unikalnych bohaterów, o ile prosił komponent (domyślnie 5)
-    const finalResult = validCharacters.slice(0, limit).join(', ');
-    return finalResult || 'Brak przypisanych bohaterów w API';
+    if (cLower.includes(' / ') || cLower.includes(' jako ') || cLower.includes(' as ')) return false;
+    if (cLower.includes('(') || cLower.includes(')')) return false;
+    if (item.char.split(',').length > 2) return false;
+
+    // ========================================================
+    // 🔥 NOWA WALIDACJA: BLOKOWANIE BOHATERÓW W TYTULE
+    // ========================================================
+    if (tLower.length > 0) {
+      // A. Jeśli cały tytuł zawiera imię bohatera (np. tytuł "Shrek" zawiera "Shrek")
+      if (tLower.includes(cLower) || cLower.includes(tLower)) return false;
+
+      // B. Jeśli tytuł jest wieloczłonowy, rozbijamy go na pojedyncze słowa (dłuższe niż 2 znaki)
+      // Zapobiega to sytuacji typu: tytuł "Harry Potter i Kamień Filozoficzny" zdradza bohatera "Harry Potter"
+      const titleParts = tLower.split(/[\s:,\-]+/).filter((part: string) => part.length > 2);
+      for (const part of titleParts) {
+        if (cLower.includes(part)) {
+          console.log(`[TMDB VALIDATION] Odrzucono bohatera "${item.char}" dla tytułu "${title}" (częściowe pokrycie: "${part}")`);
+          return false;
+        }
+      }
+    }
+    // ========================================================
+
+    return true;
+  })
+  .map((item) => item.char);
+};
+
+export async function getMovieCharacters(movieId: number, limit = 5, title: string = ''): Promise<string> {
+  try {
+    let url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=pl-PL`;
+    let res = await fetch(url);
+    let data = await res.json();
+
+    // Przekazujemy title do filtra
+    let validCharacters = extractValidCharacters(data.cast || [], title);
+
+    if (validCharacters.length === 0) {
+      console.log(`[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`);
+      url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`;
+      res = await fetch(url);
+      data = await res.json();
+      validCharacters = extractValidCharacters(data.cast || [], title);
+    }
+
+    return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';
   } catch (err) {
     console.warn(`getMovieCharacters failed for ID: ${movieId}`, err);
     return 'Błąd ładowania bohaterów';
   }
 }
 
-export async function getTvCharacters(tvId: number, limit = 5): Promise<string> {
+export async function getTvCharacters(tvId: number, limit = 5, title: string = ''): Promise<string> {
   try {
-    // 1. Najpierw pytamy wersję polską
-    let url = `https://api.themoviedb.org/3/tv/${tvId}/credits?language=pl-PL`;
-    let res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    let url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}&language=pl-PL`;
+    let res = await fetch(url);
     let data = await res.json();
 
-    const extractValidCharacters = (castArray: any[]): string[] => {
-      if (!castArray) return [];
-      return castArray
-        .map((actor: any) => ({
-          char: actor.character ? actor.character.trim() : '',
-          name: actor.name ? actor.name.trim() : '',
-        }))
-        .filter((item) => {
-          const cLower = item.char.toLowerCase();
-          if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
-          if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself'))
-            return false;
-          if (cLower.includes('voice') || cLower.includes('głos')) return false;
-          if (item.char === item.name) return false;
-          return true;
-        })
-        .map((item) => item.char);
-    };
+    // Przekazujemy title do filtra
+    let validCharacters = extractValidCharacters(data.cast || [], title);
 
-    let validCharacters = extractValidCharacters(data.cast || []);
-
-    // 2. Fallback: Jeśli puste, wersja domyślna
     if (validCharacters.length === 0) {
-      console.log(
-        `[TMDB] Brak unikalnych bohaterów PL dla serialu ID ${tvId}. Próba pobrania wersji domyślnej...`
-      );
-      url = `https://api.themoviedb.org/3/tv/${tvId}/credits`;
-      res = await fetch(url, {
-        headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-      });
+      console.log(`[TMDB] Brak unikalnych bohaterów PL dla serialu ID ${tvId}. Próba pobrania wersji domyślnej...`);
+      url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}`;
+      res = await fetch(url);
       data = await res.json();
-      validCharacters = extractValidCharacters(data.cast || []);
+      validCharacters = extractValidCharacters(data.cast || [], title);
     }
 
-    const finalResult = validCharacters.slice(0, limit).join(', ');
-    return finalResult || 'Brak przypisanych bohaterów w API';
+    return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';
   } catch (err) {
     console.warn(`getTvCharacters failed for ID: ${tvId}`, err);
     return 'Błąd ładowania bohaterów';
@@ -255,10 +238,8 @@ export async function getTvCharacters(tvId: number, limit = 5): Promise<string> 
 
 export async function getActorPhotoByName(name: string): Promise<string> {
   try {
-    const url = `https://api.themoviedb.org/3/search/person?query=${encodeURIComponent(name)}`;
-    const res = await fetch(url, {
-      headers: { accept: 'application/json', Authorization: `Bearer ${environment.apiToken}` },
-    });
+    const url = `https://api.themoviedb.org/3/search/person?api_key=${API_KEY}&query=${encodeURIComponent(name)}`;
+    const res = await fetch(url);
     const data = await res.json();
 
     const personWithPhoto = data.results?.find((p: any) => p.profile_path);
