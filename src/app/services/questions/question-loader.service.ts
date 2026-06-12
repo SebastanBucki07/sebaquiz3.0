@@ -12,6 +12,7 @@ import { mapCountriesToQuestions } from '../../shared/mappers/countries.mapper';
 import {
   getMovieCharacters,
   getMovieIdByTitle,
+  getTopMoviesByDirector,
   getTvCharacters,
   getTvIdByTitle,
 } from '../../shared/apiHelper/actor.helper';
@@ -61,7 +62,7 @@ export class QuestionLoaderService {
     ) {
       questions = await this.handleFootballCrests();
     } else {
-      // 2. Obsługa bazy danych Supabase (w tym "Serial po bohaterach" oraz "Obsada")
+      // 2. Obsługa bazy danych Supabase (w tym Bohaterowie, Obsada i Reżyserzy)
       questions = await this.handleDatabaseQuestions(cleanType, cleanName);
     }
 
@@ -184,14 +185,15 @@ export class QuestionLoaderService {
     try {
       const lowerName = name.toLowerCase().trim();
 
-      // Sztywny mapownik nazw, aby upewnić się, że do Supabase leci IDEALNY string,
-      // taki sam jak w kolumnie 'name' w tabeli public.categories
+      // Sztywny mapownik nazw, aby upewnić się, że do Supabase leci IDEALNY string
       let categoryToQuery = name.trim();
 
       if (lowerName === 'serial po bohaterach') {
-        categoryToQuery = 'Serial po bohaterach'; // Dokładna nazwa z tabeli public.categories
+        categoryToQuery = 'Serial po bohaterach';
       } else if (lowerName === 'film po bohaterach') {
         categoryToQuery = 'Film po bohaterach';
+      } else if (lowerName.includes('reżyser')) {
+        categoryToQuery = 'Reżyser po filmach';
       } else if (lowerName.includes('obsada') && lowerName.includes('serial')) {
         categoryToQuery = 'W jakim serialu zagrała taka obsada?';
       } else if (lowerName.includes('obsada') && lowerName.includes('film')) {
@@ -208,13 +210,20 @@ export class QuestionLoaderService {
       if (!dbQuestions || dbQuestions.length === 0) return [];
 
       let processed = await Promise.all(
-        (dbQuestions as any[]).map(async (q, index) => {
+        (dbQuestions as any[]).map(async (q) => {
           if (type === 'familiada') return mapOldFamiliadaToNew(q);
 
+          // 1. Kategoria: Bohaterowie
           if (lowerName.includes('bohater')) {
             return await this.enrichWithTmdbHeroes(q, lowerName);
           }
 
+          // 2. Kategoria: Reżyserzy
+          if (lowerName.includes('reżyser')) {
+            return await this.enrichWithTmdbDirector(q);
+          }
+
+          // 3. Kategoria: Obsada
           if (lowerName.includes('obsada')) {
             const visualType = lowerName.includes('film') ? 'filmie' : 'serialu';
             return {
@@ -253,7 +262,6 @@ export class QuestionLoaderService {
   private async handleFallbackStrategies(type: string, name: string): Promise<Question[]> {
     const lowerName = name.toLowerCase().trim();
 
-    // Szukamy w rejestrze klucza, który PO DWUKROPKU zawiera naszą nazwę kategorii
     const strategyKey = Object.keys(this.OLD_STRATEGIES).find(k => {
       const parts = k.split(':');
       const categoryPart = parts[1] ? parts[1].toLowerCase().trim() : parts[0].toLowerCase().trim();
@@ -276,8 +284,14 @@ export class QuestionLoaderService {
       return processedFallback.filter((item): item is Question => item !== null);
     }
 
-    // 🔥 POPRAWKA: Usunęliśmy getRandomSubset dla obsady.
-    // Teraz zwracamy całą tablicę z pliku JSON bez żadnego limitu.
+    // Jeśli fallback dotyczy reżyserów, przechodzimy przez enrichment dla reżysera
+    if (lowerName.includes('reżyser')) {
+      const processedFallback = await Promise.all(rawQuestions.map(async (q) => {
+        return await this.enrichWithTmdbDirector(q);
+      }));
+      return processedFallback.filter((item): item is Question => item !== null);
+    }
+
     return rawQuestions;
   }
 
@@ -314,6 +328,41 @@ export class QuestionLoaderService {
       };
     } catch (e) {
       console.error(`[API TMDB ERROR] Problem z tytułem: ${title}`, e);
+      return null;
+    }
+  }
+
+  /**
+   * Pobiera najpopularniejsze filmy reżysera z zewnętrznego API TMDB i dokleja jako podpowiedź.
+   */
+  private async enrichWithTmdbDirector(q: any): Promise<Question | null> {
+    const directorName = q.answers?.[0]?.value || '';
+    if (!directorName) return null;
+
+    try {
+      const movies = await getTopMoviesByDirector(directorName, 5);
+
+      if (!movies || movies.startsWith('Nie znaleziono') || movies.startsWith('Brak filmów') || movies.startsWith('Błąd')) {
+        console.warn(`[TMDB REGULATOR] Odrzucono reżysera "${directorName}" – brak filmów w API.`);
+        return null;
+      }
+
+      return {
+        ...q,
+        type: 'hints',
+        question: 'Reżyser po filmach',
+        hints: [
+          {
+            id: 'h_director_movies',
+            label: 'Pokaż filmy tego reżysera',
+            content: movies,
+            penaltyPercent: 25
+          },
+        ],
+        revealedAnswers: q.revealedAnswers || [],
+      };
+    } catch (e) {
+      console.error(`[API TMDB ERROR] Problem z reżyserem: ${directorName}`, e);
       return null;
     }
   }
@@ -391,7 +440,6 @@ export class QuestionLoaderService {
     'hints:Film po bohaterach': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/movieHeroes.questions.json')),
 
-    // Pobieranie "Serial po bohaterach" prosto z bazy danych przez SupabaseService
     'hints:Serial po bohaterach': async () => {
       return await this.supabaseService.getQuestionsByCategoryWithAdditional(
         'Serial po bohaterach'
@@ -402,8 +450,13 @@ export class QuestionLoaderService {
       firstValueFrom(this.http.get<Question[]>('/questions/worldCities.questions.json')),
     'hints:Łaicnskie sentencje': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/latinMaxims.questions.json')),
-    'hints:Reżyser po filmach': () =>
-      firstValueFrom(this.http.get<Question[]>('/questions/directors.questions.json')),
+
+    'hints:Reżyser po filmach': async () => {
+      return await this.supabaseService.getQuestionsByCategoryWithAdditional(
+        'Reżyser po filmach'
+      );
+    },
+
     'hints:Odległosci miedzymiastowe': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/citiesDistance.questions.json')),
 

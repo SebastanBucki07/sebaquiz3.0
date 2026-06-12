@@ -172,7 +172,6 @@ const extractValidCharacters = (castArray: any[], title: string = ''): string[] 
       if (tLower.includes(cLower) || cLower.includes(tLower)) return false;
 
       // B. Jeśli tytuł jest wieloczłonowy, rozbijamy go na pojedyncze słowa (dłuższe niż 2 znaki)
-      // Zapobiega to sytuacji typu: tytuł "Harry Potter i Kamień Filozoficzny" zdradza bohatera "Harry Potter"
       const titleParts = tLower.split(/[\s:,\-]+/).filter((part: string) => part.length > 2);
       for (const part of titleParts) {
         if (cLower.includes(part)) {
@@ -194,7 +193,6 @@ export async function getMovieCharacters(movieId: number, limit = 5, title: stri
     let res = await fetch(url);
     let data = await res.json();
 
-    // Przekazujemy title do filtra
     let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
@@ -205,7 +203,8 @@ export async function getMovieCharacters(movieId: number, limit = 5, title: stri
       validCharacters = extractValidCharacters(data.cast || [], title);
     }
 
-    return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';
+    // 🔥 UŻYCIE NOWEJ METODY FORMATUJĄCEJ
+    return formatListWithBullets(validCharacters, limit) || 'Brak przypisanych bohaterów w API';
   } catch (err) {
     console.warn(`getMovieCharacters failed for ID: ${movieId}`, err);
     return 'Błąd ładowania bohaterów';
@@ -218,7 +217,6 @@ export async function getTvCharacters(tvId: number, limit = 5, title: string = '
     let res = await fetch(url);
     let data = await res.json();
 
-    // Przekazujemy title do filtra
     let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
@@ -229,7 +227,8 @@ export async function getTvCharacters(tvId: number, limit = 5, title: string = '
       validCharacters = extractValidCharacters(data.cast || [], title);
     }
 
-    return validCharacters.slice(0, limit).join(', ') || 'Brak przypisanych bohaterów w API';
+    // 🔥 UŻYCIE NOWEJ METODY FORMATUJĄCEJ
+    return formatListWithBullets(validCharacters, limit) || 'Brak przypisanych bohaterów w API';
   } catch (err) {
     console.warn(`getTvCharacters failed for ID: ${tvId}`, err);
     return 'Błąd ładowania bohaterów';
@@ -250,4 +249,61 @@ export async function getActorPhotoByName(name: string): Promise<string> {
     console.warn('getActorPhotoByName failed', err);
     return 'assets/no-image.png';
   }
+}
+
+export async function getTopMoviesByDirector(directorName: string, limit = 5): Promise<string> {
+  try {
+    if (!directorName) return 'Brak przypisanych filmów';
+    const cleanName = directorName.trim();
+
+    const searchUrl = `https://api.themoviedb.org/3/search/person?api_key=${API_KEY}&query=${encodeURIComponent(cleanName)}&language=pl-PL&page=1`;
+    const searchRes = await fetch(searchUrl);
+    const searchJson = await searchRes.json();
+
+    if (!searchJson.results || searchJson.results.length === 0) {
+      console.warn(`[TMDB] Nie odnaleziono reżysera: ${cleanName}`);
+      return 'Nie znaleziono reżysera w API';
+    }
+
+    const directorId = searchJson.results[0].id;
+
+    const creditsUrl = `https://api.themoviedb.org/3/person/${directorId}/movie_credits?api_key=${API_KEY}&language=pl-PL`;
+    const creditsRes = await fetch(creditsUrl);
+    const creditsJson = await creditsRes.json();
+
+    if (!creditsJson.crew || creditsJson.crew.length === 0) {
+      return 'Brak filmów reżyserskich w API';
+    }
+
+    const directedMovies = creditsJson.crew
+    .filter((movie: any) => movie.job && movie.job.toLowerCase() === 'director')
+    .filter((movie: any) => movie.title && movie.title.trim() !== '')
+    .sort((a: any, b: any) => (b.popularity || 0) - (a.popularity || 0));
+
+    if (directedMovies.length === 0) {
+      return 'Brak filmów reżyserskich w API';
+    }
+
+    const rawTitles = directedMovies.map((m: any) => m.title);
+
+    // 🔥 UŻYCIE NOWEJ METODY FORMATUJĄCEJ
+    return formatListWithBullets(rawTitles, limit);
+  } catch (err) {
+    console.warn(`getTopMoviesByDirector failed for: ${directorName}`, err);
+    return 'Błąd ładowania filmów reżysera';
+  }
+}
+
+function formatListWithBullets(items: string[], limit: number): string {
+  const uniqueItems: string[] = [];
+
+  for (const item of items) {
+    const cleanItem = item.trim();
+    if (cleanItem && !uniqueItems.includes(cleanItem)) {
+      uniqueItems.push(cleanItem);
+    }
+    if (uniqueItems.length === limit) break;
+  }
+
+  return uniqueItems.map(item => `• ${item}`).join('\n');
 }
