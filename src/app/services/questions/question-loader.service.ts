@@ -22,7 +22,6 @@ import { IMPREZY_SPORTOWE } from '../../shared/questions/footballChampionsMusic.
 import { HYMNY_PANSTWOWE } from '../../shared/questions/nationalAnthems.questions';
 import { BAJKOWE_INTRO } from '../../shared/questions/fairyTalesIntros.questions';
 import { BOGOWIE } from '../../../../depricatedData/gods.questions';
-import { HISTORIA } from '../../shared/questions/history.questions';
 import { STADIONY } from '../../../../depricatedData/stadiums.questions';
 import { PRZYSLOWIA } from '../../../../depricatedData/proverbs.questions';
 import { KLUBOWE_PRZYDOMKI } from '../../../../depricatedData/footballClubsNames.questions';
@@ -61,8 +60,16 @@ export class QuestionLoaderService {
       cleanName.toLowerCase() === 'jaki to herb piłkarski?'
     ) {
       questions = await this.handleFootballCrests();
+    }
+    // === TUTAJ POPRAWIAMY WARUNEK ===
+    else if (
+      cleanName.toLowerCase().includes('historia') ||
+      cleanName.toLowerCase().includes('kto to zrobił?')
+    ) {
+      console.log(`[DEBUG NOWA BAZA] Przechwycono kategorię historyczną: "${cleanName}"`);
+      questions = await this.handleDynamicHistory(cleanName);
     } else {
-      // 2. Obsługa bazy danych Supabase (w tym Bohaterowie, Obsada i Reżyserzy)
+      // 2. Obsługa starej bazy danych Supabase (Bohaterowie, Obsada, Reżyserzy)
       questions = await this.handleDatabaseQuestions(cleanType, cleanName);
     }
 
@@ -181,6 +188,66 @@ export class QuestionLoaderService {
     }
   }
 
+  private async handleDynamicHistory(name: string): Promise<Question[]> {
+    try {
+      const lowerName = name.toLowerCase().trim();
+
+      // CASE A: Kategoria "Kto to zrobił?" -> czyste one-answer (bez podpowiedzi)
+      if (lowerName.includes('kto to zrobił?')) {
+        console.log('[DEBUG HISTORIA] Ładuję postacie historyczne (one-answer)...');
+        const events = await this.supabaseService.getEventsWithPersons(50);
+
+        return events.map((e: any) => ({
+          id: e.id,
+          type: 'one-answer',
+          question: `Kto jest odpowiedzialny za to wydarzenie lub odkrycie: "${e.event_name}"?`,
+          answers: [{ label: 'odpowiedz', value: e.person.trim() }],
+          hints: [],
+          revealedAnswers: [],
+        }));
+      }
+
+      // CASE B: Standardowa kategoria "Historia" -> tryb one-answer z obsługą dokładnej daty
+      if (lowerName.includes('historia')) {
+        console.log('[DEBUG HISTORIA] Ładuję daty (one-answer + exact_date)...');
+        const events = await this.supabaseService.getRandomHistoryEvents(50);
+
+        return events.map((e: any) => {
+          let questionText = '';
+          let correctAnswer = '';
+
+          // 1. Warunek: Jeśli istnieje dokładna data (Format YYYY-MM-DD)
+          if (e.exact_date && e.exact_date.trim() !== '') {
+            questionText = `Podaj dokładną datę wydarzenia (w formacie RRRR-MM-DD): ${e.event_name}`;
+            correctAnswer = e.exact_date.trim();
+          }
+          // 2. Warunek awaryjny: Jeśli mamy tylko rok
+          else {
+            // Formatowanie ery przed naszą erą (ujemne lata z bazy)
+            const formattedYear = e.year < 0 ? `${Math.abs(e.year)} p.n.e.` : e.year.toString();
+
+            questionText = `W którym roku miało miejsce to wydarzenie: ${e.event_name}?`;
+            correctAnswer = formattedYear.trim();
+          }
+
+          return {
+            id: e.id,
+            type: 'one-answer',
+            question: questionText,
+            answers: [{ label: 'odpowiedz', value: correctAnswer }],
+            hints: [],
+            revealedAnswers: [],
+          };
+        });
+      }
+
+      return [];
+    } catch (error) {
+      console.error(`[QuestionLoader] Błąd ładowania dynamicznej historii:`, error);
+      return [];
+    }
+  }
+
   private async handleDatabaseQuestions(type: string, name: string): Promise<Question[]> {
     try {
       const lowerName = name.toLowerCase().trim();
@@ -262,14 +329,16 @@ export class QuestionLoaderService {
   private async handleFallbackStrategies(type: string, name: string): Promise<Question[]> {
     const lowerName = name.toLowerCase().trim();
 
-    const strategyKey = Object.keys(this.OLD_STRATEGIES).find(k => {
+    const strategyKey = Object.keys(this.OLD_STRATEGIES).find((k) => {
       const parts = k.split(':');
       const categoryPart = parts[1] ? parts[1].toLowerCase().trim() : parts[0].toLowerCase().trim();
       return categoryPart === lowerName;
     });
 
     if (!strategyKey) {
-      console.warn(`[DEBUG FALLBACK] Brak zdefiniowanej strategii pliku JSON dla kategorii: "${name}"`);
+      console.warn(
+        `[DEBUG FALLBACK] Brak zdefiniowanej strategii pliku JSON dla kategorii: "${name}"`
+      );
       return [];
     }
 
@@ -278,17 +347,21 @@ export class QuestionLoaderService {
 
     // Jeśli fallback dotyczy bohaterów, to przechodzimy przez enrichment z TMDB
     if (lowerName.includes('bohater')) {
-      const processedFallback = await Promise.all(rawQuestions.map(async (q) => {
-        return await this.enrichWithTmdbHeroes(q, lowerName);
-      }));
+      const processedFallback = await Promise.all(
+        rawQuestions.map(async (q) => {
+          return await this.enrichWithTmdbHeroes(q, lowerName);
+        })
+      );
       return processedFallback.filter((item): item is Question => item !== null);
     }
 
     // Jeśli fallback dotyczy reżyserów, przechodzimy przez enrichment dla reżysera
     if (lowerName.includes('reżyser')) {
-      const processedFallback = await Promise.all(rawQuestions.map(async (q) => {
-        return await this.enrichWithTmdbDirector(q);
-      }));
+      const processedFallback = await Promise.all(
+        rawQuestions.map(async (q) => {
+          return await this.enrichWithTmdbDirector(q);
+        })
+      );
       return processedFallback.filter((item): item is Question => item !== null);
     }
 
@@ -342,7 +415,12 @@ export class QuestionLoaderService {
     try {
       const movies = await getTopMoviesByDirector(directorName, 5);
 
-      if (!movies || movies.startsWith('Nie znaleziono') || movies.startsWith('Brak filmów') || movies.startsWith('Błąd')) {
+      if (
+        !movies ||
+        movies.startsWith('Nie znaleziono') ||
+        movies.startsWith('Brak filmów') ||
+        movies.startsWith('Błąd')
+      ) {
         console.warn(`[TMDB REGULATOR] Odrzucono reżysera "${directorName}" – brak filmów w API.`);
         return null;
       }
@@ -356,7 +434,7 @@ export class QuestionLoaderService {
             id: 'h_director_movies',
             label: 'Pokaż filmy tego reżysera',
             content: movies,
-            penaltyPercent: 25
+            penaltyPercent: 25,
           },
         ],
         revealedAnswers: q.revealedAnswers || [],
@@ -421,7 +499,12 @@ export class QuestionLoaderService {
     'one-answer:Gry': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/games.questions.json')),
     'one-answer:Bogowie': async () => BOGOWIE,
-    'one-answer:Historia': async () => HISTORIA,
+    'one-answer:Historia': async () => {
+      return await this.handleDynamicHistory('historia');
+    },
+    'hints:Kto to zrobił?': async () => {
+      return await this.handleDynamicHistory('kto to zrobił?');
+    },
     'one-answer:Fizyka': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/physics.questions.json')),
     'one-answer:Miasto - Województwo': () =>
@@ -452,9 +535,7 @@ export class QuestionLoaderService {
       firstValueFrom(this.http.get<Question[]>('/questions/latinMaxims.questions.json')),
 
     'hints:Reżyser po filmach': async () => {
-      return await this.supabaseService.getQuestionsByCategoryWithAdditional(
-        'Reżyser po filmach'
-      );
+      return await this.supabaseService.getQuestionsByCategoryWithAdditional('Reżyser po filmach');
     },
 
     'hints:Odległosci miedzymiastowe': () =>

@@ -141,53 +141,62 @@ const extractValidCharacters = (castArray: any[], title: string = ''): string[] 
   const tLower = title.toLowerCase().trim();
 
   return castArray
-  .map((actor: any) => ({
-    char: actor.character ? actor.character.trim() : '',
-    name: actor.name ? actor.name.trim() : '',
-  }))
-  .filter((item) => {
-    const cLower = item.char.toLowerCase();
-    const nLower = item.name.toLowerCase();
+    .map((actor: any) => ({
+      char: actor.character ? actor.character.trim() : '',
+      name: actor.name ? actor.name.trim() : '',
+    }))
+    .filter((item) => {
+      const cLower = item.char.toLowerCase();
+      const nLower = item.name.toLowerCase();
 
-    if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
-    if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself')) return false;
-    if (cLower.includes('voice') || cLower.includes('głos')) return false;
-    if (cLower.includes('extra') || cLower.includes('statysta') || cLower.includes('background')) return false;
+      if (!item.char || cLower === '' || cLower.includes('uncredited')) return false;
+      if (cLower.includes('self') || cLower.includes('himself') || cLower.includes('herself'))
+        return false;
+      if (cLower.includes('voice') || cLower.includes('głos')) return false;
+      if (cLower.includes('extra') || cLower.includes('statysta') || cLower.includes('background'))
+        return false;
 
-    // 1. Usuwamy sytuacje, gdzie imię aktora pokrywa się z postacią
-    const nameParts: string[] = nLower.split(/\s+/).filter((part: string) => part.length > 2);
-    for (const part of nameParts) {
-      if (cLower.includes(part)) return false;
-    }
+      // 1. Usuwamy sytuacje, gdzie imię aktora pokrywa się z postacią
+      const nameParts: string[] = nLower.split(/\s+/).filter((part: string) => part.length > 2);
+      for (const part of nameParts) {
+        if (cLower.includes(part)) return false;
+      }
 
-    if (cLower.includes(' / ') || cLower.includes(' jako ') || cLower.includes(' as ')) return false;
-    if (cLower.includes('(') || cLower.includes(')')) return false;
-    if (item.char.split(',').length > 2) return false;
+      if (cLower.includes(' / ') || cLower.includes(' jako ') || cLower.includes(' as '))
+        return false;
+      if (cLower.includes('(') || cLower.includes(')')) return false;
+      if (item.char.split(',').length > 2) return false;
 
-    // ========================================================
-    // 🔥 NOWA WALIDACJA: BLOKOWANIE BOHATERÓW W TYTULE
-    // ========================================================
-    if (tLower.length > 0) {
-      // A. Jeśli cały tytuł zawiera imię bohatera (np. tytuł "Shrek" zawiera "Shrek")
-      if (tLower.includes(cLower) || cLower.includes(tLower)) return false;
+      // ========================================================
+      // 🔥 NOWA WALIDACJA: BLOKOWANIE BOHATERÓW W TYTULE
+      // ========================================================
+      if (tLower.length > 0) {
+        // A. Jeśli cały tytuł zawiera imię bohatera (np. tytuł "Shrek" zawiera "Shrek")
+        if (tLower.includes(cLower) || cLower.includes(tLower)) return false;
 
-      // B. Jeśli tytuł jest wieloczłonowy, rozbijamy go na pojedyncze słowa (dłuższe niż 2 znaki)
-      const titleParts = tLower.split(/[\s:,\-]+/).filter((part: string) => part.length > 2);
-      for (const part of titleParts) {
-        if (cLower.includes(part)) {
-          console.log(`[TMDB VALIDATION] Odrzucono bohatera "${item.char}" dla tytułu "${title}" (częściowe pokrycie: "${part}")`);
-          return false;
+        // B. Jeśli tytuł jest wieloczłonowy, rozbijamy go na pojedyncze słowa (dłuższe niż 2 znaki)
+        const titleParts = tLower.split(/[\s:,\-]+/).filter((part: string) => part.length > 2);
+        for (const part of titleParts) {
+          if (cLower.includes(part)) {
+            console.log(
+              `[TMDB VALIDATION] Odrzucono bohatera "${item.char}" dla tytułu "${title}" (częściowe pokrycie: "${part}")`
+            );
+            return false;
+          }
         }
       }
-    }
-    // ========================================================
+      // ========================================================
 
-    return true;
-  })
-  .map((item) => item.char);
+      return true;
+    })
+    .map((item) => item.char);
 };
 
-export async function getMovieCharacters(movieId: number, limit = 5, title: string = ''): Promise<string> {
+export async function getMovieCharacters(
+  movieId: number,
+  limit = 5,
+  title: string = ''
+): Promise<string> {
   try {
     let url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}&language=pl-PL`;
     let res = await fetch(url);
@@ -196,7 +205,9 @@ export async function getMovieCharacters(movieId: number, limit = 5, title: stri
     let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
-      console.log(`[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`);
+      console.log(
+        `[TMDB] Brak unikalnych bohaterów PL dla filmu ID ${movieId}. Próba pobrania wersji domyślnej...`
+      );
       url = `https://api.themoviedb.org/3/movie/${movieId}/credits?api_key=${API_KEY}`;
       res = await fetch(url);
       data = await res.json();
@@ -211,7 +222,11 @@ export async function getMovieCharacters(movieId: number, limit = 5, title: stri
   }
 }
 
-export async function getTvCharacters(tvId: number, limit = 5, title: string = ''): Promise<string> {
+export async function getTvCharacters(
+  tvId: number,
+  limit = 5,
+  title: string = ''
+): Promise<string> {
   try {
     let url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}&language=pl-PL`;
     let res = await fetch(url);
@@ -220,7 +235,9 @@ export async function getTvCharacters(tvId: number, limit = 5, title: string = '
     let validCharacters = extractValidCharacters(data.cast || [], title);
 
     if (validCharacters.length === 0) {
-      console.log(`[TMDB] Brak unikalnych bohaterów PL dla serialu ID ${tvId}. Próba pobrania wersji domyślnej...`);
+      console.log(
+        `[TMDB] Brak unikalnych bohaterów PL dla serialu ID ${tvId}. Próba pobrania wersji domyślnej...`
+      );
       url = `https://api.themoviedb.org/3/tv/${tvId}/credits?api_key=${API_KEY}`;
       res = await fetch(url);
       data = await res.json();
@@ -276,9 +293,9 @@ export async function getTopMoviesByDirector(directorName: string, limit = 5): P
     }
 
     const directedMovies = creditsJson.crew
-    .filter((movie: any) => movie.job && movie.job.toLowerCase() === 'director')
-    .filter((movie: any) => movie.title && movie.title.trim() !== '')
-    .sort((a: any, b: any) => (b.popularity || 0) - (a.popularity || 0));
+      .filter((movie: any) => movie.job && movie.job.toLowerCase() === 'director')
+      .filter((movie: any) => movie.title && movie.title.trim() !== '')
+      .sort((a: any, b: any) => (b.popularity || 0) - (a.popularity || 0));
 
     if (directedMovies.length === 0) {
       return 'Brak filmów reżyserskich w API';
@@ -305,5 +322,5 @@ function formatListWithBullets(items: string[], limit: number): string {
     if (uniqueItems.length === limit) break;
   }
 
-  return uniqueItems.map(item => `• ${item}`).join('\n');
+  return uniqueItems.map((item) => `• ${item}`).join('\n');
 }

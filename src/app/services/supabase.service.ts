@@ -540,4 +540,125 @@ export class SupabaseService {
     }
     return data;
   }
+
+  /* --- HISTORIA (HISTORY BASE) --- */
+
+  /**
+   * Pobiera pełną listę wydarzeń historycznych (przydatne do widoku tabeli w panelu admina)
+   */
+  async getHistoryList(limit: number = 100, category?: string, search?: string) {
+    let query = this.supabase
+      .from('history')
+      .select('*')
+      .order('year', { ascending: true })
+      .limit(limit);
+
+    if (category) {
+      query = query.eq('category', category);
+    }
+
+    if (search && search.trim() !== '') {
+      query = query.or(`event_name.ilike.%${search}%, person.ilike.%${search}%`);
+    }
+
+    const { data, error } = await query;
+    if (error) console.error('Błąd pobierania listy historycznej:', error);
+    return { data, error };
+  }
+
+  /**
+   * Dodaje nowe wydarzenie do bazy wiedzy historycznej
+   */
+  async addHistoryEvent(eventData: {
+    event_name: string;
+    year: number;
+    exact_date?: string | null;
+    category?: string;
+    person?: string | null;
+    tags?: string[];
+    created_by?: string;
+  }) {
+    const user = await this.getCurrentUser();
+    const payload = {
+      ...eventData,
+      created_by: user?.id || null,
+      updated_by: user?.id || null,
+    };
+
+    const { data, error } = await this.supabase.from('history').insert([payload]).select().single();
+
+    if (error) {
+      console.error('Błąd podczas dodawania wydarzenia historycznego:', error);
+      throw error;
+    }
+    return data;
+  }
+
+  /**
+   * Aktualizuje istniejące wydarzenie historyczne
+   */
+  async updateHistoryEvent(
+    id: number,
+    eventData: {
+      event_name: string;
+      year: number;
+      exact_date?: string | null;
+      category?: string;
+      person?: string | null;
+      tags?: string[];
+    }
+  ) {
+    const user = await this.getCurrentUser();
+    const payload = {
+      ...eventData,
+      updated_by: user?.id || null,
+    };
+
+    const { data, error } = await this.supabase
+      .from('history')
+      .update(payload)
+      .eq('id', id)
+      .select()
+      .single();
+
+    if (error) {
+      console.error(`Błąd aktualizacji wydarzenia o ID ${id}:`, error);
+      throw error;
+    }
+    return data;
+  }
+
+  /* --- HISTORIA (TRYBY ROZGRYWKI) --- */
+
+  async getRandomHistoryEvents(amount: number = 20, category?: string) {
+    let query = this.supabase.from('history').select('*');
+
+    if (category) {
+      query = query.eq('category', category);
+    }
+
+    const { data, error } = await query;
+    if (error) {
+      console.error('BŁĄD SUPABASE (Historia):', error); // <--- Sprawdzimy czy baza krzyczy
+      return [];
+    }
+
+    console.log('Dane pobrane z tabeli history:', data); // <--- Sprawdzimy czy cokolwiek przyszło
+    return (data || []).sort(() => Math.random() - 0.5).slice(0, amount);
+  }
+
+  async getEventsWithPersons(amount: number = 10) {
+    const { data, error } = await this.supabase
+      .from('history')
+      .select('*')
+      .not('person', 'is', null);
+
+    if (error) {
+      console.error('BŁĄD SUPABASE (Postacie):', error); // <--- Sprawdzimy błędy
+      return [];
+    }
+
+    console.log('Postacie pobrane z tabeli history:', data); // <--- Sprawdzimy dane
+    return (data || []).sort(() => Math.random() - 0.5).slice(0, amount);
+  }
 }
