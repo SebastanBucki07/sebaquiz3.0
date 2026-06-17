@@ -18,7 +18,9 @@ mat-accordion {
   border-left: 4px solid #f59e0b !important; /* Główny akcent */
   border-radius: 12px !important;
   color: #f8fafc !important;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.2),
+    0 2px 4px -1px rgba(0, 0, 0, 0.1) !important;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1) !important;
   overflow: hidden;
 }
@@ -28,7 +30,9 @@ mat-accordion {
   background: rgba(30, 41, 59, 0.6) !important;
   border-color: rgba(245, 158, 11, 0.3) !important; /* Delikatne podświetlenie bocznych ramek */
   transform: translateX(4px); /* Eleganckie przesunięcie w bok */
-  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3), 0 0 15px rgba(245, 158, 11, 0.1) !important;
+  box-shadow:
+    0 10px 20px -5px rgba(0, 0, 0, 0.3),
+    0 0 15px rgba(245, 158, 11, 0.1) !important;
 }
 
 /* NAGŁÓWEK PANELU */
