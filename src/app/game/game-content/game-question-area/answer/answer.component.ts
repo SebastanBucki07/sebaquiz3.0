@@ -39,21 +39,37 @@ export class AnswerComponent implements OnInit, OnDestroy {
       currentQuestion.answers.forEach((answer: AnswerItem) => {
         if (answer.value.includes('.png')) {
           answer.value = getClubNameByFile(answer.value);
-          console.log(`answer: ${answer}`);
         }
       });
+
       const revealed = currentQuestion.revealedAnswers ?? [];
       const total = currentQuestion.answers?.length ?? 0;
 
-      this.showAnswerButtons = revealed.length === total;
+      // Zmień warunek w ngOnInit, aby korzystał z nowej nazwy metody:
+      if (this.isCustomHistoryMode(currentQuestion)) {
+        // Pokazuje przyciski punktacji od razu, gdy gracz kliknie zatwierdzenie (revealed.length > 0)
+        this.showAnswerButtons = revealed.length > 0;
+      } else {
+        this.showAnswerButtons = revealed.length === total;
+      }
     });
   }
 
   ngOnDestroy() {
-    this.subscription.unsubscribe();
+    if (this.subscription) this.subscription.unsubscribe();
   }
 
   revealAnswer(index: number) {
     this.questionService.revealAnswer(index);
+  }
+
+  isCustomHistoryMode(question: Question): boolean {
+    if (!question || !question.question) return false;
+
+    const qText = question.question.toLowerCase();
+    return (
+      qText.includes('miało miejsce wcześniej') ||
+      qText.includes('uporządkuj wydarzenia chronologicznie')
+    );
   }
 }

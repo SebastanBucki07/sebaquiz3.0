@@ -1,0 +1,52 @@
+<ng-container *ngIf="question$ | async as question">
+  <div class="question-container-dark">
+    <mat-card class="question-card-responsive">
+      <mat-card-header class="card-header-center">
+        <div class="question-image-wrapper">
+          <mat-icon class="sort-icon-glow">unfold_more</mat-icon>
+        </div>
+        <h2 class="mode-title">Szeregowanie Chronologiczne</h2>
+      </mat-card-header>
+
+      <mat-card-content class="card-content-center">
+        <p class="question-text-large" style="color: #f8fafc !important">
+          {{ question.question }}
+        </p>
+
+        <mat-divider class="divider-large"></mat-divider>
+
+        <div
+          cdkDropList
+          class="chronology-list"
+          [class.list-disabled]="isSubmitted"
+          (cdkDropListDropped)="drop($event, question.answers)"
+        >
+          <div
+            class="chronology-item-box"
+            *ngFor="let item of question.answers; let i = index"
+            [ngClass]="getItemClass(item, i, question.hints || [])"
+            cdkDrag
+          >
+            <div class="item-left-side">
+              <mat-icon class="handle-icon" *ngIf="!isSubmitted">drag_handle</mat-icon>
+              <div class="item-content-text">{{ item.value }}</div>
+            </div>
+
+            <div *ngIf="isSubmitted" class="item-date-badge animate-scale-up">
+              {{ getFormattedDate(item) }}
+            </div>
+          </div>
+        </div>
+
+        <button
+          *ngIf="!isSubmitted"
+          mat-raised-button
+          class="submit-sort-btn"
+          (click)="checkChronologyOrder(question.answers, question.hints || [])"
+        >
+          Zatwierdź kolejność
+        </button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
