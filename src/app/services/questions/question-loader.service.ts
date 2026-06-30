@@ -216,16 +216,11 @@ export class QuestionLoaderService {
           let questionText = '';
           let correctAnswer = '';
 
-          // 1. Warunek: Jeśli istnieje dokładna data (Format YYYY-MM-DD)
           if (e.exact_date && e.exact_date.trim() !== '') {
             questionText = `Podaj dokładną datę wydarzenia (w formacie RRRR-MM-DD): ${e.event_name}`;
             correctAnswer = e.exact_date.trim();
-          }
-          // 2. Warunek awaryjny: Jeśli mamy tylko rok
-          else {
-            // Formatowanie ery przed naszą erą (ujemne lata z bazy)
+          } else {
             const formattedYear = e.year < 0 ? `${Math.abs(e.year)} p.n.e.` : e.year.toString();
-
             questionText = `W którym roku miało miejsce to wydarzenie: ${e.event_name}?`;
             correctAnswer = formattedYear.trim();
           }
@@ -239,6 +234,115 @@ export class QuestionLoaderService {
             revealedAnswers: [],
           };
         });
+      }
+
+      // =========================================================================
+      // TRYB MULTI: Co było wcześniej? (Generujemy serię np. 15 pojedynków)
+      // =========================================================================
+      if (lowerName.includes('co było wcześniej')) {
+        console.log('[DEBUG HISTORIA] Ładuję serię pytań dla: Co było wcześniej...');
+
+        // Pobieramy dużą pulę (np. 100 wydarzeń), żeby mieć z czego parować
+        const pool = await this.supabaseService.getRandomHistoryEvents(100);
+        if (!pool || pool.length < 2) return [];
+
+        const dynamicQuestions: any[] = [];
+        const usedIds = new Set<number>();
+
+        // Chcemy stworzyć maksymalnie 15 rund (lub tyle, na ile pozwoli pula danych)
+        while (dynamicQuestions.length < 15 && pool.length - usedIds.size >= 2) {
+          // Filtrujemy pulę z pominięciem już użytych wydarzeń
+          const availablePool = pool.filter((e) => !usedIds.has(e.id));
+          if (availablePool.length < 2) break;
+
+          const baseEvent = availablePool[Math.floor(Math.random() * availablePool.length)];
+
+          // Szukamy bliskiego rywala chronologicznie
+          const maxYearDiff = 50;
+          let rivalEvent = availablePool.find(
+            (e) => e.id !== baseEvent.id && Math.abs(e.year - baseEvent.year) <= maxYearDiff
+          );
+
+          // Fallback: jeśli brak bliskiego wydarzenia, bierzemy pierwsze lepsze inne
+          if (!rivalEvent) {
+            rivalEvent = availablePool.find((e) => e.id !== baseEvent.id);
+          }
+
+          if (!rivalEvent) break;
+
+          // Oznaczamy jako zużyte w tym meczu
+          usedIds.add(baseEvent.id);
+          usedIds.add(rivalEvent.id);
+
+          const pair = [baseEvent, rivalEvent];
+          const initialOrder = [...pair].sort(() => Math.random() - 0.5);
+          const earlierEvent = pair[0].year < pair[1].year ? pair[0] : pair[1];
+
+          dynamicQuestions.push({
+            id: baseEvent.id, // Unikalne ID rundy
+            question: 'Które wydarzenie miało miejsce wcześniej?',
+            answers: [
+              {
+                label: 'Opcja A',
+                value: initialOrder[0].event_name,
+                year: initialOrder[0].year,
+                exact_date: initialOrder[0].exact_date,
+              } as any,
+              {
+                label: 'Opcja B',
+                value: initialOrder[1].event_name,
+                year: initialOrder[1].year,
+                exact_date: initialOrder[1].exact_date,
+              } as any,
+            ],
+            hints: [earlierEvent.event_name],
+            revealedAnswers: [],
+          });
+        }
+
+        return dynamicQuestions;
+      }
+
+      // =========================================================================
+      // TRYB MULTI: Szeregowanie chronologiczne (Generujemy serię np. 5 dużych rund)
+      // =========================================================================
+      if (lowerName.includes('uszereguj chronologicznie')) {
+        console.log('[DEBUG HISTORIA] Ładuję serię pytań dla: Sortowanie chronologiczne...');
+
+        const pool = await this.supabaseService.getRandomHistoryEvents(60);
+        if (!pool || pool.length < 5) return [];
+
+        const dynamicQuestions: any[] = [];
+        let currentIndex = 0;
+
+        // Tasujemy całą pobraną pulę na start
+        const shuffledPool = [...pool].sort(() => Math.random() - 0.5);
+
+        // Tniemy pulę na równe paczki po 5 sztuk (każda paczka to jedna runda gry)
+        while (currentIndex + 5 <= shuffledPool.length && dynamicQuestions.length < 8) {
+          const roundEvents = shuffledPool.slice(currentIndex, currentIndex + 5);
+          currentIndex += 5;
+
+          const correctOrder = [...roundEvents].sort((a, b) => a.year - b.year);
+          const shuffledOrder = [...roundEvents].sort(() => Math.random() - 0.5);
+
+          dynamicQuestions.push({
+            id: roundEvents[0].id,
+            question: 'Uporządkuj wydarzenia chronologicznie (od najdawniejszego do najnowszego):',
+            answers: shuffledOrder.map(
+              (e) =>
+                ({
+                  label: 'event',
+                  value: e.event_name,
+                  year: e.year,
+                }) as any
+            ),
+            hints: correctOrder.map((e) => e.event_name),
+            revealedAnswers: [],
+          });
+        }
+
+        return dynamicQuestions;
       }
 
       return [];
@@ -504,6 +608,12 @@ export class QuestionLoaderService {
     },
     'hints:Kto to zrobił?': async () => {
       return await this.handleDynamicHistory('kto to zrobił?');
+    },
+    'true-false:Co było wcześniej': async () => {
+      return await this.handleDynamicHistory('co było wcześniej');
+    },
+    'chronology:Uszereguj chronologicznie': async () => {
+      return await this.handleDynamicHistory('uszereguj chronologicznie');
     },
     'one-answer:Fizyka': () =>
       firstValueFrom(this.http.get<Question[]>('/questions/physics.questions.json')),

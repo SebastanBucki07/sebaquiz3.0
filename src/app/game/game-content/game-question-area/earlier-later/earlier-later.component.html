@@ -1,0 +1,50 @@
+<ng-container *ngIf="question$ | async as question">
+  <div class="question-container-dark">
+    <mat-card class="question-card-responsive">
+      <mat-card-header class="card-header-center">
+        <div class="question-image-wrapper">
+          <mat-icon class="vs-icon-glow">history</mat-icon>
+        </div>
+        <h2 class="mode-title">Pojedynek Czasowy</h2>
+      </mat-card-header>
+
+      <mat-card-content class="card-content-center">
+        <p class="question-text-large" style="color: #f8fafc !important">
+          {{ question.question }}
+        </p>
+
+        <mat-divider class="divider-large"></mat-divider>
+
+        <div class="vs-wrapper">
+          <div
+            class="vs-option-card"
+            [ngClass]="getOptionClass(question.answers[0].value, question.hints?.[0])"
+            (click)="selectOption(question.answers[0].value, question.hints?.[0])"
+          >
+            <span class="option-badge">OPCJA A</span>
+            <p class="option-text">{{ question.answers[0].value }}</p>
+
+            <div *ngIf="isChecked" class="reveal-year-badge animate-scale-up">
+              {{ getFormattedDate(question.answers[0]) }}
+            </div>
+          </div>
+
+          <div class="vs-divider-text">VS</div>
+
+          <div
+            class="vs-option-card"
+            [ngClass]="getOptionClass(question.answers[1].value, question.hints?.[0])"
+            (click)="selectOption(question.answers[1].value, question.hints?.[0])"
+          >
+            <span class="option-badge">OPCJA B</span>
+            <p class="option-text">{{ question.answers[1].value }}</p>
+
+            <div *ngIf="isChecked" class="reveal-year-badge animate-scale-up">
+              {{ getFormattedDate(question.answers[1]) }}
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>

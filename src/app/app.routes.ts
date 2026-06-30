@@ -189,6 +189,20 @@ export const routes: Routes = [
                     (m) => m.CountryGuessCategoryComponent
                   ),
               },
+              {
+                path: 'true-false',
+                loadComponent: () =>
+                  import('./game/game-content/game-question-area/earlier-later/earlier-later.component').then(
+                    (m) => m.EarlierLaterCategoryComponent
+                  ),
+              },
+              {
+                path: 'chronology',
+                loadComponent: () =>
+                  import('./game/game-content/game-question-area/chronology/chronology.component').then(
+                    (m) => m.ChronologySortCategoryComponent
+                  ),
+              },
             ],
           },
         ],
