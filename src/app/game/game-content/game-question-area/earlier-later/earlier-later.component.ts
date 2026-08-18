@@ -1,11 +1,10 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component} from '@angular/core';
 import { CommonQuestionComponent } from '../common-question/common-question.component';
 import { QuestionService } from '../../../../services/question-service.service';
 import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';
 import { MatDivider } from '@angular/material/divider';
 import { MatIcon } from '@angular/material/icon';
 import { AsyncPipe, NgClass, NgIf } from '@angular/common';
-import { AnswerButtonsComponent } from '../answer/answer-buttons/answer-buttons.component';
 
 @Component({
   selector: 'app-earlier-later',

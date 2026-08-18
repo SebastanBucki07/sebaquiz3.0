@@ -4,7 +4,6 @@ import { firstValueFrom } from 'rxjs';
 import { SupabaseService } from '../supabase.service';
 import { Question } from '../../shared/questions/question.interface';
 
-// Mapowania i Providery
 import { CountryProvider } from '../../shared/providers/country.provider';
 import { FootballGridProvider } from '../../shared/providers/football-grid.provider';
 import { mapOldFamiliadaToNew } from '../../shared/mappers/familiada.mapper';
@@ -50,7 +49,6 @@ export class QuestionLoaderService {
 
     let questions: Question[] = [];
 
-    // 1. Obsługa specyficznych typów (Geografia, Kółko i Krzyżyk, Herby)
     if (this.isGeographyCategory(cleanType, cleanName)) {
       questions = await this.handleGeography(cleanName);
     } else if (cleanType === 'ticTacToe' && cleanName.toLowerCase().includes('kółko i krzyżyk')) {
@@ -61,7 +59,6 @@ export class QuestionLoaderService {
     ) {
       questions = await this.handleFootballCrests();
     }
-    // === TUTAJ POPRAWIAMY WARUNEK ===
     else if (
       cleanName.toLowerCase().includes('historia') ||
       cleanName.toLowerCase().includes('kto to zrobił?')
@@ -69,11 +66,9 @@ export class QuestionLoaderService {
       console.log(`[DEBUG NOWA BAZA] Przechwycono kategorię historyczną: "${cleanName}"`);
       questions = await this.handleDynamicHistory(cleanName);
     } else {
-      // 2. Obsługa starej bazy danych Supabase (Bohaterowie, Obsada, Reżyserzy)
       questions = await this.handleDatabaseQuestions(cleanType, cleanName);
     }
 
-    // 3. Fallback do plików lokalnych JSON, jeśli baza nic nie zwróciła
     if (questions.length === 0) {
       questions = await this.handleFallbackStrategies(cleanType, cleanName);
     }
@@ -90,10 +85,6 @@ export class QuestionLoaderService {
     this.isGeoInitialized = false;
     this.geoDataRaw = [];
   }
-
-  // ==========================================
-  // METODY PRYWATNE - SEKCJE LOGICZNE
-  // ==========================================
 
   private isGeographyCategory(type: string, name: string): boolean {
     const geoNames = [
@@ -192,7 +183,6 @@ export class QuestionLoaderService {
     try {
       const lowerName = name.toLowerCase().trim();
 
-      // CASE A: Kategoria "Kto to zrobił?" -> czyste one-answer (bez podpowiedzi)
       if (lowerName.includes('kto to zrobił?')) {
         console.log('[DEBUG HISTORIA] Ładuję postacie historyczne (one-answer)...');
         const events = await this.supabaseService.getEventsWithPersons(50);
@@ -207,7 +197,6 @@ export class QuestionLoaderService {
         }));
       }
 
-      // CASE B: Standardowa kategoria "Historia" -> tryb one-answer z obsługą dokładnej daty
       if (lowerName.includes('historia')) {
         console.log('[DEBUG HISTORIA] Ładuję daty (one-answer + exact_date)...');
         const events = await this.supabaseService.getRandomHistoryEvents(50);
@@ -236,41 +225,32 @@ export class QuestionLoaderService {
         });
       }
 
-      // =========================================================================
-      // TRYB MULTI: Co było wcześniej? (Generujemy serię np. 15 pojedynków)
-      // =========================================================================
       if (lowerName.includes('co było wcześniej')) {
         console.log('[DEBUG HISTORIA] Ładuję serię pytań dla: Co było wcześniej...');
 
-        // Pobieramy dużą pulę (np. 100 wydarzeń), żeby mieć z czego parować
         const pool = await this.supabaseService.getRandomHistoryEvents(100);
         if (!pool || pool.length < 2) return [];
 
         const dynamicQuestions: any[] = [];
         const usedIds = new Set<number>();
 
-        // Chcemy stworzyć maksymalnie 15 rund (lub tyle, na ile pozwoli pula danych)
         while (dynamicQuestions.length < 15 && pool.length - usedIds.size >= 2) {
-          // Filtrujemy pulę z pominięciem już użytych wydarzeń
           const availablePool = pool.filter((e) => !usedIds.has(e.id));
           if (availablePool.length < 2) break;
 
           const baseEvent = availablePool[Math.floor(Math.random() * availablePool.length)];
 
-          // Szukamy bliskiego rywala chronologicznie
           const maxYearDiff = 50;
           let rivalEvent = availablePool.find(
             (e) => e.id !== baseEvent.id && Math.abs(e.year - baseEvent.year) <= maxYearDiff
           );
 
-          // Fallback: jeśli brak bliskiego wydarzenia, bierzemy pierwsze lepsze inne
           if (!rivalEvent) {
             rivalEvent = availablePool.find((e) => e.id !== baseEvent.id);
           }
 
           if (!rivalEvent) break;
 
-          // Oznaczamy jako zużyte w tym meczu
           usedIds.add(baseEvent.id);
           usedIds.add(rivalEvent.id);
 
@@ -279,7 +259,7 @@ export class QuestionLoaderService {
           const earlierEvent = pair[0].year < pair[1].year ? pair[0] : pair[1];
 
           dynamicQuestions.push({
-            id: baseEvent.id, // Unikalne ID rundy
+            id: baseEvent.id,
             question: 'Które wydarzenie miało miejsce wcześniej?',
             answers: [
               {
@@ -303,9 +283,6 @@ export class QuestionLoaderService {
         return dynamicQuestions;
       }
 
-      // =========================================================================
-      // TRYB MULTI: Szeregowanie chronologiczne (Generujemy serię np. 5 dużych rund)
-      // =========================================================================
       if (lowerName.includes('uszereguj chronologicznie')) {
         console.log('[DEBUG HISTORIA] Ładuję serię pytań dla: Sortowanie chronologiczne...');
 
@@ -315,10 +292,8 @@ export class QuestionLoaderService {
         const dynamicQuestions: any[] = [];
         let currentIndex = 0;
 
-        // Tasujemy całą pobraną pulę na start
         const shuffledPool = [...pool].sort(() => Math.random() - 0.5);
 
-        // Tniemy pulę na równe paczki po 5 sztuk (każda paczka to jedna runda gry)
         while (currentIndex + 5 <= shuffledPool.length && dynamicQuestions.length < 8) {
           const roundEvents = shuffledPool.slice(currentIndex, currentIndex + 5);
           currentIndex += 5;
@@ -356,7 +331,6 @@ export class QuestionLoaderService {
     try {
       const lowerName = name.toLowerCase().trim();
 
-      // Sztywny mapownik nazw, aby upewnić się, że do Supabase leci IDEALNY string
       let categoryToQuery = name.trim();
 
       if (lowerName === 'serial po bohaterach') {
@@ -384,17 +358,14 @@ export class QuestionLoaderService {
         (dbQuestions as any[]).map(async (q) => {
           if (type === 'familiada') return mapOldFamiliadaToNew(q);
 
-          // 1. Kategoria: Bohaterowie
           if (lowerName.includes('bohater')) {
             return await this.enrichWithTmdbHeroes(q, lowerName);
           }
 
-          // 2. Kategoria: Reżyserzy
           if (lowerName.includes('reżyser')) {
             return await this.enrichWithTmdbDirector(q);
           }
 
-          // 3. Kategoria: Obsada
           if (lowerName.includes('obsada')) {
             const visualType = lowerName.includes('film') ? 'filmie' : 'serialu';
             return {
@@ -449,7 +420,6 @@ export class QuestionLoaderService {
     console.log(`[DEBUG FALLBACK] Ładuję dane z pliku lokalnego dla: "${strategyKey}"`);
     const rawQuestions: Question[] = await this.OLD_STRATEGIES[strategyKey]();
 
-    // Jeśli fallback dotyczy bohaterów, to przechodzimy przez enrichment z TMDB
     if (lowerName.includes('bohater')) {
       const processedFallback = await Promise.all(
         rawQuestions.map(async (q) => {
@@ -459,7 +429,6 @@ export class QuestionLoaderService {
       return processedFallback.filter((item): item is Question => item !== null);
     }
 
-    // Jeśli fallback dotyczy reżyserów, przechodzimy przez enrichment dla reżysera
     if (lowerName.includes('reżyser')) {
       const processedFallback = await Promise.all(
         rawQuestions.map(async (q) => {
@@ -509,9 +478,6 @@ export class QuestionLoaderService {
     }
   }
 
-  /**
-   * Pobiera najpopularniejsze filmy reżysera z zewnętrznego API TMDB i dokleja jako podpowiedź.
-   */
   private async enrichWithTmdbDirector(q: any): Promise<Question | null> {
     const directorName = q.answers?.[0]?.value || '';
     if (!directorName) return null;
@@ -549,10 +515,6 @@ export class QuestionLoaderService {
     }
   }
 
-  // ==========================================
-  // METODY POMOCNICZE (UTILITIES)
-  // ==========================================
-
   private normalizeTitle(title: string): string {
     if (!title) return '';
     let t = title.trim();
@@ -588,10 +550,6 @@ export class QuestionLoaderService {
     if (!array || array.length === 0) return [];
     return [...array].sort(() => 0.5 - Math.random()).slice(0, size);
   }
-
-  // ==========================================
-  // REJESTR STRATEGII PLIKÓW LOKALNYCH / BAZY
-  // ==========================================
 
   private readonly OLD_STRATEGIES: Record<string, () => Promise<Question[]>> = {
     'one-answer:Film': () =>
