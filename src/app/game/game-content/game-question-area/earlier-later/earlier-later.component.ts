@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonQuestionComponent } from '../common-question/common-question.component';
 import { QuestionService } from '../../../../services/question-service.service';
 import { MatCard, MatCardContent, MatCardHeader } from '@angular/material/card';

@@ -15,6 +15,7 @@ import { CommonQuestionComponent } from '../common-question/common-question.comp
 export class PhotoHintsCategoryComponent extends CommonQuestionComponent {
   readonly MOVIE_QUESTION = 'W jakim filmie zagrała taka obsada?';
   readonly TV_QUESTION = 'W jakim serialu zagrała taka obsada?';
+  readonly PLAYER_HISTORY_QUESTION = 'O jaką karierę piłkarza chodzi?';
 
   constructor(questionService: QuestionService) {
     super(questionService);

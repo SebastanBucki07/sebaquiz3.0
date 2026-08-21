@@ -48,20 +48,17 @@ export class QuestionLoaderService {
     }
 
     let questions: Question[] = [];
+    const lowerCleanName = cleanName.toLowerCase();
 
     if (this.isGeographyCategory(cleanType, cleanName)) {
       questions = await this.handleGeography(cleanName);
-    } else if (cleanType === 'ticTacToe' && cleanName.toLowerCase().includes('kółko i krzyżyk')) {
+    } else if (cleanType === 'ticTacToe' && lowerCleanName.includes('kółko i krzyżyk')) {
       questions = FootballGridProvider.getGridQuestions(50);
-    } else if (
-      cleanType === 'photo-fragments' &&
-      cleanName.toLowerCase() === 'jaki to herb piłkarski?'
-    ) {
+    } else if (cleanType === 'photo-fragments' && lowerCleanName === 'jaki to herb piłkarski?') {
       questions = await this.handleFootballCrests();
-    }
-    else if (
-      cleanName.toLowerCase().includes('historia') ||
-      cleanName.toLowerCase().includes('kto to zrobił?')
+    } else if (
+      (lowerCleanName.includes('historia') || lowerCleanName.includes('kto to zrobił?')) &&
+      !lowerCleanName.includes('piłkarz') // <-- KLUCZOWA ZMIANA
     ) {
       console.log(`[DEBUG NOWA BAZA] Przechwycono kategorię historyczną: "${cleanName}"`);
       questions = await this.handleDynamicHistory(cleanName);
