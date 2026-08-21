@@ -13,7 +13,11 @@ import { ErrorStateMatcher } from '@angular/material/core';
 /** Error when invalid control is dirty, touched, or submitted. */
 export class ImmediateErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: AbstractControl | null, form: NgForm | null): boolean {
-    return !!(control && control.invalid && (control.dirty || control.touched || (form && form.submitted)));
+    return !!(
+      control &&
+      control.invalid &&
+      (control.dirty || control.touched || (form && form.submitted))
+    );
   }
 }
 
@@ -88,7 +92,9 @@ export class ChooseTeamComponent implements OnInit, OnDestroy {
       errors['maxTeams'] = true;
     }
 
-    const isDuplicate = trimmedName && this.teams.some((team) => team.name.toLowerCase() === trimmedName.toLowerCase());
+    const isDuplicate =
+      trimmedName &&
+      this.teams.some((team) => team.name.toLowerCase() === trimmedName.toLowerCase());
     if (isDuplicate) errors['duplicate'] = true;
 
     const isWhitespace = value && trimmedName.length === 0;

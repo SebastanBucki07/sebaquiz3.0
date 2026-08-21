@@ -21,15 +21,32 @@
           minlength="4"
           autocomplete="off"
         />
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('required')">Nazwa jest wymagana!</mat-error>
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('duplicate')">Drużyna o tej nazwie już istnieje!</mat-error>
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('whitespace')">Nazwa nie może składać się z samych spacji!</mat-error>
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('minlength')">Nazwa musi mieć co najmniej 4 znaki!</mat-error>
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('maxlength')">Nazwa nie może przekraczać 20 znaków!</mat-error>
-        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('maxTeams')">Osiągnięto maksymalną liczbę drużyn (10)!</mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('required')">
+          Nazwa jest wymagana!
+        </mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('duplicate')">
+          Drużyna o tej nazwie już istnieje!
+        </mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('whitespace')">
+          Nazwa nie może składać się z samych spacji!
+        </mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('minlength')">
+          Nazwa musi mieć co najmniej 4 znaki!
+        </mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('maxlength')">
+          Nazwa nie może przekraczać 20 znaków!
+        </mat-error>
+        <mat-error data-testid="form-input-error" *ngIf="teamInput.hasError('maxTeams')">
+          Osiągnięto maksymalną liczbę drużyn (10)!
+        </mat-error>
       </mat-form-field>
 
-      <button data-testid="add-button" class="add-btn" [disabled]="teamInput.invalid || isAdding" (click)="addTeam(teamInput)">
+      <button
+        data-testid="add-button"
+        class="add-btn"
+        [disabled]="teamInput.invalid || isAdding"
+        (click)="addTeam(teamInput)"
+      >
         <mat-icon>group_add</mat-icon>
         DODAJ
       </button>
@@ -43,7 +60,9 @@
     >
       <div class="team-info-left">
         <img [src]="team.avatarUrl" [alt]="'Avatar ' + team.name" class="team-avatar" />
-        <span class="team-name-text" [attr.data-testid]="'team-name-' + team.name">{{ team.name }}</span>
+        <span class="team-name-text" [attr.data-testid]="'team-name-' + team.name">
+          {{ team.name }}
+        </span>
       </div>
 
       <div class="team-info-right">
