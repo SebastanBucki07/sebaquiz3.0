@@ -106,6 +106,7 @@ export class PhotoQuestionFormComponent implements OnInit {
       if (formVal.sourceType === 'file' && this.selectedFile) {
         if (catName.includes('budowle') || catName.includes('budynek')) bucket = 'buildings';
         else if (catName.includes('klub')) bucket = 'footballCrestes';
+        else if (catName.includes('ptak')) bucket = 'birds';
         else if (catName.includes('seba')) bucket = 'tests';
 
         const fileName = await this.supabase.uploadPhoto(

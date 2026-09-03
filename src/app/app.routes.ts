@@ -84,6 +84,13 @@ export const routes: Routes = [
                 (m) => m.BuildingPhotoFormComponent
               ),
           },
+          {
+            path: 'add-bird',
+            loadComponent: () =>
+              import('./configure-window/bird-photo-form/bird-photo-form.component').then(
+                (m) => m.BirdPhotoFormComponent
+              ),
+          },
         ],
       },
       {
